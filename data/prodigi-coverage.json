@@ -1,0 +1,599 @@
+{
+  "checkedAt": "2026-10-04T13:34:41.397Z",
+  "sitemapProductUrls": 420,
+  "imported": 272,
+  "skipped": [
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/sweatshirts/stanley-stella-dazzler-stsw125/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/sweatshirts/womens-cropped-non-branded-sweatshirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/sweatshirts/womens-non-branded-sweatshirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/all-over-print/awdis-js01j/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-t-shirts/kids-non-branded-t-shirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-hoodies/kids-over-head-non-branded-hoodie/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-sweatshirts/kids-non-branded-sweatshirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/face-masks/pure-face-mask/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/footwear/flip-flops/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/footwear/socks/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/keyrings/plastic-keyrings/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/pullover/delta-97200/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/pullover/unisex-non-branded-hoodie/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/pullover/stanley-stella-flyer-stsm565/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/zip-up/bella-canvas-3739/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/zip-up/delta-97300/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/zip-up/unisex-zip-up-non-branded-hoodie/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/sweatshirts/unisex-non-branded-sweatshirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/all-over-print/bc-b123f/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/classic/womens-non-branded-t-shirt/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/scoop/stanley-stella-chiller-sttw036/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/scoop/stanley-stella-jazzer-sttw039/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/scoop/stanley-stella-rounder-slub-sttw112/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/scoop/stanley-stella-expresser-sttw032/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/tanktops/stanley-stella-trigger-sttw038/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/v-neck/stanley-stella-evoker-sttw023/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/hoodies/stanley-stella-bower-stsw132/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/hoodies/stanley-stella-trigger-stsw148/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/colouring-books/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/art-prints/museum-fine-art-paper/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/bathroom/wash-bags/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/christmas/wooden-christmas-tree-ornaments/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/christmas/metal-christmas-tree-ornaments/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/pets/pet-beds/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/sport-and-games/yoga-mats/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/all-over-print/bc-ba123/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/next-level-3600/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/delta-11730/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/anvil-980/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/unisex-t-shirt-non-branded/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/stanley-stella-fuser-sttu759/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/stanley-stella-creator-vintage-sttu831/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/long-body/bella-canvas-3006/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/long-sleeve/stanley-stella-shuffler-sttm560/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/tanktops/stanley-stella-specter-sttm543/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/triblend/next-level-6051/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/metallic-gloss/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/hahnemuhle-fine-art-pearl/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/smooth-photo-rag/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/budget-photo-paper/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/sticky-poster-paper/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/hahnemuhle-photo-lustre/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/hahnemuhle-photo-glossy/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/surface-frames/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/gloss-frames/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/swoop-frames/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/stretched-canvas/canvas-wraps/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/framed-canvas/framed-canvas-wraps/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/wooden-prints/gatorboard/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/photo-tiles/foamex/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/drinkware/10oz-porcelain-mugs/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/drinkware/16oz-double-walled-tumblers/",
+      "reason": "Üretimden kalkmış ürün"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/yard-signs/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/instagram-framed-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/tablet-cases/ipad-case/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/laptops-and-computers/laptop-sleeves/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/watch-straps/eco-watch-strap/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/books-and-magazines/hardcover-photo-book/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/all-over-print/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/hooded/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/long-body/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/all-over-print/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/all-over-print/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/keyrings/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/baby-bodysuits/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/baby-t-shirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-t-shirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-hoodies/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-sweatshirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/bags/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/face-masks/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/footwear/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/patches-and-badges/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/banners/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/signs/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/window-clings/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/spacer-frames/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-hoodies/awdis-jh001j/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-sweatshirts/awdis-jh030j/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/zip-up/delta-99300/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/kids-clothing/kids-sweatshirts/stanley-stella-dreamer-stsk913/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/accessories/face-masks/premium-face-mask/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/banners/economy-banners/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/business-and-commercial/banners-and-signs/banners/retractable-banners/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/tabletops/easel-back-canvas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/metal-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/wooden-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/display-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/photo-tiles/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/phone-cases/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/laptops-and-computers/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/technology/watch-straps/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/drinkware/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/kitchen-and-dining/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/cushions-and-pillows/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/bathroom/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/bedding/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/rugs-and-blankets/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/art-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/photo-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/specialist-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/prints-and-posters/poster-hangers/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/framed-prints/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/stretched-canvas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/framed-canvas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/wall-art/canvas/rolled-canvas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/tanktops/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/triblend/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/baseball/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/polo/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/v-neck/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/pullover/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/hoodies/zip-up/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/sweatshirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/classic/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/cropped/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/scoop/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/tanktops/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/t-shirts/v-neck/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/hoodies/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/womens-clothing/sweatshirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/home-decor/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/tabletops/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/pets/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/home-and-living/christmas/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/greetings-cards/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/postcards/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/custom-notebooks/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/classic-notebooks/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/themed-notebooks-and-journals/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/cards-and-stationery/wrapping-paper/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/classic/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    },
+    {
+      "url": "https://www.prodigi.com/products/mens-clothing/t-shirts/long-sleeve/",
+      "reason": "Sayfada fiyat yok (kategori/bilgi sayfası)"
+    }
+  ]
+}

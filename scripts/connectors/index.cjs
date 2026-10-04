@@ -4,4 +4,6 @@
 const def = (base, file) => ({ base, load: () => require(file) });
 module.exports = {
   printify: def('https://printify.com/app/products', './printify.cjs'),
+  dreamship: def('https://dreamship.com/products', './dreamship.cjs'),
+  prodigi: def('https://www.prodigi.com/products/', './prodigi.cjs'),
 };

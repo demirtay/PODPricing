@@ -2,6 +2,8 @@
   "automaticProviders": [
     "yoycol",
     "printify",
+    "dreamship",
+    "prodigi",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -51,13 +53,29 @@
       "nextCheck": 0
     },
     "printify": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "dreamship": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "prodigi": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T13:26:52.107Z",
+      "lastSuccess": "2026-10-04T13:37:58.079Z",
       "lastError": null,
-      "productCount": 2763,
-      "nextCheck": 1791122158358,
-      "startedAt": "2026-10-04T13:25:58.358Z"
+      "productCount": 272,
+      "nextCheck": 1791122681388,
+      "startedAt": "2026-10-04T13:34:41.388Z"
     },
     "printdoors": {
       "state": "idle",

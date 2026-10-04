@@ -223,6 +223,7 @@ function features(p) {
   push('Üretim süresi', esc(p.production));
   if (p.includesPrint === false) push('Baskı', 'Fiyat boş ürün içindir; baskı ücreti ayrıca eklenir');
   if (p.sourcePricePrefix && /shipping/.test(p.sourcePricePrefix)) push('Kargo', 'Fiyata kargo dahil (kaynakta belirtildiği gibi)');
+  else if (p.shipping && Object.keys(p.shipping).length) push('Kargo', Object.entries(p.shipping).map(([k, v]) => `${esc(k)}: ${esc(fmt(v))}'dan`).join(' · ') + ` <span class="muted sm">(toplam yaklaşık ${esc(fmt(p.baseMinor + Object.values(p.shipping)[0]))})</span>`);
   if (p.availableCountries?.length) push('Üretim / gönderim bölgesi', esc(p.availableCountries.join(', ')));
   if (p.fulfillmentProvider) push('Üretim tesisleri', esc(p.fulfillmentProvider.split(',').join(', ')));
   push('Son kontrol', esc(dateFmt.format(new Date(p.checkedAt || p.checkedOn))));

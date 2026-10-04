@@ -8,6 +8,8 @@
     "merchone",
     "contrado",
     "neatopod",
+    "pillowprofits",
+    "shirtee",
     "simpleprint",
     "printdoors",
     "kincustom",
@@ -106,13 +108,29 @@
       "nextCheck": 0
     },
     "neatopod": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "pillowprofits": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "shirtee": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T18:00:02.946Z",
+      "lastSuccess": "2026-10-04T18:04:10.203Z",
       "lastError": null,
-      "productCount": 267,
-      "nextCheck": 1791138601023,
-      "startedAt": "2026-10-04T18:00:01.023Z"
+      "productCount": 305,
+      "nextCheck": 1791138820605,
+      "startedAt": "2026-10-04T18:03:40.605Z"
     },
     "simpleprint": {
       "state": "idle",

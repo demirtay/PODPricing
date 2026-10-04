@@ -13,6 +13,8 @@ module.exports = {
   merchone: def('https://merchone.com/', './merchone.cjs'),
   contrado: def('https://www.contrado.com/', './contrado.cjs'),
   neatopod: def('https://www.neatopod.com/', './neatopod.cjs'),
+  pillowprofits: def('https://pillowprofits.com/', './pillowprofits.cjs'),
+  shirtee: def('https://shirtee.cloud/', './shirtee.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),
   }])),

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-04T14:11:53.609Z",
-  "count": 329,
+  "checkedAt": "2026-10-04T15:31:40.699Z",
+  "count": 325,
   "flagged": [
     {
       "group": "oyun-masa|dahil",
@@ -17,23 +17,23 @@
       "group": "oyun-masa|dahil",
       "median": 8576,
       "ratio": 0.05,
-      "id": "printkk-mahjong-mat-roll-up-shipping",
-      "providerId": "printkk",
-      "title": "Custom Mahjong Mat 31.5\"x31.5\" (Ship Rolled up)",
-      "baseMinor": 456,
-      "basis": "1 adet · 31.5\"x31.5\" (Ship Rolled up) · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/mahjong-mat-roll-up-shipping"
-    },
-    {
-      "group": "oyun-masa|dahil",
-      "median": 8576,
-      "ratio": 0.05,
       "id": "printkk-mahjong-mat",
       "providerId": "printkk",
       "title": "Mahjong Mat 31.5\"x31.5\" (Ship Folded)",
       "baseMinor": 456,
       "basis": "1 adet · 31.5\"x31.5\" (Ship Folded) · özel ölçü bedeli hariç",
       "url": "https://www.printkk.com/product/info/mahjong-mat"
+    },
+    {
+      "group": "oyun-masa|dahil",
+      "median": 8576,
+      "ratio": 0.05,
+      "id": "printkk-mahjong-mat-roll-up-shipping",
+      "providerId": "printkk",
+      "title": "Custom Mahjong Mat 31.5\"x31.5\" (Ship Rolled up)",
+      "baseMinor": 456,
+      "basis": "1 adet · 31.5\"x31.5\" (Ship Rolled up) · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/mahjong-mat-roll-up-shipping"
     },
     {
       "group": "oyun-masa|dahil",
@@ -61,23 +61,23 @@
       "group": "oyun-masa|dahil",
       "median": 8576,
       "ratio": 0.06,
-      "id": "printkk-mini-mahjong-mat-roll-up-shipping",
-      "providerId": "printkk",
-      "title": "Custom Mini Mahjong Mat 20.9\"x20.9\" (Ship Rolled up)",
-      "baseMinor": 489,
-      "basis": "1 adet · 20.9\"x20.9\" (Ship Rolled up) · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/mini-mahjong-mat-roll-up-shipping"
-    },
-    {
-      "group": "oyun-masa|dahil",
-      "median": 8576,
-      "ratio": 0.06,
       "id": "printkk-mini-mahjong-mat",
       "providerId": "printkk",
       "title": "Mini Mahjong Mat 20.9\"x20.9\" (Ship Folded)",
       "baseMinor": 489,
       "basis": "1 adet · 20.9\"x20.9\" (Ship Folded) · özel ölçü bedeli hariç",
       "url": "https://www.printkk.com/product/info/mini-mahjong-mat"
+    },
+    {
+      "group": "oyun-masa|dahil",
+      "median": 8576,
+      "ratio": 0.06,
+      "id": "printkk-mini-mahjong-mat-roll-up-shipping",
+      "providerId": "printkk",
+      "title": "Custom Mini Mahjong Mat 20.9\"x20.9\" (Ship Rolled up)",
+      "baseMinor": 489,
+      "basis": "1 adet · 20.9\"x20.9\" (Ship Rolled up) · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/mini-mahjong-mat-roll-up-shipping"
     },
     {
       "group": "ayakkabi-sneaker|dahil",
@@ -124,17 +124,6 @@
       "url": "https://peaprint.com/products/detail/pullover-cap"
     },
     {
-      "group": "canta-seyahat|dahil",
-      "median": 1791,
-      "ratio": 0.08,
-      "id": "printkk-luggage-handle-wrap-set-of-two",
-      "providerId": "printkk",
-      "title": "Luggage Handle Wrap Set of 2",
-      "baseMinor": 151,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/luggage-handle-wrap-set-of-two"
-    },
-    {
       "group": "kirtasiye-kart|dahil",
       "median": 432,
       "ratio": 0.08,
@@ -168,6 +157,17 @@
       "url": "https://popcustoms.com/products/branding-mesh-run-pads-shoe-insoles-shoe-liners-for-women-men-1063"
     },
     {
+      "group": "canta-seyahat|dahil",
+      "median": 1791,
+      "ratio": 0.08,
+      "id": "printkk-luggage-handle-wrap-set-of-two",
+      "providerId": "printkk",
+      "title": "Luggage Handle Wrap Set of 2",
+      "baseMinor": 151,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/luggage-handle-wrap-set-of-two"
+    },
+    {
       "group": "oyun-masa|dahil",
       "median": 8576,
       "ratio": 0.08,
@@ -179,15 +179,26 @@
       "url": "https://www.printkk.com/product/info/non-slip-mahjong-mat"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
+      "group": "mutfak-bardak-alti|dahil",
+      "median": 646,
       "ratio": 0.09,
-      "id": "printkk-large-area-rug-floor-carpet-4-three",
-      "providerId": "printkk",
-      "title": "Large Area Rug Floor Carpet (4:3)",
-      "baseMinor": 114,
-      "basis": "1 adet · 8\"x 6\" (Small-Size Sample) · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/large-area-rug-floor-carpet-4-three"
+      "id": "qikink-coaster",
+      "providerId": "qikink",
+      "title": "Coasters",
+      "baseMinor": 57,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹65, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/home-decor/coaster/"
+    },
+    {
+      "group": "ev-bayrak|dahil",
+      "median": 779,
+      "ratio": 0.09,
+      "id": "merchize-bunting-banner",
+      "providerId": "merchize",
+      "title": "Bunting Banner",
+      "baseMinor": 70,
+      "basis": "Tier 1 · Rectangle · kargo ayrıca",
+      "url": "https://merchize.com/product/bunting-banner/"
     },
     {
       "group": "giyim-sweatshirt|dahil",
@@ -199,6 +210,28 @@
       "baseMinor": 198,
       "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
       "url": "https://inkedjoy.com/all-products/fully-printing-hat/visor-hat-snapback-cap/full-print-pullover-cap"
+    },
+    {
+      "group": "duvar-kanvas|dahil",
+      "median": 1299,
+      "ratio": 0.09,
+      "id": "yoycol-2HPAHB64",
+      "providerId": "yoycol",
+      "title": "Canvas Without Frame|Horizontal 3:2",
+      "baseMinor": 119,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2HPAHB64/Canvas-Without-Frame-Horizontal-3-2"
+    },
+    {
+      "group": "duvar-kanvas|dahil",
+      "median": 1299,
+      "ratio": 0.09,
+      "id": "yoycol-2HPAHB65",
+      "providerId": "yoycol",
+      "title": "Canvas Without Frame|Vertical 2:3",
+      "baseMinor": 119,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2HPAHB65/Canvas-Without-Frame-Vertical-2-3"
     },
     {
       "group": "aksesuar-sapka|dahil",
@@ -221,50 +254,6 @@
       "baseMinor": 136,
       "basis": "1 adet · One Size · özel ölçü bedeli hariç",
       "url": "https://www.printkk.com/product/info/skull-cap-helmet-liner"
-    },
-    {
-      "group": "ev-bayrak|dahil",
-      "median": 779,
-      "ratio": 0.09,
-      "id": "merchize-bunting-banner",
-      "providerId": "merchize",
-      "title": "Bunting Banner",
-      "baseMinor": 70,
-      "basis": "Tier 1 · Rectangle · kargo ayrıca",
-      "url": "https://merchize.com/product/bunting-banner/"
-    },
-    {
-      "group": "duvar-kanvas|dahil",
-      "median": 1299,
-      "ratio": 0.09,
-      "id": "yoycol-2HPAHB64",
-      "providerId": "yoycol",
-      "title": "Canvas Without Frame|Horizontal 3:2",
-      "baseMinor": 119,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2HPAHB64/Canvas-Without-Frame-Horizontal-3-2"
-    },
-    {
-      "group": "duvar-kanvas|dahil",
-      "median": 1299,
-      "ratio": 0.09,
-      "id": "yoycol-2HPAHB65",
-      "providerId": "yoycol",
-      "title": "Canvas Without Frame|Vertical 2:3",
-      "baseMinor": 119,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2HPAHB65/Canvas-Without-Frame-Vertical-2-3"
-    },
-    {
-      "group": "mutfak-bardak-alti|dahil",
-      "median": 646,
-      "ratio": 0.09,
-      "id": "qikink-coaster",
-      "providerId": "qikink",
-      "title": "Coasters",
-      "baseMinor": 57,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹65, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/home-decor/coaster/"
     },
     {
       "group": "aksesuar-rozet|dahil",
@@ -322,17 +311,6 @@
       "url": "https://www.printkk.com/product/info/scalloped-mahjong-mat-multi-size"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 0.1,
-      "id": "printkk-large-area-rug-floor-carpet-5-four",
-      "providerId": "printkk",
-      "title": "Large Area Rug Floor Carpet (5:4)",
-      "baseMinor": 125,
-      "basis": "1 adet · 10\"x 8\" (Small-Size Sample) · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/large-area-rug-floor-carpet-5-four"
-    },
-    {
       "group": "ev-yastik|dahil",
       "median": 1076,
       "ratio": 0.1,
@@ -377,6 +355,17 @@
       "url": "https://popcustoms.com/products/customized-shoes-pad-659"
     },
     {
+      "group": "giyim-tisort|bos",
+      "median": 1099,
+      "ratio": 0.1,
+      "id": "qikink-dry-fit-t-shirts-ud15",
+      "providerId": "qikink",
+      "title": "Dry Fit T-Shirt | UD15",
+      "baseMinor": 115,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹116, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/t-shirts/dry-fit-t-shirts-ud15/"
+    },
+    {
       "group": "oyun-masa|dahil",
       "median": 8576,
       "ratio": 0.1,
@@ -399,48 +388,15 @@
       "url": "https://www.printkk.com/product/info/large-mahjong-mat"
     },
     {
-      "group": "giyim-tisort|bos",
-      "median": 1099,
-      "ratio": 0.1,
-      "id": "qikink-dry-fit-t-shirts-ud15",
+      "group": "mutfak-bardak-alti|dahil",
+      "median": 646,
+      "ratio": 0.11,
+      "id": "qikink-acrylic-coasters",
       "providerId": "qikink",
-      "title": "Dry Fit T-Shirt | UD15",
-      "baseMinor": 115,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹116, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/t-shirts/dry-fit-t-shirts-ud15/"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.11,
-      "id": "printkk-christmas-hat-for-adult",
-      "providerId": "printkk",
-      "title": "Adult Plush Santa Hat",
-      "baseMinor": 158,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/christmas-hat-for-adult"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.11,
-      "id": "peaprint-13944",
-      "providerId": "peaprint",
-      "title": "Polyester Baseball Cap (Front Printing)",
-      "baseMinor": 168,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/polyester-baseball-cap"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.11,
-      "id": "printkk-throw-pillow-cover",
-      "providerId": "printkk",
-      "title": "Plush Throw Pillow Covers (Double-sided Design)",
-      "baseMinor": 121,
-      "basis": "1 adet · 12\"x12\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/throw-pillow-cover"
+      "title": "Acrylic Coaster",
+      "baseMinor": 73,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹83, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/home-decor/acrylic-coasters/"
     },
     {
       "group": "ev-yastik|dahil",
@@ -454,6 +410,39 @@
       "url": "https://www.printdoors.com/products/60"
     },
     {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.11,
+      "id": "printkk-throw-pillow-cover",
+      "providerId": "printkk",
+      "title": "Plush Throw Pillow Covers (Double-sided Design)",
+      "baseMinor": 121,
+      "basis": "1 adet · 12\"x12\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/throw-pillow-cover"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.11,
+      "id": "peaprint-13944",
+      "providerId": "peaprint",
+      "title": "Polyester Baseball Cap (Front Printing)",
+      "baseMinor": 168,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/polyester-baseball-cap"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.11,
+      "id": "printkk-christmas-hat-for-adult",
+      "providerId": "printkk",
+      "title": "Adult Plush Santa Hat",
+      "baseMinor": 158,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/christmas-hat-for-adult"
+    },
+    {
       "group": "canta-seyahat|dahil",
       "median": 1791,
       "ratio": 0.11,
@@ -465,17 +454,6 @@
       "url": "https://www.printkk.com/product/info/luggage-strap"
     },
     {
-      "group": "mutfak-bardak-alti|dahil",
-      "median": 646,
-      "ratio": 0.11,
-      "id": "qikink-acrylic-coasters",
-      "providerId": "qikink",
-      "title": "Acrylic Coaster",
-      "baseMinor": 73,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹83, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/home-decor/acrylic-coasters/"
-    },
-    {
       "group": "giyim-tisort|bos",
       "median": 1099,
       "ratio": 0.11,
@@ -485,6 +463,28 @@
       "baseMinor": 125,
       "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹126, %5 GST dahil) · baskı ve kargo ayrıca",
       "url": "https://qikink.com/custom/t-shirts/jersey-t-shirt-us02/"
+    },
+    {
+      "group": "kirtasiye-kart|dahil",
+      "median": 432,
+      "ratio": 0.12,
+      "id": "printify-1026",
+      "providerId": "printify",
+      "title": "Holiday Cards (Two-sided print)",
+      "baseMinor": 50,
+      "basis": "Printify standart plan en düşük maliyeti · tek baskı alanı dahil, kargo ve vergi hariç · 1 baskı tesisi arasındaki en düşük · Printify Premium üyelikte 0.33 USD",
+      "url": "https://printify.com/app/products/1026/generic-brand/holiday-cards-two-sided-print"
+    },
+    {
+      "group": "kirtasiye-kart|dahil",
+      "median": 432,
+      "ratio": 0.12,
+      "id": "prodigi-classic-postcards",
+      "providerId": "prodigi",
+      "title": "Classic postcards",
+      "baseMinor": 53,
+      "basis": "Prodigi \"From\" başlangıç fiyatı (Prodigi'nin USD karşılığı) · kaynak 0.40 GBP · kargo ve vergi hariç · Prodigi Pro üyelikte indirimli",
+      "url": "https://www.prodigi.com/products/cards-and-stationery/postcards/classic-postcards/"
     },
     {
       "group": "aksesuar-sapka|dahil",
@@ -520,39 +520,6 @@
       "url": "https://www.printkk.com/product/info/cup-lid-nameplate"
     },
     {
-      "group": "kirtasiye-kart|dahil",
-      "median": 432,
-      "ratio": 0.12,
-      "id": "printify-1026",
-      "providerId": "printify",
-      "title": "Holiday Cards (Two-sided print)",
-      "baseMinor": 50,
-      "basis": "Printify standart plan en düşük maliyeti · tek baskı alanı dahil, kargo ve vergi hariç · 1 baskı tesisi arasındaki en düşük · Printify Premium üyelikte 0.33 USD",
-      "url": "https://printify.com/app/products/1026/generic-brand/holiday-cards-two-sided-print"
-    },
-    {
-      "group": "kirtasiye-kart|dahil",
-      "median": 432,
-      "ratio": 0.12,
-      "id": "prodigi-classic-postcards",
-      "providerId": "prodigi",
-      "title": "Classic postcards",
-      "baseMinor": 53,
-      "basis": "Prodigi \"From\" başlangıç fiyatı (Prodigi'nin USD karşılığı) · kaynak 0.40 GBP · kargo ve vergi hariç · Prodigi Pro üyelikte indirimli",
-      "url": "https://www.prodigi.com/products/cards-and-stationery/postcards/classic-postcards/"
-    },
-    {
-      "group": "ayakkabi-sneaker|dahil",
-      "median": 2396,
-      "ratio": 0.12,
-      "id": "interestprint-749",
-      "providerId": "interestprint",
-      "title": "Brand Logo On Shoes Insoles (3cm X 5cm)",
-      "baseMinor": 299,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/logo_for_shoes_inner_3cm_x_5cm-749.html"
-    },
-    {
       "group": "ayakkabi-sneaker|dahil",
       "median": 2396,
       "ratio": 0.12,
@@ -584,6 +551,17 @@
       "baseMinor": 299,
       "basis": "1 adet · Black / EU 35 · kaynak varyant ürün bedeli · kargo ayrıca · ek baskı/aksesuar ve vergi koşulları kaynakta",
       "url": "https://popcustoms.com/products/cuttable-massaging-gel-shoe-insole-shoes-cushion-1136"
+    },
+    {
+      "group": "ayakkabi-sneaker|dahil",
+      "median": 2396,
+      "ratio": 0.12,
+      "id": "interestprint-749",
+      "providerId": "interestprint",
+      "title": "Brand Logo On Shoes Insoles (3cm X 5cm)",
+      "baseMinor": 299,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/logo_for_shoes_inner_3cm_x_5cm-749.html"
     },
     {
       "group": "oyun-pelus|dahil",
@@ -619,6 +597,28 @@
       "url": "https://www.printkk.com/product/info/scalloped-mahjong-mat"
     },
     {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.13,
+      "id": "inkedjoy-20033826",
+      "providerId": "inkedjoy",
+      "title": "Plush pillow case (double-sided design)",
+      "baseMinor": 135,
+      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
+      "url": "https://inkedjoy.com/all-products/home-set/bedding/plush-pillow-case-double-sided-design"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.13,
+      "id": "printdoors-2533",
+      "providerId": "printdoors",
+      "title": "Personalized Curved Edge Mesh Cap (DTF) | Polyester",
+      "baseMinor": 192,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/2533"
+    },
+    {
       "group": "aksesuar-sapka|dahil",
       "median": 1475,
       "ratio": 0.13,
@@ -652,26 +652,15 @@
       "url": "https://www.printkk.com/product/info/mesh-baseball-caps"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
       "ratio": 0.13,
-      "id": "printdoors-2533",
+      "id": "printdoors-91",
       "providerId": "printdoors",
-      "title": "Personalized Curved Edge Mesh Cap (DTF) | Polyester",
-      "baseMinor": 192,
+      "title": "Cell Phone Ring Holder｜Stainless Steel",
+      "baseMinor": 105,
       "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/2533"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.13,
-      "id": "inkedjoy-20033826",
-      "providerId": "inkedjoy",
-      "title": "Plush pillow case (double-sided design)",
-      "baseMinor": 135,
-      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
-      "url": "https://inkedjoy.com/all-products/home-set/bedding/plush-pillow-case-double-sided-design"
+      "url": "https://www.printdoors.com/products/91"
     },
     {
       "group": "kirtasiye-kalem|dahil",
@@ -696,15 +685,70 @@
       "url": "https://jumbodtg.com/products/gildan-5000-t-shirt?variant=50158965162304"
     },
     {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.13,
-      "id": "printdoors-91",
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.14,
+      "id": "printdoors-541",
       "providerId": "printdoors",
-      "title": "Cell Phone Ring Holder｜Stainless Steel",
-      "baseMinor": 105,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/91"
+      "title": "Cushion cover (different sides)｜Polyester",
+      "baseMinor": 150,
+      "basis": "1 adet için katalog başlangıç bedeli · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/541"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.14,
+      "id": "peaprint-1923",
+      "providerId": "peaprint",
+      "title": "Personalized Photo Pillowcases (Pillow Excluded) (Dual-sided Printing)",
+      "baseMinor": 146,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/personalized-photo-pillowcases-pillow-excluded-dual-sided-printing"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.14,
+      "id": "jetprint-3894",
+      "providerId": "jetprint",
+      "title": "Custom Pillow Cases",
+      "baseMinor": 150,
+      "basis": "Sitenin açık katalog başlangıç bedeli; baskı, adet ve varyant seçenekleri ürün sayfasında",
+      "url": "https://jetprintapp.com/product/custom-pillow-cases/"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.14,
+      "id": "interestprint-5014",
+      "providerId": "interestprint",
+      "title": "Plush Pillow Case(Double-sided design)",
+      "baseMinor": 146,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/plush_pillow_case-5014.html"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.14,
+      "id": "printkk-pillow-cases-double-side",
+      "providerId": "printkk",
+      "title": "Plush Throw Pillow Covers (Single-Sided Design)",
+      "baseMinor": 147,
+      "basis": "1 adet · 18\"x18\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/pillow-cases-double-side"
+    },
+    {
+      "group": "aksesuar-esarp|dahil",
+      "median": 438,
+      "ratio": 0.14,
+      "id": "qikink-all-over-print-headband",
+      "providerId": "qikink",
+      "title": "Headband | UB58",
+      "baseMinor": 63,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹71, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/accessories/all-over-print-headband/"
     },
     {
       "group": "giyim-sweatshirt|dahil",
@@ -740,116 +784,6 @@
       "url": "https://www.printkk.com/product/info/trucker-hat"
     },
     {
-      "group": "aksesuar-esarp|dahil",
-      "median": 438,
-      "ratio": 0.14,
-      "id": "qikink-all-over-print-headband",
-      "providerId": "qikink",
-      "title": "Headband | UB58",
-      "baseMinor": 63,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹71, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/accessories/all-over-print-headband/"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.14,
-      "id": "interestprint-5014",
-      "providerId": "interestprint",
-      "title": "Plush Pillow Case(Double-sided design)",
-      "baseMinor": 146,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/plush_pillow_case-5014.html"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.14,
-      "id": "printkk-pillow-cases-double-side",
-      "providerId": "printkk",
-      "title": "Plush Throw Pillow Covers (Single-Sided Design)",
-      "baseMinor": 147,
-      "basis": "1 adet · 18\"x18\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/pillow-cases-double-side"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.14,
-      "id": "jetprint-3894",
-      "providerId": "jetprint",
-      "title": "Custom Pillow Cases",
-      "baseMinor": 150,
-      "basis": "Sitenin açık katalog başlangıç bedeli; baskı, adet ve varyant seçenekleri ürün sayfasında",
-      "url": "https://jetprintapp.com/product/custom-pillow-cases/"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.14,
-      "id": "printdoors-541",
-      "providerId": "printdoors",
-      "title": "Cushion cover (different sides)｜Polyester",
-      "baseMinor": 150,
-      "basis": "1 adet için katalog başlangıç bedeli · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/541"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.14,
-      "id": "peaprint-1923",
-      "providerId": "peaprint",
-      "title": "Personalized Photo Pillowcases (Pillow Excluded) (Dual-sided Printing)",
-      "baseMinor": 146,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/personalized-photo-pillowcases-pillow-excluded-dual-sided-printing"
-    },
-    {
-      "group": "aksesuar-bere|dahil",
-      "median": 999,
-      "ratio": 0.14,
-      "id": "printkk-ponytail-beanie-hat-convertible-neck-gaiter",
-      "providerId": "printkk",
-      "title": "Ponytail Beanie Hat Convertible Neck Gaiter",
-      "baseMinor": 144,
-      "basis": "1 adet · S · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/ponytail-beanie-hat-convertible-neck-gaiter"
-    },
-    {
-      "group": "aksesuar-bere|dahil",
-      "median": 999,
-      "ratio": 0.14,
-      "id": "printdoors-5487",
-      "providerId": "printdoors",
-      "title": "Full-Over Printed Beanie(Lightweight) | Polyester",
-      "baseMinor": 144,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/5487"
-    },
-    {
-      "group": "duvar-cerceveli|dahil",
-      "median": 1333,
-      "ratio": 0.14,
-      "id": "qikink-acrylic-photo-frame-with-wood-stand",
-      "providerId": "qikink",
-      "title": "Acrylic Photo Frame With Stand",
-      "baseMinor": 187,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹212, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/home-decor/acrylic-photo-frame-with-wood-stand/"
-    },
-    {
-      "group": "canta-diger|dahil",
-      "median": 693,
-      "ratio": 0.14,
-      "id": "printkk-packaging-bags",
-      "providerId": "printkk",
-      "title": "Packaging Bags",
-      "baseMinor": 100,
-      "basis": "1 adet · Appropriate Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/packaging-bags"
-    },
-    {
       "group": "canta-diger|dahil",
       "median": 693,
       "ratio": 0.14,
@@ -883,6 +817,39 @@
       "url": "https://peaprint.com/products/detail/makeup-storage-bag"
     },
     {
+      "group": "canta-diger|dahil",
+      "median": 693,
+      "ratio": 0.14,
+      "id": "printkk-packaging-bags",
+      "providerId": "printkk",
+      "title": "Packaging Bags",
+      "baseMinor": 100,
+      "basis": "1 adet · Appropriate Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/packaging-bags"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.14,
+      "id": "qikink-bar-pendant",
+      "providerId": "qikink",
+      "title": "Bar Pendant | UP11",
+      "baseMinor": 115,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹130, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/accessories/bar-pendant/"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.14,
+      "id": "printkk-leather-earrings-round",
+      "providerId": "printkk",
+      "title": "Leather Round Earrings",
+      "baseMinor": 115,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/leather-earrings-round"
+    },
+    {
       "group": "ev-perde|dahil",
       "median": 1263,
       "ratio": 0.14,
@@ -905,26 +872,48 @@
       "url": "https://www.printdoors.com/products/383"
     },
     {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
+      "group": "duvar-cerceveli|dahil",
+      "median": 1333,
       "ratio": 0.14,
-      "id": "printkk-leather-earrings-round",
-      "providerId": "printkk",
-      "title": "Leather Round Earrings",
-      "baseMinor": 115,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/leather-earrings-round"
+      "id": "qikink-acrylic-photo-frame-with-wood-stand",
+      "providerId": "qikink",
+      "title": "Acrylic Photo Frame With Stand",
+      "baseMinor": 187,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹212, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/home-decor/acrylic-photo-frame-with-wood-stand/"
     },
     {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
+      "group": "aksesuar-bere|dahil",
+      "median": 999,
       "ratio": 0.14,
-      "id": "qikink-bar-pendant",
+      "id": "printdoors-5487",
+      "providerId": "printdoors",
+      "title": "Full-Over Printed Beanie(Lightweight) | Polyester",
+      "baseMinor": 144,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/5487"
+    },
+    {
+      "group": "aksesuar-bere|dahil",
+      "median": 999,
+      "ratio": 0.14,
+      "id": "printkk-ponytail-beanie-hat-convertible-neck-gaiter",
+      "providerId": "printkk",
+      "title": "Ponytail Beanie Hat Convertible Neck Gaiter",
+      "baseMinor": 144,
+      "basis": "1 adet · S · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/ponytail-beanie-hat-convertible-neck-gaiter"
+    },
+    {
+      "group": "giyim-crop|bos",
+      "median": 899,
+      "ratio": 0.14,
+      "id": "qikink-crop-tank-fc40",
       "providerId": "qikink",
-      "title": "Bar Pendant | UP11",
-      "baseMinor": 115,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹130, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/accessories/bar-pendant/"
+      "title": "Female Crop Tank | FC40",
+      "baseMinor": 130,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹131, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/tops/crop-tank-fc40/"
     },
     {
       "group": "oyun-masa|dahil",
@@ -949,19 +938,41 @@
       "url": "https://www.printkk.com/product/info/large-mahjong-mat-roll-up-shipping"
     },
     {
-      "group": "giyim-crop|bos",
-      "median": 899,
-      "ratio": 0.14,
-      "id": "qikink-crop-tank-fc40",
-      "providerId": "qikink",
-      "title": "Female Crop Tank | FC40",
-      "baseMinor": 130,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹131, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/tops/crop-tank-fc40/"
+      "group": "mutfak-bardak|dahil",
+      "median": 843,
+      "ratio": 0.15,
+      "id": "dreamship-1048",
+      "providerId": "dreamship",
+      "title": "Circle Glass DIY Ornament Blank",
+      "baseMinor": 129,
+      "basis": "Dreamship Basic plan başlangıç maliyeti · baskı dahil, kargo ve vergi hariç · US Economy 0.99 USD'den",
+      "url": "https://dreamship.com/products/circle-glass-ornament-blank"
+    },
+    {
+      "group": "mutfak-bardak|dahil",
+      "median": 843,
+      "ratio": 0.15,
+      "id": "dreamship-1054",
+      "providerId": "dreamship",
+      "title": "Heart Glass DIY Ornament Blank",
+      "baseMinor": 129,
+      "basis": "Dreamship Basic plan başlangıç maliyeti · baskı dahil, kargo ve vergi hariç · US Economy 0.99 USD'den",
+      "url": "https://dreamship.com/products/heart-glass-ornament-blank"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.15,
+      "id": "printkk-throw-pillow-covers",
+      "providerId": "printkk",
+      "title": "All Season Throw Pillow Covers (Single-Sided Design)",
+      "baseMinor": 157,
+      "basis": "1 adet · 12\"x12\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/throw-pillow-covers"
     },
     {
       "group": "ev-hali|dahil",
-      "median": 1254,
+      "median": 1261,
       "ratio": 0.15,
       "id": "peaprint-9843",
       "providerId": "peaprint",
@@ -969,6 +980,61 @@
       "baseMinor": 191,
       "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
       "url": "https://peaprint.com/products/detail/coral-velvet-rugs"
+    },
+    {
+      "group": "ev-tabela|dahil",
+      "median": 859,
+      "ratio": 0.15,
+      "id": "printdoors-3251",
+      "providerId": "printdoors",
+      "title": "Rectangular Metal Sign (Vertical Version) (8x12inch) | Tinplate 110g (Made in the USA)",
+      "baseMinor": 128,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/3251"
+    },
+    {
+      "group": "ev-tabela|dahil",
+      "median": 859,
+      "ratio": 0.15,
+      "id": "printdoors-3017",
+      "providerId": "printdoors",
+      "title": "Rectangular Metal Sign (8x12inch) | Tinplate (Made in USA）",
+      "baseMinor": 128,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/3017"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.15,
+      "id": "printdoors-2134",
+      "providerId": "printdoors",
+      "title": "Baseball cap (white brim) | Cotton",
+      "baseMinor": 224,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/2134"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.15,
+      "id": "peaprint-21298",
+      "providerId": "peaprint",
+      "title": "Elastic Head Cap(All-Over Printing)",
+      "baseMinor": 225,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/elastic-headscarf-hat"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.15,
+      "id": "peaprint-21294",
+      "providerId": "peaprint",
+      "title": "Work Hat(All-Over Printing)",
+      "baseMinor": 227,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/work-hat"
     },
     {
       "group": "aksesuar-sapka|dahil",
@@ -1037,70 +1103,15 @@
       "url": "https://www.printkk.com/product/info/knit-beanie-hat"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
+      "group": "spor-golf|dahil",
+      "median": 1285,
       "ratio": 0.15,
-      "id": "printdoors-2134",
+      "id": "printdoors-6837",
       "providerId": "printdoors",
-      "title": "Baseball cap (white brim) | Cotton",
-      "baseMinor": 224,
+      "title": "PE Dog Frisbee | Plastic",
+      "baseMinor": 192,
       "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/2134"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.15,
-      "id": "peaprint-21298",
-      "providerId": "peaprint",
-      "title": "Elastic Head Cap(All-Over Printing)",
-      "baseMinor": 225,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/elastic-headscarf-hat"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.15,
-      "id": "peaprint-21294",
-      "providerId": "peaprint",
-      "title": "Work Hat(All-Over Printing)",
-      "baseMinor": 227,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/work-hat"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.15,
-      "id": "printkk-throw-pillow-covers",
-      "providerId": "printkk",
-      "title": "All Season Throw Pillow Covers (Single-Sided Design)",
-      "baseMinor": 157,
-      "basis": "1 adet · 12\"x12\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/throw-pillow-covers"
-    },
-    {
-      "group": "mutfak-bardak|dahil",
-      "median": 843,
-      "ratio": 0.15,
-      "id": "dreamship-1048",
-      "providerId": "dreamship",
-      "title": "Circle Glass DIY Ornament Blank",
-      "baseMinor": 129,
-      "basis": "Dreamship Basic plan başlangıç maliyeti · baskı dahil, kargo ve vergi hariç · US Economy 0.99 USD'den",
-      "url": "https://dreamship.com/products/circle-glass-ornament-blank"
-    },
-    {
-      "group": "mutfak-bardak|dahil",
-      "median": 843,
-      "ratio": 0.15,
-      "id": "dreamship-1054",
-      "providerId": "dreamship",
-      "title": "Heart Glass DIY Ornament Blank",
-      "baseMinor": 129,
-      "basis": "Dreamship Basic plan başlangıç maliyeti · baskı dahil, kargo ve vergi hariç · US Economy 0.99 USD'den",
-      "url": "https://dreamship.com/products/heart-glass-ornament-blank"
+      "url": "https://www.printdoors.com/products/6837"
     },
     {
       "group": "mutfak-matara|dahil",
@@ -1136,37 +1147,15 @@
       "url": "https://qikink.com/custom/home-decor/jigsaw-puzzle/"
     },
     {
-      "group": "ev-tabela|dahil",
-      "median": 859,
+      "group": "arac-aksesuar|dahil",
+      "median": 932,
       "ratio": 0.15,
-      "id": "printdoors-3251",
+      "id": "printdoors-5846",
       "providerId": "printdoors",
-      "title": "Rectangular Metal Sign (Vertical Version) (8x12inch) | Tinplate 110g (Made in the USA)",
-      "baseMinor": 128,
+      "title": "Round Car Air Freshener 8×8cm | Paper",
+      "baseMinor": 136,
       "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/3251"
-    },
-    {
-      "group": "ev-tabela|dahil",
-      "median": 859,
-      "ratio": 0.15,
-      "id": "printdoors-3017",
-      "providerId": "printdoors",
-      "title": "Rectangular Metal Sign (8x12inch) | Tinplate (Made in USA）",
-      "baseMinor": 128,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/3017"
-    },
-    {
-      "group": "spor-golf|dahil",
-      "median": 1285,
-      "ratio": 0.15,
-      "id": "printdoors-6837",
-      "providerId": "printdoors",
-      "title": "PE Dog Frisbee | Plastic",
-      "baseMinor": 192,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/6837"
+      "url": "https://www.printdoors.com/products/5846"
     },
     {
       "group": "arac-aksesuar|dahil",
@@ -1180,15 +1169,37 @@
       "url": "https://www.printkk.com/product/info/steering-wheel-sun-shade-cover"
     },
     {
-      "group": "arac-aksesuar|dahil",
-      "median": 932,
+      "group": "cocuk-giyim|bos",
+      "median": 699,
       "ratio": 0.15,
-      "id": "printdoors-5846",
-      "providerId": "printdoors",
-      "title": "Round Car Air Freshener 8×8cm | Paper",
-      "baseMinor": 136,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/5846"
+      "id": "qikink-t-shirt-for-girls-gc21",
+      "providerId": "qikink",
+      "title": "Girl Classic Crew T-Shirt",
+      "baseMinor": 104,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹105, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/kids-clothes/t-shirt-for-girls-gc21/"
+    },
+    {
+      "group": "giyim-tisort|bos",
+      "median": 1099,
+      "ratio": 0.15,
+      "id": "qikink-women-t-shirt-uc21",
+      "providerId": "qikink",
+      "title": "Female Classic Crew T-Shirt",
+      "baseMinor": 166,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹168, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/t-shirts/women-t-shirt-uc21/"
+    },
+    {
+      "group": "giyim-tisort|bos",
+      "median": 1099,
+      "ratio": 0.15,
+      "id": "printrove-women-s-round-neck-t-shirt",
+      "providerId": "printrove",
+      "title": "Women's Round Neck T-shirt",
+      "baseMinor": 161,
+      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
+      "url": "https://printrove.com/products/women-s-round-neck-t-shirt"
     },
     {
       "group": "oyun-masa|dahil",
@@ -1224,39 +1235,6 @@
       "url": "https://www.printkk.com/product/info/scalloped-mahjong-mat-roll-up-shipping"
     },
     {
-      "group": "giyim-tisort|bos",
-      "median": 1099,
-      "ratio": 0.15,
-      "id": "qikink-women-t-shirt-uc21",
-      "providerId": "qikink",
-      "title": "Female Classic Crew T-Shirt",
-      "baseMinor": 166,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹168, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/t-shirts/women-t-shirt-uc21/"
-    },
-    {
-      "group": "giyim-tisort|bos",
-      "median": 1099,
-      "ratio": 0.15,
-      "id": "printrove-women-s-round-neck-t-shirt",
-      "providerId": "printrove",
-      "title": "Women's Round Neck T-shirt",
-      "baseMinor": 161,
-      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
-      "url": "https://printrove.com/products/women-s-round-neck-t-shirt"
-    },
-    {
-      "group": "cocuk-giyim|bos",
-      "median": 699,
-      "ratio": 0.15,
-      "id": "qikink-t-shirt-for-girls-gc21",
-      "providerId": "qikink",
-      "title": "Girl Classic Crew T-Shirt",
-      "baseMinor": 104,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹105, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/kids-clothes/t-shirt-for-girls-gc21/"
-    },
-    {
       "group": "ev-sus|dahil",
       "median": 447,
       "ratio": 0.16,
@@ -1268,37 +1246,70 @@
       "url": "https://qikink.com/custom/home-decor/ornament/"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
+      "group": "ev-yastik|dahil",
+      "median": 1076,
       "ratio": 0.16,
-      "id": "inkedjoy-19966399",
-      "providerId": "inkedjoy",
-      "title": "Knitted Cap print your logo & image",
-      "baseMinor": 232,
-      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
-      "url": "https://inkedjoy.com/all-products/fully-printing-hat/visor-hat-snapback-cap/knitted-cap"
+      "id": "printdoors-1751",
+      "providerId": "printdoors",
+      "title": "Rectangular Pillow Cover (Different Sides)｜Polyester",
+      "baseMinor": 172,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/1751"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
+      "group": "ev-yastik|dahil",
+      "median": 1076,
       "ratio": 0.16,
-      "id": "printkk-adult-plush-santa-hat-with-light",
-      "providerId": "printkk",
-      "title": "Adult Plush Santa Hat with Light",
-      "baseMinor": 230,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/adult-plush-santa-hat-with-light"
+      "id": "printdoors-556",
+      "providerId": "printdoors",
+      "title": "Cushion cover 13x21 Inch (different sides)｜Polyester（Short Plush）",
+      "baseMinor": 172,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/556"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
+      "group": "ev-yastik|dahil",
+      "median": 1076,
       "ratio": 0.16,
-      "id": "printkk-mens-bucket-hat-double-layers",
+      "id": "printdoors-554",
+      "providerId": "printdoors",
+      "title": "Cushion cover 12x16inch (different sides)｜Polyester",
+      "baseMinor": 169,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/554"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.16,
+      "id": "printkk-pillow-cases",
       "providerId": "printkk",
-      "title": "Double Layer Bucket Hat (Area Pattern)",
-      "baseMinor": 235,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/mens-bucket-hat-double-layers"
+      "title": "Plush Throw Pillow Covers (Single-Sided Design & Multi-Size)",
+      "baseMinor": 168,
+      "basis": "1 adet · 20\"x14\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/pillow-cases"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.16,
+      "id": "printkk-plush-pillow-cases-doubleside",
+      "providerId": "printkk",
+      "title": "Plush Throw Pillow Covers (Double-Sided Design & Multi-Size)",
+      "baseMinor": 168,
+      "basis": "1 adet · 20\"x14\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/plush-pillow-cases-doubleside"
+    },
+    {
+      "group": "ev-battaniye|dahil",
+      "median": 1364,
+      "ratio": 0.16,
+      "id": "printkk-cooling-silk-feel-blanket",
+      "providerId": "printkk",
+      "title": "Cooling Silk-Feel Blanket",
+      "baseMinor": 217,
+      "basis": "1 adet · 10\"x15\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/cooling-silk-feel-blanket"
     },
     {
       "group": "aksesuar-sapka|dahil",
@@ -1378,81 +1389,59 @@
       "url": "https://peaprint.com/products/detail/adjustable-peaked-caps-for-men-and-women"
     },
     {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
       "ratio": 0.16,
-      "id": "printkk-pillow-cases",
+      "id": "inkedjoy-19966399",
+      "providerId": "inkedjoy",
+      "title": "Knitted Cap print your logo & image",
+      "baseMinor": 232,
+      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
+      "url": "https://inkedjoy.com/all-products/fully-printing-hat/visor-hat-snapback-cap/knitted-cap"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.16,
+      "id": "printkk-adult-plush-santa-hat-with-light",
       "providerId": "printkk",
-      "title": "Plush Throw Pillow Covers (Single-Sided Design & Multi-Size)",
-      "baseMinor": 168,
-      "basis": "1 adet · 20\"x14\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/pillow-cases"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.16,
-      "id": "printkk-plush-pillow-cases-doubleside",
-      "providerId": "printkk",
-      "title": "Plush Throw Pillow Covers (Double-Sided Design & Multi-Size)",
-      "baseMinor": 168,
-      "basis": "1 adet · 20\"x14\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/plush-pillow-cases-doubleside"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.16,
-      "id": "printdoors-1751",
-      "providerId": "printdoors",
-      "title": "Rectangular Pillow Cover (Different Sides)｜Polyester",
-      "baseMinor": 172,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/1751"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.16,
-      "id": "printdoors-556",
-      "providerId": "printdoors",
-      "title": "Cushion cover 13x21 Inch (different sides)｜Polyester（Short Plush）",
-      "baseMinor": 172,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/556"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.16,
-      "id": "printdoors-554",
-      "providerId": "printdoors",
-      "title": "Cushion cover 12x16inch (different sides)｜Polyester",
-      "baseMinor": 169,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/554"
-    },
-    {
-      "group": "giyim-kapusonlu|dahil",
-      "median": 2149,
-      "ratio": 0.16,
-      "id": "printkk-cooling-hooded-towel",
-      "providerId": "printkk",
-      "title": "Cooling Hoodie Towel",
-      "baseMinor": 352,
+      "title": "Adult Plush Santa Hat with Light",
+      "baseMinor": 230,
       "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/cooling-hooded-towel"
+      "url": "https://www.printkk.com/product/info/adult-plush-santa-hat-with-light"
     },
     {
-      "group": "ev-battaniye|dahil",
-      "median": 1364,
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
       "ratio": 0.16,
-      "id": "printkk-cooling-silk-feel-blanket",
+      "id": "printkk-mens-bucket-hat-double-layers",
       "providerId": "printkk",
-      "title": "Cooling Silk-Feel Blanket",
-      "baseMinor": 217,
-      "basis": "1 adet · 10\"x15\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/cooling-silk-feel-blanket"
+      "title": "Double Layer Bucket Hat (Area Pattern)",
+      "baseMinor": 235,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/mens-bucket-hat-double-layers"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.16,
+      "id": "yoycol-2HPAYG18",
+      "providerId": "yoycol",
+      "title": "Irregular Acrylic Pendant With Gold Thread",
+      "baseMinor": 130,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2HPAYG18/Irregular-Acrylic-Pendant-With-Gold-Thread"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.16,
+      "id": "yoycol-2HPAYG19",
+      "providerId": "yoycol",
+      "title": "Round Shape Acrylic Pendant With Gold Thread",
+      "baseMinor": 130,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2HPAYG19/Round-Shape-Acrylic-Pendant-With-Gold-Thread"
     },
     {
       "group": "duvar-cerceveli|dahil",
@@ -1466,37 +1455,15 @@
       "url": "https://www.printdoors.com/products/1062"
     },
     {
-      "group": "giyim-tisort|belirsiz",
-      "median": 2000,
+      "group": "cocuk-giyim|bos",
+      "median": 699,
       "ratio": 0.16,
-      "id": "jumbodtg-9807278506304",
-      "providerId": "jumbodtg",
-      "title": "Quick Bulk Ordering - 1301 American Apparel T-shirt",
-      "baseMinor": 325,
-      "basis": "1 adet · S · baskı/adet koşulları ürün sayfasında",
-      "url": "https://jumbodtg.com/products/1301-american-apparel-t-shirt?variant=50649801621824"
-    },
-    {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.16,
-      "id": "yoycol-2HPAYG18",
-      "providerId": "yoycol",
-      "title": "Irregular Acrylic Pendant With Gold Thread",
-      "baseMinor": 130,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2HPAYG18/Irregular-Acrylic-Pendant-With-Gold-Thread"
-    },
-    {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.16,
-      "id": "yoycol-2HPAYG19",
-      "providerId": "yoycol",
-      "title": "Round Shape Acrylic Pendant With Gold Thread",
-      "baseMinor": 130,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2HPAYG19/Round-Shape-Acrylic-Pendant-With-Gold-Thread"
+      "id": "qikink-baby-romper-kr23",
+      "providerId": "qikink",
+      "title": "Kids Rompers | KR23",
+      "baseMinor": 109,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹110, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/kids-clothes/baby-romper-kr23/"
     },
     {
       "group": "giyim-tisort|bos",
@@ -1576,26 +1543,114 @@
       "url": "https://printrove.com/products/women%E2%80%99s-crop-tops"
     },
     {
-      "group": "cocuk-giyim|bos",
-      "median": 699,
+      "group": "giyim-tisort|belirsiz",
+      "median": 2000,
       "ratio": 0.16,
-      "id": "qikink-baby-romper-kr23",
-      "providerId": "qikink",
-      "title": "Kids Rompers | KR23",
-      "baseMinor": 109,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹110, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/kids-clothes/baby-romper-kr23/"
+      "id": "jumbodtg-9807278506304",
+      "providerId": "jumbodtg",
+      "title": "Quick Bulk Ordering - 1301 American Apparel T-shirt",
+      "baseMinor": 325,
+      "basis": "1 adet · S · baskı/adet koşulları ürün sayfasında",
+      "url": "https://jumbodtg.com/products/1301-american-apparel-t-shirt?variant=50649801621824"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
+      "group": "mutfak-bardak-alti|dahil",
+      "median": 646,
       "ratio": 0.17,
-      "id": "printkk-large-area-rug-floor-carpet-7-five",
+      "id": "printdoors-130",
+      "providerId": "printdoors",
+      "title": "Square Coasters｜Diatomaceous Earth",
+      "baseMinor": 111,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/130"
+    },
+    {
+      "group": "mutfak-bardak-alti|dahil",
+      "median": 646,
+      "ratio": 0.17,
+      "id": "printdoors-75",
+      "providerId": "printdoors",
+      "title": "Ceramic Coasters｜ Diatomaceous Earth",
+      "baseMinor": 111,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/75"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.17,
+      "id": "printdoors-922",
+      "providerId": "printdoors",
+      "title": "Cushion cover 16x20Inch (double-sided printing)｜Polyester",
+      "baseMinor": 186,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/922"
+    },
+    {
+      "group": "giyim-kapusonlu|dahil",
+      "median": 2107,
+      "ratio": 0.17,
+      "id": "printkk-cooling-hooded-towel",
       "providerId": "printkk",
-      "title": "Large Area Rug Floor Carpet (7:5)",
-      "baseMinor": 210,
-      "basis": "1 adet · 14\"x10\" (Small-Size Sample) · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/large-area-rug-floor-carpet-7-five"
+      "title": "Cooling Hoodie Towel",
+      "baseMinor": 352,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/cooling-hooded-towel"
+    },
+    {
+      "group": "cocuk-giyim|dahil",
+      "median": 1063,
+      "ratio": 0.17,
+      "id": "printdoors-5837",
+      "providerId": "printdoors",
+      "title": "Double-sided Lightweight Kids Graduation Stole (Style V) | Polyester",
+      "baseMinor": 184,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/5837"
+    },
+    {
+      "group": "cocuk-giyim|dahil",
+      "median": 1063,
+      "ratio": 0.17,
+      "id": "inkedjoy-30908931",
+      "providerId": "inkedjoy",
+      "title": "Top Knot Hat for Baby (A set of 2)",
+      "baseMinor": 182,
+      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
+      "url": "https://inkedjoy.com/all-products/fully-printing-hat/swimming-cap-beanie/top-knot-hat-for-baby"
+    },
+    {
+      "group": "giyim-ceket|dahil",
+      "median": 4250,
+      "ratio": 0.17,
+      "id": "peaprint-17281",
+      "providerId": "peaprint",
+      "title": "140gsm Hooded Fishing Jacket(All-Over Printing)",
+      "baseMinor": 724,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/hooded-fishing-jacket"
+    },
+    {
+      "group": "giyim-ceket|dahil",
+      "median": 4250,
+      "ratio": 0.17,
+      "id": "interestprint-3313",
+      "providerId": "interestprint",
+      "title": "Men's Kimono Jacket ZS904",
+      "baseMinor": 722,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/men_s_kimono_jacket_zs904-3313.html"
+    },
+    {
+      "group": "giyim-sweatshirt|dahil",
+      "median": 2167,
+      "ratio": 0.17,
+      "id": "printdoors-825",
+      "providerId": "printdoors",
+      "title": "Adult Full Width Printed Pullover Hat | Polyester",
+      "baseMinor": 360,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/825"
     },
     {
       "group": "giyim-sweatshirt|dahil",
@@ -1609,15 +1664,26 @@
       "url": "https://inkedjoy.com/all-products/fully-printing-hat/visor-hat-snapback-cap/plush-pullover-cap"
     },
     {
-      "group": "giyim-sweatshirt|dahil",
-      "median": 2167,
+      "group": "duvar-kanvas|dahil",
+      "median": 1299,
       "ratio": 0.17,
-      "id": "printdoors-825",
+      "id": "printdoors-2763",
       "providerId": "printdoors",
-      "title": "Adult Full Width Printed Pullover Hat | Polyester",
-      "baseMinor": 360,
+      "title": "Decorative Painting(Without Frame 1:1.5)｜Canvas",
+      "baseMinor": 216,
       "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/825"
+      "url": "https://www.printdoors.com/products/2763"
+    },
+    {
+      "group": "duvar-kanvas|dahil",
+      "median": 1299,
+      "ratio": 0.17,
+      "id": "peaprint-4930",
+      "providerId": "peaprint",
+      "title": "All-Over Printing Canvas Wallets",
+      "baseMinor": 227,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/full-printing-canvas-wallets"
     },
     {
       "group": "aksesuar-sapka|dahil",
@@ -1664,149 +1730,6 @@
       "url": "https://peaprint.com/products/detail/custom-knit-caps-for-cold-weather"
     },
     {
-      "group": "canta-sirt|dahil",
-      "median": 1347,
-      "ratio": 0.17,
-      "id": "peaprint-17813",
-      "providerId": "peaprint",
-      "title": "DTG Drawstring Backpack(One-sided Printing)",
-      "baseMinor": 225,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/drawstring-backpack"
-    },
-    {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
-      "ratio": 0.17,
-      "id": "printdoors-922",
-      "providerId": "printdoors",
-      "title": "Cushion cover 16x20Inch (double-sided printing)｜Polyester",
-      "baseMinor": 186,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/922"
-    },
-    {
-      "group": "cocuk-giyim|dahil",
-      "median": 1063,
-      "ratio": 0.17,
-      "id": "inkedjoy-30908931",
-      "providerId": "inkedjoy",
-      "title": "Top Knot Hat for Baby (A set of 2)",
-      "baseMinor": 182,
-      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
-      "url": "https://inkedjoy.com/all-products/fully-printing-hat/swimming-cap-beanie/top-knot-hat-for-baby"
-    },
-    {
-      "group": "cocuk-giyim|dahil",
-      "median": 1063,
-      "ratio": 0.17,
-      "id": "printdoors-5837",
-      "providerId": "printdoors",
-      "title": "Double-sided Lightweight Kids Graduation Stole (Style V) | Polyester",
-      "baseMinor": 184,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/5837"
-    },
-    {
-      "group": "giyim-ceket|dahil",
-      "median": 4250,
-      "ratio": 0.17,
-      "id": "interestprint-3313",
-      "providerId": "interestprint",
-      "title": "Men's Kimono Jacket ZS904",
-      "baseMinor": 722,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/men_s_kimono_jacket_zs904-3313.html"
-    },
-    {
-      "group": "giyim-ceket|dahil",
-      "median": 4250,
-      "ratio": 0.17,
-      "id": "peaprint-17281",
-      "providerId": "peaprint",
-      "title": "140gsm Hooded Fishing Jacket(All-Over Printing)",
-      "baseMinor": 724,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/hooded-fishing-jacket"
-    },
-    {
-      "group": "evcil-diger|dahil",
-      "median": 699,
-      "ratio": 0.17,
-      "id": "printkk-bone-shaped-acrylic-pet-tag",
-      "providerId": "printkk",
-      "title": "Bone-Shaped Acrylic Pet Tag",
-      "baseMinor": 122,
-      "basis": "1 adet · white / S · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/bone-shaped-acrylic-pet-tag"
-    },
-    {
-      "group": "duvar-kanvas|dahil",
-      "median": 1299,
-      "ratio": 0.17,
-      "id": "printdoors-2763",
-      "providerId": "printdoors",
-      "title": "Decorative Painting(Without Frame 1:1.5)｜Canvas",
-      "baseMinor": 216,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/2763"
-    },
-    {
-      "group": "duvar-kanvas|dahil",
-      "median": 1299,
-      "ratio": 0.17,
-      "id": "peaprint-4930",
-      "providerId": "peaprint",
-      "title": "All-Over Printing Canvas Wallets",
-      "baseMinor": 227,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/full-printing-canvas-wallets"
-    },
-    {
-      "group": "mutfak-bardak-alti|dahil",
-      "median": 646,
-      "ratio": 0.17,
-      "id": "printdoors-130",
-      "providerId": "printdoors",
-      "title": "Square Coasters｜Diatomaceous Earth",
-      "baseMinor": 111,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/130"
-    },
-    {
-      "group": "mutfak-bardak-alti|dahil",
-      "median": 646,
-      "ratio": 0.17,
-      "id": "printdoors-75",
-      "providerId": "printdoors",
-      "title": "Ceramic Coasters｜ Diatomaceous Earth",
-      "baseMinor": 111,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/75"
-    },
-    {
-      "group": "duvar-cerceveli|dahil",
-      "median": 1333,
-      "ratio": 0.17,
-      "id": "printdoors-593",
-      "providerId": "printdoors",
-      "title": "Waterproof poster without frame | pp paper",
-      "baseMinor": 224,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/593"
-    },
-    {
-      "group": "ayakkabi-sneaker|dahil",
-      "median": 2396,
-      "ratio": 0.17,
-      "id": "printkk-black-shoe-box",
-      "providerId": "printkk",
-      "title": "Black Shoe Box",
-      "baseMinor": 399,
-      "basis": "1 adet · Appropriate Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/black-shoe-box"
-    },
-    {
       "group": "canta-diger|dahil",
       "median": 693,
       "ratio": 0.17,
@@ -1829,6 +1752,28 @@
       "url": "https://popcustoms.com/products/cotton-dust-proof-storage-bags-for-handbags-and-purses-2052"
     },
     {
+      "group": "canta-sirt|dahil",
+      "median": 1347,
+      "ratio": 0.17,
+      "id": "peaprint-17813",
+      "providerId": "peaprint",
+      "title": "DTG Drawstring Backpack(One-sided Printing)",
+      "baseMinor": 225,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/drawstring-backpack"
+    },
+    {
+      "group": "evcil-diger|dahil",
+      "median": 699,
+      "ratio": 0.17,
+      "id": "printkk-bone-shaped-acrylic-pet-tag",
+      "providerId": "printkk",
+      "title": "Bone-Shaped Acrylic Pet Tag",
+      "baseMinor": 122,
+      "basis": "1 adet · white / S · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/bone-shaped-acrylic-pet-tag"
+    },
+    {
       "group": "evcil-tasma|dahil",
       "median": 1241,
       "ratio": 0.17,
@@ -1840,6 +1785,28 @@
       "url": "https://www.printkk.com/product/info/pet-elizabethan-collar"
     },
     {
+      "group": "ayakkabi-sneaker|dahil",
+      "median": 2396,
+      "ratio": 0.17,
+      "id": "printkk-black-shoe-box",
+      "providerId": "printkk",
+      "title": "Black Shoe Box",
+      "baseMinor": 399,
+      "basis": "1 adet · Appropriate Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/black-shoe-box"
+    },
+    {
+      "group": "duvar-cerceveli|dahil",
+      "median": 1333,
+      "ratio": 0.17,
+      "id": "printdoors-593",
+      "providerId": "printdoors",
+      "title": "Waterproof poster without frame | pp paper",
+      "baseMinor": 224,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/593"
+    },
+    {
       "group": "arac-aksesuar|dahil",
       "median": 932,
       "ratio": 0.17,
@@ -1849,17 +1816,6 @@
       "baseMinor": 155,
       "basis": "1 adet · 15\" · özel ölçü bedeli hariç",
       "url": "https://www.printkk.com/product/info/elastic-steering-wheel-cover"
-    },
-    {
-      "group": "giyim-uzun-kollu|bos",
-      "median": 1299,
-      "ratio": 0.17,
-      "id": "printrove-men-s-long-sleeve-t-shirt",
-      "providerId": "printrove",
-      "title": "Men's Long Sleeve T-shirt",
-      "baseMinor": 218,
-      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
-      "url": "https://printrove.com/products/men-s-long-sleeve-t-shirt"
     },
     {
       "group": "giyim-crop|bos",
@@ -1884,15 +1840,15 @@
       "url": "https://qikink.com/custom/tops/tank-top-ft37/"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.18,
-      "id": "printkk-halloween-witch-hat",
-      "providerId": "printkk",
-      "title": "Halloween Witch Hat",
-      "baseMinor": 259,
-      "basis": "1 adet · 1 Pc · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/halloween-witch-hat"
+      "group": "giyim-uzun-kollu|bos",
+      "median": 1299,
+      "ratio": 0.17,
+      "id": "printrove-men-s-long-sleeve-t-shirt",
+      "providerId": "printrove",
+      "title": "Men's Long Sleeve T-shirt",
+      "baseMinor": 218,
+      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
+      "url": "https://printrove.com/products/men-s-long-sleeve-t-shirt"
     },
     {
       "group": "ev-yastik|dahil",
@@ -1904,6 +1860,28 @@
       "baseMinor": 190,
       "basis": "1 adet · 16\"x16\" · özel ölçü bedeli hariç",
       "url": "https://www.printkk.com/product/info/velvet-pillow-cover"
+    },
+    {
+      "group": "giyim-kapusonlu|dahil",
+      "median": 2107,
+      "ratio": 0.18,
+      "id": "interestprint-5444",
+      "providerId": "interestprint",
+      "title": "Car Shift Knob Hoodie",
+      "baseMinor": 382,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/car_shift_knob_hoodie-5444.html"
+    },
+    {
+      "group": "giyim-kapusonlu|dahil",
+      "median": 2107,
+      "ratio": 0.18,
+      "id": "interestprint-1479",
+      "providerId": "interestprint",
+      "title": "All Over Print Pet Dog Fuzzy Hoodie",
+      "baseMinor": 389,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/aop_pet_dog_hoodie-1479.html"
     },
     {
       "group": "cocuk-giyim|dahil",
@@ -1924,41 +1902,74 @@
       "providerId": "yoycol",
       "title": "All-Over Print Men's Drop-shoulder Short Coat",
       "baseMinor": 769,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
       "url": "https://www.yoycol.com/product_detail/3MOWPF02/All-Over-Print-Mens-Drop-shoulder-Short-Coat"
     },
     {
-      "group": "giyim-kapusonlu|dahil",
-      "median": 2149,
+      "group": "duvar-poster|dahil",
+      "median": 787,
       "ratio": 0.18,
-      "id": "interestprint-5444",
-      "providerId": "interestprint",
-      "title": "Car Shift Knob Hoodie",
-      "baseMinor": 382,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/car_shift_knob_hoodie-5444.html"
+      "id": "printdoors-590",
+      "providerId": "printdoors",
+      "title": "Poster ( 5.8x8.3 Inch/12x16.5 Inch)｜Paper",
+      "baseMinor": 144,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/590"
     },
     {
-      "group": "giyim-kapusonlu|dahil",
-      "median": 2149,
+      "group": "duvar-poster|dahil",
+      "median": 787,
       "ratio": 0.18,
-      "id": "interestprint-1479",
-      "providerId": "interestprint",
-      "title": "All Over Print Pet Dog Fuzzy Hoodie",
-      "baseMinor": 389,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/aop_pet_dog_hoodie-1479.html"
+      "id": "inkedjoy-32350627",
+      "providerId": "inkedjoy",
+      "title": "Vertical wall art available in multiple sizes",
+      "baseMinor": 141,
+      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
+      "url": "https://inkedjoy.com/all-products/home-deco/wall-deco/vertical-wall-art-available-in-multiple-sizes"
     },
     {
-      "group": "evcil-diger|dahil",
-      "median": 699,
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
       "ratio": 0.18,
-      "id": "printkk-round-acrylic-pet-tag",
+      "id": "printkk-halloween-witch-hat",
       "providerId": "printkk",
-      "title": "Round Acrylic Pet Tag",
-      "baseMinor": 123,
-      "basis": "1 adet · white / S · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/round-acrylic-pet-tag"
+      "title": "Halloween Witch Hat",
+      "baseMinor": 259,
+      "basis": "1 adet · 1 Pc · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/halloween-witch-hat"
+    },
+    {
+      "group": "canta-diger|dahil",
+      "median": 693,
+      "ratio": 0.18,
+      "id": "printkk-pink-ziplock-bag-12x20cm",
+      "providerId": "printkk",
+      "title": "Pink Ziplock Bag-12x20cm",
+      "baseMinor": 125,
+      "basis": "1 adet · 12x20cm · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/pink-ziplock-bag-12x20cm"
+    },
+    {
+      "group": "canta-diger|dahil",
+      "median": 693,
+      "ratio": 0.18,
+      "id": "printkk-black-resealable-bag-12x15cm",
+      "providerId": "printkk",
+      "title": "Black Resealable Bag-12x15cm",
+      "baseMinor": 125,
+      "basis": "1 adet · 12x15cm · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/black-resealable-bag-12x15cm"
+    },
+    {
+      "group": "canta-diger|dahil",
+      "median": 693,
+      "ratio": 0.18,
+      "id": "printkk-white-ziplock-bag-12x15cm",
+      "providerId": "printkk",
+      "title": "White Ziplock Bag-12x15cm",
+      "baseMinor": 125,
+      "basis": "1 adet · 12x15cm · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/white-ziplock-bag-12x15cm"
     },
     {
       "group": "evcil-diger|dahil",
@@ -1983,81 +1994,15 @@
       "url": "https://qikink.com/custom/pet-products/pet-tags/"
     },
     {
-      "group": "duvar-poster|dahil",
-      "median": 788,
+      "group": "evcil-diger|dahil",
+      "median": 699,
       "ratio": 0.18,
-      "id": "inkedjoy-32350627",
-      "providerId": "inkedjoy",
-      "title": "Vertical wall art available in multiple sizes",
-      "baseMinor": 141,
-      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
-      "url": "https://inkedjoy.com/all-products/home-deco/wall-deco/vertical-wall-art-available-in-multiple-sizes"
-    },
-    {
-      "group": "duvar-poster|dahil",
-      "median": 788,
-      "ratio": 0.18,
-      "id": "printdoors-590",
-      "providerId": "printdoors",
-      "title": "Poster ( 5.8x8.3 Inch/12x16.5 Inch)｜Paper",
-      "baseMinor": 144,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/590"
-    },
-    {
-      "group": "duvar-duvar-halisi|dahil",
-      "median": 1024,
-      "ratio": 0.18,
-      "id": "printkk-29-x-37in-hanging-tapestry",
+      "id": "printkk-round-acrylic-pet-tag",
       "providerId": "printkk",
-      "title": "Small Horizontal Lightweight Wall Tapestry for Bedroom",
-      "baseMinor": 181,
-      "basis": "1 adet · 37\"x29\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/29-x-37in-hanging-tapestry"
-    },
-    {
-      "group": "canta-diger|dahil",
-      "median": 693,
-      "ratio": 0.18,
-      "id": "printkk-pink-ziplock-bag-12x20cm",
-      "providerId": "printkk",
-      "title": "Pink Ziplock Bag-12x20cm",
-      "baseMinor": 125,
-      "basis": "1 adet · 12x20cm · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/pink-ziplock-bag-12x20cm"
-    },
-    {
-      "group": "canta-diger|dahil",
-      "median": 693,
-      "ratio": 0.18,
-      "id": "printkk-white-ziplock-bag-12x15cm",
-      "providerId": "printkk",
-      "title": "White Ziplock Bag-12x15cm",
-      "baseMinor": 125,
-      "basis": "1 adet · 12x15cm · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/white-ziplock-bag-12x15cm"
-    },
-    {
-      "group": "canta-diger|dahil",
-      "median": 693,
-      "ratio": 0.18,
-      "id": "printkk-black-resealable-bag-12x15cm",
-      "providerId": "printkk",
-      "title": "Black Resealable Bag-12x15cm",
-      "baseMinor": 125,
-      "basis": "1 adet · 12x15cm · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/black-resealable-bag-12x15cm"
-    },
-    {
-      "group": "spor-golf|dahil",
-      "median": 1285,
-      "ratio": 0.18,
-      "id": "printkk-shaped-acrylic-skateboard-standee",
-      "providerId": "printkk",
-      "title": "Shaped Acrylic Skateboard Standee",
-      "baseMinor": 225,
-      "basis": "1 adet · 5cm · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/shaped-acrylic-skateboard-standee"
+      "title": "Round Acrylic Pet Tag",
+      "baseMinor": 123,
+      "basis": "1 adet · white / S · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/round-acrylic-pet-tag"
     },
     {
       "group": "canta-kozmetik|dahil",
@@ -2071,15 +2016,26 @@
       "url": "https://www.printkk.com/product/info/travel-makeup-pouch"
     },
     {
-      "group": "spor-plaj|dahil",
-      "median": 1164,
+      "group": "spor-golf|dahil",
+      "median": 1285,
       "ratio": 0.18,
-      "id": "printkk-women-beach-wrap",
+      "id": "printkk-shaped-acrylic-skateboard-standee",
       "providerId": "printkk",
-      "title": "Women's Beach Sarong Wraps Customized Services",
-      "baseMinor": 210,
-      "basis": "1 adet · S · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/women-beach-wrap"
+      "title": "Shaped Acrylic Skateboard Standee",
+      "baseMinor": 225,
+      "basis": "1 adet · 5cm · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/shaped-acrylic-skateboard-standee"
+    },
+    {
+      "group": "duvar-duvar-halisi|dahil",
+      "median": 1024,
+      "ratio": 0.18,
+      "id": "printkk-29-x-37in-hanging-tapestry",
+      "providerId": "printkk",
+      "title": "Small Horizontal Lightweight Wall Tapestry for Bedroom",
+      "baseMinor": 181,
+      "basis": "1 adet · 37\"x29\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/29-x-37in-hanging-tapestry"
     },
     {
       "group": "giyim-tisort|bos",
@@ -2104,17 +2060,6 @@
       "url": "https://printrove.com/products/women%E2%80%99s-crop-hoodies"
     },
     {
-      "group": "giyim-pantolon|bos",
-      "median": 2299,
-      "ratio": 0.18,
-      "id": "qikink-joggers-uj29",
-      "providerId": "qikink",
-      "title": "Unisex Joggers | UJ29",
-      "baseMinor": 416,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹420, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/bottomwear/joggers-uj29/"
-    },
-    {
       "group": "giyim-etek|bos",
       "median": 1299,
       "ratio": 0.18,
@@ -2126,37 +2071,59 @@
       "url": "https://qikink.com/custom/dresses/all-over-print-mini-skirt-fs59/"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 0.19,
-      "id": "printkk-16-x-24in-doormat",
-      "providerId": "printkk",
-      "title": "Flannel Non Slip Area Rug (3:2)",
-      "baseMinor": 235,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/16-x-24in-doormat"
+      "group": "giyim-pantolon|bos",
+      "median": 2299,
+      "ratio": 0.18,
+      "id": "qikink-joggers-uj29",
+      "providerId": "qikink",
+      "title": "Unisex Joggers | UJ29",
+      "baseMinor": 416,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹420, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/bottomwear/joggers-uj29/"
     },
     {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.19,
-      "id": "printkk-sun-visor-hats",
+      "group": "spor-plaj|dahil",
+      "median": 1164,
+      "ratio": 0.18,
+      "id": "printkk-women-beach-wrap",
       "providerId": "printkk",
-      "title": "Sun Visor Hat",
-      "baseMinor": 284,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/sun-visor-hats"
+      "title": "Women's Beach Sarong Wraps Customized Services",
+      "baseMinor": 210,
+      "basis": "1 adet · S · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/women-beach-wrap"
     },
     {
-      "group": "giyim-polo|dahil",
-      "median": 2149,
+      "group": "mutfak-bardak|dahil",
+      "median": 843,
       "ratio": 0.19,
-      "id": "interestprint-5587",
-      "providerId": "interestprint",
-      "title": "Custom Women's Zipper Polo Shirt ( Model T88 )",
-      "baseMinor": 419,
-      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
-      "url": "https://www.interestprint.com/custom/custom_women_s_zipper_polo_shirt_model_t88-5587.html"
+      "id": "peaprint-7493",
+      "providerId": "peaprint",
+      "title": "Glass iPhone 14 Series Cases",
+      "baseMinor": 160,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/glass-iphone-14-series-cases"
+    },
+    {
+      "group": "mutfak-bardak|dahil",
+      "median": 843,
+      "ratio": 0.19,
+      "id": "peaprint-7535",
+      "providerId": "peaprint",
+      "title": "Glass iPhone case for iPhone 13 Series",
+      "baseMinor": 160,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/glass-iphone-case"
+    },
+    {
+      "group": "ev-yastik|dahil",
+      "median": 1076,
+      "ratio": 0.19,
+      "id": "printdoors-2598",
+      "providerId": "printdoors",
+      "title": "Double-sided Printed Pillowcase (20x14inch) | Polyester",
+      "baseMinor": 200,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/2598"
     },
     {
       "group": "ev-yastik|dahil",
@@ -2181,48 +2148,48 @@
       "url": "https://www.printkk.com/product/info/throw-pillow-covers1"
     },
     {
-      "group": "ev-yastik|dahil",
-      "median": 1076,
+      "group": "mutfak-kupa|dahil",
+      "median": 758,
       "ratio": 0.19,
-      "id": "printdoors-2598",
-      "providerId": "printdoors",
-      "title": "Double-sided Printed Pillowcase (20x14inch) | Polyester",
-      "baseMinor": 200,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/2598"
-    },
-    {
-      "group": "canta-el-omuz|dahil",
-      "median": 1339,
-      "ratio": 0.19,
-      "id": "printkk-twill-crossbody-phone-bag",
-      "providerId": "printkk",
-      "title": "Twill Crossbody Phone Bag",
-      "baseMinor": 261,
-      "basis": "1 adet · black / One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/twill-crossbody-phone-bag"
-    },
-    {
-      "group": "cocuk-giyim|dahil",
-      "median": 1063,
-      "ratio": 0.19,
-      "id": "printkk-bowknot-baby-headbands",
-      "providerId": "printkk",
-      "title": "Bowknot  Baby Headbands",
-      "baseMinor": 204,
-      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/bowknot-baby-headbands"
-    },
-    {
-      "group": "cocuk-giyim|dahil",
-      "median": 1063,
-      "ratio": 0.19,
-      "id": "peaprint-2276",
+      "id": "peaprint-630",
       "providerId": "peaprint",
-      "title": "Top Knot Hat for Baby (A Set of 2)",
-      "baseMinor": 197,
+      "title": "11oz White Mug Print",
+      "baseMinor": 146,
       "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/top-knot-hat"
+      "url": "https://peaprint.com/products/detail/white-mug-print"
+    },
+    {
+      "group": "ev-hali|dahil",
+      "median": 1261,
+      "ratio": 0.19,
+      "id": "printkk-16-x-24in-doormat",
+      "providerId": "printkk",
+      "title": "Flannel Non Slip Area Rug (3:2)",
+      "baseMinor": 235,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/16-x-24in-doormat"
+    },
+    {
+      "group": "ev-havlu|dahil",
+      "median": 890,
+      "ratio": 0.19,
+      "id": "inkedjoy-31454182",
+      "providerId": "inkedjoy",
+      "title": "Hand towel Superfine fiber",
+      "baseMinor": 169,
+      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
+      "url": "https://inkedjoy.com/all-products/home-set/towel/hand-towel-superfine-fiber"
+    },
+    {
+      "group": "canta-bez|dahil",
+      "median": 1075,
+      "ratio": 0.19,
+      "id": "qikink-all-over-print-tote-bag",
+      "providerId": "qikink",
+      "title": "Unisex AOP Tote bags Zipper",
+      "baseMinor": 208,
+      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹236, %18 GST dahil) · kargo ayrıca",
+      "url": "https://qikink.com/custom/bags/all-over-print-tote-bag/"
     },
     {
       "group": "canta-bez|dahil",
@@ -2236,15 +2203,59 @@
       "url": "https://jetprintapp.com/product/cloth-tote-bag/"
     },
     {
-      "group": "canta-bez|dahil",
-      "median": 1075,
+      "group": "cocuk-giyim|dahil",
+      "median": 1063,
       "ratio": 0.19,
-      "id": "qikink-all-over-print-tote-bag",
-      "providerId": "qikink",
-      "title": "Unisex AOP Tote bags Zipper",
-      "baseMinor": 208,
-      "basis": "Baskı dahil ürün başlangıç bedeli · GST hariç (sayfada ₹236, %18 GST dahil) · kargo ayrıca",
-      "url": "https://qikink.com/custom/bags/all-over-print-tote-bag/"
+      "id": "peaprint-2276",
+      "providerId": "peaprint",
+      "title": "Top Knot Hat for Baby (A Set of 2)",
+      "baseMinor": 197,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/top-knot-hat"
+    },
+    {
+      "group": "cocuk-giyim|dahil",
+      "median": 1063,
+      "ratio": 0.19,
+      "id": "printkk-bowknot-baby-headbands",
+      "providerId": "printkk",
+      "title": "Bowknot  Baby Headbands",
+      "baseMinor": 204,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/bowknot-baby-headbands"
+    },
+    {
+      "group": "giyim-polo|dahil",
+      "median": 2149,
+      "ratio": 0.19,
+      "id": "interestprint-5587",
+      "providerId": "interestprint",
+      "title": "Custom Women's Zipper Polo Shirt ( Model T88 )",
+      "baseMinor": 419,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/custom_women_s_zipper_polo_shirt_model_t88-5587.html"
+    },
+    {
+      "group": "giyim-ceket|dahil",
+      "median": 4250,
+      "ratio": 0.19,
+      "id": "peaprint-21130",
+      "providerId": "peaprint",
+      "title": "Women's Casual Lapel Blazer(All-Over Printing)",
+      "baseMinor": 806,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/womens-casual-lapel-blazer"
+    },
+    {
+      "group": "giyim-ceket|dahil",
+      "median": 4250,
+      "ratio": 0.19,
+      "id": "peaprint-8710",
+      "providerId": "peaprint",
+      "title": "Short Sleeve Men's Baseball Batting Jacket",
+      "baseMinor": 810,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/baseball-batting-jacket"
     },
     {
       "group": "giyim-ceket|dahil",
@@ -2280,72 +2291,6 @@
       "url": "https://www.printkk.com/product/info/womens-casual-blazer"
     },
     {
-      "group": "giyim-ceket|dahil",
-      "median": 4250,
-      "ratio": 0.19,
-      "id": "peaprint-21130",
-      "providerId": "peaprint",
-      "title": "Women's Casual Lapel Blazer(All-Over Printing)",
-      "baseMinor": 806,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/womens-casual-lapel-blazer"
-    },
-    {
-      "group": "giyim-ceket|dahil",
-      "median": 4250,
-      "ratio": 0.19,
-      "id": "peaprint-8710",
-      "providerId": "peaprint",
-      "title": "Short Sleeve Men's Baseball Batting Jacket",
-      "baseMinor": 810,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/baseball-batting-jacket"
-    },
-    {
-      "group": "ev-havlu|dahil",
-      "median": 882,
-      "ratio": 0.19,
-      "id": "inkedjoy-31454182",
-      "providerId": "inkedjoy",
-      "title": "Hand towel Superfine fiber",
-      "baseMinor": 169,
-      "basis": "Halka açık standart başlangıç ürün bedeli; baskı/varyant seçeneklerini üreticide kontrol et",
-      "url": "https://inkedjoy.com/all-products/home-set/towel/hand-towel-superfine-fiber"
-    },
-    {
-      "group": "mutfak-kupa|dahil",
-      "median": 758,
-      "ratio": 0.19,
-      "id": "peaprint-630",
-      "providerId": "peaprint",
-      "title": "11oz White Mug Print",
-      "baseMinor": 146,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/white-mug-print"
-    },
-    {
-      "group": "mutfak-bardak|dahil",
-      "median": 843,
-      "ratio": 0.19,
-      "id": "peaprint-7493",
-      "providerId": "peaprint",
-      "title": "Glass iPhone 14 Series Cases",
-      "baseMinor": 160,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/glass-iphone-14-series-cases"
-    },
-    {
-      "group": "mutfak-bardak|dahil",
-      "median": 843,
-      "ratio": 0.19,
-      "id": "peaprint-7535",
-      "providerId": "peaprint",
-      "title": "Glass iPhone case for iPhone 13 Series",
-      "baseMinor": 160,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/glass-iphone-case"
-    },
-    {
       "group": "duvar-kanvas|dahil",
       "median": 1299,
       "ratio": 0.19,
@@ -2357,15 +2302,70 @@
       "url": "https://inkedjoy.com/all-products/home-deco/wall-deco/hanging-picture"
     },
     {
-      "group": "duvar-cerceveli|dahil",
-      "median": 1333,
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
       "ratio": 0.19,
-      "id": "printkk-square-block-photo-frame",
+      "id": "printkk-sun-visor-hats",
       "providerId": "printkk",
-      "title": "Square Building Block Picture Frame",
-      "baseMinor": 253,
-      "basis": "1 adet · S · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/square-block-photo-frame"
+      "title": "Sun Visor Hat",
+      "baseMinor": 284,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/sun-visor-hats"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.19,
+      "id": "yoycol-2AAOHB11",
+      "providerId": "yoycol",
+      "title": "Horizontal Rectangular Acrylic Pendant|Single-Sided Printing",
+      "baseMinor": 150,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2AAOHB11/Horizontal-Rectangular-Acrylic-Pendant-Single-Sided-Printing"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.19,
+      "id": "yoycol-2AAOZB12",
+      "providerId": "yoycol",
+      "title": "Square Acrylic Pendant|Single-Sided Printing",
+      "baseMinor": 150,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2AAOZB12/Square-Acrylic-Pendant-Single-Sided-Printing"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.19,
+      "id": "yoycol-2AAOYB10",
+      "providerId": "yoycol",
+      "title": "Wishing Bottle Acrylic Pendant|Single-Sided Printing",
+      "baseMinor": 150,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2AAOYB10/Wishing-Bottle-Acrylic-Pendant-Single-Sided-Printing"
+    },
+    {
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
+      "ratio": 0.19,
+      "id": "yoycol-2AAOSB12",
+      "providerId": "yoycol",
+      "title": "Vertical Rectangular Acrylic Pendant|Single-Sided Printing",
+      "baseMinor": 150,
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
+      "url": "https://www.yoycol.com/product_detail/2AAOSB12/Vertical-Rectangular-Acrylic-Pendant-Single-Sided-Printing"
+    },
+    {
+      "group": "giyim-pantolon|dahil",
+      "median": 1544,
+      "ratio": 0.19,
+      "id": "interestprint-762",
+      "providerId": "interestprint",
+      "title": "Brand Logo for Bottoms (4cm X 5cm)",
+      "baseMinor": 299,
+      "basis": "Standart üretim/katalog bedeli; önerilen Retail Price kullanılmadı",
+      "url": "https://www.interestprint.com/custom/brand_logo_for_bottoms_4cm_x_5cm-762.html"
     },
     {
       "group": "mutfak-tabak|dahil",
@@ -2379,48 +2379,15 @@
       "url": "https://www.printkk.com/product/info/leather-mahjong-dice-tray"
     },
     {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
+      "group": "duvar-cerceveli|dahil",
+      "median": 1333,
       "ratio": 0.19,
-      "id": "yoycol-2AAOHB11",
-      "providerId": "yoycol",
-      "title": "Horizontal Rectangular Acrylic Pendant|Single-Sided Printing",
-      "baseMinor": 150,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2AAOHB11/Horizontal-Rectangular-Acrylic-Pendant-Single-Sided-Printing"
-    },
-    {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.19,
-      "id": "yoycol-2AAOZB12",
-      "providerId": "yoycol",
-      "title": "Square Acrylic Pendant|Single-Sided Printing",
-      "baseMinor": 150,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2AAOZB12/Square-Acrylic-Pendant-Single-Sided-Printing"
-    },
-    {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.19,
-      "id": "yoycol-2AAOYB10",
-      "providerId": "yoycol",
-      "title": "Wishing Bottle Acrylic Pendant|Single-Sided Printing",
-      "baseMinor": 150,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2AAOYB10/Wishing-Bottle-Acrylic-Pendant-Single-Sided-Printing"
-    },
-    {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
-      "ratio": 0.19,
-      "id": "yoycol-2AAOSB12",
-      "providerId": "yoycol",
-      "title": "Vertical Rectangular Acrylic Pendant|Single-Sided Printing",
-      "baseMinor": 150,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
-      "url": "https://www.yoycol.com/product_detail/2AAOSB12/Vertical-Rectangular-Acrylic-Pendant-Single-Sided-Printing"
+      "id": "printkk-square-block-photo-frame",
+      "providerId": "printkk",
+      "title": "Square Building Block Picture Frame",
+      "baseMinor": 253,
+      "basis": "1 adet · S · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/square-block-photo-frame"
     },
     {
       "group": "duvar-ahsap|dahil",
@@ -2445,37 +2412,15 @@
       "url": "https://www.printkk.com/product/info/car-headrest-cover-set-of-one"
     },
     {
-      "group": "giyim-tisort|bos",
-      "median": 1099,
+      "group": "canta-el-omuz|dahil",
+      "median": 1339,
       "ratio": 0.19,
-      "id": "qikink-v-neck-t-shirts-uv34",
-      "providerId": "qikink",
-      "title": "Male V Neck T-Shirt | UV34",
-      "baseMinor": 208,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹210, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/t-shirts/v-neck-t-shirts-uv34/"
-    },
-    {
-      "group": "giyim-pantolon|bos",
-      "median": 2299,
-      "ratio": 0.19,
-      "id": "printrove-joggers",
-      "providerId": "printrove",
-      "title": "Joggers",
-      "baseMinor": 426,
-      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
-      "url": "https://printrove.com/products/joggers"
-    },
-    {
-      "group": "giyim-atlet|bos",
-      "median": 999,
-      "ratio": 0.19,
-      "id": "qikink-gym-vest-men-ms36",
-      "providerId": "qikink",
-      "title": "Male Sleeveless T-Shirt | MS36",
-      "baseMinor": 187,
-      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹189, %5 GST dahil) · baskı ve kargo ayrıca",
-      "url": "https://qikink.com/custom/tops/gym-vest-men-ms36/"
+      "id": "printkk-twill-crossbody-phone-bag",
+      "providerId": "printkk",
+      "title": "Twill Crossbody Phone Bag",
+      "baseMinor": 261,
+      "basis": "1 adet · black / One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/twill-crossbody-phone-bag"
     },
     {
       "group": "cocuk-giyim|bos",
@@ -2500,6 +2445,17 @@
       "url": "https://printrove.com/products/toddler%E2%80%99s-round-neck-t-shirt"
     },
     {
+      "group": "giyim-tisort|bos",
+      "median": 1099,
+      "ratio": 0.19,
+      "id": "qikink-v-neck-t-shirts-uv34",
+      "providerId": "qikink",
+      "title": "Male V Neck T-Shirt | UV34",
+      "baseMinor": 208,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹210, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/t-shirts/v-neck-t-shirts-uv34/"
+    },
+    {
       "group": "giyim-elbise|bos",
       "median": 1299,
       "ratio": 0.19,
@@ -2511,48 +2467,26 @@
       "url": "https://qikink.com/custom/dresses/maternity-dresses-fm44/"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 0.2,
-      "id": "printdoors-784",
-      "providerId": "printdoors",
-      "title": "Toilet Floor Mat (20×16inch)｜Flannel",
-      "baseMinor": 249,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/784"
+      "group": "giyim-pantolon|bos",
+      "median": 2299,
+      "ratio": 0.19,
+      "id": "printrove-joggers",
+      "providerId": "printrove",
+      "title": "Joggers",
+      "baseMinor": 426,
+      "basis": "Baskısız ürün başlangıç bedeli · baskı, kargo ve vergiler ayrıca eklenir",
+      "url": "https://printrove.com/products/joggers"
     },
     {
-      "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 0.2,
-      "id": "printdoors-58",
-      "providerId": "printdoors",
-      "title": "Flannel floor mat (15.74×23.62inch)",
-      "baseMinor": 249,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/58"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.2,
-      "id": "printkk-unisex-washed-denim-baseball-cap",
-      "providerId": "printkk",
-      "title": "Unisex Washed Denim Baseball Cap",
-      "baseMinor": 288,
-      "basis": "1 adet · Black / One Size · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/unisex-washed-denim-baseball-cap"
-    },
-    {
-      "group": "aksesuar-sapka|dahil",
-      "median": 1475,
-      "ratio": 0.2,
-      "id": "peaprint-4111",
-      "providerId": "peaprint",
-      "title": "Personalized Santa Hats",
-      "baseMinor": 291,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/personalized-santa-hats"
+      "group": "giyim-atlet|bos",
+      "median": 999,
+      "ratio": 0.19,
+      "id": "qikink-gym-vest-men-ms36",
+      "providerId": "qikink",
+      "title": "Male Sleeveless T-Shirt | MS36",
+      "baseMinor": 187,
+      "basis": "Baskısız ürün başlangıç bedeli · GST hariç (sayfada ₹189, %5 GST dahil) · baskı ve kargo ayrıca",
+      "url": "https://qikink.com/custom/tops/gym-vest-men-ms36/"
     },
     {
       "group": "ev-yastik|dahil",
@@ -2588,6 +2522,50 @@
       "url": "https://www.printkk.com/product/info/vertical-outdoor-decor-flags-2-3-ft-double-sided"
     },
     {
+      "group": "ev-hali|dahil",
+      "median": 1261,
+      "ratio": 0.2,
+      "id": "printdoors-784",
+      "providerId": "printdoors",
+      "title": "Toilet Floor Mat (20×16inch)｜Flannel",
+      "baseMinor": 249,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/784"
+    },
+    {
+      "group": "ev-hali|dahil",
+      "median": 1261,
+      "ratio": 0.2,
+      "id": "printdoors-58",
+      "providerId": "printdoors",
+      "title": "Flannel floor mat (15.74×23.62inch)",
+      "baseMinor": 249,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/58"
+    },
+    {
+      "group": "ev-tabela|dahil",
+      "median": 859,
+      "ratio": 0.2,
+      "id": "merchize-custom-shape-wood-bookshelf-sign",
+      "providerId": "merchize",
+      "title": "Custom Shape Wood Bookshelf Sign",
+      "baseMinor": 170,
+      "basis": "Tier 1 · 2-side Printed - 3in · kargo ayrıca",
+      "url": "https://merchize.com/product/custom-shape-wood-bookshelf-sign/"
+    },
+    {
+      "group": "ev-havlu|dahil",
+      "median": 890,
+      "ratio": 0.2,
+      "id": "printkk-hand-towel",
+      "providerId": "printkk",
+      "title": "Hand Towel",
+      "baseMinor": 177,
+      "basis": "1 adet · One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/hand-towel"
+    },
+    {
       "group": "canta-bez|dahil",
       "median": 1075,
       "ratio": 0.2,
@@ -2602,6 +2580,17 @@
       "group": "giyim-ceket|dahil",
       "median": 4250,
       "ratio": 0.2,
+      "id": "peaprint-9033",
+      "providerId": "peaprint",
+      "title": "Women's Zipper Jacket(All-Over Printing)",
+      "baseMinor": 831,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/zipper-jacket"
+    },
+    {
+      "group": "giyim-ceket|dahil",
+      "median": 4250,
+      "ratio": 0.2,
       "id": "interestprint-6232",
       "providerId": "interestprint",
       "title": "Women's Cropped Open Front Jacket",
@@ -2610,15 +2599,15 @@
       "url": "https://www.interestprint.com/custom/women_s_cropped_open_front_jacket-6232.html"
     },
     {
-      "group": "giyim-ceket|dahil",
-      "median": 4250,
+      "group": "duvar-poster|dahil",
+      "median": 787,
       "ratio": 0.2,
-      "id": "peaprint-9033",
-      "providerId": "peaprint",
-      "title": "Women's Zipper Jacket(All-Over Printing)",
-      "baseMinor": 831,
-      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://peaprint.com/products/detail/zipper-jacket"
+      "id": "printkk-posters-two-three",
+      "providerId": "printkk",
+      "title": "Posters (2:3)",
+      "baseMinor": 155,
+      "basis": "1 adet · Glossy / 8\"x12\" · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/posters-two-three"
     },
     {
       "group": "duvar-kanvas|dahil",
@@ -2643,15 +2632,26 @@
       "url": "https://www.printdoors.com/products/2775"
     },
     {
-      "group": "duvar-poster|dahil",
-      "median": 788,
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
       "ratio": 0.2,
-      "id": "printkk-posters-two-three",
+      "id": "peaprint-4111",
+      "providerId": "peaprint",
+      "title": "Personalized Santa Hats",
+      "baseMinor": 291,
+      "basis": "Açık katalogdaki başlangıç ürün bedeli · baskı şekli ürün adında · ölçü/renk seçenekleri tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://peaprint.com/products/detail/personalized-santa-hats"
+    },
+    {
+      "group": "aksesuar-sapka|dahil",
+      "median": 1475,
+      "ratio": 0.2,
+      "id": "printkk-unisex-washed-denim-baseball-cap",
       "providerId": "printkk",
-      "title": "Posters (2:3)",
-      "baseMinor": 155,
-      "basis": "1 adet · Glossy / 8\"x12\" · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/posters-two-three"
+      "title": "Unisex Washed Denim Baseball Cap",
+      "baseMinor": 288,
+      "basis": "1 adet · Black / One Size · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/unisex-washed-denim-baseball-cap"
     },
     {
       "group": "kirtasiye-defter|dahil",
@@ -2665,26 +2665,15 @@
       "url": "https://www.printkk.com/product/info/a5-notebook-cover"
     },
     {
-      "group": "ev-saklama|dahil",
-      "median": 722,
+      "group": "aksesuar-taki|dahil",
+      "median": 799,
       "ratio": 0.2,
-      "id": "printdoors-698",
-      "providerId": "printdoors",
-      "title": "Tin Painting (8x8 Inch)｜Tinplate",
-      "baseMinor": 142,
-      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
-      "url": "https://www.printdoors.com/products/698"
-    },
-    {
-      "group": "ev-tabela|dahil",
-      "median": 859,
-      "ratio": 0.2,
-      "id": "merchize-custom-shape-wood-bookshelf-sign",
-      "providerId": "merchize",
-      "title": "Custom Shape Wood Bookshelf Sign",
-      "baseMinor": 170,
-      "basis": "Tier 1 · 2-side Printed - 3in · kargo ayrıca",
-      "url": "https://merchize.com/product/custom-shape-wood-bookshelf-sign/"
+      "id": "printkk-dedicated-link-for-product-accessories",
+      "providerId": "printkk",
+      "title": "Floor Lamp Shade Ring Frame",
+      "baseMinor": 157,
+      "basis": "1 adet · Standing Floor Lamp Ring · özel ölçü bedeli hariç",
+      "url": "https://www.printkk.com/product/info/dedicated-link-for-product-accessories"
     },
     {
       "group": "spor-golf|dahil",
@@ -2698,15 +2687,15 @@
       "url": "https://www.printdoors.com/products/1263"
     },
     {
-      "group": "aksesuar-taki|dahil",
-      "median": 799,
+      "group": "ev-saklama|dahil",
+      "median": 722,
       "ratio": 0.2,
-      "id": "printkk-dedicated-link-for-product-accessories",
-      "providerId": "printkk",
-      "title": "Floor Lamp Shade Ring Frame",
-      "baseMinor": 157,
-      "basis": "1 adet · Standing Floor Lamp Ring · özel ölçü bedeli hariç",
-      "url": "https://www.printkk.com/product/info/dedicated-link-for-product-accessories"
+      "id": "printdoors-698",
+      "providerId": "printdoors",
+      "title": "Tin Painting (8x8 Inch)｜Tinplate",
+      "baseMinor": 142,
+      "basis": "1 adet için katalog başlangıç bedeli · kaynak indirimi uygulanmış · ölçü/renk ve ek seçenekler tutarı değiştirebilir · kargo/vergi koşulları kaynakta",
+      "url": "https://www.printdoors.com/products/698"
     },
     {
       "group": "ev-battaniye|dahil",
@@ -2721,8 +2710,8 @@
     },
     {
       "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 6.12,
+      "median": 1261,
+      "ratio": 6.08,
       "id": "artsadd-539",
       "providerId": "artsadd",
       "title": "Area Rug 9'6''x3'3''",
@@ -2740,6 +2729,17 @@
       "baseMinor": 3750,
       "basis": "Printify standart plan en düşük maliyeti · tek baskı alanı dahil, kargo ve vergi hariç · 1 baskı tesisi arasındaki en düşük · Printify Premium üyelikte 27.68 USD",
       "url": "https://printify.com/app/products/10741/portman-pooch/pet-hoodie-with-collar-hole"
+    },
+    {
+      "group": "ev-hali|dahil",
+      "median": 1261,
+      "ratio": 6.18,
+      "id": "printify-1083",
+      "providerId": "printify",
+      "title": "Round Rug",
+      "baseMinor": 7797,
+      "basis": "Printify standart plan en düşük maliyeti · tek baskı alanı dahil, kargo ve vergi hariç · 2 baskı tesisi arasındaki en düşük · Printify Premium üyelikte 56.52 USD",
+      "url": "https://printify.com/app/products/1083/generic-brand/round-rug"
     },
     {
       "group": "teknoloji-mousepad|dahil",
@@ -2760,7 +2760,7 @@
       "providerId": "printful",
       "title": "Knitted Pet Sweater",
       "baseMinor": 3774,
-      "basis": "Başlangıç · Knitted Pet Sweater (Custom / 2XS) · stoktaki standart varyant",
+      "basis": "Printful API standart fiyatı; stokta bulunan varyantların en düşüğü, kargo/vergi hariç",
       "url": "https://www.printful.com/custom/product/964"
     },
     {
@@ -2784,17 +2784,6 @@
       "baseMinor": 2174,
       "basis": "Standart tek ürün katalog bedeli; şartlı Ex-Factory fiyatı kullanılmadı",
       "url": "https://www.artsadd.com/custom/large_capacity_travel_bag_small_black_short_patch_1737-7102.html"
-    },
-    {
-      "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 6.22,
-      "id": "printify-1083",
-      "providerId": "printify",
-      "title": "Round Rug",
-      "baseMinor": 7797,
-      "basis": "Printify standart plan en düşük maliyeti · tek baskı alanı dahil, kargo ve vergi hariç · 2 baskı tesisi arasındaki en düşük · Printify Premium üyelikte 56.52 USD",
-      "url": "https://printify.com/app/products/1083/generic-brand/round-rug"
     },
     {
       "group": "giyim-polo|dahil",
@@ -2908,8 +2897,8 @@
     },
     {
       "group": "ev-hali|dahil",
-      "median": 1254,
-      "ratio": 6.84,
+      "median": 1261,
+      "ratio": 6.8,
       "id": "printkk-scalloped-area-rug-one-hundred-eighteen-one-hundred-sixty-eight",
       "providerId": "printkk",
       "title": "Scalloped Area Rug 168\"x118\"",
@@ -3024,7 +3013,7 @@
       "providerId": "printful",
       "title": "Suitcase",
       "baseMinor": 13279,
-      "basis": "Başlangıç · Suitcase (Black / Small) · stoktaki standart varyant",
+      "basis": "Printful API standart fiyatı; stokta bulunan varyantların en düşüğü, kargo/vergi hariç",
       "url": "https://www.printful.com/custom/product/891"
     },
     {
@@ -3376,7 +3365,7 @@
       "providerId": "yoycol",
       "title": "Over Size Wall Stickers",
       "baseMinor": 4619,
-      "basis": "Standart katalog başlangıç fiyatı; beden ve adet seçimine göre değişir",
+      "basis": "Standart katalog başlangıç fiyatı (tüm yüzey baskı ürünü, baskı dahil); beden ve adet seçimine göre değişir",
       "url": "https://www.yoycol.com/product_detail/3HPWCD01/Over-Size-Wall-Stickers"
     },
     {
@@ -3578,46 +3567,13 @@
       "url": "https://burgerprints.com/catalog/product/assembled-framed-textile-art-landscape-us-label"
     },
     {
-      "group": "giyim-kapusonlu|dahil",
-      "median": 2149,
-      "ratio": 73.27,
-      "id": "printegy-kinder-basic-hoodie",
-      "providerId": "printegy",
-      "title": "Kinder Basic Hoodie",
-      "baseMinor": 157454,
-      "basis": "Kaynak başlangıç bedeli · Einseitiger Druck · kargo/vergi koşulları kaynakta",
-      "url": "https://printegy.de/products/kinder-basic-hoodie"
-    },
-    {
-      "group": "giyim-tisort|dahil",
-      "median": 1075,
-      "ratio": 83.47,
-      "id": "printegy-damen-premium-bio-t-shirt",
-      "providerId": "printegy",
-      "title": "Damen Premium Bio T-Shirt",
-      "baseMinor": 89732,
-      "basis": "Kaynak başlangıç bedeli · Einseitiger Druck · kargo/vergi koşulları kaynakta",
-      "url": "https://printegy.de/products/damen-premium-bio-t-shirt"
-    },
-    {
-      "group": "giyim-atlet|dahil",
-      "median": 949,
-      "ratio": 94.55,
-      "id": "printegy-herren-basic-tank-top",
-      "providerId": "printegy",
-      "title": "Herren Basic Tank Top",
-      "baseMinor": 89732,
-      "basis": "Kaynak başlangıç bedeli · Einseitiger Druck · kargo/vergi koşulları kaynakta",
-      "url": "https://printegy.de/products/herren-basic-tank-top"
-    },
-    {
       "group": "giyim-tisort|toplu",
-      "median": 553,
-      "ratio": 125.21,
+      "median": 552,
+      "ratio": 125.43,
       "id": "blackfishclothing-22578",
       "providerId": "blackfishclothing",
       "title": "Premium Coloured T-shirt Bundle",
-      "baseMinor": 69240,
+      "baseMinor": 69236,
       "basis": "Sitenin açık katalog başlangıç bedeli; baskı, adet ve varyant seçenekleri ürün sayfasında",
       "url": "https://blackfishclothing.com/product/premium-coloured-t-shirt-bundle/"
     }

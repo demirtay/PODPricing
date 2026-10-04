@@ -1,53 +1,53 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-04 13:48 UTC · 42/121 üretici bağlı · 23.459 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-04 15:32 UTC · 42/121 üretici bağlı · 23.455 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
 | Üretici | Ürün | Kapsam | Son başarılı |
 |---|---:|---|---|
-| Interestprint | 3388 | public-category-pages | 2026-10-03 |
+| Interestprint | 3388 | public-category-pages | 2026-10-04 |
 | Printify | 2763 | full-public-catalog | 2026-10-04 |
 | Printdoors | 1630 | public-api-price-rules-partial | 2026-10-04 |
-| Yoycol | 1541 | complete | 2026-10-03 |
-| Inkedjoy | 1463 | full-public-catalog | 2026-10-03 |
-| PrintKK | 1423 | verified-product-details | 2026-10-04 |
-| Tapstitch | 1244 | full-public-catalog | 2026-10-03 |
+| Yoycol | 1541 | complete | 2026-10-04 |
+| Inkedjoy | 1463 | full-public-catalog | 2026-10-04 |
+| PrintKK | 1420 | verified-product-details | 2026-10-04 |
+| Tapstitch | 1244 | full-public-catalog | 2026-10-04 |
 | PeaPrint | 1216 | full-public-api-catalog | 2026-10-04 |
-| MerchFarm | 1107 | public-storefront | 2026-10-03 |
-| Artsadd | 1032 | public-category-pages | 2026-10-03 |
-| Merchize | 818 | verified-default-product-variants | 2026-10-03 |
+| MerchFarm | 1107 | public-storefront | 2026-10-04 |
+| Artsadd | 1032 | public-category-pages | 2026-10-04 |
+| Merchize | 818 | verified-default-product-variants | 2026-10-04 |
 | PopCustoms | 796 | full-public-variant-catalog | 2026-10-04 |
-| BurgerPrints | 726 | full-public-catalog | 2026-10-03 |
-| TreatPOD | 688 | public-storefront | 2026-10-03 |
-| Printful | 552 | complete | 2026-10-03 |
+| BurgerPrints | 726 | full-public-catalog | 2026-10-04 |
+| TreatPOD | 687 | public-storefront | 2026-10-04 |
+| Printful | 552 | full-public-catalog | 2026-10-04 |
 | Dreamship | 306 | full-public-catalog | 2026-10-04 |
 | Prodigi | 272 | full-public-catalog | 2026-10-04 |
-| Blackfish Clothing | 230 | public-storefront | 2026-10-03 |
-| PODPartner | 206 | full-public-catalog | 2026-10-03 |
-| Inkthreadable | 182 | verified-public-product-pages | 2026-10-03 |
+| Blackfish Clothing | 230 | public-storefront | 2026-10-04 |
+| PODPartner | 206 | full-public-catalog | 2026-10-04 |
+| Inkthreadable | 182 | verified-public-product-pages | 2026-10-04 |
 | KINcustom | 155 | public-web-catalog | 2026-10-04 |
 | JetPrint | 151 | public-storefront | 2026-10-04 |
-| Mia Merchandise | 148 | public-storefront | 2026-10-03 |
-| Digital On Demand | 145 | public-storefront | 2026-10-03 |
-| Teelaunch | 143 | public-product-sitemap | 2026-10-03 |
-| Printy6 | 141 | public-paginated-catalog | 2026-10-03 |
+| Mia Merchandise | 148 | public-storefront | 2026-10-04 |
+| Digital On Demand | 145 | public-storefront | 2026-10-04 |
+| Teelaunch | 143 | public-product-sitemap | 2026-10-04 |
+| Printy6 | 141 | public-paginated-catalog | 2026-10-04 |
 | AOP+ | 131 | public-storefront | 2026-10-03 |
-| Two Fifteen | 124 | verified-public-product-pages | 2026-10-03 |
+| Two Fifteen | 124 | verified-public-product-pages | 2026-10-04 |
 | SimplePrint | 117 | full-public-catalog | 2026-10-04 |
 | Qikink | 100 | verified-tax-inclusive-product-pages | 2026-10-04 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
-| JumboDTG | 82 | public-storefront | 2026-10-03 |
+| JumboDTG | 82 | public-storefront | 2026-10-04 |
 | GearLaunch | 78 | full-public-catalog | 2026-10-04 |
-| Gearment | 72 | public-category-pages | 2026-10-03 |
+| Gearment | 72 | public-category-pages | 2026-10-04 |
 | Ogo | 42 | public-product-pages | 2026-10-04 |
 | TshirtGang | 38 | public-product-pages | 2026-10-04 |
-| Printrove | 30 | verified-public-base-prices | 2026-10-03 |
-| Papello | 28 | verified-public-product-pages | 2026-10-03 |
-| SuperFastPOD | 27 | public-storefront | 2026-10-03 |
+| Printrove | 30 | verified-public-base-prices | 2026-10-04 |
+| Papello | 28 | verified-public-product-pages | 2026-10-04 |
+| SuperFastPOD | 27 | public-storefront | 2026-10-04 |
 | Podbase | 24 | public-product-pages | 2026-10-04 |
-| Rakiline | 4 | public-storefront | 2026-10-03 |
-| GoQuadra | 2 | public-storefront | 2026-10-03 |
+| Rakiline | 4 | public-storefront | 2026-10-04 |
+| GoQuadra | 2 | public-storefront | 2026-10-04 |
 
 ## Bağlı olmayanlar (79)
 

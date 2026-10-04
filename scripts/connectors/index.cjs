@@ -10,6 +10,9 @@ module.exports = {
   dreamship: def('https://dreamship.com/products', './dreamship.cjs'),
   prodigi: def('https://www.prodigi.com/products/', './prodigi.cjs'),
   gearlaunch: def('https://www.gearlaunch.com/', './gearlaunch.cjs'),
+  merchone: def('https://merchone.com/', './merchone.cjs'),
+  contrado: def('https://www.contrado.com/', './contrado.cjs'),
+  neatopod: def('https://www.neatopod.com/', './neatopod.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),
   }])),

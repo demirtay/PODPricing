@@ -1,0 +1,2561 @@
+{
+ "hoplix": {
+  "id": "hoplix",
+  "base": "https://hoplix.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 12,
+   "sample": [
+    "€ 7.90",
+    "€ 5.00",
+    "€ 11.90",
+    "€ 5.50",
+    "€ 17.90"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://hoplix.com/it/service-all-inclusive",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://hoplix.com/it/app-store",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://hoplix.com/it/custom-product",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://hoplix.com/it/store-creation",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "promio": {
+  "id": "promio",
+  "base": "https://promio.eu",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://promio.eu/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://promio.eu/collections",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://promio.eu/new-products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://promio.eu/product-news",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "finerworks": {
+  "id": "finerworks",
+  "base": "https://finerworks.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 12,
+   "sample": [
+    "$13.00",
+    "$25.00",
+    "$52.00",
+    "$99.00",
+    "$74.00"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://finerworks.com/products/murals-wallpaper.aspx",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 3,
+    "sample": [
+     "$3.75"
+    ]
+   },
+   {
+    "url": "https://finerworks.com/products/fine-art-paper-prints.aspx",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://finerworks.com/products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://finerworks.com/products/fine-art-paper-prints.aspx",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://finerworks.com/apps/shopify/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://finerworks.com/products/Slates/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 56,
+    "sample": [
+     "$39.54",
+     "$21.94",
+     "$26.34",
+     "$36.24",
+     "$28.54"
+    ]
+   }
+  ]
+ },
+ "teemill": {
+  "id": "teemill",
+  "base": "https://teemill.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "neatopod": {
+  "id": "neatopod",
+  "base": "https://www.neatopod.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 8,
+   "sample": [
+    "$9.95",
+    "$12.95",
+    "$13.95",
+    "$14.95"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.neatopod.com/products-pricing.html",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 275,
+    "sample": [
+     "$9.95",
+     "$12.95",
+     "$13.95",
+     "$14.95",
+     "$11.95"
+    ]
+   }
+  ]
+ },
+ "framico": {
+  "id": "framico",
+  "base": "https://www.framico.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.framico.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.framico.com/shopify",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "shirtly": {
+  "id": "shirtly",
+  "base": "https://www.shirtly.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "casestation": {
+  "id": "casestation",
+  "base": "https://casestation.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "makr3d": {
+  "id": "makr3d",
+  "base": "https://makr3d.app",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 1,
+   "sample": [
+    "£5.49"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://makr3d.app/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 15,
+    "sample": [
+     "£1.29",
+     "£1.55",
+     "£2.50",
+     "£3.00",
+     "£7.60"
+    ]
+   },
+   {
+    "url": "https://makr3d.app/production-hub",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://makr3d.app/integrations/shopify",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printmelon": {
+  "id": "printmelon",
+  "base": "https://printmelon.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printmelon.com/integrations/shopify/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printmelon.com/product/custom-t-shirt/",
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printmelon.com/wp-json/wp/v2/product/516",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printmelon.com/print-on-demand-products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printmelon.com/product/custom-t-shirt/",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printmelon.com/product/custom-pod-aprons/",
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "200:5"
+ },
+ "pillowprofits": {
+  "id": "pillowprofits",
+  "base": "https://pillowprofits.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://pillowprofits.com/product-specs-and-pricing/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 606,
+    "sample": [
+     "$22.25",
+     "$23.25",
+     "$41.25",
+     "$48.25",
+     "$27.75"
+    ]
+   }
+  ],
+  "woo": "404"
+ },
+ "makeplayingcards": {
+  "id": "makeplayingcards",
+  "base": "https://www.makeplayingcards.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "mwwondemand": {
+  "id": "mwwondemand",
+  "base": "https://mwwondemand.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://mwwondemand.com/wall-decor/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://mwwondemand.com/production-portal/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "printsome": {
+  "id": "printsome",
+  "base": "https://printsome.com",
+  "home": 200,
+  "homeA": {
+   "ld": 6,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 9,
+   "sample": [
+    "£6.50",
+    "£2.25",
+    "£3.75",
+    "£9.50",
+    "£15.25"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://printsome.com/products",
+    "status": 200,
+    "ld": 12,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 11,
+    "sample": [
+     "£2.25",
+     "£1.25",
+     "£3.75",
+     "£6.50",
+     "£9.50"
+    ]
+   }
+  ]
+ },
+ "contrado": {
+  "id": "contrado",
+  "base": "https://www.contrado.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.contrado.com/wall-decor",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 17,
+    "sample": [
+     "$47.45",
+     "$46.45",
+     "$139.00",
+     "$25.45",
+     "$41.00"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/products/custom-bucket-hat",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 9,
+    "sample": [
+     "$59.00",
+     "$9.95",
+     "$14.95",
+     "$15.95",
+     "$18.95"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/all-fabrics",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 137,
+    "sample": [
+     "$37.50",
+     "$24.98",
+     "$29.98",
+     "$69.50",
+     "$44.50"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/products/custom-bucket-hat",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 9,
+    "sample": [
+     "$59.00",
+     "$9.95",
+     "$14.95",
+     "$15.95",
+     "$18.95"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/wall-hangings",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 7,
+    "sample": [
+     "$48.45",
+     "$99.00",
+     "$18.95"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/products/custom-bucket-hat",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 9,
+    "sample": [
+     "$59.00",
+     "$9.95",
+     "$14.95",
+     "$15.95",
+     "$18.95"
+    ]
+   },
+   {
+    "url": "https://www.contrado.com/custom-wall-art",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 11,
+    "sample": [
+     "$29.40",
+     "$36.95",
+     "$9.95",
+     "$14.95",
+     "$15.95"
+    ]
+   }
+  ]
+ },
+ "printgenie": {
+  "id": "printgenie",
+  "base": "https://www.printgenie.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 7,
+   "sample": [
+    "$14.23",
+    "$16.48",
+    "$13.25",
+    "$9.75",
+    "$8.98"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.printgenie.com/products/kids/all-shirts",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/mens-clothing",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/womens/all-shirts",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/mens-clothing",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/accessories/small-facemask",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/mens-clothing",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printgenie.com/products/mens/all-hoodies-sweatshirts",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "subliminator": {
+  "id": "subliminator",
+  "base": "https://www.subliminator.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.subliminator.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.subliminator.com/product-catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "getfuelpod": {
+  "id": "getfuelpod",
+  "base": "https://www.getfuelpod.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.getfuelpod.com/product-type/best-selling",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 40,
+    "sample": [
+     "$7.25",
+     "$6.89",
+     "$3.80",
+     "$3.20",
+     "$3.45"
+    ]
+   }
+  ]
+ },
+ "shirtee": {
+  "id": "shirtee",
+  "base": "https://shirtee.cloud",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://shirtee.cloud/pod-products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://shirtee.cloud/pod-products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://shirtee.cloud/shopify-print-on-demand/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://shirtee.cloud/print-on-demand-products/men",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 90,
+    "sample": [
+     "29.37€",
+     "17.69€",
+     "9.79€",
+     "9.89€",
+     "16.09€"
+    ]
+   }
+  ],
+  "woo": "404"
+ },
+ "scalablepress": {
+  "id": "scalablepress",
+  "base": "https://scalablepress.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://scalablepress.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://scalablepress.com/catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printops": {
+  "id": "printops",
+  "base": "https://printops.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printops.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 71,
+    "sample": [
+     "$2.00",
+     "$2.25",
+     "$2.40",
+     "$2.55",
+     "$2.63"
+    ]
+   },
+   {
+    "url": "https://printops.com/help/shopify-overview",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printway": {
+  "id": "printway",
+  "base": "https://printway.io",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printway.io/en/all-products",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printbase": {
+  "id": "printbase",
+  "base": "https://www.printbase.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.printbase.com/catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 26,
+    "sample": [
+     "$9.49"
+    ]
+   },
+   {
+    "url": "https://www.printbase.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 2,
+    "sample": [
+     "$6.49"
+    ]
+   },
+   {
+    "url": "https://www.printbase.com/features/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printbase.com/features/storebuilder",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "woycondemand": {
+  "id": "woycondemand",
+  "base": "https://woyc-ondemand.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://woyc-ondemand.com/for-small-business",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://woyc-ondemand.com/print-on-demand-wall-art",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 28,
+    "sample": [
+     "$9.60",
+     "$10.50",
+     "$10.85",
+     "$13.45",
+     "$15.40"
+    ]
+   },
+   {
+    "url": "https://woyc-ondemand.com/print-on-demand-gaming-products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://woyc-ondemand.com/print-on-demand-wearable-products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printshrimp": {
+  "id": "printshrimp",
+  "base": "https://printshrimp.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 1,
+   "sample": [
+    "£0.00"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://printshrimp.com/pages/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 7,
+    "sample": [
+     "£6.99",
+     "£19.99",
+     "£0.00"
+    ]
+   },
+   {
+    "url": "https://printshrimp.com/collections/all",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 6,
+    "sample": [
+     "£19.99",
+     "£4.99",
+     "£0.00"
+    ]
+   },
+   {
+    "url": "https://printshrimp.com/products/framed-art-print",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 3,
+    "sample": [
+     "£19.99",
+     "£0.00"
+    ]
+   },
+   {
+    "url": "https://printshrimp.com/pages/shopify-integration",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 1,
+    "sample": [
+     "£0.00"
+    ]
+   }
+  ],
+  "shopify": 2
+ },
+ "printeers": {
+  "id": "printeers",
+  "base": "https://printeers.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printeers.com/products/fully-printed-wallet-cases",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printeers.com/products/soft-tpu-cases",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printeers.com/products/front-printed-wallet-cases",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printeers.com/products/soft-tpu-cases",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printeers.com/prices",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 5,
+    "sample": [
+     "€ 1.00",
+     "€ 3.00",
+     "€ 0.48",
+     "€ 0.24",
+     "€ 25.00"
+    ]
+   },
+   {
+    "url": "https://printeers.com/products/soft-tpu-cases",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printeers.com/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "alexanders": {
+  "id": "alexanders",
+  "base": "https://alexanders.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://alexanders.com/DIY-shops",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://alexanders.com/diy-shops/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://alexanders.com/photo-products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://alexanders.com/photo-products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "printoteca": {
+  "id": "printoteca",
+  "base": "https://printoteca.ro",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printoteca.ro/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printoteca.ro/product-news",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printoteca.ro/integrate-your-store",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printbest": {
+  "id": "printbest",
+  "base": "https://printbest.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printbest.com/products/catalog/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printbest.com/products/mens/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printbest.com/shopify/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 1,
+    "sample": [
+     "$6.99"
+    ]
+   },
+   {
+    "url": "https://printbest.com/products/catalog/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printbest.com/products/mens/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printbest.com/products/catalog/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://printbest.com/products/kids/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "sunfrog": {
+  "id": "sunfrog",
+  "base": "https://www.sunfrog.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [
+    "price",
+    "base_price"
+   ],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.sunfrog.com/product/massachusetts-is-calling",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "base_price"
+    ],
+    "money": 1,
+    "sample": [
+     "$24.00"
+    ]
+   },
+   {
+    "url": "https://www.sunfrog.com/product/black-cat",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "base_price"
+    ],
+    "money": 1,
+    "sample": [
+     "$24.00"
+    ]
+   },
+   {
+    "url": "https://www.sunfrog.com/product/salem-1692-forgot-one",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "base_price"
+    ],
+    "money": 1,
+    "sample": [
+     "$24.00"
+    ]
+   },
+   {
+    "url": "https://www.sunfrog.com/product/massachusetts-floral-map",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "base_price"
+    ],
+    "money": 1,
+    "sample": [
+     "$24.00"
+    ]
+   }
+  ]
+ },
+ "flexmerch": {
+  "id": "flexmerch",
+  "base": "https://flexmerch.com",
+  "home": 200,
+  "homeA": {
+   "ld": 2,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "optondemand": {
+  "id": "optondemand",
+  "base": "https://www.optondemand.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [],
+  "woo": "404"
+ },
+ "completeful": {
+  "id": "completeful",
+  "base": "https://completeful.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "merchone": {
+  "id": "merchone",
+  "base": "https://merchone.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 38,
+   "sample": [
+    "$5,00",
+    "$25,00",
+    "€11.78",
+    "$29.90",
+    "€7.59"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://merchone.com/wall-decoration/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 51,
+    "sample": [
+     "$5.34",
+     "€5.73",
+     "€13.77",
+     "€3.32",
+     "€4.33"
+    ]
+   },
+   {
+    "url": "https://merchone.com/product/acrylblock",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 15,
+    "sample": [
+     "$5.34",
+     "€ 12.65",
+     "€ 3.99",
+     "€ 0.99",
+     "$5.73"
+    ]
+   },
+   {
+    "url": "https://merchone.com/products-catalog/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 23,
+    "sample": [
+     "$5.34",
+     "$12.65",
+     "$5.73",
+     "$4.33",
+     "$10.92"
+    ]
+   },
+   {
+    "url": "https://merchone.com/wall-decoration/framed-canvas/",
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 24,
+    "sample": [
+     "$5.34",
+     "€ 11.78",
+     "€ 3.99",
+     "€ 0.99",
+     "€ 5.50"
+    ]
+   },
+   {
+    "url": "https://merchone.com/wall-decoration/framed-poster/",
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 20,
+    "sample": [
+     "$5.34",
+     "€ 3.99",
+     "€ 0.99",
+     "€ 5.50",
+     "€ 1.50"
+    ]
+   }
+  ],
+  "woo": "404"
+ },
+ "marcofinearts": {
+  "id": "marcofinearts",
+  "base": "https://marcofinearts.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://marcofinearts.com/home/fine-art-reproduction",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "swagify": {
+  "id": "swagify",
+  "base": "https://www.swagify.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.swagify.com/products",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "min_price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.swagify.com/products/16-dye-sublimated-bandana",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "min_price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.swagify.com/promotional-products",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.swagify.com/company-stores-merch-programs",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.swagify.com/products/full-color-3ply-premium-beverage-napkins",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "min_price"
+    ],
+    "money": 5,
+    "sample": [
+     "$0.08",
+     "$0.35",
+     "$0.30",
+     "$0.25",
+     "$0.10"
+    ]
+   }
+  ]
+ },
+ "customink": {
+  "id": "customink",
+  "base": "https://www.customink.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.customink.com/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.customink.com/products/hats/1",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.customink.com/products/bags/15",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.customink.com/products/t-shirts/4",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "dubowtextile": {
+  "id": "dubowtextile",
+  "base": "https://dubowtextile.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "tshirtsons": {
+  "id": "tshirtsons",
+  "base": "https://www.tshirtandsons.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "rushordertees": {
+  "id": "rushordertees",
+  "base": "https://www.rushordertees.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [
+    "price"
+   ],
+   "money": 4,
+   "sample": [
+    "$10.41",
+    "$15.62",
+    "$17.32",
+    "$16.68"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.rushordertees.com/catalog/",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.rushordertees.com/catalog/rt/classic-tee/",
+    "status": 200,
+    "ld": 1,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 10,
+    "sample": [
+     "$10.98",
+     "$10.91",
+     "$14.32",
+     "$10.83",
+     "$18.89"
+    ]
+   },
+   {
+    "url": "https://www.rushordertees.com/catalog/bella-canvas/tri-blend-t-shirt/",
+    "status": 200,
+    "ld": 1,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 10,
+    "sample": [
+     "$15.60",
+     "$14.55",
+     "$18.75",
+     "$19.94",
+     "$14.54"
+    ]
+   },
+   {
+    "url": "https://www.rushordertees.com/catalog/next-level/cvc-crew-neck-t-shirt/",
+    "status": 200,
+    "ld": 1,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 14,
+    "sample": [
+     "$13.97",
+     "$13.28",
+     "$15.52",
+     "$10.89",
+     "$14.74"
+    ]
+   }
+  ]
+ },
+ "ownprint": {
+  "id": "ownprint",
+  "base": "https://www.ownprint.co",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 6,
+   "sample": [
+    "$36,00",
+    "$12.45",
+    "$1,09",
+    "$15,00",
+    "$50,00"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.ownprint.co/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 15,
+    "sample": [
+     "$12.50",
+     "$13.65",
+     "€3.50",
+     "€0.35",
+     "$0.40"
+    ]
+   },
+   {
+    "url": "https://www.ownprint.co/shopify-integration",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 1,
+    "sample": [
+     "$36,00"
+    ]
+   },
+   {
+    "url": "https://www.ownprint.co/collections/necklaces",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "myeasymonogram": {
+  "id": "myeasymonogram",
+  "base": "https://myeasymonogram.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "camaloon": {
+  "id": "camaloon",
+  "base": "https://www.camaloon.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "marketprint": {
+  "id": "marketprint",
+  "base": "https://marketprint.de",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": true,
+   "priceKeys": [],
+   "money": 3,
+   "sample": [
+    "39,99€",
+    "13,10€",
+    "26,89€"
+   ]
+  },
+  "pages": []
+ },
+ "toaddit": {
+  "id": "toaddit",
+  "base": "https://www.toaddit.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "picthegift": {
+  "id": "picthegift",
+  "base": "https://picthegift.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://picthegift.com/collections/all",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 50,
+    "sample": [
+     "$0.00"
+    ]
+   },
+   {
+    "url": "https://picthegift.com/products/16oz-glazed-slipmat",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://picthegift.com/collections",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://picthegift.com/collections/new",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 25,
+    "sample": [
+     "$0.00"
+    ]
+   },
+   {
+    "url": "https://picthegift.com/products/interchangeable-mat-rectangle",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://picthegift.com/collections/blankets",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 28,
+    "sample": [
+     "$0.00"
+    ]
+   }
+  ],
+  "shopify": 250
+ },
+ "casestry": {
+  "id": "casestry",
+  "base": "https://www.casestry.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.casestry.com/products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.casestry.com/products/slim-phone-cases/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.casestry.com/products/iphone18/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.casestry.com/products/magsafe-phone-cases/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.casestry.com/products/anywhere_pod/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.casestry.com/products/dynamic-mockups/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printseekers": {
+  "id": "printseekers",
+  "base": "https://www.printseekers.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 15,
+   "sample": [
+    "$ 12.80",
+    "€ 11.20",
+    "$ 1.84",
+    "€ 1.60",
+    "$ 5.10"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.printseekers.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 2,
+    "sample": [
+     "$00.00"
+    ]
+   },
+   {
+    "url": "https://www.printseekers.com/catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.printseekers.com/dropshipping-wall-art",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 2,
+    "sample": [
+     "$ 11.80",
+     "$ 7.40"
+    ]
+   },
+   {
+    "url": "https://www.printseekers.com/print-on-demand-wall-art",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "duplium": {
+  "id": "duplium",
+  "base": "https://www.duplium.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.duplium.com/product-template-table/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "ecomerch": {
+  "id": "ecomerch",
+  "base": "https://ecomerch.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://ecomerch.com/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://ecomerch.com/shopify-integration",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://ecomerch.com/integrate-your-store",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://ecomerch.com/updating-your-eco-merch-shopify-app",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printedsimply": {
+  "id": "printedsimply",
+  "base": "https://printedsimply.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [],
+  "woo": "404"
+ },
+ "artelo": {
+  "id": "artelo",
+  "base": "https://www.artelo.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.artelo.com/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 416,
+    "sample": [
+     "$9.06",
+     "$5.94",
+     "$31.48",
+     "$1.21",
+     "$15.26"
+    ]
+   },
+   {
+    "url": "https://www.artelo.com/shopify",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 28,
+    "sample": [
+     "$9.06",
+     "$5.94",
+     "$31.48",
+     "$1.21",
+     "$15.26"
+    ]
+   }
+  ]
+ },
+ "cwondemand": {
+  "id": "cwondemand",
+  "base": "https://cwondemand.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://cwondemand.com/Products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://cwondemand.com/AdminProducts",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://cwondemand.com/ProductDetail",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-04T17:50:25.207Z",
+  "catalogUrls": 81,
+  "robotsExcluded": [
+    "/wp-admin/",
+    "/apparel/mens-t-shirt/",
+    "/apparel/old-premium-womens-t-shirt/",
+    "/apparel/premium-mens-t-shirt/",
+    "/apparel/unisex-hoodie/",
+    "/apparel/womens-t-shirt/",
+    "/blog/personalized-cotton-t-shirts-for-your-pod-store/personalized-cotton-t-shirts-for-your-online-store/",
+    "/categories/home-living/",
+    "/product/mens-t-shirt/",
+    "/product/premium-unisex-hoodie/",
+    "/product/premium-womens-t-shirt/",
+    "/de/"
+  ],
+  "imported": 76,
+  "skipped": [
+    {
+      "url": "https://merchone.com/apparel/unisex-hoodie-gildan-18500/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://merchone.com/apparel/unisex-hoodie-lane-seven-14001/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://merchone.com/apparel/unisex-sweatshirt-gildan-18000/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://merchone.com/apparel/unisex-sweatshirt-lane-seven-14004/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://merchone.com/apparel/unisex-t-shirt-comfort-colors-1717/",
+      "reason": "Fiyat yok"
+    }
+  ]
+}

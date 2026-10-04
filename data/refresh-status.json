@@ -5,6 +5,9 @@
     "dreamship",
     "prodigi",
     "gearlaunch",
+    "merchone",
+    "contrado",
+    "neatopod",
     "simpleprint",
     "printdoors",
     "kincustom",
@@ -85,6 +88,31 @@
       "lastError": null,
       "productCount": 0,
       "nextCheck": 0
+    },
+    "merchone": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "contrado": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "neatopod": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-04T18:00:02.946Z",
+      "lastError": null,
+      "productCount": 267,
+      "nextCheck": 1791138601023,
+      "startedAt": "2026-10-04T18:00:01.023Z"
     },
     "simpleprint": {
       "state": "idle",
@@ -367,22 +395,20 @@
       "nextCheck": 0
     },
     "printful": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 60,
-      "lastSuccess": "2026-10-04T15:31:23.603Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 552,
-      "nextCheck": 1791131482316,
-      "startedAt": "2026-10-04T15:31:22.316Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "printkk": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T15:31:22.312Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 1420,
-      "nextCheck": 1791127942314,
-      "startedAt": "2026-10-04T14:48:21.543Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "podpartner": {
       "state": "idle",

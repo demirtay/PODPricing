@@ -226,13 +226,14 @@ const BRANDS = [
 
 function detectModel(p) {
   const text = norm(p.title + ' ' + (p.aliases || []).join(' '));
-  for (const [id, name, re] of BRANDS) {
-    const m = re.exec(text);
-    if (!m) continue;
-    // marka adından sonra gelen ilk model kodu (ör. 5000, 18500, 3001cvc, h000, 1717)
+  // Başlıkta ilk geçen marka esas alınır ("Fruit of the Loom 3930R / Port & Company PC54" -> Fruit of the Loom)
+  const hits = BRANDS.map(([id, name, re]) => { const m = re.exec(text); return m && { id, name, m }; }).filter(Boolean).sort((a, b) => a.m.index - b.m.index);
+  const CODE = /\b([a-z]{0,3}\d{3,5}[a-z]{0,4}|[a-z]{1,3}\d{2}[a-z]{0,2})\b/;
+  for (const { id, name, m } of hits) {
+    // marka adından sonra gelen ilk model kodu (ör. 5000, 18500, 3001cvc, h000, 1717, pc54)
     const after = text.slice(m.index + m[0].length, m.index + m[0].length + 40);
-    const code = /\b([a-z]{0,3}\d{3,5}[a-z]{0,4})\b/.exec(after) || /\b([a-z]{0,3}\d{3,5}[a-z]{0,4})\b/.exec(text.slice(0, m.index));
-    if (!code) return { brand: id, brandName: name, model: null, key: null };
+    const code = CODE.exec(after) || (hits.length === 1 ? /\b([a-z]{0,3}\d{3,5}[a-z]{0,4})\b/.exec(text.slice(0, m.index)) : null);
+    if (!code) { if (hits.length === 1) return { brand: id, brandName: name, model: null, key: null }; continue; }
     const model = code[1].toUpperCase();
     if (/^(19|20)\d\d$/.test(model) && !/\b(gildan|comfort)/.test(id)) continue; // yıl gibi görünen sayılar
     return { brand: id, brandName: name, model, key: `${id}-${model.toLowerCase()}` };

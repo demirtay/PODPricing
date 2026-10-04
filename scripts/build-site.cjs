@@ -4,6 +4,7 @@
 'use strict';
 const fs = require('node:fs'), path = require('node:path');
 const tx = require('./pod-taxonomy.cjs');
+const PB = require('./print-basis.cjs');
 
 const root = path.resolve(__dirname, '..');
 const finalOut = path.join(root, 'site');
@@ -42,7 +43,7 @@ const products = catalog.products
   .filter(p => Number.isSafeInteger(p.baseMinor) && p.baseMinor > 0 && p.sourceUrl)
   .map(p => {
     const c = tx.classify(p), m = tx.detectModel(p);
-    return { ...p, title: decode(p.title), type: c.type, group: c.group, model: m && m.key ? m : null };
+    return { ...p, title: decode(p.title), type: c.type, group: c.group, model: m && m.key ? m : null, pb: PB.printBasis(p) };
   })
   .sort((a, b) => a.baseMinor - b.baseMinor);
 const byId = new Map(products.map(p => [p.id, p]));
@@ -61,6 +62,14 @@ const models = [...byModel].map(([key, list]) => ({ key, list, brandName: list[0
 const modelByKey = new Map(models.map(m => [m.key, m]));
 function mostCommon(a) { const c = {}; for (const x of a) c[x] = (c[x] || 0) + 1; return Object.entries(c).sort((x, y) => y[1] - x[1])[0][0]; }
 const modelTitle = m => `${m.brandName} ${m.model} ${typeLabel(m.type)}`;
+// modelin fiyat türüne göre sıralı teklifleri
+function modelPrices(m) { const o = { dahil: [], bos: [], toplu: [], belirsiz: [] }; for (const p of m.list) o[p.pb].push(p); return o; }
+function modelTable(list, { showType = false } = {}) {
+  return `<div class="tbl"><table><thead><tr><th>Model</th>${showType ? '<th>Tip</th>' : ''}<th class="num">Üretici</th><th class="num">Baskı dahil en düşük</th><th class="num">Baskı dahil en yüksek</th><th class="num">Fark</th><th class="num">Boş ürün en düşük</th></tr></thead><tbody>
+${list.map(m => { const pr = modelPrices(m), d = pr.dahil, b = pr.bos; const lo = d[0]?.baseMinor, hi = d[d.length - 1]?.baseMinor;
+    return `<tr><td><a href="/model/${m.key}/">${esc(showType ? m.brandName + ' ' + m.model : modelTitle(m))}</a></td>${showType ? `<td class="sm">${esc(typeLabel(m.type))}</td>` : ''}<td class="num">${m.providers.size}</td><td class="num price">${lo ? `<b>${fmt(lo)}</b>` : '–'}</td><td class="num">${hi ? fmt(hi) : '–'}</td><td class="num">${lo && hi > lo ? '%' + Math.round((1 - lo / hi) * 100) : '–'}</td><td class="num">${b[0] ? fmt(b[0].baseMinor) : '–'}</td></tr>`; }).join('')}
+</tbody></table></div>`;
+}
 const lastCheck = products.reduce((a, p) => (p.checkedAt || '') > a ? p.checkedAt : a, '');
 const lastCheckText = lastCheck ? new Date(lastCheck).toLocaleString('tr-TR', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Istanbul' }) : '';
 
@@ -77,18 +86,35 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <header class="top"><div class="wrap"><a class="brand" href="/">POD<span>Atlas</span></a>
 <form class="search" action="/ara/" role="search"><input name="q" type="search" placeholder="Ürün, model veya üretici ara (ör. gildan 5000, hoodie, mug)" aria-label="Ara" autocomplete="off"><button>Ara</button></form>
 <nav class="topnav"><a href="/kategoriler/">Kategoriler</a><a href="/borsa/">Model Borsası</a><a href="/ureticiler/">Üreticiler</a></nav></div></header>
-<main class="wrap">${bc}${body}</main>
+<main class="wrap">${bc}${ad('ust')}${body}${ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p><strong>POD Atlas</strong>, print-on-demand üreticilerinin herkese açık kataloglarındaki fiyatları karşılaştırır. Satış yapmaz; ürüne tıklayınca üreticinin kendi sayfasına gidersiniz.</p>
 <p class="muted">Fiyatlar üreticinin kaynakta gösterdiği başlangıç veya seçili varyant bedelidir; baskı, kargo, vergi ve minimum adet koşulları üreticiye göre değişir. Farklı para birimleri günlük referans kuruyla yaklaşık USD'ye çevrilerek sıralanır. Son güncelleme: ${esc(lastCheckText)}.</p>
-<p class="muted"><a href="/hakkinda/">Hakkında ve yöntem</a></p></div></footer>
+<p class="muted"><a href="/hakkinda/">Hakkında ve yöntem</a> · <a href="/ureticiler/">Üreticiler</a> · <a href="/gizlilik/">Gizlilik ve çerezler</a> · <a href="/iletisim/">İletişim</a></p></div></footer>
 <script src="/assets/site.js" defer></script></body></html>`;
 }
 
-function priceHtml(p) {
+const pbBadge = pb => `<span class="pb pb-${pb}" title="${esc(PB.NOTE[pb])}">${esc(PB.LABEL[pb])}</span>`;
+function priceHtml(p, { badge = true } = {}) {
   const main = fmt(p.baseMinor);
   const src = p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? `<small>${esc(fmt(p.sourceMinor, p.sourceCurrency))}</small>` : '';
   const old = Number.isInteger(p.originalMinor) && p.originalMinor > p.baseMinor && (!p.sourceCurrency || p.sourceCurrency === 'USD') ? `<s>${esc(fmt(p.originalMinor))}</s>` : '';
-  return `${old}<b>${esc(main)}</b>${src}`;
+  return `${old}<b>${esc(main)}</b>${src}${badge ? pbBadge(p.pb) : ''}`;
+}
+
+// ---------- reklam ve sponsor alanları (site.config.json)
+// adsenseClient + adSlots doluysa gerçek reklam; değilse adsPreview açıkken yer tutucu kutu; ikisi de yoksa hiçbir şey.
+const AD_SIZE = { ust: 'Yatay afiş · 728×90 / mobil 320×100', liste: 'Liste arası · duyarlı', urun: 'Kare · 300×250', alt: 'Yatay afiş · 728×90' };
+function ad(slot) {
+  if (cfg.adsenseClient && cfg.adSlots?.[slot]) return `<div class="ad ad-${slot}"><span class="ad-label">Reklam</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(cfg.adsenseClient)}" data-ad-slot="${esc(cfg.adSlots[slot])}" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>`;
+  if (cfg.adsPreview) return `<div class="ad ad-${slot} ad-preview" aria-hidden="true">Reklam alanı · ${esc(AD_SIZE[slot])}</div>`;
+  return '';
+}
+// Sponsorlu üretici kutusu: { providerId, types?: [tip], text, url } — doğrudan anlaşmalar için.
+function sponsor(type) {
+  const s = (cfg.sponsors || []).find(x => !x.types || x.types.includes(type));
+  if (s) return `<aside class="sponsor"><span class="ad-label">Sponsorlu</span><b>${esc(providers.get(s.providerId)?.name || s.providerId)}</b> <span>${esc(s.text)}</span> <a class="go" href="${esc(s.url)}" target="_blank" rel="sponsored noopener">İncele ↗</a></aside>`;
+  if (cfg.adsPreview) return `<aside class="sponsor ad-preview" aria-hidden="true">Sponsorlu üretici alanı · üreticilerle doğrudan anlaşmalar için</aside>`;
+  return '';
 }
 const img = (p, cls = '') => p.imageUrl ? `<img class="${cls}" src="${esc(p.imageUrl)}" alt="${esc(p.title)}" loading="lazy" referrerpolicy="no-referrer">` : `<span class="noimg ${cls}"></span>`;
 const provName = id => providers.get(id)?.name || id;
@@ -101,7 +127,7 @@ function rowsTable(list, { showType = false } = {}) {
 }
 
 // istemci tarafı liste verisi: [id, başlık, üreticiId, fiyat, kaynakFiyatMetni, görsel, ölçü, tip]
-const row = p => [p.id, p.title, p.providerId, p.baseMinor, p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? fmt(p.sourceMinor, p.sourceCurrency) : '', p.imageUrl || '', p.sizes || '', p.type, outbound(p)];
+const row = p => [p.id, p.title, p.providerId, p.baseMinor, p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? fmt(p.sourceMinor, p.sourceCurrency) : '', p.imageUrl || '', p.sizes || '', p.type, outbound(p), p.pb];
 
 // ---------- üret
 fs.rmSync(out, { recursive: true, force: true });
@@ -114,13 +140,14 @@ fs.cpSync(path.join(root, 'web'), path.join(out, 'assets'), { recursive: true })
 write('data/meta.json', JSON.stringify({
   providers: Object.fromEntries(catalog.providers.map(p => [p.id, p.name])),
   types: Object.fromEntries([...byType.keys()].map(t => [t, typeLabel(t)])),
+  pb: PB.LABEL, pbNote: PB.NOTE,
 }));
 
 // kategori listeleri (istemci filtreleme için)
 for (const [t, list] of byType) write(`data/k/${t}.json`, JSON.stringify(list.map(row)));
 for (const m of models) write(`data/m/${m.key}.json`, JSON.stringify(m.list.map(row)));
 // arama indeksi
-write('data/arama.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : ''])));
+write('data/arama.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 
 const groupsOrdered = tx.GROUPS.filter(([g]) => byGroup.has(g));
 const typesOf = g => [...byType.keys()].filter(t => typeGroup(t) === g).sort((a, b) => byType.get(b).length - byType.get(a).length);
@@ -134,11 +161,11 @@ add('index.html', page({
   description: `${connected.length} print-on-demand üreticisinin ${products.length.toLocaleString('tr-TR')} ürününü ucuzdan pahalıya karşılaştırın: tişört, hoodie, kupa, poster, telefon kılıfı ve daha fazlası.`,
   body: `<section class="hero"><h1>POD üreticilerinin fiyat borsası</h1>
 <p>${connected.length} üreticinin <b>${products.length.toLocaleString('tr-TR')}</b> ürününü tek ekranda karşılaştırın. Ürünler ucuzdan pahalıya sıralanır, tıklayınca üreticinin satış sayfasına gidersiniz.</p>
-<form class="search big" action="/ara/" role="search"><input name="q" type="search" placeholder="Ne basmak istiyorsunuz? (ör. oversized tişört, 11oz kupa, tote bag)" aria-label="Ara" autocomplete="off"><button>Ara</button></form></section>
-<h2>Model borsası: aynı ürün, farklı üreticiler</h2><p class="muted">Aynı boş ürün modeli (ör. Gildan 5000, Bella+Canvas 3001) birden fazla üreticide satılıyor. En ucuz ve en pahalı teklif arasındaki fark burada.</p>
-<div class="tbl"><table><thead><tr><th>Model</th><th class="num">Üretici</th><th class="num">En düşük</th><th class="num">En yüksek</th></tr></thead><tbody>
-${models.slice(0, 15).map(m => `<tr><td><a href="/model/${m.key}/">${esc(modelTitle(m))}</a></td><td class="num">${m.providers.size}</td><td class="num price"><b>${fmt(m.list[0].baseMinor)}</b></td><td class="num">${fmt(m.list[m.list.length - 1].baseMinor)}</td></tr>`).join('')}
-</tbody></table></div><p><a href="/borsa/">Tüm modeller (${models.length}) →</a></p>
+<form class="search big" action="/ara/" role="search"><input name="q" type="search" placeholder="Ne basmak istiyorsunuz? (ör. oversized tişört, 11oz kupa, tote bag)" aria-label="Ara" autocomplete="off"><button>Ara</button></form>
+<ul class="stats"><li><b>${connected.length}</b><span>üretici</span></li><li><b>${products.length.toLocaleString('tr-TR')}</b><span>ürün</span></li><li><b>${models.length}</b><span>karşılaştırılan model</span></li><li><b>6 saatte</b><span>bir güncellenir</span></li></ul></section>
+<ol class="how"><li><b>Ara</b><span>Basmak istediğin ürünü ya da modeli yaz.</span></li><li><b>Karşılaştır</b><span>Üreticiler ucuzdan pahalıya; baskı dahil ve boş ürün fiyatları ayrı etiketli.</span></li><li><b>Üreticiye git</b><span>Beğendiğin teklifin satış sayfasına tek tıkla geç.</span></li></ol>
+<h2>Model borsası: aynı ürün, farklı üreticiler</h2><p class="muted">Aynı boş ürün modeli (ör. Gildan 5000, Bella+Canvas 3001) birden fazla üreticide satılıyor. Baskı dahil fiyatlar boş ürün fiyatlarından ayrı karşılaştırılır.</p>
+${modelTable(models.slice(0, 15))}<p><a href="/borsa/">Tüm modeller (${models.length}) →</a></p>
 <h2>Kategoriler</h2><div class="groups">${groupsOrdered.map(([g, label]) => `<section class="group"><h3><a href="/kategori/${g}/">${esc(label)}</a></h3><ul>${typesOf(g).slice(0, 8).map(t => { const s = stat(byType.get(t)); return `<li><a href="/kategori/${t}/">${esc(typeLabel(t))}</a> <span class="muted sm">${s.n} ürün · ${fmt(s.min)}'dan</span></li>`; }).join('')}</ul></section>`).join('')}</div>`,
   jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: cfg.siteName, url: SITE || undefined, potentialAction: { '@type': 'SearchAction', target: (SITE || '') + '/ara/?q={q}', 'query-input': 'required name=q' } },
 }));
@@ -157,7 +184,7 @@ for (const [g, label] of groupsOrdered) {
     rel: `kategori/${g}/index.html`, title: `${label} POD ürün fiyatları · POD Atlas`, description: `${label} kategorisinde ${list.length} print-on-demand ürünü, ${new Set(list.map(p => p.providerId)).size} üretici. En düşük fiyat ${fmt(list[0].baseMinor)}.`,
     crumbs: [['Kategoriler', '/kategoriler/'], [label]],
     body: `<h1>${esc(label)}</h1><div class="chips">${typesOf(g).map(t => { const s = stat(byType.get(t)); return `<a class="chip" href="/kategori/${t}/"><b>${esc(typeLabel(t))}</b><span>${s.n} ürün · ${fmt(s.min)}'dan</span></a>`; }).join('')}</div>
-<h2>Bu kategorideki en uygun 30 ürün</h2>${rowsTable(list.slice(0, 30), { showType: true })}`,
+<h2>Bu kategorideki en uygun 30 ürün</h2>${rowsTable(list.slice(0, 30), { showType: true })}${ad('liste')}`,
   }));
 }
 
@@ -172,7 +199,7 @@ for (const [t, list] of byType) {
     crumbs: [['Kategoriler', '/kategoriler/'], [gl, g === 'diger' ? null : `/kategori/${g}/`], [label]],
     body: `<h1>${esc(label)}</h1><p class="muted">${list.length} ürün · ${new Set(list.map(p => p.providerId)).size} üretici · en düşük ${fmt(list[0].baseMinor)}</p>
 ${tModels.length ? `<h2>Bu kategorideki modeller</h2><div class="chips">${tModels.map(m => `<a class="chip" href="/model/${m.key}/"><b>${esc(m.brandName + ' ' + m.model)}</b><span>${m.providers.size} üretici · ${fmt(m.list[0].baseMinor)}'dan</span></a>`).join('')}</div>` : ''}
-<div class="list" data-src="/data/k/${t}.json" data-total="${list.length}">${rowsTable(list.slice(0, 50))}</div>`,
+${sponsor(t)}<div class="list" data-src="/data/k/${t}.json" data-total="${list.length}">${rowsTable(list.slice(0, 50))}</div>${ad('liste')}`,
     jsonld: { '@context': 'https://schema.org', '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(`urun/${p.id}/index.html`), name: p.title })) },
   }));
 }
@@ -182,23 +209,33 @@ add('borsa/index.html', page({
   rel: 'borsa/index.html', title: 'Boş ürün model borsası: Gildan, Bella+Canvas, Comfort Colors fiyatları · POD Atlas',
   description: `${models.length} boş ürün modelinin farklı POD üreticilerindeki fiyatları: Gildan 5000, Bella+Canvas 3001, Comfort Colors 1717 ve diğerleri.`,
   crumbs: [['Model Borsası']],
-  body: `<h1>Model borsası</h1><p class="muted">Aynı boş ürün modelini satan üreticiler. Fark sütunu, en ucuz teklifin en pahalıya göre ne kadar tasarruf sağladığını gösterir.</p>
-<div class="tbl"><table><thead><tr><th>Model</th><th>Tip</th><th class="num">Üretici</th><th class="num">En düşük</th><th class="num">En yüksek</th><th class="num">Fark</th></tr></thead><tbody>
-${models.map(m => { const lo = m.list[0].baseMinor, hi = m.list[m.list.length - 1].baseMinor; return `<tr><td><a href="/model/${m.key}/">${esc(m.brandName + ' ' + m.model)}</a></td><td class="sm">${esc(typeLabel(m.type))}</td><td class="num">${m.providers.size}</td><td class="num price"><b>${fmt(lo)}</b></td><td class="num">${fmt(hi)}</td><td class="num">%${Math.round((1 - lo / hi) * 100)}</td></tr>`; }).join('')}</tbody></table></div>`,
+  body: `<h1>Model borsası</h1><p class="muted">Aynı boş ürün modelini satan üreticiler. Baskı dahil fiyatlar ile boş ürün fiyatları ayrı sütunlarda; fark sütunu baskı dahil tekliflerde en ucuzun en pahalıya göre tasarrufunu gösterir.</p>
+${modelTable(models, { showType: true })}`,
 }));
 
+const LADDER_ORDER = [['dahil', 'Baskı dahil fiyatlar', 'Tek baskı alanı/tasarım dahil üretim maliyeti. Gerçek karşılaştırma için önce buraya bakın.'],
+  ['bos', 'Boş ürün fiyatları', 'Baskısız ürün bedeli; üreticinin baskı ücreti ayrıca eklenir.'],
+  ['toplu', 'Toplu sipariş fiyatları', 'Minimum adet şartı olan toplu baskı fiyatları.'],
+  ['belirsiz', 'Koşulları üreticide belirtilen fiyatlar', 'Kaynak, fiyatın baskıyı içerip içermediğini açıkça belirtmiyor.']];
+function ladder(list) {
+  return LADDER_ORDER.map(([pb, title, note]) => {
+    const best = [...groupBy(list.filter(p => p.pb === pb), p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
+    if (!best.length) return '';
+    return `<h2>${esc(title)} <span class="muted sm">· ${best.length} üretici</span></h2><p class="muted sm">${esc(note)}</p><ol class="ladder">${best.map((p, i) => `<li><span class="rank">${i + 1}</span><a href="/uretici/${p.providerId}/">${esc(provName(p.providerId))}</a><span class="price">${priceHtml(p, { badge: false })}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">Satış sayfası ↗</a></li>`).join('')}</ol>`;
+  }).join('');
+}
+
 for (const m of models) {
-  const lo = m.list[0];
-  const best = [...groupBy(m.list, p => p.providerId)].map(([pid, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
+  const pr = modelPrices(m), lo = pr.dahil[0] || m.list[0];
   add(`model/${m.key}/index.html`, page({
     rel: `model/${m.key}/index.html`,
     title: `${modelTitle(m)} fiyatları: ${m.providers.size} üretici karşılaştırması · POD Atlas`,
-    description: `${m.brandName} ${m.model} en ucuz ${fmt(lo.baseMinor)} (${provName(lo.providerId)}). ${m.providers.size} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
+    description: `${m.brandName} ${m.model} baskı dahil en ucuz ${pr.dahil[0] ? fmt(pr.dahil[0].baseMinor) + ' (' + provName(pr.dahil[0].providerId) + ')' : '—'}${pr.bos[0] ? ', boş ürün ' + fmt(pr.bos[0].baseMinor) : ''}. ${m.providers.size} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
     crumbs: [['Model Borsası', '/borsa/'], [m.brandName + ' ' + m.model]],
-    body: `<h1>${esc(modelTitle(m))}</h1><p class="muted">${m.providers.size} üretici · ${m.list.length} teklif · en düşük ${fmt(lo.baseMinor)}</p>
-<h2>Üreticilere göre en düşük fiyat</h2><ol class="ladder">${best.map((p, i) => `<li><span class="rank">${i + 1}</span><a href="/uretici/${p.providerId}/">${esc(provName(p.providerId))}</a><span class="price">${priceHtml(p)}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">Satış sayfası ↗</a></li>`).join('')}</ol>
+    body: `<h1>${esc(modelTitle(m))}</h1><p class="muted">${m.providers.size} üretici · ${m.list.length} teklif${pr.dahil[0] ? ' · baskı dahil en düşük ' + fmt(pr.dahil[0].baseMinor) : ''}${pr.bos[0] ? ' · boş ürün en düşük ' + fmt(pr.bos[0].baseMinor) : ''}</p>
+${sponsor(m.type)}${ladder(m.list)}
 <p class="muted sm">Aynı model kodu, farklı üreticilerde baskı yöntemi (DTG, DTF, nakış), baskı alanı, kargo ve vergi koşullarıyla farklı fiyatlanabilir. Ayrıntılar için ürün sayfasına bakın.</p>
-<h2>Tüm teklifler</h2>${rowsTable(m.list)}`,
+${ad('liste')}<h2>Tüm teklifler</h2>${rowsTable(m.list)}`,
     jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: modelTitle(m), brand: { '@type': 'Brand', name: m.brandName }, image: lo.imageUrl || undefined, offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (m.list[m.list.length - 1].baseMinor / 100).toFixed(2), offerCount: m.list.length } },
   }));
 }
@@ -210,6 +247,7 @@ function features(p) {
   push('Ürün tipi', `<a href="/kategori/${p.type}/">${esc(typeLabel(p.type))}</a>`);
   push('Üretici', `<a href="/uretici/${p.providerId}/">${esc(provName(p.providerId))}</a>`);
   if (p.model) push('Boş ürün modeli', modelByKey.has(p.model.key) ? `<a href="/model/${p.model.key}/">${esc(p.model.brandName + ' ' + p.model.model)}</a>` : esc(p.model.brandName + ' ' + p.model.model));
+  push('Fiyat türü', `${pbBadge(p.pb)} <span class="muted sm">${esc(PB.NOTE[p.pb])}</span>`);
   push('Fiyat açıklaması', esc(p.priceBasis));
   if (p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor)) push('Kaynak fiyatı', `${esc(fmt(p.sourceMinor, p.sourceCurrency))} <span class="muted sm">(kur ${esc(p.exchangeRate)}, ${esc(p.exchangeDate || '')})</span>`);
   if (Number.isInteger(p.baseMaxMinor) && p.baseMaxMinor > p.baseMinor) push('Fiyat aralığı', `${esc(fmt(p.baseMinor))} – ${esc(fmt(p.baseMaxMinor))}`);
@@ -248,7 +286,7 @@ for (const p of products) {
 <p class="bigprice">${priceHtml(p)}</p>
 <p class="muted sm">${esc(typeLabel(p.type))} kategorisindeki ${byType.get(p.type).length} ürün arasında ${rank}. en uygun fiyat.</p>
 <a class="cta" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${esc(prov?.name)} satış sayfasına git ↗</a>
-<dl class="feat">${features(p).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl></div></article>
+<dl class="feat">${features(p).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl>${ad('urun')}</div></article>
 ${similar.length ? `<h2>${esc(simTitle)}</h2>${rowsTable(similar)}` : ''}`,
     jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: p.title, image: p.imageUrl || undefined, brand: p.model ? { '@type': 'Brand', name: p.model.brandName } : undefined, offers: { '@type': 'Offer', price: (p.baseMinor / 100).toFixed(2), priceCurrency: 'USD', url: p.sourceUrl, seller: { '@type': 'Organization', name: prov?.name } } },
   }));
@@ -294,11 +332,34 @@ add('hakkinda/index.html', page({
 <p>POD Atlas, Etsy ve diğer pazaryerlerinde satış yapanların print-on-demand üretim maliyetlerini karşılaştırmasına yardım eden bağımsız bir fiyat karşılaştırma sitesidir. Satış yapmaz, sipariş almaz.</p>
 <h2>Fiyatlar nereden geliyor?</h2><p>Fiyatlar üreticilerin herkese açık katalog sayfalarından, mağaza beslemelerinden ve açık API'lerinden otomatik olarak alınır ve düzenli aralıklarla yenilenir. Üye girişi gerektiren fiyatlar eklenmez; tahmini veya uydurma fiyat kullanılmaz.</p>
 <h2>Fiyat neyi kapsıyor?</h2><p>Gösterilen fiyat, üreticinin kaynakta gösterdiği başlangıç fiyatı veya seçili standart varyantın fiyatıdır. Baskı ücreti, kargo, vergi ve minimum adet koşulları üreticiye göre değişir ve her ürünün sayfasında belirtilir. Kesin tutarı üreticinin sayfasında doğrulayın.</p>
+<h2>Fiyat türleri</h2><ul>${Object.keys(PB.LABEL).map(k => `<li>${pbBadge(k)} ${esc(PB.NOTE[k])}</li>`).join('')}</ul>
+<p>Adil karşılaştırma için model sayfalarında baskı dahil fiyatlar ve boş ürün fiyatları ayrı sıralanır.</p>
 <h2>Para birimleri</h2><p>USD dışındaki fiyatlar günlük referans kuruyla (Frankfurter) yaklaşık USD'ye çevrilerek sıralanır; kaynak fiyatı da ayrıca gösterilir.</p>
 <h2>Model borsası</h2><p>Aynı boş ürün modeli (ör. Gildan 5000) birden fazla üreticide satıldığında bu teklifler model sayfasında yan yana gösterilir.</p>
 <p>Kapsam: ${connected.length} üreticiden ${products.length.toLocaleString('tr-TR')} ürün. Son güncelleme: ${esc(lastCheckText)}.</p></div>`,
 }));
+const contact = cfg.contactEmail ? `<a href="mailto:${esc(cfg.contactEmail)}">${esc(cfg.contactEmail)}</a>` : '<em>(iletişim adresi yayından önce eklenecek)</em>';
+add('gizlilik/index.html', page({
+  rel: 'gizlilik/index.html', title: 'Gizlilik ve çerez politikası · POD Atlas', description: 'POD Atlas gizlilik, çerez ve reklam politikası.',
+  crumbs: [['Gizlilik']],
+  body: `<h1>Gizlilik ve çerez politikası</h1><div class="prose">
+<p>POD Atlas üyelik, sipariş veya ödeme almaz; ziyaretçilerden ad, adres ya da ödeme bilgisi toplamaz.</p>
+<h2>Çerezler ve reklamlar</h2><p>Sitede Google AdSense gibi üçüncü taraf reklam hizmetleri kullanılabilir. Google dahil üçüncü taraf sağlayıcılar, bu siteye ve diğer sitelere yaptığınız önceki ziyaretlere dayalı reklam sunmak için çerez kullanabilir. Google'ın reklam çerezlerini kullanması, Google ve iş ortaklarının size bu siteye ve/veya internetteki diğer sitelere yaptığınız ziyaretlere göre reklam sunmasını sağlar. Kişiselleştirilmiş reklamcılığı <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Reklam Ayarları</a> üzerinden devre dışı bırakabilir, üçüncü taraf çerezleri hakkında <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> adresinden bilgi alabilirsiniz. Avrupa Ekonomik Alanı ve Birleşik Krallık'taki ziyaretçilerden reklam çerezleri için onay istenir.</p>
+<h2>Bağlantılar ve ortaklık programları</h2><p>Üreticilere verilen bazı bağlantılar ortaklık (affiliate) bağlantısı olabilir; bu bağlantılar üzerinden yapılan kayıtlardan POD Atlas komisyon alabilir. Bu, gösterilen fiyatları ve sıralamayı etkilemez: sıralama yalnızca fiyata göredir. Sponsorlu alanlar "Sponsorlu" etiketiyle ayrıca belirtilir.</p>
+<h2>Sunucu kayıtları</h2><p>Barındırma sağlayıcımız, güvenlik ve performans amacıyla IP adresi ve tarayıcı bilgisi gibi standart erişim kayıtlarını sınırlı süre tutabilir.</p>
+<h2>İletişim</h2><p>Sorularınız için: ${contact}</p></div>`,
+}));
+add('iletisim/index.html', page({
+  rel: 'iletisim/index.html', title: 'İletişim · POD Atlas', description: 'POD Atlas ile iletişim: üretici eklemek, fiyat düzeltmek veya iş birliği için.',
+  crumbs: [['İletişim']],
+  body: `<h1>İletişim</h1><div class="prose"><p>Listede olmayan bir üreticiyi önermek, hatalı bir fiyatı bildirmek veya sponsorluk ve iş birliği için bize yazın: ${contact}</p>
+<p>Üreticiyseniz: ürünlerinizin doğru fiyatla listelenmesi için herkese açık bir katalog, ürün beslemesi veya API bağlantısı paylaşabilirsiniz.</p></div>`,
+}));
 write('404.html', page({ rel: '404.html', title: 'Sayfa bulunamadı · POD Atlas', description: 'Sayfa bulunamadı.', body: `<h1>Sayfa bulunamadı</h1><p>Aradığınız ürün katalogdan kaldırılmış olabilir. <a href="/">Ana sayfaya dönün</a> ya da arayın.</p>` }));
+
+// barındırma: önbellek başlıkları (Netlify _headers) ve AdSense ads.txt
+write('_headers', `/assets/*\n  Cache-Control: public, max-age=86400\n/data/*\n  Cache-Control: public, max-age=1800\n/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n`);
+if (cfg.adsenseClient) write('ads.txt', `google.com, ${cfg.adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 
 // sitemap / robots
 if (SITE) {

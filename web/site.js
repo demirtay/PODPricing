@@ -16,12 +16,13 @@
     return groups;
   }
 
+  function badge(pb, M) { return pb ? '<span class="pb pb-' + esc(pb) + '" title="' + esc((M.pbNote || {})[pb] || '') + '">' + esc((M.pb || {})[pb] || pb) + '</span>' : ''; }
   function rowHtml(r, M) {
-    // r: [id, başlık, üretici, fiyat, kaynakFiyat, görsel, ölçü, tip, satışLinki]
+    // r: [id, başlık, üretici, fiyat, kaynakFiyat, görsel, ölçü, tip, satışLinki, fiyatTürü]
     var img = r[5] ? '<img src="' + esc(r[5]) + '" alt="" loading="lazy" referrerpolicy="no-referrer">' : '<span class="noimg"></span>';
     return '<tr><td class="th">' + img + '</td><td><a href="/urun/' + esc(r[0]) + '/">' + esc(r[1]) + '</a><div class="muted sm">' + esc(r[6] || '') + '</div></td>' +
       '<td><a href="/uretici/' + esc(r[2]) + '/">' + esc(M.providers[r[2]] || r[2]) + '</a></td>' +
-      '<td class="num price"><b>' + money(r[3]) + '</b>' + (r[4] ? '<small>' + esc(r[4]) + '</small>' : '') + '</td>' +
+      '<td class="num price"><b>' + money(r[3]) + '</b>' + (r[4] ? '<small>' + esc(r[4]) + '</small>' : '') + badge(r[9], M) + '</td>' +
       '<td class="lk">' + (r[8] ? '<a class="go" href="' + esc(r[8]) + '" target="_blank" rel="nofollow sponsored noopener">Satış sayfası ↗</a>' : '<a class="go" href="/urun/' + esc(r[0]) + '/">Detay</a>') + '</td></tr>';
   }
   function table(rows, M) {
@@ -31,22 +32,26 @@
   // Liste görünümü: üretici filtresi, sıralama, metin filtresi, "daha fazla"
   function listView(el, rows, M, opts) {
     opts = opts || {};
-    var shown = PAGE, provs = {};
-    rows.forEach(function (r) { provs[r[2]] = (provs[r[2]] || 0) + 1; });
+    var shown = PAGE, provs = {}, kinds = {};
+    rows.forEach(function (r) { provs[r[2]] = (provs[r[2]] || 0) + 1; if (r[9]) kinds[r[9]] = (kinds[r[9]] || 0) + 1; });
+    var kindKeys = ['dahil', 'bos', 'toplu', 'belirsiz'].filter(function (k) { return kinds[k]; });
     var ctl = document.createElement('div');
     ctl.className = 'controls';
     ctl.innerHTML = '<input type="search" placeholder="Bu listede ara" aria-label="Listede ara">' +
       '<select aria-label="Üretici"><option value="">Tüm üreticiler (' + Object.keys(provs).length + ')</option>' +
       Object.keys(provs).sort(function (a, b) { return provs[b] - provs[a]; }).map(function (p) { return '<option value="' + esc(p) + '">' + esc(M.providers[p] || p) + ' (' + provs[p] + ')</option>'; }).join('') + '</select>' +
       '<select aria-label="Sıralama"><option value="asc">Fiyat: ucuzdan pahalıya</option><option value="desc">Fiyat: pahalıdan ucuza</option></select>' +
+      '<select aria-label="Fiyat türü"' + (kindKeys.length > 1 ? '' : ' hidden') + '><option value="">Tüm fiyat türleri</option>' +
+      kindKeys.map(function (k) { return '<option value="' + k + '">' + esc((M.pb || {})[k] || k) + ' (' + kinds[k] + ')</option>'; }).join('') + '</select>' +
       '<span class="muted sm" aria-live="polite"></span>';
     var body = document.createElement('div');
     el.replaceChildren(ctl, body);
-    var q = ctl.children[0], prov = ctl.children[1], sort = ctl.children[2], count = ctl.children[3];
+    var q = ctl.children[0], prov = ctl.children[1], sort = ctl.children[2], kind = ctl.children[3], count = ctl.children[4];
     if (opts.extra) el.prepend(opts.extra);
     function filtered() {
       var t = norm(q.value).split(' ').filter(Boolean), p = prov.value, ty = opts.type ? opts.type() : '';
-      var out = rows.filter(function (r) { if (p && r[2] !== p) return false; if (ty && r[7] !== ty) return false; var h = norm(r[1] + ' ' + (M.providers[r[2]] || '') + ' ' + (r[6] || '')); return t.every(function (x) { return h.indexOf(x) !== -1; }); });
+      var kd = kind.value;
+      var out = rows.filter(function (r) { if (p && r[2] !== p) return false; if (ty && r[7] !== ty) return false; if (kd && r[9] !== kd) return false; var h = norm(r[1] + ' ' + (M.providers[r[2]] || '') + ' ' + (r[6] || '')); return t.every(function (x) { return h.indexOf(x) !== -1; }); });
       return sort.value === 'desc' ? out.slice().reverse() : out;
     }
     function render() {
@@ -60,7 +65,7 @@
         body.append(b);
       }
     }
-    [q, prov, sort].forEach(function (x) { x.addEventListener('input', function () { shown = PAGE; render(); }); });
+    [q, prov, sort, kind].forEach(function (x) { x.addEventListener('input', function () { shown = PAGE; render(); }); });
     render();
     return { render: function () { shown = PAGE; render(); } };
   }
@@ -84,7 +89,7 @@
       var hits = idx.filter(function (r) {
         var h = ' ' + norm(r[1] + ' ' + (M.providers[r[2]] || '') + ' ' + (M.types[r[5]] || '') + ' ' + r[6]) + ' ';
         return groups.every(function (g) { return g.some(function (t) { return h.indexOf(t.length < 4 ? ' ' + t : t) !== -1; }); });
-      }).map(function (r) { return [r[0], r[1], r[2], r[3], '', r[4], '', r[5], '']; });
+      }).map(function (r) { return [r[0], r[1], r[2], r[3], '', r[4], '', r[5], '', r[7]]; });
       if (!hits.length) { app.innerHTML = '<p>Sonuç bulunamadı. Daha genel bir kelime deneyin ya da <a href="/kategoriler/">kategorilere</a> göz atın.</p>'; return; }
       var types = {};
       hits.forEach(function (r) { types[r[7]] = (types[r[7]] || 0) + 1; });

@@ -1,4 +1,6 @@
 const fs=require('fs'),path=require('path');
+// Avrupa ve İngiliz ondalık yazımlarını doğru okur: 7,95 · 1.234,50 · 7.95 · 1,234.50
+function euroMinor(t){t=String(t).trim();const de=/,\d{1,2}$/.test(t),en=/\.\d{1,2}$/.test(t);const n=de?Number(t.replace(/\./g,'').replace(',','.')):en?Number(t.replace(/,/g,'')):Number(t.replace(/[.,]/g,''));return Math.round(n*100);}
 const definitions={tshirtgang:{base:'https://www.tshirtgang.com',catalog:'/catalog',currency:'USD'},ogo:{base:'https://ogo.com.au',catalog:'/products/',currency:'AUD'},printegy:{base:'https://printegy.de',catalog:'/products',currency:'EUR'}};
 const clean=s=>String(s||'').replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n)).replace(/&nbsp;/g,' ').trim();
 async function get(url){const r=await fetch(url,{signal:AbortSignal.timeout(25000)});if(!r.ok)throw Error('HTTP '+r.status);return r.text();}
@@ -7,7 +9,7 @@ function parse(id,html,url,fx){let title,image,minor,basis,sizes;
  if(id==='printegy'){
   title=clean(html.match(/class="product-item__title"[^>]*>([\s\S]*?)<\/p>/)?.[1]);
   const info=html.slice(html.indexOf('class="product-item-info"'));
-  const prices=[...info.matchAll(/class="product-item__prices-item__title"[^>]*>([\s\S]*?)<\/span>\s*<span class="product-item__prices-item__price"[^>]*>\s*([\d.,]+)(?:\s*[-–]\s*[\d.,]+)?\s*€/g)].map(m=>({label:clean(m[1]),minor:Math.round(Number(m[2].replace(/\./g,'').replace(',','.'))*100)})).filter(p=>p.minor>0).sort((a,b)=>a.minor-b.minor);
+  const prices=[...info.matchAll(/class="product-item__prices-item__title"[^>]*>([\s\S]*?)<\/span>\s*<span class="product-item__prices-item__price"[^>]*>\s*([\d.,]+)(?:\s*[-–]\s*[\d.,]+)?\s*€/g)].map(m=>({label:clean(m[1]),minor:euroMinor(m[2])})).filter(p=>p.minor>0).sort((a,b)=>a.minor-b.minor);
   if(!prices.length)return null;minor=prices[0].minor;basis='Kaynak başlangıç bedeli · '+prices[0].label+' · kargo/vergi koşulları kaynakta';
   image=html.match(/<img[^>]*src="([^\"]*assets\/images\/goods\/[^\"]+)"/)?.[1];if(image)image=new URL(image,definitions[id].base+'/').href;
   sizes=clean(info.match(/class="product-item__size"[^>]*>([\s\S]*?)<\/p>/)?.[1]);

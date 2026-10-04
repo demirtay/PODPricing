@@ -2,6 +2,15 @@
   "siteName": "POD Atlas",
   "tagline": "Print-on-demand üretici fiyatlarını tek ekranda karşılaştır",
   "siteUrl": "",
+  "contactEmail": "",
   "adsenseClient": "",
+  "adSlots": {
+    "ust": "",
+    "liste": "",
+    "urun": "",
+    "alt": ""
+  },
+  "adsPreview": true,
+  "sponsors": [],
   "affiliate": {}
 }

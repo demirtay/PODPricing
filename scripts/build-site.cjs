@@ -1,5 +1,6 @@
 // POD Pricing herkese açık site üreticisi: data/catalog.json -> site/
-// İngilizce (kök) ve Türkçe (/tr/) sayfalar üretir. Ürün sayfaları yalnızca İngilizce.
+// Akakçe/Cimri mantığı: aynı ürünü satan üreticiler tek "ürün karşılaştırma" sayfasında ucuzdan pahalıya.
+// İngilizce (kök) ve Türkçe (/tr/). Tekil ürün sayfaları yalnızca İngilizce.
 // Kullanım: node scripts/build-site.cjs
 'use strict';
 const fs = require('node:fs'), path = require('node:path');
@@ -7,6 +8,7 @@ const tx = require('./pod-taxonomy.cjs');
 const EN = require('./pod-taxonomy-en.cjs');
 const PB = require('./print-basis.cjs');
 const I18N = require('./i18n-data.cjs');
+const PG = require('./product-groups.cjs');
 
 const root = path.resolve(__dirname, '..');
 const finalOut = path.join(root, 'site');
@@ -39,26 +41,36 @@ const products = catalog.products
   .filter(p => Number.isSafeInteger(p.baseMinor) && p.baseMinor > 0 && p.sourceUrl)
   .map(p => {
     const c = tx.classify(p), m = tx.detectModel(p);
-    return { ...p, title: decode(p.title), type: c.type, group: c.group, model: m && m.key ? m : null, pb: PB.printBasis(p) };
+    const q = { ...p, title: decode(p.title), type: c.type, group: c.group, model: m && m.key ? m : null, pb: PB.printBasis(p) };
+    q.gkey = PG.groupKey(q);
+    return q;
   })
   .sort((a, b) => a.baseMinor - b.baseMinor);
 const typeGroup = id => id === 'diger' ? 'diger' : tx.TYPE_BY_ID.get(id)?.group || 'diger';
 const byType = groupBy(products, p => p.type);
 const byGroup = groupBy(products, p => p.group);
 const byProvider = groupBy(products, p => p.providerId);
-const byModel = groupBy(products.filter(p => p.model), p => p.model.key);
-// karşılaştırma: en az iki üreticide bulunan boş ürün modelleri
-const models = [...byModel].map(([key, list]) => ({ key, list, brandName: list[0].model.brandName, model: list[0].model.model, providers: new Set(list.map(p => p.providerId)) }))
-  .filter(m => m.providers.size >= 2)
-  .map(m => ({ ...m, type: mostCommon(m.list.map(p => p.type)) }))
-  .sort((a, b) => b.providers.size - a.providers.size || a.list[0].baseMinor - b.list[0].baseMinor);
-const modelByKey = new Map(models.map(m => [m.key, m]));
-function modelPrices(m) { const o = { dahil: [], bos: [], toplu: [], belirsiz: [] }; for (const p of m.list) o[p.pb].push(p); return o; }
-const groupsOrdered = tx.GROUPS.filter(([g]) => byGroup.has(g)).map(([g]) => g);
-const typesOf = g => [...byType.keys()].filter(t => typeGroup(t) === g).sort((a, b) => byType.get(b).length - byType.get(a).length);
 const connected = catalog.providers.filter(p => byProvider.has(p.id));
 const lastCheck = products.reduce((a, p) => (p.checkedAt || '') > a ? p.checkedAt : a, '');
 const provName = id => providers.get(id)?.name || id;
+
+// Görseli güvenilir üreticiler: kategori/ürün kapak görseli seçerken öncelikli
+const GOOD_IMG = ['printify', 'printful', 'gearment', 'dreamship', 'merchize', 'burgerprints', 'simpleprint', 'yoycol', 'prodigi', 'contrado'];
+function repImage(list) {
+  const withImg = list.filter(p => p.imageUrl);
+  for (const id of GOOD_IMG) { const p = withImg.find(x => x.providerId === id); if (p) return p.imageUrl; }
+  return withImg[Math.floor(withImg.length / 3)]?.imageUrl || null;
+}
+
+// Ürün grupları (karşılaştırma sayfaları): en az iki üreticide bulunan aynı ürün
+const groups = [...groupBy(products.filter(p => p.gkey), p => p.gkey)]
+  .map(([key, list]) => ({ key, list, providers: new Set(list.map(p => p.providerId)), type: mostCommon(list.map(p => p.type)), sample: list.find(p => p.model) || list[0] }))
+  .filter(g => g.providers.size >= 2)
+  .map(g => ({ ...g, slug: PG.slugOf(g.key, t => (EN.TYPES[t] || ['', t])[1]), image: repImage(g.list) }))
+  .sort((a, b) => b.providers.size - a.providers.size || b.list.length - a.list.length);
+const groupOf = new Map();
+for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
+const groupsByType = groupBy(groups, g => g.type);
 
 // Bağlanamayan üreticilerin gerekçeleri (katalogda Türkçe tutulur)
 const REASON_EN = {
@@ -83,133 +95,120 @@ const REASON_EN = {
 const reasonOf = (p, L) => { const r = p.connection?.blockedReason; if (!r || /henüz tamamlanmadı/.test(r)) return L.notAdded; return L.lang === 'en' ? (REASON_EN[r] || L.notAdded) : r; };
 
 // ---------- dil sözlükleri ve adresler
+const QUICK = ['t-shirt', 'hoodie', 'mug', 'tumbler', 'poster', 'canvas', 'tote bag', 'phone case', 'hat', 'blanket'];
 const LOCALES = {
   en: {
-    lang: 'en', intl: 'en-US', prefix: '',
-    path: { home: '', categories: 'categories/', cat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, models: 'models/', model: k => `model/${k}/`,
+    lang: 'en', intl: 'en-US',
+    path: { home: '', categories: 'categories/', cat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
       makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/' },
     type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0],
-    pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN,
-    basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
-    notAdded: 'Prices not added yet',
+    pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN, basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
+    notAdded: 'Prices not added yet', quick: QUICK,
     t: {
-      home: 'Home', categories: 'Categories', models: 'Blank Exchange', makers: 'Manufacturers', search: 'Search', searchBtn: 'Search',
-      searchPh: 'Search products, blanks or manufacturers (e.g. gildan 5000, hoodie, mug)', searchBig: 'What do you want to print? (e.g. oversized tee, 11oz mug, tote bag)',
-      product: 'Product', maker: 'Manufacturer', type: 'Type', price: 'Price', go: 'Go to store ↗', from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
-      tagline: 'Print-on-demand price comparison',
-      heroH: 'Compare print-on-demand prices',
-      heroP: (m, n) => `Compare <b>${n}</b> products from ${m} print-on-demand manufacturers. Sorted cheapest first — click through to the manufacturer's own page.`,
-      stats: [['manufacturers'], ['products'], ['blanks compared'], ['twice', 'daily updates']],
-      how: [['Search', 'Type the product or blank you want to print.'], ['Compare', 'Cheapest first; print-included and blank prices are labeled separately.'], ['Go to the manufacturer', 'Open the best offer on the manufacturer site in one click.']],
-      modelsH: 'Blank exchange: same blank, different manufacturers', modelsP: 'The same blank (e.g. Gildan 5000, Bella+Canvas 3001) is sold by many POD companies. Print-included prices are compared separately from blank prices.',
-      allModels: n => `All blanks (${n}) →`, catsH: 'Categories',
-      mt: ['Blank', 'Type', 'Makers', 'Print incl. lowest', 'Print incl. highest', 'Saving', 'Blank lowest'],
-      ladder: [['dahil', 'Print-included prices', 'Production cost with one print area/design. Start here for a fair comparison.'], ['bos', 'Blank prices', 'Unprinted product price; the manufacturer charges printing separately.'], ['toplu', 'Bulk order prices', 'Bulk printing prices with a minimum order.'], ['belirsiz', 'Prices with terms at source', 'The source does not state whether printing is included.']],
-      ladderN: n => `${n} manufacturers`, offers: n => `${n} offers`, lowestPrint: v => `lowest print-included ${v}`, lowestBlank: v => `lowest blank ${v}`,
-      sameBlankNote: 'The same blank can be priced differently by print method (DTG, DTF, embroidery), print area, shipping and tax. See each product page for details.',
-      allOffers: 'All offers', top30: 'Best 30 deals in this category', blanksInCat: 'Blanks in this category', lowest: v => `lowest ${v}`,
-      catTitle: (l, n) => `${l} prices: compare ${n} print-on-demand manufacturers`, catDesc: (l, n, v, m) => `${n} print-on-demand ${l.toLowerCase()} sorted by price. Cheapest: ${v} (${m}).`,
-      groupTitle: l => `${l} print-on-demand prices`, groupDesc: (l, n, m, v) => `${n} print-on-demand products in ${l}, ${m} manufacturers. Lowest price ${v}.`,
-      modelTitle: (t, n) => `${t} prices: ${n} print-on-demand manufacturers compared`,
-      modelDesc: (b, d, bl, n) => `${b} lowest print-included price ${d}${bl ? `, blank ${bl}` : ''}. ${n} print-on-demand manufacturers compared, cheapest first.`,
-      modelsTitle: 'Blank exchange: Gildan, Bella+Canvas, Comfort Colors prices across POD companies', modelsDesc: n => `Prices of ${n} blank models across print-on-demand manufacturers: Gildan 5000, Bella+Canvas 3001, Comfort Colors 1717 and more.`,
-      modelsIntro: 'Manufacturers selling the same blank. Print-included and blank prices are shown in separate columns; Saving compares the cheapest and most expensive print-included offer.',
-      catsTitle: 'All print-on-demand product categories', catsDesc: 'Print-on-demand product categories with the lowest manufacturer price in each.',
+      home: 'Home', categories: 'Categories', compare: 'Compare', makers: 'Manufacturers', search: 'Search', searchBtn: 'Search',
+      searchPh: 'Search products or blanks (e.g. 11oz mug, gildan 5000, hoodie)', searchBig: 'What do you want to print?',
+      heroH: 'Find the cheapest print-on-demand supplier',
+      heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first.`,
+      topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
+      makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
+      offersH: n => `Prices from ${n} manufacturers`, cheapestFirst: 'Sorted from cheapest to most expensive.',
+      groupNoteModel: 'Same blank garment at every manufacturer. Print method, print area and shipping can differ — check details at the store.',
+      groupNoteSpec: 'Same product type and size at every manufacturer. Exact materials and options can differ slightly — check details at the store.',
+      allOffersOf: n => `Show all ${n} offers`, groupsInCat: 'Compare prices across manufacturers', allInCat: 'All products',
+      compareTitle: 'Compare print-on-demand product prices', compareDesc: n => `${n} print-on-demand products sold by several manufacturers, with prices sorted cheapest first.`,
+      compareIntro: 'Each product below is sold by at least two print-on-demand manufacturers. Open one to see every price side by side.',
+      groupTitle: (t, n) => `${t} — compare ${n} print-on-demand manufacturers`, groupDesc: (t, n, v, m) => `${t}: cheapest ${v} at ${m}. Prices from ${n} print-on-demand manufacturers, sorted cheapest first.`,
+      catTitle: (l, n) => `${l} prices: compare ${n} print-on-demand manufacturers`, catDesc: (l, n, v) => `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
+      groupPageTitle: l => `${l} print-on-demand prices`, catsTitle: 'All print-on-demand product categories', catsDesc: 'Print-on-demand product categories with the lowest manufacturer price in each.',
       makersTitle: 'Print-on-demand manufacturers', makersDesc: n => `${n} print-on-demand manufacturers: product counts, categories and lowest prices.`,
-      makersIntro: (c, r) => `Prices from ${c} manufacturers are compared. ${r} more are listed as links because their prices require login or have not been added yet.`,
+      makersIntro: (c, r) => `Prices from ${c} manufacturers are compared. ${r} more are listed as links because their prices require login or are not public.`,
       mk: ['Manufacturer', 'Products', 'Lowest', 'Status'], compared: 'Prices compared', visit: 'visit site ↗',
-      makerTitle: n => `${n} product prices and catalog`, makerDesc: (n, c, v) => c ? `${c} products in the ${n} print-on-demand catalog; lowest price ${v}. Compare with other manufacturers.` : `${n} print-on-demand manufacturer. Prices not yet in the comparison.`,
-      makerStats: (n, t, v) => `${n} products · ${t} product types · lowest ${v}`, top40: 'Best 40 deals', noPrices: r => `This manufacturer's prices are not in the comparison: ${r}. Visit the manufacturer site for products and prices.`,
-      productTitle: (t, m, v) => `${t} · ${m} · ${v}`, productDesc: (m, t, v, l, n, r) => `${m} ${t}: ${v}. Ranked #${r} cheapest of ${n} ${l.toLowerCase()}. Sizes, materials and pricing terms.`,
-      rankNote: (l, n, r) => `#${r} cheapest of ${n} products in ${l}.`, cta: m => `Go to ${m} ↗`,
-      sameModel: (b) => `Same blank at other offers (${b})`, otherMakers: l => `${l} from other manufacturers`,
+      makerTitle: n => `${n} product prices and catalog`, makerDesc: (n, c, v) => c ? `${c} products in the ${n} print-on-demand catalog; lowest price ${v}.` : `${n} print-on-demand manufacturer. Prices not yet in the comparison.`,
+      makerStats: (n, t, v) => `${n} products · ${t} product types · lowest ${v}`, makerTop: 'Cheapest products', noPrices: r => `This manufacturer's prices are not in the comparison: ${r}. Visit the manufacturer site for products and prices.`,
+      go: 'Go to store ↗', cta: m => `Go to ${m} ↗`, inGroup: (n) => `Sold by ${n} manufacturers — compare all prices`,
+      productTitle: (t, m, v) => `${t} · ${m} · ${v}`, productDesc: (m, t, v, l) => `${m} ${t}: ${v}. Compare ${l.toLowerCase()} prices across print-on-demand manufacturers.`,
+      sameGroup: 'Same product at other manufacturers', otherMakers: l => `More ${l.toLowerCase()}`,
       f: { type: 'Product type', maker: 'Manufacturer', blank: 'Blank model', pbt: 'Price type', basis: 'Pricing basis', src: 'Source price', fx: (r, d) => `(rate ${r}, ${d})`, range: 'Price range',
-        orig: 'Before discount', member: 'Membership price', memberNote: '(on the manufacturer\'s paid plan)', methods: 'Print methods', sizes: 'Sizes / variants', material: 'Material',
+        orig: 'Before discount', member: 'Membership price', memberNote: "(on the manufacturer's paid plan)", methods: 'Print methods', sizes: 'Sizes / variants', material: 'Material',
         moq: 'Minimum quantity', mov: 'Minimum order value', prod: 'Production time', print: 'Printing', printNote: 'Price is for the blank product; printing is charged separately', ship: 'Shipping',
         shipIncl: 'Shipping included (as stated at source)', shipFrom: (k, v) => `${k}: from ${v}`, total: v => `(approx. total ${v})`, region: 'Production / shipping region', facilities: 'Production facilities', checked: 'Last checked' },
+      shipShort: v => `+ ${v} shipping`,
       searchTitle: 'Search', searchDesc: 'Search print-on-demand products and compare manufacturer prices.', searching: 'Searching…',
       aboutTitle: 'About and methodology', aboutDesc: `How ${BRAND} collects and compares prices.`,
-      about: (c, n, d, badges) => `<p>${BRAND} is an independent price comparison site that helps Etsy, Shopify and marketplace sellers compare print-on-demand production costs. We do not sell anything or take orders.</p>
-<h2>Where do prices come from?</h2><p>Prices are collected automatically from manufacturers' public catalog pages, store feeds and public APIs, and refreshed regularly. Prices behind a login are not included; we never estimate or invent prices.</p>
-<h2>What does a price include?</h2><p>The price shown is the starting price or the selected standard variant price shown at the source. Printing, shipping, tax and minimum order terms vary by manufacturer and are listed on each product page. Always confirm the final amount on the manufacturer site.</p>
-<h2>Price types</h2><ul>${badges}</ul><p>For a fair comparison, blank pages list print-included and blank prices separately.</p>
+      about: (c, n, d, badges) => `<p>${BRAND} is an independent price comparison site that helps Etsy, Shopify and marketplace sellers find the cheapest print-on-demand manufacturer for each product. We do not sell anything or take orders.</p>
+<h2>How products are compared</h2><p>When the same product is sold by several manufacturers, it gets one product page with every offer sorted from cheapest to most expensive. Products are matched by the blank garment model (e.g. Gildan 5000) or by product type and size (e.g. 11oz mug, 16×20 canvas).</p>
+<h2>Where do prices come from?</h2><p>Prices are collected automatically from manufacturers' public catalog pages, store feeds and public APIs, and refreshed twice a day. Prices behind a login are not included; we never estimate or invent prices.</p>
+<h2>Price types</h2><ul>${badges}</ul>
 <h2>Currencies</h2><p>Non-USD prices are converted to approximate USD with daily reference rates (Frankfurter) for sorting; the source price is shown as well.</p>
 <p>Coverage: ${n} products from ${c} manufacturers. Last updated: ${d}.</p>`,
       privacyTitle: 'Privacy and cookie policy', contactTitle: 'Contact', contactPending: '<em>(contact address will be added before launch)</em>',
       privacy: c => `<p>${BRAND} has no accounts, orders or payments, and does not collect names, addresses or payment details.</p>
-<h2>Cookies and advertising</h2><p>We may use third-party advertising such as Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the Internet. You can opt out of personalized advertising in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>, and learn more about third-party cookies at <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. Visitors in the EEA and UK are asked for consent to advertising cookies.</p>
+<h2>Cookies and advertising</h2><p>We use third-party advertising such as Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the Internet. You can opt out of personalized advertising in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>, and learn more about third-party cookies at <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. Visitors in the EEA, UK and Switzerland are asked for consent to advertising cookies.</p>
 <h2>Links and affiliate programs</h2><p>Some links to manufacturers may be affiliate links; ${BRAND} may earn a commission on sign-ups through them. This never affects prices or ranking — ranking is by price only. Sponsored placements are labeled "Sponsored".</p>
 <h2>Server logs</h2><p>Our hosting provider may keep standard access logs (IP address, browser) for a limited time for security and performance.</p>
 <h2>Contact</h2><p>${c}</p>`,
       contact: c => `<p>To suggest a manufacturer, report a wrong price, or ask about sponsorship and partnerships, write to us: ${c}</p><p>Manufacturers: share a public catalog, product feed or API so your products are listed with accurate prices.</p>`,
       contactDesc: `Contact ${BRAND}: add a manufacturer, fix a price or partner with us.`,
       notFound: 'Page not found', notFoundP: 'The product may have been removed from the catalog. <a href="/">Go to the homepage</a> or search.',
-      footer: `${BRAND} compares prices from print-on-demand manufacturers' public catalogs. We don't sell anything — clicking a product takes you to the manufacturer's own page.`,
-      footer2: d => `Prices are the starting or selected-variant prices shown at the source; printing, shipping, tax and minimum quantities vary by manufacturer. Other currencies are converted to approximate USD with daily reference rates for sorting. Last updated: ${d}.`,
+      footer: `${BRAND} compares prices from print-on-demand manufacturers' public catalogs. We don't sell anything — clicking an offer takes you to the manufacturer's own page.`,
+      footer2: d => `Prices are the starting or selected-variant prices shown at the source; printing, shipping, tax and minimum quantities vary by manufacturer. Last updated: ${d}.`,
       foot: ['About & methodology', 'Manufacturers', 'Privacy & cookies', 'Contact'],
-      ad: 'Ad', adPreview: s => `Ad slot · ${s}`, adSize: { ust: 'Leaderboard · 728×90 / mobile 320×100', liste: 'In-list · responsive', urun: 'Rectangle · 300×250', alt: 'Leaderboard · 728×90' },
-      sponsored: 'Sponsored', sponsorPreview: 'Sponsored manufacturer slot · for direct partnerships', review: 'View ↗',
-      homeTitle: `${BRAND} · Compare print-on-demand prices`, homeDesc: (m, n) => `Compare ${n} products from ${m} print-on-demand manufacturers, cheapest first: t-shirts, hoodies, mugs, posters, phone cases and more.`,
+      ad: 'Ad', adPreview: s => `Ad slot · ${s}`, adSize: { ust: 'Leaderboard', liste: 'In-list', urun: 'Rectangle', alt: 'Leaderboard' },
+      sponsored: 'Sponsored', sponsorPreview: 'Sponsored manufacturer slot', review: 'View ↗',
+      homeTitle: `${BRAND} · Compare print-on-demand prices`, homeDesc: (m, n) => `Find the cheapest print-on-demand supplier: compare ${n} products from ${m} manufacturers — t-shirts, hoodies, mugs, posters, phone cases and more.`,
     },
   },
   tr: {
-    lang: 'tr', intl: 'tr-TR', prefix: 'tr/',
-    path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${id}/`, models: 'tr/borsa/', model: k => `tr/model/${k}/`,
+    lang: 'tr', intl: 'tr-TR',
+    path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
       makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/' },
     type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer',
-    pbLabel: PB.LABEL, pbNote: PB.NOTE,
-    basis: s => s, sizes: s => s, production: s => s, method: m => m,
-    notAdded: 'Fiyatlar henüz eklenmedi',
+    pbLabel: PB.LABEL, pbNote: PB.NOTE, basis: s => s, sizes: s => s, production: s => s, method: m => m,
+    notAdded: 'Fiyatlar henüz eklenmedi', quick: ['tişört', 'hoodie', 'kupa', 'termos', 'poster', 'kanvas', 'bez çanta', 'telefon kılıfı', 'şapka', 'battaniye'],
     t: {
-      home: 'Ana sayfa', categories: 'Kategoriler', models: 'Model Borsası', makers: 'Üreticiler', search: 'Arama', searchBtn: 'Ara',
-      searchPh: 'Ürün, model veya üretici ara (ör. gildan 5000, hoodie, mug)', searchBig: 'Ne basmak istiyorsunuz? (ör. oversized tişört, 11oz kupa, tote bag)',
-      product: 'Ürün', maker: 'Üretici', type: 'Tip', price: 'Fiyat', go: 'Satış sayfası ↗', from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
-      tagline: 'Print-on-demand fiyat karşılaştırma',
-      heroH: 'POD üreticilerinin fiyat borsası',
-      heroP: (m, n) => `${m} üreticinin <b>${n}</b> ürününü tek ekranda karşılaştırın. Ürünler ucuzdan pahalıya sıralanır, tıklayınca üreticinin satış sayfasına gidersiniz.`,
-      stats: [['üretici'], ['ürün'], ['karşılaştırılan model'], ['günde 2 kez', 'güncellenir']],
-      how: [['Ara', 'Basmak istediğin ürünü ya da modeli yaz.'], ['Karşılaştır', 'Üreticiler ucuzdan pahalıya; baskı dahil ve boş ürün fiyatları ayrı etiketli.'], ['Üreticiye git', 'Beğendiğin teklifin satış sayfasına tek tıkla geç.']],
-      modelsH: 'Model borsası: aynı ürün, farklı üreticiler', modelsP: 'Aynı boş ürün modeli (ör. Gildan 5000, Bella+Canvas 3001) birden fazla üreticide satılıyor. Baskı dahil fiyatlar boş ürün fiyatlarından ayrı karşılaştırılır.',
-      allModels: n => `Tüm modeller (${n}) →`, catsH: 'Kategoriler',
-      mt: ['Model', 'Tip', 'Üretici', 'Baskı dahil en düşük', 'Baskı dahil en yüksek', 'Fark', 'Boş ürün en düşük'],
-      ladder: [['dahil', 'Baskı dahil fiyatlar', 'Tek baskı alanı/tasarım dahil üretim maliyeti. Gerçek karşılaştırma için önce buraya bakın.'], ['bos', 'Boş ürün fiyatları', 'Baskısız ürün bedeli; üreticinin baskı ücreti ayrıca eklenir.'], ['toplu', 'Toplu sipariş fiyatları', 'Minimum adet şartı olan toplu baskı fiyatları.'], ['belirsiz', 'Koşulları üreticide belirtilen fiyatlar', 'Kaynak, fiyatın baskıyı içerip içermediğini açıkça belirtmiyor.']],
-      ladderN: n => `${n} üretici`, offers: n => `${n} teklif`, lowestPrint: v => `baskı dahil en düşük ${v}`, lowestBlank: v => `boş ürün en düşük ${v}`,
-      sameBlankNote: 'Aynı model kodu, farklı üreticilerde baskı yöntemi (DTG, DTF, nakış), baskı alanı, kargo ve vergi koşullarıyla farklı fiyatlanabilir. Ayrıntılar için ürün sayfasına bakın.',
-      allOffers: 'Tüm teklifler', top30: 'Bu kategorideki en uygun 30 ürün', blanksInCat: 'Bu kategorideki modeller', lowest: v => `en düşük ${v}`,
-      catTitle: (l, n) => `${l} fiyatları: ${n} POD üreticisi karşılaştırması`, catDesc: (l, n, v, m) => `${l} için ${n} print-on-demand ürünü ucuzdan pahalıya. En düşük fiyat ${v} (${m}).`,
-      groupTitle: l => `${l} POD ürün fiyatları`, groupDesc: (l, n, m, v) => `${l} kategorisinde ${n} print-on-demand ürünü, ${m} üretici. En düşük fiyat ${v}.`,
-      modelTitle: (t, n) => `${t} fiyatları: ${n} üretici karşılaştırması`,
-      modelDesc: (b, d, bl, n) => `${b} baskı dahil en ucuz ${d}${bl ? `, boş ürün ${bl}` : ''}. ${n} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
-      modelsTitle: 'Boş ürün model borsası: Gildan, Bella+Canvas, Comfort Colors fiyatları', modelsDesc: n => `${n} boş ürün modelinin farklı POD üreticilerindeki fiyatları: Gildan 5000, Bella+Canvas 3001, Comfort Colors 1717 ve diğerleri.`,
-      modelsIntro: 'Aynı boş ürün modelini satan üreticiler. Baskı dahil fiyatlar ile boş ürün fiyatları ayrı sütunlarda; fark sütunu baskı dahil tekliflerde en ucuzun en pahalıya göre tasarrufunu gösterir.',
-      catsTitle: 'Tüm POD ürün kategorileri', catsDesc: 'Print-on-demand ürün kategorileri ve her kategorideki en düşük üretici fiyatı.',
-      makersTitle: 'Print-on-demand üreticileri listesi', makersDesc: n => `${n} print-on-demand üreticisi: ürün sayıları, kategoriler ve en düşük fiyatlar.`,
-      makersIntro: (c, r) => `${c} üreticinin fiyatları karşılaştırmada. ${r} üreticinin fiyatları üye girişi gerektirdiği ya da henüz eklenmediği için listede yalnızca bağlantı olarak yer alıyor.`,
+      home: 'Ana sayfa', categories: 'Kategoriler', compare: 'Karşılaştır', makers: 'Üreticiler', search: 'Arama', searchBtn: 'Ara',
+      searchPh: 'Ürün ya da model ara (ör. 11oz kupa, gildan 5000, hoodie)', searchBig: 'Ne basmak istiyorsun?',
+      heroH: 'En ucuz baskı üreticisini bul',
+      heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte.`,
+      topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
+      makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
+      offersH: n => `${n} üreticinin fiyatları`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
+      groupNoteModel: 'Bütün üreticilerde aynı boş ürün modeli. Baskı yöntemi, baskı alanı ve kargo farklı olabilir; ayrıntılar üreticinin sayfasında.',
+      groupNoteSpec: 'Bütün üreticilerde aynı ürün tipi ve ölçü. Malzeme ve seçenekler küçük farklar gösterebilir; ayrıntılar üreticinin sayfasında.',
+      allOffersOf: n => `${n} teklifin hepsini göster`, groupsInCat: 'Üreticiler arasında fiyat karşılaştır', allInCat: 'Tüm ürünler',
+      compareTitle: 'POD ürün fiyatlarını karşılaştır', compareDesc: n => `Birden fazla üreticide satılan ${n} print-on-demand ürünü, fiyatlar ucuzdan pahalıya.`,
+      compareIntro: 'Aşağıdaki her ürün en az iki üreticide satılıyor. Birini açınca bütün fiyatları yan yana görürsün.',
+      groupTitle: (t, n) => `${t}: ${n} POD üreticisinin fiyatları`, groupDesc: (t, n, v, m) => `${t} en ucuz ${v} (${m}). ${n} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
+      catTitle: (l, n) => `${l} fiyatları: ${n} POD üreticisi karşılaştırması`, catDesc: (l, n, v) => `${l} için ${n} print-on-demand ürünü. En düşük fiyat ${v}.`,
+      groupPageTitle: l => `${l} POD fiyatları`, catsTitle: 'Tüm POD ürün kategorileri', catsDesc: 'Print-on-demand ürün kategorileri ve her kategorideki en düşük fiyat.',
+      makersTitle: 'Print-on-demand üreticileri', makersDesc: n => `${n} print-on-demand üreticisi: ürün sayıları, kategoriler ve en düşük fiyatlar.`,
+      makersIntro: (c, r) => `${c} üreticinin fiyatları karşılaştırmada. ${r} üretici, fiyatları üye girişi gerektirdiği ya da yayınlanmadığı için yalnızca bağlantı olarak listeleniyor.`,
       mk: ['Üretici', 'Ürün', 'En düşük', 'Durum'], compared: 'Fiyatlar karşılaştırmada', visit: 'siteye git ↗',
-      makerTitle: n => `${n} ürün fiyatları ve katalog`, makerDesc: (n, c, v) => c ? `${n} print-on-demand kataloğunda ${c} ürün; en düşük fiyat ${v}. Diğer üreticilerle karşılaştırın.` : `${n} print-on-demand üreticisi. Fiyat bilgisi henüz karşılaştırmaya eklenmedi.`,
-      makerStats: (n, t, v) => `${n} ürün · ${t} ürün tipi · en düşük ${v}`, top40: 'En uygun 40 ürün', noPrices: r => `Bu üreticinin fiyatları karşılaştırmada yok: ${r.charAt(0).toLocaleLowerCase('tr') + r.slice(1)}. Ürünler ve fiyatlar için üreticinin sitesini ziyaret edin.`,
+      makerTitle: n => `${n} ürün fiyatları ve katalog`, makerDesc: (n, c, v) => c ? `${n} print-on-demand kataloğunda ${c} ürün; en düşük fiyat ${v}.` : `${n} print-on-demand üreticisi. Fiyat bilgisi henüz karşılaştırmada yok.`,
+      makerStats: (n, t, v) => `${n} ürün · ${t} ürün tipi · en düşük ${v}`, makerTop: 'En uygun ürünler', noPrices: r => `Bu üreticinin fiyatları karşılaştırmada yok: ${r.charAt(0).toLocaleLowerCase('tr') + r.slice(1)}. Ürünler ve fiyatlar için üreticinin sitesine bakın.`,
+      go: 'Mağazaya git ↗', inGroup: (n) => `${n} üreticide satılıyor, bütün fiyatları karşılaştır`,
       searchTitle: 'Ara', searchDesc: 'Print-on-demand ürünlerini ara ve üretici fiyatlarını karşılaştır.', searching: 'Aranıyor…',
+      shipShort: v => `+ ${v} kargo`,
       aboutTitle: 'Hakkında ve yöntem', aboutDesc: `${BRAND} fiyatları nasıl toplar ve karşılaştırır.`,
-      about: (c, n, d, badges) => `<p>${BRAND}, Etsy ve diğer pazaryerlerinde satış yapanların print-on-demand üretim maliyetlerini karşılaştırmasına yardım eden bağımsız bir fiyat karşılaştırma sitesidir. Satış yapmaz, sipariş almaz.</p>
-<h2>Fiyatlar nereden geliyor?</h2><p>Fiyatlar üreticilerin herkese açık katalog sayfalarından, mağaza beslemelerinden ve açık API'lerinden otomatik olarak alınır ve düzenli aralıklarla yenilenir. Üye girişi gerektiren fiyatlar eklenmez; tahmini veya uydurma fiyat kullanılmaz.</p>
-<h2>Fiyat neyi kapsıyor?</h2><p>Gösterilen fiyat, üreticinin kaynakta gösterdiği başlangıç fiyatı veya seçili standart varyantın fiyatıdır. Baskı ücreti, kargo, vergi ve minimum adet koşulları üreticiye göre değişir ve her ürünün sayfasında belirtilir. Kesin tutarı üreticinin sayfasında doğrulayın.</p>
-<h2>Fiyat türleri</h2><ul>${badges}</ul><p>Adil karşılaştırma için model sayfalarında baskı dahil fiyatlar ve boş ürün fiyatları ayrı sıralanır.</p>
-<h2>Para birimleri</h2><p>USD dışındaki fiyatlar günlük referans kuruyla (Frankfurter) yaklaşık USD'ye çevrilerek sıralanır; kaynak fiyatı da ayrıca gösterilir.</p>
-<p>Kapsam: ${c} üreticiden ${n} ürün. Son güncelleme: ${d}.</p><p>Ürün sayfaları İngilizcedir.</p>`,
+      about: (c, n, d, badges) => `<p>${BRAND}, Etsy ve diğer pazaryerlerinde satış yapanların her ürün için en ucuz print-on-demand üreticisini bulmasına yardım eden bağımsız bir fiyat karşılaştırma sitesidir. Satış yapmaz, sipariş almaz.</p>
+<h2>Ürünler nasıl karşılaştırılıyor?</h2><p>Aynı ürün birden fazla üreticide satılıyorsa tek bir ürün sayfası oluşur ve bütün teklifler ucuzdan pahalıya sıralanır. Ürünler boş ürün modeline (ör. Gildan 5000) ya da ürün tipi ve ölçüsüne (ör. 11oz kupa, 16×20 kanvas) göre eşleştirilir.</p>
+<h2>Fiyatlar nereden geliyor?</h2><p>Fiyatlar üreticilerin herkese açık katalog sayfalarından, mağaza beslemelerinden ve açık API'lerinden otomatik alınır ve günde iki kez yenilenir. Üye girişi gerektiren fiyatlar eklenmez; tahmini ya da uydurma fiyat kullanılmaz.</p>
+<h2>Fiyat türleri</h2><ul>${badges}</ul>
+<p>Kapsam: ${c} üreticiden ${n} ürün. Son güncelleme: ${d}. Tekil ürün sayfaları İngilizcedir.</p>`,
       privacyTitle: 'Gizlilik ve çerez politikası', contactTitle: 'İletişim', contactPending: '<em>(iletişim adresi yayından önce eklenecek)</em>',
       privacy: c => `<p>${BRAND} üyelik, sipariş veya ödeme almaz; ziyaretçilerden ad, adres ya da ödeme bilgisi toplamaz.</p>
-<h2>Çerezler ve reklamlar</h2><p>Sitede Google AdSense gibi üçüncü taraf reklam hizmetleri kullanılabilir. Google dahil üçüncü taraf sağlayıcılar, bu siteye ve diğer sitelere yaptığınız önceki ziyaretlere dayalı reklam sunmak için çerez kullanabilir. Kişiselleştirilmiş reklamcılığı <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Reklam Ayarları</a> üzerinden devre dışı bırakabilir, üçüncü taraf çerezleri hakkında <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> adresinden bilgi alabilirsiniz. Avrupa Ekonomik Alanı ve Birleşik Krallık'taki ziyaretçilerden reklam çerezleri için onay istenir.</p>
-<h2>Bağlantılar ve ortaklık programları</h2><p>Üreticilere verilen bazı bağlantılar ortaklık (affiliate) bağlantısı olabilir; bu bağlantılar üzerinden yapılan kayıtlardan ${BRAND} komisyon alabilir. Bu, gösterilen fiyatları ve sıralamayı etkilemez: sıralama yalnızca fiyata göredir. Sponsorlu alanlar "Sponsorlu" etiketiyle belirtilir.</p>
+<h2>Çerezler ve reklamlar</h2><p>Sitede Google AdSense gibi üçüncü taraf reklam hizmetleri kullanılır. Google dahil üçüncü taraf sağlayıcılar, bu siteye ve diğer sitelere yaptığınız önceki ziyaretlere dayalı reklam sunmak için çerez kullanabilir. Kişiselleştirilmiş reklamcılığı <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Reklam Ayarları</a> üzerinden kapatabilir, üçüncü taraf çerezleri hakkında <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> adresinden bilgi alabilirsiniz. AEA, Birleşik Krallık ve İsviçre'deki ziyaretçilerden reklam çerezleri için onay istenir.</p>
+<h2>Bağlantılar ve ortaklık programları</h2><p>Üreticilere verilen bazı bağlantılar ortaklık (affiliate) bağlantısı olabilir; bu bağlantılar üzerinden yapılan kayıtlardan ${BRAND} komisyon alabilir. Bu, fiyatları ve sıralamayı etkilemez: sıralama yalnızca fiyata göredir. Sponsorlu alanlar "Sponsorlu" etiketiyle belirtilir.</p>
 <h2>Sunucu kayıtları</h2><p>Barındırma sağlayıcımız, güvenlik ve performans amacıyla IP adresi ve tarayıcı bilgisi gibi standart erişim kayıtlarını sınırlı süre tutabilir.</p>
 <h2>İletişim</h2><p>${c}</p>`,
       contact: c => `<p>Listede olmayan bir üreticiyi önermek, hatalı bir fiyatı bildirmek veya sponsorluk ve iş birliği için bize yazın: ${c}</p><p>Üreticiyseniz: ürünlerinizin doğru fiyatla listelenmesi için herkese açık bir katalog, ürün beslemesi veya API bağlantısı paylaşabilirsiniz.</p>`,
       contactDesc: `${BRAND} ile iletişim: üretici eklemek, fiyat düzeltmek veya iş birliği için.`,
-      footer: `${BRAND}, print-on-demand üreticilerinin herkese açık kataloglarındaki fiyatları karşılaştırır. Satış yapmaz; ürüne tıklayınca üreticinin kendi sayfasına gidersiniz.`,
-      footer2: d => `Fiyatlar üreticinin kaynakta gösterdiği başlangıç veya seçili varyant bedelidir; baskı, kargo, vergi ve minimum adet koşulları üreticiye göre değişir. Farklı para birimleri günlük referans kuruyla yaklaşık USD'ye çevrilerek sıralanır. Son güncelleme: ${d}.`,
+      footer: `${BRAND}, print-on-demand üreticilerinin herkese açık kataloglarındaki fiyatları karşılaştırır. Satış yapmaz; bir teklife tıklayınca üreticinin kendi sayfasına gidersiniz.`,
+      footer2: d => `Fiyatlar üreticinin kaynakta gösterdiği başlangıç veya seçili varyant bedelidir; baskı, kargo, vergi ve minimum adet koşulları üreticiye göre değişir. Son güncelleme: ${d}.`,
       foot: ['Hakkında ve yöntem', 'Üreticiler', 'Gizlilik ve çerezler', 'İletişim'],
-      ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş · 728×90 / mobil 320×100', liste: 'Liste arası · duyarlı', urun: 'Kare · 300×250', alt: 'Yatay afiş · 728×90' },
-      sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı · üreticilerle doğrudan anlaşmalar için', review: 'İncele ↗',
-      homeTitle: `${BRAND} · Print-on-demand fiyatlarını karşılaştır`, homeDesc: (m, n) => `${m} print-on-demand üreticisinin ${n} ürününü ucuzdan pahalıya karşılaştırın: tişört, hoodie, kupa, poster, telefon kılıfı ve daha fazlası.`,
+      ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş', liste: 'Liste arası', urun: 'Kare', alt: 'Yatay afiş' },
+      sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı', review: 'İncele ↗',
+      homeTitle: `${BRAND} · Print-on-demand fiyatlarını karşılaştır`, homeDesc: (m, n) => `En ucuz baskı üreticisini bul: ${m} POD üreticisinin ${n} ürününü karşılaştır; tişört, hoodie, kupa, poster, telefon kılıfı ve daha fazlası.`,
     },
   },
 };
@@ -227,12 +226,12 @@ function makeHelpers(L) {
   };
   const dateFmt = new Intl.DateTimeFormat(L.intl, { dateStyle: 'long' });
   const lastText = lastCheck ? new Date(lastCheck).toLocaleString(L.intl, { dateStyle: 'long', timeStyle: 'short', timeZone: L.lang === 'tr' ? 'Europe/Istanbul' : 'UTC' }) + (L.lang === 'tr' ? '' : ' UTC') : '';
-  const modelTitle = m => `${m.brandName} ${m.model} ${L.type(m.type)}`;
+  const gTitle = g => PG.groupName(g.key, g.sample, L.lang, L.type);
   const pbBadge = pb => `<span class="pb pb-${pb}" title="${esc(L.pbNote[pb])}">${esc(L.pbLabel[pb])}</span>`;
+  const srcSmall = p => p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? `<small>${esc(fmt(p.sourceMinor, p.sourceCurrency))}</small>` : '';
   const priceHtml = (p, { badge = true } = {}) => {
-    const src = p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? `<small>${esc(fmt(p.sourceMinor, p.sourceCurrency))}</small>` : '';
     const old = Number.isInteger(p.originalMinor) && p.originalMinor > p.baseMinor && (!p.sourceCurrency || p.sourceCurrency === 'USD') ? `<s>${esc(fmt(p.originalMinor))}</s>` : '';
-    return `${old}<b>${esc(fmt(p.baseMinor))}</b>${src}${badge ? pbBadge(p.pb) : ''}`;
+    return `${old}<b>${esc(fmt(p.baseMinor))}</b>${srcSmall(p)}${badge ? pbBadge(p.pb) : ''}`;
   };
   const ad = slot => {
     if (cfg.adsenseClient && cfg.adSlots?.[slot]) return `<div class="ad ad-${slot}"><span class="ad-label">${t.ad}</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(cfg.adsenseClient)}" data-ad-slot="${esc(cfg.adSlots[slot])}" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>`;
@@ -246,21 +245,23 @@ function makeHelpers(L) {
     if (cfg.adsPreview) return `<aside class="sponsor ad-preview" aria-hidden="true">${esc(t.sponsorPreview)}</aside>`;
     return '';
   };
-  const img = (p, cls = '') => p.imageUrl ? `<img class="${cls}" src="${esc(p.imageUrl)}" alt="${esc(p.title)}" loading="lazy" referrerpolicy="no-referrer">` : `<span class="noimg ${cls}"></span>`;
-  const rowsTable = (list, { showType = false } = {}) => `<div class="tbl"><table><thead><tr><th></th><th>${t.product}</th><th>${t.maker}</th>${showType ? `<th>${t.type}</th>` : ''}<th class="num">${t.price}</th><th class="lk"></th></tr></thead><tbody>${list.map(p => `<tr>
-<td class="th">${img(p)}</td><td><a href="${href(P.product(p.id))}">${esc(p.title)}</a><div class="muted sm">${esc(L.sizes(p.sizes || ''))}</div></td>
-<td><a href="${href(P.maker(p.providerId))}">${esc(provName(p.providerId))}</a></td>${showType ? `<td class="sm"><a href="${href(P.cat(p.type))}">${esc(L.type(p.type))}</a></td>` : ''}
-<td class="num price">${priceHtml(p)}</td><td class="lk"><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${t.go}</a></td></tr>`).join('')}</tbody></table></div>`;
-  const modelTable = (list, { showType = false } = {}) => `<div class="tbl"><table><thead><tr><th>${t.mt[0]}</th>${showType ? `<th>${t.mt[1]}</th>` : ''}${t.mt.slice(2).map(h => `<th class="num">${h}</th>`).join('')}</tr></thead><tbody>
-${list.map(m => { const pr = modelPrices(m), d = pr.dahil, b = pr.bos; const lo = d[0]?.baseMinor, hi = d[d.length - 1]?.baseMinor;
-    return `<tr><td><a href="${href(P.model(m.key))}">${esc(showType ? m.brandName + ' ' + m.model : modelTitle(m))}</a></td>${showType ? `<td class="sm">${esc(L.type(m.type))}</td>` : ''}<td class="num">${m.providers.size}</td><td class="num price">${lo ? `<b>${fmt(lo)}</b>` : '–'}</td><td class="num">${hi ? fmt(hi) : '–'}</td><td class="num">${lo && hi > lo ? Math.round((1 - lo / hi) * 100) + '%' : '–'}</td><td class="num">${b[0] ? fmt(b[0].baseMinor) : '–'}</td></tr>`; }).join('')}
-</tbody></table></div>`;
-  const ladder = list => t.ladder.map(([pb, title, note]) => {
-    const best = [...groupBy(list.filter(p => p.pb === pb), p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
-    if (!best.length) return '';
-    return `<h2>${esc(title)} <span class="muted sm">· ${t.ladderN(best.length)}</span></h2><p class="muted sm">${esc(note)}</p><ol class="ladder">${best.map((p, i) => `<li><span class="rank">${i + 1}</span><a href="${href(P.maker(p.providerId))}">${esc(provName(p.providerId))}</a><span class="price">${priceHtml(p, { badge: false })}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${t.go}</a></li>`).join('')}</ol>`;
-  }).join('');
-  return { t, P, fmt, numFmt, dateFmt, lastText, modelTitle, pbBadge, priceHtml, ad, sponsor, img, rowsTable, modelTable, ladder };
+  const imgTag = (src, alt) => src ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" referrerpolicy="no-referrer">` : `<span class="noimg"></span>`;
+  const img = p => imgTag(p.imageUrl, p.title);
+  // tekil ürün kartı
+  const card = p => `<a class="card" href="${href(P.product(p.id))}"><div class="ci">${img(p)}</div><div class="cb"><div class="ct">${esc(p.title)}</div><div class="cm">${esc(provName(p.providerId))}</div><div class="cp"><b>${esc(fmt(p.baseMinor))}</b>${pbBadge(p.pb)}</div></div></a>`;
+  // karşılaştırmalı ürün kartı (grup)
+  const gcard = g => `<a class="card" href="${href(P.group(g.slug))}"><div class="ci">${imgTag(g.image, gTitle(g))}</div><div class="cb"><div class="ct">${esc(gTitle(g))}</div><div class="cm">${esc(t.makersN(g.providers.size))}</div><div class="cp"><small>${L.lang === 'en' ? 'from' : 'en ucuz'}</small><b>${esc(fmt(g.list[0].baseMinor))}</b></div></div></a>`;
+  const cards = list => `<div class="cards">${list.map(card).join('')}</div>`;
+  const gcards = list => `<div class="cards">${list.map(gcard).join('')}</div>`;
+  const tile = (hrefTo, image, title, sub) => `<a class="tile" href="${hrefTo}"><div class="ti">${imgTag(image, title)}</div><div class="tb"><b>${esc(title)}</b><span>${esc(sub)}</span></div></a>`;
+  // Akakçe tarzı teklif listesi: üretici başına en ucuz teklif, ucuzdan pahalıya
+  const offers = list => {
+    const best = [...groupBy(list, p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
+    const row = (p, i) => `<li><span class="rank">${i + 1}</span>${img(p)}<div><a href="${href(P.maker(p.providerId))}"><b>${esc(provName(p.providerId))}</b></a><div class="muted sm"><a href="${href(P.product(p.id))}">${esc(p.title)}</a></div></div><span class="price">${priceHtml(p)}${p.shipping && Object.values(p.shipping)[0] != null ? `<small>${esc(t.shipShort(fmt(Object.values(p.shipping)[0])))}</small>` : ''}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${t.go}</a></li>`;
+    const rest = list.filter(p => !best.includes(p));
+    return `<ol class="ladder">${best.map(row).join('')}</ol>` + (rest.length ? `<details class="more-offers"><summary>${esc(t.allOffersOf(list.length))}</summary><ol class="ladder">${list.map(row).join('')}</ol></details>` : '');
+  };
+  return { t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers };
 }
 
 // ---------- sayfa şablonu
@@ -282,8 +283,8 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}">
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>
 <form class="search" action="${href(H.P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchPh)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
-<nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.models)}">${t.models}</a><a href="${href(H.P.makers)}">${t.makers}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
-<main class="wrap">${bc}${H.ad('ust')}${body}${H.ad('alt')}</main>
+<nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.compare)}">${t.compare}</a><a href="${href(H.P.makers)}">${t.makers}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
+<main class="wrap">${bc}${body}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
 <p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p></div></footer>
@@ -296,88 +297,93 @@ fs.mkdirSync(out, { recursive: true });
 fs.cpSync(path.join(root, 'web'), path.join(out, 'assets'), { recursive: true });
 const add = (rel, html) => { write(rel, html); sitemap.push(rel); };
 
-// istemci tarafı ortak veri: [id, başlık, üreticiId, fiyat, kaynakFiyat, görsel, ölçü, tip, satışLinki, fiyatTürü]
-const srcPrice = p => p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor) ? new Intl.NumberFormat('en-US', { style: 'currency', currency: p.sourceCurrency }).format(p.sourceMinor / 100) : '';
-const row = p => [p.id, p.title, p.providerId, p.baseMinor, srcPrice(p), p.imageUrl || '', p.sizes || '', p.type, outbound(p), p.pb];
-for (const [t, list] of byType) write(`data/k/${t}.json`, JSON.stringify(list.map(row)));
+// istemci tarafı ortak veri: [id, başlık, üreticiId, fiyat, kaynakFiyat, görsel, (boş), tip, satışLinki, fiyatTürü]
+const row = p => [p.id, p.title, p.providerId, p.baseMinor, '', p.imageUrl || '', '', p.type, outbound(p), p.pb];
+for (const [k, list] of byType) write(`data/k/${k}.json`, JSON.stringify(list.map(row)));
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
+
+const typeOrder = [...byType.keys()].filter(k => k !== 'diger').sort((a, b) => (groupsByType.get(b)?.length || 0) - (groupsByType.get(a)?.length || 0) || byType.get(b).length - byType.get(a).length);
+const typesOf = g => [...byType.keys()].filter(k => typeGroup(k) === g).sort((a, b) => byType.get(b).length - byType.get(a).length);
+const groupsOrdered = tx.GROUPS.filter(([g]) => byGroup.has(g)).map(([g]) => g);
 
 for (const lg of LANGS) {
   const L = LOCALES[lg], H = makeHelpers(L), t = H.t, P = H.P;
   const fmt = H.fmt, n = x => H.numFmt.format(x);
   const altAll = f => Object.fromEntries(LANGS.map(k => [k, f(LOCALES[k].path)]));
-  const stat = list => ({ n: list.length, min: list[0].baseMinor, prov: new Set(list.map(p => p.providerId)).size });
+  const typeTile = k => H.tile(href(P.cat(k)), repImage(byType.get(k)), L.type(k), t.from(fmt(byType.get(k)[0].baseMinor)));
 
   write(`data/meta-${lg}.json`, JSON.stringify({
     lang: lg, providers: Object.fromEntries(catalog.providers.map(p => [p.id, p.name])),
     types: Object.fromEntries([...byType.keys()].map(k => [k, L.type(k)])), pb: L.pbLabel, pbNote: L.pbNote,
-    paths: { product: '/' + P.product('ID').replace('ID/', ''), maker: '/' + P.maker('ID').replace('ID/', '') },
+    paths: { product: '/' + P.product('ID').replace('ID/', ''), maker: '/' + P.maker('ID').replace('ID/', ''), group: '/' + P.group('ID').replace('ID/', '') },
     ui: lg === 'en'
-      ? { listSearch: 'Search this list', sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', details: 'Details', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', th: ['Product', 'Manufacturer', 'Price'], go: 'Go to store ↗' }
-      : { listSearch: 'Bu listede ara', sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', details: 'Detay', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', th: ['Ürün', 'Üretici', 'Fiyat'], go: 'Satış sayfası ↗' },
+      ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers' }
+      : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici' },
   }));
+  // arama için ürün grupları: [slug, ad, görsel, en düşük fiyat, üretici sayısı, tip]
+  write(`data/groups-${lg}.json`, JSON.stringify(groups.map(g => [g.slug, H.gTitle(g), g.image || '', g.list[0].baseMinor, g.providers.size, g.type])));
 
   // ana sayfa
   add(P.home + 'index.html', page(L, H, {
     rel: P.home + 'index.html', alt: altAll(p => p.home), title: t.homeTitle, description: t.homeDesc(connected.length, n(products.length)),
-    body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${t.heroP(connected.length, n(products.length))}</p>
+    body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${esc(t.heroP(connected.length, n(products.length)))}</p>
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
-<ul class="stats">${[connected.length, n(products.length), models.length, null].map((v, i) => `<li><b>${v ?? t.stats[i][0]}</b><span>${v == null ? t.stats[i][1] : t.stats[i][0]}</span></li>`).join('')}</ul></section>
-<ol class="how">${t.how.map(([h, s]) => `<li><b>${esc(h)}</b><span>${esc(s)}</span></li>`).join('')}</ol>
-<h2>${esc(t.modelsH)}</h2><p class="muted">${esc(t.modelsP)}</p>
-${H.modelTable(models.slice(0, 15))}<p><a href="${href(P.models)}">${t.allModels(models.length)}</a></p>
-<h2>${t.catsH}</h2><div class="groups">${groupsOrdered.map(g => `<section class="group"><h3><a href="${href(P.cat(g))}">${esc(L.group(g))}</a></h3><ul>${typesOf(g).slice(0, 8).map(k => { const s = stat(byType.get(k)); return `<li><a href="${href(P.cat(k))}">${esc(L.type(k))}</a> <span class="muted sm">${t.products(s.n)} · ${t.from(fmt(s.min))}</span></li>`; }).join('')}</ul></section>`).join('')}</div>`,
+<div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
+${H.ad('ust')}
+<div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.gcards(groups.slice(0, 12))}
+<div class="sec-head"><h2>${t.catsH}</h2><a href="${href(P.categories)}">${t.allCats} →</a></div><div class="tiles">${typeOrder.slice(0, 18).map(typeTile).join('')}</div>`,
     jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: SITE || undefined, inLanguage: lg, potentialAction: { '@type': 'SearchAction', target: SITE + href(P.search) + '?q={q}', 'query-input': 'required name=q' } },
   }));
 
-  // kategoriler dizini
+  // kategoriler dizini: ana gruplara göre fotoğraflı kutular
   add(P.categories + 'index.html', page(L, H, {
     rel: P.categories + 'index.html', alt: altAll(p => p.categories), title: `${t.catsTitle} · ${BRAND}`, description: t.catsDesc, crumbs: [[t.categories]],
-    body: `<h1>${t.categories}</h1><div class="groups">${groupsOrdered.map(g => `<section class="group"><h3><a href="${href(P.cat(g))}">${esc(L.group(g))}</a> <span class="muted sm">${t.products(byGroup.get(g).length)}</span></h3><ul>${typesOf(g).map(k => { const s = stat(byType.get(k)); return `<li><a href="${href(P.cat(k))}">${esc(L.type(k))}</a> <span class="muted sm">${t.products(s.n)} · ${t.makersN(s.prov)} · ${t.from(fmt(s.min))}</span></li>`; }).join('')}</ul></section>`).join('')}</div>`,
+    body: `<h1>${t.categories}</h1>${groupsOrdered.map(g => `<div class="sec-head"><h2>${esc(L.group(g))}</h2>${g === 'diger' ? '' : `<a href="${href(P.cat(g))}">${t.seeAll} →</a>`}</div><div class="tiles">${typesOf(g).map(typeTile).join('')}</div>`).join('')}`,
   }));
 
-  // grup sayfaları
+  // ana grup sayfaları
   for (const g of groupsOrdered) {
-    if (g === 'diger') continue; // "Diğer" grubu tek tip; tip sayfası yeterli
+    if (g === 'diger') continue;
     const list = byGroup.get(g), label = L.group(g);
+    const gGroups = groups.filter(x => typeGroup(x.type) === g);
     add(P.cat(g) + 'index.html', page(L, H, {
-      rel: P.cat(g) + 'index.html', alt: altAll(p => p.cat(g)), title: `${t.groupTitle(label)} · ${BRAND}`, description: t.groupDesc(label, list.length, new Set(list.map(p => p.providerId)).size, fmt(list[0].baseMinor)),
+      rel: P.cat(g) + 'index.html', alt: altAll(p => p.cat(g)), title: `${t.groupPageTitle(label)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
       crumbs: [[t.categories, href(P.categories)], [label]],
-      body: `<h1>${esc(label)}</h1><div class="chips">${typesOf(g).map(k => { const s = stat(byType.get(k)); return `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.type(k))}</b><span>${t.products(s.n)} · ${t.from(fmt(s.min))}</span></a>`; }).join('')}</div>
-<h2>${t.top30}</h2>${H.rowsTable(list.slice(0, 30), { showType: true })}${H.ad('liste')}`,
+      body: `<h1>${esc(label)}</h1><div class="tiles">${typesOf(g).map(typeTile).join('')}</div>
+${gGroups.length ? `<h2>${t.groupsInCat}</h2>${H.gcards(gGroups.slice(0, 24))}` : ''}`,
     }));
   }
 
-  // tip sayfaları
+  // ürün tipi sayfaları: önce karşılaştırmalı ürünler, sonra bütün ürünler
   for (const [k, list] of byType) {
-    const label = L.type(k), g = typeGroup(k), provN = new Set(list.map(p => p.providerId)).size;
-    const tModels = models.filter(m => m.type === k).slice(0, 12);
+    const label = L.type(k), g = typeGroup(k), provN = new Set(list.map(p => p.providerId)).size, kGroups = groupsByType.get(k) || [];
     add(P.cat(k) + 'index.html', page(L, H, {
-      rel: P.cat(k) + 'index.html', alt: altAll(p => p.cat(k)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor), provName(list[0].providerId)),
+      rel: P.cat(k) + 'index.html', alt: altAll(p => p.cat(k)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
       crumbs: [[t.categories, href(P.categories)], [L.group(g), g === 'diger' ? null : href(P.cat(g))], [label]],
-      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(list.length)} · ${t.makersN(provN)} · ${t.lowest(fmt(list[0].baseMinor))}</p>
-${tModels.length ? `<h2>${t.blanksInCat}</h2><div class="chips">${tModels.map(m => `<a class="chip" href="${href(P.model(m.key))}"><b>${esc(m.brandName + ' ' + m.model)}</b><span>${t.makersN(m.providers.size)} · ${t.from(fmt(m.list[0].baseMinor))}</span></a>`).join('')}</div>` : ''}
-${H.sponsor(k)}<div class="list" data-src="/data/k/${k}.json">${H.rowsTable(list.slice(0, 50))}</div>${H.ad('liste')}`,
+      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
+${kGroups.length ? `<h2>${t.groupsInCat}</h2>${H.gcards(kGroups)}` : ''}
+${H.sponsor(k)}${H.ad('liste')}<h2>${t.allInCat}</h2><div class="list" data-src="/data/k/${k}.json">${H.cards(list.slice(0, 48))}</div>`,
       jsonld: { '@context': 'https://schema.org', '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + href(LOCALES.en.path.product(p.id)), name: p.title })) },
     }));
   }
 
-  // model borsası
-  add(P.models + 'index.html', page(L, H, {
-    rel: P.models + 'index.html', alt: altAll(p => p.models), title: `${t.modelsTitle} · ${BRAND}`, description: t.modelsDesc(models.length), crumbs: [[t.models]],
-    body: `<h1>${t.models}</h1><p class="muted">${esc(t.modelsIntro)}</p>${H.modelTable(models, { showType: true })}`,
+  // karşılaştırma dizini ve ürün karşılaştırma sayfaları (sitenin ana sayfa türü)
+  add(P.compare + 'index.html', page(L, H, {
+    rel: P.compare + 'index.html', alt: altAll(p => p.compare), title: `${t.compareTitle} · ${BRAND}`, description: t.compareDesc(groups.length), crumbs: [[t.compare]],
+    body: `<h1>${t.compare}</h1><p class="muted">${esc(t.compareIntro)}</p>${H.gcards(groups)}`,
   }));
-  for (const m of models) {
-    const pr = modelPrices(m), lo = pr.dahil[0] || m.list[0], title = H.modelTitle(m);
-    add(P.model(m.key) + 'index.html', page(L, H, {
-      rel: P.model(m.key) + 'index.html', alt: altAll(p => p.model(m.key)),
-      title: `${t.modelTitle(title, m.providers.size)} · ${BRAND}`,
-      description: t.modelDesc(`${m.brandName} ${m.model}`, pr.dahil[0] ? `${fmt(pr.dahil[0].baseMinor)} (${provName(pr.dahil[0].providerId)})` : '—', pr.bos[0] ? fmt(pr.bos[0].baseMinor) : '', m.providers.size),
-      crumbs: [[t.models, href(P.models)], [m.brandName + ' ' + m.model]],
-      body: `<h1>${esc(title)}</h1><p class="muted">${t.makersN(m.providers.size)} · ${t.offers(m.list.length)}${pr.dahil[0] ? ' · ' + t.lowestPrint(fmt(pr.dahil[0].baseMinor)) : ''}${pr.bos[0] ? ' · ' + t.lowestBlank(fmt(pr.bos[0].baseMinor)) : ''}</p>
-${H.sponsor(m.type)}${H.ladder(m.list)}<p class="muted sm">${esc(t.sameBlankNote)}</p>
-${H.ad('liste')}<h2>${t.allOffers}</h2>${H.rowsTable(m.list)}`,
-      jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: title, brand: { '@type': 'Brand', name: m.brandName }, image: lo.imageUrl || undefined, offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (m.list[m.list.length - 1].baseMinor / 100).toFixed(2), offerCount: m.list.length } },
+  for (const gp of groups) {
+    const title = H.gTitle(gp), lo = gp.list[0], hi = gp.list[gp.list.length - 1];
+    add(P.group(gp.slug) + 'index.html', page(L, H, {
+      rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)),
+      title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
+      crumbs: [[L.type(gp.type), href(P.cat(gp.type))], [title]],
+      body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
+<p class="gfrom"><b>${esc(fmt(lo.baseMinor))}</b> <span>– ${esc(fmt(hi.baseMinor))}</span></p>
+<p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
+${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p>${H.offers(gp.list)}${H.ad('liste')}`,
+      jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
+        offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } },
     }));
   }
 
@@ -387,7 +393,7 @@ ${H.ad('liste')}<h2>${t.allOffers}</h2>${H.rowsTable(m.list)}`,
     rel: P.makers + 'index.html', alt: altAll(p => p.makers), title: `${t.makersTitle} · ${BRAND}`, description: t.makersDesc(catalog.providers.length), crumbs: [[t.makers]],
     body: `<h1>${t.makers}</h1><p class="muted">${esc(t.makersIntro(connected.length, catalog.providers.length - connected.length))}</p>
 <div class="tbl"><table><thead><tr><th>${t.mk[0]}</th><th class="num">${t.mk[1]}</th><th class="num">${t.mk[2]}</th><th>${t.mk[3]}</th></tr></thead><tbody>
-${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}">${esc(p.name)}</a></td><td class="num">${list.length || '–'}</td><td class="num">${list.length ? fmt(list[0].baseMinor) : '–'}</td><td class="sm">${list.length ? t.compared : esc(reasonOf(p, L)) + ` · <a href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${t.visit}</a>`}</td></tr>`).join('')}
+${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${esc(p.name)}</b></a></td><td class="num">${list.length || '–'}</td><td class="num">${list.length ? fmt(list[0].baseMinor) : '–'}</td><td class="sm">${list.length ? t.compared : esc(reasonOf(p, L)) + ` · <a class="go" href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${t.visit}</a>`}</td></tr>`).join('')}
 </tbody></table></div>`,
   }));
   for (const { p, list } of provRows) {
@@ -398,14 +404,14 @@ ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}">${esc(
       body: `<h1>${esc(p.name)}</h1><p><a class="go" href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗</a></p>
 ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(list[0].baseMinor))}</p>
 <div class="chips">${types.map(([k, l]) => `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.type(k))}</b><span>${t.products(l.length)} · ${t.from(fmt(l[0].baseMinor))}</span></a>`).join('')}</div>
-<h2>${t.top40}</h2>${H.rowsTable(list.slice(0, 40), { showType: true })}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}`,
+<h2>${t.makerTop}</h2>${H.cards(list.slice(0, 40))}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}`,
     }));
   }
 
   // arama, hakkında, gizlilik, iletişim
   add(P.search + 'index.html', page(L, H, {
     rel: P.search + 'index.html', alt: altAll(p => p.search), title: `${t.searchTitle} · ${BRAND}`, description: t.searchDesc, crumbs: [[t.search]], noindex: true,
-    body: `<h1 id="sq">${t.search}</h1><div id="search-app" class="list"><p class="muted">${t.searching}</p></div>`,
+    body: `<h1 id="sq">${t.search}</h1><div id="search-groups"></div><div id="search-app" class="list"><p class="muted">${t.searching}</p></div>`,
   }));
   const badges = Object.keys(L.pbLabel).map(k => `<li>${H.pbBadge(k)} ${esc(L.pbNote[k])}</li>`).join('');
   add(P.about + 'index.html', page(L, H, {
@@ -422,13 +428,13 @@ ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(
     body: `<h1>${t.contactTitle}</h1><div class="prose">${t.contact(contact)}</div>`,
   }));
 
-  // ürün sayfaları (yalnızca İngilizce)
+  // tekil ürün sayfaları (yalnızca İngilizce)
   if (lg === 'en') {
     const features = p => {
       const f = [], F = t.f, push = (k, v) => { if (v != null && v !== '' && v !== false) f.push([k, v]); };
       push(F.type, `<a href="${href(P.cat(p.type))}">${esc(L.type(p.type))}</a>`);
       push(F.maker, `<a href="${href(P.maker(p.providerId))}">${esc(provName(p.providerId))}</a>`);
-      if (p.model) push(F.blank, modelByKey.has(p.model.key) ? `<a href="${href(P.model(p.model.key))}">${esc(p.model.brandName + ' ' + p.model.model)}</a>` : esc(p.model.brandName + ' ' + p.model.model));
+      if (p.model) push(F.blank, esc(p.model.brandName + ' ' + p.model.model));
       push(F.pbt, `${H.pbBadge(p.pb)} <span class="muted sm">${esc(L.pbNote[p.pb])}</span>`);
       push(F.basis, esc(L.basis(p.priceBasis)));
       if (p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor)) push(F.src, `${esc(fmt(p.sourceMinor, p.sourceCurrency))} <span class="muted sm">${esc(F.fx(+Number(p.exchangeRate).toFixed(4), p.exchangeDate || ''))}</span>`);
@@ -449,23 +455,20 @@ ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(
       push(F.checked, esc(H.dateFmt.format(new Date(p.checkedAt || p.checkedOn))));
       return f;
     };
-    const rankIn = new Map();
-    for (const [, list] of byType) list.forEach((p, i) => rankIn.set(p.id, i + 1));
     for (const p of products) {
-      const prov = provName(p.providerId), label = L.type(p.type), g = typeGroup(p.type), total = byType.get(p.type).length, rank = rankIn.get(p.id);
-      let similar = p.model && modelByKey.has(p.model.key) ? modelByKey.get(p.model.key).list.filter(x => x.id !== p.id) : [];
-      const simTitle = similar.length ? t.sameModel(`${p.model.brandName} ${p.model.model}`) : t.otherMakers(label);
-      if (!similar.length) { const seen = new Set([p.providerId]); similar = byType.get(p.type).filter(x => !seen.has(x.providerId) && seen.add(x.providerId)); }
+      const prov = provName(p.providerId), label = L.type(p.type), g = typeGroup(p.type), gp = groupOf.get(p.id);
+      const similar = gp ? null : (() => { const seen = new Set([p.providerId]); return byType.get(p.type).filter(x => !seen.has(x.providerId) && seen.add(x.providerId)).slice(0, 12); })();
       const rel = P.product(p.id) + 'index.html';
       write(rel, page(L, H, {
-        rel, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label, total, rank),
-        crumbs: [[t.categories, href(P.categories)], [L.group(g), g === 'diger' ? null : href(P.cat(g))], [label, href(P.cat(p.type))], [p.title]],
-        body: `<article class="product"><div class="pimg">${H.img(p, 'big')}</div><div class="pinfo">
+        rel, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
+        crumbs: [[L.group(g), g === 'diger' ? null : href(P.cat(g))], [label, href(P.cat(p.type))], [p.title]],
+        body: `<article class="product"><div class="pimg">${H.img(p)}</div><div class="pinfo">
 <p class="muted"><a href="${href(P.maker(p.providerId))}">${esc(prov)}</a></p><h1>${esc(p.title)}</h1>
-<p class="bigprice">${H.priceHtml(p)}</p><p class="muted sm">${esc(t.rankNote(label, total, rank))}</p>
+<p class="bigprice">${H.priceHtml(p)}</p>
+${gp ? `<a class="ingroup" href="${href(P.group(gp.slug))}">${esc(t.inGroup(gp.providers.size))} →</a>` : ''}
 <a class="cta" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${esc(t.cta(prov))}</a>
 <dl class="feat">${features(p).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join('')}</dl>${H.ad('urun')}</div></article>
-${similar.length ? `<h2>${esc(simTitle)}</h2>${H.rowsTable(similar.slice(0, 12))}` : ''}`,
+${gp ? `<h2>${esc(t.sameGroup)}</h2>${H.offers(gp.list)}` : similar.length ? `<h2>${esc(t.otherMakers(label))}</h2>${H.cards(similar)}` : ''}`,
         jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: p.title, image: p.imageUrl || undefined, brand: p.model ? { '@type': 'Brand', name: p.model.brandName } : undefined, offers: { '@type': 'Offer', price: (p.baseMinor / 100).toFixed(2), priceCurrency: 'USD', url: p.sourceUrl, seller: { '@type': 'Organization', name: prov } } },
       }));
       sitemap.push(rel);
@@ -474,9 +477,10 @@ ${similar.length ? `<h2>${esc(simTitle)}</h2>${H.rowsTable(similar.slice(0, 12))
   }
 }
 
-// barındırma: önbellek başlıkları (Netlify _headers), eski Türkçe adreslerden yönlendirme ve AdSense ads.txt
+// barındırma: önbellek başlıkları, eski adreslerden yönlendirme ve AdSense ads.txt
 write('_headers', `/assets/*\n  Cache-Control: public, max-age=86400\n/data/*\n  Cache-Control: public, max-age=1800\n/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n`);
-write('_redirects', `/urun/*  /product/:splat  301\n/kategori/*  /tr/kategori/:splat  301\n/borsa/  /tr/borsa/  301\n/ureticiler/  /tr/ureticiler/  301\n/uretici/*  /tr/uretici/:splat  301\n`);
+const modelRedirects = groups.filter(g => g.key.startsWith('m:')).map(g => `/model/${g.slug}/  /compare/${g.slug}/  301\n/tr/model/${g.slug}/  /tr/karsilastir/${g.slug}/  301`).join('\n');
+write('_redirects', `/models/  /compare/  301\n/tr/borsa/  /tr/karsilastir/  301\n${modelRedirects}\n/model/*  /compare/  301\n/tr/model/*  /tr/karsilastir/  301\n/urun/*  /product/:splat  301\n/kategori/*  /tr/kategori/:splat  301\n/borsa/  /tr/karsilastir/  301\n/ureticiler/  /tr/ureticiler/  301\n/uretici/*  /tr/uretici/:splat  301\n`);
 if (cfg.adsenseClient) write('ads.txt', `google.com, ${cfg.adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 
 // sitemap / robots
@@ -513,4 +517,4 @@ try {
   fs.rmSync(out, { recursive: true, force: true });
 }
 
-console.log(`Site üretildi: ${products.length} ürün, ${byType.size} kategori, ${models.length} model, ${catalog.providers.length} üretici, ${sitemap.length} sayfa (EN+TR)${SITE ? '' : ' · siteUrl boş: sitemap üretilmedi'}`);
+console.log(`Site üretildi: ${products.length} ürün, ${groups.length} karşılaştırmalı ürün, ${byType.size} kategori, ${catalog.providers.length} üretici, ${sitemap.length} sayfa (EN+TR)`);

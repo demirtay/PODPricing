@@ -23,7 +23,7 @@ const GROUPS = [
 // [id, grup, Türkçe ad, eşleşme, hariç]  — sıra önemlidir: özelden genele.
 const T = [
   // --- evcil (önce: "dog hoodie" giyim değil)
-  ['evcil-kiyafet', 'evcil', 'Evcil Hayvan Kıyafeti', /\b(dog|pet|cat|puppy)\s+(hoodie|shirt|t-?shirt|sweater|sweatshirt|jacket|raincoat|bandana|dress|clothes|clothing|costume|tank)/],
+  ['evcil-kiyafet', 'evcil', 'Evcil Hayvan Kıyafeti', /\b(dog|pet|cat|puppy)\b[^|]{0,25}\b(hoodie|shirt|t-?shirt|sweater|sweatshirt|jacket|raincoat|bandana|dress|clothes|clothing|costume|tank)|\bpet clothes\b/],
   ['evcil-tasma', 'evcil', 'Tasma ve Kayış', /\b(collar|leash|harness)\b/, /\b(polo|shirt|collared|neck)\b/],
   ['evcil-yatak', 'evcil', 'Evcil Hayvan Yatağı', /\b(pet|dog|cat)\s+(bed|mat|blanket|cushion)\b/],
   ['evcil-mama-kabi', 'evcil', 'Mama ve Su Kabı', /\b(pet|dog|cat)\s+(bowl|feeder)/],
@@ -48,7 +48,7 @@ const T = [
   ['giyim-forma', 'giyim', 'Spor Forması', /\b(jersey)\b/, /\b(jersey (knit|fabric|cotton|tee|t-?shirt|short sleeve)|single jersey|jersey dress)\b/],
   ['giyim-polo', 'giyim', 'Polo Yaka', /\bpolo\b/],
   ['giyim-fermuarli-kapusonlu', 'giyim', 'Fermuarlı Kapüşonlu', /\b(zip[- ]?up hoodie|zip hoodie|zip hood|full[- ]zip|zipper hoodie|zip[- ]up (hooded )?sweatshirt|zip[- ]up jacket hoodie)\b/],
-  ['giyim-kapusonlu', 'giyim', 'Kapüşonlu Sweatshirt (Hoodie)', /\b(hoodies?|hooded (sweatshirt|pullover|top)|hoody|(heavy|relax|faded|made|stencil|safety|camo|supply|premium|women's|mens?|kids) hood)\b/, /\b(hooded (towel|blanket|poncho|cape))/],
+  ['giyim-kapusonlu', 'giyim', 'Kapüşonlu Sweatshirt (Hoodie)', /\b(hoodies?|hooded (sweatshirt|pullover|top)|hoody|(heavy|relax|faded|made|stencil|safety|camo|supply|premium|women's|mens?|kids) hood)\b/, /\b(hooded (towel|blanket|poncho|cape)|hoodie (towel|blanket)|towel|knob|car shift|ornament|keychain|pillow|blanket)\b/],
   ['giyim-sweatshirt', 'giyim', 'Sweatshirt', /\b(sweatshirts?|crew ?neck (sweat|pullover|fleece)|crewneck|pullover|(heavy|relax|faded|made|stencil|premium|women's|mens?) crew|fleece (crew|top)|quarter[- ]zip|1\/4 zip|half[- ]zip)\b/, /\b(hoodie|hooded)\b/],
   ['giyim-hirka-kazak', 'giyim', 'Kazak ve Hırka', /\b(sweaters?|cardigans?|knit(ted)? (top|jumper)|jumper)\b/],
   ['giyim-ceket', 'giyim', 'Ceket ve Mont', /\b(jackets?|bomber|windbreaker|coat|parka|varsity|blazer|anorak|puffer|softshell|shacket|coach jacket|trench)\b/, /\b(jacket potato|coat hanger|coaster)\b/],

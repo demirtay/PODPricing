@@ -321,15 +321,20 @@ for (const lg of LANGS) {
   const L = LOCALES[lg], H = makeHelpers(L), t = H.t, P = H.P;
   const fmt = H.fmt, n = x => H.numFmt.format(x);
   const altAll = f => Object.fromEntries(LANGS.map(k => [k, f(LOCALES[k].path)]));
-  const typeTile = k => H.tile(href(P.cat(k)), repImage(byType.get(k)), L.type(k), t.from(fmt(byType.get(k)[0].baseMinor)));
+  const typeTile = k => H.tile(href(P.cat(k)), repImage(byType.get(k)), L.type(k), t.products(n(byType.get(k).length)));
+  // ana sayfa kategori menüsü: ana kategori kutusu + alt kategori bağlantıları
+  const catBox = g => {
+    const subs = typesOf(g), top = subs.slice(0, 8), gh = g === 'diger' ? href(P.cat('diger')) : href(P.cat(g));
+    return `<div class="catbox"><a class="cbh" href="${gh}">${H.imgTag(repImage(byGroup.get(g)), L.group(g))}<b>${esc(L.group(g))}</b></a><ul>${top.map(k => `<li><a href="${href(P.cat(k))}">${esc(L.type(k))}</a><span>${n(byType.get(k).length)}</span></li>`).join('')}</ul>${subs.length > 8 ? `<a class="cball" href="${gh}">${esc(t.subAll(subs.length))}</a>` : ''}</div>`;
+  };
 
   write(`data/meta-${lg}.json`, JSON.stringify({
     lang: lg, providers: Object.fromEntries(catalog.providers.map(p => [p.id, p.name])),
     types: Object.fromEntries([...byType.keys()].map(k => [k, L.type(k)])), pb: L.pbLabel, pbNote: L.pbNote,
     paths: { product: '/' + P.product('ID').replace('ID/', ''), maker: '/' + P.maker('ID').replace('ID/', ''), group: '/' + P.group('ID').replace('ID/', '') },
     ui: lg === 'en'
-      ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers' }
-      : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici' },
+      ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers', sortSites: 'Sold at most stores', viewCards: 'Cards', viewTable: 'Price board', sitesN: 'Sold at {n} stores', cheapest: 'cheapest', th: ['Product', 'Stores', 'Lowest', 'Highest', 'Cheapest at'] }
+      : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici', sortSites: 'En çok sitede satılan', viewCards: 'Kartlar', viewTable: 'Fiyat borsası', sitesN: '{n} sitede satılıyor', cheapest: 'en ucuz', th: ['Ürün', 'Site', 'En düşük', 'En yüksek', 'En ucuz site'] },
   }));
   // kategori listeleri: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site]
   const itemRow = it => [it.href, it.name, it.image || '', it.price, it.n, it.maker, it.hi, it.best];
@@ -345,8 +350,8 @@ for (const lg of LANGS) {
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
 ${H.ad('ust')}
-<div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.gcards(groups.slice(0, 12))}
-<div class="sec-head"><h2>${t.catsH}</h2><a href="${href(P.categories)}">${t.allCats} →</a></div><div class="tiles">${typeOrder.slice(0, 18).map(typeTile).join('')}</div>`,
+<h2>${t.catMenu}</h2><div class="catmenu">${groupsOrdered.map(catBox).join('')}</div>
+<div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.icards(H.itemsOf(groups.slice(0, 12), []))}`,
     jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: SITE || undefined, inLanguage: lg, potentialAction: { '@type': 'SearchAction', target: SITE + href(P.search) + '?q={q}', 'query-input': 'required name=q' } },
   }));
 
@@ -365,19 +370,18 @@ ${H.ad('ust')}
       rel: P.cat(g) + 'index.html', alt: altAll(p => p.cat(g)), title: `${t.groupPageTitle(label)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
       crumbs: [[t.categories, href(P.categories)], [label]],
       body: `<h1>${esc(label)}</h1><div class="tiles">${typesOf(g).map(typeTile).join('')}</div>
-${gGroups.length ? `<h2>${t.groupsInCat}</h2>${H.gcards(gGroups.slice(0, 24))}` : ''}`,
+${gGroups.length ? `<h2>${t.topGroups}</h2>${H.icards(H.itemsOf(gGroups.slice(0, 24), []))}` : ''}`,
     }));
   }
 
   // ürün tipi sayfaları: önce karşılaştırmalı ürünler, sonra bütün ürünler
   for (const [k, list] of byType) {
-    const label = L.type(k), g = typeGroup(k), provN = new Set(list.map(p => p.providerId)).size, kGroups = groupsByType.get(k) || [];
+    const label = L.type(k), g = typeGroup(k), provN = new Set(list.map(p => p.providerId)).size, items = typeItems.get(k);
     add(P.cat(k) + 'index.html', page(L, H, {
       rel: P.cat(k) + 'index.html', alt: altAll(p => p.cat(k)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
       crumbs: [[t.categories, href(P.categories)], [L.group(g), g === 'diger' ? null : href(P.cat(g))], [label]],
-      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
-${kGroups.length ? `<h2>${t.groupsInCat}</h2>${H.gcards(kGroups)}` : ''}
-${H.sponsor(k)}${H.ad('liste')}<h2>${t.allInCat}</h2><div class="list" data-src="/data/k/${k}.json">${H.cards(list.slice(0, 48))}</div>`,
+      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(items.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
+${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.json">${H.icards(items.slice(0, 48))}</div>`,
       jsonld: { '@context': 'https://schema.org', '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + href(LOCALES.en.path.product(p.id)), name: p.title })) },
     }));
   }

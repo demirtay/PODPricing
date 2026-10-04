@@ -69,9 +69,55 @@
     return { render: function () { shown = PAGE; render(); } };
   }
 
-  // Kategori sayfaları: sunucuda üretilen ilk kartlar, sonra tam liste
-  document.querySelectorAll('.list[data-src]').forEach(function (el) {
-    Promise.all([fetch(el.dataset.src).then(function (r) { return r.json(); }), meta()]).then(function (res) { listView(el, res[0], res[1]); }).catch(function () { });
+  // Alt kategori sayfası: bütün ürünler; kart (pazar yeri) ya da tablo (fiyat borsası) görünümü
+  // it: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site]
+  function icard(it, M) {
+    var U = M.ui, multi = it[4] > 1;
+    return '<a class="card" href="' + esc(it[0]) + '"><div class="ci">' + imgHtml(it[2]) + '</div><div class="cb"><div class="ct">' + esc(it[1]) + '</div><div class="cm">' +
+      (multi ? '<span class="sites">' + esc(U.sitesN.replace('{n}', it[4])) + '</span>' : esc(M.providers[it[5]] || it[5])) + '</div><div class="cp">' + (multi ? '<small>' + esc(U.cheapest) + '</small>' : '') + '<b>' + money(it[3]) + '</b></div></div></a>';
+  }
+  function board(list, M) {
+    var U = M.ui;
+    return '<div class="tbl board"><table><thead><tr><th>' + esc(U.th[0]) + '</th><th class="num">' + esc(U.th[1]) + '</th><th class="num">' + esc(U.th[2]) + '</th><th class="num">' + esc(U.th[3]) + '</th><th>' + esc(U.th[4]) + '</th></tr></thead><tbody>' +
+      list.map(function (it) {
+        return '<tr><td><a class="bp" href="' + esc(it[0]) + '">' + imgHtml(it[2]) + '<span>' + esc(it[1]) + '</span></a></td><td class="num">' + (it[4] > 1 ? '<b class="sites">' + it[4] + '</b>' : '1') + '</td><td class="num"><b class="lo">' + money(it[3]) + '</b></td><td class="num muted">' + (it[6] > it[3] ? money(it[6]) : '–') + '</td><td>' + esc(M.providers[it[7]] || it[7] || '') + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+  function itemView(el, items, M) {
+    var U = M.ui, shown = PAGE, mode = 'cards';
+    try { mode = localStorage.getItem('view') || 'cards'; } catch (e) { }
+    var ctl = document.createElement('div');
+    ctl.className = 'controls';
+    ctl.innerHTML = '<div class="seg"><button data-v="cards">' + esc(U.viewCards) + '</button><button data-v="table">' + esc(U.viewTable) + '</button></div>' +
+      '<select aria-label="sort"><option value="sites">' + esc(U.sortSites) + '</option><option value="asc">' + esc(U.sortAsc) + '</option><option value="desc">' + esc(U.sortDesc) + '</option></select>' +
+      '<span class="muted sm"></span>';
+    var body = document.createElement('div');
+    el.replaceChildren(ctl, body);
+    var seg = ctl.children[0], sort = ctl.children[1], count = ctl.children[2];
+    function sorted() {
+      var s = sort.value, a = items.slice();
+      if (s === 'asc') a.sort(function (x, y) { return x[3] - y[3]; });
+      else if (s === 'desc') a.sort(function (x, y) { return y[3] - x[3]; });
+      return a;
+    }
+    function render() {
+      var f = sorted(), part = f.slice(0, shown);
+      [].forEach.call(seg.children, function (b) { b.classList.toggle('on', b.dataset.v === mode); });
+      count.textContent = num(f.length) + ' ' + U.products;
+      body.innerHTML = mode === 'table' ? board(part, M) : '<div class="cards">' + part.map(function (it) { return icard(it, M); }).join('') + '</div>';
+      if (f.length > shown) {
+        var b = document.createElement('button');
+        b.className = 'more'; b.textContent = U.more + ' (' + num(f.length - shown) + ' ' + U.left + ')';
+        b.onclick = function () { shown += PAGE; render(); };
+        body.append(b);
+      }
+    }
+    seg.addEventListener('click', function (e) { var b = e.target.closest('[data-v]'); if (!b) return; mode = b.dataset.v; try { localStorage.setItem('view', mode); } catch (x) { } render(); });
+    sort.addEventListener('input', function () { shown = PAGE; render(); });
+    render();
+  }
+  document.querySelectorAll('.list[data-items]').forEach(function (el) {
+    Promise.all([fetch(el.dataset.items).then(function (r) { return r.json(); }), meta()]).then(function (res) { itemView(el, res[0], res[1]); }).catch(function () { });
   });
 
   // Arama sayfası: önce karşılaştırmalı ürünler, sonra tekil ürünler

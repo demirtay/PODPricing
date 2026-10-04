@@ -23,6 +23,19 @@ h1{font-size:28px;line-height:1.2;margin:6px 0 6px;letter-spacing:-.4px}h2{font-
 .quick{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 0}
 .quick a{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.sec-head a{font-size:14.5px;color:var(--accent);font-weight:600}
+/* ana sayfa kategori menüsü (ana kategori + alt kategoriler) */
+.catmenu{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.catbox{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.cbh{display:flex;align-items:center;gap:12px;margin-bottom:8px}.cbh img,.cbh .noimg{width:52px;height:52px;object-fit:contain;border-radius:10px;background:#fff;flex:none}.cbh b{font-size:17px}
+.catbox ul{list-style:none;margin:0;padding:0}.catbox li{display:flex;justify-content:space-between;gap:8px;padding:4px 0;font-size:14.5px;border-top:1px dashed var(--line)}
+.catbox li a:hover{color:var(--accent)}.catbox li span{color:var(--muted);font-size:13px}
+.cball{display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--accent)}
+.sites{color:var(--price);font-weight:600}
+/* görünüm seçici ve fiyat borsası tablosu */
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--panel)}
+.seg button{border:0;background:none;color:var(--ink);font:inherit;font-size:14px;padding:8px 14px;cursor:pointer}.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:700}
+.board td{vertical-align:middle}.bp{display:flex;align-items:center;gap:10px}.bp img,.bp .noimg{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#fff;flex:none}
+.board .lo{color:var(--price)}.board tr:hover td{background:var(--chip)}
 /* kategori ve model kutuları */
 .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
 .tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}

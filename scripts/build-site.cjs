@@ -214,6 +214,8 @@ function features(p) {
   if (p.sourceCurrency && p.sourceCurrency !== 'USD' && Number.isInteger(p.sourceMinor)) push('Kaynak fiyatı', `${esc(fmt(p.sourceMinor, p.sourceCurrency))} <span class="muted sm">(kur ${esc(p.exchangeRate)}, ${esc(p.exchangeDate || '')})</span>`);
   if (Number.isInteger(p.baseMaxMinor) && p.baseMaxMinor > p.baseMinor) push('Fiyat aralığı', `${esc(fmt(p.baseMinor))} – ${esc(fmt(p.baseMaxMinor))}`);
   if (Number.isInteger(p.originalMinor) && p.originalMinor > p.baseMinor) push('İndirim öncesi', esc(fmt(p.originalMinor, p.sourceCurrency || 'USD')));
+  if (Number.isInteger(p.subscriptionMinor) && p.subscriptionMinor < p.baseMinor) push('Üyelik fiyatı', `${esc(fmt(p.subscriptionMinor))} <span class="muted sm">(üreticinin ücretli üyelik planında)</span>`);
+  if (p.decorationMethods?.length) push('Baskı yöntemleri', esc(p.decorationMethods.join(', ')));
   push('Ölçü / varyant', esc(p.sizes));
   push('Malzeme', p.material ? esc(p.material.replace(/\s*,\s*/g, ', ').replace(/(, )+$/, '')) : null);
   if (p.minimumQuantity > 1) push('Minimum adet', esc(p.minimumQuantity));

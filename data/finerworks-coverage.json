@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-04T23:39:46.579Z",
+  "perPage": {
+    "ceramic-tile/": 9,
+    "christmas-ornaments/": 8,
+    "coasters/": 11,
+    "cutting-boards/": 4,
+    "Drinkware/": 9,
+    "easel-back-canvas/": 5,
+    "giclee-cards/": 8,
+    "maple-wood-prints/": 5,
+    "mouse-pads/": 2,
+    "personalized-bags/": 4,
+    "photo-panels/": 5,
+    "pillows-blankets/": 2,
+    "slates/": 7,
+    "standout-panel-prints/": 3
+  },
+  "imported": 79,
+  "skipped": "canvas, paper, metal, acrylic, wood prints, posters, cards, stickers, murals: priced only in the order tool"
+}

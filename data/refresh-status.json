@@ -12,6 +12,11 @@
     "shirtee",
     "getfuelpod",
     "printops",
+    "finerworks",
+    "sellfy",
+    "ownprint",
+    "oneprint",
+    "lumaprints",
     "simpleprint",
     "printdoors",
     "kincustom",
@@ -142,13 +147,53 @@
       "nextCheck": 0
     },
     "printops": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "finerworks": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "sellfy": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "ownprint": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "oneprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T18:07:04.521Z",
+      "lastSuccess": "2026-10-04T23:40:09.206Z",
       "lastError": null,
-      "productCount": 64,
-      "nextCheck": 1791139022875,
-      "startedAt": "2026-10-04T18:07:02.875Z"
+      "productCount": 4,
+      "nextCheck": 1791159007599,
+      "startedAt": "2026-10-04T23:40:07.599Z"
+    },
+    "lumaprints": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
     },
     "simpleprint": {
       "state": "idle",

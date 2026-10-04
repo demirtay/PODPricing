@@ -17,6 +17,11 @@ module.exports = {
   shirtee: def('https://shirtee.cloud/', './shirtee.cjs'),
   getfuelpod: def('https://www.getfuelpod.com/', './getfuelpod.cjs'),
   printops: def('https://printops.com/', './printops.cjs'),
+  finerworks: def('https://finerworks.com/products/', './finerworks.cjs'),
+  sellfy: def('https://sellfy.com/pod-catalogue/', './sellfy.cjs'),
+  ownprint: def('https://ownprint.co/print-on-demand-jewelry', './ownprint.cjs'),
+  oneprint: def('https://oneprint.io/products', './oneprint.cjs'),
+  lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),
   }])),

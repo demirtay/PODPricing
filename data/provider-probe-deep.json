@@ -1542,21 +1542,6 @@
     ]
    },
    {
-    "url": "https://www.sunfrog.com/product/black-cat",
-    "status": 200,
-    "ld": 2,
-    "next": true,
-    "nuxt": false,
-    "priceKeys": [
-     "price",
-     "base_price"
-    ],
-    "money": 1,
-    "sample": [
-     "$24.00"
-    ]
-   },
-   {
     "url": "https://www.sunfrog.com/product/salem-1692-forgot-one",
     "status": 200,
     "ld": 2,
@@ -1573,6 +1558,21 @@
    },
    {
     "url": "https://www.sunfrog.com/product/massachusetts-floral-map",
+    "status": 200,
+    "ld": 2,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [
+     "price",
+     "base_price"
+    ],
+    "money": 1,
+    "sample": [
+     "$24.00"
+    ]
+   },
+   {
+    "url": "https://www.sunfrog.com/product/retro-massachusetts-state",
     "status": 200,
     "ld": 2,
     "next": true,
@@ -2557,5 +2557,814 @@
     "sample": []
    }
   ]
+ },
+ "gelato": {
+  "id": "gelato",
+  "base": "https://www.gelato.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "customcat": {
+  "id": "customcat",
+  "base": "https://customcat.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "tpop": {
+  "id": "tpop",
+  "base": "https://app.tpop.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": []
+ },
+ "sellfy": {
+  "id": "sellfy",
+  "base": "https://sellfy.com",
+  "home": 200,
+  "homeA": {
+   "ld": 1,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [
+    "price"
+   ],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://sellfy.com/pricing/",
+    "status": 200,
+    "ld": 3,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://sellfy.com/pod-catalogue/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 11,
+    "sample": [
+     "$14.65",
+     "$9.38",
+     "$11.69",
+     "$20.35",
+     "$22.10"
+    ]
+   },
+   {
+    "url": "https://sellfy.com/blog/digital-products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 33,
+    "sample": [
+     "$1,00",
+     "$6.99",
+     "$34.90",
+     "$100,00",
+     "$1.50"
+    ]
+   },
+   {
+    "url": "https://sellfy.com/sell-physical-products/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "novatomato": {
+  "id": "novatomato",
+  "base": "https://www.novatomato.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": true,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 8,
+   "sample": [
+    "$32.50",
+    "$30.50",
+    "$26.55",
+    "$54.60",
+    "$28.55"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.novatomato.com/products/all/",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.novatomato.com/au/products/all/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.novatomato.com/custom-polo/all-over-print/",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 13,
+    "sample": [
+     "$28.90",
+     "$29.95",
+     "$32.80",
+     "$33.90",
+     "$31.50"
+    ]
+   },
+   {
+    "url": "https://www.novatomato.com/products/Women/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.novatomato.com/custom-all-over-print-pants/",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 2,
+    "sample": [
+     "$36.90"
+    ]
+   },
+   {
+    "url": "https://www.novatomato.com/products/Women/",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.novatomato.com/custom-all-over-print-jackets/",
+    "status": 200,
+    "ld": 0,
+    "next": true,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 6,
+    "sample": [
+     "$59.50",
+     "$55.95",
+     "$48.15",
+     "$55.50",
+     "$68.00"
+    ]
+   }
+  ]
+ },
+ "shineon": {
+  "id": "shineon",
+  "base": "https://www.shineon.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 3,
+   "sample": [
+    "$10,00",
+    "$1,00"
+   ]
+  },
+  "pages": []
+ },
+ "gooten": {
+  "id": "gooten",
+  "base": "https://www.gooten.com",
+  "home": 200,
+  "homeA": {
+   "ld": 1,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.gooten.com/small-medium-business/",
+    "status": 200,
+    "ld": 1,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.gooten.com/print-on-demand/wall-art/",
+    "status": 200,
+    "ld": 1,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.gooten.com/print-on-demand-canvas-wall-art/",
+    "status": 200,
+    "ld": 1,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.gooten.com/tiktok-shop/",
+    "status": 200,
+    "ld": 1,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "printbelle": {
+  "id": "printbelle",
+  "base": "https://www.printbelle.com",
+  "home": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "homeA": null,
+  "pages": []
+ },
+ "printaura": {
+  "id": "printaura",
+  "base": "https://printaura.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://printaura.com/shopify/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "200:0"
+ },
+ "vistaprint": {
+  "id": "vistaprint",
+  "base": "https://www.vistaprint.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.vistaprint.com/photo-gifts/wall-art",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 2,
+    "sample": [
+     "$39.99",
+     "$7.99"
+    ]
+   },
+   {
+    "url": "https://www.vistaprint.com/clothing-bags/bags/all-bags",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.vistaprint.com/photo-gifts/calendars/wall-calendars",
+    "status": 200,
+    "ld": 3,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [
+     "price"
+    ],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.vistaprint.com/clothing-bags/hats/caps/baseball-caps",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "artofwhere": {
+  "id": "artofwhere",
+  "base": "https://artofwhere.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "apliiq": {
+  "id": "apliiq",
+  "base": "https://www.apliiq.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 2,
+   "sample": [
+    "$8.20",
+    "$7.64"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://www.apliiq.com/catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 36,
+    "sample": [
+     "$3.50",
+     "$55.10",
+     "$5.00",
+     "$56.00",
+     "$6.00"
+    ]
+   },
+   {
+    "url": "https://www.apliiq.com/all-patches",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.apliiq.com/catalog/mens",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 40,
+    "sample": [
+     "$3.85",
+     "$54.85",
+     "$5.60",
+     "$26.60",
+     "$5.30"
+    ]
+   },
+   {
+    "url": "https://www.apliiq.com/site/catalog",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "printedmint": {
+  "id": "printedmint",
+  "base": "https://printedmint.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "thisnew": {
+  "id": "thisnew",
+  "base": "https://thisnew.com",
+  "home": "UND_ERR_CONNECT_TIMEOUT",
+  "homeA": null,
+  "pages": []
+ },
+ "bluedoba": {
+  "id": "bluedoba",
+  "base": "https://bluedoba.com",
+  "home": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "homeA": null,
+  "pages": []
+ },
+ "oneprint": {
+  "id": "oneprint",
+  "base": "https://oneprint.io",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": true,
+   "priceKeys": [],
+   "money": 4,
+   "sample": [
+    "$5.75",
+    "$17.10",
+    "$4.25"
+   ]
+  },
+  "pages": [
+   {
+    "url": "https://oneprint.io/products",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-G5000",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/ceramic-mug",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-G5000",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/unisex-hoodie-gildan-18500",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-G5000",
+    "product": true,
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   },
+   {
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-G5000",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": true,
+    "priceKeys": [],
+    "money": 4,
+    "sample": [
+     "$5.75",
+     "$17.10",
+     "$4.25"
+    ]
+   }
+  ]
+ },
+ "awkwardstyles": {
+  "id": "awkwardstyles",
+  "base": "https://awkwardstyles.com",
+  "home": "ENOTFOUND",
+  "homeA": null,
+  "pages": []
+ },
+ "lumaprints": {
+  "id": "lumaprints",
+  "base": "https://www.lumaprints.com",
+  "home": 200,
+  "homeA": {
+   "ld": 3,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.lumaprints.com/pricing/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 1066,
+    "sample": [
+     "$10.99",
+     "$12.09",
+     "$9.89",
+     "$5.71",
+     "$16.23"
+    ]
+   },
+   {
+    "url": "https://www.lumaprints.com/peel-and-stick-prints-wall-murals/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 30,
+    "sample": [
+     "$4.30",
+     "$9.64",
+     "$25.58",
+     "$40.26",
+     "$3.79"
+    ]
+   },
+   {
+    "url": "https://www.lumaprints.com/blog/how-turn-photos-into-wall-art/",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.lumaprints.com/store-integration",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ],
+  "woo": "404"
+ },
+ "shop3d": {
+  "id": "shop3d",
+  "base": "https://www.shop3d.io",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "snugglepartners": {
+  "id": "snugglepartners",
+  "base": "https://snugglepartners.co.uk",
+  "home": 500,
+  "homeA": null,
+  "pages": []
+ },
+ "coastalreign": {
+  "id": "coastalreign",
+  "base": "https://coastalreign.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "districtphoto": {
+  "id": "districtphoto",
+  "base": "https://districtphoto.com",
+  "home": "ENOTFOUND",
+  "homeA": null,
+  "pages": []
+ },
+ "safsira": {
+  "id": "safsira",
+  "base": "https://safsira.com",
+  "home": "TypeError",
+  "homeA": null,
+  "pages": []
+ },
+ "gocustomclothing": {
+  "id": "gocustomclothing",
+  "base": "https://gocustomclothing.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
+ },
+ "clothes2order": {
+  "id": "clothes2order",
+  "base": "https://www.clothes2order.com",
+  "home": 200,
+  "homeA": {
+   "ld": 0,
+   "next": false,
+   "nuxt": false,
+   "priceKeys": [],
+   "money": 0,
+   "sample": []
+  },
+  "pages": [
+   {
+    "url": "https://www.clothes2order.com/pages/pricing",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 21,
+    "sample": [
+     "£5.99",
+     "£4.75",
+     "£3.50",
+     "£2.99",
+     "£2.25"
+    ]
+   },
+   {
+    "url": "https://www.clothes2order.com/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.clothes2order.com/pages/small-businesses",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.clothes2order.com/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.clothes2order.com/products/beechfield-authentic-baseball-cap",
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.clothes2order.com.au/products/beechfield-authentic-baseball-cap",
+    "product": true,
+    "status": 200,
+    "ld": 2,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   },
+   {
+    "url": "https://www.clothes2order.com/shopping_cart.php",
+    "status": 200,
+    "ld": 0,
+    "next": false,
+    "nuxt": false,
+    "priceKeys": [],
+    "money": 0,
+    "sample": []
+   }
+  ]
+ },
+ "through6": {
+  "id": "through6",
+  "base": "https://www.restoathletic.com",
+  "home": 403,
+  "homeA": null,
+  "pages": []
  }
 }

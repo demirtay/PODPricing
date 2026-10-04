@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-04T18:07:02.883Z",
+  "shippingTiers": {
+    "small": 200,
+    "mid": 250,
+    "large": 250
+  },
+  "imported": 64
+}

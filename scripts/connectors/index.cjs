@@ -16,6 +16,7 @@ module.exports = {
   pillowprofits: def('https://pillowprofits.com/', './pillowprofits.cjs'),
   shirtee: def('https://shirtee.cloud/', './shirtee.cjs'),
   getfuelpod: def('https://www.getfuelpod.com/', './getfuelpod.cjs'),
+  printops: def('https://printops.com/', './printops.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),
   }])),

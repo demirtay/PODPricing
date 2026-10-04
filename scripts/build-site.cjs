@@ -70,6 +70,15 @@ const REASON_EN = {
   'Fiyatlar adet kademeli; tek ürün fiyatı doğrulanmadı': 'Quantity-tiered prices; single-item price not verified',
   'Resmi site erişimi reddediyor; uygun veri erişimi gerekli': 'The site refuses automated access',
   'Site istek sınırı uyguluyor; yeniden deneme gerekli': 'The site rate-limits requests; retry pending',
+  'Fiyatlar etkileşimli hesaplayıcıda; fiyat tablosu yayınlanmıyor': 'Prices are only in an interactive calculator; no published price list',
+  'Toplu baskı firması; fiyatlar adet kademeli ve teklif bazlı': 'Bulk printer; quantity-tiered, quote-based prices',
+  'Toplu promosyon ürünleri; minimum adetli': 'Bulk promotional products with minimum quantities',
+  'Tasarım pazaryeri; üretim maliyeti değil perakende fiyat gösteriyor': 'Design marketplace showing retail prices, not production costs',
+  'Açık katalogda bütün fiyatlar 0,00; gerçek fiyat doğrulanamıyor': 'All public catalog prices show 0.00; real prices cannot be verified',
+  'Katalog sayfası fiyatları güvenilir biçimde göstermiyor': 'The catalog page does not show prices reliably',
+  'Açık katalog yalnızca kategori tanıtım kayıtları içeriyor': 'The public catalog only lists category promo entries',
+  'Açık katalogda yalnızca birkaç kayıt var': 'Only a few entries in the public catalog',
+  'Fiyatlar herkese açık sayfalarda yayınlanmıyor (üye girişi veya teklif ile)': 'Prices are not published publicly (login or quote required)',
 };
 const reasonOf = (p, L) => { const r = p.connection?.blockedReason; if (!r || /henüz tamamlanmadı/.test(r)) return L.notAdded; return L.lang === 'en' ? (REASON_EN[r] || L.notAdded) : r; };
 

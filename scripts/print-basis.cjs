@@ -8,7 +8,7 @@ const PRINTED = new Set([
   'printify', 'printful', 'dreamship', 'simpleprint', 'gearlaunch', 'prodigi', 'podpartner', 'yoycol', 'inkedjoy',
   'interestprint', 'artsadd', 'peaprint', 'printdoors', 'kincustom', 'merchize', 'burgerprints', 'gearment', 'teelaunch',
   'printy6', 'printkk', 'jetprint', 'papello', 'inkthreadable', 'twofifteen', 'tshirtgang', 'printegy', 'podbase',
-  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod',
+  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops',
 ]);
 // Fiyatı baskısız (boş) ürün bedeli olanlar
 const BLANK = new Set(['tapstitch', 'printrove', 'ogo']);

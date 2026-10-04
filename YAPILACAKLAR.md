@@ -1,25 +1,35 @@
-# POD Atlas iş sırası
+# POD Atlas yol haritası
 
-1. 121 mağazanın erişilebilir ürün kataloglarını bağlamak. Eksik, fiyatı kapalı, satışa kapalı ve erişilemeyen kayıtları ayrı raporlamak.
-2. Satılan POD ürünlerini temel alarak ürün ağacını genişletmek; Etsy ağacıyla sınırlandırmamak.
-3. Ürünleri yeni ürün ağacına yerleştirmek.
-4. Tüm fiyatları, varyantları, indirimleri ve minimum adet koşullarını kapsamlı kontrol etmek.
+Hedef: bütün POD üreticilerini kapsayan, Google'da bulunan, reklam + affiliate gelirli fiyat borsası.
 
-## Son eklenen bağlantılar
+## 1. Temel ✅ (2026-10-04)
 
-TshirtGang: 38 ürün, 13 katalog/kategori sayfası tarandı.
-Printegy: 94 ürün, 5 katalog sayfası tarandı.
-OGO: 42 ürün; boş ürün ve ek baskı koşulları fiyat açıklamasında.
+- Projenin kendi git deposu.
+- Ürün tipi ağacı (Etsy'den bağımsız, 14 grup / ~120 tip): ürünlerin ~%93'ü başlıktan doğru tipe yerleşiyor.
+- Boş ürün modeli eşleştirme: 68 model en az 2 üreticide karşılaştırılıyor (Gildan 5000 → 10 üretici).
+- Herkese açık statik site: ana sayfa, kategoriler, model borsası, ~20 bin ürün sayfası, üretici sayfaları, arama, SEO etiketleri, JSON-LD.
+- Fiyat temizliği: yer tutucu (tam 1,00), test ve kampanya kayıtları gerekçesiyle incelemeye ayrıldı.
 
-Bu rakamlar açık web kataloglarında alınan ürün gruplarıdır; hesap içindeki kapalı varyantların eksiksiz alındığı anlamına gelmez.
+## 2. Yayın (sıradaki, kullanıcı hesabı gerekiyor)
 
-## Yeni açık API katalogları
+- [ ] GitHub deposu (özel) + Netlify sitesi; depo sırları NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID.
+- [ ] Alan adı → `site.config.json` siteUrl (sitemap ve canonical bunu kullanır).
+- [ ] Google Search Console'a sitemap gönderimi.
+- [ ] Gizlilik politikası / çerez bildirimi (AdSense şartı), sonra AdSense başvurusu.
+- [ ] Affiliate programlarına başvuru (Printful, Printify, Gelato vb.) ve `site.config.json` affiliate ayarı.
 
-PeaPrint: 1.216 ürün, 13 sayfa; katalog toplamı ve benzersiz ürün sayısı eşleşiyor.
-PopCustoms: 796 ürün, 50 sayfa; her ürünün satın alınabilir tek adet varyant fiyatı alındı.
-Her iki açık katalogda aktarılamayan kayıt bulunmadı. Kapsamlı son fiyat kontrolü sonraki aşamadır.
+## 3. Kapsam: kalan üreticiler
 
-## KINcustom ve Printdoors
+- [ ] 84 bağlı olmayan üretici. Önce Etsy satıcılarının en çok kullandıkları (Printify, Gelato, CustomCat, Gooten, Dreamship, SwiftPOD, Monster Digital…).
+- [ ] Fiyatı üye girişi isteyenler: üretici sayfasında "fiyat için üye girişi" olarak listelenir, uydurma fiyat yok.
+- [ ] Printdoors 126 bekleyen kayıt; `data/price-review-pending.json` (116 kayıt).
 
-KINcustom: 155 fiyatlı ürün; 10 katalog sayfası tarandı, aktarımda eksik kart bulunmadı.
-Printdoors: 88 sayfada 1.756 kayıt bulundu. 1.630 fiyatlı ürün eklendi. Kalan 126 kaydın ham verileri printdoors-public-inventory.json içinde saklandı; nedenleri printdoors-coverage.json içinde. Bu kayıtlar tamamlanmış sayılmıyor.
+## 4. Karşılaştırma kalitesi
+
+- [ ] "Diğer" kalan ~1.200 ürün için yeni tip kuralları.
+- [ ] Model tanımayı genişletmek (marka adı geçmeyen ama model kodu olan başlıklar, ör. "5000 Heavy Cotton").
+- [ ] Ürün sayfasında baskı yöntemi (DTG/DTF/nakış), baskı alanı ve kargo bilgisi; mümkün olan üreticilerde kargo dahil toplam.
+
+## 5. Kapsamlı fiyat kontrolü
+
+- [ ] Varyant, ölçü, minimum adet, indirim, para birimi, baskı/kargo/vergi koşulları üretici bazında denetim.

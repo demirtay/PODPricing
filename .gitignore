@@ -4,3 +4,5 @@ data/source-cache/
 site/
 node_modules/
 *.log
+site.__build/
+site.__old/

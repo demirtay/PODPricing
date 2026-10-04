@@ -68,3 +68,4 @@ button.more{display:block;margin:14px auto 0;background:var(--panel);color:var(-
  .product{grid-template-columns:1fr;padding:14px}.hero h1{font-size:28px}h1{font-size:24px}
  .lk{display:none}td.th{width:52px}td.th img,td.th .noimg{width:46px;height:46px}td,th{padding:8px}.ladder li{grid-template-columns:30px 1fr auto}.ladder li .go{grid-column:2/-1}
  .feat{grid-template-columns:1fr}.feat dt{margin-top:6px}}
+.topnav .lang{border:1px solid color-mix(in srgb,var(--head-ink) 35%,transparent);border-radius:6px;padding:0 7px;font-size:13px;font-weight:600}

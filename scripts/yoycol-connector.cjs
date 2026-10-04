@@ -15,9 +15,10 @@ async function addDecorationFees(products,progress=()=>{}){
   const tagged=products.filter(p=>p._tags.length);
   await crawl(tagged,async p=>{
     const res=await cachedGet('yoycol',p.sourceUrl).catch(()=>({text:''}));
-    const m=res.text&&res.text.match(/"decorationFee":{"show":true,"originalPrice":([d.]+),"discountPrice":([d.]+)/);
+    const m=res.text&&res.text.match(/"decorationFee":\{"show":true,"originalPrice":([\d.]+),"discountPrice":([\d.]+)/);
     if(m){const fee=Math.round(Number(m[2])*100),blank=p.baseMinor;p.blankMinor=blank;p.decorationMinor=fee;p.baseMinor=blank+fee;p.originalMinor=null;
       p.priceBasis='Boş ürün '+(blank/100).toFixed(2)+' USD + tek yerleşim baskı ücreti '+(fee/100).toFixed(2)+' USD ('+p._tags.join('/')+') · ek baskı alanları ayrıca · kargo hariç';}
+    else if(res.text&&/"decorationFee":\{"show":false/.test(res.text)){p.priceBasis='Baskı dahil başlangıç fiyatı ('+p._tags.join('/')+'; sayfada ayrı baskı ücreti yok) · beden ve adet seçimine göre değişir · kargo hariç';}
     else{p.includesPrint=false;p.priceBasis='Boş ürün bedeli · baskı ücreti (yerleşim başına) ürün sayfasında ayrıca · kargo hariç';}
     return {cached:res.cached};
   },{concurrency:2,delayMs:700,progress});

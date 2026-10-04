@@ -34,4 +34,12 @@ function printBasis(p) {
   return 'belirsiz';
 }
 
-module.exports = { printBasis, LABEL, NOTE };
+const LABEL_EN = { dahil: 'Print included', bos: 'Blank', toplu: 'Bulk order', belirsiz: 'Terms at source' };
+const NOTE_EN = {
+  dahil: 'Production cost with one print area/design included.',
+  bos: 'Price for the blank (unprinted) product; printing is charged separately.',
+  toplu: 'Bulk printing price with a minimum order quantity.',
+  belirsiz: 'The source does not state whether printing is included; check the manufacturer page.',
+};
+
+module.exports = { printBasis, LABEL, NOTE, LABEL_EN, NOTE_EN };

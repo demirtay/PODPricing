@@ -14,7 +14,10 @@ Mimari: kod ve katalog **GitHub**'da (özel depo) → GitHub Actions 6 saatte bi
 ## 1. Alan adı (kullanıcı)
 
 - podatlas.com Afternic'te satılık (2025'te kaydedilmiş). Fiyatı ancak teklif verince öğrenilir; bu tür isimler genelde 1.000–5.000 $ ister.
-- Boşta ve uygun olanlar (2026-10-04 kontrolü): **podpricing.com**, podpricewatch.com, printondemandprices.com, getpodatlas.com, podatlashq.com.
+- Boşta olanlar (2026-10-04 RDAP kontrolü):
+  - Anahtar kelimeli: **podpricing.com**, printondemandpricing.com, podsupplierprices.com, comparepodsuppliers.com, podcostcompare.com, blankprices.com
+  - Marka gibi: **podvs.com**, podbourse.com, printticker.com, podmarketwatch.com, pricemypod.com, podpricely.com
+  - Atlas kökü: getpodatlas.com, podatlashq.com
 - Satın alma: Cloudflare Registrar maliyetine satar (yenileme fiyatı da aynı kalır). Porkbun da uygun.
 
 ## 2. GitHub (kullanıcı, 5 dk)

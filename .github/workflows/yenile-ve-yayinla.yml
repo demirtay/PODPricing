@@ -25,6 +25,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      # Ürün detay sayfaları 24 saat önbellekte tutulur; her çalışmada baştan indirilmez.
+      - name: Kaynak önbelleğini geri yükle
+        uses: actions/cache@v4
+        with:
+          path: data/source-cache
+          key: source-cache-${{ github.run_id }}
+          restore-keys: source-cache-
       - name: Katalogları yenile
         if: github.event_name != 'push'
         run: node scripts/refresh-once.cjs

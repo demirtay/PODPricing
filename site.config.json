@@ -1,7 +1,7 @@
 {
-  "siteName": "POD Atlas",
-  "tagline": "Print-on-demand üretici fiyatlarını tek ekranda karşılaştır",
-  "siteUrl": "",
+  "siteName": "POD Pricing",
+  "tagline": "Print-on-demand price comparison",
+  "siteUrl": "https://podpricing.com",
   "contactEmail": "",
   "adsenseClient": "",
   "adSlots": {

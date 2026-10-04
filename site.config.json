@@ -3,14 +3,14 @@
   "tagline": "Print-on-demand price comparison",
   "siteUrl": "https://podpricing.com",
   "contactEmail": "hello@podpricing.com",
-  "adsenseClient": "",
+  "adsenseClient": "ca-pub-1988328386959679",
   "adSlots": {
     "ust": "",
     "liste": "",
     "urun": "",
     "alt": ""
   },
-  "adsPreview": true,
+  "adsPreview": false,
   "sponsors": [],
   "affiliate": {}
 }

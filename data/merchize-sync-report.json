@@ -1,0 +1,2468 @@
+{
+  "state": "partial",
+  "total": 1437,
+  "processed": 1437,
+  "verified": 818,
+  "failed": [
+    {
+      "url": "https://merchize.com/product/stainless-steel-tumbler/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/desk-mat-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/floating-wooden-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/mouse-pad-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/skinny-stainless-steel-tumbler-(20oz)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/aop-unisex-hoodie-printed-in-eu/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-tote-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/canvas-pillow-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/regular-stainless-steel-tumbler-30oz/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/clogs-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wine-tumbler-12oz/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/bath-towel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/stainless-tumbler/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/stemless-insulated-wine-tumbler/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hard-clear-back-phone-case/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-3-4-sleeve-raglan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/car-headrest-covers/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pet-bandana/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/seat-belt-strap-covers/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/canvas-prints-museum-wrap/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/round-wood-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-puzzle/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-clock/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-sleeveless-romper/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-prints/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-photo-print-stand/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ringer-t-shirt-2d/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-wood-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-beach-sarong/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-beach-kimono/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/long-sleeve-raglan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-plaque-without-stand/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/reflective-t-shirt-printing/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/bathroom-curtain-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/aop-neck-gaiter/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tumbler-20oz/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/blackout-curtains-with-hooks-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-bralette/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/heart-shaped-couple-mugs/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/accent-mug/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-long-sleeve-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/short-sleeve-raglan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/flip-pocket-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-mouse-pad/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/heart-wooden-candlestick/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/three-piece-duvet-cover-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/lightweight-breathable-quilt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangular-iron-wall-painting/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tri-fold-3d-mask-2/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/round-mouse-pad-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/truck-bed-decal-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/universal-car-seat-cover/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/foldable-round-mat-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/mugs-11-oz-ceramics/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/door-mat/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-garden-flag-2/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/windshield-sunshade-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/phone-case-glass/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/candle-2/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-sweater-premium/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/car-stickers-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tpu-rubber-phone-case/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/adjustable-face-mask/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/s-shaped-couple-cup/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/gallery-wrap-canvas-prints/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/iphone-11-pro-phone-case-or-glass-(made-in-china)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-peaked-cap/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/dish-washer-cover-(made-in-china)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/campfire-mug/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/3-4-sleeve-raglan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/face-mask-aop/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wall-painting-frame-exclude/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/cone-tumbler-30oz/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/candle-holder-with-heart/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-mug/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/single-mural-with-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/candle-holder-without-heart/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-flag-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/household-warm-blanket-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/sport-water-bottle-32oz-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/drawstring-bag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/foldable-rectangular-floor-mat-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/canvas-bags-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/couple-of-mini-candles/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-stainless-steel-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-steering-wheel-cover-made-in-china/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/filter/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/embroidered-cap/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/candle-glass-printing/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/premium-tote-bag-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-plant-pot/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-metal-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/product-title/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/regular-fit-hawaii-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/reflective-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/product-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/defdfdfdfdf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/dfsds-f-rfe-etef/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/product-test-1/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test-all-over-print-unisex-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test-produc-custom/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test1/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/heart-keychain-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/branding-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/linh-test-1/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/sc-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/key-123/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-frame-with-custom-charms/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/picnic-blanket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-acrylic-standee-(with-stand)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/thank-card/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-t-shirt-comfort-colors-c1717/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/fairy-light-jar/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/photo-film-roll-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/2-sided-printed-wood-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-puzzle-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hangnt-test-khong-public/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/toy-basket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/above-knee-sport-shorts-(custom-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hoodie_test1/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test-product-mapping/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/test2/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/waist-apron/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/poster-(for-wood-hanger)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-hanger-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-fight-shorts-(flat-waistband)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-and-acrylic-ornament-(dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/1-sided-custom-shaped-clear-acrylic-ornament-(dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/gift-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-flower-vase/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-clear-1-sided-acrylic-ornament-(dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/linh-test-latest/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-and-colored-acrylic-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/semicircle-fence-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/photo-insert-keyring/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/crop-top-baseball-jersey-without-piping-white-buttons/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-fence-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/glass-tumbler/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pet-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pet-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-crewneck-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/clear-plastic-christmas-bauble/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-leggings-with-pockets/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-and-youth-jersey-set-(crew-neck)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/perforated-car-window-decal/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-and-youth-jersey-set-(v-neck)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-bear-family-puzzle/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-1-sided-3-layered-wood-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-hologram-suncatcher/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-fitted-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-wooden-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wall-hanging-banner/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-bear-family-puzzle/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/toddler-unisex-t-shirt-(made-in-au)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/product-test-khong-publish/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-double-layer-sports-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-unisex-polo-shirt-(ultralight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-all-over-print-unisex-polo-shirt-(ultralight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-printed-and-cut-out-acrylic-ornaments/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-polo-shirt-(ultralight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/womens-t-shirt-gildan-5000l-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-t-shirt-gildan-5000b-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-t-shirt-gildan-6400b-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/women's-t-shirt-gildan-6400l-(made-in-uk)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/long-sleeve-t-shirt-gildan-2400-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-tank-top-gildan-64200-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ladies-tank-top-gildan-64200l-made-in-uk/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/gift-card/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-women-and-dog-statue/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-sleeve-button-up-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-sleeve-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-ornament-(0.2-in)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-hockey-jersey-(custom-shoulder-yoke)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-led-light-up-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-sweater/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-unisex-short-sleeve-polo-shirt-(ultralight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pull-on-fight-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pull-on-fight-shorts-(black-gusset)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/sliding-wood-photo-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-button-down-shirt-110gsm/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-fight-shorts-(elastic-waistband)-115-gsm/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-polo-shirt-(205gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-polo-shirt-(205gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-khong-dung-dje-public-(vn)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-khong-dung-dje-public-(uk)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-wooden-car-visor-clip-(rieng-cho-dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/side-bow-embroidered-sweatshirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-bi-fold-wallet-with-flip-id-display/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-bifold-wallet/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-wallet-clip/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/oval-leatherette-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherettemetal-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-bottle-opener/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/oval-leatherette-bottle-opener-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-leatherettemetal-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/round-leatherettemetal-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-leatherette-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-reflective-unisex-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tattoo-sticker/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-side-printed-acrylic-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-wooden-car-vent-clip-(rieng-cho-dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/square-leatherette-coaster-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/round-leatherette-coaster-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-luggage-tag-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-money-clip-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-wallet-with-strap-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-hard-business-card-holder-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-cuff-bracelet-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-compact-mirror-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-bottle-opener-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-sweatpants/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-sweatpants/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-sweatpants/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/sipper-glass-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-stretchy-leggings/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-stretchy-flare-leggings/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-star-hologram-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/name-night-light-(no-base)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/name-night-light-base/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-plaque-(without-stand)-0.78-in/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/canvas-0.75in-frame-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-broken-glass-hologram-badge-reel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-starburst-hologram-badge-reel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-starburst-hologram-phone-grip/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-broken-glass-hologram-phone-grip/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-broken-glass-hologram-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-happi-coat/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-piping-pajamas-set-with-chest-pocket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-garden-marker/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tough-phone-case/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-wood-jar-lid-flower-holder/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/set-mica-book-and-keychain-(-dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-piping-pajamas-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-athleisure-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-short-sleeve-hawaiian-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pocket-hawaiian-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-unisex-baseball-jersey-white-buttons/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-product-accessories/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-button-down-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pocket-button-down-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-bear-family-puzzle-(ver2)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-classic-unisex-zip-hoodie-gildan-18600-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-women's-heavyweight-muscle-tee-american-apparel-307gd-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-earrings-(dzt)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/1-side-printed-acrylic-clipboard/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-penguin-family-puzzle/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wood-photo-frame/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/snapback-trucker-cap-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/premium-flat-bill-snapback-cap-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-leather-notebook-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-star-hologram-charm/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-hologram-flower/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-paper-clip-bookmark/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wooden-flashcards/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-dog-family-puzzle/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-4-layers-wood-line-art-figure/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-bear-family-standee/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-sleep-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-catalog/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leather-notebook-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-8-function-multi-tool-pocket-knife-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-leggings-(hidden-stitching)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-baseball-jersey-without-piping/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/embroidered-pocket-t-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/round-leatherette-coaster-made-in-us-dtf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/square-leatherette-coaster-made-in-us-dtf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-compact-mirror-made-in-us-dtf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-medal/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-mirror-medal/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-bottle-opener-made-in-us-dtf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/rectangle-leatherette-bottle-opener-keychain-dtf-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-cuff-bracelet-dtf-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/oval-leatherette-bottle-opener-keychain-dtf-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-bear-family-puzzle-(ver3)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/wooden-puzzle-coaster/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-long-sleeve-rash-guard/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-wrestling-singlet/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/raw-wood-hanging-plaque-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-raw-wood-hanging-plaque-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/aluminum-bookmark-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/award-medal-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-can-cooler-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-satin-pajamas-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/tough-phone-case-and-acrylic-phone-grip-combo/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-long-sleeve-rash-guard/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-soccer-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women-soccer-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-short-sleeve-hawaiian-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-pocket-hawaiian-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/gossip-wine-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pint-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/shot-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-side-panel-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-suncatcher-acrylic-and-wood-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/lantern-suncatcher-night-light-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-sports-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-satin-pajamas-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-and-youth-satin-short-sleeve-pajamas-set-(-djong-ma)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-1/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/cat-face-tote-bag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-leather-patch-beanie-sp12-made-in-usa-old/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leather-patch-beanie-sp12-made-in-us-old/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-leather-patch-pom-pom-cuffed-beanie-sp15-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leather-patch-pom-pom-cuffed-beanie-sp15-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-hawaiian-set-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-whiskey-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-hawaiian-set-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-sipper-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-hawaiian-shorts-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-hawaiian-shorts-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/welcome-banner/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-satin-pajamas-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-3-layer-wood-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-sleeve-soccer-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids'-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-and-youth-t-shirt-and-shorts-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/metal-signs-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-window-hanging-acrylic-ornament-(layered-printing)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-star-hologram-ornament-(layered-printing)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-broken-glass-hologram-ornament-(layered-printing)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-baseball-jersey-without-piping-(-cuc-trang)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ggf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-t-shirt-pajama-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-and-youth-long-sleeve-soccer-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-sports-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-shot-glass-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-leather-patch-chritmas-stockings-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leather-patch-christmas-stockings-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-sleeve-soccer-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leather-patch-beanie-for-kid-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-leather-patch-beanie-for-kid-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-legging/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-and-youth-long-sleeve-soccer-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hgjhku/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-v-neck-sleeveless-jersey-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-phuongnt1-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-desk-calender/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-hooded-cloak-coat-(lightweight-lining)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-long-sleeve-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/a/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-crop-top-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-bomber-jacket-(aluminium-zipper)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/2-side-printed-glass-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-bowling-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-shaker-suncatcher-ornament/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-liner-hoodie/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-baseball-jersey-without-piping-(-cuc-trang)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-crop-top-baseball-jersey-(cuc-trang)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-simple-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-simple-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-leather-patch-pom-pom-cuffed-beanie-sp15-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-ko-publish/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test-abc12/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-knitted-cardigan-vest-white-button/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-bookmark-(layered-printing)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/qa-eu/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-simple-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-simple-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-leatherette-luggage-tag-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/leatherette-luggage-tag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-crop-top-football-jersey-(version-2)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-baseball-jacket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-sweatshirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/quilt-bedding-set-(5oz)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/star-hologram-name-night-light-(no-base)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/broken-glass-hologram-name-night-light-(no-base)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hologram-name-night-light-(no-base)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-polo-shirt-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-baseball-jacket-(cuc-trang)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/house-flag-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-short-sleeve-jersey-(anime)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-button-down-shirt-(-anime)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-polo-shirt-(hyper)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hawaii-cotton-(hyper)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/infant-baby-rib-bodysuit-rabbit-skins-4400-(-made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-hockey-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women-hawaiian-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/garden-flag-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/mental-sign-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-jersey-short-sleeve-tee-bella-canvas-3001-made-in-au/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-youth-soccer-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/quilt-blanket-(5oz)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-bowling-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/quilt-pillow-case-(5oz)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-soccer-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-photo-car-charm/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-simple-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-simple-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-unisex-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-simple-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-simple-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-satin-pajamas-set-(no-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-satin-graduation-stole-qa-test/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/(copy-of)-all-over-print-kid-simple-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-hawaiian-shirt-without-pocket-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-satin-short-sleeve-pajamas-set-(no-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-kid-satin-pajamas-set-(no-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-house-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-wall-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-hawaiian-shirt-without-pocket-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-youth-soccer-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-soccer-jersey-set/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-semicircle-fence-flag-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/garden-flag-with-hanging-loops/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-wooden-flower-standee/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-and-acrylic-flower-standee/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-and-hologram-flower-standee/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/house-flag-with-canvas-header/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-adult-hooded-poncho-towel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/linen-garden-flag-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/outdoor-house-flag-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-garden-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-piece/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-hand-flag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-rectangle-fence-flag-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-34-sleeve-raglan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/grave-blanket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-4-layer-wood-money-holder-(2-side-print-bottom-layer)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-double-layer-sports-shorts-(no-pockets)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-ring-dish-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-satin-pajamas-set-without-pocket-(loose-pants)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/house-flag-with-canvas-header-(fba)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/accent-mug-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-mug-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/fleece-blanket-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/color-changing-mug-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/sherpa-blanket-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/canvas-1.5in-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-bomber-jacket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-sleeveless-jersey-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-kids-and-youth-baseball-jacket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-and-youth-sleeveless-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-youth-long-sleeve-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/photo-musem-frame-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-charm-musem-frame-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-stroller-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-stroller-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-pocket-hawaiian-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/engraved-custom-shape-photo-night-light-(beech-wood-base)-red-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-plaque-red-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-photo-night-light-red-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/metal-and-wood-wind-chime-red-box/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/2-side-printed-hand-flag-made-in-us/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-short-sleeve-pocket-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-graduation-stole/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/satin-simple-graduation-stole/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-polo-shirt-v2-(lightweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-kid-and-youth-sleeveless-jersey-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-acrylic-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/kid-simple-graduation-stole/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-women's-bowling-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-kid-and-youth-v-neck-sleeveless-jersey-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-baby-sleeveless-bodysuit/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/ceramic-ornament-cc/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-baby-bodysuit/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-sleeveless-jersey-tank-top-(new-binding)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-4-layer-glitter-wood-money-holder-(2-side-print-bottom-layer)-type:-l4l_2sl4_glitter_hold_0203tm/",
+      "error": "HTTP 403"
+    },
+    {
+      "url": "https://merchize.com/product/stick-on-linen-tapestry/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/stick-on-tapestry/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-women's-relaxed-fit-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-hawaiian-shirt-giantrang/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/men-boxer-to-3d/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pocket-hawaiian-cotton-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/apparel-product-accessories/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-hawaiian-shirt-giantrang/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hawaiian-shirt-giantrang/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/casual-shirt-giantrang/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-casual-shirt-giantrang/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/casual-cotton/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-short-sleeve-jersey-(havigroup)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-puzzle-suncatcher/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-hug/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/combo-shirt-and-short/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/embroidered-quilted-tote-bag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-and-youth-baseball-jacket-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-regular-fit-hawaiian-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-regular-fit-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-pocket-regular-fit-hawaiian-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/mail-box-cover/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-white-acrylic-tag-(2-side-printed-bottom-layer)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-kimono-style-cardigan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-baby-bodysuit/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-frosted-acrylic-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-mirror-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-frosted-acrylic-and-acrylic-mirror-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/casual-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-side-printed-acrylic-spinning-standee/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/satin-bow-veil/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-interchangeable-wood-piece/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custome-shape-wood-garland/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-acrylic-badge-reel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-knitted-cardigan-vest/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-knitted-cardigan/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-knitted-cardigan-white-buttons/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-3-layer-wooden-sign/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-casual-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/embroidered-hair-scarf/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/flat-and-3d-puff-embroidered-candy-bag/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/embroidered-pennant/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-knitted-v-neck-vest/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-long-sleeve-button-down-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/shaker-ornament-with-wood-charms/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-comfort-pocket-regular-fit-button-down-shirt/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-mirror-acrylic-drink-stirrer/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-drink-stirrer/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-crop-top-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-reflective-button-down-shirt-with-pocket/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-earrings/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pet-hoodie/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-satin-short-sleeve-pajamas-set-with-long-pants-(no-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/linen-table-cloth/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-mesh-crop-top-football-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-ruffle-sleeve-dress/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/poster-cc-(made-in-us)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-1-layer-acrylic-mirror-plaque/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-quilt-table-topper/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-stretchy-gym-shorts/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kid-and-youth-v-neck-short-sleeve-jersey-with-name-patch/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-mesh-baseball-jersey/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-men's-satin-pajamas-set-(no-pocket)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-mesh-baseball-jersey-without-piping/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/broken-glass-hologram-acrylic-charms/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/star-hologram-acrylic-charms/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/hawaiian-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-hawaiian-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/youth-hawaiian-shirt-(120gsm)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layer-acrylic-ornament-(2-side-printed)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-reusable-notes-board/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/lace-door-wreath-sash/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-ornament-with-multiple-charms/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-pull-on-fight-shorts-(midweight)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-charm-beaded-lanyard-with-tassel/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-fleece-pajama-pants/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/simple-custom-shape-embroidered-patch/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-acrylic-connected-keychain/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-leggings-with-side-pockets/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-v-neck-insert-sleeveless-jersey-tank-top/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-crop-top-baseball-jersey-without-piping-(white-buttons)/",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-youth-crop-top-baseball-jersey-(white-buttons)/",
+      "error": "HTTP 404"
+    }
+  ],
+  "unpriced": [
+    {
+      "url": "https://merchize.com/product/acrylic-plaque-without-stand/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/curved-stainless-steel-tumbler-30oz/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-and-youth-t-shirt/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/bucket-hat/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/straight-tumbler-with-straw-20oz/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/flexi-clear-phone-case/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/poster-without-frame/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/bleached-t-shirt-2d/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/phonecase/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/pet-tank-top/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/wood-key-holder/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/flip-t-shirt/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-kids-sweatshirt/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/custom-wooden-puzzle/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-mens-thicken-pullover-hoodie-made-in-china/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/2d-t-shirt/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-mens-pullover-hoodie-with-mask/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-v-neck-t-shirt-2d/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/pocket-t-shirts/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-egg-cup12oz-made-in-china/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/photo-nigh-light/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/round-doorplate-with-bow-decoration-made-in-china/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/custom-ornament/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-vneck-tshirt-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/skinny-tumbler-stainless-steel-with-lids-20oz-made-in-china/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-plaque-without-stand-20mm/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/memorial-pet-collar-sign/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-ecofriendly-tshirt/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/ladies-tank-top-made-in-au/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-jersey-tank-bella-canvas-3480/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-wood-and-acrylic-ornament/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/suncatcher-ornament/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/womens-tshirt-gildan-2000l-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-hoodie-comfort-colors-1567-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-jersey-short-sleeve-tee-bella-canvas-3001-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/toddler-short-sleeve-tee-bella-canvas-3001t-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-34-sleeve-baseball-t-shirt-bella-canvas-3200-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-t-shirt-comfort-colors-1717-(made-in-au)/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-hockey-jersey/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-3-layered-wood-ornament/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/premium-t-shirt-as-colour-5001-made-in-au/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/pickleball-paddle-cover/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-hoodie-gildan-18500-made-in-uk/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-crew-neck-sweatshirt-gildan-18000-made-in-uk/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/custom-shape-2-layered-wood-ornament/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/2-sided-printed-acrylic-plaque-without-stand-0.6-in/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/regular-fit-hawaii-set/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/womens-flowy-crop-tee-bella-canvas-8882/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/classic-unisex-performance-t-shirt-gildan-42000-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/sebring-performance-polo-paragon-500-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/women's-crop-tee-bella-canvas-6681/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/ultra-cotton-tank-top-gildan-2200-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/womens-racerback-crop-tank-bella-canvas-6682-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/women's-jersey-racerback-tank-bella-canvas-6008-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/acrylic-led-hanging-light-lamp-circle-frame/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/wavy-acrylic-led-hanging-light-lamp-circle-frame/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-vintage-raglan-hooded-sweatshirt-lst004-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/leather-patch-beanie-for-kid-(made-in-us)/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-zone-colorblock-raglan-t-shirt-team-365-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/unisex-raglan-baseball-jersey-augusta-sportswear-423-made-in-us/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/2-sided-printed-acrylic-plaque-without-stand-0.8-in/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/qa-test/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    },
+    {
+      "url": "https://merchize.com/product/all-over-print-simple-kid-satin-pajamas-set-(no-pocket)/",
+      "reason": "Aktif seçili Tier 1 varyant fiyatı bulunamadı"
+    }
+  ],
+  "startedAt": "2026-10-03T22:51:16.179Z",
+  "finishedAt": "2026-10-03T22:53:42.544Z"
+}

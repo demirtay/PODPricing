@@ -1,0 +1,6 @@
+# kaynak önbelleği: geçici, yeniden üretilir
+data/source-cache/
+# üretilen site çıktısı
+site/
+node_modules/
+*.log

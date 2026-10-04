@@ -1,0 +1,1648 @@
+{
+  "providerId": "printmelon",
+  "checkedAt": "2026-10-04T11:10:44.581Z",
+  "products": [
+    {
+      "id": 5955,
+      "name": "Custom Mugs and Cups",
+      "slug": "print-on-demand-mugs-and-cups",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/print-on-demand-mugs-and-cups/",
+      "sku": "",
+      "short_description": "<p dir=\"auto\" data-start=\"760\" data-end=\"1108\">Create print on demand mugs and cups for your clothing brand, gift shop or online store. Add original artwork, logos or text to available drinkware styles and sell through Shopify, Etsy or your ecommerce site. Eligible products are prepared after customers order, allowing you to introduce new designs without purchasing finished inventory in bulk.</p>\n<ul data-start=\"1110\" data-end=\"1500\">\n<li data-section-id=\"1evpbq2\" data-start=\"1110\" data-end=\"1178\">Custom mugs and cups for online stores and merchandise collections</li>\n<li data-section-id=\"1cvil2m\" data-start=\"1179\" data-end=\"1247\">Suitable for illustrations, typography, logos and original artwork</li>\n<li data-section-id=\"1s82wqq\" data-start=\"1248\" data-end=\"1305\">Available styles, colors and capacities vary by product</li>\n<li data-section-id=\"1gstna7\" data-start=\"1306\" data-end=\"1367\">Useful for gifts, creator merchandise and branded drinkware</li>\n<li data-section-id=\"t8up44\" data-start=\"1368\" data-end=\"1418\">Designed for Shopify, Etsy and ecommerce sellers</li>\n<li data-section-id=\"1ufwwiq\" data-start=\"1419\" data-end=\"1462\">Produced after customer orders are placed</li>\n<li data-section-id=\"18t1z2g\" data-start=\"1463\" data-end=\"1500\">No bulk finished inventory required</li>\n</ul>",
+      "description": "<p class=\"PDq2pG_selectionAnchorContainer\" dir=\"auto\" data-start=\"1599\" data-end=\"1985\">Print on demand mugs and cups give sellers a way to turn their designs into products customers can use at home, at work or on the go. They can complement an apparel collection, form a dedicated gift range or carry branding for a business or creator. With order-based production, sellers can introduce multiple designs without purchasing a large quantity of printed drinkware in advance.</p>\n<p dir=\"auto\" data-start=\"1987\" data-end=\"2345\">The shape of the selected product should guide the artwork. A short phrase or logo may work well as a simple focal point, while an illustration or pattern may need more room. Check the available print area and preview before publishing: the position of a handle, the curve of a cup and the dimensions of the printable surface can change how a design appears.</p>\n<p dir=\"auto\" data-start=\"2347\" data-end=\"2768\">Mugs and cups may differ in material, capacity, color and intended use. Those details should be clear in each store listing so buyers understand what they are ordering. Show accurate product images, identify the available variants and include care instructions that apply to the exact item selected. Claims such as “dishwasher safe” or “microwave safe” should only be used when confirmed in that product’s specifications.</p>\n<p dir=\"auto\" data-start=\"2770\" data-end=\"3064\">For stores selling to customers in the USA, custom drinkware can fit gift collections, creator merchandise, office products and everyday essentials. Create listings around the actual design and its audience, with readable artwork and product details that help customers make a confident choice.</p>\n<p dir=\"auto\" data-start=\"3066\" data-end=\"3328\">Learn more about our <a class=\"decorated-link\" href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3087\" data-end=\"3177\">Print on Demand for Shopify</a> and <a class=\"decorated-link\" href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3182\" data-end=\"3266\">Print on Demand for Etsy</a> solutions to see how each integration can support your store.</p>\n<p dir=\"auto\" data-start=\"3330\" data-end=\"3579\"><a class=\"decorated-link\" href=\"https://app.printmelon.com/products?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3330\" data-end=\"3400\">Browse our full product catalog</a> to explore available mugs, cups and other customizable products. Already have an account? <a class=\"decorated-link\" href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a0cdd3-316c-7459-92d8-fee875940282&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=qFbBhyS1D1EtkNMT4vRvRn8SDhWnhDsf1h2u3efmN5k&amp;code_challenge_method=S256&amp;nonce=01a0cdd3-3174-701c-a889-e315dde740be&amp;state=eyJpZCI6IjAxYTBjZGQzLTMxNzMtNzZmYi1hNzQ3LTQ3OTkzZmVmNzYxMyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\" target=\"_new\" rel=\"noopener\" data-start=\"3491\" data-end=\"3543\">Log in to Print Melon</a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "0",
+        "regular_price": "0",
+        "sale_price": "0",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5277,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand mugs and cups",
+          "alt": "Print on demand mugs and cups"
+        },
+        {
+          "id": 5277,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand mugs and cups",
+          "alt": "Print on demand mugs and cups"
+        },
+        {
+          "id": 5272,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Cups &#038; Mugs (3)",
+          "alt": ""
+        },
+        {
+          "id": 5269,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Cups &#038; Mugs",
+          "alt": ""
+        },
+        {
+          "id": 5271,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Cups &#038; Mugs (2)",
+          "alt": ""
+        },
+        {
+          "id": 5270,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Cups &#038; Mugs (1)",
+          "alt": ""
+        },
+        {
+          "id": 5276,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Cups-Mugs-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Cups &#038; Mugs (7)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 109,
+          "name": "Cups &amp; Mugs",
+          "slug": "cups-mugs",
+          "link": "https://printmelon.com/product-category/cups-mugs/"
+        }
+      ],
+      "tags": [],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": false,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Read more",
+        "description": "Read more about &ldquo;Custom Mugs and Cups&rdquo;",
+        "url": "https://printmelon.com/product/print-on-demand-mugs-and-cups/",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5955",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5955&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5361,
+      "name": "Custom Long Sleeve Shirts",
+      "slug": "custom-long-sleeve-shirts",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/custom-long-sleeve-shirts/",
+      "sku": "",
+      "short_description": "<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"655\" data-end=\"969\"><strong data-start=\"655\" data-end=\"684\">Custom long sleeve shirts</strong> give clothing brands, creators and online sellers a versatile way to expand their apparel collections. Add your artwork, choose available colors and sizes, and sell through Shopify, Etsy or your ecommerce store with print-on-demand fulfillment and no need for bulk finished inventory.</p>\n<ul data-start=\"971\" data-end=\"1343\">\n<li data-section-id=\"jo9mdi\" data-start=\"971\" data-end=\"1028\">Customizable long sleeve shirts for apparel collections</li>\n<li data-section-id=\"14hizyg\" data-start=\"1029\" data-end=\"1078\">Available in different colors, sizes and styles</li>\n<li data-section-id=\"1eq147w\" data-start=\"1079\" data-end=\"1142\">Suitable for logos, graphics, typography and original artwork</li>\n<li data-section-id=\"1gppts3\" data-start=\"1143\" data-end=\"1211\">Ideal for seasonal collections, streetwear and branded merchandise</li>\n<li data-section-id=\"188fwey\" data-start=\"1212\" data-end=\"1261\">Designed for Shopify, Etsy and ecommerce stores</li>\n<li data-section-id=\"1ufwwiq\" data-start=\"1262\" data-end=\"1305\">Produced after customer orders are placed</li>\n<li data-section-id=\"18t1z2g\" data-start=\"1306\" data-end=\"1343\">No bulk finished inventory required</li>\n</ul>",
+      "description": "<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"1418\" data-end=\"1717\"><strong data-start=\"1418\" data-end=\"1447\">Custom long sleeve shirts</strong> are a strong addition for brands looking to offer more than standard short-sleeve t-shirts. Their versatile style works well for seasonal collections, lifestyle apparel, streetwear, branded merchandise, creator products and everyday clothing sold through online stores.</p>\n<p data-start=\"1719\" data-end=\"2057\">Design options can range from clean logos and typography to illustrations and larger graphics. Depending on the selected garment, supported customization areas may include the front, back or other available print locations. Artwork should always be prepared according to the print area and production requirements of the selected product.</p>\n<p data-start=\"2059\" data-end=\"2358\">Sellers can configure available sizes, colors and other product variants before publishing. This makes <strong data-start=\"2162\" data-end=\"2191\">custom long sleeve shirts</strong> suitable for introducing new designs, creating seasonal releases and expanding an apparel catalog without purchasing large quantities of finished products in advance.</p>\n<p data-start=\"2360\" data-end=\"2634\">For better product presentation, use clear mockups, accurate sizing information and high-resolution artwork. Review garment colors, artwork dimensions and supported print areas before publishing to make sure important design elements remain visible and correctly positioned.</p>\n<p class=\"isSelectedEnd\">Learn more about our <strong><a href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Shopify</span></a></strong> and <strong><a href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Etsy</span></a></strong> solutions to see how each integration can support your store.</p>\n<p><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5368,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Custom Long Sleeve Shirts",
+          "alt": "Custom Long Sleeve Shirts"
+        },
+        {
+          "id": 5363,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (1)",
+          "alt": ""
+        },
+        {
+          "id": 5364,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (2)",
+          "alt": ""
+        },
+        {
+          "id": 5365,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (3)",
+          "alt": ""
+        },
+        {
+          "id": 5366,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (4)",
+          "alt": ""
+        },
+        {
+          "id": 5367,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (5)",
+          "alt": ""
+        },
+        {
+          "id": 5368,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Custom Long Sleeve Shirts",
+          "alt": "Custom Long Sleeve Shirts"
+        },
+        {
+          "id": 5369,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (7)",
+          "alt": ""
+        },
+        {
+          "id": 5370,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (8)",
+          "alt": ""
+        },
+        {
+          "id": 5371,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/sleeve-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "sleeve (9)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 115,
+          "name": "Long Sleeve Shirts",
+          "slug": "long-sleeve-shirts",
+          "link": "https://printmelon.com/product-category/long-sleeve-shirts/"
+        }
+      ],
+      "tags": [
+        {
+          "id": 116,
+          "name": "Long sleeve shirts",
+          "slug": "long-sleeve-shirts",
+          "link": "https://printmelon.com/product-tag/long-sleeve-shirts/"
+        }
+      ],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom Long Sleeve Shirts&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5361",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5361",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5361&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5347,
+      "name": "Kids and Baby Clothes",
+      "slug": "print-on-demand-kids-and-baby-clothes",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/print-on-demand-kids-and-baby-clothes/",
+      "sku": "",
+      "short_description": "<p class=\"PDq2pG_selectionAnchorContainer\" dir=\"auto\" data-start=\"1125\" data-end=\"1469\">Print on demand kids and baby clothes let online sellers create playful designs for younger customers without ordering finished stock in bulk. Add original artwork to available garments, choose the offered sizes and colors, and sell through Shopify, Etsy or your ecommerce store. Each eligible item is produced after a customer places an order.</p>\n<ul data-start=\"1471\" data-end=\"1854\">\n<li data-section-id=\"1x0s98q\" data-start=\"1471\" data-end=\"1520\">Custom clothing options for babies and children</li>\n<li data-section-id=\"6gyt8i\" data-start=\"1521\" data-end=\"1589\">Suitable for illustrations, names, typography and original artwork</li>\n<li data-section-id=\"98luyo\" data-start=\"1590\" data-end=\"1650\">Available garment styles, colors and sizes vary by product</li>\n<li data-section-id=\"15mtst9\" data-start=\"1651\" data-end=\"1721\">Useful for gift collections, family themes and kids’ clothing brands</li>\n<li data-section-id=\"t8up44\" data-start=\"1722\" data-end=\"1772\">Designed for Shopify, Etsy and ecommerce sellers</li>\n<li data-section-id=\"1ufwwiq\" data-start=\"1773\" data-end=\"1816\">Produced after customer orders are placed</li>\n<li data-section-id=\"18t1z2g\" data-start=\"1817\" data-end=\"1854\">No bulk finished inventory required</li>\n</ul>",
+      "description": "<p class=\"PDq2pG_selectionAnchorContainer\" dir=\"auto\" data-start=\"1961\" data-end=\"2297\">Print on demand kids and baby clothes give sellers a way to build collections for different ages, occasions and design themes. From a simple illustration to a coordinated family design, each product can serve a specific audience. Sellers can test new ideas without purchasing large quantities of printed garments before demand is clear.</p>\n<p dir=\"auto\" data-start=\"2299\" data-end=\"2673\">For this category, the garment matters as much as the graphic. A design that fits a child’s T-shirt may need a different size or position on a baby garment. Check the printable area of each product before uploading artwork, and preview every size and color you plan to offer. Keep important text and small details away from seams, fastenings and other construction features.</p>\n<p dir=\"auto\" data-start=\"2675\" data-end=\"3020\">Accurate product information is particularly important when customers are buying for children. Each listing should show the available age or size range, garment material, color options and care instructions supplied for the selected item. Use the product’s actual size chart rather than assuming that the same age label fits every garment style.</p>\n<p dir=\"auto\" data-start=\"3022\" data-end=\"3300\">Kids’ and baby products can work well for gift shops, illustration brands, family merchandise and children’s clothing collections. Give each design a clear identity, use mockups that match the selected product, and check that artwork remains readable at the finished print size.</p>\n<p dir=\"auto\" data-start=\"3302\" data-end=\"3564\">Learn more about our <a class=\"decorated-link\" href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3323\" data-end=\"3413\">Print on Demand for Shopify</a> and <a class=\"decorated-link\" href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3418\" data-end=\"3502\">Print on Demand for Etsy</a> solutions to see how each integration can support your store.</p>\n<p dir=\"auto\" data-start=\"3566\" data-end=\"3825\"><a class=\"decorated-link\" href=\"https://app.printmelon.com/products?utm_source=chatgpt.com\" target=\"_new\" rel=\"noopener\" data-start=\"3566\" data-end=\"3636\">Browse our full product catalog</a> to explore available kids’ and baby products and other customizable items. Already have an account? <a class=\"decorated-link\" href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a0cdd9-690c-7457-a892-65b2746d3397&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=NdIE5CagoL-xPfBDBxeDzHM2VEt4o5CAvYy5556APSA&amp;code_challenge_method=S256&amp;nonce=01a0cdd9-6916-7ab4-98cd-d27aa547836f&amp;state=eyJpZCI6IjAxYTBjZGQ5LTY5MGUtN2E5Yy05ZDg0LTE5MmFmZDhjYmFjMyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\" target=\"_new\" rel=\"noopener\" data-start=\"3737\" data-end=\"3789\">Log in to Print Melon</a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5344,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand kids and baby clothes",
+          "alt": "Print on demand kids and baby clothes"
+        },
+        {
+          "id": 5344,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand kids and baby clothes",
+          "alt": "Print on demand kids and baby clothes"
+        },
+        {
+          "id": 5343,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (8)",
+          "alt": ""
+        },
+        {
+          "id": 5342,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (7)",
+          "alt": ""
+        },
+        {
+          "id": 5341,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (6)",
+          "alt": ""
+        },
+        {
+          "id": 5340,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (5)",
+          "alt": ""
+        },
+        {
+          "id": 5339,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (4)",
+          "alt": ""
+        },
+        {
+          "id": 5338,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (3)",
+          "alt": ""
+        },
+        {
+          "id": 5337,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (2)",
+          "alt": ""
+        },
+        {
+          "id": 5336,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/kids-babies-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "kids &#038; babies (1)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 113,
+          "name": "Kids &amp; Babies",
+          "slug": "kids-babies",
+          "link": "https://printmelon.com/product-category/kids-babies/"
+        }
+      ],
+      "tags": [],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Kids and Baby Clothes&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5347",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5347",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5347&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5306,
+      "name": "Custom POD Aprons",
+      "slug": "custom-pod-aprons",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/custom-pod-aprons/",
+      "sku": "",
+      "short_description": "<p class=\"isSelectedEnd\">Custom POD Aprons are a practical choice for Shopify, Etsy and ecommerce sellers looking to add personalized kitchen, hospitality and workwear products to their stores. Upload your artwork, choose from available apron styles and colors, and create branded products for customers across the USA without purchasing large quantities in advance.</p>\n<ul data-spread=\"false\">\n<li>Designed for Shopify, Etsy and ecommerce stores</li>\n<li>Suitable for restaurants, cafés, bakeries and creators</li>\n<li>Add logos, text, illustrations and branded artwork</li>\n<li>Available in different apron styles and color options</li>\n<li>Ideal for hospitality, kitchen and promotional collections</li>\n<li>Suitable for sellers targeting customers across the USA</li>\n<li>Produced after each customer order</li>\n<li>No bulk inventory required</li>\n</ul>",
+      "description": "<p class=\"isSelectedEnd\">Custom POD Aprons give online sellers, hospitality businesses and creators a flexible way to offer personalized products beyond standard t-shirts and hoodies. Aprons combine everyday functionality with a visible branding area, making them suitable for restaurants, cafés, bakeries, catering companies, cooking creators, food-related businesses and online gift stores.</p>\n<p class=\"isSelectedEnd\">For business use, a simple chest or front logo can create a professional look for restaurant, café or bakery staff. Ecommerce sellers can take a different approach by using typography, illustrations, humorous designs or niche artwork aimed at home cooks, chefs, bakers and food enthusiasts. This makes aprons suitable for both branded workwear and retail merchandise.</p>\n<p class=\"isSelectedEnd\">Available apron styles, garment colors and design areas can be configured according to the selected product. Sellers can introduce several artwork variations, create collections for different audiences or test seasonal designs without committing to large production quantities. Product options may vary depending on the selected apron and fulfillment location.</p>\n<p class=\"isSelectedEnd\">POD production also makes it easier to expand an existing ecommerce catalog. A store already selling custom apparel can add aprons as a complementary product for kitchen, hospitality or lifestyle collections. New designs can be introduced gradually, helping sellers evaluate demand before building a larger product range.</p>\n<p>For stores selling to customers in the USA, clear product presentation is especially important. Use accurate product images, readable size and product information, and artwork that matches the available print area. High-resolution files and strong contrast between the design and apron color can help create a cleaner finished result.</p>\n<p class=\"isSelectedEnd\">Learn more about our <strong><a href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Shopify</span></a></strong> and <strong><a href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Etsy</span></a></strong> solutions to see how each integration can support your store.</p>\n<p><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5305,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Apron.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Apron-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Apron.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Apron-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Apron-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Apron-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Apron-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Apron-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Apron-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Apron-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Apron-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Apron-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Apron-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Apron-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Apron-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Apron.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Custom POD Aprons",
+          "alt": "Custom POD Aprons"
+        },
+        {
+          "id": 5307,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (1)",
+          "alt": ""
+        },
+        {
+          "id": 5308,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (2)",
+          "alt": ""
+        },
+        {
+          "id": 5309,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (3)",
+          "alt": ""
+        },
+        {
+          "id": 5310,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (4)",
+          "alt": ""
+        },
+        {
+          "id": 5311,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (5)",
+          "alt": ""
+        },
+        {
+          "id": 5312,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (6)",
+          "alt": ""
+        },
+        {
+          "id": 5313,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (7)",
+          "alt": ""
+        },
+        {
+          "id": 5314,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (8)",
+          "alt": ""
+        },
+        {
+          "id": 5315,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/apron-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/apron-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/apron-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/apron-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/apron-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "apron (9)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 111,
+          "name": "Aprons",
+          "slug": "aprons",
+          "link": "https://printmelon.com/product-category/aprons/"
+        }
+      ],
+      "tags": [
+        {
+          "id": 112,
+          "name": "Aprons",
+          "slug": "aprons",
+          "link": "https://printmelon.com/product-tag/aprons/"
+        }
+      ],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom POD Aprons&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5306",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5306",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5306&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5241,
+      "name": "Custom Hats and Caps",
+      "slug": "custom-hats-and-caps",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/custom-hats-and-caps/",
+      "sku": "",
+      "short_description": "<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"661\" data-end=\"970\"><strong data-start=\"661\" data-end=\"685\">Custom hats and caps</strong> are a practical way to add branded headwear to apparel collections, merchandise lines and online stores. Choose from available cap styles, colors and fits, add your logo or artwork, and sell through Shopify, Etsy or your ecommerce store without purchasing large quantities in advance.</p>\n<ul data-start=\"972\" data-end=\"1335\">\n<li data-section-id=\"811694\" data-start=\"972\" data-end=\"1035\">Custom headwear for brands, teams and merchandise collections</li>\n<li data-section-id=\"16yjak1\" data-start=\"1036\" data-end=\"1087\">Available in multiple cap styles, colors and fits</li>\n<li data-section-id=\"3ttxus\" data-start=\"1088\" data-end=\"1139\">Suitable for logos, lettering and graphic designs</li>\n<li data-section-id=\"19tk70t\" data-start=\"1140\" data-end=\"1207\">Options may include baseball, trucker, fitted and snapback styles</li>\n<li data-section-id=\"188fwey\" data-start=\"1208\" data-end=\"1257\">Designed for Shopify, Etsy and ecommerce stores</li>\n<li data-section-id=\"19cloa4\" data-start=\"1258\" data-end=\"1297\">Produced according to customer orders</li>\n<li data-section-id=\"18t1z2g\" data-start=\"1298\" data-end=\"1335\">No bulk finished inventory required</li>\n</ul>",
+      "description": "<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"1405\" data-end=\"1718\"><strong data-start=\"1405\" data-end=\"1429\">Custom hats and caps</strong> give apparel brands and online sellers an easy way to expand their product range beyond shirts and hoodies. Headwear can work as a standalone branded item or as part of a coordinated collection, making it useful for fashion labels, sports teams, creators, companies and event merchandise.</p>\n<p data-start=\"1720\" data-end=\"1991\">Designs can range from small brand marks and initials to typography, symbols and other graphic elements. Because caps have more defined customization areas than flat garments, artwork should be prepared with the available front, side or other supported placement in mind.</p>\n<p data-start=\"1993\" data-end=\"2226\">Different cap constructions can also create very different looks. A structured baseball cap may suit corporate or team branding, while trucker, snapback or fitted styles can work well for lifestyle, streetwear and casual collections.</p>\n<p data-start=\"2228\" data-end=\"2438\">Sellers can choose supported sizes, colors and product variations before publishing. This makes <strong data-start=\"2324\" data-end=\"2348\">custom hats and caps</strong> useful for building diverse headwear collections while keeping inventory commitments low.</p>\n<p data-start=\"2440\" data-end=\"2683\">For the best product presentation, use sharp artwork, clear mockups and accurate product information. Make sure logos and lettering remain readable at the selected print or embroidery size and avoid excessive detail in very small design areas.</p>\n<p class=\"isSelectedEnd\">Learn more about our <strong><a href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Shopify</span></a></strong> and <strong><a href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Etsy</span></a></strong> solutions to see how each integration can support your store.</p>\n<p><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5243,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "custom hats and caps",
+          "alt": "custom hats and caps"
+        },
+        {
+          "id": 5244,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (9)",
+          "alt": ""
+        },
+        {
+          "id": 5245,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-10.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-10-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-10.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-10-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-10-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-10.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (10)",
+          "alt": ""
+        },
+        {
+          "id": 5248,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (2)",
+          "alt": ""
+        },
+        {
+          "id": 5249,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (3)",
+          "alt": ""
+        },
+        {
+          "id": 5250,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (5)",
+          "alt": ""
+        },
+        {
+          "id": 5251,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (6)",
+          "alt": ""
+        },
+        {
+          "id": 5242,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-11.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-11-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-11.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-11-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-11-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-11.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants",
+          "alt": ""
+        },
+        {
+          "id": 5252,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (7)",
+          "alt": ""
+        },
+        {
+          "id": 5247,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/acc-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/acc-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/acc-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/acc-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/acc-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "acc (1)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 127,
+          "name": "Hats &amp; Caps",
+          "slug": "hats-caps",
+          "link": "https://printmelon.com/product-category/hats-caps/"
+        }
+      ],
+      "tags": [],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom Hats and Caps&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5241",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5241",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5241&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5220,
+      "name": "Custom Pants",
+      "slug": "print-on-demand-pants",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/print-on-demand-pants/",
+      "sku": "",
+      "short_description": "<p class=\"isSelectedEnd\"><strong data-start=\"552\" data-end=\"577\">Print on demand pants</strong> are a practical way for clothing brands, creators and online sellers to expand their apparel collections without holding bulk inventory. Customize pants with your artwork, choose available styles, colors and sizes, and sell them through Shopify, Etsy or your ecommerce store.</p>\n<ul data-spread=\"false\">\n<li>Custom pants and bottoms for apparel collections</li>\n<li>Available in different styles, colors and size variations</li>\n<li>Suitable for logos, graphics and custom artwork</li>\n<li>Designed for lifestyle brands, merchandise and everyday wear</li>\n<li>Built for Shopify, Etsy and ecommerce stores</li>\n<li>Produced after each customer order</li>\n<li>No bulk inventory required</li>\n</ul>",
+      "description": "<p class=\"isSelectedEnd\">Print on demand pants give clothing brands, creators and online sellers another way to expand beyond traditional tops and build more complete apparel collections. Custom pants and bottoms can work well for lifestyle brands, branded merchandise, team apparel, uniforms, creator collections and everyday clothing sold through online stores.</p>\n<p class=\"isSelectedEnd\">Different artwork styles can be used to give each product a distinctive identity. Minimal logos and brand marks can create a clean look, while typography, illustrations and larger graphic elements can help build statement pieces. Available customization areas vary by product, so artwork should always be prepared according to the supported print area and garment construction.</p>\n<p class=\"isSelectedEnd\">Sellers can configure available sizes, colors and other product variations before publishing products to their stores. This makes print on demand pants suitable for testing new designs, introducing coordinated apparel collections and offering more choices without purchasing large quantities of finished inventory in advance.</p>\n<p>For better product presentation, use clear mockups, accurate sizing information and high-resolution artwork prepared for the selected printing method. Review the garment color, artwork dimensions and supported placement area before publishing to make sure important design elements remain visible and correctly positioned.</p>\n<p class=\"isSelectedEnd\">Learn more about our <strong><a href=\"https://printmelon.com/shopify-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Shopify</span></a></strong> and <strong><a href=\"https://printmelon.com/etsy-print-on-demand-fulfillment/\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\">Print on Demand for Etsy</span></a></strong> solutions to see how each integration can support your store.</p>\n<p><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5231,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand pants",
+          "alt": "Print on demand pants"
+        },
+        {
+          "id": 5231,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on demand pants",
+          "alt": "Print on demand pants"
+        },
+        {
+          "id": 5232,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (2)",
+          "alt": ""
+        },
+        {
+          "id": 5233,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (3)",
+          "alt": ""
+        },
+        {
+          "id": 5234,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (4)",
+          "alt": ""
+        },
+        {
+          "id": 5235,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on Demand Pants",
+          "alt": "Print on Demand Pants"
+        },
+        {
+          "id": 5236,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (6)",
+          "alt": ""
+        },
+        {
+          "id": 5237,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (7)",
+          "alt": ""
+        },
+        {
+          "id": 5238,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-8.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-8-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-8.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-8-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-8-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-8.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (8)",
+          "alt": ""
+        },
+        {
+          "id": 5239,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/pants-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/pants-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/pants-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/pants-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/pants-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "pants (9)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 106,
+          "name": "Pants",
+          "slug": "pants",
+          "link": "https://printmelon.com/product-category/pants/"
+        }
+      ],
+      "tags": [],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom Pants&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5220",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5220",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5220&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5217,
+      "name": "Custom Hoodies &#038; Sweatshirts",
+      "slug": "custom-hoodies-sweatshirts",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+      "sku": "",
+      "short_description": "<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"860\" data-end=\"1115\">Create custom hoodies &amp; sweatshirts for your clothing brand, online store, business or merchandise collection. Choose your preferred style, garment color and print placement, upload your artwork and publish a product designed for order-based fulfilment.</p>\n<ul data-start=\"1117\" data-end=\"1441\">\n<li data-section-id=\"1rrxq8s\" data-start=\"1117\" data-end=\"1176\">Pullover hoodies, zip-up hoodies and crewneck sweatshirts</li>\n<li data-section-id=\"tqvh5a\" data-start=\"1177\" data-end=\"1219\">Multiple garment colors and size options</li>\n<li data-section-id=\"x9y0jq\" data-start=\"1220\" data-end=\"1275\">Suitable for logos, illustrations and branded artwork</li>\n<li data-section-id=\"1nly105\" data-start=\"1276\" data-end=\"1325\">Front, back, chest and sleeve placement options</li>\n<li data-section-id=\"188fwey\" data-start=\"1326\" data-end=\"1375\">Designed for Shopify, Etsy and ecommerce stores</li>\n<li data-section-id=\"1x5g21j\" data-start=\"1376\" data-end=\"1412\">Produced after each customer order</li>\n<li data-section-id=\"1d3gcwq\" data-start=\"1413\" data-end=\"1441\">No bulk inventory required</li>\n</ul>",
+      "description": "<div class=\"\" data-turn-id-container=\"70b31988-e6ac-4a94-a930-bb53b5ffb513\" data-is-intersecting=\"true\">\n<p class=\"PDq2pG_selectionAnchorContainer\" data-start=\"1254\" data-end=\"1776\">Custom Hoodies &amp; Sweatshirts give clothing brands, creators, businesses and online sellers a flexible way to launch personalized apparel without purchasing large quantities in advance. Choose from pullover hoodies, zip-up hoodies and crewneck sweatshirts, then combine available garment colors, sizes and supported print placements to create a collection that fits your audience. These products work well for branded merchandise, company uniforms, event apparel, creator drops, promotional campaigns and seasonal releases.</p>\n<p data-start=\"1781\" data-end=\"2317\">A small chest logo can create a clean, understated look, while larger front or back artwork is better suited to bold illustrations, campaign graphics and statement designs. Sleeve and label placements can add extra branding where supported by the selected garment. Sellers can also create coordinated collections by using the same artwork across different hoodie and sweatshirt styles. Before publishing, review the available print areas, garment colors and size range, because these may vary between products and fulfillment locations.</p>\n<p data-start=\"2322\" data-end=\"2721\">Each item is produced after the customer places an order. This order-based workflow allows stores to test new artwork, introduce limited collections and expand their catalog without committing to bulk production. It can also simplify product planning by allowing sellers to build variants around the options available for each garment rather than purchasing and storing every combination in advance.</p>\n<p data-start=\"2726\" data-end=\"3141\">For the best customer experience, use clear product images, accurate size information and artwork that matches the selected printing method. Review the design placement carefully around pockets, zippers, seams, drawstrings and other construction areas. Learn more about our <a href=\"https://printmelon.com/global-print-on-demand-fulfillment/\"><strong data-start=\"3000\" data-end=\"3039\">print-on-demand fulfillment process</strong></a> and <a href=\"https://printmelon.com/integrations/shopify/\"><strong data-start=\"3044\" data-end=\"3075\">Shopify integration options</strong></a> before connecting your store and publishing the finished product.</p>\n<p data-start=\"2726\" data-end=\"3141\"><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>\n</div>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5216,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Custom Hoodies &#038; Sweatshirts",
+          "alt": "Custom Hoodies & SweatshirtsSweatshirts"
+        },
+        {
+          "id": 5218,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (1)",
+          "alt": ""
+        },
+        {
+          "id": 5219,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (2)",
+          "alt": ""
+        },
+        {
+          "id": 5221,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (3)",
+          "alt": ""
+        },
+        {
+          "id": 5222,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (4)",
+          "alt": ""
+        },
+        {
+          "id": 5223,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Print on Demand Products",
+          "alt": "Print on Demand Products"
+        },
+        {
+          "id": 5224,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (6)",
+          "alt": ""
+        },
+        {
+          "id": 5225,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (7)",
+          "alt": ""
+        },
+        {
+          "id": 5227,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-9.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-9.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-9.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (9)",
+          "alt": ""
+        },
+        {
+          "id": 5228,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-10.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-10.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/hoodies-10.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "hoodies (10)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 103,
+          "name": "Hoodies",
+          "slug": "hoodies-sweatshirts",
+          "link": "https://printmelon.com/product-category/hoodies-sweatshirts/"
+        }
+      ],
+      "tags": [],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom Hoodies &#038; Sweatshirts&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=5217",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/5217",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=5217&per_page=10"
+          }
+        ]
+      }
+    },
+    {
+      "id": 516,
+      "name": "Custom T-Shirt",
+      "slug": "custom-t-shirt",
+      "parent": 0,
+      "type": "simple",
+      "variation": "",
+      "permalink": "https://printmelon.com/product/custom-t-shirt/",
+      "sku": "",
+      "short_description": "<p class=\"isSelectedEnd\">Create custom t-shirts for your clothing brand, online store, business or merchandise collection. Choose your preferred style, garment color and print placement, upload your artwork and prepare a product for order-based print-on-demand fulfillment.</p>\n<ul data-spread=\"false\">\n<li>Multiple t-shirt styles and garment options</li>\n<li>Available in different colors and size variations</li>\n<li>Suitable for logos, illustrations and custom graphics</li>\n<li>Front, back, chest and selected sleeve print placements</li>\n<li>Designed for Shopify, Etsy and ecommerce stores</li>\n<li>Produced after each customer order</li>\n<li>No bulk inventory required</li>\n</ul>",
+      "description": "<p class=\"isSelectedEnd\">Custom T-Shirts give clothing brands, creators, businesses and online sellers a flexible way to build personalized apparel collections without purchasing large quantities in advance. They can be used for branded merchandise, creator collections, company clothing, promotional campaigns, events, limited releases and everyday apparel. Choose from available t-shirt styles, colors and sizes, then combine them with your own artwork to create products that fit your brand and target audience.</p>\n<p class=\"isSelectedEnd\">T-shirts offer a versatile surface for different types of designs. A small chest logo can create a clean and minimal branded look, while larger front or back placements work well for illustrations, typography, promotional artwork and statement graphics. Selected products may also support sleeve or label areas, allowing brands to add additional details without overcrowding the main design.</p>\n<p class=\"isSelectedEnd\">Each product can be configured with available variants before it is published in your online store. Sellers can use the same design across several garment colors, introduce different artwork collections or test limited products without committing to bulk manufacturing. Because each item is produced after a customer places an order, new designs can be introduced gradually while reducing the need to purchase and store finished inventory in advance.</p>\n<p>For better product presentation, use clear mockups, accurate size information and artwork prepared for the selected printing method. Strong contrast between the design and garment color can improve visibility, while correct artwork dimensions help maintain print quality. Before publishing, review the available print area, selected garment color and placement to make sure important design elements remain clear and correctly positioned.</p>\n<p>Learn more about our <a href=\"https://printmelon.com/integrations/shopify/\"><strong>Print on Demand for Shopify</strong></a> and <a href=\"https://printmelon.com/integrations/etsy/\"><strong>Print on Demand for Etsy</strong></a> solutions to see how each integration can support your store.</p>\n<p><a href=\"https://app.printmelon.com/products?category=Pants\"><span class=\"text-token-text-primary cursor-text rounded-sm\" data-placeholder-token=\"true\"><strong>Browse our full product catalog</strong></span></a> to explore more customizable apparel, accessories and print-on-demand products for your online store. Already have an account? <a href=\"https://printmelonidentity.b2clogin.com/printmelonidentity.onmicrosoft.com/b2c_1a_accountlink_susi/oauth2/v2.0/authorize?client_id=c59cd94a-d86a-4337-a130-2ea9a7c42f38&amp;scope=openid%20profile%20offline_access&amp;redirect_uri=https%3A%2F%2Fapp.printmelon.com%2Fauth&amp;client-request-id=01a056ac-d1d8-7312-83ff-7e5795b9565f&amp;response_mode=fragment&amp;response_type=code&amp;x-client-SKU=msal.js.browser&amp;x-client-VER=3.24.0&amp;client_info=1&amp;code_challenge=ZkujWm1PVJfv4UfBB7EaBoLMqxR-m1LQwt-EWUzxQOA&amp;code_challenge_method=S256&amp;nonce=01a056ac-d1db-73a1-8ac4-d2aef6cf8da1&amp;state=eyJpZCI6IjAxYTA1NmFjLWQxZGEtNzE4Mi05M2JhLWM4ZmYxMjY1Y2M5OSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D\"><strong data-start=\"310\" data-end=\"335\">Log in to Print Melon</strong></a> to manage your products and orders.</p>",
+      "on_sale": false,
+      "prices": {
+        "price": "1250",
+        "regular_price": "1250",
+        "sale_price": "1250",
+        "price_range": null,
+        "currency_code": "AZN",
+        "currency_symbol": "₼",
+        "currency_minor_unit": 2,
+        "currency_decimal_separator": ",",
+        "currency_thousand_separator": ".",
+        "currency_prefix": "",
+        "currency_suffix": " ₼"
+      },
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">12,50&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#8380;</span></span>",
+      "average_rating": "0",
+      "review_count": 0,
+      "images": [
+        {
+          "id": 5409,
+          "src": "https://printmelon.com/wp-content/uploads/2026/07/organic-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/07/organic-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/07/organic-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/07/organic-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/07/organic-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/07/organic-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Custom T-Shirt",
+          "alt": "Custom T-Shirt"
+        },
+        {
+          "id": 5203,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Untitled design (77)",
+          "alt": ""
+        },
+        {
+          "id": 5204,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "Untitled design (76)",
+          "alt": ""
+        },
+        {
+          "id": 5205,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-1.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-1-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-1.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-1-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-1-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-1.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (1)",
+          "alt": ""
+        },
+        {
+          "id": 5206,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-2.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-2-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-2.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-2-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-2-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-2.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (2)",
+          "alt": ""
+        },
+        {
+          "id": 5207,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-3.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-3-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-3.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-3-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-3-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-3.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (3)",
+          "alt": ""
+        },
+        {
+          "id": 5208,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-4.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-4-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-4.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-4-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-4-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-4.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (4)",
+          "alt": ""
+        },
+        {
+          "id": 5209,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-5.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-5-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-5.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-5-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-5-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-5.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (5)",
+          "alt": ""
+        },
+        {
+          "id": 5210,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-6.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-6-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-6.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-6-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-6-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-6.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (6)",
+          "alt": ""
+        },
+        {
+          "id": 5211,
+          "src": "https://printmelon.com/wp-content/uploads/2026/06/melon-7.png",
+          "thumbnail": "https://printmelon.com/wp-content/uploads/2026/06/melon-7-300x300.png",
+          "srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-7.png 1080w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-768x768.png 768w",
+          "sizes": "(max-width: 1080px) 100vw, 1080px",
+          "thumbnail_srcset": "https://printmelon.com/wp-content/uploads/2026/06/melon-7-300x300.png 300w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-100x100.png 100w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-600x600.png 600w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-1024x1024.png 1024w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-150x150.png 150w, https://printmelon.com/wp-content/uploads/2026/06/melon-7-768x768.png 768w, https://printmelon.com/wp-content/uploads/2026/06/melon-7.png 1080w",
+          "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+          "name": "melon (7)",
+          "alt": ""
+        }
+      ],
+      "categories": [
+        {
+          "id": 104,
+          "name": "T-Shirts",
+          "slug": "t-shirts",
+          "link": "https://printmelon.com/product-category/t-shirts/"
+        }
+      ],
+      "tags": [
+        {
+          "id": 126,
+          "name": "Custom T-Shirt",
+          "slug": "custom-t-shirt",
+          "link": "https://printmelon.com/product-tag/custom-t-shirt/"
+        },
+        {
+          "id": 105,
+          "name": "T-Shirts",
+          "slug": "t-shirts",
+          "link": "https://printmelon.com/product-tag/t-shirts/"
+        }
+      ],
+      "brands": [],
+      "attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "has_options": false,
+      "is_purchasable": true,
+      "is_in_stock": true,
+      "is_on_backorder": false,
+      "low_stock_remaining": null,
+      "stock_availability": {
+        "text": "",
+        "class": "in-stock"
+      },
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "formatted_weight": "N/A",
+      "formatted_dimensions": "N/A",
+      "add_to_cart": {
+        "text": "Add to cart",
+        "description": "Add to cart: &ldquo;Custom T-Shirt&rdquo;",
+        "url": "/wp-json/wc/store/v1/products?per_page=100&#038;page=1&#038;add-to-cart=516",
+        "single_text": "Add to cart",
+        "minimum": 1,
+        "maximum": 9999,
+        "multiple_of": 1
+      },
+      "is_password_protected": false,
+      "extensions": {},
+      "_links": {
+        "self": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products/516",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products"
+          }
+        ],
+        "related": [
+          {
+            "embeddable": true,
+            "href": "https://printmelon.com/wp-json/wc/store/v1/products?related=516&per_page=10"
+          }
+        ]
+      }
+    }
+  ]
+}

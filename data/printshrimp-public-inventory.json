@@ -1,0 +1,116 @@
+{
+  "providerId": "printshrimp",
+  "checkedAt": "2026-10-04T11:10:44.581Z",
+  "products": [
+    {
+      "id": 7538733121634,
+      "title": "Framed Art Print",
+      "handle": "framed-art-print",
+      "body_html": "<p><meta charset=\"utf-8\"><span>Hand-cut premium framed art prints, always above 200GSM+ printed with canon technology.</span></p>",
+      "published_at": "2026-04-03T13:22:34+04:00",
+      "created_at": "2026-04-03T13:20:40+04:00",
+      "updated_at": "2026-10-04T15:10:48+04:00",
+      "vendor": "PrintShrimp",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 42684815966306,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "19.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 7538733121634,
+          "created_at": "2026-04-03T13:20:41+04:00",
+          "updated_at": "2026-10-04T15:10:48+04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 34557266526306,
+          "created_at": "2026-04-03T13:21:29+04:00",
+          "position": 1,
+          "updated_at": "2026-04-03T13:21:30+04:00",
+          "product_id": 7538733121634,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0661/0694/9730/files/frame3.jpg?v=1775208090",
+          "width": 876,
+          "height": 1147
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7538733088866,
+      "title": "Premium Art Print",
+      "handle": "premium-art-print",
+      "body_html": "<p><meta charset=\"utf-8\"><span>Hand-cut premium art prints, always above 200GSM+ printed with canon technology.</span></p>",
+      "published_at": "2026-04-03T13:20:27+04:00",
+      "created_at": "2026-04-03T13:20:24+04:00",
+      "updated_at": "2026-10-04T15:10:48+04:00",
+      "vendor": "PrintShrimp",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 42684815933538,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "4.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 7538733088866,
+          "created_at": "2026-04-03T13:20:26+04:00",
+          "updated_at": "2026-10-04T15:10:48+04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 34557263741026,
+          "created_at": "2026-04-03T13:19:36+04:00",
+          "position": 1,
+          "updated_at": "2026-04-03T13:19:38+04:00",
+          "product_id": 7538733088866,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0661/0694/9730/files/print3.jpg?v=1775207978",
+          "width": 876,
+          "height": 1147
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    }
+  ]
+}

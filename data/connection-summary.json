@@ -1,0 +1,230 @@
+{
+  "products": 19964,
+  "photos": 19964,
+  "automaticPlatforms": 37,
+  "candidates": 121,
+  "pendingPriceRecords": 75,
+  "platforms": [
+    {
+      "id": "yoycol",
+      "name": "Yoycol",
+      "count": 1541
+    },
+    {
+      "id": "printkk",
+      "name": "PrintKK",
+      "count": 1423,
+      "coverage": "verified-product-details"
+    },
+    {
+      "id": "printful",
+      "name": "Printful",
+      "count": 552
+    },
+    {
+      "id": "inkedjoy",
+      "name": "Inkedjoy",
+      "count": 1463,
+      "coverage": "full-public-catalog"
+    },
+    {
+      "id": "merchize",
+      "name": "Merchize",
+      "count": 818,
+      "coverage": "verified-default-product-variants"
+    },
+    {
+      "id": "podpartner",
+      "name": "PODPartner",
+      "count": 206,
+      "coverage": "full-public-catalog"
+    },
+    {
+      "id": "interestprint",
+      "name": "Interestprint",
+      "count": 3388,
+      "coverage": "public-category-pages"
+    },
+    {
+      "id": "inkthreadable",
+      "name": "Inkthreadable",
+      "count": 182,
+      "coverage": "verified-public-product-pages"
+    },
+    {
+      "id": "tshirtgang",
+      "name": "TshirtGang",
+      "count": 38,
+      "coverage": "public-product-pages"
+    },
+    {
+      "id": "artsadd",
+      "name": "Artsadd",
+      "count": 1032,
+      "coverage": "public-category-pages"
+    },
+    {
+      "id": "podbase",
+      "name": "Podbase",
+      "count": 24,
+      "coverage": "public-product-pages"
+    },
+    {
+      "id": "peaprint",
+      "name": "PeaPrint",
+      "count": 1216,
+      "coverage": "full-public-api-catalog"
+    },
+    {
+      "id": "teelaunch",
+      "name": "Teelaunch",
+      "count": 143,
+      "coverage": "public-product-sitemap"
+    },
+    {
+      "id": "kincustom",
+      "name": "KINcustom",
+      "count": 155,
+      "coverage": "public-web-catalog"
+    },
+    {
+      "id": "jetprint",
+      "name": "JetPrint",
+      "count": 151,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "aop",
+      "name": "AOP+",
+      "count": 131,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "superfastpod",
+      "name": "SuperFastPOD",
+      "count": 28,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "printrove",
+      "name": "Printrove",
+      "count": 30,
+      "coverage": "verified-public-base-prices"
+    },
+    {
+      "id": "printy6",
+      "name": "Printy6",
+      "count": 141,
+      "coverage": "public-paginated-catalog"
+    },
+    {
+      "id": "ogo",
+      "name": "Ogo",
+      "count": 42,
+      "coverage": "public-product-pages"
+    },
+    {
+      "id": "papello",
+      "name": "Papello",
+      "count": 28,
+      "coverage": "verified-public-product-pages"
+    },
+    {
+      "id": "printegy",
+      "name": "Printegy",
+      "count": 94,
+      "coverage": "public-product-pages"
+    },
+    {
+      "id": "printdoors",
+      "name": "Printdoors",
+      "count": 1630,
+      "coverage": "public-api-price-rules-partial"
+    },
+    {
+      "id": "popcustoms",
+      "name": "PopCustoms",
+      "count": 796,
+      "coverage": "full-public-variant-catalog"
+    },
+    {
+      "id": "qikink",
+      "name": "Qikink",
+      "count": 100,
+      "coverage": "verified-tax-inclusive-product-pages"
+    },
+    {
+      "id": "treatpod",
+      "name": "TreatPOD",
+      "count": 688,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "jumbodtg",
+      "name": "JumboDTG",
+      "count": 82,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "blackfishclothing",
+      "name": "Blackfish Clothing",
+      "count": 230,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "merchfarm",
+      "name": "MerchFarm",
+      "count": 1119,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "twofifteen",
+      "name": "Two Fifteen",
+      "count": 124,
+      "coverage": "verified-public-product-pages"
+    },
+    {
+      "id": "tapstitch",
+      "name": "Tapstitch",
+      "count": 1244,
+      "coverage": "full-public-catalog"
+    },
+    {
+      "id": "rakiline",
+      "name": "Rakiline",
+      "count": 4,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "gearment",
+      "name": "Gearment",
+      "count": 72,
+      "coverage": "public-category-pages"
+    },
+    {
+      "id": "digitalondemand",
+      "name": "Digital On Demand",
+      "count": 145,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "goquadra",
+      "name": "GoQuadra",
+      "count": 2,
+      "coverage": "public-storefront"
+    },
+    {
+      "id": "burgerprints",
+      "name": "BurgerPrints",
+      "count": 726,
+      "coverage": "full-public-catalog"
+    },
+    {
+      "id": "miamerchandise",
+      "name": "Mia Merchandise",
+      "count": 176,
+      "coverage": "public-storefront"
+    }
+  ],
+  "checkedAt": "2026-10-04T11:50:32.398Z"
+}

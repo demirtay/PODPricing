@@ -1,0 +1,124 @@
+[
+  {
+    "id": "papello",
+    "base": "https://papello.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printeers",
+    "base": "https://printeers.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printegy",
+    "base": "https://printegy.de",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printrove",
+    "base": "https://printrove.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printoteca",
+    "base": "https://printoteca.ro",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "promio",
+    "base": "https://promio.eu",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "qikink",
+    "base": "https://qikink.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "ogo",
+    "base": "https://ogo.com.au",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "aop",
+    "base": "https://aop.plus",
+    "status": 200,
+    "count": 100,
+    "total": "132",
+    "pages": "2",
+    "currency": "USD",
+    "sample": "Square Wall Tiles Set of 6"
+  },
+  {
+    "id": "twofifteen",
+    "base": "https://www.twofifteen.co.uk",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printbest",
+    "base": "https://printbest.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "merchone",
+    "base": "https://merchone.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "mwwondemand",
+    "base": "https://mwwondemand.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "miamerchandise",
+    "base": "https://miamerchandise.com",
+    "status": 404,
+    "count": null,
+    "total": null,
+    "pages": null
+  },
+  {
+    "id": "printaura",
+    "base": "https://printaura.com",
+    "status": 200,
+    "count": 0,
+    "total": "0",
+    "pages": "0"
+  }
+]

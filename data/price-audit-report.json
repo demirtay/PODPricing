@@ -1,0 +1,194 @@
+{
+  "startedAt": "2026-10-03T20:49:45.354Z",
+  "initialRecords": 13257,
+  "initialPending": 75,
+  "platforms": {
+    "tapstitch": {
+      "state": "source-checked",
+      "products": 1244,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:50:11.762Z"
+    },
+    "interestprint": {
+      "state": "source-checked",
+      "products": 3388,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:52:18.153Z"
+    },
+    "artsadd": {
+      "state": "source-checked",
+      "products": 1060,
+      "pending": 72,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:15.488Z"
+    },
+    "podpartner": {
+      "state": "source-checked",
+      "products": 206,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:23.566Z"
+    },
+    "inkedjoy": {
+      "state": "source-checked",
+      "products": 1463,
+      "checkedAt": "2026-10-03T21:01:41.919Z",
+      "retried": true
+    },
+    "yoycol": {
+      "state": "source-checked",
+      "products": 1541,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:46.437Z"
+    },
+    "printy6": {
+      "state": "source-checked",
+      "products": 141,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:50.423Z"
+    },
+    "treatpod": {
+      "state": "source-checked",
+      "products": 688,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:52.608Z"
+    },
+    "digitalondemand": {
+      "state": "source-checked",
+      "products": 145,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:54.015Z"
+    },
+    "jumbodtg": {
+      "state": "source-checked",
+      "products": 82,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:55.421Z"
+    },
+    "merchfarm": {
+      "state": "source-checked",
+      "products": 1119,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:53:59.446Z"
+    },
+    "miamerchandise": {
+      "state": "source-checked",
+      "products": 176,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:01.149Z"
+    },
+    "rakiline": {
+      "state": "source-checked",
+      "products": 4,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:02.771Z"
+    },
+    "superfastpod": {
+      "state": "source-checked",
+      "products": 28,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:03.918Z"
+    },
+    "blackfishclothing": {
+      "state": "source-checked",
+      "products": 230,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:09.407Z"
+    },
+    "teelaunch": {
+      "state": "source-checked",
+      "products": 143,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:24.018Z"
+    },
+    "burgerprints": {
+      "state": "source-checked",
+      "products": 726,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:27.338Z"
+    },
+    "aop": {
+      "state": "source-checked",
+      "products": 131,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:31.096Z"
+    },
+    "gearment": {
+      "state": "source-checked",
+      "products": 72,
+      "pending": 0,
+      "changed": [],
+      "checkedAt": "2026-10-03T20:54:45.336Z"
+    },
+    "printful": {
+      "state": "cached-variant-check",
+      "checked": 552,
+      "corrected": 0
+    },
+    "printkk": {
+      "state": "pending-product-detail-review",
+      "verified": 1423
+    },
+    "goquadra": {
+      "state": "source-checked",
+      "products": 2,
+      "checkedAt": "2026-10-03T21:46:13.636Z",
+      "coverage": "public-storefront"
+    },
+    "papello": {
+      "state": "source-checked",
+      "products": 28,
+      "checkedAt": "2026-10-03T21:46:13.642Z",
+      "coverage": "verified-public-product-pages"
+    },
+    "twofifteen": {
+      "state": "source-checked",
+      "products": 35,
+      "checkedAt": "2026-10-03T21:46:13.642Z",
+      "coverage": "verified-public-product-pages"
+    },
+    "printrove": {
+      "state": "source-checked",
+      "products": 30,
+      "checkedAt": "2026-10-03T21:46:13.642Z",
+      "coverage": "verified-public-base-prices"
+    },
+    "inkthreadable": {
+      "state": "source-checked",
+      "products": 182,
+      "checkedAt": "2026-10-03T21:46:13.642Z",
+      "coverage": "verified-public-product-pages"
+    },
+    "merchize": {
+      "state": "source-checked",
+      "products": 818,
+      "checkedAt": "2026-10-04T10:53:21.552Z",
+      "coverage": "verified-default-product-variants"
+    },
+    "qikink": {
+      "state": "source-checked",
+      "products": 100,
+      "checkedAt": "2026-10-04T10:53:21.557Z",
+      "coverage": "verified-tax-inclusive-product-pages"
+    }
+  },
+  "finishedAt": "2026-10-03T20:54:46.552Z",
+  "complete": false,
+  "pendingRecords": 75,
+  "sourceCheckedPlatforms": 26
+}

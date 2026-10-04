@@ -1,0 +1,2067 @@
+{
+  "checkedAt": "2026-10-04T11:10:44.581Z",
+  "stores": [
+    {
+      "id": "jetprint",
+      "discovered": 156,
+      "imported": 151,
+      "pending": [
+        {
+          "sourceProductId": "3961",
+          "title": "Custom Heavy Cotton T-shirts",
+          "url": "https://jetprintapp.com/product/custom-heavy-cotton-t-shirts/",
+          "reason": "Satın alınabilir, stokta, fotoğraflı pozitif fiyatlı ürün koşulları sağlanmıyor"
+        },
+        {
+          "sourceProductId": "3952",
+          "title": "Custom Long Sleeve Button up Shirt",
+          "url": "https://jetprintapp.com/product/custom-long-sleeve-button-up-shirt/",
+          "reason": "Satın alınabilir, stokta, fotoğraflı pozitif fiyatlı ürün koşulları sağlanmıyor"
+        },
+        {
+          "sourceProductId": "3874",
+          "title": "Casual Women T-Shirt Dress",
+          "url": "https://jetprintapp.com/product/casual-black-t-shirt-dress/",
+          "reason": "Satın alınabilir, stokta, fotoğraflı pozitif fiyatlı ürün koşulları sağlanmıyor"
+        },
+        {
+          "sourceProductId": "3834",
+          "title": "Custom Women&#8217;s Hoodie Dress",
+          "url": "https://jetprintapp.com/product/custom-womens-hoodie-dress/",
+          "reason": "Satın alınabilir, stokta, fotoğraflı pozitif fiyatlı ürün koşulları sağlanmıyor"
+        },
+        {
+          "sourceProductId": "3651",
+          "title": "Short Yoga Pants",
+          "url": "https://jetprintapp.com/product/black-short-yoga-pants/",
+          "reason": "Satın alınabilir, stokta, fotoğraflı pozitif fiyatlı ürün koşulları sağlanmıyor"
+        }
+      ]
+    },
+    {
+      "id": "picthegift",
+      "discovered": 324,
+      "imported": 0,
+      "pending": [
+        {
+          "sourceProductId": "12573353541950",
+          "title": "EasiSwap™ Gallery Frame SEG - 20” x 24”",
+          "url": "https://picthegift.com/products/easiswap-gallery-frame-seg-20-x24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573392240958",
+          "title": "EasiSwap™ Gallery Frame SEG - 30\" x 30\"",
+          "url": "https://picthegift.com/products/easiswap-gallery-frame-seg-30x-30",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573404594494",
+          "title": "EasiGlow™ Duo - 3' x 7' SEG Lightbox",
+          "url": "https://picthegift.com/products/easiglow-duo-seg-lightbox-3x7",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573413114174",
+          "title": "EasiShow Duo™ - 10' x 8' Freestanding Double Sided SEG",
+          "url": "https://picthegift.com/products/easishow-display-10x8-freestanding-seg",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573425467710",
+          "title": "EasiShow Lite™ - 10' x 8' SEG Wall",
+          "url": "https://picthegift.com/products/easishow-lite-display-10x8-seg-wall",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573436117310",
+          "title": "EasiCurve® Graphic Sweep 8' x 12' Kit",
+          "url": "https://picthegift.com/products/easicurve®-graphic-sweep-8x12-kit",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12577990771006",
+          "title": "Easi CakeSmash™ - 60” x 80” Backdrop Frame",
+          "url": "https://picthegift.com/products/easi-cakesmash-backdrop-frame-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12573448634686",
+          "title": "EasiNook™ Creator - 10' x 8' (U-shape Display)",
+          "url": "https://picthegift.com/products/easinook-creator-u-shape-display",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12606026481982",
+          "title": "Washable Chenille Rug - 4' x 6'",
+          "url": "https://picthegift.com/products/washable-chenille-rug-4-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12566828581182",
+          "title": "Interchangeable Door Mat - Half Moon",
+          "url": "https://picthegift.com/products/interchangeable-mat-half-moon",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12566823993662",
+          "title": "Interchangeable Door Mat - Rectangle",
+          "url": "https://picthegift.com/products/interchangeable-mat-rectangle",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12555722948926",
+          "title": "Sherpa Blanket with Hemmed Edges - 56\" x 76\"",
+          "url": "https://picthegift.com/products/sherpa-hem-blanket-56-x-76",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12555695587646",
+          "title": "Sherpa Blanket with Hemmed Edges - 46\" x 56\"",
+          "url": "https://picthegift.com/products/sherpa-hem-blanket-46-x-56",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12555680907582",
+          "title": "Sherpa Blanket with Hemmed Edges - 26\" x 36\"",
+          "url": "https://picthegift.com/products/sherpa-hem-blanket-26-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12552001126718",
+          "title": "Large Pet Bowl - 64oz.",
+          "url": "https://picthegift.com/products/large-pet-bowl-64oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12551988937022",
+          "title": "Small Pet Bowl - 32oz.",
+          "url": "https://picthegift.com/products/small-pet-bowl-32oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12467910541630",
+          "title": "Mahjong Mat - 31.5\" x 31.5\"",
+          "url": "https://picthegift.com/products/mahjong-mat-31-5-x-31-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12392101675326",
+          "title": "Throw Pillow Case with Front Pocket - 18\" x 18\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-with-front-pocket-18-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12392093712702",
+          "title": "Wall Tapestry - 13\" x 18\"",
+          "url": "https://picthegift.com/products/wall-tapestry-13-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12392088568126",
+          "title": "Washable Chenille Rug - 5' x 7'",
+          "url": "https://picthegift.com/products/washable-chenille-rug-5-x-7",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12392075723070",
+          "title": "Washable Chenille Rug - 2' x 3'",
+          "url": "https://picthegift.com/products/washable-chenille-rug-2-x-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12392070676798",
+          "title": "Washable Chenille Rug - 3' x 5'",
+          "url": "https://picthegift.com/products/washable-chenille-rug-3-x-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251968274750",
+          "title": "Tempered Glass Cutting Board - 11\" x 15\"",
+          "url": "https://picthegift.com/products/tempered-glass-cutting-board-11-x-15",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251968241982",
+          "title": "Cut and Sew Onesie",
+          "url": "https://picthegift.com/products/cut-and-sew-onesie",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251968143678",
+          "title": "Slate Desk Plaque - Rectangle",
+          "url": "https://picthegift.com/products/slate-desk-plaque-rectangle",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251968078142",
+          "title": "Slate Desk Plaque - Square",
+          "url": "https://picthegift.com/products/slate-desk-plaque-square",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251968012606",
+          "title": "Twin Flat Sheet - 58\" x 97\"",
+          "url": "https://picthegift.com/products/twin-flat-sheet-58-x-97",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967979838",
+          "title": "Twin Fitted Sheet - 33\" x 72\" x 12\"",
+          "url": "https://picthegift.com/products/twin-fitted-sheet-33-x-72-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967947070",
+          "title": "Metal Photo Panel - 5\" x 7\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-5-x-7",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967914302",
+          "title": "Curved Metal Photo Panel - 5\" x 7\"",
+          "url": "https://picthegift.com/products/curved-metal-photo-panel-5-x-7",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967848766",
+          "title": "Metal Photo Panel - 8\" x 10\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-8-x-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967815998",
+          "title": "Curved Metal Photo Panel - 4\" x 6\"",
+          "url": "https://picthegift.com/products/curved-metal-photo-panel-4-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967783230",
+          "title": "Curved Metal Photo Panel - 8\" x 10\"",
+          "url": "https://picthegift.com/products/curved-metal-photo-panel-8-x-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967750462",
+          "title": "Metal Photo Panel - 11\" x 14\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-11-x-14",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967717694",
+          "title": "Curved Metal Photo Panel - 11\" x 14\"",
+          "url": "https://picthegift.com/products/curved-metal-photo-panel-11-x-14",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967684926",
+          "title": "Metal Photo Panel - 16\" x 20\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-16-x-20",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967652158",
+          "title": "Metal Photo Panel - 20\" x 24\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-20-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967619390",
+          "title": "Children's Wooden Step Stool",
+          "url": "https://picthegift.com/products/childrens-wooden-step-stool",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967553854",
+          "title": "Tote Bag - 15\"x16\"",
+          "url": "https://picthegift.com/products/tote-bag-15x16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967521086",
+          "title": "Large Aluminum Luggage Tag with Leather Strap",
+          "url": "https://picthegift.com/products/large-aluminum-luggage-tag-with-leather-strap",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967455550",
+          "title": "Small Aluminum Luggage Tag with Leather Strap",
+          "url": "https://picthegift.com/products/small-aluminum-luggage-tag-with-leather-strap",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967422782",
+          "title": "Round Photo Button - 3\"",
+          "url": "https://picthegift.com/products/round-photo-button-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967390014",
+          "title": "Round Photo Button - 4\"",
+          "url": "https://picthegift.com/products/round-photo-button-4",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967357246",
+          "title": "Photo Magnet - 2.5\" x 3.5\"",
+          "url": "https://picthegift.com/products/photo-magnet-2-5-x-3-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967324478",
+          "title": "Photo Magnet - 3.5\" x 5\"",
+          "url": "https://picthegift.com/products/photo-magnet-3-5-x-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967291710",
+          "title": "Square Baby Swaddling Blanket - 42\" x 42\"",
+          "url": "https://picthegift.com/products/square-baby-swaddling-blanket-42-x-42",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967258942",
+          "title": "Keyring Rectangle - 1.5\" x 3.25\" ",
+          "url": "https://picthegift.com/products/keyring-rectangle-1-5-x-3-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967193406",
+          "title": "Minky Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/minky-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967160638",
+          "title": "Youth Spa Wrap Towel - 22\" x 42\"",
+          "url": "https://picthegift.com/products/youth-spa-wrap-towel-22-x-42",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967095102",
+          "title": "Dry Erase Board - 8\" x 10\"",
+          "url": "https://picthegift.com/products/dry-erase-board-8-x-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251967062334",
+          "title": "Round Hardboard Announcement Sign - 6\"",
+          "url": "https://picthegift.com/products/round-hardboard-announcement-sign-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966931262",
+          "title": "White Burlap Throw Pillow Case - 18\" x 12\"",
+          "url": "https://picthegift.com/products/white-burlap-throw-pillow-case-18-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966800190",
+          "title": "White Burlap Throw Pillow Case - 16\" x16\"",
+          "url": "https://picthegift.com/products/white-burlap-throw-pillow-case-16-x16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966734654",
+          "title": "Small Pet Bandana",
+          "url": "https://picthegift.com/products/small-pet-bandana",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966701886",
+          "title": "Large Pet Bandana",
+          "url": "https://picthegift.com/products/large-pet-bandana",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966669118",
+          "title": "Nursing Pillow Cover",
+          "url": "https://picthegift.com/products/nursing-pillow-cover",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966538046",
+          "title": "Neoprene Lunch Tote - 12\" x 12\" - Single Sided",
+          "url": "https://picthegift.com/products/neoprene-lunch-tote-12-x-12-single-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966505278",
+          "title": "Scrunchie - One Size Fits Most",
+          "url": "https://picthegift.com/products/scrunchie-one-size-fits-most",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966439742",
+          "title": "Flip Flop Sandals - Adult Medium",
+          "url": "https://picthegift.com/products/flip-flop-sandals-adult-medium",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966406974",
+          "title": "Flip Flop Sandals - Adult Small",
+          "url": "https://picthegift.com/products/flip-flop-sandals-adult-small",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966374206",
+          "title": "Flip Flop Sandals - Youth Large",
+          "url": "https://picthegift.com/products/flip-flop-sandals-youth-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966341438",
+          "title": "Flip Flop Sandals - Youth Medium",
+          "url": "https://picthegift.com/products/flip-flop-sandals-youth-medium",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966308670",
+          "title": "Flip Flop Sandals - Youth Small",
+          "url": "https://picthegift.com/products/flip-flop-sandals-youth-small",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966275902",
+          "title": "Direct-to-Garment Socks",
+          "url": "https://picthegift.com/products/direct-to-garment-socks",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966210366",
+          "title": "Sublimation Socks",
+          "url": "https://picthegift.com/products/sublimation-socks",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966144830",
+          "title": "Standard Youth Sports Towel - 22\" x 42\"",
+          "url": "https://picthegift.com/products/standard-youth-sports-towel-22-x-42",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966112062",
+          "title": "Minky Blanket - 20\" x 25\"",
+          "url": "https://picthegift.com/products/minky-blanket-20-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966079294",
+          "title": "Kids Loungewear Set",
+          "url": "https://picthegift.com/products/kids-loungewear-set",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966046526",
+          "title": "Baby Swaddling Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/baby-swaddling-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251966013758",
+          "title": "Floor Mat with Black Edges - 20oz Loop - 48\" x 72\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-20oz-loop-48-x-72",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965980990",
+          "title": "Baby Onesie 3-6 mo",
+          "url": "https://picthegift.com/products/baby-onesie-3-6-mo",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965948222",
+          "title": "Baby Onesie 6-12 mo",
+          "url": "https://picthegift.com/products/baby-onesie-6-12-mo",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965915454",
+          "title": "Minky Baby Lovey Blanket - 11\" x 12\"",
+          "url": "https://picthegift.com/products/minky-baby-lovey-blanket-11-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965882686",
+          "title": "Baby Onesie 12-18 mo",
+          "url": "https://picthegift.com/products/baby-onesie-12-18-mo",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965849918",
+          "title": "Floor Mat with Black Edges - 20oz Loop - 18\" x 27\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-20oz-loop-18-x-27",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965784382",
+          "title": "Neck Tie - 3.5\" x 59\"",
+          "url": "https://picthegift.com/products/neck-tie-3-5-x-59",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965555006",
+          "title": "Pajama Pants - Medium",
+          "url": "https://picthegift.com/products/pajama-pants-medium",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965522238",
+          "title": "Pajama Pants - Small",
+          "url": "https://picthegift.com/products/pajama-pants-small",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965456702",
+          "title": "Pajama Pants - Large",
+          "url": "https://picthegift.com/products/pajama-pants-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965194558",
+          "title": "Car Back Seat Bag - 10\" x 10\"",
+          "url": "https://picthegift.com/products/car-back-seat-bag-10-x-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965129022",
+          "title": "Tan Sherpa Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/tan-sherpa-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965096254",
+          "title": "Minky Blanket - 60\" x 80\"",
+          "url": "https://picthegift.com/products/minky-blanket-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251965030718",
+          "title": "Lounge Pillow Cover",
+          "url": "https://picthegift.com/products/lounge-pillow-cover",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964997950",
+          "title": "Minky Blanket - 40\" x 50\"",
+          "url": "https://picthegift.com/products/minky-blanket-40-x-50",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964965182",
+          "title": "Knotted Baby Beanie Hat - Newborn",
+          "url": "https://picthegift.com/products/knotted-baby-beanie-hat-newborn",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964932414",
+          "title": "Baby Beanie Hat - Newborn",
+          "url": "https://picthegift.com/products/baby-beanie-hat-newborn",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964899646",
+          "title": "Knotted Baby Beanie Hat - Large Cuff - One Size Fits Most",
+          "url": "https://picthegift.com/products/knotted-baby-beanie-hat-large-cuff-one-size-fits-most",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964866878",
+          "title": "Baby Mittens - Newborn",
+          "url": "https://picthegift.com/products/baby-mittens-newborn",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964834110",
+          "title": "Knotted Baby Beanie Hat - Large Cuff - Newborn",
+          "url": "https://picthegift.com/products/knotted-baby-beanie-hat-large-cuff-newborn",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964801342",
+          "title": "Ceramic Square Ornament - 2.75\"",
+          "url": "https://picthegift.com/products/ceramic-square-ornament-2-75",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964768574",
+          "title": "European License Plate",
+          "url": "https://picthegift.com/products/european-license-plate",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964735806",
+          "title": "Metal Street Sign - 4\" x 20\"",
+          "url": "https://picthegift.com/products/metal-street-sign-4-x-20",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964703038",
+          "title": "Key Chain Square - Double Sided - 2.25\" x 2.25\"",
+          "url": "https://picthegift.com/products/key-chain-square-double-sided-2-25-x-2-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964670270",
+          "title": "Pennant Banner Shield - 18\" x 21\"",
+          "url": "https://picthegift.com/products/pennant-banner-shield-18-x-21",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964637502",
+          "title": "Pennant Banner Triangle - 10\" x 11\"",
+          "url": "https://picthegift.com/products/pennant-banner-triangle-10-x-11",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964604734",
+          "title": "Knotted Baby Beanie Hat - One Size Fits Most",
+          "url": "https://picthegift.com/products/knotted-baby-beanie-hat-one-size-fits-most",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964571966",
+          "title": "Nursing Pillow Cover - New Design",
+          "url": "https://picthegift.com/products/nursing-pillow-cover-new-design",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964539198",
+          "title": "Yard Flag - 12\" x 18\"",
+          "url": "https://picthegift.com/products/yard-flag-12-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964506430",
+          "title": "Memory Foam Standing Mat - 18\" x 27\"",
+          "url": "https://picthegift.com/products/memory-foam-standing-mat-18-x-27",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964309822",
+          "title": "Compact Makeup Mirror - Round",
+          "url": "https://picthegift.com/products/compact-makeup-mirror-round",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964244286",
+          "title": "Golf Towel with Clip - 11\" x 18\"",
+          "url": "https://picthegift.com/products/golf-towel-with-clip-11-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964211518",
+          "title": "White Box with Cotton Insert - 5 1/4\" x 3 3/4\"",
+          "url": "https://picthegift.com/products/white-box-with-cotton-insert-5-1-4-x-3-3-4",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964178750",
+          "title": "Baby Onesie 0-3 mo",
+          "url": "https://picthegift.com/products/baby-onesie-0-3-mo",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964145982",
+          "title": "Throw Pillow Case - 18\" x 18\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-18-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964113214",
+          "title": "Baby Sleeper Gown",
+          "url": "https://picthegift.com/products/baby-sleeper-gown",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964080446",
+          "title": "Zip-Up Bottle Koozie",
+          "url": "https://picthegift.com/products/zip-up-bottle-koozie",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251964047678",
+          "title": "Tapered Ornament - 2.75\" x 4.1\"",
+          "url": "https://picthegift.com/products/tapered-ornament-2-75-x-4-1",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963982142",
+          "title": "Snowflake Ornament - 3\"x 3\"",
+          "url": "https://picthegift.com/products/snowflake-ornament-3x-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963949374",
+          "title": "Berlin Ornament - 3.95\" x 2.75\"",
+          "url": "https://picthegift.com/products/berlin-ornament-3-95-x-2-75",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963883838",
+          "title": "Benelux Ornament - 3.95\" x 2.75\"",
+          "url": "https://picthegift.com/products/benelux-ornament-3-95-x-2-75",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963818302",
+          "title": "Polar Fleece Blanket - 60\" x 80\"",
+          "url": "https://picthegift.com/products/polar-fleece-blanket-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963785534",
+          "title": "Yard Flag - 12\" x 18\" - Double Sided",
+          "url": "https://picthegift.com/products/yard-flag-12-x-18-double-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963621694",
+          "title": "House Flag - 18\" x 27\" - Double Sided",
+          "url": "https://picthegift.com/products/house-flag-18-x-27-double-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963588926",
+          "title": "Hooded Kids Towel - 24\" x 48\"",
+          "url": "https://picthegift.com/products/hooded-kids-towel-24-x-48",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963556158",
+          "title": "Pennant Banner Shield - 10\" x 11\"",
+          "url": "https://picthegift.com/products/pennant-banner-shield-10-x-11",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963523390",
+          "title": "House Flag - 18\" x 27\" - Single Sided",
+          "url": "https://picthegift.com/products/house-flag-18-x-27-single-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963490622",
+          "title": "House Flag - 24\" x 32\" - Single Sided",
+          "url": "https://picthegift.com/products/house-flag-24-x-32-single-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963425086",
+          "title": "Hooded Tan Sherpa Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/hooded-tan-sherpa-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963228478",
+          "title": "Knotted Baby Headband",
+          "url": "https://picthegift.com/products/knotted-baby-headband",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963195710",
+          "title": "Toddler Pillow Case - 14\" x 19\"",
+          "url": "https://picthegift.com/products/toddler-pillow-case-14-x-19",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963162942",
+          "title": "House Flag - 24\" x 32\" - Double Sided",
+          "url": "https://picthegift.com/products/house-flag-24-x-32-double-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963130174",
+          "title": "Bottle with Straw Top - Silver - 20oz",
+          "url": "https://picthegift.com/products/bottle-with-straw-top-silver-20oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963097406",
+          "title": "Bottle with Straw Top - White - 20oz",
+          "url": "https://picthegift.com/products/bottle-with-straw-top-white-20oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251963031870",
+          "title": "Minky Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/minky-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962933566",
+          "title": "Standard Sports Towel - 15\" x 25\"",
+          "url": "https://picthegift.com/products/standard-sports-towel-15-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962900798",
+          "title": "Round Mousepad - 7.5\"",
+          "url": "https://picthegift.com/products/round-mousepad-7-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962868030",
+          "title": "Hip Flask - 7oz",
+          "url": "https://picthegift.com/products/hip-flask-7oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962835262",
+          "title": "Throw Pillow Case - 12\" x 12\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-12-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962769726",
+          "title": "Car Mat - Felt - Front Floor Mat - 17\" x 27\"",
+          "url": "https://picthegift.com/products/car-mat-felt-front-floor-mat-17-x-27",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962704190",
+          "title": "Car Mat - Felt - Rear Floor Mat - 17\" x 13\"",
+          "url": "https://picthegift.com/products/car-mat-felt-rear-floor-mat-17-x-13",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962638654",
+          "title": "Tote Bag XL - 23\" x 24\"",
+          "url": "https://picthegift.com/products/tote-bag-xl-23-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962540350",
+          "title": "Premium Hand Towel - 11\" x 18\"",
+          "url": "https://picthegift.com/products/premium-hand-towel-11-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962507582",
+          "title": "Round Gift Box Tin - 6\"",
+          "url": "https://picthegift.com/products/round-gift-box-tin-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962442046",
+          "title": "Cosmetic Bag - Neoprene - 10\" x 6\"",
+          "url": "https://picthegift.com/products/cosmetic-bag-neoprene-10-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962343742",
+          "title": "Metal License Plate Frame - 6.5\" x 12.25\"",
+          "url": "https://picthegift.com/products/metal-license-plate-frame-6-5-x-12-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962310974",
+          "title": "Round Corner Adult Apron - 19 \" x 29\"",
+          "url": "https://picthegift.com/products/round-corner-adult-apron-19-x-29",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962278206",
+          "title": "Seat Belt Protector Pad",
+          "url": "https://picthegift.com/products/seat-belt-protector-pad",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962245438",
+          "title": "Baby Bib - Soft Jersey Style",
+          "url": "https://picthegift.com/products/baby-bib-soft-jersey-style",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962147134",
+          "title": "Fleece Blanket - 29\" x 39\"",
+          "url": "https://picthegift.com/products/fleece-blanket-29-x-39",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962114366",
+          "title": "Baby Burp Cloth - 15\" x 12\"",
+          "url": "https://picthegift.com/products/baby-burp-cloth-15-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962081598",
+          "title": "Jersey Pillow Case - 20.5\" x 30\"",
+          "url": "https://picthegift.com/products/jersey-pillow-case-20-5-x-30",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962048830",
+          "title": "Baby Beanie Hat - One Size Fits Most",
+          "url": "https://picthegift.com/products/baby-beanie-hat-one-size-fits-most",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251962016062",
+          "title": "Drawstring Laundry Bag - 21.5\" x 25\"",
+          "url": "https://picthegift.com/products/drawstring-laundry-bag-21-5-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961983294",
+          "title": "Neoprene Fabric Coaster - Set of 4",
+          "url": "https://picthegift.com/products/neoprene-fabric-coaster-set-of-4",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961884990",
+          "title": "Blackout Window Curtain",
+          "url": "https://picthegift.com/products/blackout-window-curtain",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961852222",
+          "title": "Floor Mat with Black Edges - 20oz Loop - 18\" x 24\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-20oz-loop-18-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961819454",
+          "title": "Floor Mat with Black Edges - 20oz Loop - 24\" x 36\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-20oz-loop-24-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961786686",
+          "title": "Floor Mat with Black Edges - 20oz Loop  -  36\" x 60\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-20oz-loop-36-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961688382",
+          "title": "Round Minky Blanket - 45\"",
+          "url": "https://picthegift.com/products/round-minky-blanket-45",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961590078",
+          "title": "Pocket Square - 12\" x 12\"",
+          "url": "https://picthegift.com/products/pocket-square-12-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961327934",
+          "title": "Car Mat - 20oz. Loop - Rear Floor Mat - 17\" x 13\"",
+          "url": "https://picthegift.com/products/car-mat-20oz-loop-rear-floor-mat-17-x-13",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961262398",
+          "title": "Car Mat - 20oz Loop - Front Floor Mat - 17\" x 27\"",
+          "url": "https://picthegift.com/products/car-mat-20oz-loop-front-floor-mat-17-x-27",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961229630",
+          "title": "Business Card Holder",
+          "url": "https://picthegift.com/products/business-card-holder",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961196862",
+          "title": "Premium Sandstone Coaster - Set of 2",
+          "url": "https://picthegift.com/products/premium-sandstone-coaster-set-of-2",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961164094",
+          "title": "Hardboard Coasters Cork Back - Set of 2",
+          "url": "https://picthegift.com/products/hardboard-coasters-cork-back-set-of-2",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961131326",
+          "title": "Round Leather Coaster - Set of 2",
+          "url": "https://picthegift.com/products/round-leather-coaster-set-of-2",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961098558",
+          "title": "Leather Placemat",
+          "url": "https://picthegift.com/products/leather-placemat",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961065790",
+          "title": "Leather Luggage Tag",
+          "url": "https://picthegift.com/products/leather-luggage-tag",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961033022",
+          "title": "16oz Glazed Slipmat",
+          "url": "https://picthegift.com/products/16oz-glazed-slipmat",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251961000254",
+          "title": "Squared Bow Knotted Baby Headband",
+          "url": "https://picthegift.com/products/squared-bow-knotted-baby-headband",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960967486",
+          "title": "Sheer Window Curtain",
+          "url": "https://picthegift.com/products/sheer-window-curtain",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960836414",
+          "title": "Square Baby Swaddling Blanket - 26\" x 39\"",
+          "url": "https://picthegift.com/products/square-baby-swaddling-blanket-26-x-39",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960803646",
+          "title": "Ceramic Mug - 11oz",
+          "url": "https://picthegift.com/products/ceramic-mug-11oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960770878",
+          "title": "Luggage Wrap - 5\" x 6\"",
+          "url": "https://picthegift.com/products/luggage-wrap-5-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960738110",
+          "title": "Standard Sized Can Koozie",
+          "url": "https://picthegift.com/products/standard-sized-can-koozie",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960705342",
+          "title": "Premium Sports Towel - 15\" x 25\"",
+          "url": "https://picthegift.com/products/premium-sports-towel-15-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960639806",
+          "title": "Standard Beach Towel - 30\" x 60\"",
+          "url": "https://picthegift.com/products/standard-beach-towel-30-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960574270",
+          "title": "Baby Swaddling Blanket - 37\" x 55\"",
+          "url": "https://picthegift.com/products/baby-swaddling-blanket-37-x-55",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960541502",
+          "title": "Gray Sherpa Blanket - 60\" x 80\"",
+          "url": "https://picthegift.com/products/gray-sherpa-blanket-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960508734",
+          "title": "Gray Sherpa Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/gray-sherpa-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960475966",
+          "title": "Gray Sherpa Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/gray-sherpa-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960443198",
+          "title": "Double Walled Tumbler - White - 30oz",
+          "url": "https://picthegift.com/products/double-walled-tumbler-white-30oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960410430",
+          "title": "Golf Towel with Clip - 15\" x 25\"",
+          "url": "https://picthegift.com/products/golf-towel-with-clip-15-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960377662",
+          "title": "Wine Tote Bag",
+          "url": "https://picthegift.com/products/wine-tote-bag",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960344894",
+          "title": "Double Walled Tumbler - White - 20oz",
+          "url": "https://picthegift.com/products/double-walled-tumbler-white-20oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960279358",
+          "title": "Desk Mat - 18\" x 36\"",
+          "url": "https://picthegift.com/products/desk-mat-18-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960246590",
+          "title": "Outdoor Throw Pillow Case - 16\" x 16\"",
+          "url": "https://picthegift.com/products/outdoor-throw-pillow-case-16-x-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960213822",
+          "title": "Outdoor Throw Pillow Case - 20\" x 20\"",
+          "url": "https://picthegift.com/products/outdoor-throw-pillow-case-20-x-20",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960148286",
+          "title": "Kids Superhero Cape",
+          "url": "https://picthegift.com/products/kids-superhero-cape",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960115518",
+          "title": "Spa Wrap Towel - 30\" x 60\" - Large/XLarge",
+          "url": "https://picthegift.com/products/spa-wrap-towel-30-x-60-large-xlarge",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960082750",
+          "title": "Desk Mat - 16\" x 35\" - Black Edge",
+          "url": "https://picthegift.com/products/desk-mat-16-x-35-black-edge",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251960049982",
+          "title": "Spa Wrap Towel - 30\" x 60\" - Small/Medium",
+          "url": "https://picthegift.com/products/spa-wrap-towel-30-x-60-small-medium",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959984446",
+          "title": "Round Hardboard Announcement Sign - 3.5\"",
+          "url": "https://picthegift.com/products/round-hardboard-announcement-sign-3-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959918910",
+          "title": "Throw Pillow Case - 24\" x 24\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-24-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959886142",
+          "title": "Jigsaw Puzzle - 80 Piece",
+          "url": "https://picthegift.com/products/jigsaw-puzzle-80-piece",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959820606",
+          "title": "Easter Basket Liner - 14\"",
+          "url": "https://picthegift.com/products/easter-basket-liner-14",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959689534",
+          "title": "Double-Lined Tote Bag - 11\" x 13\"",
+          "url": "https://picthegift.com/products/double-lined-tote-bag-11-x-13",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959591230",
+          "title": "Double-Lined Tote Bag - 14\" x 16\"",
+          "url": "https://picthegift.com/products/double-lined-tote-bag-14-x-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959558462",
+          "title": "Baby Swaddling Blanket - 38\" x 55\"",
+          "url": "https://picthegift.com/products/baby-swaddling-blanket-38-x-55",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959492926",
+          "title": "Color Changing Mug - Black 11 oz",
+          "url": "https://picthegift.com/products/color-changing-mug-black-11-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959427390",
+          "title": "Gold Metallic Ceramic Mug - 11 oz",
+          "url": "https://picthegift.com/products/gold-metallic-ceramic-mug-11-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959394622",
+          "title": "Silver Metallic Ceramic Mug - 11 oz",
+          "url": "https://picthegift.com/products/silver-metallic-ceramic-mug-11-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959361854",
+          "title": "Ceramic Mug with Colored Handle and Inside - 11 oz",
+          "url": "https://picthegift.com/products/ceramic-mug-with-colored-handle-and-inside-11-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959329086",
+          "title": "Pink Metallic Ceramic Mug - 11 oz",
+          "url": "https://picthegift.com/products/pink-metallic-ceramic-mug-11-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959296318",
+          "title": "Ceramic Mug - 15 oz",
+          "url": "https://picthegift.com/products/ceramic-mug-15-oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959263550",
+          "title": "Flip Flop Sandals - Adult Large",
+          "url": "https://picthegift.com/products/flip-flop-sandals-adult-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959099710",
+          "title": "Nursing Cover - Car Seat Baby Canopy Wrap",
+          "url": "https://picthegift.com/products/nursing-cover-car-seat-baby-canopy-wrap",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959066942",
+          "title": "Mini Fitted Crib Sheet - 24\" x 38\"",
+          "url": "https://picthegift.com/products/mini-fitted-crib-sheet-24-x-38",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251959034174",
+          "title": "Baby Burp Cloth - 10\" x 20\"",
+          "url": "https://picthegift.com/products/baby-burp-cloth-10-x-20",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958903102",
+          "title": "Jigsaw Puzzle - 30 Piece",
+          "url": "https://picthegift.com/products/jigsaw-puzzle-30-piece",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958837566",
+          "title": "Bandana - 24\" x 24\"",
+          "url": "https://picthegift.com/products/bandana-24-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958673726",
+          "title": "Santa Sack - 21.5\" x 25\"",
+          "url": "https://picthegift.com/products/santa-sack-21-5-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958608190",
+          "title": "Wine Glass Tumbler - 12oz",
+          "url": "https://picthegift.com/products/wine-glass-tumbler-12oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958542654",
+          "title": "Microfiber Kitchen Dish Mat - 14\" x 21\"",
+          "url": "https://picthegift.com/products/microfiber-kitchen-dish-mat-14-x-21",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958280510",
+          "title": "Santa Sack - 24\" x 36\"",
+          "url": "https://picthegift.com/products/santa-sack-24-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958182206",
+          "title": "Custom Branded Dust/Gift Bag - Add-On Item Only",
+          "url": "https://picthegift.com/products/custom-branded-dust-gift-bag-add-on-item-only",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958149438",
+          "title": "Double Walled Bottle - 550mL (18oz)",
+          "url": "https://picthegift.com/products/double-walled-bottle-550ml-18oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958116670",
+          "title": "White Burlap Throw Pillow Case - 18\" x 18\"",
+          "url": "https://picthegift.com/products/white-burlap-throw-pillow-case-18-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958051134",
+          "title": "Ivory Burlap Throw Pillow Case - 18\" x 18\"",
+          "url": "https://picthegift.com/products/ivory-burlap-throw-pillow-case-18-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251958018366",
+          "title": "Ivory Burlap Throw Pillow Case - 18\" x 18\" - Black Back",
+          "url": "https://picthegift.com/products/ivory-burlap-throw-pillow-case-18-x-18-black-back",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957985598",
+          "title": "White Burlap Throw Pillow Case - 18\" x 18\" - Black Back",
+          "url": "https://picthegift.com/products/white-burlap-throw-pillow-case-18-x-18-black-back",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957920062",
+          "title": "Outdoor Throw Pillow Case - 18\" x 18\"",
+          "url": "https://picthegift.com/products/outdoor-throw-pillow-case-18-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957854526",
+          "title": "Mousepad - 7.75\" x 9.25\"",
+          "url": "https://picthegift.com/products/mousepad-7-75-x-9-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957821758",
+          "title": "Metal Photo Panel - 4\" x 6\"",
+          "url": "https://picthegift.com/products/metal-photo-panel-4-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957756222",
+          "title": "Bell Ornament - 3.3\" x 3.3\"",
+          "url": "https://picthegift.com/products/bell-ornament-3-3-x-3-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957592382",
+          "title": "Ceramic Round Ornament - 3\"",
+          "url": "https://picthegift.com/products/ceramic-round-ornament-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957559614",
+          "title": "White Sherpa Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/white-sherpa-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957526846",
+          "title": "White Sherpa Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/white-sherpa-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957494078",
+          "title": "White Sherpa Blanket - 60\" x 80\"",
+          "url": "https://picthegift.com/products/white-sherpa-blanket-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957428542",
+          "title": "Shower Curtain XL - 70\" x 90\"",
+          "url": "https://picthegift.com/products/shower-curtain-xl-70-x-90",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957395774",
+          "title": "Polar Fleece Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/polar-fleece-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957363006",
+          "title": "Compact Makeup Mirror - Square",
+          "url": "https://picthegift.com/products/compact-makeup-mirror-square",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957330238",
+          "title": "Polar Fleece Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/polar-fleece-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957297470",
+          "title": "Drawstring Bag - 12\" x 14\"",
+          "url": "https://picthegift.com/products/drawstring-bag-12-x-14",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957264702",
+          "title": "Drawstring Bag - 16\" x 18\"",
+          "url": "https://picthegift.com/products/drawstring-bag-16-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957231934",
+          "title": "Drawstring Bag - 18\" x 22\"",
+          "url": "https://picthegift.com/products/drawstring-bag-18-x-22",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957199166",
+          "title": "Holiday Stocking - 17\"",
+          "url": "https://picthegift.com/products/holiday-stocking-17",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957166398",
+          "title": "Slim Can Koozie",
+          "url": "https://picthegift.com/products/slim-can-koozie",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957068094",
+          "title": "Christmas Tree Skirt - Linen - 58\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-linen-58",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957035326",
+          "title": "Christmas Tree Skirt - Burlap - 58\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-burlap-58",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251957002558",
+          "title": "Christmas Tree Skirt - Linen - 44\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-linen-44",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956969790",
+          "title": "Christmas Tree Skirt - Burlap - 44\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-burlap-44",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956937022",
+          "title": "Christmas Tree Skirt - Linen - 21\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-linen-21",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956904254",
+          "title": "Christmas Tree Skirt - Burlap - 21\"",
+          "url": "https://picthegift.com/products/christmas-tree-skirt-burlap-21",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956871486",
+          "title": "Hardboard Coasters Cork Back - Set of 4",
+          "url": "https://picthegift.com/products/hardboard-coasters-cork-back-set-of-4",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956740414",
+          "title": "Jigsaw Puzzle - 252 Piece",
+          "url": "https://picthegift.com/products/jigsaw-puzzle-252-piece",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956642110",
+          "title": "Pillow Sham - 20\" x 25\"",
+          "url": "https://picthegift.com/products/pillow-sham-20-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956609342",
+          "title": "Microfiber Pillow Case - 20.5\" x 30\"",
+          "url": "https://picthegift.com/products/microfiber-pillow-case-20-5-x-30",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956347198",
+          "title": "Key Chain Circle - Double Sided - 2.5\"",
+          "url": "https://picthegift.com/products/key-chain-circle-double-sided-2-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956314430",
+          "title": "Key Chain Rectangle - Double Sided - 1.6\" x 2.25\"",
+          "url": "https://picthegift.com/products/key-chain-rectangle-double-sided-1-6-x-2-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956248894",
+          "title": "Aluminum License Plate - 6\" x 12\"",
+          "url": "https://picthegift.com/products/aluminum-license-plate-6-x-12",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956216126",
+          "title": "Bicycle License Plate - 3\" x 6\"",
+          "url": "https://picthegift.com/products/bicycle-license-plate-3-x-6",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251956052286",
+          "title": "Dry Erase Clipboard with Flat Clip - 9 x 12.5",
+          "url": "https://picthegift.com/products/dry-erase-clipboard-with-flat-clip-9-x-12-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955986750",
+          "title": "Cosmetic Bag - Canvas - 9\" x 13\"",
+          "url": "https://picthegift.com/products/cosmetic-bag-canvas-9-x-13",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955953982",
+          "title": "Cosmetic Bag - Canvas - 6\" x 10\"",
+          "url": "https://picthegift.com/products/cosmetic-bag-canvas-6-x-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955921214",
+          "title": "Cosmetic Bag - Canvas - 5.5\" x 7\"",
+          "url": "https://picthegift.com/products/cosmetic-bag-canvas-5-5-x-7",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955888446",
+          "title": "Round Ornament - 3.5\"",
+          "url": "https://picthegift.com/products/round-ornament-3-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955855678",
+          "title": "Oval Ornament - 2.375\" x 3\"",
+          "url": "https://picthegift.com/products/oval-ornament-2-375-x-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955822910",
+          "title": "Prague Ornament - 3\" x 3\"",
+          "url": "https://picthegift.com/products/prague-ornament-3-x-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955790142",
+          "title": "House Flag - 24\" x 36\" - Double Sided",
+          "url": "https://picthegift.com/products/house-flag-24-x-36-double-sided",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955724606",
+          "title": "Rectangle Ornament - 2.125\" x 3.375\"",
+          "url": "https://picthegift.com/products/rectangle-ornament-2-125-x-3-375",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955626302",
+          "title": "Tree Ornament - 3.38\" x 3.95\"",
+          "url": "https://picthegift.com/products/tree-ornament-3-38-x-3-95",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955593534",
+          "title": "Aluminum Bottle with Sip Top",
+          "url": "https://picthegift.com/products/aluminum-bottle-with-sip-top",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955495230",
+          "title": "Keyboard Wrist Rest - 17.75” x 4” x .5”",
+          "url": "https://picthegift.com/products/keyboard-wrist-rest-17-75-x-4-x-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955462462",
+          "title": "Pajama Pants - Extra Large",
+          "url": "https://picthegift.com/products/pajama-pants-extra-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955429694",
+          "title": "Desk Mat - 10\" x 16\"",
+          "url": "https://picthegift.com/products/desk-mat-10-x-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955396926",
+          "title": "Ceramic Mug with Black Rim/Handle - 15oz",
+          "url": "https://picthegift.com/products/ceramic-mug-with-black-rim-handle-15oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955364158",
+          "title": "Silver Money Wallet Clip - 0.62\" x 1.06\"",
+          "url": "https://picthegift.com/products/silver-money-wallet-clip-0-62-x-1-06",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955331390",
+          "title": "Tempered Glass Round Cutting Board -  11.8”",
+          "url": "https://picthegift.com/products/tempered-glass-round-cutting-board-11-8",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955298622",
+          "title": "Tempered Glass Wine Bottle Shaped Cutting Board",
+          "url": "https://picthegift.com/products/tempered-glass-wine-bottle-shaped-cutting-board",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955233086",
+          "title": "Sweatshirt Blanket - Heather Gray - 50\" x 60\"",
+          "url": "https://picthegift.com/products/sweatshirt-blanket-heather-gray-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955134782",
+          "title": "Compact Makeup Mirror - Oval",
+          "url": "https://picthegift.com/products/compact-makeup-mirror-oval",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955069246",
+          "title": "Fleece Blanket - 50\" x 60\"",
+          "url": "https://picthegift.com/products/fleece-blanket-50-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955036478",
+          "title": "Throw Pillow Case - 20\" x 20\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-20-x-20",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251955003710",
+          "title": "Pet Placemat - 10\" x 16\"",
+          "url": "https://picthegift.com/products/pet-placemat-10-x-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954970942",
+          "title": "Pet Placemat - 12\" x 18\"",
+          "url": "https://picthegift.com/products/pet-placemat-12-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954905406",
+          "title": "Desk Mat - 12\" x 18\"",
+          "url": "https://picthegift.com/products/desk-mat-12-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954872638",
+          "title": "Floor Mat with Black Edges - Felt - 24\" x 36\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-felt-24-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954807102",
+          "title": "Floor Mat with Black Edges - Felt - 18\" x 24\"",
+          "url": "https://picthegift.com/products/floor-mat-with-black-edges-felt-18-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954774334",
+          "title": "Square Corner Adult Apron - 19\" x 29\"",
+          "url": "https://picthegift.com/products/square-corner-adult-apron-19-x-29",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954741566",
+          "title": "Body Pillow Pillowcase - 20.5\" x 54\"",
+          "url": "https://picthegift.com/products/body-pillow-pillowcase-20-5-x-54",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954708798",
+          "title": "Youth Chef Apron - 12\" x 18\"",
+          "url": "https://picthegift.com/products/youth-chef-apron-12-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954676030",
+          "title": "Ceramic Heart Ornament - 3\"",
+          "url": "https://picthegift.com/products/ceramic-heart-ornament-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954610494",
+          "title": "Ceramic Star Ornament - 3\"",
+          "url": "https://picthegift.com/products/ceramic-star-ornament-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954577726",
+          "title": "Ceramic Snowflake Ornament - 3\"",
+          "url": "https://picthegift.com/products/ceramic-snowflake-ornament-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954544958",
+          "title": "Pet Collar - 20\" - 26\"",
+          "url": "https://picthegift.com/products/pet-collar-20-26",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954512190",
+          "title": "Mousepad with Gel Wrist Rest",
+          "url": "https://picthegift.com/products/mousepad-with-gel-wrist-rest",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954479422",
+          "title": "Cell Phone Stand",
+          "url": "https://picthegift.com/products/cell-phone-stand",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954381118",
+          "title": "Sandstone Car Coasters - Set of 2",
+          "url": "https://picthegift.com/products/sandstone-car-coasters-set-of-2",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954348350",
+          "title": "Youth Pajama Pants - Extra Small",
+          "url": "https://picthegift.com/products/youth-pajama-pants-extra-small",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954315582",
+          "title": "Youth Pajama Pants - Small",
+          "url": "https://picthegift.com/products/youth-pajama-pants-small",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954282814",
+          "title": "Youth Pajama Pants - Medium",
+          "url": "https://picthegift.com/products/youth-pajama-pants-medium",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954250046",
+          "title": "Youth Pajama Pants - Large",
+          "url": "https://picthegift.com/products/youth-pajama-pants-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954217278",
+          "title": "Youth Pajama Pants - Extra Large",
+          "url": "https://picthegift.com/products/youth-pajama-pants-extra-large",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954184510",
+          "title": "Drawstring Bag - 12\" x 15.75\"",
+          "url": "https://picthegift.com/products/drawstring-bag-12-x-15-75",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954151742",
+          "title": "Premium Beach Towel - 30\" x 60\"",
+          "url": "https://picthegift.com/products/premium-beach-towel-30-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251954020670",
+          "title": "Shower Curtain - 70\" x 74\"",
+          "url": "https://picthegift.com/products/shower-curtain-70-x-74",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953889598",
+          "title": "Phone Card Holder w/ Cleaning Cloth",
+          "url": "https://picthegift.com/products/phone-card-holder-w-cleaning-cloth",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953856830",
+          "title": "Tan Sherpa Blanket - 30\" x 40\"",
+          "url": "https://picthegift.com/products/tan-sherpa-blanket-30-x-40",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953791294",
+          "title": "Premium Heavy Weight Baby Bib",
+          "url": "https://picthegift.com/products/premium-heavy-weight-baby-bib",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953725758",
+          "title": "Cosmetic Bag - Canvas - 8.5\" x 5.5\" - w/ Printable Flap",
+          "url": "https://picthegift.com/products/cosmetic-bag-canvas-8-5-x-5-5-w-printable-flap",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953692990",
+          "title": "Candle Tin w/ 2oz Candle",
+          "url": "https://picthegift.com/products/candle-tin-w-2oz-candle",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953660222",
+          "title": "Wine Stopper",
+          "url": "https://picthegift.com/products/wine-stopper",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953627454",
+          "title": "USB Car Charger w/ Printed Lid",
+          "url": "https://picthegift.com/products/usb-car-charger-w-printed-lid",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953561918",
+          "title": "Waffle Weave Kitchen Hand Towel - 16” x 25”",
+          "url": "https://picthegift.com/products/waffle-weave-kitchen-hand-towel-16-x-25",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953529150",
+          "title": "Kitchen Hot Pad Pot Holder - 8” x 8.5”",
+          "url": "https://picthegift.com/products/kitchen-hot-pad-pot-holder-8-x-8-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953463614",
+          "title": "Standard Fitted Crib Sheet - 28\" x 52\"",
+          "url": "https://picthegift.com/products/standard-fitted-crib-sheet-28-x-52",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953430846",
+          "title": "Dual Bottle Wine Tote Carrier",
+          "url": "https://picthegift.com/products/dual-bottle-wine-tote-carrier",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953365310",
+          "title": "Sweatshirt Blanket - Heather Gray - 60\" x 80\"",
+          "url": "https://picthegift.com/products/sweatshirt-blanket-heather-gray-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953234238",
+          "title": "Changing Pad Cover - 32\" x 16.5\"",
+          "url": "https://picthegift.com/products/changing-pad-cover-32-x-16-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953201470",
+          "title": "Baby Swaddling Blanket - 27\" x 39\"",
+          "url": "https://picthegift.com/products/baby-swaddling-blanket-27-x-39",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953168702",
+          "title": "Dry Erase Board - 9\" x 12.5\"",
+          "url": "https://picthegift.com/products/dry-erase-board-9-x-12-5",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251953004862",
+          "title": "Wall Tapestry - 26\" x 36\"",
+          "url": "https://picthegift.com/products/wall-tapestry-26-x-36",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952972094",
+          "title": "Wall Tapestry - 51\" x 60\"",
+          "url": "https://picthegift.com/products/wall-tapestry-51-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952775486",
+          "title": "Mobile Phone Finger Ring Stand - Rose Gold",
+          "url": "https://picthegift.com/products/mobile-phone-finger-ring-stand-rose-gold",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952644414",
+          "title": "Mobile Phone Finger Ring Stand - Gold",
+          "url": "https://picthegift.com/products/mobile-phone-finger-ring-stand-gold",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952546110",
+          "title": "Travel Tumbler - 16oz",
+          "url": "https://picthegift.com/products/travel-tumbler-16oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952513342",
+          "title": "Hooded Baby Towel - 30\" x 30\"",
+          "url": "https://picthegift.com/products/hooded-baby-towel-30-x-30",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952447806",
+          "title": "Double Walled Tumbler - Silver - 30oz",
+          "url": "https://picthegift.com/products/double-walled-tumbler-silver-30oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952382270",
+          "title": "Double Walled Tumbler - Silver - 20oz",
+          "url": "https://picthegift.com/products/double-walled-tumbler-silver-20oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952349502",
+          "title": "Retractable Pet Leash - 10'",
+          "url": "https://picthegift.com/products/retractable-pet-leash-10",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952316734",
+          "title": "Cola Bottle - 500mL - 16.9oz",
+          "url": "https://picthegift.com/products/cola-bottle-500ml-16-9oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952283966",
+          "title": "Retractable Pet Leash - 16'",
+          "url": "https://picthegift.com/products/retractable-pet-leash-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952251198",
+          "title": "Throw Pillow Case - 16\" x 16\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-16-x-16",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952185662",
+          "title": "Round Ornament - 3\"",
+          "url": "https://picthegift.com/products/round-ornament-3",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952152894",
+          "title": "Desk Mat - 14\" x 24\"",
+          "url": "https://picthegift.com/products/desk-mat-14-x-24",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952087358",
+          "title": "Tan Sherpa Blanket - 60\" x 80\"",
+          "url": "https://picthegift.com/products/tan-sherpa-blanket-60-x-80",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251952021822",
+          "title": "Glossy Ceramic Car Coasters - Set of 2",
+          "url": "https://picthegift.com/products/glossy-ceramic-car-coasters-set-of-2",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951890750",
+          "title": "Throw Pillow Case - 12\" x 18\"",
+          "url": "https://picthegift.com/products/throw-pillow-case-12-x-18",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951792446",
+          "title": "Minky Sleeping Bag - 28\" x 50\"",
+          "url": "https://picthegift.com/products/minky-sleeping-bag-28-x-50",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951759678",
+          "title": "Minky Sleeping Bag - 38\" x 60\"",
+          "url": "https://picthegift.com/products/minky-sleeping-bag-38-x-60",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951726910",
+          "title": "Yoga Fitness Mat - 24\" x 68\"",
+          "url": "https://picthegift.com/products/yoga-fitness-mat-24-x-68",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951661374",
+          "title": "Enamel Camp Mug - 10oz",
+          "url": "https://picthegift.com/products/enamel-camp-mug-10oz",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        },
+        {
+          "sourceProductId": "12251951628606",
+          "title": "Tempered Glass Cutting Board - 8\" x 11\"",
+          "url": "https://picthegift.com/products/tempered-glass-cutting-board-8-x-11",
+          "reason": "Açık fiyat sıfır; gerçek ürün fiyatı sunulmuyor"
+        }
+      ]
+    },
+    {
+      "id": "printshrimp",
+      "discovered": 2,
+      "imported": 0,
+      "pending": [
+        {
+          "sourceProductId": "7538733121634",
+          "title": "Framed Art Print",
+          "url": "https://printshrimp.com/products/framed-art-print",
+          "reason": "Satışa kapalı varyantlar"
+        },
+        {
+          "sourceProductId": "7538733088866",
+          "title": "Premium Art Print",
+          "url": "https://printshrimp.com/products/premium-art-print",
+          "reason": "Satışa kapalı varyantlar"
+        }
+      ]
+    },
+    {
+      "id": "printmelon",
+      "discovered": 8,
+      "imported": 0,
+      "pending": [
+        {
+          "sourceProductId": "5955",
+          "title": "Custom Mugs and Cups",
+          "url": "https://printmelon.com/product/print-on-demand-mugs-and-cups/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5361",
+          "title": "Custom Long Sleeve Shirts",
+          "url": "https://printmelon.com/product/custom-long-sleeve-shirts/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5347",
+          "title": "Kids and Baby Clothes",
+          "url": "https://printmelon.com/product/print-on-demand-kids-and-baby-clothes/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5306",
+          "title": "Custom POD Aprons",
+          "url": "https://printmelon.com/product/custom-pod-aprons/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5241",
+          "title": "Custom Hats and Caps",
+          "url": "https://printmelon.com/product/custom-hats-and-caps/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5220",
+          "title": "Custom Pants",
+          "url": "https://printmelon.com/product/print-on-demand-pants/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "5217",
+          "title": "Custom Hoodies &#038; Sweatshirts",
+          "url": "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        },
+        {
+          "sourceProductId": "516",
+          "title": "Custom T-Shirt",
+          "url": "https://printmelon.com/product/custom-t-shirt/",
+          "reason": "Kategori tanıtım kayıtları; aynı tutar ve AZN para birimi: gerçek POD ürün kataloğu doğrulanmalı"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,849 @@
+[
+  {
+    "id": "merchize",
+    "base": "https://seller.merchize.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:23.987Z"
+  },
+  {
+    "id": "gelato",
+    "base": "https://www.gelato.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:23.989Z"
+  },
+  {
+    "id": "customcat",
+    "base": "https://signup.customcat.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.001Z"
+  },
+  {
+    "id": "tpop",
+    "base": "https://app.tpop.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.019Z"
+  },
+  {
+    "id": "hoplix",
+    "base": "https://hoplix.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:24.027Z",
+    "status": 404
+  },
+  {
+    "id": "sellfy",
+    "base": "https://sellfy.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.532Z"
+  },
+  {
+    "id": "printify",
+    "base": "https://printify.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:23.855Z",
+    "status": 404
+  },
+  {
+    "id": "promio",
+    "base": "https://promio.eu",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:24.560Z",
+    "status": 404
+  },
+  {
+    "id": "finerworks",
+    "base": "https://account.finerworks.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.934Z"
+  },
+  {
+    "id": "teemill",
+    "base": "https://teemill.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.955Z"
+  },
+  {
+    "id": "neatopod",
+    "base": "https://www.neatopod.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.979Z"
+  },
+  {
+    "id": "novatomato",
+    "base": "https://www.novatomato.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:24.998Z"
+  },
+  {
+    "id": "framico",
+    "base": "https://www.framico.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.025Z"
+  },
+  {
+    "id": "shirtly",
+    "base": "https://www.shirtly.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.041Z"
+  },
+  {
+    "id": "casestation",
+    "base": "https://casestation.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.059Z"
+  },
+  {
+    "id": "shineon",
+    "base": "https://www.shineon.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.083Z"
+  },
+  {
+    "id": "podbase",
+    "base": "https://www.podbase.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:24.546Z",
+    "status": 404
+  },
+  {
+    "id": "printbelle",
+    "base": "https://www.printbelle.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.123Z"
+  },
+  {
+    "id": "makr3d",
+    "base": "https://makr3d.app",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.128Z"
+  },
+  {
+    "id": "inkthreadable",
+    "base": "https://www.inkthreadable.co.uk",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:24.016Z",
+    "status": 404
+  },
+  {
+    "id": "vistaprint",
+    "base": "https://www.vistaprint.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.170Z"
+  },
+  {
+    "id": "customink",
+    "base": "https://www.customink.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.195Z"
+  },
+  {
+    "id": "tshirtgang",
+    "base": "https://www.tshirtgang.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:24.033Z",
+    "status": 404
+  },
+  {
+    "id": "printaura",
+    "base": "https://printaura.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:25.148Z",
+    "status": 200,
+    "type": "woocommerce",
+    "sampleCount": 0,
+    "pricedCount": 0
+  },
+  {
+    "id": "artofwhere",
+    "base": "https://artofwhere.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.934Z"
+  },
+  {
+    "id": "makeplayingcards",
+    "base": "https://www.makeplayingcards.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:25.937Z"
+  },
+  {
+    "id": "printmelon",
+    "base": "https://printmelon.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:25.216Z",
+    "status": 200,
+    "type": "woocommerce",
+    "sampleCount": 8,
+    "pricedCount": 7
+  },
+  {
+    "id": "gooten",
+    "base": "https://www.gooten.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:25.106Z",
+    "status": 404
+  },
+  {
+    "id": "printsome",
+    "base": "https://printsome.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:26.839Z"
+  },
+  {
+    "id": "kincustom",
+    "base": "https://www.kincustom.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:26.863Z"
+  },
+  {
+    "id": "apliiq",
+    "base": "https://www.apliiq.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:26.883Z"
+  },
+  {
+    "id": "peaprint",
+    "base": "https://peaprint.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:25.963Z",
+    "status": 404
+  },
+  {
+    "id": "contrado",
+    "base": "https://www.contrado.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:27.149Z"
+  },
+  {
+    "id": "printedmint",
+    "base": "https://printedmint.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:27.170Z"
+  },
+  {
+    "id": "mwwondemand",
+    "base": "https://mwwondemand.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:26.526Z",
+    "status": 404
+  },
+  {
+    "id": "subliminator",
+    "base": "https://www.subliminator.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:27.321Z"
+  },
+  {
+    "id": "printrove",
+    "base": "https://printrove.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:27.341Z",
+    "status": 404
+  },
+  {
+    "id": "getfuelpod",
+    "base": "https://www.getfuelpod.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:27.608Z"
+  },
+  {
+    "id": "printgenie",
+    "base": "https://www.printgenie.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:27.190Z",
+    "status": 404
+  },
+  {
+    "id": "prodigi",
+    "base": "https://www.prodigi.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:27.629Z",
+    "status": 404
+  },
+  {
+    "id": "shirtee",
+    "base": "https://shirtee.cloud",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:27.941Z",
+    "status": 404
+  },
+  {
+    "id": "scalablepress",
+    "base": "https://scalablepress.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:28.858Z"
+  },
+  {
+    "id": "thisnew",
+    "base": "https://thisnew.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:28.870Z"
+  },
+  {
+    "id": "printops",
+    "base": "https://printops.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:28.969Z"
+  },
+  {
+    "id": "jetprint",
+    "base": "https://jetprintapp.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:26.906Z",
+    "status": 200,
+    "type": "woocommerce",
+    "sampleCount": 100,
+    "pricedCount": 100
+  },
+  {
+    "id": "papello",
+    "base": "https://papello.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:28.993Z",
+    "status": 404
+  },
+  {
+    "id": "printway",
+    "base": "https://printway.io",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:29.295Z"
+  },
+  {
+    "id": "printdoors",
+    "base": "https://www.printdoors.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:29.313Z"
+  },
+  {
+    "id": "popcustoms",
+    "base": "https://popcustoms.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:29.335Z"
+  },
+  {
+    "id": "printbase",
+    "base": "https://www.printbase.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:29.353Z"
+  },
+  {
+    "id": "bluedoba",
+    "base": "https://bluedoba.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:29.371Z"
+  },
+  {
+    "id": "printegy",
+    "base": "https://printegy.de",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:29.032Z",
+    "status": 404
+  },
+  {
+    "id": "ogo",
+    "base": "https://ogo.com.au",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:28.126Z",
+    "status": 404
+  },
+  {
+    "id": "woycondemand",
+    "base": "https://woyc-ondemand.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:29.394Z",
+    "status": 404
+  },
+  {
+    "id": "printshrimp",
+    "base": "https://printshrimp.com",
+    "types": [
+      "shopify"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:29.772Z",
+    "status": 200,
+    "type": "shopify",
+    "sampleCount": 2,
+    "pricedCount": 0
+  },
+  {
+    "id": "awkwardstyles",
+    "base": "https://awkwardstyles.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:30.078Z"
+  },
+  {
+    "id": "printeers",
+    "base": "https://printeers.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:30.082Z",
+    "status": 404
+  },
+  {
+    "id": "oneprint",
+    "base": "https://oneprint.io",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:29.974Z",
+    "status": 200
+  },
+  {
+    "id": "pillowprofits",
+    "base": "https://pillowprofits.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:25.239Z",
+    "status": 404
+  },
+  {
+    "id": "qikink",
+    "base": "https://qikink.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:29.375Z",
+    "status": 404
+  },
+  {
+    "id": "printoteca",
+    "base": "https://printoteca.ro",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:30.785Z",
+    "status": 404
+  },
+  {
+    "id": "lumaprints",
+    "base": "https://www.lumaprints.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:31.001Z",
+    "status": 404
+  },
+  {
+    "id": "sunfrog",
+    "base": "https://www.sunfrog.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:31.866Z"
+  },
+  {
+    "id": "flexmerch",
+    "base": "https://flexmerch.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:31.886Z"
+  },
+  {
+    "id": "snugglepartners",
+    "base": "https://snugglepartners.co.uk",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:31.889Z"
+  },
+  {
+    "id": "coastalreign",
+    "base": "https://coastalreign.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:31.913Z"
+  },
+  {
+    "id": "optondemand",
+    "base": "https://www.optondemand.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:31.941Z",
+    "status": 404
+  },
+  {
+    "id": "completeful",
+    "base": "https://completeful.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:32.538Z"
+  },
+  {
+    "id": "shop3d",
+    "base": "https://www.shop3d.io",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:31.537Z",
+    "status": 404
+  },
+  {
+    "id": "marcofinearts",
+    "base": "https://marcofinearts.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:32.879Z"
+  },
+  {
+    "id": "swagify",
+    "base": "https://www.swagify.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:32.907Z"
+  },
+  {
+    "id": "merchone",
+    "base": "https://merchone.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:32.572Z",
+    "status": 404
+  },
+  {
+    "id": "districtphoto",
+    "base": "https://districtphoto.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.122Z"
+  },
+  {
+    "id": "tshirtsons",
+    "base": "https://www.tshirtandsons.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.125Z"
+  },
+  {
+    "id": "rushordertees",
+    "base": "https://www.rushordertees.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.160Z"
+  },
+  {
+    "id": "alexanders",
+    "base": "https://alexanders.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:30.455Z",
+    "status": 404
+  },
+  {
+    "id": "myeasymonogram",
+    "base": "https://myeasymonogram.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.206Z"
+  },
+  {
+    "id": "safsira",
+    "base": "https://safsira.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.234Z"
+  },
+  {
+    "id": "camaloon",
+    "base": "https://www.camaloon.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.264Z"
+  },
+  {
+    "id": "marketprint",
+    "base": "https://marketprint.de",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.286Z"
+  },
+  {
+    "id": "gocustomclothing",
+    "base": "https://gocustomclothing.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.309Z"
+  },
+  {
+    "id": "toaddit",
+    "base": "https://www.toaddit.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.334Z"
+  },
+  {
+    "id": "clothes2order",
+    "base": "https://www.clothes2order.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.363Z"
+  },
+  {
+    "id": "printbest",
+    "base": "https://printbest.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:31.513Z",
+    "status": 404
+  },
+  {
+    "id": "through6",
+    "base": "https://www.restoathletic.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.727Z"
+  },
+  {
+    "id": "ownprint",
+    "base": "https://www.ownprint.co",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:33.180Z",
+    "status": 404
+  },
+  {
+    "id": "casestry",
+    "base": "https://www.casestry.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:33.782Z"
+  },
+  {
+    "id": "twofifteen",
+    "base": "https://www.twofifteen.co.uk",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:33.389Z",
+    "status": 404
+  },
+  {
+    "id": "dubowtextile",
+    "base": "https://dubowtextile.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:32.929Z",
+    "status": 404
+  },
+  {
+    "id": "picthegift",
+    "base": "https://picthegift.com",
+    "types": [
+      "shopify"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:33.755Z",
+    "status": 200,
+    "type": "shopify",
+    "sampleCount": 250,
+    "pricedCount": 0
+  },
+  {
+    "id": "gearlaunch",
+    "base": "https://www.gearlaunch.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:34.198Z"
+  },
+  {
+    "id": "dreamship",
+    "base": "https://dreamship.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:33.875Z",
+    "status": 403
+  },
+  {
+    "id": "printseekers",
+    "base": "https://www.printseekers.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:33.809Z",
+    "status": 404
+  },
+  {
+    "id": "ecomerch",
+    "base": "https://ecomerch.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:34.222Z",
+    "status": 404
+  },
+  {
+    "id": "duplium",
+    "base": "https://www.duplium.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:33.927Z",
+    "status": 404
+  },
+  {
+    "id": "artelo",
+    "base": "https://www.artelo.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:34.760Z"
+  },
+  {
+    "id": "cwondemand",
+    "base": "https://cwondemand.com",
+    "types": [],
+    "state": "custom-adapter-needed",
+    "checkedAt": "2026-10-03T21:30:34.781Z"
+  },
+  {
+    "id": "simpleprint",
+    "base": "https://www.simpleprint.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:34.250Z",
+    "status": 404
+  },
+  {
+    "id": "printedsimply",
+    "base": "https://printedsimply.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "no-public-product-feed",
+    "checkedAt": "2026-10-03T21:30:34.669Z",
+    "status": 404
+  },
+  {
+    "id": "goquadra",
+    "base": "https://goquadra.com",
+    "types": [
+      "woocommerce"
+    ],
+    "state": "public-catalog-found",
+    "checkedAt": "2026-10-03T21:30:34.279Z",
+    "status": 200,
+    "type": "woocommerce",
+    "sampleCount": 100,
+    "pricedCount": 2
+  }
+]

@@ -1,0 +1,764 @@
+{
+  "checkedAt": "2026-10-04T11:48:59.408Z",
+  "discovered": 1756,
+  "added": 1630,
+  "pages": 88,
+  "pending": [
+    {
+      "id": 6806,
+      "title": "Greeting Card (Double‑sided Printed) | Paper",
+      "url": "https://www.printdoors.com/products/6806",
+      "reason": "Bir dolar altındaki ürünün bedel/birim koşulları ayrıca doğrulanmalı"
+    },
+    {
+      "id": 6601,
+      "title": "40oz Stanley Style TumblerBlack | 304 Stainless Steel（ Made in USA）",
+      "url": "https://www.printdoors.com/products/6601",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 6147,
+      "title": "Gen 2 40oz Tumbler Black | 304 Stainless Steel（Made in USA）",
+      "url": "https://www.printdoors.com/products/6147",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 4526,
+      "title": "IPhone 17 Series Mirror Cases | TPU",
+      "url": "https://www.printdoors.com/products/4526",
+      "reason": "Aktif, isimli, fotoğraflı ürün koşulları sağlanmıyor"
+    },
+    {
+      "id": 4041,
+      "title": "iPhone 17 Pro Max Transparent Phone Case | TPU",
+      "url": "https://www.printdoors.com/products/4041",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 4040,
+      "title": "iPhone 17 Pro Transparent Phone Case | TPU",
+      "url": "https://www.printdoors.com/products/4040",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 4039,
+      "title": "iPhone 17 Air Transparent Phone Case | TPU",
+      "url": "https://www.printdoors.com/products/4039",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 4016,
+      "title": "iPhone 17 Transparent Phone Case | TPU",
+      "url": "https://www.printdoors.com/products/4016",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3528,
+      "title": "Double-Layer Feather Flags(Multiple sizes)| Silver-plated fabric",
+      "url": "https://www.printdoors.com/products/3528",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3527,
+      "title": "Single-Layer Feather Flags(Multiple sizes) | Silver-plated fabric",
+      "url": "https://www.printdoors.com/products/3527",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3499,
+      "title": "Single-Sided Printed Stained Glass Suncatcher | Glass",
+      "url": "https://www.printdoors.com/products/3499",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3115,
+      "title": "Personalized A5 Leather Journal | PU and Virgin Pulp Paper",
+      "url": "https://www.printdoors.com/products/3115",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3114,
+      "title": "Single Sided Printed Square Decorative Tablecloth(54x54inch/60x60inch) | Polyester",
+      "url": "https://www.printdoors.com/products/3114",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 3102,
+      "title": "Personalised Graduation Christmas Ornaments,Graduation Cap Ornaments | Acrylic",
+      "url": "https://www.printdoors.com/products/3102",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2924,
+      "title": "Personalized Hand Flag (Supports Double-Sided Different printing) | Polyester",
+      "url": "https://www.printdoors.com/products/2924",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2922,
+      "title": "Black Metal Watches（With Calendar Display） | Metal",
+      "url": "https://www.printdoors.com/products/2922",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2911,
+      "title": "Personalized Photo Keychains,Drip Glue Metal Keychains | Stainless Steel",
+      "url": "https://www.printdoors.com/products/2911",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2824,
+      "title": "Personalized Photo Custom Shape Mini Muppet Keychain | Polyester",
+      "url": "https://www.printdoors.com/products/2824",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2819,
+      "title": "Single-sided Print Four Hole Flag (51x39inch) | Polyester",
+      "url": "https://www.printdoors.com/products/2819",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2817,
+      "title": "Christmas Day Decoration Star Ornaments (Supports Double-Sided Different printing) | Ceramic",
+      "url": "https://www.printdoors.com/products/2817",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2809,
+      "title": "All-Over Print Women's Sports Bra | Polyester",
+      "url": "https://www.printdoors.com/products/2809",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2727,
+      "title": "Customized Photo Memorial Crystal Glass Christmas Ornaments | Crystal Glass",
+      "url": "https://www.printdoors.com/products/2727",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2723,
+      "title": "All-Over Print Mesh Children's T-Shirt | Polyester",
+      "url": "https://www.printdoors.com/products/2723",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2714,
+      "title": "Personalized Sash Custom Graudation Sash Custom Wedding Sash | Polyester",
+      "url": "https://www.printdoors.com/products/2714",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2629,
+      "title": "Personalized Acrylic Photo Frame (Horizontal) | Acrylic",
+      "url": "https://www.printdoors.com/products/2629",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2613,
+      "title": "Round Badge Button (2.28inch) | Tinplate + Plastic",
+      "url": "https://www.printdoors.com/products/2613",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2564,
+      "title": "Lightweight Graduation&World Cup Stole (Beveled) | Polyester",
+      "url": "https://www.printdoors.com/products/2564",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2563,
+      "title": "Thick Graduation&World Cup Stole (V-shaped) | Polyester",
+      "url": "https://www.printdoors.com/products/2563",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2562,
+      "title": "Lightweight Graduation&World Cup Stole (V Shape)| Polyester",
+      "url": "https://www.printdoors.com/products/2562",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2561,
+      "title": "Single-Sided Printed Crosshatch Surface Luggage Tag | PU",
+      "url": "https://www.printdoors.com/products/2561",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2560,
+      "title": "Lightweight Graduation&World Cup Stole (Square Corner) | Polyester",
+      "url": "https://www.printdoors.com/products/2560",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2559,
+      "title": "Lightweight Graduation&World Cup Stole (Pointed) | Polyester",
+      "url": "https://www.printdoors.com/products/2559",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2552,
+      "title": "Thick Graduation&World Cup Stole (Beveled) | Polyester",
+      "url": "https://www.printdoors.com/products/2552",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2474,
+      "title": "Large Capacity Tumbler with Handle(1100ml/40oz) | Stainless Steel 304",
+      "url": "https://www.printdoors.com/products/2474",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2472,
+      "title": "Portable Insulated Lunch Bag 丨 Oxford Cloth",
+      "url": "https://www.printdoors.com/products/2472",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2394,
+      "title": "All-Over Print Men's Comfort T-Shirt | 190GSM 95%Polyester 5%Spandex",
+      "url": "https://www.printdoors.com/products/2394",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2381,
+      "title": "Men's Sports Tank Top (DTG) | Cotton",
+      "url": "https://www.printdoors.com/products/2381",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2370,
+      "title": "All-Over Print Men's Sun Protection Long Sleeve Hoodie | Polyester",
+      "url": "https://www.printdoors.com/products/2370",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2357,
+      "title": "Customized Rectangular Non-Slip Stitched Edge Mouse Pad (35x16 inch) | Polyester",
+      "url": "https://www.printdoors.com/products/2357",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2322,
+      "title": "All-Over Print Men's T-Shirt (Mesh Fabric) | Polyester",
+      "url": "https://www.printdoors.com/products/2322",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2310,
+      "title": "Children's Customized T-Shirt (DTG) | Cotton",
+      "url": "https://www.printdoors.com/products/2310",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2281,
+      "title": "Single-Sided Tapestry- Multiple Sizes (Lightweight) | Polyester",
+      "url": "https://www.printdoors.com/products/2281",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2174,
+      "title": "All-Over Print Men's O-Neck T-shirt EU Size(Sublimation Print) | 190gsm 65% Cotton+ 35% Polyester",
+      "url": "https://www.printdoors.com/products/2174",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2164,
+      "title": "Men's Casual Cross Front Chest Bag (Multi Sided Design) | Polyester",
+      "url": "https://www.printdoors.com/products/2164",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2137,
+      "title": "Lightweight Casual Backpack+Insulated Lunch Bag+Pencil Case Combo Series | Oxford Cloth",
+      "url": "https://www.printdoors.com/products/2137",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2133,
+      "title": "All-Over Print Man's Shirt and Shorts Pajama Set (Multi-faceted Design) | Cotton-Like Polyester",
+      "url": "https://www.printdoors.com/products/2133",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2132,
+      "title": "All-Over Print Men's Beach Shorts (Not Mesh Lined) | Polyester",
+      "url": "https://www.printdoors.com/products/2132",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2113,
+      "title": "All-Over Print Women's Short-Sleeved Pajamas Set | Cotton-Like Polyester",
+      "url": "https://www.printdoors.com/products/2113",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2107,
+      "title": "All-Over Print Men's Short-Sleeved Pajamas Set | Cotton-Like Polyester",
+      "url": "https://www.printdoors.com/products/2107",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2106,
+      "title": "Double Sided Printed Vertical Double Layer Flag(3*5ft)(Double Side Design)| Polyester",
+      "url": "https://www.printdoors.com/products/2106",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 2058,
+      "title": "Acrylic Heart Decoration| Acrylic",
+      "url": "https://www.printdoors.com/products/2058",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1999,
+      "title": "All-Over Print Yoga Pants | 240GSM Polyester",
+      "url": "https://www.printdoors.com/products/1999",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1983,
+      "title": "Men's Short-Sleeved European Size T-Shirt (DTG)｜Cotton",
+      "url": "https://www.printdoors.com/products/1983",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1979,
+      "title": "All-Over Print Men's Premium European Size POLO Shirt  | 95% Polyester+5% Spandex",
+      "url": "https://www.printdoors.com/products/1979",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1974,
+      "title": "Men's Casual Cross Front Chest Bag｜ Polyester",
+      "url": "https://www.printdoors.com/products/1974",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1971,
+      "title": "Party Triangle Flags(12pcs)| Canvas",
+      "url": "https://www.printdoors.com/products/1971",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1954,
+      "title": "All-Over Print Men's Mesh Fabric Short Sleeve T-shirt (EU Size) | Polyester",
+      "url": "https://www.printdoors.com/products/1954",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1952,
+      "title": "Portable Handheld Insulated Lunch Bag｜Oxford Cloth",
+      "url": "https://www.printdoors.com/products/1952",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1927,
+      "title": "Custom DTF Bucket Hat (Lightweight) | Polyester",
+      "url": "https://www.printdoors.com/products/1927",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1892,
+      "title": "Single-sided Print-Tapestry Vertical Multi-Size (Light Model)｜Polyester",
+      "url": "https://www.printdoors.com/products/1892",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1802,
+      "title": "Solid Wood Acrylic Lamp｜Plastic",
+      "url": "https://www.printdoors.com/products/1802",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1794,
+      "title": "All Over Print Curved Brim Baseball Cap (Multi Sided Design) | Polyester",
+      "url": "https://www.printdoors.com/products/1794",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1750,
+      "title": "Peach Skin Velvet Double-Sided Print Garden Flag (12*18inch)| Polyester",
+      "url": "https://www.printdoors.com/products/1750",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1749,
+      "title": "Peach skin velvet single sided garden flag (12×18inch)| Polyester",
+      "url": "https://www.printdoors.com/products/1749",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1728,
+      "title": "Long Pillow Cover Double-Sided Design (Multiple Sizes)｜Polyester",
+      "url": "https://www.printdoors.com/products/1728",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1683,
+      "title": "personalised canvas handheld insulated lunch bag (with side pocket)｜Polyester",
+      "url": "https://www.printdoors.com/products/1683",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1628,
+      "title": "Car Windshield Sunshade (Stiff Type)｜ Oxford Cloth",
+      "url": "https://www.printdoors.com/products/1628",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1621,
+      "title": "Personlized Children's school bags｜Polyester",
+      "url": "https://www.printdoors.com/products/1621",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1579,
+      "title": "Single-Sided Printed Multi-Size Blanket (Horizontal) | 300GSM Flannel",
+      "url": "https://www.printdoors.com/products/1579",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1575,
+      "title": "School bag full width (multi-side design)｜Polyester",
+      "url": "https://www.printdoors.com/products/1575",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1573,
+      "title": "Double Sided Printed Horizontal Double Layer Flag(3*5ft)(Double Side Design) | Polyester",
+      "url": "https://www.printdoors.com/products/1573",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1543,
+      "title": "All-Over Print Women's Casual Dress | Polyester",
+      "url": "https://www.printdoors.com/products/1543",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1492,
+      "title": "Luggage Protector｜Polyester",
+      "url": "https://www.printdoors.com/products/1492",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1486,
+      "title": "Thick Graduation&World Cup Stole (Square Corner) | Polyester",
+      "url": "https://www.printdoors.com/products/1486",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1482,
+      "title": "Thick Graduation&World Cup Stole (Pointed) | Polyester",
+      "url": "https://www.printdoors.com/products/1482",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1464,
+      "title": "Youth baseball cap | Cotton",
+      "url": "https://www.printdoors.com/products/1464",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1463,
+      "title": "Envelope Greeting Card (Vertical)｜Cardboard",
+      "url": "https://www.printdoors.com/products/1463",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1457,
+      "title": "Single-sided flag 30× 48inch (single-sided design) | Polyester",
+      "url": "https://www.printdoors.com/products/1457",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1452,
+      "title": "Envelope Greeting Card｜Cardboard",
+      "url": "https://www.printdoors.com/products/1452",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1441,
+      "title": "Customized casual school bag (with herringbone)｜Polyester",
+      "url": "https://www.printdoors.com/products/1441",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1431,
+      "title": "All-Over Print Men's Comfortable Beach Shorts (Mesh Lining)-Double Sided Design｜Polyester",
+      "url": "https://www.printdoors.com/products/1431",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1423,
+      "title": "Double Sided Printed Vertical Double Layer Flag(3*5ft)(Same Print On Both Sides)| Polyester",
+      "url": "https://www.printdoors.com/products/1423",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1379,
+      "title": "Canvas Frameless Decorative Painting (Horizontal Version)｜Canvas",
+      "url": "https://www.printdoors.com/products/1379",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1378,
+      "title": "Canvas Frameless Decorative Painting (Vertical Version)",
+      "url": "https://www.printdoors.com/products/1378",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1374,
+      "title": "Beach towel (comfortable model)｜Polyester",
+      "url": "https://www.printdoors.com/products/1374",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1351,
+      "title": "Single-Sided Printed Multi-Size Blanket (Vertical) | 300GSM Flannel",
+      "url": "https://www.printdoors.com/products/1351",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1334,
+      "title": "Classic Outdoor Tumbler (540ml/18oz) | Stainless Steel 304",
+      "url": "https://www.printdoors.com/products/1334",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1324,
+      "title": "Women's Short Sleeve T-shirt（DTG）| Cotton",
+      "url": "https://www.printdoors.com/products/1324",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1322,
+      "title": "Baseball Cap (Denim) | Cotton",
+      "url": "https://www.printdoors.com/products/1322",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1309,
+      "title": "Apple Double Buckle Strap｜Silicone",
+      "url": "https://www.printdoors.com/products/1309",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1302,
+      "title": "Apple Single Buckle Strap｜Silicone",
+      "url": "https://www.printdoors.com/products/1302",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1283,
+      "title": "Double-Sided Printed Shopping Bag (Multiple Sizes) (Beige) | Linen",
+      "url": "https://www.printdoors.com/products/1283",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1282,
+      "title": "All-Over Print Women's Yoga Shorts｜ Polyester",
+      "url": "https://www.printdoors.com/products/1282",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1267,
+      "title": "Student Schoolbag (Multi-sided design) | Polyester",
+      "url": "https://www.printdoors.com/products/1267",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1265,
+      "title": "Customized Canvas Cosmetic Bag｜Canvas",
+      "url": "https://www.printdoors.com/products/1265",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1118,
+      "title": "Customized Round Sports Bag｜Oxford Cloth",
+      "url": "https://www.printdoors.com/products/1118",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1055,
+      "title": "Cushion cover (both sides)｜Polyester",
+      "url": "https://www.printdoors.com/products/1055",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 1043,
+      "title": "Disc Necklace (Laser Engraving) | Stainless Steel",
+      "url": "https://www.printdoors.com/products/1043",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 941,
+      "title": "Tassel Hanging (Linen Hanging)｜ Linen",
+      "url": "https://www.printdoors.com/products/941",
+      "reason": "Aktif, isimli, fotoğraflı ürün koşulları sağlanmıyor"
+    },
+    {
+      "id": 888,
+      "title": "Picture Frame Puzzle｜Cork",
+      "url": "https://www.printdoors.com/products/888",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 868,
+      "title": "Customized Printed book bag (full width)｜Polyester",
+      "url": "https://www.printdoors.com/products/868",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 771,
+      "title": "Puzzles (Carton Vertical)｜Paper",
+      "url": "https://www.printdoors.com/products/771",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 770,
+      "title": "Puzzles (Carton Horizontal)｜Paper",
+      "url": "https://www.printdoors.com/products/770",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 693,
+      "title": "Round Lock Edge Mouse Pad (8x8 Inch)｜ Polyester",
+      "url": "https://www.printdoors.com/products/693",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 630,
+      "title": "Double Sided Printed Horizontal Double Layer Flag(3*5ft)(Same Print On Both Sides) | Polyester",
+      "url": "https://www.printdoors.com/products/630",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 595,
+      "title": "Quality Tapestry Multi Size （Horizontal version）| Polyester",
+      "url": "https://www.printdoors.com/products/595",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 594,
+      "title": "Poster (self-adhesive) | Paper",
+      "url": "https://www.printdoors.com/products/594",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 592,
+      "title": "Poster ( 8.3x12 Inch/16.5x24 Inch)｜Paper",
+      "url": "https://www.printdoors.com/products/592",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 588,
+      "title": "Single-Sided Printed Multi-Size Blanket (Horizontal) | 280GSM Flannel",
+      "url": "https://www.printdoors.com/products/588",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 525,
+      "title": "Heart Shaped Mug (325ml/11oz) | Diatomaceous Earth",
+      "url": "https://www.printdoors.com/products/525",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 518,
+      "title": "Women's Custom Socks (Heel Black) | Polyester",
+      "url": "https://www.printdoors.com/products/518",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 492,
+      "title": "Single-Sided Printed Multi-Size Blanket (Horizontal) | 230GSM Flannel",
+      "url": "https://www.printdoors.com/products/492",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 458,
+      "title": "Mask (Without Filter)｜ Polyester",
+      "url": "https://www.printdoors.com/products/458",
+      "reason": "Bir dolar altındaki ürünün bedel/birim koşulları ayrıca doğrulanmalı"
+    },
+    {
+      "id": 447,
+      "title": "Cushion cover + pillow core (the same double-sided)｜Polyester",
+      "url": "https://www.printdoors.com/products/447",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 384,
+      "title": "Locked Edge Mouse Pad (7×8.7inch)｜ Polyester",
+      "url": "https://www.printdoors.com/products/384",
+      "reason": "Bir dolar altındaki ürünün bedel/birim koşulları ayrıca doğrulanmalı"
+    },
+    {
+      "id": 360,
+      "title": "Classic Pure White Ceramic Mug (325ml/11oz) | Ceramic",
+      "url": "https://www.printdoors.com/products/360",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 299,
+      "title": "Indoor Front Desk Floor Mat | Rubber",
+      "url": "https://www.printdoors.com/products/299",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 287,
+      "title": "Ice Silk Scarf  (Different Front And Back)｜ Polyester",
+      "url": "https://www.printdoors.com/products/287",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 280,
+      "title": "Customized Insulated lunch bag｜Polyester",
+      "url": "https://www.printdoors.com/products/280",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 271,
+      "title": "Wrap-Around Masks｜ Polyester",
+      "url": "https://www.printdoors.com/products/271",
+      "reason": "Bir dolar altındaki ürünün bedel/birim koşulları ayrıca doğrulanmalı"
+    },
+    {
+      "id": 269,
+      "title": "Round Floor Mat(24inch×24inch) | Flannel",
+      "url": "https://www.printdoors.com/products/269",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 268,
+      "title": "Keychain｜ Plastic",
+      "url": "https://www.printdoors.com/products/268",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 259,
+      "title": "Canvas Bag｜Polyester",
+      "url": "https://www.printdoors.com/products/259",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 163,
+      "title": "Reverse Umbrella｜Polyester",
+      "url": "https://www.printdoors.com/products/163",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 149,
+      "title": "Ordinary Mouse Pad (7×8.7inch)｜Polyester",
+      "url": "https://www.printdoors.com/products/149",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    },
+    {
+      "id": 127,
+      "title": "Towel｜Microfiber",
+      "url": "https://www.printdoors.com/products/127",
+      "reason": "Liste başlangıç fiyatı tek adet fiyat kuralıyla doğrulanmadı"
+    }
+  ]
+}

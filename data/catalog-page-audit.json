@@ -1,0 +1,3494 @@
+[
+  {
+    "id": "printify",
+    "url": "https://printify.com/app/products",
+    "status": 200,
+    "file": "printify-0.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "hoplix",
+    "url": "https://hoplix.com/it/custom-product",
+    "status": 200,
+    "file": "hoplix-1.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "hoplix",
+    "url": "https://hoplix.com/create-productv2?product_base=2",
+    "status": 200,
+    "file": "hoplix-2.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "podbase",
+    "url": "https://www.podbase.com/pricing",
+    "status": 200,
+    "file": "podbase-3.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "hoplix",
+    "url": "https://hoplix.com/create-productv2?product_base=27",
+    "status": 200,
+    "file": "hoplix-4.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printify",
+    "url": "https://printify.com/pricing/",
+    "status": 200,
+    "file": "printify-5.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "printify",
+    "url": "https://printify.com/tiktok-shop/",
+    "status": 200,
+    "file": "printify-6.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "inkthreadable",
+    "url": "https://www.inkthreadable.co.uk/all-collections",
+    "status": 200,
+    "file": "inkthreadable-7.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "sellfy",
+    "url": "https://sellfy.com/sell-physical-products/",
+    "status": 200,
+    "file": "sellfy-8.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "sellfy",
+    "url": "https://sellfy.com/pod-catalogue/",
+    "status": 200,
+    "file": "sellfy-9.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "sellfy",
+    "url": "https://sellfy.com/pricing/",
+    "status": 200,
+    "file": "sellfy-10.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "tshirtgang",
+    "url": "https://www.tshirtgang.com/catalog",
+    "status": 200,
+    "file": "tshirtgang-11.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/crewneck-sweatshirt",
+      "/catalog/next-level-3600",
+      "/catalog/ladies-premium",
+      "/catalog/tanktop",
+      "/catalog/ladies-tanktop",
+      "/catalog/v-neck",
+      "/catalog/apron",
+      "/catalog/travel-mug",
+      "/catalog/youth-hoodie",
+      "/catalog/lat-3321",
+      "/catalog/totebag",
+      "/catalog/mousepad",
+      "/catalog/snowflake-ornament",
+      "/catalog/baby-bib",
+      "/catalog/lat-4424",
+      "/catalog/independent-trading-co-ss3000",
+      "/catalog/independent-trading-co-ss4500",
+      "/catalog/yp-classics-6506"
+    ]
+  },
+  {
+    "id": "tshirtgang",
+    "url": "https://www.tshirtgang.com/pricing",
+    "status": 200,
+    "file": "tshirtgang-12.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "inkthreadable",
+    "url": "https://www.inkthreadable.co.uk/core-products",
+    "status": 200,
+    "file": "inkthreadable-13.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "inkthreadable",
+    "url": "https://www.inkthreadable.co.uk/best-selling-products",
+    "status": 200,
+    "file": "inkthreadable-14.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "tshirtgang",
+    "url": "https://www.tshirtgang.com/cp/myproducts",
+    "status": 200,
+    "file": "tshirtgang-15.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "framico",
+    "url": "https://www.framico.com/pricing",
+    "status": 200,
+    "file": "framico-16.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "neatopod",
+    "url": "https://www.neatopod.com/products-pricing.html",
+    "status": 200,
+    "file": "neatopod-17.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "makr3d",
+    "url": "https://makr3d.app/pricing",
+    "status": 200,
+    "file": "makr3d-18.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "makr3d",
+    "url": "https://makr3d.app/production-hub",
+    "status": 200,
+    "file": "makr3d-19.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "vistaprint",
+    "url": "https://www.vistaprint.com/promotional-products",
+    "status": 200,
+    "file": "vistaprint-20.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "vistaprint",
+    "url": "https://www.vistaprint.com/promotional-products/gifts-for-business",
+    "status": 200,
+    "file": "vistaprint-21.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "vistaprint",
+    "url": "https://www.vistaprint.com/shop-by-collections/event-supplies/holiday-parties-events",
+    "status": 200,
+    "file": "vistaprint-22.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "promio",
+    "url": "https://promio.eu/main-products",
+    "status": 200,
+    "file": "promio-23.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "promio",
+    "url": "https://promio.eu/collections",
+    "status": 200,
+    "file": "promio-24.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "gooten",
+    "url": "https://www.gooten.com/print-on-demand/baby-products/",
+    "status": 200,
+    "file": "gooten-25.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.gooten.com/print-on-demand/products/"
+    ]
+  },
+  {
+    "id": "gooten",
+    "url": "https://www.gooten.com/tiktok-shop/",
+    "status": 200,
+    "file": "gooten-26.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.gooten.com/print-on-demand/products/",
+      "https://www.g2.com/products/gooten-gooten/reviews"
+    ]
+  },
+  {
+    "id": "printmelon",
+    "url": "https://printmelon.com/print-on-demand-products/",
+    "status": 200,
+    "file": "printmelon-27.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printmelon.com/product/custom-t-shirt/",
+      "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+      "https://printmelon.com/product/print-on-demand-pants/",
+      "https://printmelon.com/product/custom-hats-and-caps/",
+      "https://printmelon.com/product/custom-pod-aprons/",
+      "https://printmelon.com/product/print-on-demand-kids-and-baby-clothes/",
+      "https://printmelon.com/product/custom-long-sleeve-shirts/",
+      "https://printmelon.com/product/print-on-demand-mugs-and-cups/"
+    ]
+  },
+  {
+    "id": "printmelon",
+    "url": "https://printmelon.com/product/custom-t-shirt/",
+    "status": 200,
+    "file": "printmelon-28.html",
+    "schemaProducts": [
+      {
+        "@type": "Product",
+        "name": "Custom T-Shirt | Print on Demand T-Shirts | Print Melon",
+        "description": "Create a custom t-shirt for your Shopify, Etsy or online store. Add artwork, choose colors and sell with order-based print-on-demand fulfillment.",
+        "category": "T-Shirts",
+        "mainEntityOfPage": {
+          "@id": "https://printmelon.com/product/custom-t-shirt/#webpage"
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/organic-3.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-77.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/Untitled-design-76.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-1.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-2.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-3.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-4.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-5.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-6.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/06/melon-7.png",
+            "height": "1080",
+            "width": "1080"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "12.50",
+          "priceCurrency": "AZN",
+          "priceValidUntil": "2027-12-31",
+          "availability": "http://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "url": "https://printmelon.com/product/custom-t-shirt/",
+          "seller": {
+            "@type": "Organization",
+            "@id": "https://printmelon.com/",
+            "name": "Print Melon",
+            "url": "https://printmelon.com",
+            "logo": ""
+          }
+        },
+        "@id": "https://printmelon.com/product/custom-t-shirt/#richSnippet"
+      }
+    ],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printmelon.com/product/custom-t-shirt/",
+      "https://printmelon.com/product/custom-t-shirt/feed/",
+      "https://printmelon.com/wp-json/wp/v2/product/516"
+    ]
+  },
+  {
+    "id": "gooten",
+    "url": "https://www.gooten.com/print-on-demand/products/",
+    "status": 200,
+    "file": "gooten-29.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.gooten.com/print-on-demand/products/"
+    ]
+  },
+  {
+    "id": "printmelon",
+    "url": "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+    "status": 200,
+    "file": "printmelon-30.html",
+    "schemaProducts": [
+      {
+        "@type": "Product",
+        "name": "Custom Hoodies &amp; Sweatshirts | Print Melon",
+        "description": "Design custom hoodies &amp; sweatshirts for your brand or store. Choose colors, sizes and artwork with print-on-demand fulfillment.",
+        "category": "Hoodies",
+        "mainEntityOfPage": {
+          "@id": "https://printmelon.com/product/custom-hoodies-sweatshirts/#webpage"
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/Untitled-design-75-1.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-1.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-2.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-3.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-4.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-5.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-6.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-7.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-9.png",
+            "height": "1080",
+            "width": "1080"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://printmelon.com/wp-content/uploads/2026/07/hoodies-10.png",
+            "height": "1080",
+            "width": "1080"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "12.50",
+          "priceCurrency": "AZN",
+          "priceValidUntil": "2027-12-31",
+          "availability": "http://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "url": "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+          "seller": {
+            "@type": "Organization",
+            "@id": "https://printmelon.com/",
+            "name": "Print Melon",
+            "url": "https://printmelon.com",
+            "logo": ""
+          }
+        },
+        "@id": "https://printmelon.com/product/custom-hoodies-sweatshirts/#richSnippet"
+      }
+    ],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printmelon.com/product/custom-hoodies-sweatshirts/",
+      "https://printmelon.com/product/custom-hoodies-sweatshirts/feed/",
+      "https://printmelon.com/wp-json/wp/v2/product/5217"
+    ]
+  },
+  {
+    "id": "customink",
+    "url": "https://www.customink.com/products/apparel/857",
+    "status": 200,
+    "file": "customink-31.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/sustainable/sustainable-gifts/781",
+      "/products/sustainable/sustainable-office-supplies/780",
+      "/products/sustainable/sustainable-hats/777",
+      "/products/sustainable/sustainable-drinkware/778",
+      "/products/sustainable/sustainable-bags/779",
+      "/products/sustainable/sustainable-technology/988",
+      "/products/sustainable/sustainable-jackets-vests/775",
+      "/products/sustainable/sustainable-polo-shirts/782",
+      "/products/sustainable/sustainable-sweatpants/776",
+      "/products/sustainable/all-sustainable/783",
+      "/products/canada-products/t-shirts/63",
+      "/products/canada-products/sweats/66",
+      "/products/canada-products/outerwear/146",
+      "/products/canada-products/hats/67",
+      "/products/canada-products/athletics/121",
+      "/products/canada-products/polos/195",
+      "/products/canada-products/womens/65",
+      "/products/canada-products/kids/90"
+    ]
+  },
+  {
+    "id": "customink",
+    "url": "https://www.customink.com/products",
+    "status": 200,
+    "file": "customink-32.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/pants-shorts/canada-pants-shorts/185",
+      "/products/pants-shorts/all-pants-shorts/487",
+      "/products/footwear/all-footwear/629",
+      "/products/sustainable/sustainable-hoodies-sweatshirts/774",
+      "/products/sustainable/sustainable-office-supplies/780",
+      "/products/sustainable/sustainable-hats/777",
+      "/products/sustainable/sustainable-jackets-vests/775",
+      "/products/sustainable/sustainable-polo-shirts/782",
+      "/products/sustainable/sustainable-sweatpants/776",
+      "/products/sustainable/all-sustainable/783",
+      "/products/canada-products/t-shirts/63",
+      "/products/canada-products/sweats/66",
+      "/products/canada-products/outerwear/146",
+      "/products/canada-products/hats/67",
+      "/products/canada-products/athletics/121",
+      "/products/canada-products/polos/195",
+      "/products/canada-products/womens/65",
+      "/products/canada-products/kids/90"
+    ]
+  },
+  {
+    "id": "customink",
+    "url": "https://www.customink.com/products/promotional-products/218",
+    "status": 200,
+    "file": "customink-33.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.customink.com/products/technology/188",
+      "https://www.customink.com/products/stickers-magnets/405",
+      "https://www.customink.com/products/health-personal-care/576",
+      "https://www.customink.com/products/pens-office-supplies/awards-recognition/897",
+      "https://www.customink.com/products/t-shirts/4",
+      "https://www.customink.com/products/gifts/53",
+      "https://www.customink.com/products/bags/15",
+      "https://www.customink.com/products/hats/1",
+      "https://www.customink.com/products/technology/power-banks/189",
+      "https://www.customink.com/products/technology/usb-flash-drives/227",
+      "https://www.customink.com/products/drinkware/water-bottles/43",
+      "https://www.customink.com/products/pens-office-supplies/8",
+      "https://www.customink.com/products/stickers-magnets/stickers/61",
+      "https://www.customink.com/products/stationery/notebooks/193",
+      "https://www.customink.com/products/featured-brands/yeti/770",
+      "https://www.customink.com/products/featured-brands/stanley/908?",
+      "https://www.customink.com/products/apparel/857",
+      "https://www.customink.com/products/sweatshirts/quarter-zip-sweatshirts/224"
+    ]
+  },
+  {
+    "id": "promio",
+    "url": "https://promio.eu/products",
+    "status": 200,
+    "file": "promio-34.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "teelaunch",
+    "url": "https://teelaunch.com/products/",
+    "status": 200,
+    "file": "teelaunch-35.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://teelaunch.com/products/"
+    ]
+  },
+  {
+    "id": "teelaunch",
+    "url": "https://teelaunch.com/products/gildan-youth-hoodie/",
+    "status": 200,
+    "file": "teelaunch-36.html",
+    "schemaProducts": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://teelaunch.com/products/gildan-youth-hoodie/#product",
+        "name": "Gildan Youth Hoodie",
+        "alternateName": [
+          "Custom Youth Hoodies",
+          "Gildan Youth Sweatshirt",
+          "Custom Youth Hoodie",
+          "Personalized Youth Hoodies",
+          "Custom Youth Sweatshirts",
+          "Print-on-Demand Youth Hoodie"
+        ],
+        "description": "Create custom Gildan youth hoodies with teelaunch. Add comfortable kids’ apparel to your Shopify or Etsy print on demand store with reliable fulfillment.",
+        "image": [
+          "https://teelaunch.com/wp-content/uploads/2022/11/YouthHoodie_Flat_FRONT-copy-1120x1120.png"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "teelaunch"
+        },
+        "url": "https://teelaunch.com/products/gildan-youth-hoodie/",
+        "category": "Custom Apparel",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Weight",
+            "value": "7.8 oz"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Material",
+            "value": "50/50 cotton/poly fleece"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Yarn",
+            "value": "Air jet yarn for a soft, pill-resistant finish"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Print Area",
+            "value": "Double sided print"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Available Sizes",
+            "value": "XS to XL"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Available Colors",
+            "value": "15 colors"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Product Use",
+            "value": "Gildan youth hoodies, custom youth hoodies, personalized youth hoodies, custom youth sweatshirts, and print-on-demand kids’ apparel"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Purpose",
+            "value": "For Etsy, Shopify, Gildan youth hoodies, custom youth hoodies, custom youth sweatshirts, custom apparel, POD stores, and print-on-demand stores"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Fulfillment",
+            "value": "Easy integration, no inventory required, and reliable fulfillment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Processing Time",
+            "value": "3-6 days"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://teelaunch.com/products/gildan-youth-hoodie/",
+          "priceCurrency": "USD",
+          "price": "19.00",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "teelaunch"
+          },
+          "shippingDetails": [
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "US"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "7.00",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "CA"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "12.50",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "GB"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "11.50",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "name": "European Union"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "13.50",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "AU"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "13.50",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "name": "Rest of the World"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "14.25",
+                "currency": "USD"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "hasDollarPrice": true,
+    "links": [
+      "https://teelaunch.com/products/gildan-youth-hoodie/",
+      "https://teelaunch.com/products/"
+    ]
+  },
+  {
+    "id": "mwwondemand",
+    "url": "https://mwwondemand.com/production-portal/",
+    "status": 200,
+    "file": "mwwondemand-37.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "teelaunch",
+    "url": "https://teelaunch.com/products/poster/",
+    "status": 200,
+    "file": "teelaunch-38.html",
+    "schemaProducts": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://teelaunch.com/products/poster/#product",
+        "name": "Custom Posters",
+        "alternateName": [
+          "High Quality Art Poster Prints",
+          "Custom Posters",
+          "Poster Prints",
+          "Art Prints",
+          "Wall Posters",
+          "High Quality Poster Prints",
+          "Print-on-Demand Posters"
+        ],
+        "description": "Create custom posters with teelaunch and turn original designs and art into high quality poster prints for Shopify or Etsy print on demand stores.",
+        "image": [
+          "https://teelaunch.com/wp-content/uploads/2023/10/24x36Poster_Angle_V_AS-copy-1120x1120.jpg"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "teelaunch"
+        },
+        "url": "https://teelaunch.com/products/poster/",
+        "category": "Custom Wall Art",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "Paper",
+            "value": "Sturdy 210 gsm paper"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Print Quality",
+            "value": "Museum-quality poster prints with vivid color reproduction"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Print Method",
+            "value": "4-color water-based inkjet process"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Available Finishes",
+            "value": "Matte or gloss"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Print Area",
+            "value": "Single sided print"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Product Use",
+            "value": "Custom posters, poster prints, art prints, wall posters, and high quality poster prints for original designs and artwork"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Purpose",
+            "value": "For Etsy, Shopify, custom posters, art prints, wall posters, custom wall art, POD stores, and print-on-demand stores"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Fulfillment",
+            "value": "Easy integration, no inventory required, and reliable fulfillment"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Processing Time",
+            "value": "3 business days"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://teelaunch.com/products/poster/",
+          "priceCurrency": "USD",
+          "price": "4.01",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "teelaunch"
+          },
+          "shippingDetails": [
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "US"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "3.99",
+                "currency": "USD"
+              }
+            },
+            {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "name": "International"
+              },
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "6.99",
+                "currency": "USD"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "hasDollarPrice": true,
+    "links": [
+      "https://teelaunch.com/products/poster/",
+      "https://teelaunch.com/products/"
+    ]
+  },
+  {
+    "id": "printsome",
+    "url": "https://printsome.com/products",
+    "status": 200,
+    "file": "printsome-39.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "peaprint",
+    "url": "https://peaprint.com/products",
+    "status": 200,
+    "file": "peaprint-40.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/detail/cotton-long-sleeve-baby-romper",
+      "/products/detail/cotton-baby-romper",
+      "/products/detail/cotton-baby-sleeveless-romper",
+      "/products/detail/cotton-baby-sleeping-bag",
+      "/products/detail/ice-silk-pet-tank-top",
+      "/products/detail/plus-size-ice-silk-pet-tank-top",
+      "/products/detail/high-waisted-quick-drying-shorts",
+      "/products/detail/womens-sunscreen-shirt",
+      "/products/detail/v-neck-long-sleeved-shirt",
+      "/products/detail/mens-lightweight-zip-up-jacket",
+      "/products/detail/pet-pullover-hoodie",
+      "/products/detail/plus-size-pet-hooded-sweatshirt",
+      "/products/detail/cool-hoodies",
+      "/products/detail/multi-color-american-size-short-sleeve-t-shirt",
+      "/products/detail/short-sleeve-cotton-crewneck-t-shirt-for-men-women",
+      "/products/detail/cotton-summer-short-sleeve-t-shirts-for-women",
+      "/products/detail/fleece-zip-up-jacket",
+      "/products/detail/long-sleeved-hooded-jacket"
+    ]
+  },
+  {
+    "id": "kincustom",
+    "url": "https://www.kincustom.com/product-selection?hsLang=en",
+    "status": 200,
+    "file": "kincustom-41.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products//shoes/shoes-men/mens-lace-up-canvas-shoe-black-black?hsLang=en",
+      "/products//shoes/shoes-women/womens-slip-on-canvas-shoe-black-black?hsLang=en",
+      "/products//shoes/shoes-men/mens-slip-on-canvas-shoes-black-black?hsLang=en",
+      "/products//shoes/shoes-men/mens-athletic-shoe-black-black?hsLang=en",
+      "/products//shoes/shoes-women/womens-athletic-shoe-black-black?hsLang=en",
+      "/products//shoes/shoes-women/womens-lace-up-canvas-shoe-black-black?hsLang=en",
+      "/products//women/aop-tees-tops/womens-satin-robe-white?hsLang=en",
+      "/products//women/aop-tees-tops/womens-satin-shor-sleeve-pajama-top-white?hsLang=en",
+      "/products//women/aop-pants-shorts/womens-sation-pajama-shorts-white?hsLang=en",
+      "/products//women/aop-tees-tops/womens-satin-long-sleeve-pajama-top-white?hsLang=en",
+      "/products//women/aop-pants-shorts/womens-satin-pajama-pants-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-tee-white?hsLang=en",
+      "/products//shoes/shoes-women/women-slide-sandal-white?hsLang=en",
+      "/products//custom-packaging/bulk-hangtags/bulk-custom-hangtags-white?hsLang=en",
+      "/products//shoes/shoes-kids/kids-hightop-canvas-white?hsLang=en",
+      "/products//shoes/shoes-men/men-slide-sandal-white?hsLang=en",
+      "/products//shoes/shoes-men/mens-two-tone-sneaker-white?hsLang=en",
+      "/products//shoes/shoes-women/womens-hightop-canvas-white?hsLang=en"
+    ]
+  },
+  {
+    "id": "kincustom",
+    "url": "https://www.kincustom.com/product-selection/mens?hsLang=en",
+    "status": 200,
+    "file": "kincustom-42.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products//mens/aop-bottoms/jogger-shorts-white?hsLang=en",
+      "/products//mens/aop-bottoms/joggers-white?hsLang=en",
+      "/products//mens/aop-bottoms/mens-aop-track-pants-white?hsLang=en",
+      "/products//mens/mens-aop-hoodies-sweatshirts/mens-crew-neck-sweatshirt-white?hsLang=en",
+      "/products//mens/mens-aop-hoodies-sweatshirts/mens-premium-heavyweight-short-sleeve-hoodie-white?hsLang=en",
+      "/products//mens/mens-aop-hoodies-sweatshirts/mens-premium-heavyweight-sleeveless-hoodie-white?hsLang=en",
+      "/products//mens/mens-aop-hoodies-sweatshirts/mens-aop-hoodie-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-tee-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/long-sleeve-tee-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-everyday-pocket-tee-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-aop-tank-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-long-sleeve-sports-jersey-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/sports-tank-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/premium-heavyweight-tee-white?hsLang=en",
+      "/products//mens/aop-tees-long-sleeves/mens-slim-fit-short-sleeve-polo-white?hsLang=en",
+      "/products//mens/aop-jackets/stripe-sleeve-track-jacket-white?hsLang=en",
+      "/products//mens/aop-jackets/track-jacket-white?hsLang=en",
+      "/products//mens/aop-jackets/windbreaker-white?hsLang=en"
+    ]
+  },
+  {
+    "id": "jetprint",
+    "url": "https://jetprintapp.com/app/products",
+    "status": 200,
+    "file": "jetprint-43.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "jetprint",
+    "url": "https://jetprintapp.com/products/print-on-demand-watches/",
+    "status": 200,
+    "file": "jetprint-44.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://jetprintapp.com/products/print-on-demand-watches/",
+      "https://dashboard.jetprintapp.com/products/All-Watches",
+      "https://jetprintapp.com/product/steel-strap-quartz-movement-watch/",
+      "https://jetprintapp.com/product/stainless-steel-quartz-watch/",
+      "https://jetprintapp.com/product/unisex-quartz-watch/",
+      "https://jetprintapp.com/product/italian-olive-lumber-wooden-watch/",
+      "https://jetprintapp.com/product/stainless-steel-band-quartz-watch/",
+      "https://jetprintapp.com/product/black-indicators-quartz-watch/",
+      "https://jetprintapp.com/product/thin-leather-strap-quartz-watch-black/",
+      "https://jetprintapp.com/product/unisex-automatic-watch-silver/",
+      "https://jetprintapp.com/product/46mm-unisex-automatic-waterproof-watch-black/",
+      "https://jetprintapp.com/product/152-stylish-leather-strap-classic-quartz-watch-silver/",
+      "https://jetprintapp.com/products/",
+      "https://jetprintapp.com/products/print-on-demand-shoes/"
+    ]
+  },
+  {
+    "id": "kincustom",
+    "url": "https://www.kincustom.com/product-selection/mens/mens-cotton?hsLang=en",
+    "status": 200,
+    "file": "kincustom-45.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products//mens/mens-cotton/unisex-jersey-long-sleeve-tee-bc-men-red?hsLang=en",
+      "/products//mens/mens-cotton/unisex-sweatshirt-champion-men-light-steel?hsLang=en",
+      "/products//mens/mens-cotton/unisex-jersey-v-neck-tee-bc-men-true-royal?hsLang=en",
+      "/products//mens/mens-cotton/premium-pullover-hoodie-ls-men-burgundy?hsLang=en",
+      "/products//mens/mens-cotton/unisex-three-quarter-sleeve-baseball-tee-bc-men-white-kelly?hsLang=en",
+      "/products//mens/mens-cotton/lane-seven-premium-fleece-joggers-men-heather-grey?hsLang=en",
+      "/products//mens/mens-cotton/premium-crewneck-sweatshirt-ls-men-oatmeal-heather?hsLang=en",
+      "/products//mens/mens-cotton/unisex-long-sleeve-tee-ls-men-pale-pink?hsLang=en",
+      "/products//mens/mens-cotton/unisex-tee-champion-men-navy?hsLang=en",
+      "/products//mens/mens-cotton/unisex-hoodie-champion-men-royal-blue?hsLang=en",
+      "/products//mens/mens-cotton/unisex-jersey-tee-bc-men-maroon?hsLang=en",
+      "/products//mens/mens-cotton/heavy-cotton-t-shirt-gildan-men-light-blue?hsLang=en",
+      "/products//mens/mens-cotton/unisex-jersey-tank-bc-men-asphalt?hsLang=en",
+      "/products//mens/mens-cotton/unisex-ultra-cotton-t-shirt-gildan-sand?hsLang=en"
+    ]
+  },
+  {
+    "id": "jetprint",
+    "url": "https://jetprintapp.com/products/print-on-demand-shoes/",
+    "status": 200,
+    "file": "jetprint-46.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://jetprintapp.com/product/classic-low-top-leather-sneakers-white-black/",
+      "https://jetprintapp.com/product/324-black-low-top-leather-sports-sneakersshoe-tongue-design/",
+      "https://jetprintapp.com/product/hot-selling-personalized-shoes-faux-fur-leather-boots/",
+      "https://jetprintapp.com/product/hot-selling-personalized-shoes-casual-leather-boots/",
+      "https://jetprintapp.com/product/black-sole-blade-running-shoes/",
+      "https://jetprintapp.com/product/white-sole-blade-running-shoes/",
+      "https://jetprintapp.com/product/high-top-leather-sports-sneakers-for-brand-customization/",
+      "https://jetprintapp.com/product/black-sole-mesh-running-shoes/",
+      "https://jetprintapp.com/product/custom-oversized-sneakers/",
+      "https://jetprintapp.com/product/new-featured-custom-shoes-high-top-leather-sneakers-white/",
+      "https://jetprintapp.com/product/custom-black-sole-road-running-shoes/",
+      "https://jetprintapp.com/product/new-featured-custom-shoes-trendy-low-top-canvas-sneakers/",
+      "https://jetprintapp.com/product/custom-ultra-light-mesh-sneakers/",
+      "https://jetprintapp.com/product/white-sole-high-top-canvas-shoes/",
+      "https://jetprintapp.com/product/black-sole-high-top-canvas-shoes/",
+      "https://jetprintapp.com/product/custom-waterproof-leather-boots/",
+      "https://jetprintapp.com/product/white-sole-mesh-running-shoes/",
+      "https://jetprintapp.com/products/"
+    ]
+  },
+  {
+    "id": "contrado",
+    "url": "https://www.contrado.com/top-dropshipping-products",
+    "status": 200,
+    "file": "contrado-47.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.contrado.com/products/custom-bucket-hat"
+    ]
+  },
+  {
+    "id": "contrado",
+    "url": "https://www.contrado.com/production-and-shipping",
+    "status": 200,
+    "file": "contrado-48.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.contrado.com/products/custom-bucket-hat"
+    ]
+  },
+  {
+    "id": "contrado",
+    "url": "https://www.contrado.com/products/custom-bucket-hat",
+    "status": 200,
+    "file": "contrado-49.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://www.contrado.com/products/custom-bucket-hat"
+    ]
+  },
+  {
+    "id": "subliminator",
+    "url": "https://www.subliminator.com/pricing",
+    "status": 200,
+    "file": "subliminator-50.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://app.subliminator.com/catalog#/catalog/all"
+    ]
+  },
+  {
+    "id": "superfastpod",
+    "url": "https://universalpod.co.uk/pages/app-pricing",
+    "status": 200,
+    "file": "superfastpod-51.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//universalpod.co.uk/cdn/shop/files/ICO_new.png?crop=center&height=32&v=1772841620&width=32",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/base.css?v=128518614241847749241773932986",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-cart-items.css?v=13033300910818915211773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-localization-form.css?v=170315343355214948141773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-menu.css?v=151968516119678728991773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-search.css?v=165164710990765432851773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-menu-drawer.css?v=147478906057189667651773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-cart-notification.css?v=54116361853792938221773226418",
+      "/products/dtf-printed-gang-sheet",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-image-with-text.css?v=159347133892345898421773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991773226418"
+    ]
+  },
+  {
+    "id": "superfastpod",
+    "url": "https://universalpod.co.uk/products/dtf-printed-gang-sheet",
+    "status": 200,
+    "file": "superfastpod-52.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-cart-notification.css?v=54116361853792938221773226418",
+      "/products/dtf-printed-gang-sheet",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/section-main-product.css?v=161818056142182136911773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-accordion.css?v=7971072480289620591773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-price.css?v=47596247576480123001773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-slider.css?v=14039311878856620671773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-rating.css?v=179577762467860590411773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-deferred-media.css?v=14096082462203297471773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-product-variant-picker.css?v=101198305663325844211773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-swatch-input.css?v=61683592951238328641773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-swatch.css?v=6811383713633888781773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-pickup-availability.css?v=34645222959864780961773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-card.css?v=120341546515895839841773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/section-related-products.css?v=80324771040738084201773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991773226418"
+    ]
+  },
+  {
+    "id": "superfastpod",
+    "url": "https://universalpod.co.uk/pages/cant-find-a-product",
+    "status": 200,
+    "file": "superfastpod-53.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//universalpod.co.uk/cdn/shop/files/ICO_new.png?crop=center&height=32&v=1772841620&width=32",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/base.css?v=128518614241847749241773932986",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-cart-items.css?v=13033300910818915211773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-localization-form.css?v=170315343355214948141773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-menu.css?v=151968516119678728991773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-search.css?v=165164710990765432851773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-menu-drawer.css?v=147478906057189667651773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-cart-notification.css?v=54116361853792938221773226418",
+      "/products/dtf-printed-gang-sheet",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-image-with-text.css?v=159347133892345898421773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501773226418",
+      "//universalpod.co.uk/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991773226418"
+    ]
+  },
+  {
+    "id": "subliminator",
+    "url": "https://www.subliminator.com/product-catalog",
+    "status": 200,
+    "file": "subliminator-54.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "aop",
+    "url": "https://aop.plus/shop/",
+    "status": 200,
+    "file": "aop-55.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://aop.plus/product/ceramic-hanging-ornament/",
+      "https://aop.plus/product/classic-adult-hooded-blanket/",
+      "https://aop.plus/product/classic-adult-hoodie/",
+      "https://aop.plus/product/classic-adult-muscle-top/",
+      "https://aop.plus/product/classic-adult-polo-shirt/",
+      "https://aop.plus/product/classic-adult-sweatshirt/",
+      "https://aop.plus/product/classic-adult-t-shirt/",
+      "https://aop.plus/product/classic-adult-vest-top/",
+      "https://aop.plus/product/classic-adult-zip-hoodie/",
+      "https://aop.plus/product/classic-baby-onesie-bodysuit/",
+      "https://aop.plus/product/classic-heavy-cotton-adult-t-shirt/",
+      "https://aop.plus/product/classic-kids-hoodie/",
+      "https://aop.plus/product/classic-kids-sweatshirt/",
+      "https://aop.plus/shop/page/3/",
+      "https://aop.plus/shop/page/4/",
+      "https://aop.plus/shop/page/5/",
+      "https://aop.plus/shop/page/6/",
+      "https://aop.plus/shop/page/7/"
+    ]
+  },
+  {
+    "id": "aop",
+    "url": "https://aop.plus/product-category/womens-clothing/",
+    "status": 200,
+    "file": "aop-56.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://aop.plus/product/classic-womens-t-shirt/",
+      "https://aop.plus/product/classic-womens-tank-top/",
+      "https://aop.plus/product/classic-womens-v-neck-t-shirt/",
+      "https://aop.plus/product/ladies-cropped-raw-edge-hoodie/",
+      "https://aop.plus/product/leggings/",
+      "https://aop.plus/product/organic-jersey-womens-t-shirt/",
+      "https://aop.plus/product/organic-t-shirt-dress/",
+      "https://aop.plus/product/premium-adult-hoodie-dress/",
+      "https://aop.plus/product/premium-jersey-womens-t-shirt/",
+      "https://aop.plus/product/premium-organic-adult-t-shirt/",
+      "https://aop.plus/product/premium-organic-oversized-t-shirt/",
+      "https://aop.plus/product/sublimation-batwing-top/",
+      "https://aop.plus/product/unisex-cropped-raw-edge-boyfriend-hoodie/",
+      "https://aop.plus/product/wide-neck-womens-t-shirt-xs-5xl/",
+      "https://aop.plus/product/women-performance-tank-top/",
+      "https://aop.plus/product/womens-extended-shoulder-t-shirt-xs-5xl/",
+      "https://aop.plus/product/womens-long-pant-pyjama-set/",
+      "https://aop.plus/product/womens-long-slub-t-shirt-xs-5xl/"
+    ]
+  },
+  {
+    "id": "printgenie",
+    "url": "https://www.printgenie.com/product-category",
+    "status": 200,
+    "file": "printgenie-57.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.printgenie.com/products/kids/bodysuits-1",
+      "https://www.printgenie.com/products/kids/toddler-shirts",
+      "https://www.printgenie.com/products/kids/toddler-shirts-1",
+      "https://www.printgenie.com/products/kids/hoodies-sweatshirts",
+      "https://www.printgenie.com/products/kids/kids-youth-s-hoodies",
+      "https://www.printgenie.com/products/kids/kids-youth-s-sweatshirts",
+      "https://www.printgenie.com/products/hats/caps",
+      "https://www.printgenie.com/products/hats/fashioncap",
+      "https://www.printgenie.com/products/hats/beanies",
+      "https://www.printgenie.com/products/accessories/bags",
+      "https://www.printgenie.com/products/accessories/tote-bags",
+      "https://www.printgenie.com/products/accessories/mobile-cases",
+      "https://www.printgenie.com/products/accessories/iphone-cases",
+      "https://www.printgenie.com/products/accessories/face-masks",
+      "https://www.printgenie.com/products/accessories/large-facemask",
+      "https://www.printgenie.com/products/accessories/small-facemask",
+      "https://www.printgenie.com/products/home-living/coffee-mugs",
+      "https://www.printgenie.com/products/home-living/mug"
+    ]
+  },
+  {
+    "id": "aop",
+    "url": "https://aop.plus/product-category/mens-clothing/",
+    "status": 200,
+    "file": "aop-58.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://aop.plus/product/classic-adult-hoodie/",
+      "https://aop.plus/product/classic-adult-muscle-top/",
+      "https://aop.plus/product/classic-adult-polo-shirt/",
+      "https://aop.plus/product/classic-adult-sweatshirt/",
+      "https://aop.plus/product/classic-adult-t-shirt/",
+      "https://aop.plus/product/classic-adult-vest-top/",
+      "https://aop.plus/product/classic-adult-zip-hoodie/",
+      "https://aop.plus/product/classic-heavy-cotton-adult-t-shirt/",
+      "https://aop.plus/product/classic-long-sleeve-t-shirt/",
+      "https://aop.plus/product/classic-sublimation-adult-t-shirt/",
+      "https://aop.plus/product/classic-sublimation-adult-tank-top/",
+      "https://aop.plus/product/classic-sublimation-panel-t-shirt/",
+      "https://aop.plus/product/classic-sublimation-pocket-t-shirt/",
+      "https://aop.plus/product/classic-v-neck-t-shirt/",
+      "https://aop.plus/product/heavy-oversized-t-shirt/",
+      "https://aop.plus/product/organic-adult-t-shirt/",
+      "https://aop.plus/product/organic-jersey-unisex-tank-top/",
+      "https://aop.plus/product/organic-raglan-long-sleeve-shirt/"
+    ]
+  },
+  {
+    "id": "printgenie",
+    "url": "https://www.printgenie.com/products/mens-clothing",
+    "status": 200,
+    "file": "printgenie-59.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.printgenie.com/products/kids/bodysuits-1",
+      "https://www.printgenie.com/products/kids/toddler-shirts",
+      "https://www.printgenie.com/products/kids/toddler-shirts-1",
+      "https://www.printgenie.com/products/kids/hoodies-sweatshirts",
+      "https://www.printgenie.com/products/kids/kids-youth-s-hoodies",
+      "https://www.printgenie.com/products/kids/kids-youth-s-sweatshirts",
+      "https://www.printgenie.com/products/hats/caps",
+      "https://www.printgenie.com/products/hats/fashioncap",
+      "https://www.printgenie.com/products/hats/beanies",
+      "https://www.printgenie.com/products/accessories/bags",
+      "https://www.printgenie.com/products/accessories/tote-bags",
+      "https://www.printgenie.com/products/accessories/mobile-cases",
+      "https://www.printgenie.com/products/accessories/iphone-cases",
+      "https://www.printgenie.com/products/accessories/face-masks",
+      "https://www.printgenie.com/products/accessories/large-facemask",
+      "https://www.printgenie.com/products/accessories/small-facemask",
+      "https://www.printgenie.com/products/home-living/coffee-mugs",
+      "https://www.printgenie.com/products/home-living/mug"
+    ]
+  },
+  {
+    "id": "getfuelpod",
+    "url": "https://www.getfuelpod.com/product-type/best-selling",
+    "status": 200,
+    "file": "getfuelpod-60.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "printgenie",
+    "url": "https://www.printgenie.com/products",
+    "status": 200,
+    "file": "printgenie-61.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.printgenie.com/products/kids/bodysuits-1",
+      "https://www.printgenie.com/products/kids/toddler-shirts",
+      "https://www.printgenie.com/products/kids/toddler-shirts-1",
+      "https://www.printgenie.com/products/kids/hoodies-sweatshirts",
+      "https://www.printgenie.com/products/kids/kids-youth-s-hoodies",
+      "https://www.printgenie.com/products/kids/kids-youth-s-sweatshirts",
+      "https://www.printgenie.com/products/hats/caps",
+      "https://www.printgenie.com/products/hats/fashioncap",
+      "https://www.printgenie.com/products/hats/beanies",
+      "https://www.printgenie.com/products/accessories/bags",
+      "https://www.printgenie.com/products/accessories/tote-bags",
+      "https://www.printgenie.com/products/accessories/mobile-cases",
+      "https://www.printgenie.com/products/accessories/iphone-cases",
+      "https://www.printgenie.com/products/accessories/face-masks",
+      "https://www.printgenie.com/products/accessories/large-facemask",
+      "https://www.printgenie.com/products/accessories/small-facemask",
+      "https://www.printgenie.com/products/home-living/coffee-mugs",
+      "https://www.printgenie.com/products/home-living/mug"
+    ]
+  },
+  {
+    "id": "printrove",
+    "url": "https://printrove.com/products/mens-clothing",
+    "status": 200,
+    "file": "printrove-62.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printrove.com/products/mens-clothing"
+    ]
+  },
+  {
+    "id": "printrove",
+    "url": "https://printrove.com/products/womens-clothing",
+    "status": 200,
+    "file": "printrove-63.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printrove.com/products/womens-clothing"
+    ]
+  },
+  {
+    "id": "printrove",
+    "url": "https://printrove.com/products/kids-clothing",
+    "status": 200,
+    "file": "printrove-64.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printrove.com/products/kids-clothing"
+    ]
+  },
+  {
+    "id": "prodigi",
+    "url": "https://www.prodigi.com/products/prints-and-posters/",
+    "status": 200,
+    "file": "prodigi-65.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/prints-and-posters/art-prints/budget-art-paper/",
+      "/products/prints-and-posters/art-prints/cold-press-watercolour-paper/",
+      "/products/prints-and-posters/photo-prints/",
+      "/products/prints-and-posters/photo-prints/lustre-photo-paper/",
+      "/products/prints-and-posters/photo-prints/hahnemuhle-photo-rag/",
+      "/products/prints-and-posters/photo-prints/c-types/",
+      "/products/prints-and-posters/posters/budget-poster/",
+      "/products/prints-and-posters/specialist-prints/",
+      "/products/prints-and-posters/specialist-prints/metallic-foil-prints/",
+      "/products/prints-and-posters/specialist-prints/glow-in-the-dark-posters/",
+      "/products/prints-and-posters/poster-hangers/",
+      "/products/prints-and-posters/poster-hangers/art-print-with-hanger/",
+      "/products/prints-and-posters/poster-hangers/height-chart/",
+      "/products/prints-and-posters/poster-hangers/poster-hangers/",
+      "/products/wall-art/",
+      "/products/sport-and-games/",
+      "/products/regions/",
+      "/de/products/prints-and-posters/"
+    ]
+  },
+  {
+    "id": "prodigi",
+    "url": "https://www.prodigi.com/products/",
+    "status": 200,
+    "file": "prodigi-66.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/wall-art/photo-tiles/framed-photo-tiles/",
+      "/products/stickers/",
+      "/products/technology/",
+      "/products/books-and-magazines/",
+      "/products/home-and-living/",
+      "/products/cards-and-stationery/",
+      "/products/business-and-commercial/",
+      "/products/mens-clothing/",
+      "/products/womens-clothing/",
+      "/products/kids-clothing/",
+      "/products/accessories/",
+      "/products/global/",
+      "/products/new/",
+      "/products/trending/",
+      "/products/wall-art/",
+      "/products/sport-and-games/",
+      "/products/regions/",
+      "/de/products/"
+    ]
+  },
+  {
+    "id": "prodigi",
+    "url": "https://www.prodigi.com/products/wall-art/framed-prints/",
+    "status": 200,
+    "file": "prodigi-67.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/wall-art/framed-prints/box-frames/",
+      "/products/wall-art/framed-prints/spacer-frames/",
+      "/products/wall-art/framed-prints/budget-framed-poster/",
+      "/products/wall-art/framed-prints/instagram-framed-prints/",
+      "/products/wall-art/framed-prints/backloader-frames/",
+      "/products/wall-art/framed-prints/classic-framed-metallic-foil-prints/",
+      "/products/wall-art/framed-prints/box-framed-metallic-foil-prints/",
+      "/products/wall-art/framed-prints/classic-framed-glow-in-the-dark-posters/",
+      "/products/wall-art/framed-prints/box-framed-glow-in-the-dark-posters/",
+      "/products/wall-art/framed-prints/aluminium-frames/",
+      "/products/wall-art/framed-prints/framed-cork-pin-boards/",
+      "/products/wall-art/framed-prints/multi-photo-frames/",
+      "/products/wall-art/framed-prints/medal-frames/",
+      "/products/wall-art/acrylic-prints/acrylic-panels/",
+      "/products/wall-art/display-prints/",
+      "/products/sport-and-games/",
+      "/products/regions/",
+      "/de/products/wall-art/framed-prints/"
+    ]
+  },
+  {
+    "id": "shirtee",
+    "url": "https://shirtee.cloud/pod-products/",
+    "status": 200,
+    "file": "shirtee-68.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printops",
+    "url": "https://printops.com/pricing",
+    "status": 200,
+    "file": "printops-69.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "scalablepress",
+    "url": "https://scalablepress.com/pricing",
+    "status": 200,
+    "file": "scalablepress-70.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "scalablepress",
+    "url": "https://scalablepress.com/catalog",
+    "status": 200,
+    "file": "scalablepress-71.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "shirtee",
+    "url": "https://shirtee.cloud/print-on-demand-products/men/men%20shirts",
+    "status": 200,
+    "file": "shirtee-72.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "papello",
+    "url": "https://papello.com/collection/all-products",
+    "status": 200,
+    "file": "papello-73.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/product/metallic-foil-prints",
+      "/product/wrapping-paper",
+      "/product/greetings-card",
+      "/product/weekly-desk-planners"
+    ]
+  },
+  {
+    "id": "papello",
+    "url": "https://papello.com/collections",
+    "status": 200,
+    "file": "papello-74.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/product/metallic-foil-prints",
+      "/product/wrapping-paper",
+      "/product/greetings-card",
+      "/product/weekly-desk-planners"
+    ]
+  },
+  {
+    "id": "papello",
+    "url": "https://papello.com/collection/best-sellers",
+    "status": 200,
+    "file": "papello-75.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/product/metallic-foil-prints",
+      "/product/wrapping-paper",
+      "/product/greetings-card",
+      "/product/weekly-desk-planners"
+    ]
+  },
+  {
+    "id": "shirtee",
+    "url": "https://shirtee.cloud/print-on-demand-products/men",
+    "status": 200,
+    "file": "shirtee-76.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "ogo",
+    "url": "https://ogo.com.au/getting-started/creating-your-custom-ogo-products/",
+    "status": 200,
+    "file": "ogo-77.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://ogo.com.au/products/"
+    ]
+  },
+  {
+    "id": "ogo",
+    "url": "https://ogo.com.au/custom-products/",
+    "status": 200,
+    "file": "ogo-78.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://ogo.com.au/product/ascolour-mens-staple-regular-tee/",
+      "https://ogo.com.au/product/as-colour-mens-classic-tee/",
+      "https://ogo.com.au/product/as-colour-organic-unisex-tee/",
+      "https://ogo.com.au/product/as-colour-mens-paper-slim-tee/",
+      "https://ogo.com.au/product/ascolour-mens-base-longsleeve-tee/",
+      "https://ogo.com.au/product/ascolour-mens-lowdown-singlet/",
+      "https://ogo.com.au/product/ascolour-mens-barnard-tank-tee/",
+      "https://ogo.com.au/product/ascolour-mens-tarmac-vneck-tee/",
+      "https://ogo.com.au/products/"
+    ]
+  },
+  {
+    "id": "printegy",
+    "url": "https://printegy.de/products/oversize-t-shirt",
+    "status": 200,
+    "file": "printegy-79.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printegy.de/en/products/oversize-t-shirt",
+      "https://printegy.de/products/oversize-t-shirt",
+      "https://printegy.de/products/oversize-t-shirt?page=2",
+      "https://printegy.de/en/products/oversize-heavy-t-shirt"
+    ]
+  },
+  {
+    "id": "printegy",
+    "url": "https://printegy.de/products",
+    "status": 200,
+    "file": "printegy-80.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printegy.de/en/products/"
+    ]
+  },
+  {
+    "id": "printegy",
+    "url": "https://printegy.de/products/tasse",
+    "status": 200,
+    "file": "printegy-81.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printegy.de/en/products/tasse",
+      "https://printegy.de/products/tasse",
+      "https://printegy.de/products/tasse?page=2",
+      "https://printegy.de/en/products/mug"
+    ]
+  },
+  {
+    "id": "pillowprofits",
+    "url": "https://pillowprofits.com/product-specs-and-pricing/",
+    "status": 200,
+    "file": "pillowprofits-82.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "ogo",
+    "url": "https://ogo.com.au/products/",
+    "status": 200,
+    "file": "ogo-83.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://ogo.com.au/product/as-colour-mens-paper-slim-tee/",
+      "https://ogo.com.au/product/ascolour-mens-base-longsleeve-tee/",
+      "https://ogo.com.au/product/ascolour-mens-lowdown-singlet/",
+      "https://ogo.com.au/product/ascolour-mens-barnard-tank-tee/",
+      "https://ogo.com.au/product/ascolour-mens-tarmac-vneck-tee/",
+      "https://ogo.com.au/product/ascolour-mens-shadow-scoop-neck-tee/",
+      "https://ogo.com.au/product/ascolour-chad-polo-shirt/",
+      "https://ogo.com.au/product/ascolour-raglan-tee/",
+      "https://ogo.com.au/product/ascolour-mens-tall-tee/",
+      "https://ogo.com.au/product/as-colour-supply-hoodie/",
+      "https://ogo.com.au/product/ascolour-stencil-kangaroo-pocket-hoodie-sweatshirt/",
+      "https://ogo.com.au/product/as-colour-united-crew-neck-sweatshirt/",
+      "https://ogo.com.au/product/11oz-ceramic-coffee-mug/",
+      "https://ogo.com.au/product/12oz-enamel-mugs/",
+      "https://ogo.com.au/product/ascolour-box-crew-neck-sweatshirt-jumper/",
+      "https://ogo.com.au/product/as-colour-womens-maple-regular-tee/",
+      "https://ogo.com.au/product/as-colour-womens-maple-organic-tee/",
+      "https://ogo.com.au/products/page/3/"
+    ]
+  },
+  {
+    "id": "printway",
+    "url": "https://printway.io/en/all-products",
+    "status": 200,
+    "file": "printway-84.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printbase",
+    "url": "https://www.printbase.com/catalog",
+    "status": 200,
+    "file": "printbase-85.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "printbase",
+    "url": "https://www.printbase.com/pricing",
+    "status": 200,
+    "file": "printbase-86.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "printbase",
+    "url": "https://www.printbase.com/features/products",
+    "status": 200,
+    "file": "printbase-87.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "woycondemand",
+    "url": "https://woyc-ondemand.com/print-on-demand-wearable-products",
+    "status": 200,
+    "file": "woycondemand-88.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printshrimp",
+    "url": "https://printshrimp.com/pages/pricing",
+    "status": 200,
+    "file": "printshrimp-89.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//printshrimp.com/cdn/shop/t/4/assets/component-price.css?v=152455572638867684701775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-card.css?v=176802774179511939951775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-card-horizontal.css?v=4308088986918490291775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-article-card-small.css?v=128071357702084146881775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/template-list-collections.css?v=171707795995142171761775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-subscription.css?v=163450258106755038011775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-hero.css?v=81608437154033904971775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-image-banner.css?v=80359471866566510551775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-numbers.css?v=109601061349685765711775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-multirow.css?v=77122759480999653111775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-multicolumn.css?v=56027244068925404641775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-testimonials.css?v=162424918087312224881775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/section-footer.css?v=46259232911386581861775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-accordion.css?v=37048786062549526021775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-list-payment.css?v=122045797522248725741775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-list-social.css?v=30924824282155707431775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/component-rte.css?v=99094715518573159921775104014",
+      "//printshrimp.com/cdn/shop/t/4/assets/disclosure.css?v=18238264832067461001775104014"
+    ]
+  },
+  {
+    "id": "woycondemand",
+    "url": "https://woyc-ondemand.com/print-on-demand-gaming-products",
+    "status": 200,
+    "file": "woycondemand-90.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "woycondemand",
+    "url": "https://woyc-ondemand.com/certified-print-on-demand-tech-products",
+    "status": 401,
+    "file": "woycondemand-91.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "qikink",
+    "url": "https://qikink.com/custom/collections/",
+    "status": 200,
+    "file": "qikink-92.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printeers",
+    "url": "https://printeers.com/products",
+    "status": 200,
+    "file": "printeers-93.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/soft-tpu-cases",
+      "/products/biodegradable-cases",
+      "/products/tough-cases",
+      "/products/hybrid-cases",
+      "/products/crossbody-cases",
+      "/products/back-printed-hard-cases",
+      "/products/fully-printed-hard-cases",
+      "/products/fully-printed-wallet-cases",
+      "/products/front-printed-wallet-cases",
+      "/products/macbook-cases",
+      "/products/ipad-cases",
+      "/products/fully-printed-hard-airpods-cases",
+      "/products/front-printed-soft-airpods-cases",
+      "/products/fully-printed-airtag-cases",
+      "/products/screen-protectors",
+      "/products/camera-protectors",
+      "/products/universal-phone-cords",
+      "/products/crossbody-cords"
+    ]
+  },
+  {
+    "id": "qikink",
+    "url": "https://qikink.com/custom/collections/t-shirts/",
+    "status": 200,
+    "file": "qikink-94.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printeers",
+    "url": "https://printeers.com/products/biodegradable-cases",
+    "status": 200,
+    "file": "printeers-95.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/soft-tpu-cases",
+      "/products/biodegradable-cases",
+      "/products/tough-cases",
+      "/products/hybrid-cases",
+      "/products/crossbody-cases",
+      "/products/back-printed-hard-cases",
+      "/products/fully-printed-hard-cases",
+      "/products/fully-printed-wallet-cases",
+      "/products/front-printed-wallet-cases",
+      "/products/macbook-cases",
+      "/products/ipad-cases",
+      "/products/fully-printed-hard-airpods-cases",
+      "/products/front-printed-soft-airpods-cases",
+      "/products/fully-printed-airtag-cases",
+      "/products/screen-protectors",
+      "/products/camera-protectors",
+      "/products/universal-phone-cords",
+      "/products/crossbody-cords"
+    ]
+  },
+  {
+    "id": "printeers",
+    "url": "https://printeers.com/products/soft-tpu-cases",
+    "status": 200,
+    "file": "printeers-96.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/soft-tpu-cases",
+      "/products/biodegradable-cases",
+      "/products/tough-cases",
+      "/products/hybrid-cases",
+      "/products/crossbody-cases",
+      "/products/back-printed-hard-cases",
+      "/products/fully-printed-hard-cases",
+      "/products/fully-printed-wallet-cases",
+      "/products/front-printed-wallet-cases",
+      "/products/macbook-cases",
+      "/products/ipad-cases",
+      "/products/fully-printed-hard-airpods-cases",
+      "/products/front-printed-soft-airpods-cases",
+      "/products/fully-printed-airtag-cases",
+      "/products/screen-protectors",
+      "/products/camera-protectors",
+      "/products/universal-phone-cords",
+      "/products/crossbody-cords"
+    ]
+  },
+  {
+    "id": "qikink",
+    "url": "https://qikink.com/custom/collections/hoodies/",
+    "status": 200,
+    "file": "qikink-97.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "oneprint",
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-G5000",
+    "status": 200,
+    "file": "oneprint-98.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/unisex-t-shirt-gildan-G5000",
+      "/products/unisex-t-shirt-gildan-64000",
+      "/products/unisex-hoodie-gildan-18500",
+      "/products/ceramic-mug"
+    ]
+  },
+  {
+    "id": "oneprint",
+    "url": "https://oneprint.io/products",
+    "status": 200,
+    "file": "oneprint-99.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/unisex-t-shirt-gildan-G5000",
+      "/products/unisex-t-shirt-gildan-64000",
+      "/products/unisex-hoodie-gildan-18500",
+      "/products/ceramic-mug"
+    ]
+  },
+  {
+    "id": "treatpod",
+    "url": "https://treatpod.co.uk/collections/dtf-and-uv-dtf-gangsheets",
+    "status": 200,
+    "file": "treatpod-100.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//treatpod.co.uk/cdn/shop/t/2/assets/vendor.min.js?v=11589511144441591071676594240",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/theme.js?v=181571558710698367881676594240",
+      "//treatpod.co.uk/cdn/shop/files/favicon_black_tpod.png?crop=center&height=48&v=1676900703&width=48",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/styles.css?v=137584003051909644661761220433",
+      "/collections/dtf-and-uv-dtf-gangsheets/products/custom-uv-dtf-gang-sheet-12-width",
+      "/collections/dtf-and-uv-dtf-gangsheets/products/custom-dtf-gang-sheet-multiple-sizes",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/custom_printzware.css?v=90079837851472366701694593114"
+    ]
+  },
+  {
+    "id": "oneprint",
+    "url": "https://oneprint.io/products/unisex-t-shirt-gildan-64000",
+    "status": 200,
+    "file": "oneprint-101.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/unisex-t-shirt-gildan-G5000",
+      "/products/unisex-t-shirt-gildan-64000",
+      "/products/unisex-hoodie-gildan-18500",
+      "/products/ceramic-mug"
+    ]
+  },
+  {
+    "id": "lumaprints",
+    "url": "https://www.lumaprints.com/pricing/",
+    "status": 200,
+    "file": "lumaprints-102.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "treatpod",
+    "url": "https://treatpod.co.uk/pages/product-catalogue",
+    "status": 200,
+    "file": "treatpod-103.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//treatpod.co.uk/cdn/shop/t/2/assets/vendor.min.js?v=11589511144441591071676594240",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/theme.js?v=181571558710698367881676594240",
+      "//treatpod.co.uk/cdn/shop/files/favicon_black_tpod.png?crop=center&height=48&v=1676900703&width=48",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/styles.css?v=137584003051909644661761220433",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/gem-page-103131578596.css?v=89223429070937665851680789311",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/custom_printzware.css?v=90079837851472366701694593114"
+    ]
+  },
+  {
+    "id": "printbest",
+    "url": "https://printbest.com/products/catalog/",
+    "status": 200,
+    "file": "printbest-104.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printbest.com/products/kids/",
+      "https://printbest.com/products/kids/kids-tshirts/",
+      "https://printbest.com/products/kids/hoodies/",
+      "https://printbest.com/products/kids/kids-long-sleeve-shirts/",
+      "https://printbest.com/products/kids/sweatshirts/",
+      "https://printbest.com/products/drinkware/",
+      "https://printbest.com/products/drinkware/mugs/",
+      "https://printbest.com/products/drinkware/bottles/",
+      "https://printbest.com/product/drinkware/tumblers/20oz-tumblers/",
+      "https://printbest.com/products/specialty/",
+      "https://printbest.com/product/specialty/puzzles/puzzles/",
+      "https://printbest.com/product/specialty/keychains/keychains",
+      "https://printbest.com/product/specialty/coasters/coasters/",
+      "https://printbest.com/product/specialty/mouse-pads/mouse-pads/",
+      "https://printbest.com/product/specialty/photo-panels/photo-panels/",
+      "https://printbest.com/products/prints/",
+      "https://printbest.com/product/prints/yard-signs/lawn-signs/",
+      "https://printbest.com/product/prints/canvas/stretched-canvas-prints/"
+    ]
+  },
+  {
+    "id": "printbest",
+    "url": "https://printbest.com/products/mens/",
+    "status": 200,
+    "file": "printbest-105.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printbest.com/products/kids/",
+      "https://printbest.com/products/kids/kids-tshirts/",
+      "https://printbest.com/products/kids/hoodies/",
+      "https://printbest.com/products/kids/kids-long-sleeve-shirts/",
+      "https://printbest.com/products/kids/sweatshirts/",
+      "https://printbest.com/products/drinkware/",
+      "https://printbest.com/products/drinkware/mugs/",
+      "https://printbest.com/products/drinkware/bottles/",
+      "https://printbest.com/product/drinkware/tumblers/20oz-tumblers/",
+      "https://printbest.com/products/specialty/",
+      "https://printbest.com/product/specialty/puzzles/puzzles/",
+      "https://printbest.com/product/specialty/keychains/keychains",
+      "https://printbest.com/product/specialty/coasters/coasters/",
+      "https://printbest.com/product/specialty/mouse-pads/mouse-pads/",
+      "https://printbest.com/product/specialty/photo-panels/photo-panels/",
+      "https://printbest.com/products/prints/",
+      "https://printbest.com/product/prints/yard-signs/lawn-signs/",
+      "https://printbest.com/product/prints/canvas/stretched-canvas-prints/"
+    ]
+  },
+  {
+    "id": "treatpod",
+    "url": "https://treatpod.co.uk/collections/ceramic-mugs",
+    "status": 200,
+    "file": "treatpod-106.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/collections/ceramic-mugs/products/nitro-fluorescent-green-mugs",
+      "/collections/ceramic-mugs/products/nitro-fluorescent-orange-mugs",
+      "/collections/ceramic-mugs/products/nitro-fluorescent-pink-mugs",
+      "/collections/ceramic-mugs/products/mugs-inner-printed-sublimation-mugs-happy-birthday",
+      "/collections/ceramic-mugs/products/mugs-inner-printed-sublimation-mugs-i-love-you",
+      "/collections/ceramic-mugs/products/mugs-11oz-inner-and-handle-coloured-black",
+      "/collections/ceramic-mugs/products/mugs-11oz-inner-and-handle-coloured-pink",
+      "/collections/ceramic-mugs/products/mugs-36-x-11oz-mirror-metallic-europa-gold-durham-mugs",
+      "/collections/ceramic-mugs/products/mugs-36-x-11oz-mirror-metallic-durham-mug-silver",
+      "/collections/ceramic-mugs/products/mugs-plain-white-mugs-72-x-ultra-a-11oz-durham-mugs",
+      "/collections/ceramic-mugs/products/mugs-11oz-two-tone-coloured-mugs-black",
+      "/collections/ceramic-mugs/products/mugs-11oz-two-tone-coloured-mugs-pink",
+      "/collections/ceramic-mugs/products/mugs-11oz-two-tone-coloured-mugs-red",
+      "/collections/ceramic-mugs/products/mugs-11oz-white-sublimation-mug-with-gold-handle",
+      "/collections/ceramic-mugs/products/mugs-11oz-white-sublimation-mug-with-silver-handle",
+      "/collections/ceramic-mugs/products/36-x-printed-white-12oz-sublimation-latte-mugs",
+      "/collections/ceramic-mugs/products/36-x-15oz-inner-and-handle-coloured-black",
+      "//treatpod.co.uk/cdn/shop/t/2/assets/custom_printzware.css?v=90079837851472366701694593114"
+    ]
+  },
+  {
+    "id": "printbest",
+    "url": "https://printbest.com/products/mens/custom-tshirts/",
+    "status": 200,
+    "file": "printbest-107.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://printbest.com/product/drinkware/tumblers/20oz-tumblers/",
+      "https://printbest.com/products/specialty/",
+      "https://printbest.com/product/specialty/puzzles/puzzles/",
+      "https://printbest.com/product/specialty/keychains/keychains",
+      "https://printbest.com/product/specialty/coasters/coasters/",
+      "https://printbest.com/product/specialty/mouse-pads/mouse-pads/",
+      "https://printbest.com/product/specialty/photo-panels/photo-panels/",
+      "https://printbest.com/products/prints/",
+      "https://printbest.com/product/prints/yard-signs/lawn-signs/",
+      "https://printbest.com/product/prints/canvas/stretched-canvas-prints/",
+      "https://printbest.com/product/mens/custom-tshirts/g500/",
+      "https://printbest.com/product/mens/custom-tshirts/g200/",
+      "https://printbest.com/product/mens/custom-tshirts/gildan-g640/",
+      "https://printbest.com/product/mens/custom-tshirts/anvil-980/",
+      "https://printbest.com/product/mens/custom-tshirts/champion-t525c/",
+      "https://printbest.com/product/mens/custom-tshirts/gildan-2700/",
+      "https://printbest.com/products/mens/custom-tshirts/page/3/",
+      "https://printbest.com/products/mens/custom-tshirts/page/4/"
+    ]
+  },
+  {
+    "id": "alexanders",
+    "url": "https://alexanders.com/photo-products/",
+    "status": 200,
+    "file": "alexanders-108.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "alexanders",
+    "url": "https://alexanders.com/diy-shops/",
+    "status": 200,
+    "file": "alexanders-109.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printoteca",
+    "url": "https://printoteca.ro/product-news",
+    "status": 200,
+    "file": "printoteca-110.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "alexanders",
+    "url": "https://alexanders.com/photo-products",
+    "status": 200,
+    "file": "alexanders-111.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "sunfrog",
+    "url": "https://www.sunfrog.com/product/black-cat-adventure-loving",
+    "status": 200,
+    "file": "sunfrog-112.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://www.sunfrog.com/product/black-cat-adventure-loving"
+    ]
+  },
+  {
+    "id": "sunfrog",
+    "url": "https://www.sunfrog.com/product/black-cat",
+    "status": 200,
+    "file": "sunfrog-113.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://www.sunfrog.com/product/black-cat"
+    ]
+  },
+  {
+    "id": "sunfrog",
+    "url": "https://www.sunfrog.com/product/cute-halloween-ghost-here-for-the-boos-funny-spooky-party-t-shirt-design",
+    "status": 200,
+    "file": "sunfrog-114.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://www.sunfrog.com/product/cute-halloween-ghost-here-for-the-boos-funny-spooky-party-t-shirt-design"
+    ]
+  },
+  {
+    "id": "jumbodtg",
+    "url": "https://jumbodtg.com/collections/simplified-bulk-products",
+    "status": 200,
+    "file": "jumbodtg-115.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/1807gd-la-apparel-long-sleeve",
+      "/products/sleeveless-la-apparel-t-shirt",
+      "/products/hf-09-la-apparel-heavyweight-hoodie",
+      "/products/ind5000c-independent-heavyweight-crewneck",
+      "/products/3600-next-level-cotton-t-shirt",
+      "/products/1717-comfort-colors-t-shirt",
+      "/products/shakawear-max-heavyweight-garment-dye-1",
+      "/products/shakawear-drop-shoulder-t-shirt-1",
+      "/products/1801gd-la-apparel-heavyweight-t-shirt",
+      "/products/1301-american-apparel-t-shirt",
+      "/products/7-5oz-shaka-wear-max-heavyweight-t-shirt-1",
+      "/products/gildan-5000-t-shirt",
+      "//jumbodtg.com/cdn/shop/t/10/assets/footer.css?v=184147594002676474491753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-newsletter.css?v=65459726786247542281753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/mobile-sticky-bar.css?v=80304117456380572521753706734",
+      "//jumbodtg.com/cdn/shop/t/10/assets/age-verifier.css?v=12127549815372021561753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/cookie-banner.css?v=42714750342126912691753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-quantity-popover.css?v=129135864880253122831753706735"
+    ]
+  },
+  {
+    "id": "jumbodtg",
+    "url": "https://jumbodtg.com/collections/t-shirts",
+    "status": 200,
+    "file": "jumbodtg-116.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/la-apparel-6-5oz-garment-dye-crew-neck-t-shirt-mineral-wash-1801mw",
+      "/products/1201wgd-la-apparel-cropped-garment-dye-t-shirt",
+      "/products/los-angeles-apparel-1801gd",
+      "/products/shakawear-max-heavyweight-garment-dye",
+      "/products/comfort-colors-1717",
+      "/products/american-apparel-1301",
+      "/products/gildan-5000",
+      "/products/shakawear-garment-dye-drop-shoulder-t-shirt",
+      "/products/la-apparel-6-5oz-garment-dye-sleeveless-tee-1865gd",
+      "/products/next-level-cotton-t-shirt-3600",
+      "/products/code-five-realtree%C2%AE-camo-t-shirt-3980",
+      "/products/hanes-beefy-t%C2%AE-t-shirt-5180",
+      "//jumbodtg.com/cdn/shop/t/10/assets/footer.css?v=184147594002676474491753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-newsletter.css?v=65459726786247542281753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/mobile-sticky-bar.css?v=80304117456380572521753706734",
+      "//jumbodtg.com/cdn/shop/t/10/assets/age-verifier.css?v=12127549815372021561753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/cookie-banner.css?v=42714750342126912691753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-quantity-popover.css?v=129135864880253122831753706735"
+    ]
+  },
+  {
+    "id": "jumbodtg",
+    "url": "https://jumbodtg.com/collections/sample",
+    "status": 200,
+    "file": "jumbodtg-117.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/los-angeles-apparel-1801gd",
+      "/products/shakawear-garment-dye-drop-shoulder-t-shirt",
+      "/products/shakawear-max-heavyweight-garment-dye",
+      "/products/la-hf-9",
+      "/products/shakawear-7-5oz-max-heavyweight-t-shirt-shmhss",
+      "/products/la-1807gd-long-sleeve",
+      "/products/independent-ind420xdc",
+      "/products/laapparel-heavy-fleece-zip-up-hoodie-piece-dye-hf10",
+      "/products/comfort-colors-1717",
+      "/products/premade-sample-mystery-box",
+      "/products/la-hf09gd",
+      "/products/american-apparel-1301",
+      "//jumbodtg.com/cdn/shop/t/10/assets/footer.css?v=184147594002676474491753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-newsletter.css?v=65459726786247542281753706736",
+      "//jumbodtg.com/cdn/shop/t/10/assets/mobile-sticky-bar.css?v=80304117456380572521753706734",
+      "//jumbodtg.com/cdn/shop/t/10/assets/age-verifier.css?v=12127549815372021561753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/cookie-banner.css?v=42714750342126912691753706735",
+      "//jumbodtg.com/cdn/shop/t/10/assets/component-quantity-popover.css?v=129135864880253122831753706735"
+    ]
+  },
+  {
+    "id": "printoteca",
+    "url": "https://printoteca.ro/products",
+    "status": 200,
+    "file": "printoteca-118.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "swagify",
+    "url": "https://www.swagify.com/promotional-products",
+    "status": 200,
+    "file": "swagify-119.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "swagify",
+    "url": "https://www.swagify.com/products/full-color-3ply-premium-beverage-napkins",
+    "status": 200,
+    "file": "swagify-120.html",
+    "schemaProducts": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://www.swagify.com/products/full-color-3ply-premium-beverage-napkins",
+        "name": "Personalized Full Color 3ply Premium Beverage Napkins",
+        "image": [
+          "https://d3r1nacbgegpwz.cloudfront.net/napkins/npkn_f1-thumbnail.jpg"
+        ],
+        "description": "<ul> \n<li>Elevate special occasions like anniversaries, weddings, birthdays, graduations, and family reunions with our personalized napkins.</li> \n<li>Hotels, restaurants, and catering services can discreetly promote their brand with full-color napkins.</li> \n<li>Transform these napkins into party souvenirs as an advertising tool by adding your brand logos, graphics, and catchy slogans.</li> \n<li>Crafted from durable 3-ply paper, these napkins offer strength and softness, readily absorbing spills and stains.</li> \n<li>Create a welcoming atmosphere for your guests by adorning the dining table with our premium full-color beverage napkins.</li> \n</ul> \n\n<div id=\"product_short_description\" class=\"mt-3\"> \n\n<div class=\"fw-semibold\">Country of Origin</div> \n<p>Imported</div> \n\n<div class=\"fw-semibold\">Material</div> \n<p>Paper</div> \n\n<div class=\"fw-semibold\">Size</div> \n<p>4.75 Inch x 4.75 Inch</div> \n\n<div class=\"fw-semibold\">Printing Area</div> \n<p>4.25 Inch x 4.25 Inch</div> \n\n<div class=\"fw-semibold\">Imprint Method</div> \n<p>Digitally Printed with 4-Color Process. White and Metallic Imprint Colors are not available for this product.</div> \n\n<div class=\"fw-semibold\">Napkin Color</div> \n<p>Napkin Color is White for all orders. The color(s) you select will apply within the Print Area on the Front Side only. Other sides of Napkins remain White as the original unimprinted product color.</div> \n\n<div class=\"fw-semibold\">Artwork Position</div> \n<p>Your design will be attempted to align approximately center and in the middle of the printable area.</div> \n\n<div class=\"fw-semibold\">Note</div> \n<p>Due to the nature of product material, there might be some very fine lines running through certain types of designs. Colors might vary slightly within a run and is not considered a defect.</div> \n\n</div>",
+        "sku": "sw-npkn-f1",
+        "mpn": "sw-npkn-f1",
+        "brand": {
+          "@type": "Brand",
+          "name": "Swagify"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.swagify.com/products/full-color-3ply-premium-beverage-napkins",
+          "priceCurrency": "USD",
+          "price": "0.13",
+          "priceValidUntil": "2027-10-03",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Swagify",
+            "logo": "https://d3r1nacbgegpwz.cloudfront.net/storeflo/logo_1738947283644_0.png"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": 0,
+              "currency": "USD"
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "US"
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30
+          }
+        }
+      }
+    ],
+    "hasDollarPrice": true,
+    "links": [
+      "https://www.swagify.com/products/full-color-3ply-premium-beverage-napkins"
+    ]
+  },
+  {
+    "id": "swagify",
+    "url": "https://www.swagify.com/products",
+    "status": 200,
+    "file": "swagify-121.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/14-thick-natural-yardstick",
+      "/products/12-in-1-multi-functional-wood-hammer",
+      "/products/3-in-1-charging-cable-with-flashlight-case",
+      "/products/3-in-1-emergency-tool-set",
+      "/products/30-piece-tool-kit-with-light",
+      "/products/4-piece-mini-screwdriver-set",
+      "/products/6-in-1-quest-multi-tool-pen",
+      "/products/6-in-1-quest-multi-function-tool-pen",
+      "/products/10-curved-tension-fabric-display",
+      "/products/12-x-30-pennant",
+      "/products/2-x-4-vinyl-banner",
+      "/products/4-x-10-custom-pennant",
+      "/products/4-x-10-vinyl-banner",
+      "/products/5-x-12-pennant",
+      "/products/8-x-18-pennant",
+      "/products/9-x-24-pennant",
+      "/products/polyester-lanyard-with-j-hook",
+      "/products/retractable-badge-holder-with-laminated-label"
+    ]
+  },
+  {
+    "id": "marcofinearts",
+    "url": "https://marcofinearts.com/home/fine-art-reproduction",
+    "status": 200,
+    "file": "marcofinearts-122.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "ownprint",
+    "url": "https://www.ownprint.co/pricing",
+    "status": 200,
+    "file": "ownprint-123.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "ownprint",
+    "url": "https://www.ownprint.co/collections/necklaces",
+    "status": 200,
+    "file": "ownprint-124.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "merchone",
+    "url": "https://merchone.com/products-catalog/",
+    "status": 200,
+    "file": "merchone-125.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://merchone.com/products/",
+      "/products/"
+    ]
+  },
+  {
+    "id": "merchone",
+    "url": "https://merchone.com/pet-products/",
+    "status": 200,
+    "file": "merchone-126.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://merchone.com/products/",
+      "/product/acrylblock"
+    ]
+  },
+  {
+    "id": "merchone",
+    "url": "https://merchone.com/products/",
+    "status": 200,
+    "file": "merchone-127.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://merchone.com/products/",
+      "https://merchone.com/products/page/2/",
+      "/product/acrylblock"
+    ]
+  },
+  {
+    "id": "rushordertees",
+    "url": "https://www.rushordertees.com/catalog/",
+    "status": 200,
+    "file": "rushordertees-128.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.rushordertees.com/catalog/",
+      "/catalog/"
+    ]
+  },
+  {
+    "id": "rushordertees",
+    "url": "https://www.rushordertees.com/new-products/",
+    "status": 200,
+    "file": "rushordertees-129.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/",
+      "/catalog/blue-generation/adult-long-sleeve-hooded-tee/",
+      "/catalog/blue-generation/heathered-crew-neck-tee/",
+      "/catalog/los-angeles-apparel/cap-sleeve-baby-rib-crop-top/",
+      "/catalog/los-angeles-apparel/ss-garment-dye-crewneck-65oz/",
+      "/catalog/blue-generation/colorblock-tee/",
+      "/catalog/cutter-buck/coastline-recycled-double-peached-short-sleeve-tee/",
+      "/catalog/los-angeles-apparel/original-baby-rib-tee/",
+      "/catalog/blue-generation/ladies-value-wicking-v-neck-tee/",
+      "/catalog/blue-generation/youth-value-wicking-short-sleeve-t-shirt/",
+      "/catalog/blue-generation/ladies-colorblock-tee/"
+    ]
+  },
+  {
+    "id": "rushordertees",
+    "url": "https://www.rushordertees.com/promotional-products/",
+    "status": 200,
+    "file": "rushordertees-130.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/",
+      "/catalog/q-tees/canvas-tote-bag/",
+      "/catalog/pcna/thor-copper-vacuum-insulated-bottle-22oz/",
+      "/catalog/q-tees/jumbo-canvas-tote-bag/",
+      "/catalog/port-company/oversized-core-fleece-sweatshirt-blanket/",
+      "/catalog/nike/brasilia-drawstring-pack/",
+      "/catalog/port-authority/matte-hip-pack/",
+      "/catalog/journalbooks/5-5-x-8-5-ambassador-bound-journalbook-r/",
+      "/catalog/pcna/thor-copper-vacuum-insulated-bottle-25oz-straw-lid/",
+      "/catalog/liberty-bags/insulated-beverage-holder/",
+      "/catalog/pcna/sherpa-11-oz-vacuum-tumbler-insulator/",
+      "/catalog/arctic-zone/r-titan-thermal-hp-r-copper-tumbler-20oz/",
+      "/catalog/q-tees/zippered-canvas-tote-bag/"
+    ]
+  },
+  {
+    "id": "merchfarm",
+    "url": "https://merchfarm.com/collections/design-your-own-custom-products",
+    "status": 200,
+    "file": "merchfarm-131.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "//merchfarm.com/cdn/shop/files/06993ae8-100b-4174-9f92-73b99270bed9_32x32.jpg?v=1707281613",
+      "//merchfarm.com/cdn/shop/t/8/assets/theme.scss.css?v=25791603636780575651761592559",
+      "//merchfarm.com/cdn/shop/t/8/assets/swiper-bundle.min.css?v=55754961042815831971703993056",
+      "//merchfarm.com/cdn/shop/t/8/assets/bootstrap.min.css?v=118673878976755457971703993016",
+      "//merchfarm.com/cdn/shop/t/8/assets/main.css?v=38112958810735555811718604326",
+      "//merchfarm.com/cdn/shop/t/8/assets/responsive.css?v=101856747586215738181707760253",
+      "/products/build-your-own-dtf-gang-sheet",
+      "/collections/design-your-own-custom-products/products/test-christmas-product"
+    ]
+  },
+  {
+    "id": "merchfarm",
+    "url": "https://merchfarm.com/products/build-your-own-dtf-gang-sheet",
+    "status": 200,
+    "file": "merchfarm-132.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://merchfarm.com/products/build-your-own-dtf-gang-sheet",
+      "//merchfarm.com/cdn/shop/files/06993ae8-100b-4174-9f92-73b99270bed9_32x32.jpg?v=1707281613",
+      "https://merchfarm.com/products/build-your-own-dtf-gang-sheet.oembed",
+      "//merchfarm.com/cdn/shop/t/8/assets/theme.scss.css?v=25791603636780575651761592559",
+      "//merchfarm.com/cdn/shop/t/8/assets/swiper-bundle.min.css?v=55754961042815831971703993056",
+      "//merchfarm.com/cdn/shop/t/8/assets/bootstrap.min.css?v=118673878976755457971703993016",
+      "//merchfarm.com/cdn/shop/t/8/assets/main.css?v=38112958810735555811718604326",
+      "//merchfarm.com/cdn/shop/t/8/assets/responsive.css?v=101856747586215738181707760253",
+      "/products/build-your-own-dtf-gang-sheet",
+      "//merchfarm.com/cdn/shop/files/High_Quality_DTF_Transfers_15.png?v=1731593929",
+      "//www.facebook.com/sharer.php?u=https://merchfarm.com/products/build-your-own-dtf-gang-sheet",
+      "//twitter.com/share?text=Build%20Your%20Own%20DTF%20Gang%20Sheet&amp;url=https://merchfarm.com/products/build-your-own-dtf-gang-sheet"
+    ]
+  },
+  {
+    "id": "clothes2order",
+    "url": "https://www.clothes2order.com/shopping_cart.php",
+    "status": 200,
+    "file": "clothes2order-133.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "/products/asquith-fox-mens-organic-polo",
+      "/products/fruit-of-the-loom-iconic-premium-hooded-sweat-jacket",
+      "/products/rtx-pro-microfleece",
+      "/products/beechfield-authentic-baseball-cap"
+    ]
+  },
+  {
+    "id": "clothes2order",
+    "url": "https://www.clothes2order.com/brands/bandc-collection/t-shirts",
+    "status": 200,
+    "file": "clothes2order-134.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "/products/asquith-fox-mens-organic-polo",
+      "/products/fruit-of-the-loom-iconic-premium-hooded-sweat-jacket",
+      "/products/rtx-pro-microfleece",
+      "/products/beechfield-authentic-baseball-cap"
+    ]
+  },
+  {
+    "id": "clothes2order",
+    "url": "https://www.clothes2order.com/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+    "status": 200,
+    "file": "clothes2order-135.html",
+    "schemaProducts": [
+      {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": "Fruit of the Loom Iconic 195 Ringspun Premium T",
+        "image": "https://ik.imagekit.io/c2o/prd/ik-seo/tr:n-original/c/7/2/3/c72367df15a89209b63240d9066295e8520ca2fc_Fruit_of_the_Loom_Iconic_195_Ringspun_Premium_T/Fruit_of_the_Loom_Iconic_195_Ringspun_Premium_T.png",
+        "mpn": "61422",
+        "brand": {
+          "@type": "Thing",
+          "name": "Fruit of the Loom"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "4.02",
+          "highPrice": "6.5",
+          "priceCurrency": "GBP",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock"
+        }
+      }
+    ],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.clothes2order.com.au/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "https://www.clothes2order.us/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "https://www.clothes2order.ie/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "/products/fruit-of-the-loom-mens-ringspun-premium-t-shirt",
+      "/products/asquith-fox-mens-organic-polo",
+      "/products/fruit-of-the-loom-iconic-premium-hooded-sweat-jacket",
+      "/products/rtx-pro-microfleece",
+      "/products/beechfield-authentic-baseball-cap",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-men-s-valueweight-t-shirt",
+      "https://www.clothes2order.com/products/gildan-mens-ring-spun-softstyle-t-shirt",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-premium-100-cotton-pique-polo",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-original-t-shirt",
+      "https://www.clothes2order.com/products/beechfield-ultimate-5-panel-cap",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-childrens-t-shirt",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-premium-heavyweight-t-shirt",
+      "https://www.clothes2order.com/products/westford-mill-promo-shoulder-tote",
+      "https://www.clothes2order.com/products/awdis-college-hoodie",
+      "https://www.clothes2order.com/products/fruit-of-the-loom-polycotton-polo-shirt"
+    ]
+  },
+  {
+    "id": "twofifteen",
+    "url": "https://www.twofifteen.co.uk/products",
+    "status": 200,
+    "file": "twofifteen-136.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "twofifteen",
+    "url": "https://www.twofifteen.co.uk/collections",
+    "status": 200,
+    "file": "twofifteen-137.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "twofifteen",
+    "url": "https://www.twofifteen.co.uk/organic-products",
+    "status": 200,
+    "file": "twofifteen-138.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "blackfishclothing",
+    "url": "https://blackfishclothing.com/product-category/customisable-clothing/bucket-hats/",
+    "status": 200,
+    "file": "blackfishclothing-139.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://blackfishclothing.com/product/27839/",
+      "https://blackfishclothing.com/product/deluxe-bucket-style-fitted-youth/",
+      "https://blackfishclothing.com/product/columbia-bora-bora-booney/",
+      "https://blackfishclothing.com/product/flexfit-110-visor/",
+      "https://blackfishclothing.com/product/25459/",
+      "https://blackfishclothing.com/product/the-game-ultralight-booney/",
+      "https://blackfishclothing.com/product/tie-dyed-bucket-cap/"
+    ]
+  },
+  {
+    "id": "blackfishclothing",
+    "url": "https://blackfishclothing.com/product-category/customisable-clothing/toques/",
+    "status": 200,
+    "file": "blackfishclothing-140.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://blackfishclothing.com/product/chunkey-knit-roll-up-toque/",
+      "https://blackfishclothing.com/product/waffle-knit-toque/",
+      "https://blackfishclothing.com/product/wide-rib-roll-up-toque/",
+      "https://blackfishclothing.com/product/tight-knit-roll-up-toques/",
+      "https://blackfishclothing.com/product/wool-blend-waffle-knit-toque/",
+      "https://blackfishclothing.com/product/speckled-wide-rib-toque/",
+      "https://blackfishclothing.com/product/kids-wide-rib-roll-up-toque/",
+      "https://blackfishclothing.com/product/speckled-knit-pom-pom-toque/",
+      "https://blackfishclothing.com/product/tight-knit-roll-up-pom-pom-toque/",
+      "https://blackfishclothing.com/product/faux-fur-pom-pom-toque/",
+      "https://blackfishclothing.com/product/tight-knit-skull-cap/"
+    ]
+  },
+  {
+    "id": "casestry",
+    "url": "https://www.casestry.com/products/iphone18/",
+    "status": 200,
+    "file": "casestry-141.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.casestry.com/products/",
+      "https://www.casestry.com/products/magsafe-phone-cases/",
+      "https://www.casestry.com/products/tough-phone-cases/",
+      "https://www.casestry.com/products/slim-phone-cases/",
+      "https://www.casestry.com/products/clear-phone-cases/",
+      "https://www.casestry.com/products/apple-watch-bands/"
+    ]
+  },
+  {
+    "id": "casestry",
+    "url": "https://www.casestry.com/products/",
+    "status": 200,
+    "file": "casestry-142.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.casestry.com/products/",
+      "https://www.casestry.com/products/slim-phone-cases/",
+      "https://www.casestry.com/products/tough-phone-cases/",
+      "https://www.casestry.com/products/clear-phone-cases/",
+      "https://www.casestry.com/products/clear-magsafe-phone-cases/",
+      "https://www.casestry.com/products/magsafe-phone-cases/",
+      "https://www.casestry.com/products/soft-phone-cases/",
+      "https://www.casestry.com/products/apple-airpod-cases/",
+      "https://www.casestry.com/products/airpod-max-cases/",
+      "https://www.casestry.com/products/apple-watch-bands/",
+      "https://www.casestry.com/products/kindle-cases/",
+      "https://www.casestry.com/products/standard-tote-bags/",
+      "https://www.casestry.com/products/standard-coffee-mugs/",
+      "https://www.casestry.com/products/colored-coffee-mugs/",
+      "https://www.casestry.com/products/travel-tumbler-mugs/",
+      "https://www.casestry.com/products/nintendo-switch-cases/",
+      "https://www.casestry.com/products/everyday-phone-case/",
+      "https://www.casestry.com/products/clrprtct/"
+    ]
+  },
+  {
+    "id": "blackfishclothing",
+    "url": "https://blackfishclothing.com/product-category/customisable-clothing/caps/",
+    "status": 200,
+    "file": "blackfishclothing-143.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://blackfishclothing.com/product/7-panel-trucker-hat/",
+      "https://blackfishclothing.com/product/bf-poplar-hat-cotton-twill-5-panel-hat/",
+      "https://blackfishclothing.com/product/nylon-flat-brim-snapback-hat/",
+      "https://blackfishclothing.com/product/bf-dogwood-hat-vintage-corduroy-unstructured-snapback/",
+      "https://blackfishclothing.com/product/6-panel-garment-washed-dad-hat/",
+      "https://blackfishclothing.com/product/everyday-cotton-twill-youth-cap/",
+      "https://blackfishclothing.com/product/3450/",
+      "https://blackfishclothing.com/product/spruce-hat-wool-6-panel-flat-brim/",
+      "https://blackfishclothing.com/product/cedar-hat-wool-blend-5-panel-camper-style/",
+      "https://blackfishclothing.com/product/5-panel-flat-brim-snapback/",
+      "https://blackfishclothing.com/product/international-mesh-trucker-cap-youth-hat/",
+      "https://blackfishclothing.com/product/alder-hat-corduroy-curved-brim-trucker/"
+    ]
+  },
+  {
+    "id": "casestry",
+    "url": "https://www.casestry.com/products/dynamic-mockups/",
+    "status": 200,
+    "file": "casestry-144.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://www.casestry.com/products/"
+    ]
+  },
+  {
+    "id": "picthegift",
+    "url": "https://picthegift.com/collections/new",
+    "status": 200,
+    "file": "picthegift-145.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/mahjong-mat-31-5-x-31-5",
+      "/products/throw-pillow-case-with-front-pocket-18-x-18",
+      "/products/washable-chenille-rug-2-x-3",
+      "/products/washable-chenille-rug-3-x-5",
+      "/products/washable-chenille-rug-4-x-6",
+      "/products/washable-chenille-rug-5-x-7",
+      "/products/lounge-pillow-cover",
+      "/products/pennant-banner-triangle-10-x-11",
+      "/products/pennant-banner-shield-10-x-11",
+      "/products/pennant-banner-shield-18-x-21",
+      "/products/european-license-plate",
+      "/products/metal-street-sign-4-x-20",
+      "/products/minky-blanket-40-x-50",
+      "/products/square-baby-swaddling-blanket-42-x-42",
+      "/products/knotted-baby-beanie-hat-newborn",
+      "/products/knotted-baby-beanie-hat-large-cuff-newborn",
+      "/products/knotted-baby-beanie-hat-one-size-fits-most",
+      "/products/knotted-baby-beanie-hat-large-cuff-one-size-fits-most"
+    ]
+  },
+  {
+    "id": "picthegift",
+    "url": "https://picthegift.com/collections",
+    "status": 200,
+    "file": "picthegift-146.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//picthegift.com/cdn/shop/files/Logo_Transparent_dc5e20ec-e78a-4744-8589-686dc5fb5321.png?crop=center&height=32&v=1780420760&width=32",
+      "//picthegift.com/cdn/shop/t/5/assets/theme.css?v=20193386663353055101785777893",
+      "//picthegift.com/cdn/shop/t/5/assets/apps.css?v=162097722211979372921785777893",
+      "//picthegift.com/cdn/shop/t/5/assets/cookie-banner.css?v=143262193133466107921785777893",
+      "//picthegift.com/cdn/shop/t/5/assets/mobile-dock.css?v=5910054077117460131785777893"
+    ]
+  },
+  {
+    "id": "picthegift",
+    "url": "https://picthegift.com/collections/best-sellers",
+    "status": 200,
+    "file": "picthegift-147.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/baby-swaddling-blanket-37-x-55",
+      "/products/yard-flag-12-x-18-double-sided",
+      "/products/sublimation-socks",
+      "/products/direct-to-garment-socks",
+      "/products/ceramic-mug-11oz",
+      "/products/bottle-with-straw-top-white-20oz",
+      "/products/standard-sized-can-koozie",
+      "/products/slim-can-koozie",
+      "/products/standard-fitted-crib-sheet-28-x-52",
+      "/products/standard-beach-towel-30-x-60",
+      "/products/tempered-glass-cutting-board-11-x-15",
+      "/products/aluminum-license-plate-6-x-12",
+      "/products/metal-license-plate-frame-6-5-x-12-25",
+      "/products/round-ornament-3-5",
+      "/products/desk-mat-14-x-24",
+      "/products/slate-desk-plaque-square",
+      "/products/slate-desk-plaque-rectangle",
+      "/products/dry-erase-board-9-x-12-5"
+    ]
+  },
+  {
+    "id": "rakiline",
+    "url": "https://www.rakiline.com/collections/all",
+    "status": 200,
+    "file": "rakiline-148.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-card.css?v=120341546515895839841786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/quick-add.css?v=130590836869345997561786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-facets.css?v=170553690294338652621786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-show-more.css?v=139536189637226996221786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch-input.css?v=61683592951238328641786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch.css?v=6811383713633888781786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-rating.css?v=179577762467860590411786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-volume-pricing.css?v=111870094811454961941786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/quick-order-list.css?v=86354568948591544181786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/quantity-popover.css?v=160630540099520878331786280811",
+      "/products/custom-bella-canvas-3001-t-shirt-printing",
+      "/products/custom-comfort-colors-1717-t-shirt-printing",
+      "/products/custom-tote-bags-with-logo",
+      "/products/unisex-garment-dyed-heavyweight-t-shirt-1717",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991786280811"
+    ]
+  },
+  {
+    "id": "rakiline",
+    "url": "https://www.rakiline.com/products/custom-tote-bags-with-logo",
+    "status": 200,
+    "file": "rakiline-149.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-cart-notification.css?v=20889559782744007811786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-price.css?v=47596247576480123001786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-mega-menu.css?v=10110889665867715061786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-main-product.css?v=161818056142182136911786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-accordion.css?v=7971072480289620591786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-rating.css?v=179577762467860590411786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-deferred-media.css?v=14096082462203297471786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-product-variant-picker.css?v=101198305663325844211786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch-input.css?v=61683592951238328641786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch.css?v=6811383713633888781786280811",
+      "/products/custom-tote-bags-with-logo",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-pickup-availability.css?v=34645222959864780961786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-card.css?v=120341546515895839841786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-related-products.css?v=80324771040738084201786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991786280811"
+    ]
+  },
+  {
+    "id": "printseekers",
+    "url": "https://www.printseekers.com/pricing",
+    "status": 200,
+    "file": "printseekers-150.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "printseekers",
+    "url": "https://www.printseekers.com/catalog",
+    "status": 200,
+    "file": "printseekers-151.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "printseekers",
+    "url": "https://www.printseekers.com/print-on-demand-products",
+    "status": 200,
+    "file": "printseekers-152.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "rakiline",
+    "url": "https://www.rakiline.com/products/custom-comfort-colors-1717-t-shirt-printing",
+    "status": 200,
+    "file": "rakiline-153.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-cart-notification.css?v=20889559782744007811786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-price.css?v=47596247576480123001786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-mega-menu.css?v=10110889665867715061786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-main-product.css?v=161818056142182136911786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-accordion.css?v=7971072480289620591786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-rating.css?v=179577762467860590411786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-deferred-media.css?v=14096082462203297471786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-product-variant-picker.css?v=101198305663325844211786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch-input.css?v=61683592951238328641786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-swatch.css?v=6811383713633888781786280811",
+      "/products/custom-comfort-colors-1717-t-shirt-printing",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-pickup-availability.css?v=34645222959864780961786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-card.css?v=120341546515895839841786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-related-products.css?v=80324771040738084201786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/section-footer.css?v=60318643098753476351786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-newsletter.css?v=4727253280200485261786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-payment.css?v=69253961410771838501786280811",
+      "//www.rakiline.com/cdn/shop/t/22/assets/component-list-social.css?v=35792976012981934991786280811"
+    ]
+  },
+  {
+    "id": "gearment",
+    "url": "https://gearment.com/catalog/category/men",
+    "status": 200,
+    "file": "gearment-154.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/catalog/category/women-tanks",
+      "/catalog/category/kids",
+      "/catalog/category/kids-t-shirts",
+      "/catalog/category/kids-hoodies",
+      "/catalog/category/kids-sweatshirts",
+      "/catalog/category/homeliving",
+      "/catalog/category/home-living-tumblers",
+      "/catalog/category/home-living-posters",
+      "/catalog/category/home-living-doormats",
+      "/catalog/category/home-living-mugs",
+      "/catalog/category/home-living-acrylic-plaque",
+      "/catalog/category/home-living-sticker",
+      "/catalog/category/home-living-canvas",
+      "/catalog/category/home-living-metal-sign",
+      "/catalog/category/blanket",
+      "/catalog/category/accessories",
+      "/catalog/category/accessories-ornaments",
+      "/catalog/category/accessories-flags"
+    ]
+  },
+  {
+    "id": "dreamship",
+    "url": "https://dreamship.com/pricing",
+    "status": 200,
+    "file": "dreamship-155.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/category/mens-clothing",
+      "/products/category/womens-clothing",
+      "/products/category/youth-clothing",
+      "/products/category/accessories",
+      "/products/category/drinkware",
+      "/products/category/home-and-living",
+      "/products/category/electronics",
+      "/products/category/baby-clothing",
+      "/products/category/ornaments",
+      "/products/category/bags-backpacks",
+      "/products/category/toddler-clothing"
+    ]
+  },
+  {
+    "id": "gearment",
+    "url": "https://gearment.com/catalog",
+    "status": 200,
+    "file": "gearment-156.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/product/fleece-blanket",
+      "/catalog/product/sweatshirt",
+      "/catalog/product/classic-t-shirt",
+      "/catalog/product/poster",
+      "/catalog/product/hand-flag",
+      "/catalog/product/minky-blanket-30x40",
+      "/catalog/product/minky-blanket-60x50",
+      "/catalog/product/minky-blanket-60x80",
+      "/catalog/product/circle-ornament",
+      "/catalog/product/sherpa-blanket",
+      "/catalog/product/phone-case",
+      "/catalog/product/yard-sign",
+      "/catalog/product/dyed-heavyweight-t-shirt-1717",
+      "/catalog/product/hoodie",
+      "/catalog/product/oval-ornament",
+      "/catalog/product/heart-ornament",
+      "/catalog/product/star-ornament",
+      "/catalog/product/12oz-wine-tumbler-uv"
+    ]
+  },
+  {
+    "id": "gearment",
+    "url": "https://gearment.com/catalog/category/men-t-shirts",
+    "status": 200,
+    "file": "gearment-157.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/category/home-living-posters",
+      "/catalog/category/home-living-doormats",
+      "/catalog/category/home-living-mugs",
+      "/catalog/category/home-living-acrylic-plaque",
+      "/catalog/category/home-living-sticker",
+      "/catalog/category/home-living-canvas",
+      "/catalog/category/home-living-metal-sign",
+      "/catalog/category/blanket",
+      "/catalog/category/accessories",
+      "/catalog/category/accessories-ornaments",
+      "/catalog/category/accessories-flags",
+      "/catalog/product/classic-t-shirt",
+      "/catalog/product/premium-guys-tee",
+      "/catalog/product/v-neck-unisex",
+      "/catalog/product/jersey-t-shirt",
+      "/catalog/product/lightweight-t-shirt-980",
+      "/catalog/product/dyed-heavyweight-t-shirt-1717",
+      "/catalog/product/authentic-short-5250"
+    ]
+  },
+  {
+    "id": "dreamship",
+    "url": "https://dreamship.com/products/category/mens-clothing",
+    "status": 200,
+    "file": "dreamship-158.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/unisex-premium-long-sleeve-wleft-chest-imprint",
+      "/products/unisex-sustainable-t-shirt-wleft-chest-imprint-dtfx",
+      "/products/unisex-comfort-colors-1567-hooded-sweatshirt",
+      "/products/standard-unisex-embroidered-crewneck-sweatshirt-left-chest",
+      "/products/unisex-comfort-colors-1717-dtfx",
+      "/products/unisex-softstyle-t-shirt",
+      "/products/embroidered-standard-t-shirt-centered",
+      "/products/washed-t-shirt",
+      "/products/category/womens-clothing",
+      "/products/category/youth-clothing",
+      "/products/category/accessories",
+      "/products/category/drinkware",
+      "/products/category/home-and-living",
+      "/products/category/electronics",
+      "/products/category/baby-clothing",
+      "/products/category/ornaments",
+      "/products/category/bags-backpacks",
+      "/products/category/toddler-clothing"
+    ]
+  },
+  {
+    "id": "dreamship",
+    "url": "https://dreamship.com/products",
+    "status": 200,
+    "file": "dreamship-159.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/category/best-sellers",
+      "/products/category/new-arrivals",
+      "/products/category/apparel",
+      "/products/category/drinkware",
+      "/products/category/home-and-living",
+      "/products/category/ornaments",
+      "/products/category/accessories",
+      "/products/category/others",
+      "/products/category/mens-clothing",
+      "/products/category/womens-clothing",
+      "/products/category/youth-clothing",
+      "/products/category/electronics",
+      "/products/category/baby-clothing",
+      "/products/category/bags-backpacks",
+      "/products/category/toddler-clothing"
+    ]
+  },
+  {
+    "id": "digitalondemand",
+    "url": "https://digitalondemand.com/collections/all-products",
+    "status": 200,
+    "file": "digitalondemand-160.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/collections/all-products/products/groovy-acrylic-cup",
+      "/collections/all-products/products/ares-water-bottle",
+      "/collections/all-products/products/sidekick-koozie",
+      "/collections/all-products/products/riva-tumbler",
+      "/collections/all-products/products/viking-tumbler",
+      "/collections/all-products/products/tundra-tumbler",
+      "/collections/all-products/products/tundra-tumbler-30oz",
+      "/collections/all-products/products/custom-cut-statue",
+      "/collections/all-products/products/acrylic-standee",
+      "/collections/all-products/products/glass-ornament",
+      "/collections/all-products/products/custom-cut-ornament",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-footer.css?v=159196027154887086731740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-store-selector.css?v=51879867781492646131740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-modal.css?v=140849833785332479431740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-popup.css?v=119994716204803090201740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-cart.css?v=119013594988271680031740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-sidebar.css?v=112740179039140375041740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-main-product.css?v=93774677457781734681740016728"
+    ]
+  },
+  {
+    "id": "gearlaunch",
+    "url": "https://www.gearlaunch.com/create-a-product",
+    "status": 200,
+    "file": "gearlaunch-161.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "https://shop.gearlaunch.com/gearlaunch/shop/home"
+    ]
+  },
+  {
+    "id": "digitalondemand",
+    "url": "https://digitalondemand.com/collections/drinkware",
+    "status": 200,
+    "file": "digitalondemand-162.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/collections/drinkware/products/adventure-tumbler",
+      "/collections/drinkware/products/gossip-wine-tumbler",
+      "/collections/drinkware/products/sidekick-koozie",
+      "/collections/drinkware/products/groovy-acrylic-cup",
+      "/collections/drinkware/products/ares-water-bottle",
+      "/collections/drinkware/products/buddy-koozie",
+      "/collections/drinkware/products/gator-tumbler",
+      "/collections/drinkware/products/viking-tumbler",
+      "/collections/drinkware/products/tundra-tumbler",
+      "/collections/drinkware/products/riva-tumbler",
+      "/collections/drinkware/products/tundra-tumbler-30oz",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-footer.css?v=159196027154887086731740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-store-selector.css?v=51879867781492646131740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-modal.css?v=140849833785332479431740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-popup.css?v=119994716204803090201740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-cart.css?v=119013594988271680031740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-sidebar.css?v=112740179039140375041740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-main-product.css?v=93774677457781734681740016728"
+    ]
+  },
+  {
+    "id": "gearlaunch",
+    "url": "https://www.gearlaunch.com/products-category",
+    "status": 200,
+    "file": "gearlaunch-163.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/product/showercurtains-gearlaunch-shower-curtain",
+      "/product/laundrybags-gearlaunch-laundry-bag",
+      "/product/bathmats-gearlaunch-bath-mat",
+      "/product/bathtowels-gearlaunch-bath-towel",
+      "/product/tablerunners-gearlaunch-table-runner",
+      "/product/tablecloths-gearlaunch-tablecloth",
+      "/product/placemats-gearlaunch-placemat",
+      "/product/napkins-gearlaunch-napkins",
+      "/product/lawnsigns-gearlaunch-lawn-signs",
+      "/product/airpods-gearlaunch-airpod-case",
+      "/product/petbeds-gearlaunch-indoor-pet-bed",
+      "/product/petbeds-gearlaunch-outdoor-pet-bed",
+      "/product/standardfloorpillows-gearlaunch-floor-pillow-cover",
+      "/product/toiletrybags-gearlaunch-accessory-pouch",
+      "/product/unisexsweatpants-gearlaunch-classic-sweatpants",
+      "/product/unisexsweatpants-gearlaunch-premium-sweatpants",
+      "/product/unisextshirts-gearlaunch-unisex-basic-premium-crewneck-tee",
+      "https://shop.gearlaunch.com/gearlaunch/shop/home"
+    ]
+  },
+  {
+    "id": "digitalondemand",
+    "url": "https://digitalondemand.com/collections/hardgoods",
+    "status": 200,
+    "file": "digitalondemand-164.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-mobile-navigation.css?v=120744003781569698621740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-slider.css?v=59963729904232729191740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-breadcrumb.css?v=127231800308344613181740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-portal-catalog.css?v=143149701784634260321787669846",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-main-collection-product-grid.css?v=15015678701483503281740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-facets.css?v=96292662129199673251740016728",
+      "/collections/hardgoods/products/vanilla-sandalwood-candle",
+      "/collections/hardgoods/products/custom-cut-ornament",
+      "/collections/hardgoods/products/custom-cut-statue",
+      "/collections/hardgoods/products/acrylic-standee",
+      "/collections/hardgoods/products/glass-ornament",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-footer.css?v=159196027154887086731740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-store-selector.css?v=51879867781492646131740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-modal.css?v=140849833785332479431740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-popup.css?v=119994716204803090201740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-cart.css?v=119013594988271680031740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/component-sidebar.css?v=112740179039140375041740016728",
+      "//digitalondemand.com/cdn/shop/t/13/assets/section-main-product.css?v=93774677457781734681740016728"
+    ]
+  },
+  {
+    "id": "gearlaunch",
+    "url": "https://www.gearlaunch.com/products-category?search=bestforsummer",
+    "status": 200,
+    "file": "gearlaunch-165.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": [
+      "/product/showercurtains-gearlaunch-shower-curtain",
+      "/product/laundrybags-gearlaunch-laundry-bag",
+      "/product/bathmats-gearlaunch-bath-mat",
+      "/product/bathtowels-gearlaunch-bath-towel",
+      "/product/tablerunners-gearlaunch-table-runner",
+      "/product/tablecloths-gearlaunch-tablecloth",
+      "/product/placemats-gearlaunch-placemat",
+      "/product/napkins-gearlaunch-napkins",
+      "/product/lawnsigns-gearlaunch-lawn-signs",
+      "/product/airpods-gearlaunch-airpod-case",
+      "/product/petbeds-gearlaunch-indoor-pet-bed",
+      "/product/petbeds-gearlaunch-outdoor-pet-bed",
+      "/product/standardfloorpillows-gearlaunch-floor-pillow-cover",
+      "/product/toiletrybags-gearlaunch-accessory-pouch",
+      "/product/unisexsweatpants-gearlaunch-classic-sweatpants",
+      "/product/unisexsweatpants-gearlaunch-premium-sweatpants",
+      "/product/unisextshirts-gearlaunch-unisex-basic-premium-crewneck-tee",
+      "https://shop.gearlaunch.com/gearlaunch/shop/home"
+    ]
+  },
+  {
+    "id": "simpleprint",
+    "url": "https://www.simpleprint.com/catalog",
+    "status": 200,
+    "file": "simpleprint-166.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/heavy-cotton-youth-t-shirt-gildan-5000b-34",
+      "/products/toddler-pullover-fleece-hoodie-rabbit-skins-3326-28",
+      "/products/mid-weight-crewneck-sweatshirt-independent-trading-co-ss3000-22",
+      "/products/mid-weight-hooded-sweatshirt-independent-trading-co-ss4500-14",
+      "/products/womens-jersey-v-neck-tee-bella-canvas-6005-8",
+      "/products/jersey-v-neck-t-shirt-bella-canvas-3005-7",
+      "/products/jersey-t-shirt-bella-canvas-3001-3",
+      "/products/womens-relaxed-jersey-tee-bella-canvas-6400-2",
+      "/products/softstyle-t-shirt-gildan-64000-1"
+    ]
+  },
+  {
+    "id": "goquadra",
+    "url": "https://goquadra.com/pricing-and-products/",
+    "status": 200,
+    "file": "goquadra-167.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "burgerprints",
+    "url": "https://burgerprints.com/catalog/",
+    "status": 200,
+    "file": "burgerprints-168.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/",
+      "/catalog/collection/mens-clothing",
+      "/catalog/collection/womens-clothing",
+      "/catalog/collection/kids-clothing",
+      "/catalog/collection/accessories",
+      "/catalog/collection/home-living",
+      "/catalog/collection/all",
+      "/catalog/collection/tiktok-optimized",
+      "/catalog/collection/new-arrivals",
+      "/catalog/product/baby-t-shirt-babybugz-bz02-eu",
+      "/catalog/product/babys-onesie-babybugz-bz10-eu",
+      "/catalog/product/doormat-eu",
+      "/catalog/product/landscape-metal-sign-eu",
+      "/catalog/collection/best-sellers",
+      "/catalog/product/accent-mug-11oz-full-bleed-us-label",
+      "/catalog/product/accent-mug-15oz---full-bleed",
+      "/catalog/product/accent-mug-11oz---full-bleed",
+      "/catalog/product/ceramic-mug-11oz-full-bleed-us"
+    ]
+  },
+  {
+    "id": "goquadra",
+    "url": "https://goquadra.com/pricing/",
+    "status": 200,
+    "file": "goquadra-169.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "burgerprints",
+    "url": "https://burgerprints.com/pricing/",
+    "status": 200,
+    "file": "burgerprints-170.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "https://burgerprints.com/catalog/"
+    ]
+  },
+  {
+    "id": "goquadra",
+    "url": "https://goquadra.com/go/product-list/",
+    "status": 200,
+    "file": "goquadra-171.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "ecomerch",
+    "url": "https://ecomerch.com/products",
+    "status": 200,
+    "file": "ecomerch-172.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "miamerchandise",
+    "url": "https://miamerchandise.com/collections/home-goods",
+    "status": 200,
+    "file": "miamerchandise-173.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/poster-gloss-1",
+      "/products/metal-poster-24x36",
+      "/products/wooden-frame-10-diameter-wall-clock-natural",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-loading-spinner.css?v=116724955567955766481708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-collection-hero.css?v=125511329265726850081708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/template-collection.css?v=58558206033505836701708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-card.css?v=132503333913019034391708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-facets.css?v=58939960381279492111708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-show-more.css?v=139536189637226996221708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-visual-display.css?v=55189007514267274771708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-rating.css?v=157771854592137137841708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-volume-pricing.css?v=56284703641257077881708480679",
+      "/products/coir-door-mat",
+      "/products/calendar",
+      "//miamerchandise.com/cdn/shop/t/28/assets/section-footer.css?v=72619989355558646551708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-newsletter.css?v=4727253280200485261708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-payment.css?v=69253961410771838501708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-social.css?v=35792976012981934991708480679"
+    ]
+  },
+  {
+    "id": "burgerprints",
+    "url": "https://burgerprints.com/en/catalog",
+    "status": 200,
+    "file": "burgerprints-174.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/catalog/",
+      "/catalog/collection/mens-clothing",
+      "/catalog/collection/womens-clothing",
+      "/catalog/collection/kids-clothing",
+      "/catalog/collection/accessories",
+      "/catalog/collection/home-living",
+      "/catalog/collection/all",
+      "/catalog/collection/tiktok-optimized",
+      "/catalog/collection/new-arrivals",
+      "/catalog/product/baby-t-shirt-babybugz-bz02-eu",
+      "/catalog/product/babys-onesie-babybugz-bz10-eu",
+      "/catalog/product/doormat-eu",
+      "/catalog/product/landscape-metal-sign-eu",
+      "/catalog/collection/best-sellers",
+      "/catalog/product/accent-mug-11oz-full-bleed-us-label",
+      "/catalog/product/accent-mug-15oz---full-bleed",
+      "/catalog/product/accent-mug-11oz---full-bleed",
+      "/catalog/product/ceramic-mug-11oz-full-bleed-us"
+    ]
+  },
+  {
+    "id": "miamerchandise",
+    "url": "https://miamerchandise.com/collections/apparel",
+    "status": 200,
+    "file": "miamerchandise-175.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/bella-canvas-unisex-jersey-short-sleeve-v-neck-tee",
+      "/products/bella-canvas-jersey-tee",
+      "/products/gildan-heavy-cotton-tank-top",
+      "/products/gildan-heavy-blend-full-zip-hooded-sweatshirt",
+      "/products/gildan-softstyle-t-shirt",
+      "/products/neck-tie",
+      "/products/gildan-hoodie",
+      "/products/womens-heavy-cotton-t-shirt",
+      "/products/bandana",
+      "/products/med-large-facemask",
+      "/products/medium-socks",
+      "/products/unisex-stainless-steel-watch",
+      "/products/mens-heavy-cotton-t-shirt",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-pagination.css?v=136206814810731739951708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/section-footer.css?v=72619989355558646551708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-newsletter.css?v=4727253280200485261708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-payment.css?v=69253961410771838501708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-social.css?v=35792976012981934991708480679"
+    ]
+  },
+  {
+    "id": "artelo",
+    "url": "https://www.artelo.com/pricing",
+    "status": 200,
+    "file": "artelo-176.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": []
+  },
+  {
+    "id": "cwondemand",
+    "url": "https://cwondemand.com/AdminProducts",
+    "status": 200,
+    "file": "cwondemand-177.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "miamerchandise",
+    "url": "https://miamerchandise.com/collections/drinkware",
+    "status": 200,
+    "file": "miamerchandise-178.html",
+    "schemaProducts": [],
+    "hasDollarPrice": true,
+    "links": [
+      "/products/32oz-stainless-steel-white-coated-water-bottle-with-handle-lid",
+      "/products/32oz-stainless-steel-white-coated-water-bottle-with-sport-lid",
+      "/products/water-bottle-500ml",
+      "/products/water-bottle-750ml",
+      "/products/12oz-stainless-steel-tumbler",
+      "/products/20-oz-tumbler-w-loop-top-lid",
+      "/products/12-oz-tumbler-w-flip-open-lid",
+      "/products/hip-flask",
+      "/products/black-15oz-mug",
+      "/products/16oz-frosted-glass-stein",
+      "/products/ceramic-stein",
+      "/products/ceramic-shot-glass",
+      "/products/white-15oz-mug",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-pagination.css?v=136206814810731739951708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/section-footer.css?v=72619989355558646551708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-newsletter.css?v=4727253280200485261708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-payment.css?v=69253961410771838501708480679",
+      "//miamerchandise.com/cdn/shop/t/28/assets/component-list-social.css?v=35792976012981934991708480679"
+    ]
+  },
+  {
+    "id": "duplium",
+    "url": "https://www.duplium.com/product-template-table/",
+    "status": 200,
+    "file": "duplium-179.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "cwondemand",
+    "url": "https://cwondemand.com/Products",
+    "status": 200,
+    "file": "cwondemand-180.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  },
+  {
+    "id": "cwondemand",
+    "url": "https://cwondemand.com/ProductDetail",
+    "status": 200,
+    "file": "cwondemand-181.html",
+    "schemaProducts": [],
+    "hasDollarPrice": false,
+    "links": []
+  }
+]

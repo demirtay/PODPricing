@@ -1,0 +1,160 @@
+{
+  "checkedAt": "2026-10-04T12:15:38.502Z",
+  "providers": 121,
+  "connected": 37,
+  "products": 19964,
+  "photos": 19964,
+  "desktopCodeDifferences": [],
+  "files": [
+    {
+      "file": "data/catalog.json",
+      "workspaceHash": "574a8b12db2bc1f59353de569b298f8587c5dd80dc8f1f070c7b77c81974806d",
+      "desktopHash": "574a8b12db2bc1f59353de569b298f8587c5dd80dc8f1f070c7b77c81974806d"
+    },
+    {
+      "file": "dist/catalog.js",
+      "workspaceHash": "55e08adae539b9331488a1cc764608228f1160e6011b06be79f88e34d6500824",
+      "desktopHash": "55e08adae539b9331488a1cc764608228f1160e6011b06be79f88e34d6500824"
+    },
+    {
+      "file": "scripts/audit-prices.cjs",
+      "workspaceHash": "a0774d57507b46ca8315dd44becde37c4c62e7c75dd4b448cf6ad50c3917d2ac",
+      "desktopHash": "a0774d57507b46ca8315dd44becde37c4c62e7c75dd4b448cf6ad50c3917d2ac"
+    },
+    {
+      "file": "scripts/burgerprints-connector.cjs",
+      "workspaceHash": "5fcaecef194bb59d5b2a664390ec75a0036ee6681fa642e00b846c9c9651979a",
+      "desktopHash": "5fcaecef194bb59d5b2a664390ec75a0036ee6681fa642e00b846c9c9651979a"
+    },
+    {
+      "file": "scripts/catalog-import.cjs",
+      "workspaceHash": "52b568b11e18113666fbb7623ca1a7fd2a2ddb39dfe9cebabeb775d9dfe72762",
+      "desktopHash": "52b568b11e18113666fbb7623ca1a7fd2a2ddb39dfe9cebabeb775d9dfe72762"
+    },
+    {
+      "file": "scripts/classic-connectors.cjs",
+      "workspaceHash": "9adf320bf5d35edd913990d94720651ee675c249b3df1b5fb4c0c407e584efc2",
+      "desktopHash": "9adf320bf5d35edd913990d94720651ee675c249b3df1b5fb4c0c407e584efc2"
+    },
+    {
+      "file": "scripts/gearment-connector.cjs",
+      "workspaceHash": "d4b4f5e0d4b191cfe30d9485e9952c7bb083c4ef429a8868fcf187e0e1788ce5",
+      "desktopHash": "d4b4f5e0d4b191cfe30d9485e9952c7bb083c4ef429a8868fcf187e0e1788ce5"
+    },
+    {
+      "file": "scripts/kincustom-connector.cjs",
+      "workspaceHash": "1d3f7c8ab54c5b85068252e57cd3ced50096d2674969fa58970810892708a227",
+      "desktopHash": "1d3f7c8ab54c5b85068252e57cd3ced50096d2674969fa58970810892708a227"
+    },
+    {
+      "file": "scripts/merchize-connector.cjs",
+      "workspaceHash": "861b3740814581fed263aee4496d9f24ada9f27f1d80dc0b53347988c5e3672b",
+      "desktopHash": "861b3740814581fed263aee4496d9f24ada9f27f1d80dc0b53347988c5e3672b"
+    },
+    {
+      "file": "scripts/page-price-connectors.cjs",
+      "workspaceHash": "352ede0031a96eb38f4eaf67bab7684e93874e9c3e334e731533e0f923fa8e7a",
+      "desktopHash": "352ede0031a96eb38f4eaf67bab7684e93874e9c3e334e731533e0f923fa8e7a"
+    },
+    {
+      "file": "scripts/peaprint-connector.cjs",
+      "workspaceHash": "96c7df001a7bde9293e11778bb81c9f4a859d14db319371be19d18b56694c863",
+      "desktopHash": "96c7df001a7bde9293e11778bb81c9f4a859d14db319371be19d18b56694c863"
+    },
+    {
+      "file": "scripts/podbase-connector.cjs",
+      "workspaceHash": "80d2b55dd9a1522e19d8d35f2932e07e9f6743c73fcf417a77c391a1d594d975",
+      "desktopHash": "80d2b55dd9a1522e19d8d35f2932e07e9f6743c73fcf417a77c391a1d594d975"
+    },
+    {
+      "file": "scripts/popcustoms-connector.cjs",
+      "workspaceHash": "e7c4f49c694ad5fb737b10ad0ca5a1966c27662a7b2a9586383191e23cd9864c",
+      "desktopHash": "e7c4f49c694ad5fb737b10ad0ca5a1966c27662a7b2a9586383191e23cd9864c"
+    },
+    {
+      "file": "scripts/price-policy.cjs",
+      "workspaceHash": "ea69ddb8bf2d90d8bee97e06628cdc0fe6029401aa5562210c9bc4abb21876ed",
+      "desktopHash": "ea69ddb8bf2d90d8bee97e06628cdc0fe6029401aa5562210c9bc4abb21876ed"
+    },
+    {
+      "file": "scripts/printdoors-connector.cjs",
+      "workspaceHash": "c48b73feeba0d4cf4a970c41e208d68b69696df5c5c86b164126b8c3757d554e",
+      "desktopHash": "c48b73feeba0d4cf4a970c41e208d68b69696df5c5c86b164126b8c3757d554e"
+    },
+    {
+      "file": "scripts/printful-connector.cjs",
+      "workspaceHash": "a5c00d67ea55ceddabc6e1939562d0bc0f8b436b7a75a2928085805219c5db90",
+      "desktopHash": "a5c00d67ea55ceddabc6e1939562d0bc0f8b436b7a75a2928085805219c5db90"
+    },
+    {
+      "file": "scripts/printkk-detail.cjs",
+      "workspaceHash": "05ba8dfb8ff565b2c7d1f29095bd692e470e2fce76ec44d5aff89ada2adbe657",
+      "desktopHash": "05ba8dfb8ff565b2c7d1f29095bd692e470e2fce76ec44d5aff89ada2adbe657"
+    },
+    {
+      "file": "scripts/printrove-connector.cjs",
+      "workspaceHash": "e72e4cf82eff35b0b33d4cb3198a209329f97ba3618c4a1dc446f1e65b3865a5",
+      "desktopHash": "e72e4cf82eff35b0b33d4cb3198a209329f97ba3618c4a1dc446f1e65b3865a5"
+    },
+    {
+      "file": "scripts/printy6-connector.cjs",
+      "workspaceHash": "a90d2b6b33062147a90ece8dfe5e26caa68cb968087a113a221b4e77793a6e4c",
+      "desktopHash": "a90d2b6b33062147a90ece8dfe5e26caa68cb968087a113a221b4e77793a6e4c"
+    },
+    {
+      "file": "scripts/public-connectors.cjs",
+      "workspaceHash": "40a9052ef829eca87cec94325c9f403c52b3ad37d1cc7d009e33905163144c57",
+      "desktopHash": "40a9052ef829eca87cec94325c9f403c52b3ad37d1cc7d009e33905163144c57"
+    },
+    {
+      "file": "scripts/public-page-catalogs.cjs",
+      "workspaceHash": "82a0645cc09a77222d77748ab889c98e638a5ca734b4f051d3ab894a2b3525b9",
+      "desktopHash": "82a0645cc09a77222d77748ab889c98e638a5ca734b4f051d3ab894a2b3525b9"
+    },
+    {
+      "file": "scripts/qikink-connector.cjs",
+      "workspaceHash": "d79225f75fd4dc0a912f5b08380d74bec66fd6dfc0c8bc5ad96a12b57f4ba7e7",
+      "desktopHash": "d79225f75fd4dc0a912f5b08380d74bec66fd6dfc0c8bc5ad96a12b57f4ba7e7"
+    },
+    {
+      "file": "scripts/refresh-catalogs.cjs",
+      "workspaceHash": "5936630421805d931da8a1a28b4662c376e029e8467359936887ddc6fe512af8",
+      "desktopHash": "5936630421805d931da8a1a28b4662c376e029e8467359936887ddc6fe512af8"
+    },
+    {
+      "file": "scripts/review-printkk-prices.cjs",
+      "workspaceHash": "9b5d0e863533ce8071292d6d6709a6c6ba51c8227234ddd593ee89812f1d053d",
+      "desktopHash": "9b5d0e863533ce8071292d6d6709a6c6ba51c8227234ddd593ee89812f1d053d"
+    },
+    {
+      "file": "scripts/server.cjs",
+      "workspaceHash": "bb2a82d35a432ccd1eb0c4960dc25bbe1f9eb52a7876ceeb509f5b63ba550cfb",
+      "desktopHash": "bb2a82d35a432ccd1eb0c4960dc25bbe1f9eb52a7876ceeb509f5b63ba550cfb"
+    },
+    {
+      "file": "scripts/store-connectors.cjs",
+      "workspaceHash": "4a42965469ec944dc708821fcfabe1b6bde5ff64475ee462ed554860ef56cb74",
+      "desktopHash": "4a42965469ec944dc708821fcfabe1b6bde5ff64475ee462ed554860ef56cb74"
+    },
+    {
+      "file": "scripts/tapstitch-connector.cjs",
+      "workspaceHash": "0cf8dfea782b1d0489ca4f2dac75fc36a09ec5ffb30db230a7c2dc5a505758c6",
+      "desktopHash": "0cf8dfea782b1d0489ca4f2dac75fc36a09ec5ffb30db230a7c2dc5a505758c6"
+    },
+    {
+      "file": "scripts/teelaunch-connector.cjs",
+      "workspaceHash": "c8a446ffe5b3281c0f241a0a07236ebaa37f4266b9407dce6c303c8125853d7a",
+      "desktopHash": "c8a446ffe5b3281c0f241a0a07236ebaa37f4266b9407dce6c303c8125853d7a"
+    },
+    {
+      "file": "scripts/visible-woo-price.cjs",
+      "workspaceHash": "7db19ee451811950cb1db7ffebaff6b6e83546a257d81d0c1687438c42963e6c",
+      "desktopHash": "7db19ee451811950cb1db7ffebaff6b6e83546a257d81d0c1687438c42963e6c"
+    },
+    {
+      "file": "scripts/yoycol-connector.cjs",
+      "workspaceHash": "b8e61518cb443b5b27b9a4beadcce6c72e9c7723ec837adc65141f9e611700d8",
+      "desktopHash": "b8e61518cb443b5b27b9a4beadcce6c72e9c7723ec837adc65141f9e611700d8"
+    }
+  ]
+}

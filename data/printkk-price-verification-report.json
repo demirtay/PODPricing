@@ -1,0 +1,11 @@
+{
+  "state": "complete",
+  "total": 1423,
+  "processed": 1423,
+  "verified": 1423,
+  "failed": [],
+  "unmatched": [],
+  "startedAt": "2026-10-03T21:17:41.633Z",
+  "finishedAt": "2026-10-03T22:03:01.178Z",
+  "retryFinishedAt": "2026-10-03T22:03:01.178Z"
+}

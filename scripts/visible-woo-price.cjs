@@ -1,0 +1,2 @@
+function parse(html){const block=html.match(/<p class="price"[^>]*>([\s\S]*?)<\/p>/)?.[1];if(!block)return null;const current=block.match(/<ins[^>]*>([\s\S]*?)<\/ins>/)?.[1]||block;const amount=current.match(/<bdi[^>]*>([\s\S]*?)<\/bdi>/)?.[1]?.replace(/<[^>]*>/g,'').replace(/&#0?36;/g,'$').replace(/\s+/g,'');if(!/^\$\d+(?:,\d{3})*\.\d{2}$/.test(amount||''))return null;return Math.round(Number(amount.slice(1).replace(/,/g,''))*100);}
+module.exports={parse};

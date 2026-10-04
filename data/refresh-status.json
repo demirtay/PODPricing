@@ -16,6 +16,8 @@
     "sellfy",
     "ownprint",
     "oneprint",
+    "novatomato",
+    "printway",
     "lumaprints",
     "simpleprint",
     "printdoors",
@@ -179,13 +181,29 @@
       "nextCheck": 0
     },
     "oneprint": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "novatomato": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "printway": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T23:40:09.206Z",
+      "lastSuccess": "2026-10-04T23:49:43.413Z",
       "lastError": null,
-      "productCount": 4,
-      "nextCheck": 1791159007599,
-      "startedAt": "2026-10-04T23:40:07.599Z"
+      "productCount": 1066,
+      "nextCheck": 1791159582246,
+      "startedAt": "2026-10-04T23:49:42.246Z"
     },
     "lumaprints": {
       "state": "idle",

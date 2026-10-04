@@ -21,6 +21,8 @@ module.exports = {
   sellfy: def('https://sellfy.com/pod-catalogue/', './sellfy.cjs'),
   ownprint: def('https://ownprint.co/print-on-demand-jewelry', './ownprint.cjs'),
   oneprint: def('https://oneprint.io/products', './oneprint.cjs'),
+  novatomato: def('https://www.novatomato.com/', './novatomato.cjs'),
+  printway: def('https://printway.io/en/all-products', './printway.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),

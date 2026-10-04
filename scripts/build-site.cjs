@@ -16,6 +16,8 @@ const out = path.join(root, 'site.__build'); // derleme bitince site/ ile yer de
 const cfg = JSON.parse(fs.readFileSync(path.join(root, 'site.config.json'), 'utf8'));
 const SITE = (cfg.siteUrl || '').replace(/\/$/, '');
 const BRAND = cfg.siteName || 'POD Pricing';
+// tasarım dosyası değişince tarayıcılar eskisini kullanmasın diye sürüm etiketi
+const VER = require('node:crypto').createHash('md5').update(fs.readFileSync(path.join(root, 'web/site.css'))).update(fs.readFileSync(path.join(root, 'web/site.js'))).digest('hex').slice(0, 8);
 
 // ---------- yardımcılar
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -110,6 +112,7 @@ const LOCALES = {
       heroH: 'Find the cheapest print-on-demand supplier',
       heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first.`,
       topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
+      sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
       offersH: n => `Prices from ${n} manufacturers`, cheapestFirst: 'Sorted from cheapest to most expensive.',
       groupNoteModel: 'Same blank garment at every manufacturer. Print method, print area and shipping can differ — check details at the store.',
@@ -171,6 +174,7 @@ const LOCALES = {
       heroH: 'En ucuz baskı üreticisini bul',
       heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte.`,
       topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
+      sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
       offersH: n => `${n} üreticinin fiyatları`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
       groupNoteModel: 'Bütün üreticilerde aynı boş ürün modeli. Baskı yöntemi, baskı alanı ve kargo farklı olabilir; ayrıntılar üreticinin sayfasında.',
@@ -251,6 +255,14 @@ function makeHelpers(L) {
   const card = p => `<a class="card" href="${href(P.product(p.id))}"><div class="ci">${img(p)}</div><div class="cb"><div class="ct">${esc(p.title)}</div><div class="cm">${esc(provName(p.providerId))}</div><div class="cp"><b>${esc(fmt(p.baseMinor))}</b>${pbBadge(p.pb)}</div></div></a>`;
   // karşılaştırmalı ürün kartı (grup)
   const gcard = g => `<a class="card" href="${href(P.group(g.slug))}"><div class="ci">${imgTag(g.image, gTitle(g))}</div><div class="cb"><div class="ct">${esc(gTitle(g))}</div><div class="cm">${esc(t.makersN(g.providers.size))}</div><div class="cp"><small>${L.lang === 'en' ? 'from' : 'en ucuz'}</small><b>${esc(fmt(g.list[0].baseMinor))}</b></div></div></a>`;
+  // Kategori listesindeki "ürün": birden çok sitede satılıyorsa karşılaştırma sayfası, tek sitedeyse kendi sayfası
+  const itemsOf = (groupList, singles) => [
+    ...groupList.map(g => ({ href: href(P.group(g.slug)), name: gTitle(g), image: g.image, price: g.list[0].baseMinor, n: g.providers.size, maker: '', pb: '', best: g.list[0].providerId,
+      hi: Math.max(...[...groupBy(g.list, p => p.providerId)].map(([, l]) => l[0].baseMinor)) })),
+    ...singles.map(p => ({ href: href(P.product(p.id)), name: p.title, image: p.imageUrl, price: p.baseMinor, n: 1, maker: p.providerId, pb: p.pb, best: p.providerId, hi: p.baseMinor })),
+  ].sort((a, b) => b.n - a.n || a.price - b.price);
+  const icard = it => `<a class="card" href="${it.href}"><div class="ci">${imgTag(it.image, it.name)}</div><div class="cb"><div class="ct">${esc(it.name)}</div><div class="cm">${it.n > 1 ? `<span class="sites">${esc(t.sitesN(it.n))}</span>` : esc(provName(it.maker))}</div><div class="cp">${it.n > 1 ? `<small>${esc(t.cheapest)}</small>` : ''}<b>${esc(fmt(it.price))}</b></div></div></a>`;
+  const icards = list => `<div class="cards">${list.map(icard).join('')}</div>`;
   const cards = list => `<div class="cards">${list.map(card).join('')}</div>`;
   const gcards = list => `<div class="cards">${list.map(gcard).join('')}</div>`;
   const tile = (hrefTo, image, title, sub) => `<a class="tile" href="${hrefTo}"><div class="ti">${imgTag(image, title)}</div><div class="tb"><b>${esc(title)}</b><span>${esc(sub)}</span></div></a>`;
@@ -261,7 +273,7 @@ function makeHelpers(L) {
     const rest = list.filter(p => !best.includes(p));
     return `<ol class="ladder">${best.map(row).join('')}</ol>` + (rest.length ? `<details class="more-offers"><summary>${esc(t.allOffersOf(list.length))}</summary><ol class="ladder">${list.map(row).join('')}</ol></details>` : '');
   };
-  return { t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers };
+  return { t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers, itemsOf, icards };
 }
 
 // ---------- sayfa şablonu
@@ -279,7 +291,7 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
   return `<!doctype html><html lang="${L.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(description)}">${canonical}${alts}${noindex ? '<meta name="robots" content="noindex">' : ''}
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="${esc(BRAND)}">
-<link rel="stylesheet" href="/assets/site.css"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml">${ads}
+<link rel="stylesheet" href="/assets/site.css?v=${VER}"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml">${ads}
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}">
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>
 <form class="search" action="${href(H.P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchPh)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
@@ -288,7 +300,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
 <p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p></div></footer>
-<script src="/assets/site.js" defer></script></body></html>`;
+<script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
 
 // ---------- üret
@@ -298,8 +310,7 @@ fs.cpSync(path.join(root, 'web'), path.join(out, 'assets'), { recursive: true })
 const add = (rel, html) => { write(rel, html); sitemap.push(rel); };
 
 // istemci tarafı ortak veri: [id, başlık, üreticiId, fiyat, kaynakFiyat, görsel, (boş), tip, satışLinki, fiyatTürü]
-const row = p => [p.id, p.title, p.providerId, p.baseMinor, '', p.imageUrl || '', '', p.type, outbound(p), p.pb];
-for (const [k, list] of byType) write(`data/k/${k}.json`, JSON.stringify(list.map(row)));
+const singlesOf = list => list.filter(p => !groupOf.has(p.id));
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 
 const typeOrder = [...byType.keys()].filter(k => k !== 'diger').sort((a, b) => (groupsByType.get(b)?.length || 0) - (groupsByType.get(a)?.length || 0) || byType.get(b).length - byType.get(a).length);
@@ -320,6 +331,10 @@ for (const lg of LANGS) {
       ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers' }
       : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici' },
   }));
+  // kategori listeleri: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site]
+  const itemRow = it => [it.href, it.name, it.image || '', it.price, it.n, it.maker, it.hi, it.best];
+  const typeItems = new Map([...byType].map(([k, list]) => [k, H.itemsOf(groupsByType.get(k) || [], singlesOf(list))]));
+  for (const [k, items] of typeItems) write(`data/k/${lg}/${k}.json`, JSON.stringify(items.map(itemRow)));
   // arama için ürün grupları: [slug, ad, görsel, en düşük fiyat, üretici sayısı, tip]
   write(`data/groups-${lg}.json`, JSON.stringify(groups.map(g => [g.slug, H.gTitle(g), g.image || '', g.list[0].baseMinor, g.providers.size, g.type])));
 

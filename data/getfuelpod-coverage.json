@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-04T18:05:36.195Z",
+  "typePages": 22,
+  "imported": 120,
+  "skipped": [
+    {
+      "name": "Fleece Scarf",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Bella+Canvas Unisex Jersey Short Sleeve V-neck Tee",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Next Level Ladies Ideal V",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Port & Company Ladies Fan Favorite V-Neck Tee",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Canvas Youth T-Shirt",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Gildan Youth Ultra Cotton T",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "18x24 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "20x24 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "20x30 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "24x16 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "24x18 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "24x20 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "30x20 Poster",
+      "reason": "Standart fiyat yok"
+    },
+    {
+      "name": "Acrylic Ornament - Custom Shape",
+      "reason": "Standart fiyat yok"
+    }
+  ]
+}

@@ -10,6 +10,7 @@
     "neatopod",
     "pillowprofits",
     "shirtee",
+    "getfuelpod",
     "simpleprint",
     "printdoors",
     "kincustom",
@@ -124,13 +125,21 @@
       "nextCheck": 0
     },
     "shirtee": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "getfuelpod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T18:04:10.203Z",
+      "lastSuccess": "2026-10-04T18:05:59.339Z",
       "lastError": null,
-      "productCount": 305,
-      "nextCheck": 1791138820605,
-      "startedAt": "2026-10-04T18:03:40.605Z"
+      "productCount": 120,
+      "nextCheck": 1791138936187,
+      "startedAt": "2026-10-04T18:05:36.187Z"
     },
     "simpleprint": {
       "state": "idle",

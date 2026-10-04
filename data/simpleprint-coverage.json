@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-04T13:39:37.045Z",
+  "sitemapProductUrls": 118,
+  "imported": 117,
+  "skipped": [
+    {
+      "url": "https://www.simpleprint.com/products/retro-trucker-cap-yp-classics-6606",
+      "reason": "HTTP 404"
+    }
+  ]
+}

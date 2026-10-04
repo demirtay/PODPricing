@@ -263,7 +263,7 @@ add('ureticiler/index.html', page({
   crumbs: [['Üreticiler']],
   body: `<h1>Üreticiler</h1><p class="muted">${connected.length} üreticinin fiyatları karşılaştırmada. ${catalog.providers.length - connected.length} üreticinin fiyatları üye girişi gerektirdiği ya da henüz eklenmediği için listede yalnızca bağlantı olarak yer alıyor.</p>
 <div class="tbl"><table><thead><tr><th>Üretici</th><th class="num">Ürün</th><th class="num">En düşük</th><th>Durum</th></tr></thead><tbody>
-${provRows.map(({ p, list }) => `<tr><td><a href="/uretici/${p.id}/">${esc(p.name)}</a></td><td class="num">${list.length || '–'}</td><td class="num">${list.length ? fmt(list[0].baseMinor) : '–'}</td><td class="sm">${list.length ? 'Fiyatlar karşılaştırmada' : 'Fiyatlar henüz eklenmedi · <a href="' + esc(p.homepage) + '" target="_blank" rel="nofollow noopener">siteye git ↗</a>'}</td></tr>`).join('')}
+${provRows.map(({ p, list }) => `<tr><td><a href="/uretici/${p.id}/">${esc(p.name)}</a></td><td class="num">${list.length || '–'}</td><td class="num">${list.length ? fmt(list[0].baseMinor) : '–'}</td><td class="sm">${list.length ? 'Fiyatlar karşılaştırmada' : esc(p.connection?.blockedReason && !/henüz tamamlanmadı/.test(p.connection.blockedReason) ? p.connection.blockedReason : 'Fiyatlar henüz eklenmedi') + ' · <a href="' + esc(p.homepage) + '" target="_blank" rel="nofollow noopener">siteye git ↗</a>'}</td></tr>`).join('')}
 </tbody></table></div>`,
 }));
 
@@ -277,7 +277,7 @@ for (const { p, list } of provRows) {
     body: `<h1>${esc(p.name)}</h1><p><a class="go" href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗</a></p>
 ${list.length ? `<p class="muted">${list.length} ürün · ${types.length} ürün tipi · en düşük ${fmt(list[0].baseMinor)}</p>
 <div class="chips">${types.map(([t, l]) => `<a class="chip" href="/kategori/${t}/"><b>${esc(typeLabel(t))}</b><span>${l.length} ürün · ${fmt(l[0].baseMinor)}'dan</span></a>`).join('')}</div>
-<h2>En uygun 40 ürün</h2>${rowsTable(list.slice(0, 40), { showType: true })}` : `<p class="muted">Bu üreticinin fiyatları henüz karşılaştırmaya eklenmedi (çoğunlukla üye girişi gerektiriyor). Ürünler ve fiyatlar için üreticinin sitesini ziyaret edin.</p>`}`,
+<h2>En uygun 40 ürün</h2>${rowsTable(list.slice(0, 40), { showType: true })}` : `<p class="muted">Bu üreticinin fiyatları karşılaştırmada yok${p.connection?.blockedReason && !/henüz tamamlanmadı/.test(p.connection.blockedReason) ? ': ' + esc(p.connection.blockedReason.charAt(0).toLocaleLowerCase('tr') + p.connection.blockedReason.slice(1)) : ''}. Ürünler ve fiyatlar için üreticinin sitesini ziyaret edin.</p>`}`,
   }));
 }
 

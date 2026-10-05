@@ -46,7 +46,9 @@ jobs:
           git diff --cached --quiet || (git commit -m "data: otomatik fiyat yenileme" && git push)
       - name: Siteyi üret
         run: node scripts/build-site.cjs
+      # Netlify ücretsiz planı: her yayın 15 kredi (ayda 300). Barındırma değişene kadar yayın kapalı.
       - name: Netlify'a yayınla
+        if: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

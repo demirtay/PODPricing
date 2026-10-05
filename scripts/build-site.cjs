@@ -389,7 +389,8 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p></div></footer>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
 

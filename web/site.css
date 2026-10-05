@@ -82,6 +82,16 @@ button.more{display:block;margin:18px auto 0;background:var(--panel);color:var(-
 .ladder li>div{min-width:0}.ladder .price{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:2px 6px;text-align:right;max-width:230px}
 .ladder .price s{color:var(--muted);font-size:13px}
 .ladder .price b{color:var(--price);font-size:17px}.ladder .price small{font-size:12px;color:var(--muted)}.ladder .price small:last-child{flex-basis:100%}
+/* X vs Y sayfaları */
+.verdict{background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0;font-size:17px}.verdict p{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
+.vs-sides{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.vs-side{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:5px;box-shadow:var(--shadow)}.vs-side b{font-size:19px}
+td.win,td.win a{color:var(--price);font-weight:700}td.loss{color:#c0392b}
+.vs-table td a{color:inherit}
+/* kâr hesaplayıcı */
+.calc{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0 18px;box-shadow:var(--shadow)}
+.calc label{display:flex;flex-direction:column;gap:5px;font-size:13.5px;color:var(--muted);font-weight:600}.calc .wide{grid-column:1/-1}.calc label[hidden]{display:none}
+.calc input,.calc select{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:15px}
 .blank-h{font-size:17px;margin:26px 0 4px}
 .more-offers{margin-top:14px}.more-offers summary{cursor:pointer;color:var(--accent);font-weight:600;margin-bottom:10px}
 /* karşılaştırma (grup) sayfası başlığı */

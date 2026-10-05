@@ -80,6 +80,32 @@ const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
 const groupsByType = groupBy(groups, g => g.type);
 
+// Üretici ikilisi karşılaştırmaları ("Printful vs Printify"): ortak ürünlerde her üreticinin en ucuz baskılı teklifi
+const bestByGroup = new Map(groups.map(g => {
+  const m = new Map();
+  for (const p of g.list) if (!isBlank(p) && (!m.has(p.providerId) || m.get(p.providerId).baseMinor > p.baseMinor)) m.set(p.providerId, p);
+  return [g.key, m];
+}));
+const vsPairs = (() => {
+  const pairs = new Map();
+  for (const g of groups) {
+    const m = bestByGroup.get(g.key), ids = [...m.keys()].sort((x, y) => provName(x).localeCompare(provName(y), 'en', { sensitivity: 'base' }));
+    for (let i = 0; i < ids.length; i++) for (let j = i + 1; j < ids.length; j++) {
+      const k = ids[i] + '|' + ids[j];
+      if (!pairs.has(k)) pairs.set(k, []);
+      pairs.get(k).push({ g, a: m.get(ids[i]), b: m.get(ids[j]) });
+    }
+  }
+  return [...pairs].filter(([, rows]) => rows.length >= 5).map(([k, rows]) => {
+    const [a, b] = k.split('|');
+    rows.sort((x, y) => y.g.providers.size - x.g.providers.size || x.a.baseMinor - y.a.baseMinor);
+    const sumA = rows.reduce((s, r) => s + r.a.baseMinor, 0), sumB = rows.reduce((s, r) => s + r.b.baseMinor, 0);
+    return { a, b, slug: `${a}-vs-${b}`, rows, aWins: rows.filter(r => r.a.baseMinor < r.b.baseMinor).length, bWins: rows.filter(r => r.b.baseMinor < r.a.baseMinor).length, sumA, sumB };
+  }).sort((x, y) => y.rows.length - x.rows.length);
+})();
+const vsOf = new Map();
+for (const v of vsPairs) for (const id of [v.a, v.b]) { if (!vsOf.has(id)) vsOf.set(id, []); vsOf.get(id).push(v); }
+
 // Bağlanamayan üreticilerin gerekçeleri (katalogda Türkçe tutulur)
 const REASON_EN = {
   'Site otomatik erişimi engelliyor (bot koruması); güncel fiyatlar üreticinin sitesinde': 'The site blocks automated access; see current prices on the manufacturer site',
@@ -113,7 +139,8 @@ const LOCALES = {
   en: {
     lang: 'en', intl: 'en-US',
     path: { home: '', categories: 'categories/', cat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
-      makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/' },
+      makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/',
+      vsIndex: 'vs/', vs: s => `vs/${s}/`, calc: 'profit-calculator/' },
     type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0],
     pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN, basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
     notAdded: 'Prices not added yet', quick: QUICK,
@@ -123,6 +150,27 @@ const LOCALES = {
       heroH: 'Find the cheapest print-on-demand supplier',
       heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first.`,
       topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
+      vs: {
+        nav: 'X vs Y', indexTitle: 'Print-on-demand manufacturer comparisons', indexDesc: n => `${n} head-to-head price comparisons between print-on-demand manufacturers, based on products both of them sell.`,
+        indexIntro: 'Each comparison only uses products that both manufacturers sell (same blank model or same product type and size), with the cheapest print-included price of each.',
+        title: (a, b) => `${a} vs ${b}: print-on-demand price comparison`, desc: (a, b, n, w) => `${a} vs ${b} on ${n} identical products: ${w}. Updated twice a day from public catalogs.`,
+        h1: (a, b) => `${a} vs ${b}`, sub: 'Price comparison on products both manufacturers sell',
+        verdictA: (a, b, pct) => `${a} is cheaper overall, about ${pct}% less than ${b} on the same products`,
+        verdictTie: (a, b) => `${a} and ${b} cost about the same overall`,
+        wins: (x, n, total) => `${x} is cheaper on ${n} of ${total} products`,
+        totals: (n, a, va, b, vb) => `Buying one of each of the ${n} shared products costs ${va} at ${a} and ${vb} at ${b}.`,
+        th: ['Product', 'Difference'], same: 'same', cheaper: 'cheaper', products: 'products', lowest: 'Lowest price', basis: 'Price type',
+        others: 'More comparisons', makerH: n => `Compare ${n} with other manufacturers`, shared: n => `${n} shared products`,
+        note: 'Prices are the cheapest print-included offer of each manufacturer for that product, before shipping and tax. Print area, quality and shipping can differ — check the store before ordering.',
+      },
+      calc: {
+        nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
+        intro: 'Pick a product and your selling price. We subtract the marketplace fees and each manufacturer\'s price, and rank manufacturers by your profit.',
+        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', shipOut: 'Shipping you pay the manufacturer ($)', platform: 'Where you sell',
+        custom: 'Custom fee', pct: 'Fee %', fixed: 'Fixed fee ($)',
+        th: ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin'], pick: 'Choose a product to see results.', loading: 'Loading…',
+        fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Taxes and currency conversion are not included.',
+      },
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
@@ -176,7 +224,8 @@ const LOCALES = {
   tr: {
     lang: 'tr', intl: 'tr-TR',
     path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
-      makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/' },
+      makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/',
+      vsIndex: 'tr/vs/', vs: s => `tr/vs/${s}/`, calc: 'tr/kar-hesaplayici/' },
     type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer',
     pbLabel: PB.LABEL, pbNote: PB.NOTE, basis: s => s, sizes: s => s, production: s => s, method: m => m,
     notAdded: 'Fiyatlar henüz eklenmedi', quick: ['tişört', 'hoodie', 'kupa', 'termos', 'poster', 'kanvas', 'bez çanta', 'telefon kılıfı', 'şapka', 'battaniye'],
@@ -186,6 +235,27 @@ const LOCALES = {
       heroH: 'En ucuz baskı üreticisini bul',
       heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte.`,
       topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
+      vs: {
+        nav: 'X vs Y', indexTitle: 'POD üreticisi karşılaştırmaları', indexDesc: n => `Print-on-demand üreticileri arasında ${n} ikili fiyat karşılaştırması; iki üreticinin de sattığı ürünlere göre.`,
+        indexIntro: 'Her karşılaştırma yalnızca iki üreticinin de sattığı ürünleri (aynı boş ürün modeli ya da aynı ürün tipi ve ölçü) ve her birinin en ucuz baskı dahil fiyatını kullanır.',
+        title: (a, b) => `${a} mı ${b} mı? POD fiyat karşılaştırması`, desc: (a, b, n, w) => `${a} ile ${b}, ${n} aynı üründe: ${w}. Fiyatlar günde iki kez yenilenir.`,
+        h1: (a, b) => `${a} vs ${b}`, sub: 'İki üreticinin de sattığı ürünlerde fiyat karşılaştırması',
+        verdictA: (a, b, pct) => `Genel olarak ${a} daha ucuz; aynı ürünlerde ${b}'den yaklaşık %${pct} daha az`,
+        verdictTie: (a, b) => `${a} ve ${b} genel olarak aşağı yukarı aynı fiyatta`,
+        wins: (x, n, total) => `${x}, ${total} üründen ${n} tanesinde daha ucuz`,
+        totals: (n, a, va, b, vb) => `Ortak ${n} ürünün her birinden birer tane almak ${a}'da ${va}, ${b}'de ${vb} tutuyor.`,
+        th: ['Ürün', 'Fark'], same: 'aynı', cheaper: 'daha ucuz', products: 'ürün', lowest: 'En düşük fiyat', basis: 'Fiyat türü',
+        others: 'Diğer karşılaştırmalar', makerH: n => `${n} ile diğer üreticileri karşılaştır`, shared: n => `${n} ortak ürün`,
+        note: 'Fiyatlar her üreticinin o üründeki en ucuz baskı dahil teklifidir; kargo ve vergi hariçtir. Baskı alanı, kalite ve kargo farklı olabilir; sipariş öncesi mağazaya bakın.',
+      },
+      calc: {
+        nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
+        intro: 'Bir ürün ve satış fiyatı seç. Pazaryeri komisyonlarını ve her üreticinin fiyatını düşüp üreticileri kârına göre sıralıyoruz.',
+        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', shipOut: 'Üreticiye ödediğin kargo ($)', platform: 'Nerede satıyorsun',
+        custom: 'Özel komisyon', pct: 'Komisyon %', fixed: 'Sabit ücret ($)',
+        th: ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı'], pick: 'Sonuçları görmek için bir ürün seç.', loading: 'Yükleniyor…',
+        fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Vergi ve kur farkı dahil değildir.',
+      },
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
@@ -315,11 +385,11 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}">
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>
 <form class="search" action="${href(H.P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchPh)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
-<nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.compare)}">${t.compare}</a><a href="${href(H.P.makers)}">${t.makers}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
+<nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.compare)}">${t.compare}</a><a href="${href(H.P.makers)}">${t.makers}</a><a href="${href(H.P.calc)}">${t.calc.nav}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
 <main class="wrap">${bc}${body}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p></div></footer>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
 
@@ -331,6 +401,11 @@ const add = (rel, html) => { write(rel, html); sitemap.push(rel); };
 
 // istemci tarafı ortak veri: [id, başlık, üreticiId, fiyat, kaynakFiyat, görsel, (boş), tip, satışLinki, fiyatTürü]
 const singlesOf = list => list.filter(p => !groupOf.has(p.id));
+// kâr hesaplayıcı: ürün başına üretici teklifleri [üreticiId, ad, fiyat, fiyatTürü, ilkKargo|null, satışLinki] (baskılı olanlar önce)
+for (const g of groups) {
+  const best = [...groupBy(g.list, p => p.providerId)].map(([, l]) => l.find(p => !isBlank(p)) || l[0]);
+  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p)])));
+}
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 
 const typeOrder = [...byType.keys()].filter(k => k !== 'diger').sort((a, b) => (groupsByType.get(b)?.length || 0) - (groupsByType.get(a)?.length || 0) || byType.get(b).length - byType.get(a).length);
@@ -431,6 +506,7 @@ ${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="mute
   add(P.makers + 'index.html', page(L, H, {
     rel: P.makers + 'index.html', alt: altAll(p => p.makers), title: `${t.makersTitle} · ${BRAND}`, description: t.makersDesc(catalog.providers.length), crumbs: [[t.makers]],
     body: `<h1>${t.makers}</h1><p class="muted">${esc(t.makersIntro(connected.length, catalog.providers.length - connected.length))}</p>
+<p><a class="go" href="${href(P.vsIndex)}">${esc(t.vs.indexTitle)} →</a></p>
 <div class="tbl"><table><thead><tr><th>${t.mk[0]}</th><th class="num">${t.mk[1]}</th><th class="num">${t.mk[2]}</th><th>${t.mk[3]}</th></tr></thead><tbody>
 ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${esc(p.name)}</b></a></td><td class="num">${list.length || '–'}</td><td class="num">${list.length ? fmt(list[0].baseMinor) : '–'}</td><td class="sm">${list.length ? t.compared : esc(reasonOf(p, L)) + ` · <a class="go" href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${t.visit}</a>`}</td></tr>`).join('')}
 </tbody></table></div>`,
@@ -443,9 +519,57 @@ ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${e
       body: `<h1>${esc(p.name)}</h1><p><a class="go" href="${esc(p.homepage)}" target="_blank" rel="nofollow noopener">${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗</a></p>
 ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(list[0].baseMinor))}</p>
 <div class="chips">${types.map(([k, l]) => `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.type(k))}</b><span>${t.products(l.length)} · ${t.from(fmt(l[0].baseMinor))}</span></a>`).join('')}</div>
+${vsOf.has(p.id) ? `<h2>${esc(t.vs.makerH(p.name))}</h2><div class="chips">${vsOf.get(p.id).slice(0, 20).map(v => `<a class="chip" href="${href(P.vs(v.slug))}"><b>${esc(provName(v.a))} vs ${esc(provName(v.b))}</b><span>${esc(t.vs.shared(v.rows.length))}</span></a>`).join('')}</div>` : ''}
 <h2>${t.makerTop}</h2>${H.cards(list.slice(0, 40))}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}`,
     }));
   }
+
+  // üretici ikilisi karşılaştırmaları
+  const V = t.vs;
+  const pctOf = v => Math.round(Math.abs(v.sumA - v.sumB) / Math.max(v.sumA, v.sumB) * 100);
+  const verdict = v => pctOf(v) < 3 ? V.verdictTie(provName(v.a), provName(v.b)) : v.sumA < v.sumB ? V.verdictA(provName(v.a), provName(v.b), pctOf(v)) : V.verdictA(provName(v.b), provName(v.a), pctOf(v));
+  const vsLink = v => `<a class="chip" href="${href(P.vs(v.slug))}"><b>${esc(provName(v.a))} vs ${esc(provName(v.b))}</b><span>${esc(V.shared(v.rows.length))}</span></a>`;
+  add(P.vsIndex + 'index.html', page(L, H, {
+    rel: P.vsIndex + 'index.html', alt: altAll(p => p.vsIndex), title: `${V.indexTitle} · ${BRAND}`, description: V.indexDesc(vsPairs.length), crumbs: [[V.indexTitle]],
+    body: `<h1>${esc(V.indexTitle)}</h1><p class="muted">${esc(V.indexIntro)}</p><div class="chips">${vsPairs.map(vsLink).join('')}</div>`,
+  }));
+  for (const v of vsPairs) {
+    const A = provName(v.a), B = provName(v.b), cnt = v.rows.length;
+    const side = (id, sum) => { const l = byProvider.get(id) || []; return `<div class="vs-side"><a href="${href(P.maker(id))}"><b>${esc(provName(id))}</b></a><span>${esc(t.products(n(l.length)))} · ${esc(V.lowest)} ${esc(fmt(l[0].baseMinor))}</span><span>${H.pbBadge(PB.printBasis({ providerId: id, title: '' }))}</span><span class="sm muted">${esc(V.wins(provName(id), id === v.a ? v.aWins : v.bWins, cnt))}</span><a class="go" href="${esc(providers.get(id).homepage)}" target="_blank" rel="nofollow noopener">${esc(new URL(providers.get(id).homepage).hostname.replace(/^www\./, ''))} ↗</a></div>`; };
+    const rowHtml = r => {
+      const d = r.a.baseMinor - r.b.baseMinor, win = d < 0 ? 'a' : d > 0 ? 'b' : '';
+      return `<tr><td><a href="${href(P.group(r.g.slug))}">${esc(H.gTitle(r.g))}</a></td><td class="num${win === 'a' ? ' win' : ''}"><a href="${esc(outbound(r.a))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.a.baseMinor))}</a></td><td class="num${win === 'b' ? ' win' : ''}"><a href="${esc(outbound(r.b))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.b.baseMinor))}</a></td><td class="num sm">${d === 0 ? esc(V.same) : `${esc(provName(win === 'a' ? v.a : v.b))} −${esc(fmt(Math.abs(d)))}`}</td></tr>`;
+    };
+    const others = [...new Set([...(vsOf.get(v.a) || []), ...(vsOf.get(v.b) || [])])].filter(x => x !== v).slice(0, 16);
+    const winnerLine = verdict(v);
+    add(P.vs(v.slug) + 'index.html', page(L, H, {
+      rel: P.vs(v.slug) + 'index.html', alt: altAll(p => p.vs(v.slug)), title: `${V.title(A, B)} · ${BRAND}`, description: V.desc(A, B, cnt, winnerLine),
+      crumbs: [[V.indexTitle, href(P.vsIndex)], [`${A} vs ${B}`]],
+      body: `<h1>${esc(V.h1(A, B))}</h1><p class="muted">${esc(V.sub)} · ${esc(V.shared(cnt))}</p>
+<div class="verdict"><b>${esc(winnerLine)}.</b><p>${esc(V.totals(cnt, A, fmt(v.sumA), B, fmt(v.sumB)))}</p></div>
+<div class="vs-sides">${side(v.a)}${side(v.b)}</div>${H.ad('liste')}
+<div class="tbl"><table class="vs-table"><thead><tr><th>${esc(V.th[0])}</th><th class="num">${esc(A)}</th><th class="num">${esc(B)}</th><th class="num">${esc(V.th[1])}</th></tr></thead><tbody>${v.rows.map(rowHtml).join('')}</tbody></table></div>
+<p class="muted sm">${esc(V.note)}</p>${others.length ? `<h2>${esc(V.others)}</h2><div class="chips">${others.map(vsLink).join('')}</div>` : ''}`,
+      jsonld: { '@context': 'https://schema.org', '@type': 'WebPage', name: V.title(A, B), about: [A, B].map(name => ({ '@type': 'Organization', name })) },
+    }));
+  }
+
+  // kâr hesaplayıcı (istemci tarafı; veri: data/groups-<dil>.json + data/g/<slug>.json)
+  const C = t.calc;
+  add(P.calc + 'index.html', page(L, H, {
+    rel: P.calc + 'index.html', alt: altAll(p => p.calc), title: `${C.title} · ${BRAND}`, description: C.desc, crumbs: [[C.nav]],
+    body: `<h1>${esc(C.title)}</h1><p class="muted">${esc(C.intro)}</p>
+<form id="calc" class="calc" onsubmit="return false">
+<label class="wide">${esc(C.product)}<select name="g"><option value="">—</option></select></label>
+<label>${esc(C.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>
+<label>${esc(C.shipIn)}<input name="shipIn" type="number" min="0" step="0.01" value="0"></label>
+<label>${esc(C.shipOut)}<input name="shipOut" type="number" min="0" step="0.01" value="0"></label>
+<label>${esc(C.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option><option value="custom">${esc(C.custom)}</option></select></label>
+<label class="custom" hidden>${esc(C.pct)}<input name="pct" type="number" min="0" step="0.1" value="10"></label>
+<label class="custom" hidden>${esc(C.fixed)}<input name="fixed" type="number" min="0" step="0.01" value="0.30"></label>
+</form><div id="calc-out"><p class="muted">${esc(C.pick)}</p></div>
+<p class="muted sm">${esc(C.fees)}</p>`,
+  }));
 
   // arama, hakkında, gizlilik, iletişim
   add(P.search + 'index.html', page(L, H, {

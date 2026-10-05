@@ -120,6 +120,55 @@
     Promise.all([fetch(el.dataset.items).then(function (r) { return r.json(); }), meta()]).then(function (res) { itemView(el, res[0], res[1]); }).catch(function () { });
   });
 
+  // Kâr hesaplayıcı: seçilen ürünün üretici teklifleri, satış fiyatı ve pazaryeri komisyonu ile kâr
+  var calc = document.getElementById('calc');
+  if (calc) {
+    var out = document.getElementById('calc-out'), sel = calc.elements.g, offers = null;
+    var FEES = {
+      etsy: function (rev) { return 0.20 + rev * 0.065 + rev * 0.03 + 0.25; },
+      shopify: function (rev) { return rev * 0.029 + 0.30; },
+      amazon: function (rev) { return Math.max(1, rev * 0.15); },
+      custom: function (rev) { return rev * (+calc.elements.pct.value || 0) / 100 + (+calc.elements.fixed.value || 0); }
+    };
+    var TH = LANG === 'tr' ? ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı', 'Mağazaya git ↗'] : ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin', 'Go to store ↗'];
+    var usd = function (v) { return nf.format(v); };
+    function draw() {
+      if (!offers) return;
+      var price = +calc.elements.price.value || 0, shipIn = +calc.elements.shipIn.value || 0, shipOut = +calc.elements.shipOut.value || 0;
+      var rev = price + shipIn, fee = FEES[calc.elements.platform.value](rev);
+      var rows = offers.map(function (o) { var cost = o[2] / 100 + shipOut; var profit = rev - fee - cost; return { o: o, cost: cost, profit: profit, margin: rev ? profit / rev * 100 : 0 }; })
+        // boş ürün / toplu alım fiyatları baskılı tekliflerle yarışmasın: en sona
+        .sort(function (a, b) { var ba = /^(bos|toplu)$/.test(a.o[3]), bb = /^(bos|toplu)$/.test(b.o[3]); return ba - bb || b.profit - a.profit; });
+      out.innerHTML = '<div class="tbl"><table><thead><tr><th>' + TH[0] + '</th><th class="num">' + TH[1] + '</th><th class="num">' + TH[2] + '</th><th class="num">' + TH[3] + '</th><th class="num">' + TH[4] + '</th><th></th></tr></thead><tbody>' +
+        rows.map(function (r, i) {
+          return '<tr><td>' + (i + 1) + '. <b>' + esc(r.o[1]) + '</b> ' + badgeTxt(r.o[3]) + '</td><td class="num">' + usd(r.cost) + '</td><td class="num">' + usd(fee) + '</td><td class="num ' + (r.profit >= 0 ? 'win' : 'loss') + '"><b>' + usd(r.profit) + '</b></td><td class="num">' + r.margin.toFixed(0) + '%</td><td><a class="go" href="' + esc(r.o[5]) + '" target="_blank" rel="nofollow sponsored noopener">' + TH[5] + '</a></td></tr>';
+        }).join('') + '</tbody></table></div>';
+    }
+    var metaCache = null;
+    function badgeTxt(pb) { return metaCache && pb ? badge(pb, metaCache) : ''; }
+    function load() {
+      var slug = sel.value; offers = null;
+      try { history.replaceState(null, '', slug ? '?p=' + encodeURIComponent(slug) : location.pathname); } catch (e) { }
+      if (!slug) { out.innerHTML = ''; return; }
+      fetch('/data/g/' + slug + '.json').then(function (r) { return r.json(); }).then(function (d) { offers = d; draw(); });
+    }
+    Promise.all([fetch('/data/groups-' + LANG + '.json').then(function (r) { return r.json(); }), meta()]).then(function (res) {
+      metaCache = res[1];
+      var byType = {};
+      res[0].forEach(function (g) { (byType[g[5]] = byType[g[5]] || []).push(g); });
+      sel.innerHTML = '<option value="">—</option>' + Object.keys(byType).sort(function (a, b) { return byType[b].length - byType[a].length; }).map(function (t) {
+        return '<optgroup label="' + esc(res[1].types[t] || t) + '">' + byType[t].map(function (g) { return '<option value="' + esc(g[0]) + '">' + esc(g[1]) + ' (' + g[4] + ')</option>'; }).join('') + '</optgroup>';
+      }).join('');
+      var pre = new URLSearchParams(location.search).get('p');
+      if (pre) { sel.value = pre; load(); }
+    });
+    sel.addEventListener('change', load);
+    calc.addEventListener('input', function (e) {
+      if (e.target.name === 'platform') [].forEach.call(calc.querySelectorAll('.custom'), function (x) { x.hidden = e.target.value !== 'custom'; });
+      if (e.target !== sel) draw();
+    });
+  }
+
   // Arama sayfası: önce karşılaştırmalı ürünler, sonra tekil ürünler
   var app = document.getElementById('search-app');
   if (app) {

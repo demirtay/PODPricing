@@ -84,7 +84,7 @@ Hi IH! Comparing base costs across print-on-demand suppliers meant opening 10 di
 What it does:
 - Pulls public catalogs from 65 print-on-demand suppliers twice a day (Printful, Printify, Gearment, BurgerPrints, Printway, Prodigi…)
 - Matches identical products (same blank like Gildan 5000, or same type + size like an 11oz mug) and sorts every supplier cheapest first
-- 250 head-to-head pages like Printful vs Printify, and a profit calculator with Etsy/Shopify/Amazon fees
+- 200+ head-to-head pages like Printful vs Printify, and a profit calculator with Etsy/Shopify/Amazon fees
 
 Stack: a Node static site generator + scheduled GitHub Actions, hosted on GitHub Pages, so it costs almost nothing to run. Revenue plan is ads + supplier affiliate programs later.
 
@@ -130,7 +130,7 @@ It covers 625 products sold by multiple suppliers (tees, hoodies, mugs, tumblers
 ## Metin F: Product Hunt
 **Name:** POD Pricing
 **Tagline:** Find the cheapest print-on-demand supplier for every product
-**Description:** Compare 30,000 products from 65 POD suppliers (Printful, Printify, Gearment, BurgerPrints…). Identical products are matched and ranked cheapest first, refreshed twice a day. Includes 250 head-to-head supplier comparisons and a profit calculator with Etsy, Shopify and Amazon fees. Free, no signup.
+**Description:** Compare 30,000 products from 65 POD suppliers (Printful, Printify, Gearment, BurgerPrints…). Identical products are matched and ranked cheapest first, refreshed twice a day. Includes 200+ head-to-head supplier comparisons and a profit calculator with Etsy, Shopify and Amazon fees. Free, no signup.
 **First comment (maker comment):**
 Hi Product Hunt! I built POD Pricing because comparing base costs across print-on-demand suppliers meant opening a dozen dashboards. Now every identical product (same blank model or same size) is listed cheapest first. The surprise: the same Gildan 5000 tee costs $4.35 at one supplier and $14.76 at another, print included. I'd love to know which suppliers or products you'd like added.
 **Görseller:** Siteden 3 ekran görüntüsü al: ana sayfa, https://podpricing.com/compare/gildan-5000/ ve https://podpricing.com/profit-calculator/?p=gildan-5000

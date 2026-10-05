@@ -1,16 +1,21 @@
 {
-  "siteName": "POD Pricing",
-  "tagline": "Print-on-demand price comparison",
-  "siteUrl": "https://podpricing.com",
-  "contactEmail": "hello@podpricing.com",
-  "adsenseClient": "ca-pub-1988328386959679",
-  "adSlots": {
-    "ust": "",
-    "liste": "",
-    "urun": "",
-    "alt": ""
-  },
-  "adsPreview": false,
-  "sponsors": [],
-  "affiliate": {}
+    "siteName":  "POD Pricing",
+    "tagline":  "Print-on-demand price comparison",
+    "siteUrl":  "https://podpricing.com",
+    "contactEmail":  "hello@podpricing.com",
+    "adsenseClient":  "ca-pub-1988328386959679",
+    "adSlots":  {
+                    "ust":  "",
+                    "liste":  "",
+                    "urun":  "",
+                    "alt":  ""
+                },
+    "adsPreview":  false,
+    "sponsors":  [
+
+                 ],
+    "affiliate":  {
+
+                  },
+    "cloudflareAnalyticsToken":  "8874dc4e26b5469db2882a45f0bd381b"
 }

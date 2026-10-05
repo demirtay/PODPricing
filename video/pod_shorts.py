@@ -160,7 +160,7 @@ def product_video(slug: str):
         print(f"{slug}: yeterli baskı dahil teklif yok ({len(o)})")
         return None
     name, top = g["name"], o[:5]
-    short = name.replace(" T-Shirts", " t-shirt").replace(" Hoodies", " hoodie").replace(" Sweatshirts", " sweatshirt").replace(" Tops & Blouses", " tee")
+    short = name.replace(" T-Shirts", " t-shirt").replace(" Hoodies", " hoodie").replace(" Sweatshirts", " sweatshirt").replace(" Tops & Blouses", " tee").replace(" Long Sleeve T-Shirts", " long sleeve tee").replace(" Tank Tops", " tank top").replace(" Zip Hoodies", " zip hoodie").replace(" Kids Clothing", " kids tee")
     lo, hi = o[0], o[-1]
     pf = next((x for x in o if x[0] == "printful"), None)
     py = next((x for x in o if x[0] == "printify"), None)
@@ -195,30 +195,38 @@ def product_video(slug: str):
     return slug, scenes, lines, meta
 
 
-def vs_video():
-    # sayıları sitenin karşılaştırma sayfasından okur
-    page_html = (ROOT / "site" / "vs" / "printful-vs-printify" / "index.html").read_text(encoding="utf-8")
+def vs_video(slug="printful-vs-printify"):
+    # sayıları sitenin karşılaştırma sayfasından okur (her üretici ikilisi için)
     import re
+    page_html = (ROOT / "site" / "vs" / slug / "index.html").read_text(encoding="utf-8")
+    A, B = [html.unescape(x) for x in re.search(r"<h1>(.+?) vs (.+?)</h1>", page_html).groups()]
     n = int(re.search(r"(\d+) shared products", page_html).group(1))
     wins = [int(x) for x in re.findall(r"is cheaper on (\d+) of", page_html)][:2]
     pct = re.search(r"about (\d+)% less than", page_html)
-    who = re.search(r"<b>(\w+) is cheaper overall", page_html)
+    who = re.search(r"<b>([^<]+?) is cheaper overall", page_html)
+    e = html.escape
     scenes, lines = [], []
-    scenes.append(page(f"<h1>Printful or Printify?</h1><div class='sub'>I compared all {n} products they both sell</div>"))
-    lines.append(f"Printful or Printify, which one is actually cheaper? I compared all {n} products they both sell.")
-    scenes.append(page(f"<div class='vs'><div><b>Printful</b><span>{wins[0]}</span></div><div><b>Printify</b><span>{wins[1]}</span></div></div>"
+    scenes.append(page(f"<h1>{e(A)} or {e(B)}?</h1><div class='sub'>I compared all {n} products they both sell</div>"))
+    lines.append(f"{A} or {B}, which one is actually cheaper? I compared all {n} products they both sell.")
+    scenes.append(page(f"<div class='vs'><div><b>{e(A)}</b><span>{wins[0]}</span></div><div><b>{e(B)}</b><span>{wins[1]}</span></div></div>"
                        f"<div class='sub' style='text-align:center'>products where each one is cheaper</div>"))
-    lines.append(f"Printful is cheaper on {wins[0]} products. Printify wins on {wins[1]}.")
+    lines.append(f"{A} is cheaper on {wins[0]} products. {B} wins on {wins[1]}.")
     if who and pct:
-        scenes.append(page(f"<h2>Overall winner</h2><div class='big'>{who.group(1)}</div><div class='sub'>about {pct.group(1)}% cheaper on the same products</div>"))
-        lines.append(f"Overall, {who.group(1)} comes out about {pct.group(1)} percent cheaper on the same products. But it depends a lot on the product.")
+        w = html.unescape(who.group(1))
+        scenes.append(page(f"<h2>Overall winner</h2><div class='big' style='font-size:{110 if len(w) > 9 else 150}px'>{e(w)}</div>"
+                           f"<div class='sub'>about {pct.group(1)}% cheaper on the same products</div>"))
+        lines.append(f"Overall, {w} comes out about {pct.group(1)} percent cheaper on the same products. But it depends a lot on the product.")
+    else:
+        scenes.append(page(f"<h2>Overall</h2><div class='sub'>{e(A)} and {e(B)} cost about the same. It depends on the product.</div>"))
+        lines.append("Overall they cost about the same, so it really depends on the product.")
     scenes.append(page("<h2>See every product side by side</h2><div class='cta'>podpricing.com</div><div class='sub' style='text-align:center'>Free · updated twice a day</div>"))
     lines.append("See every product side by side, for free, at pod pricing dot com.")
-    meta = {"title": "Printful vs Printify: which is cheaper? I compared every product #shorts",
-            "description": f"I compared all {n} products that both Printful and Printify sell (base cost, print included, before shipping). "
-                           "Full table: https://podpricing.com/vs/printful-vs-printify/\n#printful #printify #printondemand #etsy",
-            "tags": ["printful vs printify", "printful", "printify", "print on demand", "etsy seller"]}
-    return "printful-vs-printify", scenes, lines, meta
+    tag = lambda x: "#" + re.sub(r"[^A-Za-z0-9]", "", x).lower()
+    meta = {"title": f"{A} vs {B}: which is cheaper? I compared every product #shorts",
+            "description": f"I compared all {n} products that both {A} and {B} sell (base cost, print included, before shipping). "
+                           f"Full table: https://podpricing.com/vs/{slug}/\n{tag(A)} {tag(B)} #printondemand #etsy",
+            "tags": [f"{A.lower()} vs {B.lower()}", A.lower(), B.lower(), "print on demand", "etsy seller"]}
+    return slug, scenes, lines, meta
 
 
 def build(spec):
@@ -248,4 +256,4 @@ if __name__ == "__main__":
     if cmd == "build":
         names = VIDEOS if args == ["all"] else args
         for a in names:
-            build(vs_video() if a == "vs" else product_video(a))
+            build(vs_video() if a == "vs" else vs_video(a[3:]) if a.startswith("vs:") else product_video(a))

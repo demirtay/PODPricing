@@ -10,3 +10,5 @@ site.__old/
 video/work/
 video/out/
 video/youtube_token.json
+video/uploaded.json
+video/yukleme_log.txt

@@ -1,4 +1,4 @@
-const excludedTitle=/price\s*difference|compensation\s*link|item\s*personalization|deposit\s*(?:only|payment)|gift\s*card|sample\s*fee/i;
+const excludedTitle=/price\s*difference|compensation\s*link|item\s*personalization|deposit\s*(?:only|payment)|gift\s*card|sample\s*fee|shipping\s*fee|payment\s*link|^\s*product\s*accessories\s*$|swatch\s*chart|color\s*swatch|polymailer|sublimation\s*tape|^\s*shipping\s*(?:cost|difference)/i;
 function dimensions(text){const m=String(text||'').replace(/\\/g,'').match(/(\d+(?:\.\d+)?)\s*["″]?\s*[x×*]\s*(\d+(?:\.\d+)?)(?:\s*["″]?\s*[x×*]\s*(\d+(?:\.\d+)?))?/i);if(!m)return null;const parts=m.slice(1).filter(Boolean).map(Number);return [...parts.slice(0,2).sort((a,b)=>a-b),...parts.slice(2)].join('x');}
 // Giyim, ayakkabı, mutfak, ev ve duvar ürünlerinde tam 1,00 tutarı mağazanın yer tutucu fiyatıdır
 // (gerçek fiyat tasarım ekranında hesaplanır). Etiket, bağcık, ambalaj gibi küçük ürünlerde 1,00 gerçek olabilir.

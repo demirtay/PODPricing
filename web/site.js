@@ -169,6 +169,34 @@
     });
   }
 
+  // Fiyat kutusu oluşturucu: seçilen ürün için iframe + kaynak bağlantısı kodu
+  var wf = document.getElementById('widget');
+  if (wf) {
+    var wsel = wf.elements.g, wout = document.getElementById('widget-out'), code = document.getElementById('widget-code'), prev = document.getElementById('widget-preview');
+    var gmap = {};
+    function wdraw() {
+      var g = gmap[wsel.value];
+      try { history.replaceState(null, '', g ? '?p=' + encodeURIComponent(g[0]) : location.pathname); } catch (e) { }
+      if (!g) { wout.hidden = true; return; }
+      var h = 92 + Math.min(8, g[4]) * 35, base = 'https://podpricing.com';
+      var html = '<iframe src="' + base + '/embed/' + g[0] + '/" width="100%" height="' + h + '" style="border:0;max-width:520px" loading="lazy" title="' + esc(g[1]) + ' prices"></iframe>\n' +
+        '<p style="font-size:12px;margin:4px 0 0"><a href="' + base + '/compare/' + g[0] + '/">' + esc(g[1]) + ' price comparison</a> by POD Pricing</p>';
+      code.value = html; prev.innerHTML = html; wout.hidden = false;
+    }
+    fetch('/data/groups-en.json').then(function (r) { return r.json(); }).then(function (gs) {
+      gs.forEach(function (g) { gmap[g[0]] = g; });
+      wsel.innerHTML = '<option value="">—</option>' + gs.map(function (g) { return '<option value="' + esc(g[0]) + '">' + esc(g[1]) + ' (' + g[4] + ')</option>'; }).join('');
+      var pre = new URLSearchParams(location.search).get('p');
+      if (pre && gmap[pre]) { wsel.value = pre; wdraw(); }
+    });
+    wsel.addEventListener('change', wdraw);
+    document.getElementById('widget-copy').addEventListener('click', function (e) {
+      code.select();
+      var done = function () { e.target.textContent = LANG === 'tr' ? 'Kopyalandı!' : 'Copied!'; };
+      if (navigator.clipboard) navigator.clipboard.writeText(code.value).then(done, function () { document.execCommand('copy'); done(); }); else { document.execCommand('copy'); done(); }
+    });
+  }
+
   // Arama sayfası: önce karşılaştırmalı ürünler, sonra tekil ürünler
   var app = document.getElementById('search-app');
   if (app) {

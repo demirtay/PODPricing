@@ -168,7 +168,7 @@ const LOCALES = {
     path: { home: '', categories: 'categories/', cat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
       makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/',
       vsIndex: 'vs/', vs: s => `vs/${s}/`, calc: 'profit-calculator/',
-      guides: 'cheapest/', guide: t => `cheapest/${(EN.TYPES[t] || ['', t])[1]}/`, alts: 'alternatives/', alt: id => `alternatives/${id}/` },
+      guides: 'cheapest/', guide: t => `cheapest/${(EN.TYPES[t] || ['', t])[1]}/`, alts: 'alternatives/', alt: id => `alternatives/${id}/`, widget: 'price-widget/' },
     type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0],
     pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN, basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
     notAdded: 'Prices not added yet', quick: QUICK,
@@ -190,6 +190,12 @@ const LOCALES = {
         th: ['Product', 'Difference'], same: 'same', cheaper: 'cheaper', products: 'products', lowest: 'Lowest price', basis: 'Price type',
         others: 'More comparisons', makerH: n => `Compare ${n} with other manufacturers`, shared: n => `${n} shared products`,
         note: 'Prices are the cheapest print-included offer of each manufacturer for that product, before shipping and tax. Print area, quality and shipping can differ — check the store before ordering.',
+      },
+      widget: {
+        title: 'Free price widget for your blog', desc: 'Embed a live print-on-demand price table on your blog or website. Free, updated twice a day.', embedLink: 'Embed this price table on your site →',
+        intro: 'Writing about print-on-demand? Add a live price table for any product to your blog post. It updates automatically twice a day and is free to use.',
+        pick: 'Choose a product', code: 'Copy this code into your page', copy: 'Copy code', copied: 'Copied!', preview: 'Preview',
+        note: 'Keep the link under the table — it credits the data source. The table shows the cheapest offer of each supplier, print-included offers first.',
       },
       guide: {
         indexTitle: 'Cheapest print-on-demand suppliers by product', indexDesc: 'Which print-on-demand supplier is cheapest for t-shirts, hoodies, mugs, posters and more — updated twice a day from supplier catalogs.',
@@ -275,7 +281,7 @@ const LOCALES = {
     path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
       makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/',
       vsIndex: 'tr/vs/', vs: s => `tr/vs/${s}/`, calc: 'tr/kar-hesaplayici/',
-      guides: 'tr/en-ucuz/', guide: t => `tr/en-ucuz/${t}/`, alts: 'tr/alternatifler/', alt: id => `tr/alternatifler/${id}/` },
+      guides: 'tr/en-ucuz/', guide: t => `tr/en-ucuz/${t}/`, alts: 'tr/alternatifler/', alt: id => `tr/alternatifler/${id}/`, widget: 'tr/fiyat-kutusu/' },
     type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer',
     pbLabel: PB.LABEL, pbNote: PB.NOTE, basis: s => s, sizes: s => s, production: s => s, method: m => m,
     notAdded: 'Fiyatlar henüz eklenmedi', quick: ['tişört', 'hoodie', 'kupa', 'termos', 'poster', 'kanvas', 'bez çanta', 'telefon kılıfı', 'şapka', 'battaniye'],
@@ -297,6 +303,12 @@ const LOCALES = {
         th: ['Ürün', 'Fark'], same: 'aynı', cheaper: 'daha ucuz', products: 'ürün', lowest: 'En düşük fiyat', basis: 'Fiyat türü',
         others: 'Diğer karşılaştırmalar', makerH: n => `${n} ile diğer üreticileri karşılaştır`, shared: n => `${n} ortak ürün`,
         note: 'Fiyatlar her üreticinin o üründeki en ucuz baskı dahil teklifidir; kargo ve vergi hariçtir. Baskı alanı, kalite ve kargo farklı olabilir; sipariş öncesi mağazaya bakın.',
+      },
+      widget: {
+        title: 'Blogun için ücretsiz fiyat kutusu', desc: 'Blogunda ya da sitende canlı bir print-on-demand fiyat tablosu göster. Ücretsiz, günde iki kez güncellenir.', embedLink: 'Bu fiyat tablosunu kendi sitene ekle →',
+        intro: 'Print-on-demand hakkında mı yazıyorsun? Yazına herhangi bir ürünün canlı fiyat tablosunu ekle. Günde iki kez kendiliğinden güncellenir, ücretsizdir.',
+        pick: 'Ürün seç', code: 'Bu kodu sayfana yapıştır', copy: 'Kodu kopyala', copied: 'Kopyalandı!', preview: 'Önizleme',
+        note: 'Tablonun altındaki bağlantıyı silme; veri kaynağını belirtir. Tablo her üreticinin en ucuz teklifini gösterir, baskı dahil olanlar önce.',
       },
       guide: {
         indexTitle: 'Ürüne göre en ucuz POD üreticileri', indexDesc: 'Tişört, hoodie, kupa, poster ve daha fazlası için en ucuz print-on-demand üreticisi; günde iki kez güncellenir.',
@@ -460,7 +472,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
 <p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
@@ -568,11 +580,37 @@ ${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
 <p class="gfrom"><b>${esc(fmt(lo.baseMinor))}</b> <span>– ${esc(fmt(hi.baseMinor))}</span></p>
 <p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
-${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p>${H.offers(gp.list)}${H.ad('liste')}`,
+${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p>${H.offers(gp.list)}${H.ad('liste')}
+<p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>`,
       jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
         offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } },
     }));
   }
+
+  // Bloglar için gömülebilir fiyat kutusu: /embed/<slug>/ (yalnızca İngilizce, noindex) + kutu oluşturma sayfası
+  if (lg === 'en') {
+    const day = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(lastCheck || Date.now()));
+    for (const gp of groups) {
+      const best = [...groupBy(gp.list, p => p.providerId)].map(([, l]) => l.find(p => !isBlank(p)) || l[0]).sort((a, b) => isBlank(a) - isBlank(b) || a.baseMinor - b.baseMinor).slice(0, 8);
+      const title = H.gTitle(gp), full = SITE + href(P.group(gp.slug));
+      write(`embed/${gp.slug}/index.html`, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><link rel="canonical" href="${esc(full)}"><title>${esc(title)} prices · ${BRAND}</title>
+<style>body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1a1d23;background:#fff}.w{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}.h{padding:10px 12px;background:#f5f6f8;font-weight:700;display:flex;justify-content:space-between;gap:8px}.h span{font-weight:400;color:#6b7280;font-size:12px}
+ol{list-style:none;margin:0;padding:0}li{display:flex;align-items:center;gap:8px;padding:7px 12px;border-top:1px solid #eef0f3}li:first-child b{color:#0b8a5c}.r{width:18px;color:#6b7280;font-size:12px}.n{flex:1}.n a{color:inherit;text-decoration:none}.p{font-weight:700}.t{font-size:11px;color:#6b7280}
+.f{padding:8px 12px;border-top:1px solid #e5e7eb;font-size:12px;color:#6b7280;display:flex;justify-content:space-between;gap:8px}.f a{color:#0f9d6b;font-weight:600;text-decoration:none}</style></head><body><div class="w">
+<div class="h">${esc(title)} <span>${esc(t.makersN(gp.providers.size))}</span></div><ol>
+${best.map((p, i) => `<li><span class="r">${i + 1}</span><span class="n"><a href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${esc(provName(p.providerId))}</a>${isBlank(p) ? ' <span class="t">blank</span>' : ''}</span><b class="p">${esc(fmt(p.baseMinor))}</b></li>`).join('')}
+</ol><div class="f"><span>Base cost · updated ${esc(day)}</span><a href="${esc(full)}" target="_blank" rel="noopener">All prices on POD Pricing →</a></div></div></body></html>`);
+    }
+  }
+  const W = t.widget;
+  add(P.widget + 'index.html', page(L, H, {
+    rel: P.widget + 'index.html', alt: altAll(p => p.widget), title: `${W.title} · ${BRAND}`, description: W.desc, crumbs: [[W.title]],
+    body: `<h1>${esc(W.title)}</h1><p class="muted">${esc(W.intro)}</p>
+<form id="widget" class="calc" onsubmit="return false"><label class="wide">${esc(W.pick)}<select name="g"><option value="">—</option></select></label></form>
+<div id="widget-out" hidden><h2>${esc(W.code)}</h2><textarea id="widget-code" readonly rows="5" class="code"></textarea><p><button type="button" id="widget-copy" class="more" style="margin:8px 0">${esc(W.copy)}</button></p>
+<h2>${esc(W.preview)}</h2><div id="widget-preview"></div></div>
+<p class="muted sm">${esc(W.note)}</p>`,
+  }));
 
   // üreticiler
   const provRows = catalog.providers.map(p => ({ p, list: byProvider.get(p.id) || [] })).sort((a, b) => b.list.length - a.list.length || a.p.name.localeCompare(b.p.name));

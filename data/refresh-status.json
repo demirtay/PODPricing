@@ -23,6 +23,7 @@
     "scalablepress",
     "marketprint",
     "makeplayingcards",
+    "artelo",
     "lumaprints",
     "simpleprint",
     "printdoors",
@@ -242,13 +243,21 @@
       "nextCheck": 0
     },
     "makeplayingcards": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "artelo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-05T00:22:02.686Z",
+      "lastSuccess": "2026-10-05T00:26:57.632Z",
       "lastError": null,
-      "productCount": 248,
-      "nextCheck": 1791161521475,
-      "startedAt": "2026-10-05T00:22:01.475Z"
+      "productCount": 128,
+      "nextCheck": 1791161815960,
+      "startedAt": "2026-10-05T00:26:55.960Z"
     },
     "lumaprints": {
       "state": "idle",

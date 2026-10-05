@@ -28,6 +28,7 @@ module.exports = {
   scalablepress: def('https://scalablepress.com/catalog', './scalablepress.cjs'),
   marketprint: def('https://marketprint.de/en/catalog', './marketprint.cjs'),
   makeplayingcards: def('https://www.makeplayingcards.com/', './makeplayingcards.cjs'),
+  artelo: def('https://www.artelo.com/pricing', './artelo.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),

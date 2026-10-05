@@ -99,6 +99,11 @@ const REASON_EN = {
   'Açık katalog yalnızca kategori tanıtım kayıtları içeriyor': 'The public catalog only lists category promo entries',
   'Açık katalogda yalnızca birkaç kayıt var': 'Only a few entries in the public catalog',
   'Fiyatlar herkese açık sayfalarda yayınlanmıyor (üye girişi veya teklif ile)': 'Prices are not published publicly (login or quote required)',
+  'Tek ürün fiyatı sayfada hesaplanıyor; yalnızca toplu alım fiyatı görünüyor': 'Single-item price is only calculated in the designer; only bulk prices are shown',
+  'Yayınlanan fiyatlar eski başlangıç fiyatı; nihai fiyat adede göre belirleniyor': 'Published prices are outdated start-up prices; final price depends on volume',
+  'Açık sitede perakende mağaza fiyatları var; üretim maliyeti üye panelinde': 'The public site shows retail store prices; production costs are in the member dashboard',
+  'Fiyatlar yalnızca örnek aralıklar; ürün bazlı fiyat yayınlanmıyor': 'Only illustrative price ranges are published, not per-product prices',
+  'Katalog sayfasında yalnızca şablon fiyatlar var; gerçek fiyat doğrulanamıyor': 'The catalog page only shows placeholder prices; real prices cannot be verified',
 };
 const reasonOf = (p, L) => { const r = p.connection?.blockedReason; if (!r || /henüz tamamlanmadı/.test(r)) return L.notAdded; return L.lang === 'en' ? (REASON_EN[r] || L.notAdded) : r; };
 

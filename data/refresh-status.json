@@ -21,6 +21,8 @@
     "subliminator",
     "toaddit",
     "scalablepress",
+    "marketprint",
+    "makeplayingcards",
     "lumaprints",
     "simpleprint",
     "printdoors",
@@ -224,13 +226,29 @@
       "nextCheck": 0
     },
     "scalablepress": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "marketprint": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "makeplayingcards": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-05T00:12:14.837Z",
+      "lastSuccess": "2026-10-05T00:22:02.686Z",
       "lastError": null,
-      "productCount": 2134,
-      "nextCheck": 1791160932614,
-      "startedAt": "2026-10-05T00:12:12.614Z"
+      "productCount": 248,
+      "nextCheck": 1791161521475,
+      "startedAt": "2026-10-05T00:22:01.475Z"
     },
     "lumaprints": {
       "state": "idle",

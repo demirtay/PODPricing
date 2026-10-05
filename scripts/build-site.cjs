@@ -649,6 +649,8 @@ const stub = (from, to) => { if (!fs.existsSync(path.join(out, from, 'index.html
 stub('models/', '/compare/'); stub('tr/borsa/', '/tr/karsilastir/'); stub('borsa/', '/tr/karsilastir/'); stub('ureticiler/', '/tr/ureticiler/');
 for (const g of groups.filter(g => g.key.startsWith('m:'))) { stub(`model/${g.slug}/`, `/compare/${g.slug}/`); stub(`tr/model/${g.slug}/`, `/tr/karsilastir/${g.slug}/`); }
 if (SITE) write('CNAME', new URL(SITE).hostname + '\n');
+// IndexNow (Bing, Yandex vb.): anahtar dosyası site kökünde olmalı; bildirim scripts/indexnow.cjs ile
+if (cfg.indexNowKey) write(cfg.indexNowKey + '.txt', cfg.indexNowKey);
 if (cfg.adsenseClient) write('ads.txt', `google.com, ${cfg.adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 
 // sitemap / robots

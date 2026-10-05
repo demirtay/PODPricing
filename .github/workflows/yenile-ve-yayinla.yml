@@ -58,3 +58,7 @@ jobs:
       - name: GitHub Pages'e yayınla
         id: deploy
         uses: actions/deploy-pages@v4
+      # Bing/Yandex'e güncellenen sayfaları bildir (hata olursa yayını bozmaz)
+      - name: IndexNow bildirimi
+        continue-on-error: true
+        run: sleep 60 && node scripts/indexnow.cjs

@@ -6,3 +6,6 @@ node_modules/
 *.log
 site.__build/
 site.__old/
+
+video/work/
+video/out/

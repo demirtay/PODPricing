@@ -1,35 +1,29 @@
-# POD Atlas yol haritası
+# POD Pricing yol haritası
 
-Hedef: bütün POD üreticilerini kapsayan, Google'da bulunan, reklam + affiliate gelirli fiyat borsası.
+Hedef: bütün POD üreticilerini kapsayan, Google'da bulunan, reklam + affiliate gelirli fiyat karşılaştırma sitesi (podpricing.com).
 
-## 1. Temel ✅ (2026-10-04)
+## Yapıldı (2026-10-04 / 05)
+- Site yayında: https://podpricing.com (GitHub Pages, Cloudflare DNS), EN + TR.
+- 65/121 üretici, ~30.000 ürün; fiyatlar günde 2 kez otomatik yenilenir (süre sınırlı, en eski önce).
+- Pazar yeri + borsa arayüzü: ana kategori → alt kategori → bütün ürünler; ürün → bütün üreticiler ucuzdan pahalıya.
+- 210 "X vs Y", 22 "en ucuz" rehberi, 15 "alternatifler" sayfası, kâr hesaplayıcı, bloglar için fiyat kutusu.
+- "Diğer" kategorisi 1.827 → 386 ürün.
+- Search Console + IndexNow (Bing/Yandex) bildirimi, Cloudflare Web Analytics, AdSense başvurusu (onay bekliyor).
+- YouTube "POD Pricing" kanalı; Shorts üretimi (video/pod_shorts.py) ve her gün otomatik zamanlı yükleme.
+- Pazarlama dosyaları: pazarlama/GPT-GOREV.md, facebook-metinleri.md, ORTAKLIK-PROGRAMLARI.md.
 
-- Projenin kendi git deposu.
-- Ürün tipi ağacı (Etsy'den bağımsız, 14 grup / ~120 tip): ürünlerin ~%93'ü başlıktan doğru tipe yerleşiyor.
-- Boş ürün modeli eşleştirme: 68 model en az 2 üreticide karşılaştırılıyor (Gildan 5000 → 10 üretici).
-- Herkese açık statik site: ana sayfa, kategoriler, model borsası, ~20 bin ürün sayfası, üretici sayfaları, arama, SEO etiketleri, JSON-LD.
-- Fiyat temizliği: yer tutucu (tam 1,00), test ve kampanya kayıtları gerekçesiyle incelemeye ayrıldı.
+## Sıradaki
+- [ ] Ortaklık (affiliate) programlarına başvuru → onaylanan linkler site.config.json `affiliate` (öncelik: Printful, Merchize, Printify, Tapstitch, Yoycol).
+- [ ] AdSense onayı gelince reklam alanları (site.config.json `adSlots`).
+- [ ] Düzenli tanıtım: günde 1 video (otomatik), haftada birkaç Facebook/Reddit paylaşımı.
+- [ ] Kalan büyük üreticiler (Gelato, CustomCat vb.) için izinli veri yolu aramak.
 
-## 2. Yayın (sıradaki, kullanıcı hesabı gerekiyor)
+## 1.000 kullanıcıya ulaşınca (KESİN YAPILACAK)
+Kullanıcı kararı, 2026-10-05: "bin kullanıcıya ulaşınca yapalım". Ölçüt: Cloudflare Web Analytics'te ayda ~1.000 tekil ziyaretçi.
+- [ ] **Üyelik / e-posta sistemi.** Önce şifresiz e-posta kaydı: "Haftalık POD fiyat raporu" (MailerLite ücretsiz plan, 1.000 kişiye kadar). Rapor içeriği veriden otomatik (zam yapan / ucuzlayan üreticiler).
+- [ ] Liste büyüyünce: fiyat alarmı ("bu ürün ucuzlayınca haber ver"), kayıtlı ürünler, gerekirse tam üyelik. KVKK/GDPR ve veri güvenliği planıyla.
 
-- [ ] GitHub deposu (özel) + Netlify sitesi; depo sırları NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID.
-- [ ] Alan adı → `site.config.json` siteUrl (sitemap ve canonical bunu kullanır).
-- [ ] Google Search Console'a sitemap gönderimi.
-- [ ] Gizlilik politikası / çerez bildirimi (AdSense şartı), sonra AdSense başvurusu.
-- [ ] Affiliate programlarına başvuru (Printful, Printify, Gelato vb.) ve `site.config.json` affiliate ayarı.
-
-## 3. Kapsam: kalan üreticiler
-
-- [ ] 84 bağlı olmayan üretici. Önce Etsy satıcılarının en çok kullandıkları (Printify, Gelato, CustomCat, Gooten, Dreamship, SwiftPOD, Monster Digital…).
-- [ ] Fiyatı üye girişi isteyenler: üretici sayfasında "fiyat için üye girişi" olarak listelenir, uydurma fiyat yok.
-- [ ] Printdoors 126 bekleyen kayıt; `data/price-review-pending.json` (116 kayıt).
-
-## 4. Karşılaştırma kalitesi
-
-- [ ] "Diğer" kalan ~1.200 ürün için yeni tip kuralları.
-- [ ] Model tanımayı genişletmek (marka adı geçmeyen ama model kodu olan başlıklar, ör. "5000 Heavy Cotton").
-- [ ] Ürün sayfasında baskı yöntemi (DTG/DTF/nakış), baskı alanı ve kargo bilgisi; mümkün olan üreticilerde kargo dahil toplam.
-
-## 5. Kapsamlı fiyat kontrolü
-
-- [ ] Varyant, ölçü, minimum adet, indirim, para birimi, baskı/kargo/vergi koşulları üretici bazında denetim.
+## Bilinçli olarak yapılmayanlar
+- Kargo karşılaştırması: ülke/ağırlık/adede göre değişken, siteyi asıl işinden uzaklaştırır (kullanıcı kararı, 2026-10-05).
+- Ücretli reklam: affiliate geliri başlamadan geri dönmez.
+- Facebook gruplarına toplu reklam: spam sayılır, hesap ve alan adı kapanır.

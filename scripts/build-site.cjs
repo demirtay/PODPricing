@@ -518,6 +518,11 @@ ${gp ? `<h2>${esc(t.sameGroup)}</h2>${H.offers(gp.list)}` : similar.length ? `<h
 write('_headers', `/assets/*\n  Cache-Control: public, max-age=86400\n/data/*\n  Cache-Control: public, max-age=1800\n/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n`);
 const modelRedirects = groups.filter(g => g.key.startsWith('m:')).map(g => `/model/${g.slug}/  /compare/${g.slug}/  301\n/tr/model/${g.slug}/  /tr/karsilastir/${g.slug}/  301`).join('\n');
 write('_redirects', `/models/  /compare/  301\n/tr/borsa/  /tr/karsilastir/  301\n${modelRedirects}\n/model/*  /compare/  301\n/tr/model/*  /tr/karsilastir/  301\n/urun/*  /product/:splat  301\n/kategori/*  /tr/kategori/:splat  301\n/borsa/  /tr/karsilastir/  301\n/ureticiler/  /tr/ureticiler/  301\n/uretici/*  /tr/uretici/:splat  301\n`);
+// GitHub Pages _redirects okumaz: eski adresler için küçük yönlendirme sayfaları (yalnızca o adreste sayfa yoksa)
+const stub = (from, to) => { if (!fs.existsSync(path.join(out, from, 'index.html'))) write(from + 'index.html', `<!doctype html><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"><a href="${to}">${to}</a>`); };
+stub('models/', '/compare/'); stub('tr/borsa/', '/tr/karsilastir/'); stub('borsa/', '/tr/karsilastir/'); stub('ureticiler/', '/tr/ureticiler/');
+for (const g of groups.filter(g => g.key.startsWith('m:'))) { stub(`model/${g.slug}/`, `/compare/${g.slug}/`); stub(`tr/model/${g.slug}/`, `/tr/karsilastir/${g.slug}/`); }
+if (SITE) write('CNAME', new URL(SITE).hostname + '\n');
 if (cfg.adsenseClient) write('ads.txt', `google.com, ${cfg.adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 
 // sitemap / robots

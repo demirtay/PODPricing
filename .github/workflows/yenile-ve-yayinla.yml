@@ -1,5 +1,5 @@
-# Fiyatları günde 2 kez (06:17 ve 18:17 UTC) yeniler, siteyi üretir ve Netlify'a yayınlar.
-# Gerekli depo sırları: NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID
+# Fiyatları günde 2 kez (06:17 ve 18:17 UTC) yeniler, siteyi üretir ve GitHub Pages'e yayınlar.
+# (Netlify ücretsiz planı yayın başına kredi düştüğü için 2026-10-05'te GitHub Pages'e geçildi.)
 name: Yenile ve yayinla
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/**', 'web/**', 'site.config.json']
+    paths: ['scripts/**', 'web/**', 'site.config.json', '.github/workflows/**']
 
 concurrency:
   group: yenile-yayinla
@@ -15,11 +15,16 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 150
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,10 +51,10 @@ jobs:
           git diff --cached --quiet || (git commit -m "data: otomatik fiyat yenileme" && git push)
       - name: Siteyi üret
         run: node scripts/build-site.cjs
-      # Netlify ücretsiz planı: her yayın 15 kredi (ayda 300). Barındırma değişene kadar yayın kapalı.
-      - name: Netlify'a yayınla
-        if: false
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: npx --yes netlify-cli@17 deploy --prod --dir site --message "otomatik yayin ${{ github.run_number }}"
+      - name: Yayın paketini hazırla
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: GitHub Pages'e yayınla
+        id: deploy
+        uses: actions/deploy-pages@v4

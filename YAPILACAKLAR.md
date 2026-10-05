@@ -13,7 +13,7 @@ Hedef: bütün POD üreticilerini kapsayan, Google'da bulunan, reklam + affiliat
 - Pazarlama dosyaları: pazarlama/GPT-GOREV.md, facebook-metinleri.md, ORTAKLIK-PROGRAMLARI.md.
 
 ## Sıradaki
-- [ ] Ortaklık (affiliate) programlarına başvuru → onaylanan linkler site.config.json `affiliate` (öncelik: Printful, Merchize, Printify, Tapstitch, Yoycol).
+- [ ] (ERTELENDİ — kullanıcı kararı 2026-10-05; trafik biraz artınca) Ortaklık (affiliate) programlarına başvuru → onaylanan linkler site.config.json `affiliate` (öncelik: Printful, Merchize, Printify, Tapstitch, Yoycol).
 - [ ] AdSense onayı gelince reklam alanları (site.config.json `adSlots`).
 - [ ] Düzenli tanıtım: günde 1 video (otomatik), haftada birkaç Facebook/Reddit paylaşımı.
 - [ ] Kalan büyük üreticiler (Gelato, CustomCat vb.) için izinli veri yolu aramak.

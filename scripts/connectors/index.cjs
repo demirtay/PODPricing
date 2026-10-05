@@ -29,6 +29,8 @@ module.exports = {
   marketprint: def('https://marketprint.de/en/catalog', './marketprint.cjs'),
   makeplayingcards: def('https://www.makeplayingcards.com/', './makeplayingcards.cjs'),
   artelo: def('https://www.artelo.com/pricing', './artelo.cjs'),
+  ...Object.fromEntries(['promio', 'ecomerch'].map(id => [id, { base: require('./promio-platform.cjs').SITES[id].base + '/products', load: () => ({ collect: progress => require('./promio-platform.cjs').collect(id, progress) }) }])),
+  printgenie: def('https://www.printgenie.com/products', './printgenie.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),

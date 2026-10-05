@@ -24,6 +24,9 @@
     "marketprint",
     "makeplayingcards",
     "artelo",
+    "promio",
+    "ecomerch",
+    "printgenie",
     "lumaprints",
     "simpleprint",
     "printdoors",
@@ -251,13 +254,37 @@
       "nextCheck": 0
     },
     "artelo": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "promio": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "ecomerch": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "printgenie": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-05T00:26:57.632Z",
+      "lastSuccess": "2026-10-05T00:44:37.119Z",
       "lastError": null,
-      "productCount": 128,
-      "nextCheck": 1791161815960,
-      "startedAt": "2026-10-05T00:26:55.960Z"
+      "productCount": 72,
+      "nextCheck": 1791162834755,
+      "startedAt": "2026-10-05T00:43:54.755Z"
     },
     "lumaprints": {
       "state": "idle",

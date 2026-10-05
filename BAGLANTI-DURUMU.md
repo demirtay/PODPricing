@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-05 00:27 UTC · 62/121 üretici bağlı · 30.155 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -47,6 +47,7 @@ Güncelleme: 2026-10-05 00:27 UTC · 62/121 üretici bağlı · 30.155 fiyatlı 
 | SimplePrint | 117 | full-public-catalog | 2026-10-04 |
 | PillowProfits | 115 | full-public-catalog | 2026-10-04 |
 | Sellfy | 110 | full-public-catalog | 2026-10-04 |
+| Promio | 102 | full-public-catalog | 2026-10-05 |
 | Qikink | 100 | verified-tax-inclusive-product-pages | 2026-10-04 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
 | JumboDTG | 82 | public-storefront | 2026-10-04 |
@@ -55,10 +56,12 @@ Güncelleme: 2026-10-05 00:27 UTC · 62/121 üretici bağlı · 30.155 fiyatlı 
 | MerchOne | 76 | full-public-catalog | 2026-10-04 |
 | Contrado | 74 | full-public-catalog | 2026-10-04 |
 | Gearment | 72 | public-category-pages | 2026-10-04 |
+| Printgenie | 72 | full-public-catalog | 2026-10-05 |
 | PrintOps | 64 | full-public-catalog | 2026-10-04 |
 | MarketPrint | 53 | full-public-catalog | 2026-10-05 |
 | NovaTomato | 51 | full-public-catalog | 2026-10-04 |
 | Ogo | 42 | public-product-pages | 2026-10-04 |
+| Ecomerch | 40 | full-public-catalog | 2026-10-05 |
 | TshirtGang | 38 | public-product-pages | 2026-10-04 |
 | OwnPrint | 31 | full-public-catalog | 2026-10-04 |
 | Printrove | 30 | verified-public-base-prices | 2026-10-04 |
@@ -69,9 +72,9 @@ Güncelleme: 2026-10-05 00:27 UTC · 62/121 üretici bağlı · 30.155 fiyatlı 
 | Rakiline | 4 | public-storefront | 2026-10-04 |
 | GoQuadra | 2 | public-storefront | 2026-10-04 |
 
-## Bağlı olmayanlar (59)
+## Bağlı olmayanlar (56)
 
-**Fiyatlar herkese açık sayfalarda yayınlanmıyor (üye girişi veya teklif ile)** (25): Alexanders, Camaloon, Casestation, Casestry, Completeful, CW On Demand, Dubow Textile, Duplium, Ecomerch, FlexMerch, Framico, Hoplix, Marco Fine Arts, MWWondemand, My Easy Monogram, Opt On Demand, PrintBest, Printed Simply, Printeers, Printgenie, Printoteca, Printseekers, Promio, Shirtly, Tshirt & Sons
+**Fiyatlar herkese açık sayfalarda yayınlanmıyor (üye girişi veya teklif ile)** (22): Alexanders, Camaloon, Casestation, Casestry, Completeful, CW On Demand, Dubow Textile, Duplium, FlexMerch, Framico, Hoplix, Marco Fine Arts, MWWondemand, My Easy Monogram, Opt On Demand, PrintBest, Printed Simply, Printeers, Printoteca, Printseekers, Shirtly, Tshirt & Sons
 
 **Site otomatik erişimi engelliyor (bot koruması); güncel fiyatlar üreticinin sitesinde** (9): ArtOfWhere, Coastal Reign, CustomCat, Gelato, GoCustom Clothing, PrintedMint, Shop3D, Through6, VistaPrint
 

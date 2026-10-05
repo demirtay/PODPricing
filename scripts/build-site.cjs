@@ -48,6 +48,7 @@ const products = catalog.products
     return q;
   })
   .sort((a, b) => a.baseMinor - b.baseMinor);
+const isBlank = p => p.pb === 'bos' || p.pb === 'toplu';
 const typeGroup = id => id === 'diger' ? 'diger' : tx.TYPE_BY_ID.get(id)?.group || 'diger';
 const byType = groupBy(products, p => p.type);
 const byGroup = groupBy(products, p => p.group);
@@ -68,7 +69,12 @@ function repImage(list) {
 const groups = [...groupBy(products.filter(p => p.gkey), p => p.gkey)]
   .map(([key, list]) => ({ key, list, providers: new Set(list.map(p => p.providerId)), type: mostCommon(list.map(p => p.type)), sample: list.find(p => p.model) || list[0] }))
   .filter(g => g.providers.size >= 2)
-  .map(g => ({ ...g, slug: PG.slugOf(g.key, t => (EN.TYPES[t] || ['', t])[1]), image: repImage(g.list) }))
+  .map(g => {
+    // "en ucuz" fiyat baskılı tekliflerden; hiç baskılı teklif yoksa boş ürün fiyatı
+    const pool = g.list.filter(p => !isBlank(p)).length ? g.list.filter(p => !isBlank(p)) : g.list;
+    const bestPer = [...groupBy(pool, p => p.providerId)].map(([, l]) => l[0]);
+    return { ...g, slug: PG.slugOf(g.key, t => (EN.TYPES[t] || ['', t])[1]), image: repImage(g.list), lo: pool[0], hi: bestPer.reduce((a, p) => p.baseMinor > a.baseMinor ? p : a, pool[0]) };
+  })
   .sort((a, b) => b.providers.size - a.providers.size || b.list.length - a.list.length);
 const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
@@ -112,6 +118,7 @@ const LOCALES = {
       heroH: 'Find the cheapest print-on-demand supplier',
       heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first.`,
       topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
+      blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
       offersH: n => `Prices from ${n} manufacturers`, cheapestFirst: 'Sorted from cheapest to most expensive.',
@@ -174,6 +181,7 @@ const LOCALES = {
       heroH: 'En ucuz baskı üreticisini bul',
       heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte.`,
       topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
+      blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
       offersH: n => `${n} üreticinin fiyatları`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
@@ -254,11 +262,10 @@ function makeHelpers(L) {
   // tekil ürün kartı
   const card = p => `<a class="card" href="${href(P.product(p.id))}"><div class="ci">${img(p)}</div><div class="cb"><div class="ct">${esc(p.title)}</div><div class="cm">${esc(provName(p.providerId))}</div><div class="cp"><b>${esc(fmt(p.baseMinor))}</b>${pbBadge(p.pb)}</div></div></a>`;
   // karşılaştırmalı ürün kartı (grup)
-  const gcard = g => `<a class="card" href="${href(P.group(g.slug))}"><div class="ci">${imgTag(g.image, gTitle(g))}</div><div class="cb"><div class="ct">${esc(gTitle(g))}</div><div class="cm">${esc(t.makersN(g.providers.size))}</div><div class="cp"><small>${L.lang === 'en' ? 'from' : 'en ucuz'}</small><b>${esc(fmt(g.list[0].baseMinor))}</b></div></div></a>`;
+  const gcard = g => `<a class="card" href="${href(P.group(g.slug))}"><div class="ci">${imgTag(g.image, gTitle(g))}</div><div class="cb"><div class="ct">${esc(gTitle(g))}</div><div class="cm">${esc(t.makersN(g.providers.size))}</div><div class="cp"><small>${L.lang === 'en' ? 'from' : 'en ucuz'}</small><b>${esc(fmt(g.lo.baseMinor))}</b></div></div></a>`;
   // Kategori listesindeki "ürün": birden çok sitede satılıyorsa karşılaştırma sayfası, tek sitedeyse kendi sayfası
   const itemsOf = (groupList, singles) => [
-    ...groupList.map(g => ({ href: href(P.group(g.slug)), name: gTitle(g), image: g.image, price: g.list[0].baseMinor, n: g.providers.size, maker: '', pb: '', best: g.list[0].providerId,
-      hi: Math.max(...[...groupBy(g.list, p => p.providerId)].map(([, l]) => l[0].baseMinor)) })),
+    ...groupList.map(g => ({ href: href(P.group(g.slug)), name: gTitle(g), image: g.image, price: g.lo.baseMinor, n: g.providers.size, maker: '', pb: '', best: g.lo.providerId, hi: g.hi.baseMinor })),
     ...singles.map(p => ({ href: href(P.product(p.id)), name: p.title, image: p.imageUrl, price: p.baseMinor, n: 1, maker: p.providerId, pb: p.pb, best: p.providerId, hi: p.baseMinor })),
   ].sort((a, b) => b.n - a.n || a.price - b.price);
   const icard = it => `<a class="card" href="${it.href}"><div class="ci">${imgTag(it.image, it.name)}</div><div class="cb"><div class="ct">${esc(it.name)}</div><div class="cm">${it.n > 1 ? `<span class="sites">${esc(t.sitesN(it.n))}</span>` : esc(provName(it.maker))}</div><div class="cp">${it.n > 1 ? `<small>${esc(t.cheapest)}</small>` : ''}<b>${esc(fmt(it.price))}</b></div></div></a>`;
@@ -267,7 +274,13 @@ function makeHelpers(L) {
   const gcards = list => `<div class="cards">${list.map(gcard).join('')}</div>`;
   const tile = (hrefTo, image, title, sub) => `<a class="tile" href="${hrefTo}"><div class="ti">${imgTag(image, title)}</div><div class="tb"><b>${esc(title)}</b><span>${esc(sub)}</span></div></a>`;
   // Akakçe tarzı teklif listesi: üretici başına en ucuz teklif, ucuzdan pahalıya
+  // boş ürün ve toplu alım fiyatları baskılı tekliflerle aynı sırada yarışmaz; ayrı listede gösterilir
   const offers = list => {
+    const printed = list.filter(p => !isBlank(p)), blanks = list.filter(isBlank);
+    if (!printed.length || !blanks.length) return ladderOf(list);
+    return ladderOf(printed) + `<h3 class="blank-h">${esc(t.blankH)}</h3><p class="muted sm">${esc(t.blankP)}</p>` + ladderOf(blanks);
+  };
+  const ladderOf = list => {
     const best = [...groupBy(list, p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
     const row = (p, i) => `<li><span class="rank">${i + 1}</span>${img(p)}<div><a href="${href(P.maker(p.providerId))}"><b>${esc(provName(p.providerId))}</b></a><div class="muted sm"><a href="${href(P.product(p.id))}">${esc(p.title)}</a></div></div><span class="price">${priceHtml(p)}${p.shipping && Object.values(p.shipping)[0] != null ? `<small>${esc(t.shipShort(fmt(Object.values(p.shipping)[0])))}</small>` : ''}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${t.go}</a></li>`;
     const rest = list.filter(p => !best.includes(p));
@@ -341,7 +354,7 @@ for (const lg of LANGS) {
   const typeItems = new Map([...byType].map(([k, list]) => [k, H.itemsOf(groupsByType.get(k) || [], singlesOf(list))]));
   for (const [k, items] of typeItems) write(`data/k/${lg}/${k}.json`, JSON.stringify(items.map(itemRow)));
   // arama için ürün grupları: [slug, ad, görsel, en düşük fiyat, üretici sayısı, tip]
-  write(`data/groups-${lg}.json`, JSON.stringify(groups.map(g => [g.slug, H.gTitle(g), g.image || '', g.list[0].baseMinor, g.providers.size, g.type])));
+  write(`data/groups-${lg}.json`, JSON.stringify(groups.map(g => [g.slug, H.gTitle(g), g.image || '', g.lo.baseMinor, g.providers.size, g.type])));
 
   // ana sayfa
   add(P.home + 'index.html', page(L, H, {
@@ -392,7 +405,7 @@ ${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.
     body: `<h1>${t.compare}</h1><p class="muted">${esc(t.compareIntro)}</p>${H.gcards(groups)}`,
   }));
   for (const gp of groups) {
-    const title = H.gTitle(gp), lo = gp.list[0], hi = gp.list[gp.list.length - 1];
+    const title = H.gTitle(gp), lo = gp.lo, hi = gp.hi;
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)),
       title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),

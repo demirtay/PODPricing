@@ -8,10 +8,10 @@ const PRINTED = new Set([
   'printify', 'printful', 'dreamship', 'simpleprint', 'gearlaunch', 'prodigi', 'podpartner', 'yoycol', 'inkedjoy',
   'interestprint', 'artsadd', 'peaprint', 'printdoors', 'kincustom', 'merchize', 'burgerprints', 'gearment', 'teelaunch',
   'printy6', 'printkk', 'jetprint', 'papello', 'inkthreadable', 'twofifteen', 'tshirtgang', 'printegy', 'podbase',
-  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway',
+  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway', 'subliminator', 'toaddit',
 ]);
 // Fiyatı baskısız (boş) ürün bedeli olanlar
-const BLANK = new Set(['tapstitch', 'printrove', 'ogo']);
+const BLANK = new Set(['tapstitch', 'printrove', 'ogo', 'scalablepress']);
 // Minimum adetli toplu baskı firmaları
 const BULK = new Set(['blackfishclothing']);
 

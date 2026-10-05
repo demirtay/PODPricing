@@ -18,6 +18,9 @@
     "oneprint",
     "novatomato",
     "printway",
+    "subliminator",
+    "toaddit",
+    "scalablepress",
     "lumaprints",
     "simpleprint",
     "printdoors",
@@ -197,13 +200,37 @@
       "nextCheck": 0
     },
     "printway": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "subliminator": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "toaddit": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "scalablepress": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-04T23:49:43.413Z",
+      "lastSuccess": "2026-10-05T00:12:14.837Z",
       "lastError": null,
-      "productCount": 1066,
-      "nextCheck": 1791159582246,
-      "startedAt": "2026-10-04T23:49:42.246Z"
+      "productCount": 2134,
+      "nextCheck": 1791160932614,
+      "startedAt": "2026-10-05T00:12:12.614Z"
     },
     "lumaprints": {
       "state": "idle",

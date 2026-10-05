@@ -1,0 +1,809 @@
+{
+  "checkedAt": "2026-10-05T00:12:12.622Z",
+  "categories": 53,
+  "listed": 6271,
+  "imported": 2134,
+  "skippedCount": 4137,
+  "skipped": [
+    {
+      "id": "port-authority-easy-care-reversible-waist-apron-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "port-authority-â-wheeled-backpack",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "nike-performance-backpack",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "port-authority-â-nailhead-backpack",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "nike-elite-backpack",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "the-north-face-aurora-ii-backpack",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "rabbit-skins-infant-baby-rib-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "yupoong-adult-cuffed-knit-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-knit-beanie-with-cuff",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-two-tone-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-knit-beanie-with-lid",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-waffle-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-knit-pom-pom-beanie-with-cuff",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "bayside-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "bayside-knit-cuff-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-performance-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-slouch-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-ribbed-marled-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-two-tone-marled-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-patch-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-reflective-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-fleece-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-value-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-knit-pom-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-watch-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "econscious-organic-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "econscious-organic-slouch-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "alternative-oversize-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "alternative-londoner-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "team-365-striped-pom-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "port-company-fleece-lined-striped-beanie-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "bayside-usa-made-12-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "bayside-usa-made-8-inch-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "chef-designs-8-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dyenomite-tie-dyed-12-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-kap-waffle-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-12-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-bottom-striped-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-marled-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-oversized-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-polar-fleece-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-pom-pom-12-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-rugby-striped-8-inch-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-soft-wide-ribbed-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "sportsman-striped-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "adidas-climawarm-fleece-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "new-era-on-field-knit-beanie-ne906",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "port-company-â-fleece-lined-striped-beanie-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-sportswear-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-sportswear-pom-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-sportswear-two-tone-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-sportswear-digi-camo-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-sportswear-pep-it-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-commander-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-enclave-waffle-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "richardson-cable-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "richardson-chunk-twist-knit-beanie-with-cuff",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-kap-12-in-striped-pom-pom-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-kap-12-in-chunky-knit-beanie",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "black-camo-port-company-â-camo-beanie-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "white-port-company-â-fleece-lined-beanie-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "nike-sideline-beanie-867309",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "alternative-mens-industry-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-silky-poplin",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-non-iron-pinpoint",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-dress-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-guide-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-field-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-classic-short-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-blended-pinpoint",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "columbia-mens-bahama-ii-short-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "columbia-mens-bahama-ii-long-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "columbia-mens-tamiami-ii-long-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "columbia-mens-tamiami-ii-short-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-performance-poplin",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-wrinkle-resistant-end-on-end",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-easy-care-broadcloth",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-non-iron-pinpoint",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-medium-check-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-fuse-colorblock-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-tall-tall-fuse-colorblock-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-paramount-wrinkle-resistant-cotton-blend-twill-checkered-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-excursion-utility-two-tone-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-excursion-f-b-c-textured-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-excursion-concourse-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-core-365-mens-operate-long-sleeve-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-core-365-mens-tall-operate-long-sleeve-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-core-365-mens-optimum-short-sleeve-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-core-365-mens-tall-optimum-short-sleeve-twill-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-cypress-denim-with-pocket",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-cypress-long-sleeve-twill-with-pocket",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-tall-cypress-denim-with-pocket",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-short-sleeve-cypress-denim-with-pocket",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-short-sleeve-cypress-twill-with-pocket",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-classic-wrinkle-resistant-long-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-tall-classic-wrinkle-resistant-long-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-mens-classic-wrinkle-resistant-short-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-mens-tall-classic-wrinkle-resistant-short-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-whisper-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-tall-whisper-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-adult-short-sleeve-whisper-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-cabana-breeze-camp-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-whisper-elite-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-yarn-dyed-micro-check-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-flannel-shirt-jacket-with-quilt-lining",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-ripstop-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-yarn-dyed-chambray-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-nailhead-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-yarn-dyed-micro-check-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-solid-broadcloth",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-solid-broadcloth-short-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-tall-crown-collection-solid-broadcloth",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-solid-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-gingham-check",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-banker-stripe",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-long-sleeve-catch-fishing-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-short-sleeve-catch-fishing-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-central-cotton-blend-mlange-button-down",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-glen-plaid",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-solid-stretch-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-tall-crown-collection-solid-stretch-twill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "devon-jones-mens-crown-collection-royal-dobby-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dickies-mens-4-25-oz-industrial-long-sleeve-work-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dickies-mens-4-25-oz-performance-comfort-stretch-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dickies-mens-4-25-oz-max-cool-premium-performance-work-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dickies-mens-4-25-oz-industrial-short-sleeve-work-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-easy-blend-long-sleeve-twill-shirt-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-easy-blend-short-sleeve-twill-shirt-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-tall-easy-blend-long-sleeve-twill-shirt-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-3-1-oz-essential-poplin",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-tall-3-1-oz-essential-poplin",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-advantage-snap-closure-short-sleeve-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-barbados-textured-camp-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-bahama-cord-camp-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-two-tone-bahama-cord-camp-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-key-west-short-sleeve-performance-staff-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-foundation-100-cotton-long-sleeve-twill-shirt-with-teflon",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-tall-foundation-100-cotton-long-sleeve-twill-shirt-with-teflon",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-foundation-100-cotton-short-sleeve-twill-shirt-teflon",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-long-sleeve-oxford-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-short-sleeve-oxford-with-stain-release",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-paradise-long-sleeve-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-paradise-short-sleeve-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ultra-club-mens-long-sleeve-performance-pinpoint",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-yarn-dyed-gingham-check",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-long-sleeve-non-iron-feather-stripe",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "van-heusen-mens-classic-long-sleeve-oxford",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-house-red-house-tall-non-iron-pinpoint-oxford-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-house-red-house-mini-check-non-iron-button-down-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "port-authority-port-authority-tall-tattersall-easy-care-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-house-red-house-windowpane-plaid-non-iron-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-house-red-house-tall-nailhead-non-iron-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "red-house-herringbone-non-iron-button-down-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-6-5-oz-long-sleeve-denim-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-6-5-oz-short-sleeve-denim-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-mens-tall-6-5-oz-long-sleeve-denim-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "harriton-adult-restore-4-9-oz-scrub-top",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-ladies-excursion-nomad-performance-waffle-henley",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-mens-excursion-nomad-performance-waffle-henley",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "ash-city-north-end-sport-blue-mens-mlange-performance-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dickies-mens-5-25-oz-short-sleeve-work-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-yarn-dyed-flannel-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "backpacker-mens-solid-flannel-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "burnside-mens-long-sleeve-plaid-pattern-woven",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "burnside-mens-plaid-flannel-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "burnside-mens-plaid-pattern-woven-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "burnside-mens-solid-flannel",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-mason-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "dri-duck-mens-regulator-shirt",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-metal-eyelet-bucket-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-crusher-bucket-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-guide-hat",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "adams-ladies-sea-breeze-floppy-hat",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-6-panel-hat",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-5-panel-trucker-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "big-accessories-5-panel-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "comfort-colors-direct-dyed-canvas-baseball-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "comfort-colors-pigment-dyed-canvas-baseball-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "comfort-colors-trucker-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "comfort-colors-canvas-caf-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-pro-formance-two-tone-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-wool-blend-snapback-two-tone-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "yupoong-adult-knit-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "authentic-pigment-direct-dyed-twill-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "authentic-pigment-pigment-dyed-raw-edge-patch-baseball-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-value-cotton-twill-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "augusta-youth-sport-twill-visor",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "yupoong-adult-brushed-cotton-twill-6-panel-mid-profile-sandwich-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-wooly-6-panel-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-wooly-cap-with-sandwich-bill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-youth-wooly-6-panel-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-wooly-twill-pro-baseball-on-field-shape-cap-with-flat-bill",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "yupoong-adult-brushed-cotton-twill-mid-profile-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-brushed-twill-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-wool-blend-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "yupoong-adult-ultrafibre-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-adult-cool-dry-callocks-tricot-cap",
+      "reason": "satışta değil"
+    },
+    {
+      "id": "flexfit-adult-bamboo-cap",
+      "reason": "satışta değil"
+    }
+  ]
+}

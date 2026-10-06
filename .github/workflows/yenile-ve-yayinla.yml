@@ -37,6 +37,13 @@ jobs:
           path: data/source-cache
           key: source-cache-${{ github.run_id }}
           restore-keys: source-cache-
+      # Fiyat endeksi geçmişi (günlük anlık görüntüler): git'e gönderilemese bile çalışmalar arasında korunur
+      - name: Fiyat geçmişini geri yükle
+        uses: actions/cache@v4
+        with:
+          path: data/price-history.json
+          key: price-history-${{ github.run_id }}
+          restore-keys: price-history-
       - name: Katalogları yenile
         if: github.event_name != 'push'
         env:
@@ -52,9 +59,18 @@ jobs:
           git add data/catalog.json data/refresh-status.json
           git diff --cached --quiet || git commit -m "data: otomatik fiyat yenileme"
           # çalışma sırasında başka bir değişiklik gönderildiyse önce onu al (en çok 3 deneme)
-          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
+          ok=0; for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && ok=1 && break; sleep 5; done
+          [ "$ok" = 1 ] || echo "::warning::Güncel katalog GitHub'a gönderilemedi (git push başarısız)"
       - name: Siteyi üret
         run: node scripts/build-site.cjs
+      - name: Fiyat geçmişini kaydet
+        if: github.event_name != 'push'
+        run: |
+          git add data/price-history.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: fiyat endeksi anlık görüntüsü"
+          ok=0; for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && ok=1 && break; sleep 5; done
+          [ "$ok" = 1 ] || echo "::warning::Fiyat geçmişi GitHub'a gönderilemedi (git push başarısız)"
       - name: Yayın paketini hazırla
         uses: actions/upload-pages-artifact@v3
         with:

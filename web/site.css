@@ -84,6 +84,8 @@ button.more{display:block;margin:18px auto 0;background:var(--panel);color:var(-
 .ladder .price b{color:var(--price);font-size:17px}.ladder .price small{font-size:12px;color:var(--muted)}.ladder .price small:last-child{flex-basis:100%}
 /* X vs Y sayfaları */
 .verdict{background:var(--chip);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:12px 0;font-size:17px}.verdict p{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
+/* fiyat endeksi: özet rakam kutuları */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}.kpis div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px}.kpis b{display:block;font-size:26px;color:var(--price);line-height:1.2}.kpis span{font-size:13px;color:var(--muted)}
 .vs-sides{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
 .vs-side{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:5px;box-shadow:var(--shadow)}.vs-side b{font-size:19px}
 td.win,td.win a{color:var(--price);font-weight:700}td.loss{color:#c0392b}

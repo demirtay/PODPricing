@@ -40,7 +40,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 - **Name / company:** POD Pricing
 - **Email:** hello@podpricing.com
 - **Country:** Türkiye
-- **Payment:** PayPal (kullanıcının PayPal hesabı; yoksa banka/Payoneer — kullanıcıya sor)
+- **Payment:** Payoneer (kullanıcının hesabı var). PayPal Türkiye'de çalışmıyor. Payoneer yoksa banka havalesi (SWIFT/IBAN) seç.
 - **Monthly visitors:** dürüst yaz — "New site launched October 2026; growing via SEO, ~32,000 indexed pages" (uydurma rakam yazma).
 - **How will you promote us? (İngilizce cevap):**
   > POD Pricing (podpricing.com) is an independent price comparison site for print-on-demand sellers. We list your products with live base costs next to other suppliers, and every listing links to your product page ("Go to store"). We also publish head-to-head supplier comparisons, "cheapest supplier" guides for each product type and a profit calculator for Etsy and Shopify sellers. Affiliate links would be used on those outbound links only; ranking is always by price and we disclose affiliate links in our privacy policy.
@@ -50,3 +50,12 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 - Sahte trafik/sahte bilgi verme.
 - Kupon/indirim kodu sitelerine bağlantı dağıtma (çoğu programda yasak).
 - Onay e-postası hello@podpricing.com → kullanıcının Gmail'ine gelir. Onaylanan her program için özel bağlantıyı (affiliate link veya ref kodu) Claude'a ilet.
+
+## Başvuru durumu
+| Üretici | Durum | Tarih | Not |
+|---|---|---|---|
+| Printful | İncelemede (2–3 iş günü) | 2026-10-06 | Panel → Partner program. "Tell us more" alanı en fazla 255 karakter. |
+| Printify | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://try.printify.com/m1r1uinkhza6 . Ürüne yönlendirme: ?url={ürün adresi} (test edildi). Panel: dash.partnerstack.com/printify/links |
+| Yoycol | Gönderildi (success) | 2026-10-06 | Panel → Affiliate Program. %10, 12 ay. |
+| Tapstitch | İncelemede (PartnerStack) | 2026-10-06 | Printify ile aynı PartnerStack hesabı. |
+| Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |

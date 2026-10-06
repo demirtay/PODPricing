@@ -15,7 +15,9 @@
 
                  ],
     "affiliate":  {
-
+                      "printify":  {
+                                       "template":  "https://try.printify.com/m1r1uinkhza6?url={url}"
+                                   }
                   },
     "cloudflareAnalyticsToken":  "8874dc4e26b5469db2882a45f0bd381b",
     "indexNowKey":  "20dc2bb474f5e3bdd507022190b38b96"

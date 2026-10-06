@@ -252,7 +252,7 @@ const LOCALES = {
         top: (o, p) => `${o} is ${p}% cheaper on the same products.`, none: s => `No supplier is cheaper than ${s} overall on shared products.`, details: 'details',
       },
       pidx: {
-        nav: 'POD Price Index', title: (m, s) => `POD Price Index (${m}): print-on-demand prices from ${s} suppliers`,
+        nav: 'POD Price Index', homeCta: gap => `The same product costs ${gap}% more at the most expensive supplier than at the cheapest. See the POD Price Index →`, title: (m, s) => `POD Price Index (${m}): print-on-demand prices from ${s} suppliers`,
         desc: (m, n, s, gap) => `Print-on-demand price report for ${m}: ${n} products from ${s} suppliers. For the same product, the most expensive supplier typically charges ${gap}% more than the cheapest.`,
         h1: m => `POD Price Index — ${m}`, upd: d => `Data as of ${d} · refreshed twice a day · free to cite`,
         kpi: ['Products tracked', 'Suppliers', 'Products sold by 3+ suppliers', 'Typical price gap'], gapP: 'Median difference between the cheapest and the most expensive supplier for the same product.',
@@ -379,7 +379,7 @@ const LOCALES = {
         top: (o, p) => `${o} aynı ürünlerde %${p} daha ucuz.`, none: s => `Ortak ürünlerde ${s}'dan genel olarak daha ucuz üretici yok.`, details: 'ayrıntı',
       },
       pidx: {
-        nav: 'POD Fiyat Endeksi', title: (m, s) => `POD Fiyat Endeksi (${m}): ${s} üreticinin print-on-demand fiyatları`,
+        nav: 'POD Fiyat Endeksi', homeCta: gap => `Aynı ürün en pahalı üreticide en ucuzdan %${gap} daha pahalı. POD Fiyat Endeksi'ni gör →`, title: (m, s) => `POD Fiyat Endeksi (${m}): ${s} üreticinin print-on-demand fiyatları`,
         desc: (m, n, s, gap) => `${m} print-on-demand fiyat raporu: ${s} üreticiden ${n} ürün. Aynı ürün için en pahalı üretici, en ucuzdan tipik olarak %${gap} daha fazla istiyor.`,
         h1: m => `POD Fiyat Endeksi — ${m}`, upd: d => `Veri tarihi: ${d} · günde iki kez yenilenir · kaynak göstererek kullanılabilir`,
         kpi: ['Takip edilen ürün', 'Üretici', '3+ üreticinin sattığı ürün', 'Tipik fiyat farkı'], gapP: 'Aynı ürün için en ucuz ve en pahalı üretici arasındaki ortanca fark.',
@@ -589,6 +589,7 @@ for (const lg of LANGS) {
     body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${esc(t.heroP(connected.length, n(products.length)))}</p>
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
+<a class="verdict" style="display:block" href="${href(P.index)}"><b>${esc(t.pidx.homeCta(Math.round(pidx.gap * 100)))}</b></a>
 ${H.ad('ust')}
 <h2>${t.catMenu}</h2><div class="catmenu">${groupsOrdered.map(catBox).join('')}</div>
 <div class="sec-head"><h2>${esc(t.guide.indexTitle)}</h2><a href="${href(P.guides)}">${t.seeAll} →</a></div><div class="chips">${[...guides.keys()].slice(0, 12).map(k => `<a class="chip" href="${href(P.guide(k))}"><b>${esc(L.type(k))}</b><span>${esc(t.from(fmt(guides.get(k).lo.baseMinor)))}</span></a>`).join('')}${altProviders.slice(0, 4).map(id => `<a class="chip" href="${href(P.alt(id))}"><b>${esc(t.alt.h1(provName(id)))}</b></a>`).join('')}</div>

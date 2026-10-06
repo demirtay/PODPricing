@@ -15,6 +15,9 @@
 
                  ],
     "affiliate":  {
+                      "printful":  {
+                                       "pathSuffix":  "/a/13321156:ce7d5bf657e4b7127304ccfd0a899062"
+                                   },
                       "printify":  {
                                        "template":  "https://try.printify.com/m1r1uinkhza6?url={url}"
                                    }

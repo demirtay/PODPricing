@@ -33,6 +33,8 @@ function affiliateUrl(providerId, url) {
   const a = cfg.affiliate?.[providerId];
   if (!a) return url;
   if (a.template) return a.template.replace('{url}', encodeURIComponent(url));
+  // yolun sonuna ek (Printful: /custom/product/938/a/KOD)
+  if (a.pathSuffix) { const u = new URL(url); u.pathname = u.pathname.replace(/\/$/, '') + a.pathSuffix; return u.toString(); }
   if (a.param) { const u = new URL(url); u.searchParams.set(a.param, a.value); return u.toString(); }
   return url;
 }

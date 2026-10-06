@@ -54,7 +54,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 ## Başvuru durumu
 | Üretici | Durum | Tarih | Not |
 |---|---|---|---|
-| Printful | İncelemede (2–3 iş günü) | 2026-10-06 | Panel → Partner program. "Tell us more" alanı en fazla 255 karakter. |
+| Printful | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://www.printful.com/a/13321156:ce7d5bf657e4b7127304ccfd0a899062 . Derin link: sayfa yolunun sonuna /a/KOD (ör. /custom/product/938/a/KOD; test edildi). Panel: printful.com/dashboard/affiliate/affiliate-link |
 | Printify | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://try.printify.com/m1r1uinkhza6 . Ürüne yönlendirme: ?url={ürün adresi} (test edildi). Panel: dash.partnerstack.com/printify/links |
 | Yoycol | Gönderildi (success) | 2026-10-06 | Panel → Affiliate Program. %10, 12 ay. |
 | Tapstitch | İncelemede (PartnerStack) | 2026-10-06 | Printify ile aynı PartnerStack hesabı. |

@@ -27,7 +27,8 @@ Print-on-demand üreticilerinin fiyat borsası. Cimri benzeri bir karşılaştı
 
 ```json
 "affiliate": {
-  "printful": { "template": "https://www.printful.com/a/KOD?redirect={url}" },
+  "printful": { "pathSuffix": "/a/KOD" },
+  "printify": { "template": "https://try.printify.com/KOD?url={url}" },
   "gelato":   { "param": "ref", "value": "KOD" }
 }
 ```

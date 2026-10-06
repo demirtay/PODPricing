@@ -258,7 +258,7 @@ def main():
         for g in groups:
             if g:
                 order.append(g.pop(0))
-    start = date.today() + timedelta(days=1)
+    start = date(2026, 10, 22)  # 1. seri 21 Ekim'de bitiyor
     with CSV_PATH.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["Title", "Media URL", "Pinterest board", "Thumbnail", "Description", "Link", "Publish date", "Keywords"])

@@ -184,8 +184,8 @@ def main():
         profit = profit[2:]
         if alts:
             order.append(alts.pop(0))
-    # ikinci serinin bitiminden sonra başla (o 21 Ekim'e kadar sürüyor)
-    start = date.today() + timedelta(days=16)
+    # ikinci serinin bitiminden sonra başla
+    start = date(2026, 11, 6)  # 2. seri 5 Kasım'da bitiyor
     with CSV_PATH.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["Title", "Media URL", "Pinterest board", "Thumbnail", "Description", "Link", "Publish date", "Keywords"])

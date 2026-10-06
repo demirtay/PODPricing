@@ -197,7 +197,7 @@ def main():
     for slug, kicker, title, items, foot, link, ptitle, pdesc in guides:
         list_pin(slug, kicker, title, items, foot)
         pins.append((f"guide-{slug}", ptitle[:100], pdesc[:500], link, "print on demand tips, Etsy seller tips, POD business, print on demand pricing"))
-    # karışık sıra; üçüncü seri 4 Kasım'da bitiyor, 5 Kasım'da başla
+    # karışık sıra; üçüncü serinin bitiminden sonra başla
     makers_ = [p for p in pins if p[0].startswith("maker-")]
     guides_ = [p for p in pins if p[0].startswith("guide-")]
     order = []
@@ -206,7 +206,7 @@ def main():
         makers_ = makers_[3:]
         if guides_:
             order.append(guides_.pop(0))
-    start = date.today() + timedelta(days=30)
+    start = date(2026, 11, 20)  # 3. seri 19 Kasım'da bitiyor
     with CSV_PATH.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["Title", "Media URL", "Pinterest board", "Thumbnail", "Description", "Link", "Publish date", "Keywords"])

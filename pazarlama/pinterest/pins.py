@@ -103,7 +103,7 @@ def main(limit):
         if len(made) >= limit:
             break
     # Pinterest toplu yükleme: günde 2 pin, yarından başlayarak (spam görünmesin)
-    start = date.today() + timedelta(days=1)
+    start = date(2026, 10, 7)  # takvim: 1. seri 7–21 Eki, 2. seri 22 Eki–5 Kas, 3. seri 6–19 Kas, 4. seri 20–24 Kas
     with CSV_PATH.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["Title", "Media URL", "Pinterest board", "Thumbnail", "Description", "Link", "Publish date", "Keywords"])

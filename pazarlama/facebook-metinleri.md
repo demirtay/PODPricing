@@ -99,3 +99,21 @@ Biri isterse yoruma ya da mesaja linki o zaman yaz.
 
 ## İlk yorum (kendi paylaşımına, isteğe bağlı)
 "Prices change daily, so the site always shows today's numbers. If your supplier is missing, tell me which one and I'll try to add it."
+
+---
+
+## Metin 7 — Hoodie sezonu / Gildan 18500 (genel POD grupları) — rakamlar 2026-10-07
+Hoodie season is here, so I checked what the exact same Gildan 18500 hoodie costs across 13 print-on-demand suppliers (base cost, print included, before shipping):
+
+• Cheapest: $11.32 (Yoycol), $12.00 (BurgerPrints)
+• Middle of the pack: $13.75–$18.00 (Printway, Merchize, Gearment)
+• Printify: $19.86 · Printful: $22.63
+• Most expensive: $24.95
+
+That's an $11+ difference per hoodie on the same blank. If you sell 100 hoodies this Q4, that's over $1,000 of margin.
+
+Full list, cheapest first (free, updates twice a day): podpricing.com/compare/gildan-18500
+
+What are you paying per hoodie right now?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)

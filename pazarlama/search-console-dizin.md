@@ -14,8 +14,7 @@ Google günde ~10 istek kabul ediyor. Search Console → üstteki "URL denetle" 
 - https://podpricing.com/profit-calculator/
 
 ## 2. gün — dizin ve rehber sayfaları
-- https://podpricing.com/cheapest/
-- https://podpricing.com/vs/
+(2026-10-07: /cheapest/ ve /vs/ gönderildi, sonra kota doldu; kalanlar aşağıda)
 - https://podpricing.com/alternatives/
 - https://podpricing.com/cheapest/hoodies/
 - https://podpricing.com/cheapest/mugs/

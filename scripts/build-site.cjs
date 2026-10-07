@@ -518,7 +518,10 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
   const canonical = SITE ? `<link rel="canonical" href="${esc(abs(rel))}">` : '';
   const alts = alt ? Object.entries(alt).map(([lg, r]) => `<link rel="alternate" hreflang="${lg}" href="${esc(SITE + href(r))}">`).join('') + (alt.en ? `<link rel="alternate" hreflang="x-default" href="${esc(SITE + href(alt.en))}">` : '') : '';
   // Cloudflare Web Analytics (çerezsiz ziyaretçi istatistiği): site.config.json cloudflareAnalyticsToken
-  const ads = (cfg.adsenseClient ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(cfg.adsenseClient)}" crossorigin="anonymous"></script>` : '')
+  // Otomatik reklamların sabit (anchor) reklamı üstte çıkınca bütün sayfayı aşağı itiyordu (CLS ~0.97);
+  // alta sabitlenince içeriğin üstüne biner, sayfa kaymaz.
+  const ads = (cfg.adsenseClient ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(cfg.adsenseClient)}" crossorigin="anonymous"></script>`
+    + `<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"${esc(cfg.adsenseClient)}",enable_page_level_ads:true,overlays:{bottom:true}});</script>` : '')
     + (cfg.cloudflareAnalyticsToken ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${esc(cfg.cloudflareAnalyticsToken)}"}'></script>` : '');
   const bc = crumbs ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${href(H.P.home)}">${t.home}</a>${crumbs.map(([c, h]) => h ? ` › <a href="${esc(h)}">${esc(c)}</a>` : ` › <span>${esc(c)}</span>`).join('')}</nav>` : '';
   const other = L.lang === 'en' ? 'tr' : 'en';

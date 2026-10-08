@@ -33,6 +33,7 @@ module.exports = {
   printgenie: def('https://www.printgenie.com/products', './printgenie.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   shirtigo: def('https://www.shirtigo.com/', './shirtigo.cjs'),
+  printmood: def('https://www.printmood.com/', './printmood.cjs'),
   inkpod: def('https://www.inkpodfulfillment.com/', './inkpod.cjs'),
   pengine: def('https://www.pengine.io/', './pengine.cjs'),
   printdropper: def('https://printdropper.com/products', './printdropper.cjs'),

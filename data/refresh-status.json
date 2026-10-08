@@ -29,6 +29,7 @@
     "printgenie",
     "lumaprints",
     "shirtigo",
+    "printmood",
     "inkpod",
     "pengine",
     "printdropper",
@@ -92,6 +93,7 @@
     "alerioprint",
     "podhut",
     "dogediy",
+    "teelabs",
     "candlebuilders",
     "printy6",
     "interestprint",
@@ -335,6 +337,14 @@
       "productCount": 0,
       "nextCheck": 0
     },
+    "printmood": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
     "inkpod": {
       "state": "idle",
       "intervalMinutes": 30,
@@ -456,13 +466,12 @@
       "nextCheck": 0
     },
     "customizingbox": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:43:30.495Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 1275,
-      "nextCheck": 1791454192887,
-      "startedAt": "2026-10-08T09:39:52.887Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "muzefab": {
       "state": "idle",
@@ -839,6 +848,15 @@
       "lastError": null,
       "productCount": 0,
       "nextCheck": 0
+    },
+    "teelabs": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-08T09:59:29.379Z",
+      "lastError": null,
+      "productCount": 45,
+      "nextCheck": 1791455364136,
+      "startedAt": "2026-10-08T09:59:24.136Z"
     },
     "candlebuilders": {
       "state": "idle",

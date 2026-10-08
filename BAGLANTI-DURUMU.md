@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-08 09:34 UTC · 99/155 üretici bağlı · 34.563 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 09:59 UTC · 101/157 üretici bağlı · 34.691 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -13,7 +13,7 @@ Güncelleme: 2026-10-08 09:34 UTC · 99/155 üretici bağlı · 34.563 fiyatlı 
 | Yoycol | 1541 | complete | 2026-10-04 |
 | Inkedjoy | 1463 | full-public-catalog | 2026-10-04 |
 | PrintKK | 1420 | verified-product-details | 2026-10-04 |
-| Customizingbox | 1276 | full-public-catalog | 2026-10-08 |
+| Customizingbox | 1275 | full-public-catalog | 2026-10-08 |
 | Tapstitch | 1244 | full-public-catalog | 2026-10-04 |
 | PeaPrint | 1216 | full-public-api-catalog | 2026-10-04 |
 | MerchFarm | 1107 | public-storefront | 2026-10-04 |
@@ -63,6 +63,7 @@ Güncelleme: 2026-10-08 09:34 UTC · 99/155 üretici bağlı · 34.563 fiyatlı 
 | Pengine | 98 | full-public-catalog | 2026-10-08 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
 | Merchr | 88 | public-storefront | 2026-10-08 |
+| Printmood | 84 | full-public-catalog | 2026-10-08 |
 | Printonic | 84 | full-public-catalog | 2026-10-08 |
 | JumboDTG | 82 | public-storefront | 2026-10-04 |
 | POD Hut | 80 | public-storefront | 2026-10-08 |
@@ -79,6 +80,7 @@ Güncelleme: 2026-10-08 09:34 UTC · 99/155 üretici bağlı · 34.563 fiyatlı 
 | MarketPrint | 53 | full-public-catalog | 2026-10-05 |
 | NovaTomato | 51 | full-public-catalog | 2026-10-04 |
 | Vivia Print | 48 | full-public-catalog | 2026-10-08 |
+| Teelabs | 45 | public-storefront | 2026-10-08 |
 | Ogo | 42 | public-product-pages | 2026-10-04 |
 | Ecomerch | 40 | full-public-catalog | 2026-10-05 |
 | TshirtGang | 38 | public-product-pages | 2026-10-04 |

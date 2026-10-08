@@ -28,6 +28,9 @@
     "ecomerch",
     "printgenie",
     "lumaprints",
+    "shirtigo",
+    "peecho",
+    "blurb",
     "simpleprint",
     "wooacry",
     "whcc",
@@ -65,8 +68,8 @@
     "merchr",
     "blinkstore",
     "blanka",
-    "miamisublimation",
     "stationeryhq",
+    "candlebuilders",
     "printy6",
     "interestprint",
     "artsadd",
@@ -294,6 +297,31 @@
       "nextCheck": 0
     },
     "lumaprints": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "shirtigo": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "peecho": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-08T08:22:44.690Z",
+      "lastError": null,
+      "productCount": 11,
+      "nextCheck": 1791449563287,
+      "startedAt": "2026-10-08T08:22:43.287Z"
+    },
+    "blurb": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,
@@ -598,6 +626,14 @@
       "nextCheck": 0
     },
     "stationeryhq": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "candlebuilders": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,

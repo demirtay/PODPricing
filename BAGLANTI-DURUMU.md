@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-08 07:51 UTC · 72/128 üretici bağlı · 31.672 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -42,6 +42,7 @@ Güncelleme: 2026-10-08 07:51 UTC · 72/128 üretici bağlı · 31.672 fiyatlı 
 | Mia Merchandise | 148 | public-storefront | 2026-10-04 |
 | Digital On Demand | 145 | public-storefront | 2026-10-04 |
 | Teelaunch | 143 | public-product-sitemap | 2026-10-04 |
+| Shirtigo | 142 | full-public-catalog | 2026-10-08 |
 | Printy6 | 141 | public-paginated-catalog | 2026-10-04 |
 | AOP+ | 131 | public-storefront | 2026-10-03 |
 | Artelo | 128 | full-public-catalog | 2026-10-05 |
@@ -75,6 +76,9 @@ Güncelleme: 2026-10-08 07:51 UTC · 72/128 üretici bağlı · 31.672 fiyatlı 
 | Papello | 28 | verified-public-product-pages | 2026-10-04 |
 | SuperFastPOD | 27 | public-storefront | 2026-10-04 |
 | Podbase | 24 | public-product-pages | 2026-10-04 |
+| Candle Builders | 11 | public-storefront | 2026-10-08 |
+| Peecho | 11 | full-public-catalog | 2026-10-08 |
+| Blurb | 5 | full-public-catalog | 2026-10-08 |
 | OnePrint | 4 | full-public-catalog | 2026-10-04 |
 | Rakiline | 4 | public-storefront | 2026-10-04 |
 | GoQuadra | 2 | public-storefront | 2026-10-04 |

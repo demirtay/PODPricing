@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-08T08:15:40.249Z",
+  "reportedTotal": 144,
+  "imported": 142,
+  "skipped": [
+    {
+      "slug": "organic-baby-bodysuit",
+      "reason": "Başlık veya görsel yok"
+    },
+    {
+      "slug": "organic-jogger-pants",
+      "reason": "Başlık veya görsel yok"
+    }
+  ]
+}

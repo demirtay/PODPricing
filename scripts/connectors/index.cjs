@@ -32,6 +32,10 @@ module.exports = {
   ...Object.fromEntries(['promio', 'ecomerch'].map(id => [id, { base: require('./promio-platform.cjs').SITES[id].base + '/products', load: () => ({ collect: progress => require('./promio-platform.cjs').collect(id, progress) }) }])),
   printgenie: def('https://www.printgenie.com/products', './printgenie.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
+  shirtigo: def('https://www.shirtigo.com/', './shirtigo.cjs'),
+  ...Object.fromEntries(Object.entries(require('./pricing-cards.cjs').SITES).map(([id, s]) => [id, {
+    base: new URL(s.page).origin + '/', load: () => ({ collect: progress => require('./pricing-cards.cjs').collect(id, progress) }),
+  }])),
   ...Object.fromEntries(Object.entries(jsonld).map(([id, base]) => [id, {
     base, load: () => ({ collect: progress => require('./jsonld-sitemap.cjs').collect(id, progress) }),
   }])),

@@ -29,12 +29,16 @@
     "printgenie",
     "lumaprints",
     "shirtigo",
+    "pengine",
+    "printdropper",
     "peecho",
     "blurb",
     "simpleprint",
     "wooacry",
     "whcc",
     "fourthwall",
+    "customizingbox",
+    "muzefab",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -69,6 +73,8 @@
     "blinkstore",
     "blanka",
     "stationeryhq",
+    "oowia",
+    "backstoryprints",
     "candlebuilders",
     "printy6",
     "interestprint",
@@ -312,14 +318,29 @@
       "productCount": 0,
       "nextCheck": 0
     },
-    "peecho": {
-      "state": "ready",
+    "pengine": {
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T08:22:44.690Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 11,
-      "nextCheck": 1791449563287,
-      "startedAt": "2026-10-08T08:22:43.287Z"
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "printdropper": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "peecho": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
     },
     "blurb": {
       "state": "idle",
@@ -360,6 +381,23 @@
       "lastError": null,
       "productCount": 0,
       "nextCheck": 0
+    },
+    "customizingbox": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "muzefab": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-08T09:00:52.653Z",
+      "lastError": null,
+      "productCount": 143,
+      "nextCheck": 1791451850076,
+      "startedAt": "2026-10-08T09:00:50.076Z"
     },
     "printdoors": {
       "state": "idle",
@@ -626,6 +664,22 @@
       "nextCheck": 0
     },
     "stationeryhq": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "oowia": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "backstoryprints": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,

@@ -439,12 +439,12 @@
     {
       "id": "decoplate",
       "name": "DecoPlate",
-      "homepage": "https://www.decoplate.com"
+      "homepage": "https://deco-plate.com"
     },
     {
       "id": "fiberart",
       "name": "FiberArt",
-      "homepage": "https://fiberartondemand.com"
+      "homepage": "https://www.fiberart.com"
     },
     {
       "id": "fotocadeau",
@@ -534,7 +534,7 @@
     {
       "id": "crystald",
       "name": "Crystal D",
-      "homepage": "https://www.crystald.com"
+      "homepage": "https://www.crystal-d.com"
     },
     {
       "id": "iconecom",
@@ -570,6 +570,1103 @@
       "id": "superfriday",
       "name": "SuperFriday",
       "homepage": "https://superfriday.com"
+    },
+    {
+      "id": "oowia",
+      "name": "OOWIA",
+      "homepage": "https://www.oowia.com"
+    },
+    {
+      "id": "printwear",
+      "name": "Printwear",
+      "homepage": "https://www.printwear.in"
+    },
+    {
+      "id": "printship",
+      "name": "Print Ship",
+      "homepage": "https://printship.in"
+    },
+    {
+      "id": "eprintcare",
+      "name": "E-Print Care",
+      "homepage": "https://www.eprintcare.com"
+    },
+    {
+      "id": "tshirtloot",
+      "name": "TShirt Loot",
+      "homepage": "https://www.tshirtloot.com"
+    },
+    {
+      "id": "bubbleshade",
+      "name": "BubbleShade",
+      "homepage": "https://bubbleshade.in"
+    },
+    {
+      "id": "podkart",
+      "name": "PODkart",
+      "homepage": "https://podkart.in"
+    },
+    {
+      "id": "yoode",
+      "name": "Yoode",
+      "homepage": "https://yoode.in"
+    },
+    {
+      "id": "teelabs",
+      "name": "Teelabs",
+      "homepage": "https://teelabs.in"
+    },
+    {
+      "id": "spreadconnectcom",
+      "name": "Spreadconnect",
+      "homepage": "https://www.spreadconnect.com"
+    },
+    {
+      "id": "helloprintconnect",
+      "name": "HelloPrint Connect",
+      "homepage": "https://www.helloprint.com/connect"
+    },
+    {
+      "id": "yrlive",
+      "name": "YR",
+      "homepage": "https://www.yr.com"
+    },
+    {
+      "id": "theprintbar",
+      "name": "The Print Bar",
+      "homepage": "https://theprintbar.com"
+    },
+    {
+      "id": "teejunction",
+      "name": "Tee Junction",
+      "homepage": "https://teejunction.com.au"
+    },
+    {
+      "id": "dropshirt",
+      "name": "Dropshirt",
+      "homepage": "https://dropshirt.com.au"
+    },
+    {
+      "id": "printdropexpress",
+      "name": "Printdrop Express",
+      "homepage": "https://printdropexpress.com"
+    },
+    {
+      "id": "printicks",
+      "name": "Printicks",
+      "homepage": "https://printicks.com.au"
+    },
+    {
+      "id": "customizingbox",
+      "name": "Customizingbox",
+      "homepage": "https://www.customizingbox.com"
+    },
+    {
+      "id": "dropshipcn",
+      "name": "DropshipCN",
+      "homepage": "https://www.dropshipcn.com"
+    },
+    {
+      "id": "fourover",
+      "name": "4over Trade Printer",
+      "homepage": "https://4over.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "airwaves",
+      "name": "Air Waves",
+      "homepage": "https://airwavesinc.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "artsycouture",
+      "name": "Artsy Couture",
+      "homepage": "https://www.artsycouture.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "backstoryprints",
+      "name": "BackStoryPrints",
+      "homepage": "https://backstoryprints.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "candlefy",
+      "name": "Candlefy",
+      "homepage": "https://candlefy.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "couturebyikigai",
+      "name": "Couture By Ikigai",
+      "homepage": "https://couturebyikigai.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "custom3dphotos",
+      "name": "Custom 3D Photos",
+      "homepage": "https://www.custom3dphotos.co.uk",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "digitalab",
+      "name": "Digitalab",
+      "homepage": "https://www.digitalab.co.uk",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "dimona",
+      "name": "Dimona",
+      "homepage": "https://www.dimonatee.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "ezprints",
+      "name": "Ez Prints",
+      "homepage": "https://www.ezprints.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "fulfillmentamerica",
+      "name": "Fulfillment America",
+      "homepage": "http://www.fulfillmentamerica.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "gudink",
+      "name": "Gudink",
+      "homepage": "https://gudink.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "harrier",
+      "name": "Harrier",
+      "homepage": "https://www.theharriergroup.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "imagineyourphotos",
+      "name": "Imagine Your Photos",
+      "homepage": "https://www.iypstore.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "inkblotink",
+      "name": "InkBlot.Ink",
+      "homepage": "https://inkblot.ink",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "instafreshener",
+      "name": "Instafreshener",
+      "homepage": "https://www.instafreshener.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "mpodx",
+      "name": "Mpodx",
+      "homepage": "https://mpodx.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "muzefab",
+      "name": "Muzefab",
+      "homepage": "https://muzefab.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "ninjatransfers",
+      "name": "Ninja Transfers",
+      "homepage": "https://ninjatransfers.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "onlineprintingspain",
+      "name": "Online Printing Spain",
+      "homepage": "https://onlineprintingspain.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "printonami",
+      "name": "Printonami",
+      "homepage": "https://printonami.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "printram",
+      "name": "Printram",
+      "homepage": "https://printram.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "shipsage",
+      "name": "ShipSage",
+      "homepage": "https://shipsage.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "stareditions",
+      "name": "Star Editions",
+      "homepage": "https://www.stareditions.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "styriashirts",
+      "name": "Styria Shirts",
+      "homepage": "https://styriashirts.eu",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "taylor",
+      "name": "Taylor",
+      "homepage": "https://www.taylor.com",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "texprint",
+      "name": "texprint",
+      "homepage": "https://texprint.se",
+      "directorySource": "printondemandbusiness.com"
+    },
+    {
+      "id": "hypersku",
+      "name": "HyperSKU",
+      "homepage": "https://hypersku.com",
+      "directorySource": "apps.shopify.com/hypersku"
+    },
+    {
+      "id": "ninjaprintondemand",
+      "name": "NinjaPOD",
+      "homepage": "https://ninjaprintondemand.com",
+      "directorySource": "apps.shopify.com/ninja-pod"
+    },
+    {
+      "id": "dropsure",
+      "name": "DropSure",
+      "homepage": "https://dropsure.com",
+      "directorySource": "apps.shopify.com/dropsure"
+    },
+    {
+      "id": "branvas",
+      "name": "Branvas Private Label Jewelry",
+      "homepage": "https://branvas.com",
+      "directorySource": "apps.shopify.com/branvas"
+    },
+    {
+      "id": "kochprint",
+      "name": "Print4You",
+      "homepage": "https://kochprint.de",
+      "directorySource": "apps.shopify.com/print4you"
+    },
+    {
+      "id": "cloprod",
+      "name": "Cloprod",
+      "homepage": "https://cloprod.com",
+      "directorySource": "apps.shopify.com/cloprod"
+    },
+    {
+      "id": "knitwise",
+      "name": "Knitwise",
+      "homepage": "https://knitwise.com",
+      "directorySource": "apps.shopify.com/knitwise-knit-on-demand-dropshipping"
+    },
+    {
+      "id": "unitee",
+      "name": "Unitee",
+      "homepage": "https://unitee.in",
+      "directorySource": "apps.shopify.com/unitee-print-on-demand"
+    },
+    {
+      "id": "printumo",
+      "name": "Printumo",
+      "homepage": "https://printumo.com",
+      "directorySource": "apps.shopify.com/printumo-art-print-on-demand"
+    },
+    {
+      "id": "dreamprint",
+      "name": "DreamPrint",
+      "homepage": "https://dream-print.de",
+      "directorySource": "apps.shopify.com/dreamprint-print-on-demand"
+    },
+    {
+      "id": "artiststore",
+      "name": "Artiststore Print on Demand",
+      "homepage": "https://artiststore.com",
+      "directorySource": "apps.shopify.com/artiststore-1"
+    },
+    {
+      "id": "catkissfish",
+      "name": "CatKissFish All",
+      "homepage": "https://catkissfish.com",
+      "directorySource": "apps.shopify.com/cat-kiss-fish"
+    },
+    {
+      "id": "printondemandindia",
+      "name": "Print On Demand India",
+      "homepage": "https://printondemandindia.in",
+      "directorySource": "apps.shopify.com/print_on_demand"
+    },
+    {
+      "id": "qpmarketnetwork",
+      "name": "QPMN Print",
+      "homepage": "https://qpmarketnetwork.com",
+      "directorySource": "apps.shopify.com/qp-market-network"
+    },
+    {
+      "id": "mydesigns",
+      "name": "MyDesigns",
+      "homepage": "https://mydesigns.io",
+      "directorySource": "apps.shopify.com/mydesigns-io"
+    },
+    {
+      "id": "senhub",
+      "name": "SenHub AI Print on Demand POD",
+      "homepage": "https://senhub.com",
+      "directorySource": "apps.shopify.com/senhub-global-pod"
+    },
+    {
+      "id": "podpluser",
+      "name": "PODpluser",
+      "homepage": "https://podpluser.com",
+      "directorySource": "apps.shopify.com/podpluser"
+    },
+    {
+      "id": "boardpusher",
+      "name": "BoardPusher App",
+      "homepage": "https://boardpusher.com",
+      "directorySource": "apps.shopify.com/boardpusher-custom-skateboards"
+    },
+    {
+      "id": "casparcreate",
+      "name": "CasparCreate",
+      "homepage": "https://casparcreate.com",
+      "directorySource": "apps.shopify.com/casparcreate"
+    },
+    {
+      "id": "printeezondemand",
+      "name": "Printeez On Demand",
+      "homepage": "https://printeezondemand.com",
+      "directorySource": "apps.shopify.com/printeez-on-demand"
+    },
+    {
+      "id": "viaglamour",
+      "name": "viaGlamour Cosmetics Lab",
+      "homepage": "https://viaglamour.com",
+      "directorySource": "apps.shopify.com/viaglamour-start-your-makeup-line"
+    },
+    {
+      "id": "printswellfulfillment",
+      "name": "PrintsWell",
+      "homepage": "https://printswellfulfillment.com",
+      "directorySource": "apps.shopify.com/printswell-fulfillment"
+    },
+    {
+      "id": "knitup",
+      "name": "Knitup",
+      "homepage": "https://knitup.io",
+      "directorySource": "apps.shopify.com/knitup"
+    },
+    {
+      "id": "mademine",
+      "name": "MadeMine",
+      "homepage": "https://mademine.com",
+      "directorySource": "apps.shopify.com/mademine-dropshipping-app"
+    },
+    {
+      "id": "pengine",
+      "name": "Pengine",
+      "homepage": "https://pengine.io",
+      "directorySource": "apps.shopify.com/pengine"
+    },
+    {
+      "id": "dashery",
+      "name": "Dashery",
+      "homepage": "https://dashery.com",
+      "directorySource": "apps.shopify.com/dashery"
+    },
+    {
+      "id": "photopress",
+      "name": "Photopress",
+      "homepage": "https://photopress.app",
+      "directorySource": "apps.shopify.com/photopress"
+    },
+    {
+      "id": "deinemanufaktur",
+      "name": "Print Wallpaper Pro",
+      "homepage": "https://deine-manufaktur.de",
+      "directorySource": "apps.shopify.com/print-wallpaper-pro"
+    },
+    {
+      "id": "corporatemerch",
+      "name": "Corporate Merch",
+      "homepage": "https://corporatemerch.com",
+      "directorySource": "apps.shopify.com/corporate-merch"
+    },
+    {
+      "id": "cultivateprint",
+      "name": "Cultivate Print",
+      "homepage": "https://cultivateprint.com",
+      "directorySource": "apps.shopify.com/cultivate-print"
+    },
+    {
+      "id": "wannabe",
+      "name": "Wannabe",
+      "homepage": "https://wanna-be.io",
+      "directorySource": "apps.shopify.com/wannabe"
+    },
+    {
+      "id": "ceeprinto",
+      "name": "CeePrinto",
+      "homepage": "https://ceeprinto.com",
+      "directorySource": "apps.shopify.com/ceeprinto"
+    },
+    {
+      "id": "23point5",
+      "name": "23point5",
+      "homepage": "https://23point5.com",
+      "directorySource": "apps.shopify.com/23point5"
+    },
+    {
+      "id": "merchfactory",
+      "name": "Merch Factory",
+      "homepage": "https://merchfactory.in",
+      "directorySource": "apps.shopify.com/merch-factory-print-on-demand"
+    },
+    {
+      "id": "brandsky",
+      "name": "Brandsky",
+      "homepage": "https://brandsky.io",
+      "directorySource": "apps.shopify.com/brandsky-print-on-demand"
+    },
+    {
+      "id": "odemly",
+      "name": "Odemly",
+      "homepage": "https://odemly.com",
+      "directorySource": "apps.shopify.com/odemly"
+    },
+    {
+      "id": "printonic",
+      "name": "Printonic",
+      "homepage": "https://printonic.com",
+      "directorySource": "apps.shopify.com/printonic"
+    },
+    {
+      "id": "westernprintappproduction",
+      "name": "westernprint POD",
+      "homepage": "https://westernprint-app-production.up.railway.app",
+      "directorySource": "apps.shopify.com/pod-westerprint"
+    },
+    {
+      "id": "jubilee",
+      "name": "Jubile",
+      "homepage": "https://jubilee.beauty",
+      "directorySource": "apps.shopify.com/jubilee"
+    },
+    {
+      "id": "printmind",
+      "name": "Printmind",
+      "homepage": "https://printmind.de",
+      "directorySource": "apps.shopify.com/printmind"
+    },
+    {
+      "id": "promiseapparel",
+      "name": "PROMISE POD",
+      "homepage": "https://promiseapparel.secure-decoration.com",
+      "directorySource": "apps.shopify.com/promise-pod"
+    },
+    {
+      "id": "en",
+      "name": "Doboxa Dropshipping Print App",
+      "homepage": "https://en.doboxa.biz",
+      "directorySource": "apps.shopify.com/doboxa-dropshipping-print-app"
+    },
+    {
+      "id": "beautyboss",
+      "name": "BeautyBoss",
+      "homepage": "https://beautyboss.com",
+      "directorySource": "apps.shopify.com/beautyboss"
+    },
+    {
+      "id": "live",
+      "name": "Live Ink",
+      "homepage": "https://live.ink",
+      "directorySource": "apps.shopify.com/live-ink"
+    },
+    {
+      "id": "suplify",
+      "name": "Suplify",
+      "homepage": "https://suplify.app",
+      "directorySource": "apps.shopify.com/suplify"
+    },
+    {
+      "id": "portalprints",
+      "name": "PortL",
+      "homepage": "https://portalprints.com",
+      "directorySource": "apps.shopify.com/portalprints"
+    },
+    {
+      "id": "wazp",
+      "name": "WAZP+ On Demand 3D Printing",
+      "homepage": "https://wazp.io",
+      "directorySource": "apps.shopify.com/wazpplus"
+    },
+    {
+      "id": "upthewall",
+      "name": "Up The Wall",
+      "homepage": "https://upthewall.co",
+      "directorySource": "apps.shopify.com/up-the-wall"
+    },
+    {
+      "id": "youdraw",
+      "name": "YouDraw",
+      "homepage": "https://youdraw.com.br",
+      "directorySource": "apps.shopify.com/youdraw"
+    },
+    {
+      "id": "printleteg",
+      "name": "Printlet",
+      "homepage": "https://printleteg.com",
+      "directorySource": "apps.shopify.com/printlet-print-on-demand"
+    },
+    {
+      "id": "octiloapps",
+      "name": "Octilo",
+      "homepage": "https://octiloapps.com",
+      "directorySource": "apps.shopify.com/octilo-print-on-demand"
+    },
+    {
+      "id": "pur3pod",
+      "name": "pur3pod",
+      "homepage": "https://pur3pod.com",
+      "directorySource": "apps.shopify.com/pur3pod-app"
+    },
+    {
+      "id": "viviaprint",
+      "name": "Vivia Print",
+      "homepage": "https://viviaprint.com",
+      "directorySource": "apps.shopify.com/viviaprint"
+    },
+    {
+      "id": "fullyshipd",
+      "name": "FullyShipd",
+      "homepage": "https://fullyshipd.com",
+      "directorySource": "apps.shopify.com/fullyshipd"
+    },
+    {
+      "id": "printiturk",
+      "name": "Printiturk",
+      "homepage": "https://printiturk.com",
+      "directorySource": "apps.shopify.com/printiturk-entegrasyon"
+    },
+    {
+      "id": "youtu",
+      "name": "Factory 1",
+      "homepage": "https://youtu.be",
+      "directorySource": "apps.shopify.com/factory1"
+    },
+    {
+      "id": "tunetoo",
+      "name": "Tunetoo Print On Demand",
+      "homepage": "https://tunetoo.co.uk",
+      "directorySource": "apps.shopify.com/tunetoo-1"
+    },
+    {
+      "id": "whitewall",
+      "name": "WhiteWall",
+      "homepage": "https://whitewall.com",
+      "directorySource": "apps.shopify.com/whitewall"
+    },
+    {
+      "id": "printitle",
+      "name": "Printitle",
+      "homepage": "https://printitle.com",
+      "directorySource": "apps.shopify.com/printitle-print-on-demand"
+    },
+    {
+      "id": "publifyproductionb1c4",
+      "name": "Publify",
+      "homepage": "https://publify-production-b1c4.up.railway.app",
+      "directorySource": "apps.shopify.com/publify"
+    },
+    {
+      "id": "northpark",
+      "name": "North",
+      "homepage": "https://northpark.design",
+      "directorySource": "apps.shopify.com/north-ai-print-on-demand"
+    },
+    {
+      "id": "podbul",
+      "name": "Podbul",
+      "homepage": "https://podbul.com",
+      "directorySource": "apps.shopify.com/podbul-print-on-demand"
+    },
+    {
+      "id": "skyou",
+      "name": "SKYOU",
+      "homepage": "https://skyou.com",
+      "directorySource": "apps.shopify.com/skyou"
+    },
+    {
+      "id": "mixam",
+      "name": "Mixam",
+      "homepage": "https://mixam.co.uk",
+      "directorySource": "apps.shopify.com/mixam"
+    },
+    {
+      "id": "inkpodfulfillment",
+      "name": "Ink POD",
+      "homepage": "https://inkpodfulfillment.com",
+      "directorySource": "apps.shopify.com/wowfulfillment-app"
+    },
+    {
+      "id": "yourdesignstore",
+      "name": "Your Design",
+      "homepage": "https://yourdesignstore.in",
+      "directorySource": "apps.shopify.com/your-design-print-on-demand"
+    },
+    {
+      "id": "portal",
+      "name": "artidomo Print on Demand DE",
+      "homepage": "https://portal.artidomo.eu",
+      "directorySource": "apps.shopify.com/artidomo-connector-public"
+    },
+    {
+      "id": "dtftransfers",
+      "name": "DTF On Demand & Dropshipping",
+      "homepage": "https://dtftransfers.com",
+      "directorySource": "apps.shopify.com/dtf-transfers-on-demand-and-dropshipping"
+    },
+    {
+      "id": "myfolie",
+      "name": "CustomBee",
+      "homepage": "https://myfolie.com",
+      "directorySource": "apps.shopify.com/custombee-print-on-demand"
+    },
+    {
+      "id": "todify",
+      "name": "Todify",
+      "homepage": "https://todify.ma",
+      "directorySource": "apps.shopify.com/todify-1"
+    },
+    {
+      "id": "slaitepod",
+      "name": "Slaite POD",
+      "homepage": "https://slaitepod.com",
+      "directorySource": "apps.shopify.com/slaite-pod"
+    },
+    {
+      "id": "a61partner",
+      "name": "A61 Partner",
+      "homepage": "https://a61partner.de",
+      "directorySource": "apps.shopify.com/a61-dropshipping"
+    },
+    {
+      "id": "initdropship",
+      "name": "In.It Dropship",
+      "homepage": "https://initdropship.co.za",
+      "directorySource": "apps.shopify.com/in-it-apparel"
+    },
+    {
+      "id": "pixels",
+      "name": "Pixels",
+      "homepage": "https://pixels.com",
+      "directorySource": "apps.shopify.com/pixels"
+    },
+    {
+      "id": "turbinewms",
+      "name": "Turbine",
+      "homepage": "https://turbinewms.com",
+      "directorySource": "apps.shopify.com/turbine"
+    },
+    {
+      "id": "login",
+      "name": "MerchLoop",
+      "homepage": "https://login.merchloop.com",
+      "directorySource": "apps.shopify.com/merchloop"
+    },
+    {
+      "id": "badanimal",
+      "name": "Universal POD",
+      "homepage": "https://bad-animal.com",
+      "directorySource": "apps.shopify.com/universal-pod"
+    },
+    {
+      "id": "orderlypod",
+      "name": "Orderly",
+      "homepage": "https://orderlypod.com",
+      "directorySource": "apps.shopify.com/orderly-print-on-demand"
+    },
+    {
+      "id": "pro",
+      "name": "TeeAllover",
+      "homepage": "https://pro.teeallover.com",
+      "directorySource": "apps.shopify.com/teeallover"
+    },
+    {
+      "id": "paintory",
+      "name": "paintory：オンデマンド印刷",
+      "homepage": "https://paintory.com",
+      "directorySource": "apps.shopify.com/paintory"
+    },
+    {
+      "id": "arttoframe",
+      "name": "ArtToFrame",
+      "homepage": "https://arttoframe.com",
+      "directorySource": "apps.shopify.com/arttoframe"
+    },
+    {
+      "id": "printlooper",
+      "name": "Printlooper",
+      "homepage": "https://printlooper.com",
+      "directorySource": "apps.shopify.com/printlooper"
+    },
+    {
+      "id": "swaggin",
+      "name": "Swaggin",
+      "homepage": "https://swaggin.com",
+      "directorySource": "apps.shopify.com/swaggin-print-on-demand"
+    },
+    {
+      "id": "dtguk",
+      "name": "DTGUK",
+      "homepage": "https://dtguk.com",
+      "directorySource": "apps.shopify.com/dtguk"
+    },
+    {
+      "id": "snapwear",
+      "name": "Snapwear",
+      "homepage": "https://snapwear.pro",
+      "directorySource": "apps.shopify.com/snapwear-pro"
+    },
+    {
+      "id": "wiltee",
+      "name": "Wiltee",
+      "homepage": "https://wiltee.com",
+      "directorySource": "apps.shopify.com/wiltee-print-on-demand"
+    },
+    {
+      "id": "merchmake",
+      "name": "Merchmake",
+      "homepage": "https://merchmake.com",
+      "directorySource": "apps.shopify.com/merchmake-1"
+    },
+    {
+      "id": "quadramarketplace",
+      "name": "Quadra",
+      "homepage": "https://quadramarketplace.com",
+      "directorySource": "apps.shopify.com/quadra-marketplace"
+    },
+    {
+      "id": "reserva",
+      "name": "Reserva INK",
+      "homepage": "https://reserva.ink",
+      "directorySource": "apps.shopify.com/reserva-ink"
+    },
+    {
+      "id": "betapi",
+      "name": "Printlabs",
+      "homepage": "https://betapi.print-labs.de",
+      "directorySource": "apps.shopify.com/printlabs"
+    },
+    {
+      "id": "simplyframed",
+      "name": "Simply Framed",
+      "homepage": "https://simplyframed.com",
+      "directorySource": "apps.shopify.com/simply-framed-print-frame"
+    },
+    {
+      "id": "usprintfactory",
+      "name": "U.S. PRINT FACTORY (USPF)",
+      "homepage": "https://usprintfactory.com",
+      "directorySource": "apps.shopify.com/us-print-factory"
+    },
+    {
+      "id": "jewlrway",
+      "name": "JewlrWay",
+      "homepage": "https://jewlrway.com",
+      "directorySource": "apps.shopify.com/jewlrway"
+    },
+    {
+      "id": "printpartners",
+      "name": "Print Partners",
+      "homepage": "https://printpartners.com",
+      "directorySource": "apps.shopify.com/print-partners"
+    },
+    {
+      "id": "subforma",
+      "name": "Subforma APP",
+      "homepage": "https://subforma.com",
+      "directorySource": "apps.shopify.com/subforma-app"
+    },
+    {
+      "id": "mod",
+      "name": "MerchCamp",
+      "homepage": "https://mod.merch.camp",
+      "directorySource": "apps.shopify.com/merchcamp"
+    },
+    {
+      "id": "yourdesign",
+      "name": "YourDesign",
+      "homepage": "https://yourdesign.co.uk",
+      "directorySource": "apps.shopify.com/yourdesign"
+    },
+    {
+      "id": "brandcanyon",
+      "name": "Brand Canyon",
+      "homepage": "https://brandcanyon.de",
+      "directorySource": "apps.shopify.com/brand-canyon"
+    },
+    {
+      "id": "alerioprint",
+      "name": "Alerio Print",
+      "homepage": "https://alerioprint.com",
+      "directorySource": "apps.shopify.com/api-bridge"
+    },
+    {
+      "id": "patternshops",
+      "name": "Pattern Shops",
+      "homepage": "https://patternshops.com",
+      "directorySource": "apps.shopify.com/unlimited-patterns"
+    },
+    {
+      "id": "everpress",
+      "name": "Everpress",
+      "homepage": "https://everpress.com",
+      "directorySource": "apps.shopify.com/everpress"
+    },
+    {
+      "id": "printingbrands",
+      "name": "Printing Brands",
+      "homepage": "https://printingbrands.de",
+      "directorySource": "apps.shopify.com/printing-brands"
+    },
+    {
+      "id": "print",
+      "name": "Print.com on demand",
+      "homepage": "https://print.com",
+      "directorySource": "apps.shopify.com/print-com"
+    },
+    {
+      "id": "merchpanda",
+      "name": "Merch Panda",
+      "homepage": "https://merchpanda.co.uk",
+      "directorySource": "apps.shopify.com/merch-panda"
+    },
+    {
+      "id": "printhouse",
+      "name": "Printhouse.io",
+      "homepage": "https://printhouse.io",
+      "directorySource": "apps.shopify.com/printhouse-io"
+    },
+    {
+      "id": "theprintnation",
+      "name": "THE PRINT NATION",
+      "homepage": "https://theprintnation.net",
+      "directorySource": "apps.shopify.com/printnation"
+    },
+    {
+      "id": "icystudios",
+      "name": "Icy Studios",
+      "homepage": "https://icystudios.com",
+      "directorySource": "apps.shopify.com/icy-studios"
+    },
+    {
+      "id": "pixelmade",
+      "name": "Pixelmade",
+      "homepage": "https://pixelmade.ai",
+      "directorySource": "apps.shopify.com/pixel-made"
+    },
+    {
+      "id": "artbeatstudios",
+      "name": "Artflow",
+      "homepage": "https://artbeatstudios.com",
+      "directorySource": "apps.shopify.com/artflow-print-on-demand"
+    },
+    {
+      "id": "artovo",
+      "name": "Artovo",
+      "homepage": "https://artovo.co.uk",
+      "directorySource": "apps.shopify.com/artovo-print-on-demand"
+    },
+    {
+      "id": "platecreate",
+      "name": "PlateCreate Sales Channel",
+      "homepage": "https://platecreate.com",
+      "directorySource": "apps.shopify.com/platecreate-sales-channel"
+    },
+    {
+      "id": "podhut",
+      "name": "POD Hut",
+      "homepage": "https://podhut.com",
+      "directorySource": "apps.shopify.com/pod-hut"
+    },
+    {
+      "id": "zonkraft",
+      "name": "zonkraft",
+      "homepage": "https://zonkraft.com",
+      "directorySource": "apps.shopify.com/zonkraft"
+    },
+    {
+      "id": "girltribeco",
+      "name": "Girl Tribe Co",
+      "homepage": "https://girltribeco.com",
+      "directorySource": "apps.shopify.com/print-poets"
+    },
+    {
+      "id": "onlinemachine",
+      "name": "Online Machine",
+      "homepage": "https://onlinemachine.com",
+      "directorySource": "apps.shopify.com/onlinemachine"
+    },
+    {
+      "id": "prinstant",
+      "name": "Prinstant",
+      "homepage": "https://prinstant.com",
+      "directorySource": "apps.shopify.com/prinstant-connect"
+    },
+    {
+      "id": "daamru",
+      "name": "Daamru",
+      "homepage": "https://daamru.com",
+      "directorySource": "apps.shopify.com/daamru-1"
+    },
+    {
+      "id": "colouroo",
+      "name": "Colouroo",
+      "homepage": "https://colouroo.com.au",
+      "directorySource": "apps.shopify.com/colouroo-1"
+    },
+    {
+      "id": "merchsprint",
+      "name": "MerchSprint",
+      "homepage": "https://merchsprint.com.au",
+      "directorySource": "apps.shopify.com/merchsprint-2"
+    },
+    {
+      "id": "cloudsto",
+      "name": "Cloudstore art",
+      "homepage": "https://cloudsto.re",
+      "directorySource": "apps.shopify.com/cloudstore"
+    },
+    {
+      "id": "surgeprint",
+      "name": "SurgePrint",
+      "homepage": "https://surgeprint.com",
+      "directorySource": "apps.shopify.com/surge-print"
+    },
+    {
+      "id": "loostra",
+      "name": "Loostra",
+      "homepage": "https://loostra.com",
+      "directorySource": "apps.shopify.com/print-on-demand-5"
+    },
+    {
+      "id": "linkprint",
+      "name": "LinkPrint",
+      "homepage": "https://linkprint.com",
+      "directorySource": "apps.shopify.com/linkprint-pod"
+    },
+    {
+      "id": "printmood",
+      "name": "Printmood",
+      "homepage": "https://printmood.com",
+      "directorySource": "apps.shopify.com/printmood-print-on-demand"
+    },
+    {
+      "id": "pressing",
+      "name": "Pressing on",
+      "homepage": "https://pressing.es",
+      "directorySource": "apps.shopify.com/pressing-on-demand"
+    },
+    {
+      "id": "dallasprinthouse",
+      "name": "DallasPrintHouse POD",
+      "homepage": "https://dallasprinthouse.com",
+      "directorySource": "apps.shopify.com/dallasprinthouse-pod"
+    },
+    {
+      "id": "ovoprint",
+      "name": "OVO Dropship & Print on Demand",
+      "homepage": "https://ovoprint.com",
+      "directorySource": "apps.shopify.com/ovo-1"
+    },
+    {
+      "id": "customtee",
+      "name": "Custom Tee",
+      "homepage": "https://customtee.co",
+      "directorySource": "apps.shopify.com/custom-tee"
+    },
+    {
+      "id": "dogediy",
+      "name": "Dogediy",
+      "homepage": "https://dogediy.com",
+      "directorySource": "apps.shopify.com/dogeprint"
+    },
+    {
+      "id": "podx",
+      "name": "PODx",
+      "homepage": "https://podx.net",
+      "directorySource": "apps.shopify.com/podx-print-on-demand"
+    },
+    {
+      "id": "nemprint",
+      "name": "Nemprint",
+      "homepage": "https://nemprint.dk",
+      "directorySource": "apps.shopify.com/nemprint-print-on-demand"
+    },
+    {
+      "id": "pivotalprints",
+      "name": "Pivotal Prints",
+      "homepage": "https://pivotalprints.co.uk",
+      "directorySource": "apps.shopify.com/pivotal-prints"
+    },
+    {
+      "id": "connectedpod",
+      "name": "ConnecTEDPOD",
+      "homepage": "https://connectedpod.co.uk",
+      "directorySource": "apps.shopify.com/connected-print-on-demand"
+    },
+    {
+      "id": "printnova",
+      "name": "Print Nova",
+      "homepage": "https://print-nova.com",
+      "directorySource": "apps.shopify.com/print-nova"
+    },
+    {
+      "id": "vvpod",
+      "name": "VVPod",
+      "homepage": "https://vvpod.com",
+      "directorySource": "apps.shopify.com/vvpod"
+    },
+    {
+      "id": "customaple",
+      "name": "Customaple",
+      "homepage": "https://customaple.com",
+      "directorySource": "apps.shopify.com/customaple-print-on-demand"
+    },
+    {
+      "id": "printfash",
+      "name": "PrintFash",
+      "homepage": "https://printfash.com",
+      "directorySource": "apps.shopify.com/printfash"
+    },
+    {
+      "id": "zelaprint",
+      "name": "Zela Print",
+      "homepage": "https://zelaprint.com",
+      "directorySource": "apps.shopify.com/zela-print"
+    },
+    {
+      "id": "teeply",
+      "name": "Teeply",
+      "homepage": "https://teeply.io",
+      "directorySource": "apps.shopify.com/teeply"
+    },
+    {
+      "id": "printsuite",
+      "name": "Printsuite",
+      "homepage": "https://printsuite.com",
+      "directorySource": "apps.shopify.com/printsuite"
     }
   ]
 }

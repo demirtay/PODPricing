@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-08T08:59:57.841Z",
+  "sitemapProductUrls": 101,
+  "imported": 98,
+  "skipped": [
+    {
+      "url": "https://www.pengine.io/products/c2-sport-unisex-performance-long-sleeve-t-shirt-5104",
+      "reason": "Ürün verisi yok"
+    },
+    {
+      "url": "https://www.pengine.io/products/next-level-unisex-cvc-tank-6233",
+      "reason": "Ürün verisi yok"
+    },
+    {
+      "url": "https://www.pengine.io/products/youth-cvc-jersey-tee-3001ycvc",
+      "reason": "Üretimden kalkmış"
+    }
+  ]
+}

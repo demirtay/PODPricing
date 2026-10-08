@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-08T08:57:06.109Z",
+  "sitemapProductUrls": 1288,
+  "imported": 1277,
+  "skipped": [
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-crochet-flower-blanket,-custom-name-rose-bouquet-blanket,-handmade-bouquet",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-40oz-Handheld-tumbler",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Heart-Projection-Personalized-Necklace",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Alphabet-Diamond-Customized-Fashion-Ring",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-name-ring",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized--Woven-Blanket---Custom-Couple-Gift",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-Hand-Embroidered-Pet-Bed",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-2D3D-Photo-Crystal-Necklace",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Personalized-Extra-Services",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/Customized-Music-Transparent-Spotify-Plaque",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.customizingbox.com/products/detail/3D-Heart-Crystal-Pendant-Necklace",
+      "reason": "Fiyat yok"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 'use strict';
 const def = (base, file) => ({ base, load: () => require(file) });
 // Ortak JSON-LD bağlayıcısını kullanan üreticiler: { id: ana sayfa }
-const jsonld = { simpleprint: 'https://www.simpleprint.com/', wooacry: 'https://wooacry.com/', whcc: 'https://www.whcc.com/', fourthwall: 'https://fourthwall.com/' };
+const jsonld = { simpleprint: 'https://www.simpleprint.com/', wooacry: 'https://wooacry.com/', whcc: 'https://www.whcc.com/', fourthwall: 'https://fourthwall.com/', customizingbox: 'https://www.customizingbox.com/', muzefab: 'https://muzefab.com/' };
 
 module.exports = {
   printify: def('https://printify.com/app/products', './printify.cjs'),
@@ -33,6 +33,8 @@ module.exports = {
   printgenie: def('https://www.printgenie.com/products', './printgenie.cjs'),
   lumaprints: def('https://lumaprints.com/pricing/', './lumaprints.cjs'),
   shirtigo: def('https://www.shirtigo.com/', './shirtigo.cjs'),
+  pengine: def('https://www.pengine.io/', './pengine.cjs'),
+  printdropper: def('https://printdropper.com/products', './printdropper.cjs'),
   ...Object.fromEntries(Object.entries(require('./pricing-cards.cjs').SITES).map(([id, s]) => [id, {
     base: new URL(s.page).origin + '/', load: () => ({ collect: progress => require('./pricing-cards.cjs').collect(id, progress) }),
   }])),

@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 09:01 UTC · 82/138 üretici bağlı · 33.565 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -13,6 +13,7 @@ Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı 
 | Yoycol | 1541 | complete | 2026-10-04 |
 | Inkedjoy | 1463 | full-public-catalog | 2026-10-04 |
 | PrintKK | 1420 | verified-product-details | 2026-10-04 |
+| Customizingbox | 1276 | full-public-catalog | 2026-10-08 |
 | Tapstitch | 1244 | full-public-catalog | 2026-10-04 |
 | PeaPrint | 1216 | full-public-api-catalog | 2026-10-04 |
 | MerchFarm | 1107 | public-storefront | 2026-10-04 |
@@ -41,6 +42,7 @@ Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı 
 | JetPrint | 151 | public-storefront | 2026-10-04 |
 | Mia Merchandise | 148 | public-storefront | 2026-10-04 |
 | Digital On Demand | 145 | public-storefront | 2026-10-04 |
+| Muzefab | 143 | full-public-catalog | 2026-10-08 |
 | Teelaunch | 143 | public-product-sitemap | 2026-10-04 |
 | Shirtigo | 142 | full-public-catalog | 2026-10-08 |
 | Printy6 | 141 | public-paginated-catalog | 2026-10-04 |
@@ -51,9 +53,11 @@ Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı 
 | GetFuelPod | 120 | full-public-catalog | 2026-10-04 |
 | SimplePrint | 117 | full-public-catalog | 2026-10-04 |
 | PillowProfits | 115 | full-public-catalog | 2026-10-04 |
+| Printdropper | 110 | full-public-catalog | 2026-10-08 |
 | Sellfy | 110 | full-public-catalog | 2026-10-04 |
 | Promio | 102 | full-public-catalog | 2026-10-05 |
 | Qikink | 100 | verified-tax-inclusive-product-pages | 2026-10-04 |
+| Pengine | 98 | full-public-catalog | 2026-10-08 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
 | Merchr | 88 | public-storefront | 2026-10-08 |
 | JumboDTG | 82 | public-storefront | 2026-10-04 |
@@ -65,11 +69,13 @@ Güncelleme: 2026-10-08 08:22 UTC · 76/132 üretici bağlı · 31.841 fiyatlı 
 | Printgenie | 72 | full-public-catalog | 2026-10-05 |
 | PrintOps | 64 | full-public-catalog | 2026-10-04 |
 | WHCC | 64 | full-public-catalog | 2026-10-08 |
+| OOWIA | 61 | public-storefront | 2026-10-08 |
 | MarketPrint | 53 | full-public-catalog | 2026-10-05 |
 | NovaTomato | 51 | full-public-catalog | 2026-10-04 |
 | Ogo | 42 | public-product-pages | 2026-10-04 |
 | Ecomerch | 40 | full-public-catalog | 2026-10-05 |
 | TshirtGang | 38 | public-product-pages | 2026-10-04 |
+| BackStoryPrints | 36 | public-storefront | 2026-10-08 |
 | OwnPrint | 31 | full-public-catalog | 2026-10-04 |
 | Printrove | 30 | verified-public-base-prices | 2026-10-04 |
 | BlinkStore | 29 | public-storefront | 2026-10-08 |

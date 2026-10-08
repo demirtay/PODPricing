@@ -22,6 +22,17 @@ const SITES = {
     match: u => /^https:\/\/www\.whcc\.com\/products\/[^/]+\/?$/.test(u),
     basis: 'WHCC laboratuvar fiyatı (en küçük ölçü, tek adet) · kargo ve sipariş ücreti ayrıca',
   },
+  customizingbox: {
+    sitemap: 'https://www.customizingbox.com/sitemap.xml',
+    match: u => /^https:\/\/www\.customizingbox\.com\/products\/detail\/[^/]+$/.test(u),
+    basis: 'Customizingbox satıcı (dropship) fiyatı · tek adet, kişiselleştirme dahil · kargo ayrıca',
+  },
+  muzefab: {
+    sitemap: 'https://muzefab.com/sitemap.xml',
+    match: u => /^https:\/\/muzefab\.com\/product\/[^/]+\/?$/.test(u),
+    preferCurrency: 'EUR',
+    basis: 'Muzefab ürün fiyatı · 1-9 adet kademesi (tek adet sipariş edilebilir) · kargo ayrıca',
+  },
   fourthwall: {
     sitemap: 'https://products.fourthwall.com/sitemap.xml',
     match: u => /^https:\/\/products\.fourthwall\.com\/[^/]+$/.test(u) && !/\/(all|category|brands?|collections?)$/.test(u),
@@ -31,10 +42,17 @@ const SITES = {
 
 const money = v => { const n = Number(String(v ?? '').replace(/[^0-9.]/g, '')); return Number.isFinite(n) && n > 0 ? Math.round(n * 100) : null; };
 
-function productFrom(html) {
-  const p = jsonLd(html).find(x => x && (x['@type'] === 'Product' || (Array.isArray(x['@type']) && x['@type'].includes('Product'))));
+// prefer: aynı sayfada birden çok para birimiyle teklif varsa yalnızca bu para birimindekiler karşılaştırılır
+function productFrom(html, prefer) {
+  const isType = (x, t) => x && (x['@type'] === t || (Array.isArray(x['@type']) && x['@type'].includes(t)));
+  const blocks = jsonLd(html);
+  let p = blocks.find(x => isType(x, 'Product'));
+  let offers = [].concat(p?.offers || []);
+  // ProductGroup (varyantlı ürün): grup adı + varyantların teklifleri
+  const g = !p && blocks.find(x => isType(x, 'ProductGroup'));
+  if (g) { const vs = [].concat(g.hasVariant || []); p = { ...g, image: g.image || vs.find(v => v.image)?.image }; offers = vs.flatMap(v => [].concat(v.offers || [])); }
   if (!p) return null;
-  const offers = [].concat(p.offers || []);
+  if (prefer && offers.some(o => o.priceCurrency === prefer)) offers = offers.filter(o => o.priceCurrency === prefer);
   let minor = null, currency = null;
   for (const o of offers) {
     const v = money(o.lowPrice ?? o.price ?? o.priceSpecification?.price);
@@ -54,7 +72,7 @@ async function collect(id, progress = () => {}) {
   const results = await crawl(urls, async u => {
     const res = await cachedGet(id, u);
     if (!res.text) return { url: u, skip: 'HTTP ' + res.status, cached: res.cached };
-    const x = productFrom(res.text);
+    const x = productFrom(res.text, cfg.preferCurrency);
     if (!x) return { url: u, skip: 'JSON-LD ürün verisi yok', cached: res.cached };
     if (!x.minor) return { url: u, skip: 'Fiyat yok', cached: res.cached };
     const image = x.image || meta(res.text, 'og:image');
@@ -72,6 +90,9 @@ async function collect(id, progress = () => {}) {
     if (cur !== 'USD') { p.sourceMinor = r.x.minor; p.sourceCurrency = cur; p.exchangeRate = fx.rate; p.exchangeDate = fx.date; }
     if (r.x.brand) p.aliases = [...new Set([...p.aliases, r.x.brand])];
     p.priceBasis = cfg.basis;
+    // başlıkta "(100 Pcs MOQ)" gibi minimum adet yazıyorsa kayda geçir (print-basis bunu "toplu" sayar)
+    const moq = Number(r.x.name.match(/\b(\d{2,5})\s*pcs\s*moq\b/i)?.[1]);
+    if (moq > 1) { p.minimumQuantity = moq; p.priceBasis = p.priceBasis.replace(/,?\s*tek adet,?/, '') + ` · minimum ${moq} adet`; }
     p.sourceKind = 'catalog'; p.priceVerified = true; p.priceVerification = 'public-product-jsonld';
     p.importedBy = id + '-jsonld-v1'; p.checkedAt = checkedAt; p.checkedOn = checkedAt.slice(0, 10);
     if (!products.some(q => q.id === p.id)) products.push(p);

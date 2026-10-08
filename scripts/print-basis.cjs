@@ -8,10 +8,12 @@ const PRINTED = new Set([
   'printify', 'printful', 'dreamship', 'simpleprint', 'gearlaunch', 'prodigi', 'podpartner', 'yoycol', 'inkedjoy',
   'interestprint', 'artsadd', 'peaprint', 'printdoors', 'kincustom', 'merchize', 'burgerprints', 'gearment', 'teelaunch',
   'printy6', 'printkk', 'jetprint', 'papello', 'inkthreadable', 'twofifteen', 'tshirtgang', 'printegy', 'podbase',
-  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway', 'subliminator', 'toaddit', 'makeplayingcards', 'artelo', 'promio',
+  'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway', 'subliminator', 'toaddit', 'makeplayingcards', 'artelo', 'promio',,
+  // 2026-10-08 eklenenler (ürün sayfalarında baskı/kişiselleştirme dahil olduğu doğrulandı)
+  'wooacry', 'whcc', 'fourthwall', 'merchr', 'blinkstore', 'stationeryhq', 'shirtigo', 'candlebuilders', 'blurb', 'peecho', 'printdropper', 'customizingbox', 'muzefab',
 ]);
 // Fiyatı baskısız (boş) ürün bedeli olanlar
-const BLANK = new Set(['tapstitch', 'printrove', 'ogo', 'scalablepress']);
+const BLANK = new Set(['tapstitch', 'printrove', 'ogo', 'scalablepress', 'oowia', 'teelabs']);
 // Minimum adetli toplu baskı firmaları
 const BULK = new Set(['blackfishclothing']);
 

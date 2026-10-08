@@ -62,6 +62,15 @@ const SITES = {
     basis: 'Zonkraft ölçü tablosundaki üretim maliyeti · en küçük ölçü (8"), tek adet · tablo ürün türünü (die-cut/akrilik/renkli/titanyum) ayırmıyor · kargo ayrıca',
     min: 1,
   },
+  zelaprint: {
+    page: 'https://zelaprint.com/pricing',
+    currency: 'GBP',
+    // ölçü tabloları (A serisi / inç / cm): sütun 3 = tek adet fiyatı (sonraki sütunlar adet indirimi)
+    cards: html => [...html.replace(/<!-- -->/g, '').matchAll(/<tr[^>]*>\s*<td[^>]*>([^<]+)<\/td>\s*<td[^>]*>([^<]+)<\/td>\s*<td[^>]*>£([\d.]+)<\/td>/g)]
+      .map(m => ({ href: 'https://zelaprint.com/pricing#' + m[1].toLowerCase().replace(/[^a-z0-9]+/g, '-'), image: 'https://zelaprint.com/gallery/user-03-clouds-poster.png', title: `Poster ${m[1].trim().replace(/ x /i, ' × ')} (${m[2].trim()})`, price: m[3] })),
+    basis: 'Zela Print poster fiyatı · tek adet sütunu (adet indirimi ayrıca) · baskı dahil · kargo ayrıca (sabit varış ücreti)',
+    min: 10,
+  },
   blurb: {
     page: 'https://www.blurb.com/pricing',
     currency: 'USD',

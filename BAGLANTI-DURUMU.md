@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-08 09:31 UTC · 97/153 üretici bağlı · 34.525 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 09:34 UTC · 99/155 üretici bağlı · 34.563 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -92,6 +92,8 @@ Güncelleme: 2026-10-08 09:31 UTC · 97/153 üretici bağlı · 34.525 fiyatlı 
 | Print Partners | 26 | full-public-catalog | 2026-10-08 |
 | Podbase | 24 | public-product-pages | 2026-10-04 |
 | Merch Factory | 21 | full-public-catalog | 2026-10-08 |
+| Printiturk | 19 | full-public-catalog | 2026-10-08 |
+| Zela Print | 19 | full-public-catalog | 2026-10-08 |
 | Prinstant | 17 | public-storefront | 2026-10-08 |
 | Dogediy | 13 | public-storefront | 2026-10-08 |
 | BeautyBoss | 11 | full-public-catalog | 2026-10-08 |

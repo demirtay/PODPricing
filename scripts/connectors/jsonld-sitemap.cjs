@@ -54,6 +54,13 @@ const SITES = {
     match: u => /^https:\/\/www\.merchfactory\.in\/products\/[^/]+\/?$/.test(u),
     basis: 'Merch Factory taban maliyeti (en küçük beden, tek adet) · GST ve kargo koşulları üreticide',
   },
+  printiturk: {
+    listPages: ['https://www.printiturk.com/products.php'],
+    listMatch: u => /^https:\/\/www\.printiturk\.com\/products\.php\?category=[^&]+$/.test(u),
+    match: u => /^https:\/\/www\.printiturk\.com\/urun\/[^/?#]+$/.test(u),
+    imageBase: 'https://www.printiturk.com/', // JSON-LD görselleri köke göre göreli (uploads/...)
+    basis: 'Printiturk ürün maliyeti (ürün detayındaki fiyat), tek adet · kargo ayrıca',
+  },
   fourthwall: {
     sitemap: 'https://products.fourthwall.com/sitemap.xml',
     match: u => /^https:\/\/products\.fourthwall\.com\/[^/]+$/.test(u) && !/\/(all|category|brands?|collections?)$/.test(u),
@@ -85,8 +92,22 @@ function productFrom(html, prefer) {
 async function collect(id, progress = () => {}) {
   const cfg = SITES[id];
   const checkedAt = new Date().toISOString();
-  let xml = (await fetchText(cfg.sitemap)).text, urls = locs(xml);
-  if (/<sitemapindex/.test(xml)) { const subs = urls.filter(cfg.subSitemap || (() => true)); urls = []; for (const s of subs) urls.push(...locs((await fetchText(s)).text)); }
+  let urls;
+  if (cfg.listPages) {
+    // ürünler site haritasında yoksa: liste/kategori sayfalarındaki bağlantılar (alt kategoriler de taranır)
+    const pages = [...cfg.listPages], seen = new Set(); urls = [];
+    while (pages.length && seen.size < 60) {
+      const pg = pages.shift(); if (seen.has(pg)) continue; seen.add(pg);
+      const html = (await fetchText(pg)).text;
+      for (const m of html.matchAll(/href="([^"#]+)"/g)) {
+        let u; try { u = new URL(m[1].replace(/&amp;/g, '&'), pg).href; } catch { continue; }
+        if (cfg.match(u)) urls.push(u); else if (cfg.listMatch?.(u) && !seen.has(u)) pages.push(u);
+      }
+    }
+  } else {
+    const xml = (await fetchText(cfg.sitemap)).text; urls = locs(xml);
+    if (/<sitemapindex/.test(xml)) { const subs = urls.filter(cfg.subSitemap || (() => true)); urls = []; for (const s of subs) urls.push(...locs((await fetchText(s)).text)); }
+  }
   urls = [...new Set(urls.filter(cfg.match))];
   if (!urls.length) throw Error(id + ': site haritasında ürün yok');
   const fxCache = {};
@@ -107,7 +128,7 @@ async function collect(id, progress = () => {}) {
     const cur = (r.x.currency || cfg.currency || 'USD').toUpperCase();
     const fx = fxCache[cur] || (fxCache[cur] = await exchange(cur));
     const slug = r.url.replace(/\/$/, '').split('/').pop().slice(0, 120);
-    const p = record(id, slug, r.x.name, r.x.minor * fx.rate, new URL(r.x.image, r.url).href, r.url, cfg.sizes || 'Ölçü ve renkler üreticide seçilir');
+    const p = record(id, slug, r.x.name, r.x.minor * fx.rate, new URL(r.x.image, cfg.imageBase || r.url).href, r.url, cfg.sizes || 'Ölçü ve renkler üreticide seçilir');
     if (cur !== 'USD') { p.sourceMinor = r.x.minor; p.sourceCurrency = cur; p.exchangeRate = fx.rate; p.exchangeDate = fx.date; }
     if (r.x.brand) p.aliases = [...new Set([...p.aliases, r.x.brand])];
     p.priceBasis = cfg.basis;

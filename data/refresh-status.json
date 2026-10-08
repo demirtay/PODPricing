@@ -38,6 +38,7 @@
     "slaitepod",
     "colouroo",
     "zonkraft",
+    "zelaprint",
     "blurb",
     "simpleprint",
     "wooacry",
@@ -49,6 +50,7 @@
     "viviaprint",
     "printonic",
     "merchfactory",
+    "printiturk",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -390,22 +392,29 @@
       "nextCheck": 0
     },
     "colouroo": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:31:13.291Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 104,
-      "nextCheck": 1791453661721,
-      "startedAt": "2026-10-08T09:31:01.721Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "zonkraft": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "zelaprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:31:15.821Z",
+      "lastSuccess": "2026-10-08T09:33:59.766Z",
       "lastError": null,
-      "productCount": 1,
-      "nextCheck": 1791453673314,
-      "startedAt": "2026-10-08T09:31:13.314Z"
+      "productCount": 19,
+      "nextCheck": 1791453836567,
+      "startedAt": "2026-10-08T09:33:56.567Z"
     },
     "blurb": {
       "state": "idle",
@@ -488,6 +497,14 @@
       "nextCheck": 0
     },
     "merchfactory": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "printiturk": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,

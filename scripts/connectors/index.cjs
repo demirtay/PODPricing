@@ -3,7 +3,7 @@
 'use strict';
 const def = (base, file) => ({ base, load: () => require(file) });
 // Ortak JSON-LD bağlayıcısını kullanan üreticiler: { id: ana sayfa }
-const jsonld = { simpleprint: 'https://www.simpleprint.com/', wooacry: 'https://wooacry.com/', whcc: 'https://www.whcc.com/', fourthwall: 'https://fourthwall.com/', customizingbox: 'https://www.customizingbox.com/', muzefab: 'https://muzefab.com/', snapwear: 'https://snapwear.pro/', viviaprint: 'https://viviaprint.com/' };
+const jsonld = { simpleprint: 'https://www.simpleprint.com/', wooacry: 'https://wooacry.com/', whcc: 'https://www.whcc.com/', fourthwall: 'https://fourthwall.com/', customizingbox: 'https://www.customizingbox.com/', muzefab: 'https://muzefab.com/', snapwear: 'https://snapwear.pro/', viviaprint: 'https://viviaprint.com/', printonic: 'https://printonic.com/', merchfactory: 'https://www.merchfactory.in/' };
 
 module.exports = {
   printify: def('https://printify.com/app/products', './printify.cjs'),

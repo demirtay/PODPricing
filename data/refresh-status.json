@@ -33,6 +33,11 @@
     "pengine",
     "printdropper",
     "peecho",
+    "printpartners",
+    "beautyboss",
+    "slaitepod",
+    "colouroo",
+    "zonkraft",
     "blurb",
     "simpleprint",
     "wooacry",
@@ -42,6 +47,8 @@
     "muzefab",
     "snapwear",
     "viviaprint",
+    "printonic",
+    "merchfactory",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -358,6 +365,48 @@
       "productCount": 0,
       "nextCheck": 0
     },
+    "printpartners": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "beautyboss": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "slaitepod": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "colouroo": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-08T09:31:13.291Z",
+      "lastError": null,
+      "productCount": 104,
+      "nextCheck": 1791453661721,
+      "startedAt": "2026-10-08T09:31:01.721Z"
+    },
+    "zonkraft": {
+      "state": "ready",
+      "intervalMinutes": 30,
+      "lastSuccess": "2026-10-08T09:31:15.821Z",
+      "lastError": null,
+      "productCount": 1,
+      "nextCheck": 1791453673314,
+      "startedAt": "2026-10-08T09:31:13.314Z"
+    },
     "blurb": {
       "state": "idle",
       "intervalMinutes": 30,
@@ -423,13 +472,28 @@
       "nextCheck": 0
     },
     "viviaprint": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:23:28.403Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 48,
-      "nextCheck": 1791453027545,
-      "startedAt": "2026-10-08T09:20:27.545Z"
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "printonic": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "merchfactory": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
     },
     "printdoors": {
       "state": "idle",

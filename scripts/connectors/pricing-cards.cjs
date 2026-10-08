@@ -17,6 +17,51 @@ const SITES = {
     basis: 'Peecho ürün türü "From" başlangıç fiyatı (en küçük seçenek, tek adet) · KDV ve kargo ayrıca olabilir',
     min: 11,
   },
+  printpartners: {
+    page: 'https://printpartners.com/products',
+    currency: 'USD',
+    // katalog kartı: <a href="3005"> marka (h4) + ürün adı (p) + "Starting at: $X" + görsel; ürün sayfası /<model>
+    cards: html => [...html.matchAll(/<a href="([^"]+)">\s*<div class="portfolio-item">\s*<div class="item-caption">\s*<h4>([^<]+)<\/h4>\s*<p>([^<]+)<\/p>\s*<h4>Starting at: \$([\d.,]+)<\/h4>\s*<\/div>\s*<div class="item-image">\s*<img[^>]*src="([^"]+)"/g)]
+      .map(m => ({ href: new URL(m[1], 'https://printpartners.com/').href, image: new URL(m[5], 'https://printpartners.com/').href, title: `${m[2].trim()} ${m[3].trim()} (${m[1]})`, price: m[4] })),
+    basis: 'Print Partners "Starting at" başlangıç fiyatı (tek adet) · kargo ayrıca',
+    min: 20,
+  },
+  beautyboss: {
+    page: 'https://beautyboss.com/product-catalog',
+    currency: 'USD',
+    cards: html => [...html.matchAll(/<img src="([^"]+)"[^>]*class="catalog-card-image"[\s\S]*?class="product-name">([^<]+)<\/div>[\s\S]*?As Low As:<\/div><div[^>]*>\$([\d.,]+)<\/div>[\s\S]*?href="(\/products\/[^"]+)"/g)]
+      .map(m => ({ href: 'https://beautyboss.com' + m[4], image: m[1], title: m[2], price: m[3] })),
+    basis: 'BeautyBoss "As Low As" fiyatı · kendi markanla kozmetik, fulfillment dahil · kargo ayrıca',
+    min: 8,
+  },
+  slaitepod: {
+    page: 'https://slaitepod.com/catalogue',
+    currency: 'USD',
+    cards: html => [...html.matchAll(/<img class="pic-1" src="([^"]+)">\s*<\/a>\s*<\/div>\s*<div class="product-content">\s*<a href="([^"]+)">\s*<h2>([^<]+)<\/h2>\s*<h3>From \$([\d.,]+) USD<\/h3>/g)]
+      .map(m => ({ href: m[2], image: new URL(m[1], 'https://slaitepod.com/').href, title: m[3], price: m[4] })),
+    basis: 'Slaite POD katalog "From" fiyatı · kaynak kargo/baskı koşullarını kartta belirtmiyor, üreticide kontrol edin',
+    min: 20,
+  },
+  colouroo: {
+    page: 'https://www.colouroo.com.au/catalogue.html',
+    currency: 'AUD',
+    cards: html => [...html.matchAll(/<article class="product"[^>]*data-code="([^"]+)">\s*<div class="ph"><img src="([^"]+)"[\s\S]*?<span class="code">([^<]+)<\/span>\s*<h3>([^<]+)<\/h3>[\s\S]*?<div class="price"><small>With 1 print<\/small>\$([\d.,]+)<\/div>/g)]
+      .map(m => ({ href: 'https://www.colouroo.com.au/catalogue.html#' + m[1], image: new URL(m[2], 'https://www.colouroo.com.au/').href, title: `${m[4].trim()} (${m[3].trim()})`, price: m[5] })),
+    basis: 'Colouroo fiyatı · tek baskı dahil, tek adet · ek baskı yeri ayrıca, kargo ayrıca',
+    min: 80,
+  },
+  zonkraft: {
+    page: 'https://zonkraft.com/pricing',
+    currency: 'USD',
+    // tek tablo: ölçü başına üretim maliyeti (ürün türü belirtilmiyor) → en küçük ölçünün fiyatıyla tek kayıt
+    cards: html => {
+      const rows = [...html.replace(/<!-- -->/g, '').matchAll(/<td[^>]*>(\d+)&quot;<\/td><td[^>]*>\$([\d.,]+)<\/td>/g)].map(m => ({ size: Number(m[1]), price: m[2] }));
+      const first = rows.find(r => r.size === Math.min(...rows.map(x => x.size)));
+      return first ? [{ href: 'https://zonkraft.com/pricing', image: 'https://zonkraft-products.s3.amazonaws.com/dcs/1720454886369/fk07xz6nuh.png', title: `Custom Metal Wall Art Sign (${rows[0].size}"–${rows.at(-1).size}")`, price: first.price }] : [];
+    },
+    basis: 'Zonkraft ölçü tablosundaki üretim maliyeti · en küçük ölçü (8"), tek adet · tablo ürün türünü (die-cut/akrilik/renkli/titanyum) ayırmıyor · kargo ayrıca',
+    min: 1,
+  },
   blurb: {
     page: 'https://www.blurb.com/pricing',
     currency: 'USD',

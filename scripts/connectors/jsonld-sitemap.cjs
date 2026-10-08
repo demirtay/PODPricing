@@ -44,6 +44,16 @@ const SITES = {
     match: u => /^https:\/\/viviaprint\.com\/product\/[^/]+\/[^/]+\/?$/.test(u),
     basis: 'Vivia Print açık liste fiyatı "From" (en küçük ölçü, tek adet) · bayi indirimi ayrıca olabilir · kargo ayrıca',
   },
+  printonic: {
+    sitemap: 'https://printonic.com/sitemap.xml',
+    match: u => /^https:\/\/printonic\.com\/catalog\/prod_[a-z0-9]+$/.test(u),
+    basis: 'Printonic standart fiyat (Pro üyelik indirimi hariç), tek adet, kendi etiketin/baskın dahil · kargo ayrıca',
+  },
+  merchfactory: {
+    sitemap: 'https://www.merchfactory.in/sitemap.xml',
+    match: u => /^https:\/\/www\.merchfactory\.in\/products\/[^/]+\/?$/.test(u),
+    basis: 'Merch Factory taban maliyeti (en küçük beden, tek adet) · GST ve kargo koşulları üreticide',
+  },
   fourthwall: {
     sitemap: 'https://products.fourthwall.com/sitemap.xml',
     match: u => /^https:\/\/products\.fourthwall\.com\/[^/]+$/.test(u) && !/\/(all|category|brands?|collections?)$/.test(u),

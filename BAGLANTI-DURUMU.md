@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-08 09:23 UTC · 90/146 üretici bağlı · 34.213 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 09:31 UTC · 97/153 üretici bağlı · 34.525 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -57,11 +57,13 @@ Güncelleme: 2026-10-08 09:23 UTC · 90/146 üretici bağlı · 34.213 fiyatlı 
 | PillowProfits | 115 | full-public-catalog | 2026-10-04 |
 | Printdropper | 110 | full-public-catalog | 2026-10-08 |
 | Sellfy | 110 | full-public-catalog | 2026-10-04 |
+| Colouroo | 104 | full-public-catalog | 2026-10-08 |
 | Promio | 102 | full-public-catalog | 2026-10-05 |
 | Qikink | 100 | verified-tax-inclusive-product-pages | 2026-10-04 |
 | Pengine | 98 | full-public-catalog | 2026-10-08 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
 | Merchr | 88 | public-storefront | 2026-10-08 |
+| Printonic | 84 | full-public-catalog | 2026-10-08 |
 | JumboDTG | 82 | public-storefront | 2026-10-04 |
 | POD Hut | 80 | public-storefront | 2026-10-08 |
 | FinerWorks | 79 | full-public-catalog | 2026-10-04 |
@@ -70,6 +72,7 @@ Güncelleme: 2026-10-08 09:23 UTC · 90/146 üretici bağlı · 34.213 fiyatlı 
 | Contrado | 74 | full-public-catalog | 2026-10-04 |
 | Gearment | 72 | public-category-pages | 2026-10-04 |
 | Printgenie | 72 | full-public-catalog | 2026-10-05 |
+| Slaite POD | 65 | full-public-catalog | 2026-10-08 |
 | PrintOps | 64 | full-public-catalog | 2026-10-04 |
 | WHCC | 64 | full-public-catalog | 2026-10-08 |
 | OOWIA | 61 | public-storefront | 2026-10-08 |
@@ -86,9 +89,12 @@ Güncelleme: 2026-10-08 09:23 UTC · 90/146 üretici bağlı · 34.213 fiyatlı 
 | Papello | 28 | verified-public-product-pages | 2026-10-04 |
 | SuperFastPOD | 27 | public-storefront | 2026-10-04 |
 | Artovo | 26 | public-storefront | 2026-10-08 |
+| Print Partners | 26 | full-public-catalog | 2026-10-08 |
 | Podbase | 24 | public-product-pages | 2026-10-04 |
+| Merch Factory | 21 | full-public-catalog | 2026-10-08 |
 | Prinstant | 17 | public-storefront | 2026-10-08 |
 | Dogediy | 13 | public-storefront | 2026-10-08 |
+| BeautyBoss | 11 | full-public-catalog | 2026-10-08 |
 | Candle Builders | 11 | public-storefront | 2026-10-08 |
 | Peecho | 11 | full-public-catalog | 2026-10-08 |
 | Alerio Print | 8 | public-storefront | 2026-10-08 |
@@ -96,6 +102,7 @@ Güncelleme: 2026-10-08 09:23 UTC · 90/146 üretici bağlı · 34.213 fiyatlı 
 | OnePrint | 4 | full-public-catalog | 2026-10-04 |
 | Rakiline | 4 | public-storefront | 2026-10-04 |
 | GoQuadra | 2 | public-storefront | 2026-10-04 |
+| zonkraft | 1 | full-public-catalog | 2026-10-08 |
 
 ## Bağlı olmayanlar (56)
 

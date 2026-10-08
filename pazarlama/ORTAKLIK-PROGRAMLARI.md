@@ -59,4 +59,9 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Yoycol | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://www.yoycol.com/?shareCode=eS4KlsjHqFU0/3IZMUCGxw== . Ürüne yönlendirme: ürün adresinin sonuna ?shareCode=KOD (sitenin JS'i her sayfada okuyup distributionCode çerezine yazıyor). Kod URL-kodlanmamalı (%2F/%3D bozar) ve tek sorgu parametresi olmalı. %10, 12 ay. |
 | Tapstitch | İncelemede (PartnerStack) | 2026-10-06 | Printify ile aynı PartnerStack hesabı. |
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
+| NovaTomato | Gönderildi — inceleniyor | 2026-10-08 | Panel: novatomato.com/dashboard/my-perks/affiliate/ (Google ile hesap, Gmail). Sonuç e-postayla gelecek. |
+| Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |
+| Sellfy | Gönderildi — Pending | 2026-10-08 | Panel: partners.dub.co/programs/sellfy (Dub hesabı, kişisel Gmail ile). Onay e-postası Gmail'e gelir. |
+| Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
+| Contrado | Belirsiz | 2026-10-08 | contrado.com/affiliate → "Sign Up Now" sadece aşağı kaydırıyor; kayıt sonrası bülten onayı ("Thanks for joining us") çıktı, ayrı başvuru formu yok. 1-2 gün e-posta bekle, gelmezse Contact Us / sohbetten sor. |
 | BurgerPrints | Program yok | 2026-10-07 | Herkese açık ortaklık programı bulunamadı (burgerprints.com/affiliate bir TikTok blog yazısına gidiyor). Sık sık 2. en ucuz. |

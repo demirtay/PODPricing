@@ -1,0 +1,341 @@
+{
+  "checkedAt": "2026-10-08T07:48:42.701Z",
+  "results": [
+    {
+      "id": "acrylicideafactory",
+      "name": "Acrylic Idea Factory",
+      "home": "ERR_TLS_CERT_ALTNAME_INVALID",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "buttonsmith",
+      "name": "Buttonsmith",
+      "home": 403,
+      "final": "https://www.buttonsmith.com",
+      "platform": "",
+      "sitemap": 403,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "candlebuilders",
+      "name": "Candle Builders",
+      "home": 200,
+      "final": "https://candlebuilders.com",
+      "platform": "shopify",
+      "shopifyProducts": 66,
+      "sitemap": 200,
+      "sitemapProductLinks": "1 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "colorwayondemand",
+      "name": "Colorway on Demand",
+      "home": "ENOTFOUND",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "customhappy",
+      "name": "CustomHappy",
+      "home": 402,
+      "final": "https://www.customhappy.com",
+      "platform": "",
+      "sitemap": 402,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "decoplate",
+      "name": "DecoPlate",
+      "home": "ENOTFOUND",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "fiberart",
+      "name": "FiberArt",
+      "home": "ENOTFOUND",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "fotocadeau",
+      "name": "Fotocadeau",
+      "home": 200,
+      "final": "https://www.fotocadeau.nl",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "0 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "lasublimation",
+      "name": "LA Sublimation",
+      "home": 522,
+      "final": "https://lasublimation.com",
+      "platform": "",
+      "sitemap": 522,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "loxleycolour",
+      "name": "Loxley Colour",
+      "home": 200,
+      "final": "https://www.loxleycolour.com",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "92",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "menoondemand",
+      "name": "Meno OnDemand",
+      "home": "CERT_HAS_EXPIRED",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "miamisublimation",
+      "name": "Miami Sublimation",
+      "home": 200,
+      "final": "https://miamisublimation.com",
+      "platform": "shopify",
+      "shopifyProducts": 250,
+      "sitemap": 200,
+      "sitemapProductLinks": "5 (index)",
+      "pricesOnHome": 2,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "photogifts",
+      "name": "PhotoGifts",
+      "home": 200,
+      "final": "https://photogifts.co.uk",
+      "platform": "shopify",
+      "shopifyProducts": 250,
+      "sitemap": 200,
+      "sitemapProductLinks": "1 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "printbindship",
+      "name": "Print Bind Ship",
+      "home": 200,
+      "final": "https://printbindship.com",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "0",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "printclever",
+      "name": "Print Clever",
+      "home": 200,
+      "final": "https://www.printclever.com",
+      "platform": "nextjs",
+      "sitemap": 200,
+      "sitemapProductLinks": "0",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "printgeek",
+      "name": "Print Geek",
+      "home": 200,
+      "final": "https://printgeek.ca",
+      "platform": "cloudflare-challenge",
+      "sitemap": 404,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "printapi",
+      "name": "Print API",
+      "home": 200,
+      "final": "https://www.printapi.nl",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "0",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "printversecom",
+      "name": "Printverse",
+      "home": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "ready2hangart",
+      "name": "Ready2HangArt",
+      "home": 200,
+      "final": "https://ready2hangart.com",
+      "platform": "shopify",
+      "shopifyProducts": 200,
+      "sitemap": 200,
+      "sitemapProductLinks": "6 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "rvprintfactory",
+      "name": "RV Print Factory",
+      "home": 200,
+      "final": "https://www.rvprintfactory.com",
+      "platform": "wordpress",
+      "wooStoreApi": 404,
+      "sitemap": 200,
+      "sitemapProductLinks": "2 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "stickeryou",
+      "name": "StickerYou",
+      "home": 403,
+      "final": "https://www.stickeryou.com",
+      "platform": "",
+      "sitemap": 403,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "stickersandposters",
+      "name": "StickersAndPosters.com",
+      "home": 200,
+      "final": "https://stickersandposters.com",
+      "platform": "wordpress",
+      "wooStoreApi": 404,
+      "sitemap": 200,
+      "sitemapProductLinks": "0 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "swagful",
+      "name": "Swagful",
+      "home": "ENOTFOUND",
+      "final": null,
+      "platform": "",
+      "sitemap": 0,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "tradeprint",
+      "name": "Tradeprint",
+      "home": 200,
+      "final": "https://www.tradeprint.co.uk",
+      "platform": "nextjs",
+      "sitemap": 200,
+      "sitemapProductLinks": "4",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "crystald",
+      "name": "Crystal D",
+      "home": 200,
+      "final": "https://www.crystaldynamics.com",
+      "platform": "wordpress",
+      "wooStoreApi": 404,
+      "sitemap": 200,
+      "sitemapProductLinks": "0 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "iconecom",
+      "name": "IconEcom",
+      "home": 526,
+      "final": "https://iconecom.com",
+      "platform": "",
+      "sitemap": 526,
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "viralstyle",
+      "name": "Viralstyle Fulfillment",
+      "home": 200,
+      "final": "https://viralstyle.com",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "0",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "mayzing",
+      "name": "Mayzing",
+      "home": 200,
+      "final": "https://mayzing.com",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "1",
+      "pricesOnHome": 57,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "stationeryhq",
+      "name": "StationeryHQ",
+      "home": 200,
+      "final": "https://www.stationeryhq.com",
+      "platform": "shopify",
+      "shopifyProducts": 250,
+      "sitemap": 200,
+      "sitemapProductLinks": "1 (index)",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "spring",
+      "name": "Spring",
+      "home": 200,
+      "final": "https://www.spri.ng",
+      "platform": "nextjs",
+      "sitemap": 200,
+      "sitemapProductLinks": "0",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    },
+    {
+      "id": "superfriday",
+      "name": "SuperFriday",
+      "home": 200,
+      "final": "https://superfriday.com",
+      "platform": "",
+      "sitemap": 200,
+      "sitemapProductLinks": "130",
+      "pricesOnHome": 0,
+      "jsonLdProducts": 0
+    }
+  ]
+}

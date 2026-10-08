@@ -1,0 +1,575 @@
+{
+  "note": "Kataloğa henüz eklenmemiş POD üretici adayları (perakende pazaryerleri hariç). scripts/probe-candidates.cjs ile yoklanır.",
+  "candidates": [
+    {
+      "id": "spod",
+      "name": "SPOD",
+      "homepage": "https://www.spod.com"
+    },
+    {
+      "id": "spreadconnect",
+      "name": "Spreadconnect",
+      "homepage": "https://www.spreadconnect.app"
+    },
+    {
+      "id": "fourthwall",
+      "name": "Fourthwall",
+      "homepage": "https://fourthwall.com"
+    },
+    {
+      "id": "fulfillengine",
+      "name": "Fulfill Engine",
+      "homepage": "https://fulfillengine.com"
+    },
+    {
+      "id": "monsterdigital",
+      "name": "Monster Digital",
+      "homepage": "https://www.monsterdigital.com"
+    },
+    {
+      "id": "swiftpod",
+      "name": "Swift POD",
+      "homepage": "https://swiftpod.com"
+    },
+    {
+      "id": "jondo",
+      "name": "Jondo",
+      "homepage": "https://www.jondo.com"
+    },
+    {
+      "id": "lulu",
+      "name": "Lulu",
+      "homepage": "https://www.lulu.com"
+    },
+    {
+      "id": "peecho",
+      "name": "Peecho",
+      "homepage": "https://www.peecho.com"
+    },
+    {
+      "id": "bookvault",
+      "name": "Bookvault",
+      "homepage": "https://bookvault.app"
+    },
+    {
+      "id": "blinkstore",
+      "name": "BlinkStore",
+      "homepage": "https://blinkstore.in"
+    },
+    {
+      "id": "cjdropshipping",
+      "name": "CJdropshipping POD",
+      "homepage": "https://cjdropshipping.com"
+    },
+    {
+      "id": "hicustom",
+      "name": "HiCustom",
+      "homepage": "https://www.hicustom.com"
+    },
+    {
+      "id": "cowcow",
+      "name": "Cowcow",
+      "homepage": "https://www.cowcow.com"
+    },
+    {
+      "id": "wooacry",
+      "name": "Wooacry",
+      "homepage": "https://www.wooacry.com"
+    },
+    {
+      "id": "dripshipper",
+      "name": "Dripshipper",
+      "homepage": "https://dripshipper.io"
+    },
+    {
+      "id": "supliful",
+      "name": "Supliful",
+      "homepage": "https://supliful.com"
+    },
+    {
+      "id": "blanka",
+      "name": "Blanka",
+      "homepage": "https://blankabrand.com"
+    },
+    {
+      "id": "eprolo",
+      "name": "EPROLO",
+      "homepage": "https://www.eprolo.com"
+    },
+    {
+      "id": "printique",
+      "name": "Printique",
+      "homepage": "https://www.printique.com"
+    },
+    {
+      "id": "canvaspop",
+      "name": "CanvasPop",
+      "homepage": "https://www.canvaspop.com"
+    },
+    {
+      "id": "wiio",
+      "name": "Wiio",
+      "homepage": "https://www.wiio.io"
+    },
+    {
+      "id": "dropshipman",
+      "name": "Dropshipman",
+      "homepage": "https://www.dropshipman.com"
+    },
+    {
+      "id": "shirtigo",
+      "name": "Shirtigo",
+      "homepage": "https://www.shirtigo.com"
+    },
+    {
+      "id": "merchr",
+      "name": "Merchr",
+      "homepage": "https://merchr.com"
+    },
+    {
+      "id": "theprintspace",
+      "name": "theprintspace",
+      "homepage": "https://www.theprintspace.com"
+    },
+    {
+      "id": "creativehub",
+      "name": "creativehub",
+      "homepage": "https://www.creativehub.io"
+    },
+    {
+      "id": "pictorem",
+      "name": "Pictorem",
+      "homepage": "https://www.pictorem.com"
+    },
+    {
+      "id": "picanova",
+      "name": "Picanova",
+      "homepage": "https://www.picanova.com"
+    },
+    {
+      "id": "bayphoto",
+      "name": "Bay Photo",
+      "homepage": "https://www.bayphoto.com"
+    },
+    {
+      "id": "cloudprinter",
+      "name": "Cloudprinter",
+      "homepage": "https://www.cloudprinter.com"
+    },
+    {
+      "id": "teescape",
+      "name": "Teescape",
+      "homepage": "https://www.teescape.com"
+    },
+    {
+      "id": "realthread",
+      "name": "Real Thread",
+      "homepage": "https://www.realthread.com"
+    },
+    {
+      "id": "dtg2go",
+      "name": "DTG2Go",
+      "homepage": "https://www.dtg2go.com"
+    },
+    {
+      "id": "gearbubble",
+      "name": "GearBubble",
+      "homepage": "https://www.gearbubble.com"
+    },
+    {
+      "id": "blurb",
+      "name": "Blurb",
+      "homepage": "https://www.blurb.com"
+    },
+    {
+      "id": "printful-eu-alt",
+      "name": "Printler",
+      "homepage": "https://printler.com"
+    },
+    {
+      "id": "teezily",
+      "name": "Teezily",
+      "homepage": "https://www.teezily.com"
+    },
+    {
+      "id": "printbar",
+      "name": "Print Bar",
+      "homepage": "https://printbar.com"
+    },
+    {
+      "id": "merchify",
+      "name": "Merchify",
+      "homepage": "https://merchify.com"
+    },
+    {
+      "id": "printmoz",
+      "name": "Printmoz",
+      "homepage": "https://printmoz.com"
+    },
+    {
+      "id": "hugepod",
+      "name": "HugePOD",
+      "homepage": "https://hugepod.com"
+    },
+    {
+      "id": "printposter",
+      "name": "Printposter",
+      "homepage": "https://www.printposter.com"
+    },
+    {
+      "id": "inkgo",
+      "name": "Inkgo",
+      "homepage": "https://www.inkgo.com"
+    },
+    {
+      "id": "printhub",
+      "name": "PrintHub",
+      "homepage": "https://printhub.com"
+    },
+    {
+      "id": "drop-ship-art",
+      "name": "Art Storefronts Print Lab",
+      "homepage": "https://www.artstorefronts.com"
+    },
+    {
+      "id": "canvaschamp",
+      "name": "CanvasChamp",
+      "homepage": "https://www.canvaschamp.com"
+    },
+    {
+      "id": "whcc",
+      "name": "WHCC",
+      "homepage": "https://www.whcc.com"
+    },
+    {
+      "id": "printshopcentral",
+      "name": "Printify alternative: Printed Threads",
+      "homepage": "https://printedthreads.com"
+    },
+    {
+      "id": "kingdomprints",
+      "name": "Kingdom Prints",
+      "homepage": "https://kingdomprints.com"
+    },
+    {
+      "id": "printikum",
+      "name": "Printikum",
+      "homepage": "https://www.printikum.com"
+    },
+    {
+      "id": "podbox",
+      "name": "PODbox",
+      "homepage": "https://podbox.io"
+    },
+    {
+      "id": "printseekers2",
+      "name": "Printwire",
+      "homepage": "https://printwire.co"
+    },
+    {
+      "id": "merchlab",
+      "name": "Merch Lab",
+      "homepage": "https://merchlab.com"
+    },
+    {
+      "id": "printfactory",
+      "name": "Print Factory",
+      "homepage": "https://printfactory.cloud"
+    },
+    {
+      "id": "printshirt",
+      "name": "Shirtplatform",
+      "homepage": "https://www.shirtplatform.com"
+    },
+    {
+      "id": "tshirtelephant",
+      "name": "T Shirt Elephant",
+      "homepage": "https://tshirtelephant.com"
+    },
+    {
+      "id": "printdirect",
+      "name": "PrintDirect",
+      "homepage": "https://printdirect.com"
+    },
+    {
+      "id": "mugzone",
+      "name": "Ink Mug",
+      "homepage": "https://inkmug.com"
+    },
+    {
+      "id": "custom-sock-lab",
+      "name": "Custom Sock Lab",
+      "homepage": "https://customsocklab.com"
+    },
+    {
+      "id": "printpanda",
+      "name": "PrintPanda",
+      "homepage": "https://printpanda.co"
+    },
+    {
+      "id": "wearlogo",
+      "name": "Wear Logo",
+      "homepage": "https://wearlogo.com"
+    },
+    {
+      "id": "printdropper",
+      "name": "Printdropper",
+      "homepage": "https://printdropper.com"
+    },
+    {
+      "id": "printifypro",
+      "name": "Printifly",
+      "homepage": "https://printifly.com"
+    },
+    {
+      "id": "podmerch",
+      "name": "POD Merch",
+      "homepage": "https://podmerch.co"
+    },
+    {
+      "id": "printverse",
+      "name": "Printverse",
+      "homepage": "https://printverse.co"
+    },
+    {
+      "id": "printmate",
+      "name": "Printmate",
+      "homepage": "https://printmate.co"
+    },
+    {
+      "id": "cottonheritage",
+      "name": "Fanatic POD",
+      "homepage": "https://fanaticpod.com"
+    },
+    {
+      "id": "printix",
+      "name": "Printix",
+      "homepage": "https://printix.com"
+    },
+    {
+      "id": "pinkpod",
+      "name": "Lion Print",
+      "homepage": "https://lionprint.co"
+    },
+    {
+      "id": "modalyst",
+      "name": "Modalyst POD",
+      "homepage": "https://modalyst.co"
+    },
+    {
+      "id": "spocketpod",
+      "name": "Printify Express",
+      "homepage": "https://printposters.ie"
+    },
+    {
+      "id": "jewelrypod",
+      "name": "Pod Jewelry",
+      "homepage": "https://podjewelry.com"
+    },
+    {
+      "id": "pupprint",
+      "name": "Pupprint",
+      "homepage": "https://pupprint.com"
+    },
+    {
+      "id": "wallpod",
+      "name": "Wallpaper POD",
+      "homepage": "https://wallpod.com"
+    },
+    {
+      "id": "stickerpod",
+      "name": "Sticker Ninja",
+      "homepage": "https://stickerninja.com"
+    },
+    {
+      "id": "candlepod",
+      "name": "Candle Pod",
+      "homepage": "https://candlepod.com"
+    },
+    {
+      "id": "printdrop",
+      "name": "Print Drop",
+      "homepage": "https://printdrop.co"
+    },
+    {
+      "id": "printifyau",
+      "name": "Print Mighty",
+      "homepage": "https://printmighty.com.au"
+    },
+    {
+      "id": "auspod",
+      "name": "Aus POD",
+      "homepage": "https://auspod.com.au"
+    },
+    {
+      "id": "printhq",
+      "name": "PrintHQ",
+      "homepage": "https://printhq.com.au"
+    },
+    {
+      "id": "teelocker",
+      "name": "Merchsmith",
+      "homepage": "https://merchsmith.com"
+    },
+    {
+      "id": "acrylicideafactory",
+      "name": "Acrylic Idea Factory",
+      "homepage": "https://acrylicideafactory.com"
+    },
+    {
+      "id": "buttonsmith",
+      "name": "Buttonsmith",
+      "homepage": "https://www.buttonsmith.com"
+    },
+    {
+      "id": "candlebuilders",
+      "name": "Candle Builders",
+      "homepage": "https://candlebuilders.com"
+    },
+    {
+      "id": "colorwayondemand",
+      "name": "Colorway on Demand",
+      "homepage": "https://colorwayondemand.com"
+    },
+    {
+      "id": "customhappy",
+      "name": "CustomHappy",
+      "homepage": "https://customhappy.com"
+    },
+    {
+      "id": "decoplate",
+      "name": "DecoPlate",
+      "homepage": "https://www.decoplate.com"
+    },
+    {
+      "id": "fiberart",
+      "name": "FiberArt",
+      "homepage": "https://fiberartondemand.com"
+    },
+    {
+      "id": "fotocadeau",
+      "name": "Fotocadeau",
+      "homepage": "https://www.fotocadeau.nl"
+    },
+    {
+      "id": "lasublimation",
+      "name": "LA Sublimation",
+      "homepage": "https://lasublimation.com"
+    },
+    {
+      "id": "loxleycolour",
+      "name": "Loxley Colour",
+      "homepage": "https://www.loxleycolour.com"
+    },
+    {
+      "id": "menoondemand",
+      "name": "Meno OnDemand",
+      "homepage": "https://menoondemand.com"
+    },
+    {
+      "id": "miamisublimation",
+      "name": "Miami Sublimation",
+      "homepage": "https://miamisublimation.com"
+    },
+    {
+      "id": "photogifts",
+      "name": "PhotoGifts",
+      "homepage": "https://www.photogifts.co.uk"
+    },
+    {
+      "id": "printbindship",
+      "name": "Print Bind Ship",
+      "homepage": "https://printbindship.com"
+    },
+    {
+      "id": "printclever",
+      "name": "Print Clever",
+      "homepage": "https://www.printclever.com"
+    },
+    {
+      "id": "printgeek",
+      "name": "Print Geek",
+      "homepage": "https://printgeek.ca"
+    },
+    {
+      "id": "printapi",
+      "name": "Print API",
+      "homepage": "https://www.printapi.nl"
+    },
+    {
+      "id": "printversecom",
+      "name": "Printverse",
+      "homepage": "https://printverse.com"
+    },
+    {
+      "id": "ready2hangart",
+      "name": "Ready2HangArt",
+      "homepage": "https://ready2hangart.com"
+    },
+    {
+      "id": "rvprintfactory",
+      "name": "RV Print Factory",
+      "homepage": "https://rvprintfactory.com"
+    },
+    {
+      "id": "stickeryou",
+      "name": "StickerYou",
+      "homepage": "https://www.stickeryou.com"
+    },
+    {
+      "id": "stickersandposters",
+      "name": "StickersAndPosters.com",
+      "homepage": "https://stickersandposters.com"
+    },
+    {
+      "id": "swagful",
+      "name": "Swagful",
+      "homepage": "https://swagful.com"
+    },
+    {
+      "id": "tradeprint",
+      "name": "Tradeprint",
+      "homepage": "https://www.tradeprint.co.uk"
+    },
+    {
+      "id": "crystald",
+      "name": "Crystal D",
+      "homepage": "https://www.crystald.com"
+    },
+    {
+      "id": "iconecom",
+      "name": "IconEcom",
+      "homepage": "https://iconecom.com"
+    },
+    {
+      "id": "viralstyle",
+      "name": "Viralstyle Fulfillment",
+      "homepage": "https://viralstyle.com"
+    },
+    {
+      "id": "mayzing",
+      "name": "Mayzing",
+      "homepage": "https://mayzing.com"
+    },
+    {
+      "id": "stationeryhq",
+      "name": "StationeryHQ",
+      "homepage": "https://www.stationeryhq.com"
+    },
+    {
+      "id": "spring",
+      "name": "Spring",
+      "homepage": "https://www.spri.ng"
+    },
+    {
+      "id": "luludirect",
+      "name": "Lulu Direct",
+      "homepage": "https://www.lulu.com"
+    },
+    {
+      "id": "superfriday",
+      "name": "SuperFriday",
+      "homepage": "https://superfriday.com"
+    }
+  ]
+}

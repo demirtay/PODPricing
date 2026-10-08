@@ -1,0 +1,83 @@
+{
+  "checkedAt": "2026-10-08T07:37:43.394Z",
+  "sitemapProductUrls": 83,
+  "imported": 64,
+  "skipped": [
+    {
+      "url": "https://www.whcc.com/products/prints/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/proofing/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/albums-books/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/wall-art/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/framing/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/canvas/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/image-blocks/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/posters-signage/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/tabletop-displays/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/image-cubes/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/boxes/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/ornaments/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/cards-stationery/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/stickers-labels/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/keepsakes/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/accessories/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/boutique-bags/",
+      "reason": "Fiyat yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/file-delivery/",
+      "reason": "JSON-LD ürün verisi yok"
+    },
+    {
+      "url": "https://www.whcc.com/products/services/",
+      "reason": "JSON-LD ürün verisi yok"
+    }
+  ]
+}

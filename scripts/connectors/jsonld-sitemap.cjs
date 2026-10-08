@@ -12,6 +12,21 @@ const SITES = {
     match: u => /^https:\/\/www\.simpleprint\.com\/products\/[^/]+$/.test(u),
     basis: 'SimplePrint "printed for as low as" fiyatı · tek baskı dahil, kargo ve vergi hariç',
   },
+  wooacry: {
+    sitemap: 'https://wooacry.com/sitemap.xml',
+    match: u => /^https:\/\/wooacry\.com\/product\/[^/]+$/.test(u),
+    basis: 'Wooacry ürün sayfası başlangıç fiyatı (en düşük varyant, tek adet) · kargo ayrıca',
+  },
+  whcc: {
+    sitemap: 'https://www.whcc.com/sitemap.xml',
+    match: u => /^https:\/\/www\.whcc\.com\/products\/[^/]+\/?$/.test(u),
+    basis: 'WHCC laboratuvar fiyatı (en küçük ölçü, tek adet) · kargo ve sipariş ücreti ayrıca',
+  },
+  fourthwall: {
+    sitemap: 'https://products.fourthwall.com/sitemap.xml',
+    match: u => /^https:\/\/products\.fourthwall\.com\/[^/]+$/.test(u) && !/\/(all|category|brands?|collections?)$/.test(u),
+    basis: 'Fourthwall katalog "From" üretim maliyeti (tek baskı, minimum yok) · kargo ayrıca',
+  },
 };
 
 const money = v => { const n = Number(String(v ?? '').replace(/[^0-9.]/g, '')); return Number.isFinite(n) && n > 0 ? Math.round(n * 100) : null; };

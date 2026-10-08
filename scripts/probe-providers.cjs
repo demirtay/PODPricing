@@ -1,12 +1,15 @@
 // Bağlı olmayan üreticilerin açık veri kaynaklarını yoklar (salt okunur, az istek).
 // Kullanım: node scripts/probe-providers.cjs [id ...]  → data/provider-probe.json
+//           node scripts/probe-providers.cjs --new        → data/new-candidates.json adayları, data/candidate-probe.json
 'use strict';
 const fs = require('node:fs'), path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const c = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36';
-const ids = process.argv.slice(2);
-const targets = c.providers.filter(p => ids.length ? ids.includes(p.id) : p.connection?.state === 'pending');
+const isNew = process.argv.includes('--new');
+const ids = process.argv.slice(2).filter(a => a !== '--new');
+const pool = isNew ? JSON.parse(fs.readFileSync(path.join(root, 'data/new-candidates.json'), 'utf8')).candidates : c.providers;
+const targets = pool.filter(p => ids.length ? ids.includes(p.id) : isNew || p.connection?.state === 'pending');
 
 async function get(url) {
   try {
@@ -45,5 +48,5 @@ async function probe(p) {
     const batch = await Promise.all(targets.slice(i, i + 4).map(probe));
     for (const r of batch) { results.push(r); console.log(JSON.stringify(r)); }
   }
-  fs.writeFileSync(path.join(root, 'data/provider-probe.json'), JSON.stringify({ checkedAt: new Date().toISOString(), results }, null, 2));
+  fs.writeFileSync(path.join(root, isNew ? 'data/candidate-probe.json' : 'data/provider-probe.json'), JSON.stringify({ checkedAt: new Date().toISOString(), results }, null, 2));
 })();

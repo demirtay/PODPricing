@@ -1,6 +1,6 @@
 # POD Atlas bağlantı durumu
 
-Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı ürün · 116 kayıt fiyat incelemesinde
+Güncelleme: 2026-10-08 07:51 UTC · 72/128 üretici bağlı · 31.672 fiyatlı ürün · 116 kayıt fiyat incelemesinde
 
 ## Bağlı üreticiler
 
@@ -25,11 +25,14 @@ Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı 
 | TreatPOD | 687 | public-storefront | 2026-10-04 |
 | LumaPrints | 674 | full-public-catalog | 2026-10-04 |
 | Printful | 552 | full-public-catalog | 2026-10-04 |
+| Fourthwall | 442 | full-public-catalog | 2026-10-08 |
+| Wooacry | 311 | full-public-catalog | 2026-10-08 |
 | Dreamship | 306 | full-public-catalog | 2026-10-04 |
 | Shirtee | 305 | full-public-catalog | 2026-10-04 |
 | Prodigi | 272 | full-public-catalog | 2026-10-04 |
 | NeatoPOD | 267 | full-public-catalog | 2026-10-04 |
 | MakePlayingCards | 248 | full-public-catalog | 2026-10-05 |
+| StationeryHQ | 246 | public-storefront | 2026-10-08 |
 | Blackfish Clothing | 230 | public-storefront | 2026-10-04 |
 | PODPartner | 206 | full-public-catalog | 2026-10-04 |
 | Subliminator | 187 | full-public-catalog | 2026-10-05 |
@@ -43,6 +46,7 @@ Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı 
 | AOP+ | 131 | public-storefront | 2026-10-03 |
 | Artelo | 128 | full-public-catalog | 2026-10-05 |
 | Two Fifteen | 124 | verified-public-product-pages | 2026-10-04 |
+| Blanka | 123 | public-storefront | 2026-10-08 |
 | GetFuelPod | 120 | full-public-catalog | 2026-10-04 |
 | SimplePrint | 117 | full-public-catalog | 2026-10-04 |
 | PillowProfits | 115 | full-public-catalog | 2026-10-04 |
@@ -50,6 +54,7 @@ Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı 
 | Promio | 102 | full-public-catalog | 2026-10-05 |
 | Qikink | 100 | verified-tax-inclusive-product-pages | 2026-10-04 |
 | Printegy | 94 | public-product-pages | 2026-10-04 |
+| Merchr | 88 | public-storefront | 2026-10-08 |
 | JumboDTG | 82 | public-storefront | 2026-10-04 |
 | FinerWorks | 79 | full-public-catalog | 2026-10-04 |
 | GearLaunch | 78 | full-public-catalog | 2026-10-04 |
@@ -58,6 +63,7 @@ Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı 
 | Gearment | 72 | public-category-pages | 2026-10-04 |
 | Printgenie | 72 | full-public-catalog | 2026-10-05 |
 | PrintOps | 64 | full-public-catalog | 2026-10-04 |
+| WHCC | 64 | full-public-catalog | 2026-10-08 |
 | MarketPrint | 53 | full-public-catalog | 2026-10-05 |
 | NovaTomato | 51 | full-public-catalog | 2026-10-04 |
 | Ogo | 42 | public-product-pages | 2026-10-04 |
@@ -65,6 +71,7 @@ Güncelleme: 2026-10-05 00:44 UTC · 65/121 üretici bağlı · 30.369 fiyatlı 
 | TshirtGang | 38 | public-product-pages | 2026-10-04 |
 | OwnPrint | 31 | full-public-catalog | 2026-10-04 |
 | Printrove | 30 | verified-public-base-prices | 2026-10-04 |
+| BlinkStore | 29 | public-storefront | 2026-10-08 |
 | Papello | 28 | verified-public-product-pages | 2026-10-04 |
 | SuperFastPOD | 27 | public-storefront | 2026-10-04 |
 | Podbase | 24 | public-product-pages | 2026-10-04 |

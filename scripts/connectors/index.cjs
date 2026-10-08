@@ -3,7 +3,7 @@
 'use strict';
 const def = (base, file) => ({ base, load: () => require(file) });
 // Ortak JSON-LD bağlayıcısını kullanan üreticiler: { id: ana sayfa }
-const jsonld = { simpleprint: 'https://www.simpleprint.com/' };
+const jsonld = { simpleprint: 'https://www.simpleprint.com/', wooacry: 'https://wooacry.com/', whcc: 'https://www.whcc.com/', fourthwall: 'https://fourthwall.com/' };
 
 module.exports = {
   printify: def('https://printify.com/app/products', './printify.cjs'),

@@ -29,6 +29,9 @@
     "printgenie",
     "lumaprints",
     "simpleprint",
+    "wooacry",
+    "whcc",
+    "fourthwall",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -59,6 +62,11 @@
     "rakiline",
     "superfastpod",
     "blackfishclothing",
+    "merchr",
+    "blinkstore",
+    "blanka",
+    "miamisublimation",
+    "stationeryhq",
     "printy6",
     "interestprint",
     "artsadd",
@@ -278,13 +286,12 @@
       "nextCheck": 0
     },
     "printgenie": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-05T00:44:37.119Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 72,
-      "nextCheck": 1791162834755,
-      "startedAt": "2026-10-05T00:43:54.755Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "lumaprints": {
       "state": "idle",
@@ -295,6 +302,30 @@
       "nextCheck": 0
     },
     "simpleprint": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "wooacry": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "whcc": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "fourthwall": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,
@@ -535,6 +566,38 @@
       "nextCheck": 0
     },
     "blackfishclothing": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "merchr": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "blinkstore": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "blanka": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "stationeryhq": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,

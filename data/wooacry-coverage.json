@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-08T07:33:07.124Z",
+  "sitemapProductUrls": 312,
+  "imported": 311,
+  "skipped": [
+    {
+      "url": "https://wooacry.com/product/diy-acrylic",
+      "reason": "Fiyat yok"
+    }
+  ]
+}

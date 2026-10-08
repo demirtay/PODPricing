@@ -21,6 +21,9 @@
                       "printify":  {
                                        "template":  "https://try.printify.com/m1r1uinkhza6?url={url}"
                                    },
+                      "tapstitch":  {
+                                       "template":  "https://affiliate.tapstitch.com/f3apdc2rc7xn?url={url}"
+                                   },
                       "yoycol":  {
                                        "rawQuery":  "shareCode=eS4KlsjHqFU0/3IZMUCGxw=="
                                    }

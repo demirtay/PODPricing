@@ -57,11 +57,11 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Printful | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://www.printful.com/a/13321156:ce7d5bf657e4b7127304ccfd0a899062 . Derin link: sayfa yolunun sonuna /a/KOD (ör. /custom/product/938/a/KOD; test edildi). Panel: printful.com/dashboard/affiliate/affiliate-link |
 | Printify | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://try.printify.com/m1r1uinkhza6 . Ürüne yönlendirme: ?url={ürün adresi} (test edildi). Panel: dash.partnerstack.com/printify/links |
 | Yoycol | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://www.yoycol.com/?shareCode=eS4KlsjHqFU0/3IZMUCGxw== . Ürüne yönlendirme: ürün adresinin sonuna ?shareCode=KOD (sitenin JS'i her sayfada okuyup distributionCode çerezine yazıyor). Kod URL-kodlanmamalı (%2F/%3D bozar) ve tek sorgu parametresi olmalı. %10, 12 ay. |
-| Tapstitch | İncelemede (PartnerStack) | 2026-10-06 | Printify ile aynı PartnerStack hesabı. |
+| Tapstitch | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://affiliate.tapstitch.com/f3apdc2rc7xn (PartnerStack, partnerlinks.io). Ürüne yönlendirme: ?url={ürün adresi} (Printify ile aynı PartnerStack yöntemi; linke test isteği atılmadı). %10. |
+| Contrado | ✅ Onay maili geldi | 2026-10-08 | "Contrado USA Affiliate — You're in". Dashboard'dan link alınıp siteye eklenecek. |
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
 | NovaTomato | Gönderildi — inceleniyor | 2026-10-08 | Panel: novatomato.com/dashboard/my-perks/affiliate/ (Google ile hesap, Gmail). Sonuç e-postayla gelecek. |
 | Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |
 | Sellfy | Gönderildi — Pending | 2026-10-08 | Panel: partners.dub.co/programs/sellfy (Dub hesabı, kişisel Gmail ile). Onay e-postası Gmail'e gelir. |
 | Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
-| Contrado | Belirsiz | 2026-10-08 | contrado.com/affiliate → "Sign Up Now" sadece aşağı kaydırıyor; kayıt sonrası bülten onayı ("Thanks for joining us") çıktı, ayrı başvuru formu yok. 1-2 gün e-posta bekle, gelmezse Contact Us / sohbetten sor. |
 | BurgerPrints | Program yok | 2026-10-07 | Herkese açık ortaklık programı bulunamadı (burgerprints.com/affiliate bir TikTok blog yazısına gidiyor). Sık sık 2. en ucuz. |

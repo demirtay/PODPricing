@@ -127,7 +127,10 @@ async function collect(id, progress = () => {}) {
     if (!r.x) { skipped.push({ url: r.url, reason: r.skip }); continue; }
     const cur = (r.x.currency || cfg.currency || 'USD').toUpperCase();
     const fx = fxCache[cur] || (fxCache[cur] = await exchange(cur));
-    const slug = r.url.replace(/\/$/, '').split('/').pop().slice(0, 120);
+    // ürün kimliği site yolunda klasör adı olur: Windows'ta geçersiz ve URL'de sorunlu karakterleri at
+    let slug = r.url.replace(/\/$/, '').split('/').pop();
+    try { slug = decodeURIComponent(slug); } catch {}
+    slug = slug.replace(/[\\/:*?"<>|,#%&+\s]+/g, '-').replace(/-{2,}/g, '-').replace(/^-|-$/g, '').slice(0, 120);
     const p = record(id, slug, r.x.name, r.x.minor * fx.rate, new URL(r.x.image, cfg.imageBase || r.url).href, r.url, cfg.sizes || 'Ölçü ve renkler üreticide seçilir');
     if (cur !== 'USD') { p.sourceMinor = r.x.minor; p.sourceCurrency = cur; p.exchangeRate = fx.rate; p.exchangeDate = fx.date; }
     if (r.x.brand) p.aliases = [...new Set([...p.aliases, r.x.brand])];

@@ -133,7 +133,8 @@ const guides = new Map(guideTypes.map(t => {
   const pf = rows.filter(r => r.offers.some(o => o.providerId === 'printful') && r.offers.some(o => o.providerId === 'printify'))
     .map(r => r.offers.find(o => o.providerId === 'printful').baseMinor - r.offers.find(o => o.providerId === 'printify').baseMinor);
   return [t, { rows, suppliers, med: median(rows.map(r => r.med)), lo: rows.reduce((a, r) => !a || r.offers[0].baseMinor < a.baseMinor ? r.offers[0] : a, null), pf: { n: pf.length, printful: pf.filter(d => d < 0).length, printify: pf.filter(d => d > 0).length } }];
-}).filter(([, s]) => s.rows.length >= 3));
+  // en az 3 ürün grubunda görünen üretici yoksa rehber sayfası anlamsız (ve başlık hesabı yapılamaz)
+}).filter(([, s]) => s.rows.length >= 3 && s.suppliers.length));
 // "X alternatifleri": büyük üreticiler için aynı ürünlerde daha ucuz olan rakipler
 const altProviders = [...vsOf].filter(([, l]) => l.length >= 5).sort((a, b) => b[1].length - a[1].length).slice(0, 15).map(([id]) => id);
 const altOf = id => vsOf.get(id).map(v => {

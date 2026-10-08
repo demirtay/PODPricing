@@ -408,13 +408,12 @@
       "nextCheck": 0
     },
     "zelaprint": {
-      "state": "ready",
+      "state": "idle",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:33:59.766Z",
+      "lastSuccess": null,
       "lastError": null,
-      "productCount": 19,
-      "nextCheck": 1791453836567,
-      "startedAt": "2026-10-08T09:33:56.567Z"
+      "productCount": 0,
+      "nextCheck": 0
     },
     "blurb": {
       "state": "idle",
@@ -457,12 +456,13 @@
       "nextCheck": 0
     },
     "customizingbox": {
-      "state": "idle",
+      "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": null,
+      "lastSuccess": "2026-10-08T09:43:30.495Z",
       "lastError": null,
-      "productCount": 0,
-      "nextCheck": 0
+      "productCount": 1275,
+      "nextCheck": 1791454192887,
+      "startedAt": "2026-10-08T09:39:52.887Z"
     },
     "muzefab": {
       "state": "idle",

@@ -36,6 +36,8 @@ function affiliateUrl(providerId, url) {
   // yolun sonuna ek (Printful: /custom/product/938/a/KOD)
   if (a.pathSuffix) { const u = new URL(url); u.pathname = u.pathname.replace(/\/$/, '') + a.pathSuffix; return u.toString(); }
   if (a.param) { const u = new URL(url); u.searchParams.set(a.param, a.value); return u.toString(); }
+  // kodlanmadan eklenen sorgu (Yoycol shareCode'u adresten ham okuyor; %2F/%3D bozar)
+  if (a.rawQuery) { const u = new URL(url); u.search = ''; return u.toString() + '?' + a.rawQuery; }
   return url;
 }
 const outbound = p => affiliateUrl(p.providerId, p.sourceUrl);

@@ -56,6 +56,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 |---|---|---|---|
 | Printful | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://www.printful.com/a/13321156:ce7d5bf657e4b7127304ccfd0a899062 . Derin link: sayfa yolunun sonuna /a/KOD (ör. /custom/product/938/a/KOD; test edildi). Panel: printful.com/dashboard/affiliate/affiliate-link |
 | Printify | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://try.printify.com/m1r1uinkhza6 . Ürüne yönlendirme: ?url={ürün adresi} (test edildi). Panel: dash.partnerstack.com/printify/links |
-| Yoycol | Gönderildi (success) | 2026-10-06 | Panel → Affiliate Program. %10, 12 ay. |
+| Yoycol | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://www.yoycol.com/?shareCode=eS4KlsjHqFU0/3IZMUCGxw== . Ürüne yönlendirme: ürün adresinin sonuna ?shareCode=KOD (sitenin JS'i her sayfada okuyup distributionCode çerezine yazıyor). Kod URL-kodlanmamalı (%2F/%3D bozar) ve tek sorgu parametresi olmalı. %10, 12 ay. |
 | Tapstitch | İncelemede (PartnerStack) | 2026-10-06 | Printify ile aynı PartnerStack hesabı. |
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
+| BurgerPrints | Program yok | 2026-10-07 | Herkese açık ortaklık programı bulunamadı (burgerprints.com/affiliate bir TikTok blog yazısına gidiyor). Sık sık 2. en ucuz. |

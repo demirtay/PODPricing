@@ -10,7 +10,7 @@ const PRINTED = new Set([
   'printy6', 'printkk', 'jetprint', 'papello', 'inkthreadable', 'twofifteen', 'tshirtgang', 'printegy', 'podbase',
   'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway', 'subliminator', 'toaddit', 'makeplayingcards', 'artelo', 'promio',,
   // 2026-10-08 eklenenler (ürün sayfalarında baskı/kişiselleştirme dahil olduğu doğrulandı)
-  'wooacry', 'whcc', 'fourthwall', 'merchr', 'blinkstore', 'stationeryhq', 'shirtigo', 'candlebuilders', 'blurb', 'peecho', 'printdropper', 'customizingbox', 'muzefab', 'artovo', 'prinstant', 'alerioprint', 'dogediy', 'podhut', 'snapwear', 'viviaprint', 'inkpod',
+  'wooacry', 'whcc', 'fourthwall', 'merchr', 'blinkstore', 'stationeryhq', 'shirtigo', 'candlebuilders', 'blurb', 'peecho', 'printdropper', 'customizingbox', 'muzefab', 'artovo', 'podhut', 'viviaprint',
 ]);
 // Fiyatı baskısız (boş) ürün bedeli olanlar
 const BLANK = new Set(['tapstitch', 'printrove', 'ogo', 'scalablepress', 'oowia', 'teelabs']);

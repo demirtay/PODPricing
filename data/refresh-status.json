@@ -29,6 +29,7 @@
     "printgenie",
     "lumaprints",
     "shirtigo",
+    "inkpod",
     "pengine",
     "printdropper",
     "peecho",
@@ -39,6 +40,8 @@
     "fourthwall",
     "customizingbox",
     "muzefab",
+    "snapwear",
+    "viviaprint",
     "printdoors",
     "kincustom",
     "popcustoms",
@@ -75,6 +78,11 @@
     "stationeryhq",
     "oowia",
     "backstoryprints",
+    "artovo",
+    "prinstant",
+    "alerioprint",
+    "podhut",
+    "dogediy",
     "candlebuilders",
     "printy6",
     "interestprint",
@@ -318,6 +326,14 @@
       "productCount": 0,
       "nextCheck": 0
     },
+    "inkpod": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
     "pengine": {
       "state": "idle",
       "intervalMinutes": 30,
@@ -391,13 +407,29 @@
       "nextCheck": 0
     },
     "muzefab": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "snapwear": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "viviaprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-10-08T09:00:52.653Z",
+      "lastSuccess": "2026-10-08T09:23:28.403Z",
       "lastError": null,
-      "productCount": 143,
-      "nextCheck": 1791451850076,
-      "startedAt": "2026-10-08T09:00:50.076Z"
+      "productCount": 48,
+      "nextCheck": 1791453027545,
+      "startedAt": "2026-10-08T09:20:27.545Z"
     },
     "printdoors": {
       "state": "idle",
@@ -680,6 +712,46 @@
       "nextCheck": 0
     },
     "backstoryprints": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "artovo": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "prinstant": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "alerioprint": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "podhut": {
+      "state": "idle",
+      "intervalMinutes": 30,
+      "lastSuccess": null,
+      "lastError": null,
+      "productCount": 0,
+      "nextCheck": 0
+    },
+    "dogediy": {
       "state": "idle",
       "intervalMinutes": 30,
       "lastSuccess": null,

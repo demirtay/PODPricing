@@ -33,6 +33,17 @@ const SITES = {
     preferCurrency: 'EUR',
     basis: 'Muzefab ürün fiyatı · 1-9 adet kademesi (tek adet sipariş edilebilir) · kargo ayrıca',
   },
+  snapwear: {
+    sitemap: 'https://snapwear.pro/sitemap.xml',
+    match: u => /^https:\/\/snapwear\.pro\/product\/[^/]+\/?$/.test(u),
+    preferCurrency: 'EUR',
+    basis: 'Snapwear POD ürün fiyatı (en düşük varyant, tek adet) · kargo ve KDV koşulları üreticide',
+  },
+  viviaprint: {
+    sitemap: 'https://viviaprint.com/sitemap.xml',
+    match: u => /^https:\/\/viviaprint\.com\/product\/[^/]+\/[^/]+\/?$/.test(u),
+    basis: 'Vivia Print açık liste fiyatı "From" (en küçük ölçü, tek adet) · bayi indirimi ayrıca olabilir · kargo ayrıca',
+  },
   fourthwall: {
     sitemap: 'https://products.fourthwall.com/sitemap.xml',
     match: u => /^https:\/\/products\.fourthwall\.com\/[^/]+$/.test(u) && !/\/(all|category|brands?|collections?)$/.test(u),

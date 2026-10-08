@@ -1051,12 +1051,6 @@
       "directorySource": "apps.shopify.com/printonic"
     },
     {
-      "id": "westernprintappproduction",
-      "name": "westernprint POD",
-      "homepage": "https://westernprint-app-production.up.railway.app",
-      "directorySource": "apps.shopify.com/pod-westerprint"
-    },
-    {
       "id": "jubilee",
       "name": "Jubile",
       "homepage": "https://jubilee.beauty",
@@ -1075,9 +1069,9 @@
       "directorySource": "apps.shopify.com/promise-pod"
     },
     {
-      "id": "en",
+      "id": "doboxa",
       "name": "Doboxa Dropshipping Print App",
-      "homepage": "https://en.doboxa.biz",
+      "homepage": "https://doboxa.biz",
       "directorySource": "apps.shopify.com/doboxa-dropshipping-print-app"
     },
     {
@@ -1087,7 +1081,7 @@
       "directorySource": "apps.shopify.com/beautyboss"
     },
     {
-      "id": "live",
+      "id": "liveink",
       "name": "Live Ink",
       "homepage": "https://live.ink",
       "directorySource": "apps.shopify.com/live-ink"
@@ -1159,12 +1153,6 @@
       "directorySource": "apps.shopify.com/printiturk-entegrasyon"
     },
     {
-      "id": "youtu",
-      "name": "Factory 1",
-      "homepage": "https://youtu.be",
-      "directorySource": "apps.shopify.com/factory1"
-    },
-    {
       "id": "tunetoo",
       "name": "Tunetoo Print On Demand",
       "homepage": "https://tunetoo.co.uk",
@@ -1181,12 +1169,6 @@
       "name": "Printitle",
       "homepage": "https://printitle.com",
       "directorySource": "apps.shopify.com/printitle-print-on-demand"
-    },
-    {
-      "id": "publifyproductionb1c4",
-      "name": "Publify",
-      "homepage": "https://publify-production-b1c4.up.railway.app",
-      "directorySource": "apps.shopify.com/publify"
     },
     {
       "id": "northpark",
@@ -1213,8 +1195,8 @@
       "directorySource": "apps.shopify.com/mixam"
     },
     {
-      "id": "inkpodfulfillment",
-      "name": "Ink POD",
+      "id": "inkpod",
+      "name": "InkPOD",
       "homepage": "https://inkpodfulfillment.com",
       "directorySource": "apps.shopify.com/wowfulfillment-app"
     },
@@ -1225,9 +1207,9 @@
       "directorySource": "apps.shopify.com/your-design-print-on-demand"
     },
     {
-      "id": "portal",
+      "id": "artidomo",
       "name": "artidomo Print on Demand DE",
-      "homepage": "https://portal.artidomo.eu",
+      "homepage": "https://artidomo.eu",
       "directorySource": "apps.shopify.com/artidomo-connector-public"
     },
     {
@@ -1279,9 +1261,9 @@
       "directorySource": "apps.shopify.com/turbine"
     },
     {
-      "id": "login",
+      "id": "merchloop",
       "name": "MerchLoop",
-      "homepage": "https://login.merchloop.com",
+      "homepage": "https://merchloop.com",
       "directorySource": "apps.shopify.com/merchloop"
     },
     {
@@ -1297,9 +1279,9 @@
       "directorySource": "apps.shopify.com/orderly-print-on-demand"
     },
     {
-      "id": "pro",
+      "id": "teeallover",
       "name": "TeeAllover",
-      "homepage": "https://pro.teeallover.com",
+      "homepage": "https://teeallover.com",
       "directorySource": "apps.shopify.com/teeallover"
     },
     {
@@ -1363,9 +1345,9 @@
       "directorySource": "apps.shopify.com/reserva-ink"
     },
     {
-      "id": "betapi",
+      "id": "printlabs",
       "name": "Printlabs",
-      "homepage": "https://betapi.print-labs.de",
+      "homepage": "https://print-labs.de",
       "directorySource": "apps.shopify.com/printlabs"
     },
     {
@@ -1399,9 +1381,9 @@
       "directorySource": "apps.shopify.com/subforma-app"
     },
     {
-      "id": "mod",
+      "id": "merchcamp",
       "name": "MerchCamp",
-      "homepage": "https://mod.merch.camp",
+      "homepage": "https://merch.camp",
       "directorySource": "apps.shopify.com/merchcamp"
     },
     {
@@ -1441,9 +1423,9 @@
       "directorySource": "apps.shopify.com/printing-brands"
     },
     {
-      "id": "print",
+      "id": "printcom",
       "name": "Print.com on demand",
-      "homepage": "https://print.com",
+      "homepage": "https://www.print.com",
       "directorySource": "apps.shopify.com/print-com"
     },
     {

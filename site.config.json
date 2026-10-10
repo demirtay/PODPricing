@@ -21,6 +21,12 @@
                       "printify":  {
                                        "template":  "https://try.printify.com/m1r1uinkhza6?url={url}"
                                    },
+                      "contrado":  {
+                                       "params":  {
+                                                      "utm_source":  "252041212130068165063145210102154045044137070103",
+                                                      "utm_medium":  "Affiliate"
+                                                  }
+                                   },
                       "tapstitch":  {
                                        "template":  "https://affiliate.tapstitch.com/f3apdc2rc7xn?url={url}"
                                    },

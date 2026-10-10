@@ -58,7 +58,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Printify | ✅ Onaylandı — siteye eklendi | 2026-10-06 | Link: https://try.printify.com/m1r1uinkhza6 . Ürüne yönlendirme: ?url={ürün adresi} (test edildi). Panel: dash.partnerstack.com/printify/links |
 | Yoycol | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://www.yoycol.com/?shareCode=eS4KlsjHqFU0/3IZMUCGxw== . Ürüne yönlendirme: ürün adresinin sonuna ?shareCode=KOD (sitenin JS'i her sayfada okuyup distributionCode çerezine yazıyor). Kod URL-kodlanmamalı (%2F/%3D bozar) ve tek sorgu parametresi olmalı. %10, 12 ay. |
 | Tapstitch | ✅ Onaylandı — siteye eklendi | 2026-10-08 | Link: https://affiliate.tapstitch.com/f3apdc2rc7xn (PartnerStack, partnerlinks.io). Ürüne yönlendirme: ?url={ürün adresi} (Printify ile aynı PartnerStack yöntemi; linke test isteği atılmadı). %10. |
-| Contrado | ✅ Onay maili geldi | 2026-10-08 | "Contrado USA Affiliate — You're in". Dashboard'dan link alınıp siteye eklenecek. |
+| Contrado | ✅ Onaylandı — siteye eklendi | 2026-10-10 | Ürün adresine ?utm_source=252041212130068165063145210102154045044137070103&utm_medium=Affiliate (panel: contrado.com/estore/account/manage/Affiliate; panel yalnızca ürün sayfaları için link üretiyor). |
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
 | NovaTomato | Gönderildi — inceleniyor | 2026-10-08 | Panel: novatomato.com/dashboard/my-perks/affiliate/ (Google ile hesap, Gmail). Sonuç e-postayla gelecek. |
 | Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |

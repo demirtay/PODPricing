@@ -327,7 +327,7 @@ const LOCALES = {
       foot: ['About & methodology', 'Manufacturers', 'Privacy & cookies', 'Contact'],
       ad: 'Ad', adPreview: s => `Ad slot · ${s}`, adSize: { ust: 'Leaderboard', liste: 'In-list', urun: 'Rectangle', alt: 'Leaderboard' },
       sponsored: 'Sponsored', sponsorPreview: 'Sponsored manufacturer slot', review: 'View ↗',
-      homeTitle: `${BRAND} · Compare print-on-demand prices`, homeDesc: (m, n) => `Find the cheapest print-on-demand supplier: compare ${n} products from ${m} manufacturers — t-shirts, hoodies, mugs, posters, phone cases and more.`,
+      homeTitle: `${BRAND} (podpricing.com) · Compare print-on-demand prices`, homeDesc: (m, n) => `Find the cheapest print-on-demand supplier: compare ${n} products from ${m} manufacturers — t-shirts, hoodies, mugs, posters, phone cases and more.`,
     },
   },
   tr: {
@@ -446,7 +446,7 @@ const LOCALES = {
       foot: ['Hakkında ve yöntem', 'Üreticiler', 'Gizlilik ve çerezler', 'İletişim'],
       ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş', liste: 'Liste arası', urun: 'Kare', alt: 'Yatay afiş' },
       sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı', review: 'İncele ↗',
-      homeTitle: `${BRAND} · Print-on-demand fiyatlarını karşılaştır`, homeDesc: (m, n) => `En ucuz baskı üreticisini bul: ${m} POD üreticisinin ${n} ürününü karşılaştır; tişört, hoodie, kupa, poster, telefon kılıfı ve daha fazlası.`,
+      homeTitle: `${BRAND} (podpricing.com) · Print-on-demand fiyatlarını karşılaştır`, homeDesc: (m, n) => `En ucuz baskı üreticisini bul: ${m} POD üreticisinin ${n} ürününü karşılaştır; tişört, hoodie, kupa, poster, telefon kılıfı ve daha fazlası.`,
     },
   },
 };
@@ -604,7 +604,11 @@ ${H.ad('ust')}
 <h2>${t.catMenu}</h2><div class="catmenu">${groupsOrdered.map(catBox).join('')}</div>
 <div class="sec-head"><h2>${esc(t.guide.indexTitle)}</h2><a href="${href(P.guides)}">${t.seeAll} →</a></div><div class="chips">${[...guides.keys()].slice(0, 12).map(k => `<a class="chip" href="${href(P.guide(k))}"><b>${esc(L.type(k))}</b><span>${esc(t.from(fmt(guides.get(k).lo.baseMinor)))}</span></a>`).join('')}${altProviders.slice(0, 4).map(id => `<a class="chip" href="${href(P.alt(id))}"><b>${esc(t.alt.h1(provName(id)))}</b></a>`).join('')}</div>
 <div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.icards(H.itemsOf(groups.slice(0, 12), []))}`,
-    jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, url: SITE || undefined, inLanguage: lg, potentialAction: { '@type': 'SearchAction', target: SITE + href(P.search) + '?q={q}', 'query-input': 'required name=q' } },
+    // alternateName: Google "podpricing" (bitişik) aramasını markayla eşleştirsin; Organization + logo site adı/ikonu için
+    jsonld: { '@context': 'https://schema.org', '@graph': [
+      { '@type': 'WebSite', '@id': SITE + '/#website', name: BRAND, alternateName: ['PodPricing', 'podpricing.com'], url: SITE || undefined, inLanguage: lg, publisher: { '@id': SITE + '/#org' }, potentialAction: { '@type': 'SearchAction', target: SITE + href(P.search) + '?q={q}', 'query-input': 'required name=q' } },
+      { '@type': 'Organization', '@id': SITE + '/#org', name: BRAND, alternateName: ['PodPricing', 'podpricing.com'], url: SITE || undefined, logo: SITE + '/assets/logo.png' },
+    ] },
   }));
 
   // kategoriler dizini: ana gruplara göre fotoğraflı kutular

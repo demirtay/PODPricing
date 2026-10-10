@@ -64,4 +64,14 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |
 | Sellfy | Gönderildi — Pending | 2026-10-08 | Panel: partners.dub.co/programs/sellfy (Dub hesabı, kişisel Gmail ile). Onay e-postası Gmail'e gelir. |
 | Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
+| PrintKK | Başvurulmadı | 2026-10-10 | printkk.com/affiliate/program (PrintKK hesabıyla). Siparişlerden %10, abonelikten %8–25 (12 ay), 30 gün çerez, min. $25 çekim. Sitede 1.400+ ürün — öncelikli. |
+| Interestprint | Başvurulmadı | 2026-10-10 | interestprint.com/affiliate/program (giriş istiyor). Sitede 3.388 ürün — en büyük. |
+| Toaddit | Başvurulmadı | 2026-10-10 | toaddit.com/affiliate-program ("Go Further as Partners"), oran sayfada yok. 914 ürün. |
+| PODpartner | Başvurulmadı | 2026-10-10 | podpartner.com/affiliate-program — %7, 12 ay + bonus. |
+| JetPrint | Başvurulmadı | 2026-10-10 | jetprintapp.com/affiliate/ — %5, 3 yıl. |
+| Shirtigo | Başvurulmadı | 2026-10-10 | helpcenter.shirtigo.de/faq/allgemein/affiliate-partnerprogramm/ — kullanıcı başına 2.000 €'ya kadar. |
+| Blanka | Başvurulmadı | 2026-10-10 | blankabrand.com/pages/blanka-affiliate-program — aboneliklerden %20'ye kadar, 5 yıl. |
+| Printonic | Başvurulmadı | 2026-10-10 | printonic.com/affiliates — tekrarlayan komisyon. |
+| Promio | Başvurulmadı | 2026-10-10 | promio.eu/affiliate — %5, 12 ay. |
+| (program bulunamadı) | — | 2026-10-10 | ScalablePress, Printdoors, Inkedjoy, PeaPrint, MerchFarm, Printway, TreatPOD, LumaPrints, Dreamship, Prodigi, Customizingbox, Wooacry, Fourthwall (yalnızca mevcut satıcılara). Belirsiz: Artsadd, PopCustoms. |
 | BurgerPrints | Program yok | 2026-10-07 | Herkese açık ortaklık programı bulunamadı (burgerprints.com/affiliate bir TikTok blog yazısına gidiyor). Sık sık 2. en ucuz. |

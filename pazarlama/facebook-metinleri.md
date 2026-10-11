@@ -197,3 +197,24 @@ Has anyone ordered samples from the cheaper ones? Curious how the 250gsm vs 320g
 (Disclosure: I run the site, and some supplier links are affiliate links.)
 
 Görsel: link önizlemesi. Aynı metni çok gruba atma; her gruba ilk cümleyi değiştir.
+
+## Metin 12 — 2027 duvar takvimi / Q4 (Etsy, genel POD, hediye grupları) — rakamlar 2026-10-11
+2027 calendars start selling now, so I compared what a custom wall calendar costs at print-on-demand suppliers (base cost, print included, before shipping):
+
+• $7.18 Printify (Standard Wall Calendar 2027)
+• $7.84 Prodigi (A4 / A5)
+• $8.79 Dreamship (11x8.5" / 14x11.5")
+• $12.19 Printful (Wall Calendar 2027, 11x17" / A4)
+• $14.45 Inkthreadable (A4)
+
+Desk calendars are cheaper: $6.49 Dreamship, $6.56 Printful, $6.85 Printify (all 10x5").
+
+Sizes and paper differ, so check the product page, but the same "wall calendar" can cost almost 2x depending on the supplier.
+
+All 40 calendar products from 12 suppliers: podpricing.com/category/calendars/
+
+Anyone selling calendars this year? Which size sells best for you, A4 or 11x17?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)
+
+Görsel: link önizlemesi. Paylaşmadan önce /category/calendars/ sayfasından rakamları kontrol et; her gruba ilk cümleyi değiştir.

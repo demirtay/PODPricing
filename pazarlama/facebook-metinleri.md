@@ -157,3 +157,43 @@ All 14 suppliers sorted cheapest first (free, updated twice a day): podpricing.c
 Who are you using for your Comfort Colors designs?
 
 (Disclosure: I run the site, and some supplier links are affiliate links.)
+
+---
+
+## Metin 10 — Sweatshirt sezonu / Gildan 18000 (genel POD / Etsy grupları) — rakamlar 2026-10-11
+Crewneck season is starting, so I compared the exact same Gildan 18000 sweatshirt across 19 print-on-demand suppliers (base cost, print included, before shipping):
+
+• Cheapest: $9.09 (Yoycol), $9.75 (BurgerPrints)
+• Mid-range: $11.75 (Printway), $11.90 (Merchize)
+• Printify: $15.53 · Printful: $17.25
+• Most expensive: $34.99
+
+That's more than $8 per sweatshirt between the cheapest and Printful on the same blank. On 50 Q4 orders that's $400+ of margin.
+
+All 19 suppliers sorted cheapest first (free, updated twice a day): podpricing.com/compare/gildan-18000
+
+Which supplier do you use for crewnecks, and how is the print quality?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)
+
+Görsel: link önizlemesi yeterli (sayfanın og:image'ı otomatik gelir). Önce paylaşmadan rakamları sayfadan kontrol et.
+
+---
+
+## Metin 11 — Battaniye 50x60 / Q4 hediye (ev dekor, Etsy hediye grupları) — rakamlar 2026-10-11
+Blankets are one of the top Q4 gift products, so I checked what a 50x60 in custom blanket costs at print-on-demand suppliers (base cost, print included, before shipping):
+
+• Cheapest: $5.51 (PeaPrint, 250gsm flannel), $6.64 (PrintKK, 320gsm flannel)
+• $7.29 (Interestprint, micro fleece)
+• $10.22–$11.12 (Inkedjoy, Artsadd, Printdoors)
+• $20.99 (Gearment, minky) · $24.79 (GetFuelPod)
+
+Materials differ (flannel, fleece, minky), so it's not 100% apples to apples, but the gap is still huge: up to 4x for the same size.
+
+Full list with material and links: podpricing.com/compare/blankets-50x60
+
+Has anyone ordered samples from the cheaper ones? Curious how the 250gsm vs 320gsm flannel compares.
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)
+
+Görsel: link önizlemesi. Aynı metni çok gruba atma; her gruba ilk cümleyi değiştir.

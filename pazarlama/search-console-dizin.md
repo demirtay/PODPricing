@@ -54,19 +54,29 @@ Google günde ~10 istek kabul ediyor. Search Console → üstteki "URL denetle" 
 - ✅ https://podpricing.com/vs/printify-vs-printway/
 - ✅ https://podpricing.com/cheapest/long-sleeve-t-shirts/
 - ✅ https://podpricing.com/cheapest/canvas-prints/
-- https://podpricing.com/cheapest/hats-caps/
-- https://podpricing.com/cheapest/tank-tops/
+- ✅ https://podpricing.com/cheapest/hats-caps/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/tank-tops/ (2026-10-11)
 
 ## 6. gün — Türkçe ana sayfalar ve kalan rehberler
-- https://podpricing.com/tr/en-ucuz/
-- https://podpricing.com/tr/vs/
-- https://podpricing.com/tr/alternatifler/
-- https://podpricing.com/tr/kar-hesaplayici/
-- https://podpricing.com/cheapest/framed-prints/
-- https://podpricing.com/cheapest/blankets/
-- https://podpricing.com/cheapest/pillows/
-- https://podpricing.com/cheapest/polo-shirts/
-- https://podpricing.com/cheapest/zip-hoodies/
-- https://podpricing.com/cheapest/water-bottles/
+- ✅ https://podpricing.com/tr/en-ucuz/ (2026-10-11)
+- ✅ https://podpricing.com/tr/vs/ (2026-10-11)
+- ✅ https://podpricing.com/tr/alternatifler/ (2026-10-11)
+- ✅ https://podpricing.com/tr/kar-hesaplayici/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/framed-prints/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/blankets/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/pillows/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/polo-shirts/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/zip-hoodies/ (2026-10-11)
+- ✅ https://podpricing.com/cheapest/water-bottles/ (2026-10-11)
+
+## 7. gün — yeni üreticiler (2026-10-11)
+- ✅ https://podpricing.com/ (ana sayfa, yeni başlık için yeniden istendi 2026-10-11)
+- ✅ https://podpricing.com/manufacturer/customizingbox/ (2026-10-11)
+- ✅ https://podpricing.com/manufacturer/fourthwall/ (2026-10-11)
+- ✅ https://podpricing.com/manufacturer/inkpod/ (2026-10-11)
+- ✅ https://podpricing.com/manufacturer/wooacry/ (2026-10-11)
+- https://podpricing.com/manufacturer/printdropper/
+- https://podpricing.com/manufacturer/shirtigo/
+- https://podpricing.com/tr/uretici/printiturk/
 
 Sonrası: geri kalan ~32 bin sayfayı Google site haritasından (sitemap.xml) kendisi bulur; elle istek gerekmez.

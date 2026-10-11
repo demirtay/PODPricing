@@ -1,3 +1,6 @@
+// DİKKAT: Bu bir salt-okur denetim DEĞİL. Her üreticiyi kaynağından yeniden çeker ve data/catalog.json + dist/catalog.js dosyalarını YAZAR;
+// kaynağı okunamayan üreticinin doğrulanmamış ürünlerini katalogdan çıkarır (11 Eki: Tapstitch bağlayıcısı bozukken 1.244 ürün silindi).
+// Yalnızca denetim için audit-live-prices.cjs (örnekleme) ve audit-outliers.cjs kullan; bunu çalıştırdıysan git diff ile kontrol etmeden commit etme.
 const fs=require('fs'),path=require('path'),policy=require('./price-policy.cjs'),publicAdapters=require('./public-connectors.cjs'),yoycol=require('./yoycol-connector.cjs');const root=path.resolve(__dirname,'..'),file=path.join(root,'data/catalog.json'),reportFile=path.join(root,'data/price-audit-report.json');
 function read(){return JSON.parse(fs.readFileSync(file,'utf8'));}
 function save(c){require('./catalog-import.cjs').validate(c);for(const [name,text] of [[file,JSON.stringify(c,null,2)],[path.join(root,'dist/catalog.js'),'globalThis.POD_CATALOG = '+JSON.stringify(c)+';']]){fs.writeFileSync(name+'.audit.tmp',text);fs.renameSync(name+'.audit.tmp',name);}}

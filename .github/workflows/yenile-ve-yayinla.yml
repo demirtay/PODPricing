@@ -49,6 +49,16 @@ jobs:
         env:
           REFRESH_BUDGET_MIN: '100'
         run: node scripts/refresh-once.cjs
+      # Bağlayıcısı bozulan üreticiyi görünür yap (Tapstitch 4-11 Eki sessizce eski fiyatta kaldı)
+      - name: Yenilenemeyen üreticileri uyar
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: |
+          node -e '
+          const p=require("./data/refresh-status.json").platforms||{};const now=Date.now();
+          const live=new Set(require("./data/catalog.json").products.map(x=>x.providerId));
+          for(const [id,s] of Object.entries(p)){const age=s.lastSuccess?(now-Date.parse(s.lastSuccess))/864e5:Infinity;
+          if(live.has(id)&&s.lastError&&age>2)console.log("::warning::"+id+": "+(isFinite(age)?Math.floor(age)+" gündür":"hiç")+" yenilenemedi — "+String(s.lastError).slice(0,120));}'
       - name: Katalogu doğrula
         run: node scripts/catalog-import.cjs
       - name: Güncel katalogu kaydet

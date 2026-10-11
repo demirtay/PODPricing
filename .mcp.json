@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "netlify": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@netlify/mcp"
+      ],
+      "env": {}
+    },
+    "search-console": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-server-gsc"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "C:\\Users\\alidemirtay\\.config\\gsc\\credentials.json"
+      }
+    }
+  }
+}

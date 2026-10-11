@@ -27,6 +27,10 @@
                                                       "utm_medium":  "Affiliate"
                                                   }
                                    },
+                      "sellfy":  {
+                                       "param":  "via",
+                                       "value":  "ali-demirtay"
+                                   },
                       "tapstitch":  {
                                        "template":  "https://affiliate.tapstitch.com/f3apdc2rc7xn?url={url}"
                                    },

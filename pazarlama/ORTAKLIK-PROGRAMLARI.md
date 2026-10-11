@@ -62,7 +62,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
 | NovaTomato | Gönderildi — inceleniyor | 2026-10-08 | Panel: novatomato.com/dashboard/my-perks/affiliate/ (Google ile hesap, Gmail). Sonuç e-postayla gelecek. |
 | Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |
-| Sellfy | Gönderildi — Pending | 2026-10-08 | Panel: partners.dub.co/programs/sellfy (Dub hesabı, kişisel Gmail ile). Onay e-postası Gmail'e gelir. |
+| Sellfy | ✅ Onaylandı — siteye eklendi | 2026-10-11 | Dub Partners: sellfy.com?via=ali-demirtay (her sayfaya ?via=ali-demirtay). Satış başına %25, ömür boyu; min. 0 ödeme, 30 gün bekleme. Panel: partners.dub.co/programs/sellfy |
 | Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
 | PrintKK | Başvurulmadı | 2026-10-10 | printkk.com/affiliate/program (PrintKK hesabıyla). Siparişlerden %10, abonelikten %8–25 (12 ay), 30 gün çerez, min. $25 çekim. Sitede 1.400+ ürün — öncelikli. |
 | Interestprint | Başvurulmadı | 2026-10-10 | interestprint.com/affiliate/program (giriş istiyor). Sitede 3.388 ürün — en büyük. |

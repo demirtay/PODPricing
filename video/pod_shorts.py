@@ -92,6 +92,13 @@ def render(html_text: str, png: Path):
 
 
 # ---------------------------------------------------------------- seslendirme
+def spoken(text: str) -> str:
+    """Seslendirme için ölçüleri okunur yapar: '50×60 in' -> '50 by 60 inch' (ekran/başlık değişmez)."""
+    import re
+    text = re.sub(r"(\d+)\s*[×x]\s*(\d+) in\b", r"\1 by \2 inch", text)
+    return text
+
+
 def tts(lines, d: Path):
     from dotenv import load_dotenv
     env_dir = Path(r"C:\Users\alidemirtay\Desktop\sleep-story-factory")
@@ -104,6 +111,7 @@ def tts(lines, d: Path):
     voice = texttospeech.VoiceSelectionParams(language_code=VOICE[0], name=VOICE[1])
     cfg = texttospeech.AudioConfig(audio_encoding=texttospeech.AudioEncoding.LINEAR16, sample_rate_hertz=SR, speaking_rate=RATE)
     for i, text in enumerate(lines):
+        text = spoken(text)
         wav, mk = d / f"b{i:02d}.wav", d / f"b{i:02d}.txt"
         if wav.exists() and mk.exists() and mk.read_text(encoding="utf-8") == text:
             continue

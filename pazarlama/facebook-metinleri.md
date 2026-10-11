@@ -117,3 +117,43 @@ Full list, cheapest first (free, updates twice a day): podpricing.com/compare/gi
 What are you paying per hoodie right now?
 
 (Disclosure: I run the site, and some supplier links are affiliate links.)
+
+---
+
+## Metin 8 — Printful vs Printify, ürüne göre değişiyor (Printful/Printify/Etsy grupları) — rakamlar 2026-10-07
+"Printful or Printify, which is cheaper?" The honest answer: it depends on the product. I compared all 141 products they both sell (base cost, print included, before shipping):
+
+✅ Printful is cheaper on 87 · Printify on 54
+➡️ Overall Printful is about 4% cheaper
+
+But the gaps on single products are bigger than that:
+• Next Level 3600 tee: Printify $11.31 vs Printful $16.91 (Printify saves $5.60)
+• Bella+Canvas 3719 hoodie: Printful $31.68 vs Printify $37.55 (Printful saves $5.87)
+• Gildan 5000 tee: Printful $7.50 vs Printify $8.55
+• Comfort Colors 1717: Printify $12.65 vs Printful $15.60
+
+So if you use both, it's worth checking your best sellers one by one.
+
+Full product-by-product table: podpricing.com/vs/printful-vs-printify
+
+Which one do you use, and why?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)
+
+---
+
+## Metin 9 — Comfort Colors 1717 (Etsy / genel POD grupları) — rakamlar 2026-10-07
+Comfort Colors 1717 is one of the best sellers on Etsy, so I checked what the exact same tee costs across 14 print-on-demand suppliers (base cost, print included, before shipping):
+
+• Cheapest: $8.00 (BurgerPrints), $8.69 (Merchize)
+• Mid-range: $9.80 (Printway), $12.02 (SimplePrint)
+• Printify: $12.65 · Printful: $15.60
+• Most expensive: $16.95
+
+Almost $9 difference on the same garment-dyed tee. On a $29.99 listing that's the gap between a decent margin and barely breaking even.
+
+All 14 suppliers sorted cheapest first (free, updated twice a day): podpricing.com/compare/comfort-colors-1717
+
+Who are you using for your Comfort Colors designs?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)

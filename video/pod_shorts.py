@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""POD Pricing -- YouTube Shorts / TikTok / Reels (1080x1920, ~35-50 sn).
+"""POD Pricing -- YouTube Shorts / TikTok / Reels (1080x1920, ~35-50 sn; --kisa ve alt: 20-30 sn).
 
 Veri: site/data/groups-en.json + site/data/g/<slug>.json (scripts/build-site.cjs üretir).
 Yalnızca baskı dahil (pb=dahil) teklifler kullanılır.
@@ -11,6 +11,8 @@ Kullanım (what-if-factory .venv python):
     python pod_shorts.py build gildan-5000 bella-canvas-3001 ...
     python pod_shorts.py build all          (VIDEOS listesi)
     python pod_shorts.py build vs           (Printful vs Printify)
+    python pod_shorts.py build --kisa gildan-5000 ...   (kısa format: 20-30 sn, ilk 3, kanca ilk cümlede)
+    python pod_shorts.py build alt:printify alt:printful (alternatives sayfası -> kısa format)
 Çıktı: video/out/<ad>.mp4 + <ad>.json (başlık, açıklama, etiketler)
 """
 
@@ -161,13 +163,14 @@ def encode(scenes, durs, d: Path, mp4: Path):
 
 
 # ---------------------------------------------------------------- senaryolar
-def product_video(slug: str):
+def product_video(slug: str, kisa: bool = False):
     g = load_group(slug)
     o = g["offers"]
     if len(o) < 5:
         print(f"{slug}: yeterli baskı dahil teklif yok ({len(o)})")
         return None
-    name, top = g["name"], o[:5]
+    n_top = 3 if kisa else 5
+    name, top = g["name"], o[:n_top]
     short = name.replace(" T-Shirts", " t-shirt").replace(" Hoodies", " hoodie").replace(" Sweatshirts", " sweatshirt").replace(" Tops & Blouses", " tee").replace(" Long Sleeve T-Shirts", " long sleeve tee").replace(" Tank Tops", " tank top").replace(" Zip Hoodies", " zip hoodie").replace(" Kids Clothing", " kids tee")
     lo, hi = o[0], o[-1]
     pf = next((x for x in o if x[0] == "printful"), None)
@@ -180,10 +183,13 @@ def product_video(slug: str):
     scenes.append(page(f"{img}<h1>{html.escape(short)}</h1><div class='range'><span class='lo'>{money(lo[2])}</span>"
                        f"<span class='sub'>to</span><span class='hi'>{money(hi[2])}</span></div>"
                        f"<div class='sub'>Same blank, {len(o)} print-on-demand suppliers</div>"))
-    lines.append(f"The exact same {short} costs {money(lo[2])} at one print-on-demand supplier, and {money(hi[2])} at another. "
-                 f"Here are the five cheapest, print included.")
-    for k in range(4, -1, -1):
-        scenes.append(page(f"<h2>Cheapest {html.escape(short)}</h2>{rows(set(range(k, 5)), k)}"))
+    if kisa:
+        lines.append(f"Same {short}: {money(lo[2])} or {money(hi[2])}, depending on the supplier. Here are the three cheapest.")
+    else:
+        lines.append(f"The exact same {short} costs {money(lo[2])} at one print-on-demand supplier, and {money(hi[2])} at another. "
+                     f"Here are the five cheapest, print included.")
+    for k in range(n_top - 1, -1, -1):
+        scenes.append(page(f"<h2>Cheapest {html.escape(short)}</h2>{rows(set(range(k, n_top)), k)}"))
         lines.append(("And number one: " if k == 0 else f"Number {k + 1}: ") + f"{top[k][1]}, at {money(top[k][2])}.")
     if pf and py:
         scenes.append(page(f"<h2>And the big two?</h2><div class='vs'><div><b>Printful</b><span>{money(pf[2])}</span></div>"
@@ -192,7 +198,8 @@ def product_video(slug: str):
         lines.append(f"For comparison, Printful charges {money(pf[2])}, and Printify {money(py[2])}.")
     scenes.append(page(f"<h2>Compare all {len(o)} suppliers</h2><div class='cta'>podpricing.com</div>"
                        f"<div class='sub' style='text-align:center'>Free · no signup · updated twice a day</div>"))
-    lines.append(f"Prices update twice a day. Compare all {len(o)} suppliers for free at pod pricing dot com.")
+    lines.append(f"Compare all {len(o)} at pod pricing dot com." if kisa else
+                 f"Prices update twice a day. Compare all {len(o)} suppliers for free at pod pricing dot com.")
     meta = {
         "title": f"Cheapest {short} print on demand supplier? {len(o)} compared #shorts",
         "description": f"The same {name.rstrip('s')} costs {money(lo[2])} to {money(hi[2])} depending on the print-on-demand supplier "
@@ -237,6 +244,47 @@ def vs_video(slug="printful-vs-printify"):
     return slug, scenes, lines, meta
 
 
+def alt_video(pid: str):
+    """Kısa format (20-30 sn): site/alternatives/<pid>/ sayfasındaki en ucuz 3 alternatif (sitedeki gibi en az 10 ortak ürün)."""
+    import re
+    src = (ROOT / "site" / "alternatives" / pid / "index.html").read_text(encoding="utf-8")
+    S = html.unescape(re.search(r"<h1>(.+?) alternatives</h1>", src).group(1))
+    total = int(re.search(r"(\d+) print-on-demand suppliers compared with", src).group(1))
+    rx = (r"<tr><td>\d+\. <a href=\"/manufacturer/[^/]+/\"><b>([^<]+)</b></a></td><td class=\"num\"><span class=\"win\">(\d+)% cheaper</span>"
+          r"</td><td class=\"num\">(\d+) / (\d+)</td>")
+    alts = [(html.unescape(a), int(p), int(w), int(n)) for a, p, w, n in re.findall(rx, src)]
+    top = [x for x in alts if x[3] >= 10 and x[1] >= 3][:3]
+    if len(top) < 3:
+        print(f"{pid}: yeterli alternatif yok ({len(top)})")
+        return None
+    e = html.escape
+    rows = lambda show, on: "".join(
+        f"<div class='row{' on' if i == on else ''}{'' if i in show else ' hide'}'><div class='n'>{i + 1}</div>"
+        f"<div class='m'>{e(x[0])}</div><div class='p'>-{x[1]}%</div></div>" for i, x in enumerate(top))
+    scenes, lines = [], []
+    scenes.append(page(f"<h1>{e(S)} alternatives</h1><div class='big'>-{top[0][1]}%</div>"
+                       f"<div class='sub'>Cheaper on the same products · {total} suppliers checked</div>"))
+    lines.append(f"These three suppliers are up to {top[0][1]} percent cheaper than {S} on the same products. I checked {total}.")
+    for k in range(2, -1, -1):
+        x = top[k]
+        scenes.append(page(f"<h2>Cheaper than {e(S)}</h2>{rows(set(range(k, 3)), k)}"
+                           f"<div class='sub' style='text-align:center'>{e(x[0])}: cheaper on {x[2]} of {x[3]} shared products</div>"))
+        lines.append(("And number one: " if k == 0 else f"Number {k + 1}: ") + f"{x[0]}, {x[1]} percent cheaper across {x[3]} shared products.")
+    scenes.append(page(f"<h2>All {total} {e(S)} alternatives</h2><div class='cta'>podpricing.com</div>"
+                       f"<div class='sub' style='text-align:center'>/alternatives/{e(pid)}/ · free · updated twice a day</div>"))
+    lines.append(f"See all {total}, product by product, at pod pricing dot com.")
+    tag = "#" + re.sub(r"[^A-Za-z0-9]", "", S).lower()
+    names = ", ".join(f"{x[0]} ({x[1]}% cheaper on {x[3]} shared products)" for x in top)
+    meta = {"title": f"{S} alternatives: up to {top[0][1]}% cheaper on the same products #shorts",
+            "description": f"{total} print-on-demand suppliers compared with {S} on identical products (base cost, print included, before shipping). "
+                           f"Cheapest overall (at least 10 shared products): {names}.\n"
+                           f"Full list: https://podpricing.com/alternatives/{pid}/\n\n"
+                           f"Prices change. Check the site for today's numbers.\n{tag} #printondemand #etsy #shopify",
+            "tags": [f"{S.lower()} alternatives", f"{S.lower()} alternative", S.lower(), "print on demand", "cheapest print on demand",
+                     "etsy seller", "pod supplier"] + [x[0].lower() for x in top]}
+    return f"{pid}-alternatives", scenes, lines, meta
+
+
 def build(spec):
     if not spec:
         return
@@ -262,6 +310,9 @@ def build(spec):
 if __name__ == "__main__":
     cmd, *args = sys.argv[1:] or ["build", "all"]
     if cmd == "build":
+        kisa = "--kisa" in args
+        args = [a for a in args if a != "--kisa"]
         names = VIDEOS if args == ["all"] else args
         for a in names:
-            build(vs_video() if a == "vs" else vs_video(a[3:]) if a.startswith("vs:") else product_video(a))
+            build(vs_video() if a == "vs" else vs_video(a[3:]) if a.startswith("vs:") else alt_video(a[4:]) if a.startswith("alt:")
+                  else product_video(a, kisa))

@@ -1,16 +1,5 @@
 {
   "mcpServers": {
-    "netlify": {
-      "type": "stdio",
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@netlify/mcp"
-      ],
-      "env": {}
-    },
     "search-console": {
       "type": "stdio",
       "command": "cmd",
@@ -23,6 +12,14 @@
       "env": {
         "GOOGLE_APPLICATION_CREDENTIALS": "C:\\Users\\alidemirtay\\.config\\gsc\\credentials.json"
       }
+    },
+    "cloudflare": {
+      "type": "http",
+      "url": "https://mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-analytics": {
+      "type": "http",
+      "url": "https://graphql.mcp.cloudflare.com/mcp"
     }
   }
 }

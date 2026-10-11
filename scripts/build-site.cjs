@@ -221,7 +221,7 @@ const LOCALES = {
       vs: {
         nav: 'X vs Y', indexTitle: 'Print-on-demand manufacturer comparisons', indexDesc: n => `${n} head-to-head price comparisons between print-on-demand manufacturers, based on products both of them sell.`,
         indexIntro: 'Each comparison only uses products that both manufacturers sell (same blank model or same product type and size), with the cheapest print-included price of each.',
-        title: (a, b) => `${a} vs ${b}: print-on-demand price comparison`, desc: (a, b, n, w) => `${a} vs ${b} on ${n} identical products: ${w}. Updated twice a day from public catalogs.`,
+        title: (a, b, m) => `${a} vs ${b} prices (${m}): which is cheaper?`, desc: (a, b, n, w) => `${a} vs ${b} on ${n} identical products: ${w}. Updated twice a day from public catalogs.`,
         h1: (a, b) => `${a} vs ${b}`, sub: 'Price comparison on products both manufacturers sell',
         verdictA: (a, b, pct) => `${a} is cheaper overall, about ${pct}% less than ${b} on the same products`,
         verdictTie: (a, b) => `${a} and ${b} cost about the same overall`,
@@ -295,10 +295,10 @@ const LOCALES = {
       makersTitle: 'Print-on-demand manufacturers', makersDesc: n => `${n} print-on-demand manufacturers: product counts, categories and lowest prices.`,
       makersIntro: (c, r) => `Prices from ${c} manufacturers are compared. ${r} more are listed as links because their prices require login or are not public.`,
       mk: ['Manufacturer', 'Products', 'Lowest', 'Status'], compared: 'Prices compared', visit: 'visit site ↗',
-      makerTitle: n => `${n} product prices and catalog`, makerDesc: (n, c, v) => c ? `${c} products in the ${n} print-on-demand catalog; lowest price ${v}.` : `${n} print-on-demand manufacturer. Prices not yet in the comparison.`,
+      makerTitle: (n, c, m) => c ? `${n} pricing (${m}): ${c} product base prices` : `${n}: print-on-demand products and pricing`, makerDesc: (n, c, v, tops = []) => c ? `${n} pricing: ${c} print-on-demand products${tops.length ? ' — ' + tops.map(([l, p]) => `${l.toLowerCase()} from ${p}`).join(', ') : `, lowest base price ${v}`}. Compare every ${n} price with other suppliers, updated twice a day.` : `${n} print-on-demand manufacturer. Prices not yet in the comparison.`,
       makerStats: (n, t, v) => `${n} products · ${t} product types · lowest ${v}`, makerTop: 'Cheapest products', noPrices: r => `This manufacturer's prices are not in the comparison: ${r}. Visit the manufacturer site for products and prices.`,
       go: 'Go to store ↗', cta: m => `Go to ${m} ↗`, inGroup: (n) => `Sold by ${n} manufacturers — compare all prices`,
-      productTitle: (t, m, v) => `${t} · ${m} · ${v}`, productDesc: (m, t, v, l) => `${m} ${t}: ${v}. Compare ${l.toLowerCase()} prices across print-on-demand manufacturers.`,
+      productTitle: (t, m, v) => `${t.toLowerCase().startsWith(m.toLowerCase()) ? t : `${m} ${t}`}: ${v} base price`, productDesc: (m, t, v, l) => `${m} ${t}: ${v}. Compare ${l.toLowerCase()} prices across print-on-demand manufacturers.`,
       sameGroup: 'Same product at other manufacturers', otherMakers: l => `More ${l.toLowerCase()}`,
       f: { type: 'Product type', maker: 'Manufacturer', blank: 'Blank model', pbt: 'Price type', basis: 'Pricing basis', src: 'Source price', fx: (r, d) => `(rate ${r}, ${d})`, range: 'Price range',
         orig: 'Before discount', member: 'Membership price', memberNote: "(on the manufacturer's paid plan)", methods: 'Print methods', sizes: 'Sizes / variants', material: 'Material',
@@ -348,7 +348,7 @@ const LOCALES = {
       vs: {
         nav: 'X vs Y', indexTitle: 'POD üreticisi karşılaştırmaları', indexDesc: n => `Print-on-demand üreticileri arasında ${n} ikili fiyat karşılaştırması; iki üreticinin de sattığı ürünlere göre.`,
         indexIntro: 'Her karşılaştırma yalnızca iki üreticinin de sattığı ürünleri (aynı boş ürün modeli ya da aynı ürün tipi ve ölçü) ve her birinin en ucuz baskı dahil fiyatını kullanır.',
-        title: (a, b) => `${a} mı ${b} mı? POD fiyat karşılaştırması`, desc: (a, b, n, w) => `${a} ile ${b}, ${n} aynı üründe: ${w}. Fiyatlar günde iki kez yenilenir.`,
+        title: (a, b, m) => `${a} mı ${b} mı? Hangisi daha ucuz (${m})`, desc: (a, b, n, w) => `${a} ile ${b}, ${n} aynı üründe: ${w}. Fiyatlar günde iki kez yenilenir.`,
         h1: (a, b) => `${a} vs ${b}`, sub: 'İki üreticinin de sattığı ürünlerde fiyat karşılaştırması',
         verdictA: (a, b, pct) => `Genel olarak ${a} daha ucuz; aynı ürünlerde ${b}'den yaklaşık %${pct} daha az`,
         verdictTie: (a, b) => `${a} ve ${b} genel olarak aşağı yukarı aynı fiyatta`,
@@ -422,7 +422,7 @@ const LOCALES = {
       makersTitle: 'Print-on-demand üreticileri', makersDesc: n => `${n} print-on-demand üreticisi: ürün sayıları, kategoriler ve en düşük fiyatlar.`,
       makersIntro: (c, r) => `${c} üreticinin fiyatları karşılaştırmada. ${r} üretici, fiyatları üye girişi gerektirdiği ya da yayınlanmadığı için yalnızca bağlantı olarak listeleniyor.`,
       mk: ['Üretici', 'Ürün', 'En düşük', 'Durum'], compared: 'Fiyatlar karşılaştırmada', visit: 'siteye git ↗',
-      makerTitle: n => `${n} ürün fiyatları ve katalog`, makerDesc: (n, c, v) => c ? `${n} print-on-demand kataloğunda ${c} ürün; en düşük fiyat ${v}.` : `${n} print-on-demand üreticisi. Fiyat bilgisi henüz karşılaştırmada yok.`,
+      makerTitle: (n, c, m) => c ? `${n} fiyatları (${m}): ${c} ürünün baz fiyatı` : `${n}: print-on-demand ürünleri ve fiyatları`, makerDesc: (n, c, v, tops = []) => c ? `${n} fiyatları: ${c} print-on-demand ürünü${tops.length ? ' — ' + tops.map(([l, p]) => `${l.toLocaleLowerCase('tr')} en düşük ${p}`).join(', ') : `, en düşük baz fiyat ${v}`}. ${n} fiyatlarını diğer üreticilerle karşılaştır; günde iki kez güncellenir.` : `${n} print-on-demand üreticisi. Fiyat bilgisi henüz karşılaştırmada yok.`,
       makerStats: (n, t, v) => `${n} ürün · ${t} ürün tipi · en düşük ${v}`, makerTop: 'En uygun ürünler', noPrices: r => `Bu üreticinin fiyatları karşılaştırmada yok: ${r.charAt(0).toLocaleLowerCase('tr') + r.slice(1)}. Ürünler ve fiyatlar için üreticinin sitesine bakın.`,
       go: 'Mağazaya git ↗', inGroup: (n) => `${n} üreticide satılıyor, bütün fiyatları karşılaştır`,
       searchTitle: 'Ara', searchDesc: 'Print-on-demand ürünlerini ara ve üretici fiyatlarını karşılaştır.', searching: 'Aranıyor…',
@@ -689,6 +689,7 @@ ${best.map((p, i) => `<li><span class="r">${i + 1}</span><span class="n"><a href
   }));
 
   // üreticiler
+  const monthNow = new Intl.DateTimeFormat(L.intl, { month: 'long', year: 'numeric' }).format(new Date());
   const provRows = catalog.providers.map(p => ({ p, list: byProvider.get(p.id) || [] })).sort((a, b) => b.list.length - a.list.length || a.p.name.localeCompare(b.p.name));
   add(P.makers + 'index.html', page(L, H, {
     rel: P.makers + 'index.html', alt: altAll(p => p.makers), title: `${t.makersTitle} · ${BRAND}`, description: t.makersDesc(catalog.providers.length), crumbs: [[t.makers]],
@@ -701,7 +702,7 @@ ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${e
   for (const { p, list } of provRows) {
     const types = [...groupBy(list, x => x.type)].sort((a, b) => b[1].length - a[1].length);
     add(P.maker(p.id) + 'index.html', page(L, H, {
-      rel: P.maker(p.id) + 'index.html', alt: altAll(x => x.maker(p.id)), title: `${t.makerTitle(p.name)} · ${BRAND}`, description: t.makerDesc(p.name, list.length, list.length ? fmt(list[0].baseMinor) : ''),
+      rel: P.maker(p.id) + 'index.html', alt: altAll(x => x.maker(p.id)), title: `${t.makerTitle(p.name, list.length, monthNow)} · ${BRAND}`, description: t.makerDesc(p.name, list.length, list.length ? fmt(list[0].baseMinor) : '', types.filter(([k]) => k !== 'diger').slice(0, 3).map(([k, l]) => [L.type(k), fmt(l[0].baseMinor)])),
       crumbs: [[t.makers, href(P.makers)], [p.name]],
       body: `<h1>${esc(p.name)}</h1><p>${homeLink(p, `${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗`)}</p>
 ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(list[0].baseMinor))}</p>
@@ -730,14 +731,14 @@ ${altProviders.includes(p.id) ? `<p><a class="go" href="${href(P.alt(p.id))}">${
     const others = [...new Set([...(vsOf.get(v.a) || []), ...(vsOf.get(v.b) || [])])].filter(x => x !== v).slice(0, 16);
     const winnerLine = verdict(v);
     add(P.vs(v.slug) + 'index.html', page(L, H, {
-      rel: P.vs(v.slug) + 'index.html', alt: altAll(p => p.vs(v.slug)), title: `${V.title(A, B)} · ${BRAND}`, description: V.desc(A, B, cnt, winnerLine),
+      rel: P.vs(v.slug) + 'index.html', alt: altAll(p => p.vs(v.slug)), title: `${V.title(A, B, monthNow)} · ${BRAND}`, description: V.desc(A, B, cnt, winnerLine),
       crumbs: [[V.indexTitle, href(P.vsIndex)], [`${A} vs ${B}`]],
       body: `<h1>${esc(V.h1(A, B))}</h1><p class="muted">${esc(V.sub)} · ${esc(V.shared(cnt))}</p>
 <div class="verdict"><b>${esc(winnerLine)}.</b><p>${esc(V.totals(cnt, A, fmt(v.sumA), B, fmt(v.sumB)))}</p></div>
 <div class="vs-sides">${side(v.a)}${side(v.b)}</div>${H.ad('liste')}
 <div class="tbl"><table class="vs-table"><thead><tr><th>${esc(V.th[0])}</th><th class="num">${esc(A)}</th><th class="num">${esc(B)}</th><th class="num">${esc(V.th[1])}</th></tr></thead><tbody>${v.rows.map(rowHtml).join('')}</tbody></table></div>
 <p class="muted sm">${esc(V.note)}</p>${others.length ? `<h2>${esc(V.others)}</h2><div class="chips">${others.map(vsLink).join('')}</div>` : ''}`,
-      jsonld: { '@context': 'https://schema.org', '@type': 'WebPage', name: V.title(A, B), about: [A, B].map(name => ({ '@type': 'Organization', name })) },
+      jsonld: { '@context': 'https://schema.org', '@type': 'WebPage', name: V.title(A, B, monthNow), about: [A, B].map(name => ({ '@type': 'Organization', name })) },
     }));
   }
 

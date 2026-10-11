@@ -35,6 +35,8 @@ async function collect(progress = () => {}) {
   for (const { item, d } of details) {
     const titanium = d?.minTitanium, diamond = d?.minDiamond;
     if (!(titanium > 0)) { skipped.push({ slug: item.slug, reason: 'Titanium fiyatı yok' }); continue; }
+    // 0.01 / 0.10 USD gibi yer tutucu başlangıç fiyatları (ör. keychain 0.01, en yüksek 7.99): varyant fiyatı açık değil → gizle
+    if (titanium < 0.25 && d.maxPrice >= titanium * 20) { skipped.push({ slug: item.slug, reason: `Yer tutucu başlangıç fiyatı (${titanium} USD, en yüksek ${d.maxPrice} USD)` }); continue; }
     const locs = Object.keys(item.displayPrice || {});
     const name = decode(item.name).replace(/\s*\|\s*/g, ' | ').trim();
     const cat = category((d.categories || []).map(c => c.slug || c.name || ''), name);

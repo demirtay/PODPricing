@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """POD Pricing YouTube kanalı için tek seferlik yetkilendirme.
-Gökyüzü Postası ile aynı OAuth istemcisini (diecast-shorts-factory) kullanır; onay ekranında
-"POD Pricing" kanalı seçilmelidir. Token yalnızca bu klasöre kaydedilir (git'e girmez).
+Kendi Google Cloud projesinin (pod-pricing-youtube) OAuth istemcisini kullanır; YouTube kotası
+diğer kanallardan ayrıdır. Onay ekranında "POD Pricing" kanalı seçilmelidir.
+İstemci ve token yalnızca bu klasörde durur (ikisi de git'e girmez).
 """
 from pathlib import Path
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-CLIENT_SECRET_PATH = Path(r"C:\Users\alidemirtay\Desktop\diecast-shorts-factory\youtube_credentials.json")
+CLIENT_SECRET_PATH = Path(__file__).parent / "youtube_credentials.json"
 OUTPUT_TOKEN_PATH = Path(__file__).parent / "youtube_token.json"
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",

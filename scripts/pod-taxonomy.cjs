@@ -20,6 +20,13 @@ const GROUPS = [
   ['diger', 'Diğer'],
 ];
 
+// Kupa/tumbler/şişe aksesuarları (kapak, isimlik, pipet süsü, kılıf) içecek kabı değildir: kupa/termos/matara/bardak
+// türlerinden çıkar, "Diğer Mutfak Ürünleri"ne gider (12 Eki 2026: PrintKK $1.63 "Tumbler Lid Nameplate" 30oz tumbler
+// grubunda en ucuz görünüyordu). Bardak sargı sticker'ı (cup wrap) yalnızca hariç tutulur, Sticker türüne düşer.
+const DRINK_ACC = /\b((tumbler|cup|mug|bottle) lids?|lid (nameplate|name plate|topper)s?|cup covers?|straw (toppers?|covers?|charms?|caps?)|(tumbler|cup) (charms?|toppers?|boots?|name ?plates?)|silicone boots?)\b/;
+const DRINK_EXCLUDE = new RegExp(DRINK_ACC.source + '|\\bcup wraps?\\b');
+const DRINKWARE = new Set(['mutfak-kupa', 'mutfak-termos', 'mutfak-matara', 'mutfak-bardak']);
+
 // [id, grup, Türkçe ad, eşleşme, hariç]  — sıra önemlidir: özelden genele.
 const T = [
   // --- evcil (önce: "dog hoodie" giyim değil)
@@ -107,7 +114,7 @@ const T = [
   ['mutfak-bardak', 'mutfak', 'Bardak ve Kadeh', /\b(glass(es)?|stemless|corkcicle|pint|shot glass|wine glass|beer (stein|can glass)|can glass|stein|tankard|goblet|whiskey|champagne flute|cups?|sippy)\b/, /\b(clock|glasses case|sunglasses|glass (frame|print|wall art|sign|ornament|cutting board))\b/],
   ['mutfak-sogutucu', 'mutfak', 'Kutu Soğutucu (Koozie)', /\b(koozies?|can (cooler|holder|sleeve)|stubby holder|beer sleeve|bottle cooler|drink holder|beverage holder)\b/],
   ['mutfak-bardak-alti', 'mutfak', 'Bardak Altlığı', /\b(coasters?)\b/],
-  ['mutfak-tabak', 'mutfak', 'Tabak ve Kase', /\b(plates?|bowls?|platter|dish|serving tray|tray)\b/, /\b(license plate|plate carrier|pet bowl|dog bowl|cat bowl|name plate|door plate)\b/],
+  ['mutfak-tabak', 'mutfak', 'Tabak ve Kase', /\b(plates?|bowls?|platter|dish|serving tray|tray)\b/, /\b(license plate|plate carrier|pet bowl|dog bowl|cat bowl|name plate|(tumbler|cup) name ?plates?|door plate)\b/],
   ['mutfak-kesme-tahtasi', 'mutfak', 'Kesme Tahtası', /\b(cutting board|chopping board|charcuterie|cheese board|serving board)\b/],
   ['mutfak-diger', 'mutfak', 'Diğer Mutfak Ürünleri', /\b(oven mitts?|pot (holders?|mat)|kitchen (towel|mat|set|drying pad)|drying (pad|mat)|coffee mat|bar (runner|mat)|egg holder|wine caddy|kitchen (insulation|\d-piece|three-piece|four-piece)|four-piece set|spatula|grill\w*|stir sticks?|wine stopper|napkins?|timer|tea box|popsicle|tea towel|placemats?|place mats?|table mats?|ironing board cover|table runners?|napkin|bottle opener|spoon|fork|knife|lunchbox|jar|teapot|kettle|chopsticks?|bento|fridge magnet|trivet)\b/],
 
@@ -173,7 +180,11 @@ const T = [
   ['spor-kamp', 'arac-outdoor', 'Kamp ve Outdoor', /\b(camping|tent|hammock|sleeping bag|cooler|fishing)\b/],
 ];
 
-const TYPES = T.map(([id, group, label, re, ex]) => ({ id, group, label, re, ex }));
+const TYPES = T.map(([id, group, label, re, ex]) => ({
+  id, group, label,
+  re: id === 'mutfak-diger' ? new RegExp(DRINK_ACC.source + '|' + re.source) : re,
+  ex: DRINKWARE.has(id) ? (ex ? new RegExp(ex.source + '|' + DRINK_EXCLUDE.source) : DRINK_EXCLUDE) : ex,
+}));
 const TYPE_BY_ID = new Map(TYPES.map(t => [t.id, t]));
 const GROUP_LABEL = new Map(GROUPS);
 

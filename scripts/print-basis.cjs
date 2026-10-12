@@ -11,6 +11,8 @@ const PRINTED = new Set([
   'rakiline', 'treatpod', 'popcustoms', 'aop', 'merchone', 'contrado', 'neatopod', 'pillowprofits', 'getfuelpod', 'printops', 'lumaprints', 'finerworks', 'sellfy', 'ownprint', 'novatomato', 'printway', 'subliminator', 'toaddit', 'makeplayingcards', 'artelo', 'promio',,
   // 2026-10-08 eklenenler (ürün sayfalarında baskı/kişiselleştirme dahil olduğu doğrulandı)
   'wooacry', 'whcc', 'fourthwall', 'merchr', 'blinkstore', 'stationeryhq', 'shirtigo', 'candlebuilders', 'blurb', 'peecho', 'printdropper', 'customizingbox', 'muzefab', 'artovo', 'podhut', 'viviaprint', 'colouroo', 'blinkstore', 'zelaprint',
+  // 2026-10-12: Art of Where drop ship fiyatı tasarımla basılı ürün içindir (/info/pricing)
+  'artofwhere',
 ]);
 // Fiyatı baskısız (boş) ürün bedeli olanlar
 const BLANK = new Set(['tapstitch', 'printrove', 'ogo', 'scalablepress', 'oowia', 'teelabs']);

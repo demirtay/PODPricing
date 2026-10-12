@@ -37,6 +37,7 @@ module.exports = {
   inkpod: def('https://www.inkpodfulfillment.com/', './inkpod.cjs'),
   pengine: def('https://www.pengine.io/', './pengine.cjs'),
   printdropper: def('https://printdropper.com/products', './printdropper.cjs'),
+  artofwhere: def('https://artofwhere.com/products', './artofwhere.cjs'),
   ...Object.fromEntries(Object.entries(require('./pricing-cards.cjs').SITES).map(([id, s]) => [id, {
     base: new URL(s.page).origin + '/', load: () => ({ collect: progress => require('./pricing-cards.cjs').collect(id, progress) }),
   }])),

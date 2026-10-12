@@ -8,7 +8,7 @@ const BLOCKED = 'Site otomatik erişimi engelliyor (bot koruması); güncel fiya
 const LOGIN = 'Fiyatlar üye girişi veya uygulama içinde gösteriliyor';
 const DEAD = 'Site şu an erişilemiyor (kapanmış veya taşınmış olabilir)';
 const REASON = {
-  gelato: BLOCKED, customcat: BLOCKED, artofwhere: BLOCKED, printedmint: BLOCKED, shop3d: BLOCKED, coastalreign: BLOCKED,
+  gelato: BLOCKED, customcat: BLOCKED, printedmint: BLOCKED, shop3d: BLOCKED, coastalreign: BLOCKED,
   gocustomclothing: BLOCKED, vistaprint: BLOCKED, through6: BLOCKED, shineon: LOGIN,
   tpop: LOGIN, sellfy: LOGIN, gooten: LOGIN, oneprint: 'Fiyatlar sayfada tarayıcıda oluşturuluyor; yalnızca birkaç ürün',
   printbelle: DEAD, bluedoba: DEAD, awkwardstyles: DEAD, districtphoto: DEAD, safsira: DEAD, thisnew: DEAD, snugglepartners: DEAD,

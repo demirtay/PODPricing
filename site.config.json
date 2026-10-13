@@ -36,6 +36,10 @@
                                    },
                       "yoycol":  {
                                        "rawQuery":  "shareCode=eS4KlsjHqFU0/3IZMUCGxw=="
+                                   },
+                      "interestprint":  {
+                                       "param":  "rf",
+                                       "value":  "58019"
                                    }
                   },
     "cloudflareAnalyticsToken":  "8874dc4e26b5469db2882a45f0bd381b",

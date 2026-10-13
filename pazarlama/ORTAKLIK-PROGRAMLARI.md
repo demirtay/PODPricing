@@ -51,6 +51,23 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 - Kupon/indirim kodu sitelerine bağlantı dağıtma (çoğu programda yasak).
 - Onay e-postası hello@podpricing.com → kullanıcının Gmail'ine gelir. Onaylanan her program için özel bağlantıyı (affiliate link veya ref kodu) Claude'a ilet.
 
+## Yeni üreticiler taraması — 2026-10-13
+Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affiliate, /affiliates, /affiliate-program, /referral, /partners yolları + web araması). Ürün sayısı parantezde.
+
+**Program VAR (başvurulabilir):**
+| Üretici | Ürün | Şartlar | Başvuru |
+|---|---|---|---|
+| Printgenie | 72 | Satış başına %10, 30 gün çerez | https://www.printgenie.com/affiliate |
+| GearLaunch | 78 | %5, 12 ay, 90 gün çerez, aylık ödeme | https://affiliate.gearlaunch.com/ (form, 48 saatte cevap) |
+| Teelaunch | 143 | Yönlendirilenin satışlarının %5'i, 1 yıl (blog) | Teelaunch hesabı → Account → "Refer a Friend" |
+| Two Fifteen | 124 | Sayfada giriş istiyor | https://www.twofifteen.co.uk/affiliate-program (hesap gerekli) |
+| PillowProfits | 115 | Satılan ürün başına $0.25–1.00 | https://pillowprofits.com/affiliates/ |
+| POD Hut | 80 | GoAffPro "ambassador" programı, oran sayfada JS ile | https://podhutambassadors.goaffpro.com |
+| BeautyBoss | 11 | Kayıt başına $50 + hizmetlerden %30 | https://beautyboss.com/affiliate |
+
+**Program bulunamadı (otomatik tarama + arama, 2026-10-13):** Shirtee, InkPOD, NeatoPOD, MakePlayingCards, StationeryHQ, Blackfish Clothing, Subliminator, Snapwear, KINcustom, Mia Merchandise, Digital On Demand, Muzefab, Printy6, AOP+, GetFuelPod, Printdropper, Colouroo, Qikink, Pengine, Merchr, Printmood, MerchOne, JumboDTG, Slaite POD, PrintOps, WHCC, OOWIA, Vivia Print, Teelabs, Ogo, TshirtGang, BackStoryPrints, OwnPrint, Printrove, BlinkStore, SuperFastPOD, Artovo, Print Partners, Merch Factory, Printiturk, Prinstant, Zela Print, Dogediy, Peecho, Candle Builders, Alerio Print, Rakiline, Blurb (link ana sayfaya dönüyor), OnePrint, GoQuadra (sayfa 404), zonkraft.
+**Belirsiz (site botları engelliyor / "partner" sayfası var):** Art of Where (403), Artelo ("Partner with Artelo" linki var, içerik doğrulanmadı).
+
 ## Başvuru durumu
 | Üretici | Durum | Tarih | Not |
 |---|---|---|---|
@@ -65,7 +82,7 @@ Programı bulunamayanlar (şimdilik): Gearment, Dreamship, BurgerPrints, Printwa
 | Sellfy | ✅ Onaylandı — siteye eklendi | 2026-10-11 | Dub Partners: sellfy.com?via=ali-demirtay (her sayfaya ?via=ali-demirtay). Satış başına %25, ömür boyu; min. 0 ödeme, 30 gün bekleme. Panel: partners.dub.co/programs/sellfy |
 | Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
 | PrintKK | Başvurulmadı | 2026-10-10 | printkk.com/affiliate/program (PrintKK hesabıyla). Siparişlerden %10, abonelikten %8–25 (12 ay), 30 gün çerez, min. $25 çekim. Sitede 1.400+ ürün — öncelikli. |
-| Interestprint | Başvurulmadı | 2026-10-10 | interestprint.com/affiliate/program (giriş istiyor). Sitede 3.388 ürün — en büyük. |
+| Interestprint | ✅ Hesap açıldı — siteye eklendi | 2026-10-13 | Onay gerekmedi, panelde hazır: Associate ID 58019, link ?rf=58019 (her sayfada çalışır; site.config.json param rf). %10, 12 ay, min. $50 çekim. ÖDEME SADECE PAYPAL (Türkiye'de yok) → support@interestprint.com'a Payoneer/havale sorulacak. Panel: interestprint.com/affiliate/settings |
 | Toaddit | Başvurulmadı | 2026-10-10 | toaddit.com/affiliate-program ("Go Further as Partners"), oran sayfada yok. 914 ürün. |
 | PODpartner | Başvurulmadı | 2026-10-10 | podpartner.com/affiliate-program — %7, 12 ay + bonus. |
 | JetPrint | Başvurulmadı | 2026-10-10 | jetprintapp.com/affiliate/ — %5, 3 yıl. |

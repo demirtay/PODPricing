@@ -75,8 +75,17 @@ Google günde ~10 istek kabul ediyor. Search Console → üstteki "URL denetle" 
 - ✅ https://podpricing.com/manufacturer/fourthwall/ (2026-10-11)
 - ✅ https://podpricing.com/manufacturer/inkpod/ (2026-10-11)
 - ✅ https://podpricing.com/manufacturer/wooacry/ (2026-10-11)
-- https://podpricing.com/manufacturer/printdropper/
-- https://podpricing.com/manufacturer/shirtigo/
-- https://podpricing.com/tr/uretici/printiturk/
+- ✅ https://podpricing.com/manufacturer/printdropper/ (2026-10-13)
+- ✅ https://podpricing.com/manufacturer/shirtigo/ (2026-10-13)
+- ✅ https://podpricing.com/tr/uretici/printiturk/ (2026-10-13)
+
+## 8. gün — 2026-10-13
+- Site haritası yeniden gönderildi (Google en son 7 Eki'de okumuştu: 32.669 URL; canlıda 37.589).
+- ✅ https://podpricing.com/manufacturer/artofwhere/ (2026-10-13)
+- ✅ https://podpricing.com/manufacturer/stationeryhq/ (2026-10-13)
+- ✅ https://podpricing.com/manufacturer/pengine/ (2026-10-13)
+- ✅ https://podpricing.com/manufacturer/merchr/ (2026-10-13)
+- ✅ https://podpricing.com/manufacturer/colouroo/ (2026-10-13)
+- (printonic zaten dizinde, atlandı)
 
 Sonrası: geri kalan ~32 bin sayfayı Google site haritasından (sitemap.xml) kendisi bulur; elle istek gerekmez.

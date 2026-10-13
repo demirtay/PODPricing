@@ -44,7 +44,8 @@ function affiliateUrl(providerId, url) {
 }
 const outbound = p => affiliateUrl(p.providerId, p.sourceUrl);
 // üretici ana sayfası bağlantısı (affiliate olanlarda rel="sponsored")
-const homeLink = (p, text) => `<a class="go" href="${esc(affiliateUrl(p.id, p.homepage))}" target="_blank" rel="nofollow${cfg.affiliate?.[p.id] ? ' sponsored' : ''} noopener">${text}</a>`;
+// "home": yalnızca ana sayfa bağlantısının yerine geçen kayıt linki (Teelaunch: signup?ref=KOD)
+const homeLink = (p, text) => `<a class="go" href="${esc(cfg.affiliate?.[p.id]?.home || affiliateUrl(p.id, p.homepage))}" target="_blank" rel="nofollow${cfg.affiliate?.[p.id] ? ' sponsored' : ''} noopener">${text}</a>`;
 
 // ---------- veriyi hazırla
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));

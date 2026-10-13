@@ -84,11 +84,19 @@ Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affil
 | PrintKK | Gönderildi — inceleniyor | 2026-10-13 | dashboard.printkk.com/finance/affiliate formu (ad, bölge: Europe Asia Africa, keşif: site). Formda: sipariş değerinin %10'u, 12 ay. Onaylanınca linki panelden al, siteye ekle. |
 | Interestprint | ✅ Hesap açıldı — siteye eklendi | 2026-10-13 | Onay gerekmedi, panelde hazır: Associate ID 58019, link ?rf=58019 (her sayfada çalışır; site.config.json param rf). %10, 12 ay, min. $50 çekim. ÖDEME SADECE PAYPAL (Türkiye'de yok) → support@interestprint.com'a Payoneer/havale sorulacak. Panel: interestprint.com/affiliate/settings |
 | Toaddit | Başvurulmadı | 2026-10-10 | toaddit.com/affiliate-program ("Go Further as Partners"), oran sayfada yok. 914 ürün. |
-| PODpartner | Başvurulmadı | 2026-10-10 | podpartner.com/affiliate-program — %7, 12 ay + bonus. |
-| JetPrint | Başvurulmadı | 2026-10-10 | jetprintapp.com/affiliate/ — %5, 3 yıl. |
+| PODpartner | Başvuruldu, inceleniyor | 2026-10-13 | podpartner.com/affiliate/apply — %7, 12 ay, 90 gün çerez, PayPal min $20; ~2 iş günü içinde mail. |
+| JetPrint | Uygun değil (şimdilik) | 2026-10-13 | jetprintapp.com/affiliate/ — %5, 3 yıl. Şart: 5+ tasarım ve $50+ ödenmiş sipariş. |
 | Shirtigo | Başvurulmadı | 2026-10-10 | helpcenter.shirtigo.de/faq/allgemein/affiliate-partnerprogramm/ — kullanıcı başına 2.000 €'ya kadar. |
-| Blanka | Başvurulmadı | 2026-10-10 | blankabrand.com/pages/blanka-affiliate-program — aboneliklerden %20'ye kadar, 5 yıl. |
+| Blanka | Başvuruldu (mail gönderildi, alidemirtay67@gmail.com) | 2026-10-13 | blankabrand.com/pages/blanka-affiliate-program — aboneliklerden %20'ye kadar, 5 yıl. Başvuru: affiliate@blankabrand.com'a mail. |
 | Printonic | Başvurulmadı | 2026-10-10 | printonic.com/affiliates — tekrarlayan komisyon. |
-| Promio | Başvurulmadı | 2026-10-10 | promio.eu/affiliate — %5, 12 ay. |
+| Promio | ✅ Onaylı, sitede | 2026-10-13 | promio.eu/affiliate-program — %5, 12 ay. Link `?referrer=oFyb`. |
+| Printonic | Başvuruldu, inceleniyor | 2026-10-13 | printonic.com/affiliates — ilk sipariş $15 + 12 ay üretim maliyetinin %10'u + Pro $10/ay; ~2 iş günü. |
+| GearLaunch | Başvuruldu (Ali gönderdi) | 2026-10-13 | affiliate.gearlaunch.com sayfa sonu form: ad + e-posta → APPLY NOW. Claude'un göndermesi izin sistemince engellendi. |
 | (program bulunamadı) | — | 2026-10-10 | ScalablePress, Printdoors, Inkedjoy, PeaPrint, MerchFarm, Printway, TreatPOD, LumaPrints, Dreamship, Prodigi, Customizingbox, Wooacry, Fourthwall (yalnızca mevcut satıcılara). Belirsiz: Artsadd, PopCustoms. |
 | BurgerPrints | Program yok | 2026-10-07 | Herkese açık ortaklık programı bulunamadı (burgerprints.com/affiliate bir TikTok blog yazısına gidiyor). Sık sık 2. en ucuz. |
+
+
+## 2026-10-13 ek
+- Teelaunch ✅: Refer a Friend linki `https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186` (arkadaş 3 sipariş tamamlayınca ödül maille). Sitede yalnız üretici ana sayfa butonunda (`home` alanı).
+- Two Fifteen: hesap açıldı; /affiliate-program'da 'I accept' kutusu kaldı (Ali). %5, 9 ay, min £30.
+- POD Hut: Instagram/TikTok istedi, atlandı.

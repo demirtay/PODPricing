@@ -78,10 +78,10 @@ Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affil
 | Contrado | ✅ Onaylandı — siteye eklendi | 2026-10-10 | Ürün adresine ?utm_source=252041212130068165063145210102154045044137070103&utm_medium=Affiliate (panel: contrado.com/estore/account/manage/Affiliate; panel yalnızca ürün sayfaları için link üretiyor). |
 | Merchize | Gönderildi | 2026-10-06 | merchize.com/affiliate-program formu. |
 | NovaTomato | Gönderildi — inceleniyor | 2026-10-08 | Panel: novatomato.com/dashboard/my-perks/affiliate/ (Google ile hesap, Gmail). Sonuç e-postayla gelecek. |
-| Podbase | Gönderildi — Pending | 2026-10-08 | Panel: podbase.firstpromoter.com/home. Onaylanınca e-posta gelecek. %10. |
+| Podbase | ✅ Onaylandı — siteye eklendi | 2026-10-13 | Onay maili 12 Eki (FirstPromoter): https://podbase.com?via=ali-824a0c ; her sayfaya ?via=ali-824a0c. Komisyon: yönlendirilenin ücretli aboneliğinden. Panel: partner.podbase.com/login |
 | Sellfy | ✅ Onaylandı — siteye eklendi | 2026-10-11 | Dub Partners: sellfy.com?via=ali-demirtay (her sayfaya ?via=ali-demirtay). Satış başına %25, ömür boyu; min. 0 ödeme, 30 gün bekleme. Panel: partners.dub.co/programs/sellfy |
 | Papello | Program henüz açık değil | 2026-10-08 | Satıcı hesabı açıldı (dash.papello.com) ama affiliate başvuru butonu "Coming soon"; panelde ortaklık bölümü yok. Sonra tekrar bak veya destekten sor. |
-| PrintKK | Başvurulmadı | 2026-10-10 | printkk.com/affiliate/program (PrintKK hesabıyla). Siparişlerden %10, abonelikten %8–25 (12 ay), 30 gün çerez, min. $25 çekim. Sitede 1.400+ ürün — öncelikli. |
+| PrintKK | Gönderildi — inceleniyor | 2026-10-13 | dashboard.printkk.com/finance/affiliate formu (ad, bölge: Europe Asia Africa, keşif: site). Formda: sipariş değerinin %10'u, 12 ay. Onaylanınca linki panelden al, siteye ekle. |
 | Interestprint | ✅ Hesap açıldı — siteye eklendi | 2026-10-13 | Onay gerekmedi, panelde hazır: Associate ID 58019, link ?rf=58019 (her sayfada çalışır; site.config.json param rf). %10, 12 ay, min. $50 çekim. ÖDEME SADECE PAYPAL (Türkiye'de yok) → support@interestprint.com'a Payoneer/havale sorulacak. Panel: interestprint.com/affiliate/settings |
 | Toaddit | Başvurulmadı | 2026-10-10 | toaddit.com/affiliate-program ("Go Further as Partners"), oran sayfada yok. 914 ürün. |
 | PODpartner | Başvurulmadı | 2026-10-10 | podpartner.com/affiliate-program — %7, 12 ay + bonus. |

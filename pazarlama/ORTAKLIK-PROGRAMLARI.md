@@ -100,3 +100,5 @@ Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affil
 - Teelaunch ✅: Refer a Friend linki `https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186` (arkadaş 3 sipariş tamamlayınca ödül maille). Sitede yalnız üretici ana sayfa butonunda (`home` alanı).
 - Two Fifteen ✅: `?referrer=X3qb` sitede. %5 (fulfilment fiyatı), 9 ay, min £30.
 - POD Hut: Instagram/TikTok istedi, atlandı.
+- Shirtigo: önce Shirtigo Cockpit hesabı (Ali), sonra marketing@shirtigo.de'ye kısa başvuru maili; ürün başına ≤1 € , 1 yıl, 30 gün çerez, min 10 € ödeme.
+- PillowProfits: /affiliates ana sayfaya yönleniyor (Shopify uygulaması üzerinden, başvuru yolu bulunamadı). Printgenie: sayfada yalnız şartlar, başvuru hesap içinden olabilir.

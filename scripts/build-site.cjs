@@ -951,6 +951,14 @@ if (SITE) write('CNAME', new URL(SITE).hostname + '\n');
 if (cfg.indexNowKey) write(cfg.indexNowKey + '.txt', cfg.indexNowKey);
 if (cfg.adsenseClient) write('ads.txt', `google.com, ${cfg.adsenseClient.replace(/^ca-/, '')}, DIRECT, f08c47fec0942fa0\n`);
 
+// üretici rozetleri: en az 3 üreticinin sattığı üründe en ucuz olduğu ürün sayısı (pidx verisinden).
+// Üreticiler sitelerine koyabilir: <a href=".../manufacturer/<id>/"><img src=".../badge/<id>.svg"></a>
+const winsBy = new Map();
+for (const r of pidx.rows) { const id = r.offers[0].providerId; if (!winsBy.has(id)) winsBy.set(id, []); winsBy.get(id).push(r.g.slug); }
+const badgeSvg = (n) => { const l1 = `Cheapest for ${n} product${n === 1 ? '' : 's'}`, w = Math.max(230, 30 + l1.length * 8.6); return `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.round(w)}" height="54" viewBox="0 0 ${Math.round(w)} 54" role="img" aria-label="${esc(l1)} on POD Pricing"><rect width="100%" height="100%" rx="10" fill="#0f9d6b"/><text x="14" y="23" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">${esc(l1)}</text><text x="14" y="42" font-family="Segoe UI,Arial,sans-serif" font-size="12" fill="#d7f5e9">on POD Pricing · podpricing.com</text></svg>`; };
+for (const [id, list] of winsBy) write(`badge/${id}.svg`, badgeSvg(list.length));
+write('data/wins.json', JSON.stringify([...winsBy].map(([id, l]) => [id, provName(id), l.length, l.slice(0, 8)]).sort((a, b) => b[2] - a[2])));
+
 // tıklama sayacı ara sayfaları: Cloudflare Web Analytics bunları sayfa görüntüleme olarak sayar (/go/<alan>/),
 // sonra ziyaretçi hash'teki adrese gider. Yalnızca o alan adına yönlendirir (açık yönlendirme olmasın).
 const goPage = host => `<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer-when-downgrade"><title>Redirecting to ${esc(host)}…</title>

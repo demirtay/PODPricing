@@ -232,4 +232,37 @@
       });
     }).catch(function () { app.innerHTML = '<p>Search could not load.</p>'; });
   }
+
+  // tıklama sayacı: üreticiye giden linkler /go/<alan>/ ara sayfasından geçer (Cloudflare Web Analytics'te sayılır).
+  // Ctrl/orta tık ve JS'siz ziyaretçi doğrudan üreticiye gider.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="http"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    if (!/(^|\s)(nofollow|sponsored)(\s|$)/.test(a.getAttribute('rel') || '')) return;
+    var u; try { u = new URL(a.href); } catch (x) { return; }
+    if (u.host === location.host) return;
+    var go = '/go/' + u.hostname + '/#' + encodeURIComponent(a.href);
+    e.preventDefault();
+    var w = a.target === '_blank' ? window.open(go, '_blank') : null;
+    if (w) { try { w.opener = null; } catch (x) { } } else location.href = go;
+  });
+
+  // karşılaştırma sayfasında kâr: satış fiyatı girilince her teklifin yanında tahmini kâr
+  (function () {
+    var inp = document.getElementById('sell'); if (!inp) return;
+    var L = LANG === 'tr' ? { p: 'Kâr', ns: 'kargo hariç' } : { p: 'Profit', ns: 'shipping not listed' };
+    function draw() {
+      var v = parseFloat(String(inp.value).replace(',', '.'));
+      document.querySelectorAll('.ladder li[data-c]').forEach(function (li) {
+        var el = li.querySelector('.pf'); if (!el) return;
+        if (!(v > 0)) { el.textContent = ''; el.className = 'pf'; return; }
+        var s = li.getAttribute('data-s'), pr = Math.round(v * 100) - (+li.getAttribute('data-c')) - (s ? +s : 0);
+        el.className = 'pf ' + (pr >= 0 ? 'pos' : 'neg');
+        el.innerHTML = esc(L.p + ': ' + money(pr)) + (s ? '' : ' <small>(' + esc(L.ns) + ')</small>');
+      });
+    }
+    try { var saved = localStorage.getItem('sellPrice'); if (saved) inp.value = saved; } catch (x) { }
+    inp.addEventListener('input', function () { try { localStorage.setItem('sellPrice', inp.value); } catch (x) { } draw(); });
+    draw();
+  })();
 })();

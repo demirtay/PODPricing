@@ -84,7 +84,7 @@ Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affil
 | PrintKK | Gönderildi — inceleniyor | 2026-10-13 | dashboard.printkk.com/finance/affiliate formu (ad, bölge: Europe Asia Africa, keşif: site). Formda: sipariş değerinin %10'u, 12 ay. Onaylanınca linki panelden al, siteye ekle. |
 | Interestprint | ✅ Hesap açıldı — siteye eklendi | 2026-10-13 | Onay gerekmedi, panelde hazır: Associate ID 58019, link ?rf=58019 (her sayfada çalışır; site.config.json param rf). %10, 12 ay, min. $50 çekim. ÖDEME SADECE PAYPAL (Türkiye'de yok) → support@interestprint.com'a Payoneer/havale sorulacak. Panel: interestprint.com/affiliate/settings |
 | Toaddit | Başvurulmadı | 2026-10-10 | toaddit.com/affiliate-program ("Go Further as Partners"), oran sayfada yok. 914 ürün. |
-| PODpartner | Başvuruldu, inceleniyor | 2026-10-13 | podpartner.com/affiliate/apply — %7, 12 ay, 90 gün çerez, PayPal min $20; ~2 iş günü içinde mail. |
+| PODpartner | ✅ Onaylı, sitede (ana sayfa butonu: podpartner.com/affiliate/podpricing) | 2026-10-13 | podpartner.com/affiliate/apply — %7, 12 ay, 90 gün çerez, PayPal min $20; ~2 iş günü içinde mail. |
 | JetPrint | Uygun değil (şimdilik) | 2026-10-13 | jetprintapp.com/affiliate/ — %5, 3 yıl. Şart: 5+ tasarım ve $50+ ödenmiş sipariş. |
 | Shirtigo | Başvurulmadı | 2026-10-10 | helpcenter.shirtigo.de/faq/allgemein/affiliate-partnerprogramm/ — kullanıcı başına 2.000 €'ya kadar. |
 | Blanka | Başvuruldu (mail gönderildi, alidemirtay67@gmail.com) | 2026-10-13 | blankabrand.com/pages/blanka-affiliate-program — aboneliklerden %20'ye kadar, 5 yıl. Başvuru: affiliate@blankabrand.com'a mail. |

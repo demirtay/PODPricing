@@ -98,5 +98,5 @@ Katalogdaki 65 kontrol edilmemiş üretici tarandı (ana sayfa linkleri + /affil
 
 ## 2026-10-13 ek
 - Teelaunch ✅: Refer a Friend linki `https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186` (arkadaş 3 sipariş tamamlayınca ödül maille). Sitede yalnız üretici ana sayfa butonunda (`home` alanı).
-- Two Fifteen: hesap açıldı; /affiliate-program'da 'I accept' kutusu kaldı (Ali). %5, 9 ay, min £30.
+- Two Fifteen ✅: `?referrer=X3qb` sitede. %5 (fulfilment fiyatı), 9 ay, min £30.
 - POD Hut: Instagram/TikTok istedi, atlandı.

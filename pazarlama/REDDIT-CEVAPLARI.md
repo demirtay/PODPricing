@@ -7,7 +7,7 @@
    - https://www.reddit.com/r/EtsySellers/search/?q=print%20on%20demand%20supplier&sort=new
    - https://www.reddit.com/r/shopify/search/?q=print%20on%20demand%20cheapest&sort=new
 2. Soruya uyan cevabı aşağıdan kopyala, yapıştır. Günde en fazla 2–3 cevap (spam sayılmasın).
-3. Her cevapta "kendi sitem" demek şart (Reddit kuralı, dürüstlük). Linki tek kez ver.
+3. ⚠️ 13 Eki dersi: podpricing.com linkli yorum Reddit spam filtresince SİLİNDİ. Şimdilik cevaplarda LİNK YOK — 'Disclosure…' satırlarını silip yapıştır. Link Reddit profil açıklamasında dursun. Birkaç hafta sonra linkli cevaplar tekrar denenir.
 4. Hangi başlığa yazdığını bana söyle; deftere yazarım, tekrar aynı yere yazmayalım.
 
 Rakamlar baskı dahil taban fiyat, kargo hariç, 13 Ekim 2026. Haftaya güncellenir.

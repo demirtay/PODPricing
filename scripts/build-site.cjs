@@ -332,6 +332,10 @@ const LOCALES = {
       ad: 'Ad', adPreview: s => `Ad slot · ${s}`, adSize: { ust: 'Leaderboard', liste: 'In-list', urun: 'Rectangle', alt: 'Leaderboard' },
       sponsored: 'Sponsored', sponsorPreview: 'Sponsored manufacturer slot', review: 'View ↗',
       homeTitle: `Print on Demand Price Comparison · ${BRAND} (podpricing.com)`,
+      grpAboutH: t => `${t}: print-on-demand price comparison`,
+      grpAbout: d => [`We compared ${d.n} print-on-demand suppliers that sell the ${d.t} with printing included. Prices range from ${d.lo} at ${d.loP} to ${d.hi} at ${d.hiP}; the typical (median) price is ${d.med}. ${d.gap > 0 ? `The most expensive supplier charges ${d.gap}% more than the cheapest one for the same product.` : ''}`, `Prices are base costs from each supplier's public catalog in USD, before shipping and tax, and refresh twice a day. Enter your selling price above to see your profit per sale with every supplier.`],
+      grpFaqH: 'Questions about this product',
+      grpFaq: d => [[`What is the cheapest ${d.t} for print on demand?`, `${d.loP} at ${d.lo} (print included), the lowest of the ${d.n} suppliers we compared. ${d.p2 ? `The next cheapest are ${d.p2}.` : ''}`], [`How much does the ${d.t} cost for print on demand?`, `Between ${d.lo} and ${d.hi} depending on the supplier; the typical price is ${d.med}. Shipping is added at checkout.`]].concat(d.pf ? [[`Is Printful or Printify cheaper for the ${d.t}?`, d.pf]] : []),
       homeAboutH: 'Compare print-on-demand prices before you pick a supplier',
       homeAbout: d => [`POD Pricing is an independent print-on-demand price comparison site. We track ${d.n} products from ${d.m} print-on-demand suppliers — Printful, Printify, BurgerPrints, Merchize, Yoycol, Gearment and many more — and line up the same product side by side, cheapest first.`, `For the same product, the most expensive supplier typically charges ${d.gap}% more than the cheapest one. That gap is your margin: on a t-shirt you sell for $24.99, a few dollars of base cost decides whether the listing is worth it.`, `Search a product or a blank (for example "Gildan 5000", "11oz mug" or "canvas 16x24"), compare every supplier that makes it, enter your selling price to see your profit per sale, then go straight to the supplier.`],
       homeFaqH: 'Print-on-demand price comparison: common questions',
@@ -455,6 +459,10 @@ const LOCALES = {
       ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş', liste: 'Liste arası', urun: 'Kare', alt: 'Yatay afiş' },
       sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı', review: 'İncele ↗',
       homeTitle: `Print on Demand Fiyat Karşılaştırma · ${BRAND} (podpricing.com)`,
+      grpAboutH: t => `${t}: print-on-demand fiyat karşılaştırma`,
+      grpAbout: d => [`${d.t} ürününü baskı dahil satan ${d.n} print-on-demand üreticisini karşılaştırdık. Fiyatlar ${d.loP}'da ${d.lo} ile ${d.hiP}'da ${d.hi} arasında; tipik (medyan) fiyat ${d.med}. ${d.gap > 0 ? `Aynı ürün için en pahalı üretici en ucuzdan %${d.gap} daha fazla istiyor.` : ''}`, `Fiyatlar üreticilerin herkese açık kataloglarındaki USD taban fiyatlarıdır; kargo ve vergi hariçtir, günde iki kez yenilenir. Yukarıya satış fiyatını yazarak her üreticideki kârını görebilirsin.`],
+      grpFaqH: 'Bu ürünle ilgili sorular',
+      grpFaq: d => [[`En ucuz ${d.t} hangi print-on-demand üreticisinde?`, `${d.loP}, ${d.lo} (baskı dahil) ile karşılaştırdığımız ${d.n} üretici arasında en düşük fiyat. ${d.p2 ? `Sonraki en ucuzlar: ${d.p2}.` : ''}`], [`${d.t} print-on-demand fiyatı ne kadar?`, `Üreticiye göre ${d.lo} ile ${d.hi} arasında; tipik fiyat ${d.med}. Kargo ödeme sırasında eklenir.`]].concat(d.pf ? [[`${d.t} için Printful mu Printify mı ucuz?`, d.pf]] : []),
       homeAboutH: 'Üretici seçmeden önce print-on-demand fiyatlarını karşılaştır',
       homeAbout: d => [`POD Pricing bağımsız bir print-on-demand fiyat karşılaştırma sitesidir. ${d.m} POD üreticisinin ${d.n} ürününü takip ediyoruz (Printful, Printify, BurgerPrints, Merchize, Yoycol, Gearment ve daha fazlası) ve aynı ürünü yan yana, en ucuzdan başlayarak sıralıyoruz.`, `Aynı ürün için en pahalı üretici, en ucuzdan genelde %${d.gap} daha fazla istiyor. Bu fark senin kâr marjın.`, `Bir ürün ya da boş ürün ara (ör. "Gildan 5000", "11oz kupa"), onu yapan bütün üreticileri karşılaştır, satış fiyatını yazıp satış başı kârını gör, sonra doğrudan üreticiye git.`],
       homeFaqH: 'Print-on-demand fiyat karşılaştırma: sık sorulanlar',
@@ -666,6 +674,16 @@ ${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.
   }));
   for (const gp of groups) {
     const title = H.gTitle(gp), lo = gp.lo, hi = gp.hi;
+    // açıklama + SSS: yalnızca 'baskı dahil' tekliflerden üretici başına en ucuz (boş/toplu/belirsiz hariç), gerçek veriden
+    const bestP = [...groupBy(gp.list.filter(p => p.pb === 'dahil'), p => p.providerId)].map(([, l]) => l.reduce((a, b) => a.baseMinor <= b.baseMinor ? a : b)).sort((a, b) => a.baseMinor - b.baseMinor);
+    const gd = bestP.length >= 2 ? (() => {
+      const f = bestP[0], l = bestP[bestP.length - 1], pfo = bestP.find(x => x.providerId === 'printful'), pyo = bestP.find(x => x.providerId === 'printify');
+      const pf = pfo && pyo ? (lg === 'tr'
+        ? (pfo.baseMinor === pyo.baseMinor ? `İkisi de ${fmt(pfo.baseMinor)}.` : `${pfo.baseMinor < pyo.baseMinor ? 'Printful' : 'Printify'} daha ucuz: Printful ${fmt(pfo.baseMinor)}, Printify ${fmt(pyo.baseMinor)}.`)
+        : (pfo.baseMinor === pyo.baseMinor ? `They cost the same, ${fmt(pfo.baseMinor)}.` : `${pfo.baseMinor < pyo.baseMinor ? 'Printful' : 'Printify'} is cheaper: Printful ${fmt(pfo.baseMinor)}, Printify ${fmt(pyo.baseMinor)}.`)) : '';
+      return { t: title, n: bestP.length, lo: fmt(f.baseMinor), loP: provName(f.providerId), hi: fmt(l.baseMinor), hiP: provName(l.providerId), med: fmt(median(bestP.map(x => x.baseMinor))), gap: Math.round((l.baseMinor / f.baseMinor - 1) * 100), p2: bestP.slice(1, 3).map(x => `${provName(x.providerId)} (${fmt(x.baseMinor)})`).join(lg === 'tr' ? ' ve ' : ' and '), pf };
+    })() : null;
+    const gFaq = gd ? t.grpFaq(gd) : [];
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)),
       title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
@@ -674,9 +692,11 @@ ${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.
 <p class="gfrom"><b>${esc(fmt(lo.baseMinor))}</b> <span>– ${esc(fmt(hi.baseMinor))}</span></p>
 <p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
 ${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${H.ad('liste')}
-<p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>`,
-      jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
-        offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } },
+<p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>
+${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}`,
+      jsonld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
+        offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } }]
+        .concat(gFaq.length ? [{ '@type': 'FAQPage', mainEntity: gFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.trim() } })) }] : []) },
     }));
   }
 
@@ -921,7 +941,9 @@ ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>$
       const similar = gp ? null : (() => { const seen = new Set([p.providerId]); return byType.get(p.type).filter(x => !seen.has(x.providerId) && seen.add(x.providerId)).slice(0, 12); })();
       const rel = P.product(p.id) + 'index.html';
       write(rel, page(L, H, {
-        rel, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
+        // tekil ürün sayfaları noindex (2026-10-13): 35 bin ince sayfa Google'ın site güvenini düşürüyordu;
+        // arama trafiği karşılaştırma/kategori/rehber sayfalarında toplanır, linkler takip edilmeye devam eder
+        rel, noindex: true, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
         crumbs: [[L.group(g), g === 'diger' ? null : href(P.cat(g))], [label, href(P.cat(p.type))], [p.title]],
         body: `<article class="product"><div class="pimg">${H.img(p)}</div><div class="pinfo">
 <p class="muted"><a href="${href(P.maker(p.providerId))}">${esc(prov)}</a></p><h1>${esc(p.title)}</h1>
@@ -932,7 +954,6 @@ ${gp ? `<a class="ingroup" href="${href(P.group(gp.slug))}">${esc(t.inGroup(gp.p
 ${gp ? `<h2>${esc(t.sameGroup)}</h2>${H.offers(gp.list)}` : similar.length ? `<h2>${esc(t.otherMakers(label))}</h2>${H.cards(similar)}` : ''}`,
         jsonld: { '@context': 'https://schema.org', '@type': 'Product', name: p.title, image: p.imageUrl || undefined, brand: p.model ? { '@type': 'Brand', name: p.model.brandName } : undefined, offers: { '@type': 'Offer', price: (p.baseMinor / 100).toFixed(2), priceCurrency: 'USD', url: p.sourceUrl, seller: { '@type': 'Organization', name: prov } } },
       }));
-      sitemap.push(rel);
     }
     write('404.html', page(L, H, { rel: '404.html', title: `${t.notFound} · ${BRAND}`, description: t.notFound, noindex: true, body: `<h1>${t.notFound}</h1><p>${t.notFoundP}</p>` }));
   }

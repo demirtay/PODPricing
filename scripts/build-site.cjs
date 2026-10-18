@@ -260,7 +260,7 @@ const LOCALES = {
       home: 'Home', categories: 'Categories', compare: 'Compare', makers: 'Manufacturers', search: 'Search', searchBtn: 'Search',
       searchPh: 'Search products or blanks (e.g. 11oz mug, gildan 5000, hoodie)', searchBig: 'What do you want to print?',
       heroH: 'Print on demand price comparison',
-      heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first.`,
+      heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first. For Etsy, Amazon, Shopify, TikTok Shop and eBay sellers.`,
       topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
       vs: {
         nav: 'X vs Y', indexTitle: 'Print-on-demand manufacturer comparisons', indexDesc: n => `${n} head-to-head price comparisons between print-on-demand manufacturers, based on products both of them sell.`,
@@ -395,7 +395,7 @@ const LOCALES = {
       home: 'Ana sayfa', categories: 'Kategoriler', compare: 'Karşılaştır', makers: 'Üreticiler', search: 'Arama', searchBtn: 'Ara',
       searchPh: 'Ürün ya da model ara (ör. 11oz kupa, gildan 5000, hoodie)', searchBig: 'Ne basmak istiyorsun?',
       heroH: 'Print on demand fiyat karşılaştırma',
-      heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte.`,
+      heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte. Etsy, Amazon, Shopify, TikTok Shop ve eBay satıcıları için.`,
       topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
       vs: {
         nav: 'X vs Y', indexTitle: 'POD üreticisi karşılaştırmaları', indexDesc: n => `Print-on-demand üreticileri arasında ${n} ikili fiyat karşılaştırması; iki üreticinin de sattığı ürünlere göre.`,
@@ -580,7 +580,8 @@ function makeHelpers(L) {
 // ---------- sayfa şablonu
 const sitemap = [];
 // alt: { en: rel, tr: rel } — hreflang ve dil geçişi için
-function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noindex }) {
+// cat: sayfanın Etsy kategorisi (düğüm kimliği) — ziyaretçinin ilgisi tarayıcısında tutulur, ana sayfada "Senin için"
+function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noindex, cat }) {
   const t = H.t;
   const canonical = SITE ? `<link rel="canonical" href="${esc(abs(rel))}">` : '';
   const alts = alt ? Object.entries(alt).map(([lg, r]) => `<link rel="alternate" hreflang="${lg}" href="${esc(SITE + href(r))}">`).join('') + (alt.en ? `<link rel="alternate" hreflang="x-default" href="${esc(SITE + href(alt.en))}">` : '') : '';
@@ -598,7 +599,7 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
 <title>${esc(title)}</title><meta name="description" content="${esc(description)}">${canonical}${alts}${noindex ? '<meta name="robots" content="noindex">' : ''}
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="${esc(BRAND)}">
 <link rel="stylesheet" href="/assets/site.css?v=${VER}"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml">${ads}
-${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}">
+${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}"${cat && eList.has(cat) && enode(cat).parentId ? ` data-cat="${esc(eSlug.get(cat))}" data-cat-label="${esc(L.node(cat))}"` : ''}>
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>
 <form class="search" action="${href(H.P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchPh)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.compare)}">${t.compare}</a><a href="${href(H.P.makers)}">${t.makers}</a><a href="${href(H.P.calc)}">${t.calc.nav}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
@@ -643,10 +644,12 @@ for (const lg of LANGS) {
   write(`data/meta-${lg}.json`, JSON.stringify({
     lang: lg, providers: Object.fromEntries(catalog.providers.map(p => [p.id, p.name])),
     types: Object.fromEntries([...byType.keys()].map(k => [k, L.type(k)])), pb: L.pbLabel, pbNote: L.pbNote,
-    paths: { product: '/' + P.product('ID').replace('ID/', ''), maker: '/' + P.maker('ID').replace('ID/', ''), group: '/' + P.group('ID').replace('ID/', '') },
+    // arama sonucunun türü -> ilgi kaydı için Etsy kategorisi [adres, ad]
+    typeCat: Object.fromEntries([...typeNode].filter(([, id]) => enode(id).parentId).map(([k, id]) => [k, [eSlug.get(id), L.node(id)]])),
+    paths: { cat: '/' + P.cat(eTops[0]).replace(/[^/]+\/$/, ''), product: '/' + P.product('ID').replace('ID/', ''), maker: '/' + P.maker('ID').replace('ID/', ''), group: '/' + P.group('ID').replace('ID/', '') },
     ui: lg === 'en'
-      ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers', sortSites: 'Sold at most stores', viewCards: 'Cards', viewTable: 'Price board', sitesN: 'Sold at {n} stores', cheapest: 'cheapest', th: ['Product', 'Stores', 'Lowest', 'Highest', 'Cheapest at'] }
-      : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici', sortSites: 'En çok sitede satılan', viewCards: 'Kartlar', viewTable: 'Fiyat borsası', sitesN: '{n} sitede satılıyor', cheapest: 'en ucuz', th: ['Ürün', 'Site', 'En düşük', 'En yüksek', 'En ucuz site'] },
+      ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', forYou: 'For you', forYouNote: 'Based on what you viewed', seeAll: 'See all', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers', sortSites: 'Sold at most stores', viewCards: 'Cards', viewTable: 'Price board', sitesN: 'Sold at {n} stores', cheapest: 'cheapest', th: ['Product', 'Stores', 'Lowest', 'Highest', 'Cheapest at'] }
+      : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', forYou: 'Senin için', forYouNote: 'Baktığın ürünlere göre', seeAll: 'Hepsini gör', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici', sortSites: 'En çok sitede satılan', viewCards: 'Kartlar', viewTable: 'Fiyat borsası', sitesN: '{n} sitede satılıyor', cheapest: 'en ucuz', th: ['Ürün', 'Site', 'En düşük', 'En yüksek', 'En ucuz site'] },
   }));
   // kategori listeleri: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site, [[üretici, fiyat]...]]
   const itemRow = it => [it.href, it.name, it.image || '', it.price, it.n, it.maker, it.hi, it.best, it.offers];
@@ -661,6 +664,7 @@ for (const lg of LANGS) {
     body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${esc(t.heroP(connected.length, n(products.length)))}</p>
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
+<section id="foryou" hidden></section>
 <a class="verdict" style="display:block" href="${href(P.index)}"><b>${esc(t.pidx.homeCta(Math.round(pidx.gap * 100)))}</b></a>
 ${H.ad('ust')}
 <h2>${t.catMenu}</h2><div class="catmenu">${eTops.map(catBox).join('')}</div>
@@ -688,7 +692,7 @@ ${H.ad('ust')}
     const items = H.itemsOf(eGroups.get(id) || [], list.filter(p => !groupOf.has(p.id)));
     if (!root) write(`data/k/${lg}/${eSlug.get(id)}.json`, JSON.stringify(items.map(itemRow)));
     add(P.cat(id) + 'index.html', page(L, H, {
-      rel: P.cat(id) + 'index.html', alt: altAll(p => p.cat(id)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
+      rel: P.cat(id) + 'index.html', alt: altAll(p => p.cat(id)), cat: id, title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
       crumbs: [[t.categories, href(P.categories)], ...eAnc(id).map(a => [L.node(a), href(P.cat(a))]), [label]],
       body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
 ${kids.length ? `<div class="tiles">${kids.map(nodeTile).join('')}</div>` : ''}${H.sponsor(mostCommon(list.map(p => p.type)))}${H.ad('liste')}
@@ -716,7 +720,7 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
     })() : null;
     const gFaq = gd ? t.grpFaq(gd) : [];
     add(P.group(gp.slug) + 'index.html', page(L, H, {
-      rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)),
+      rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)), cat: gp.etsy,
       title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
       crumbs: [...eAnc(gp.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(gp.etsy), href(P.cat(gp.etsy))], [title]],
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
@@ -974,7 +978,7 @@ ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>$
       write(rel, page(L, H, {
         // tekil ürün sayfaları noindex (2026-10-13): 35 bin ince sayfa Google'ın site güvenini düşürüyordu;
         // arama trafiği karşılaştırma/kategori/rehber sayfalarında toplanır, linkler takip edilmeye devam eder
-        rel, noindex: true, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
+        rel, noindex: true, cat: p.etsy, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
         crumbs: [...eAnc(p.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(p.etsy), href(P.cat(p.etsy))], [p.title]],
         body: `<article class="product"><div class="pimg">${H.img(p)}</div><div class="pinfo">
 <p class="muted"><a href="${href(P.maker(p.providerId))}">${esc(prov)}</a></p><h1>${esc(p.title)}</h1>

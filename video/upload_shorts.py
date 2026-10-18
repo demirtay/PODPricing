@@ -16,8 +16,20 @@ TOKEN = HERE / "youtube_token.json"
 LOG = HERE / "uploaded.json"
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
           "https://www.googleapis.com/auth/youtube.force-ssl"]
+FB_GROUP = "https://www.facebook.com/groups/1088069727427974"
+FB_LINE = f"Free Facebook group for POD sellers (weekly supplier price changes, bestsellers vs cheapest): {FB_GROUP}"
 ORDER = ["printful-vs-printify", "gildan-5000", "mugs-11oz-white", "bella-canvas-3001", "tumblers-20oz", "gildan-18500",
          "comfort-colors-1717", "gildan-18000", "next-level-3600", "mugs-15oz", "gildan-64000"]
+
+
+def with_group(desc: str) -> str:
+    """Açıklamaya Facebook grubu satırını ekler (hashtag satırından önce, yoksa sona)."""
+    if FB_GROUP in desc:
+        return desc
+    head, sep, tags = desc.rpartition("\n")
+    if sep and tags.lstrip().startswith("#"):
+        return f"{head.rstrip()}\n\n{FB_LINE}\n\n{tags}"
+    return f"{desc.rstrip()}\n\n{FB_LINE}"
 
 
 def youtube():
@@ -52,7 +64,7 @@ def main(dry: bool):
     for i, n in enumerate(todo):
         meta = json.loads((OUT / f"{n}.json").read_text(encoding="utf-8"))
         when = (day + timedelta(days=i)).strftime("%Y-%m-%dT%H:%M:%SZ")
-        body = {"snippet": {"title": meta["title"][:100], "description": meta["description"], "tags": meta["tags"], "categoryId": "26",
+        body = {"snippet": {"title": meta["title"][:100], "description": with_group(meta["description"]), "tags": meta["tags"], "categoryId": "26",
                             "defaultLanguage": "en", "defaultAudioLanguage": "en"},
                 "status": {"privacyStatus": "private", "publishAt": when, "selfDeclaredMadeForKids": False}}
         req = yt.videos().insert(part="snippet,status", body=body, media_body=MediaFileUpload(str(OUT / f"{n}.mp4"), resumable=True))

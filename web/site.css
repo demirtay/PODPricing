@@ -118,6 +118,8 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}tr:last-child td{border
 .ad-preview{display:grid;place-items:center;border:2px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px}
 .sponsor{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin:14px 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:var(--panel)}
 .sponsor .ad-label{width:100%;margin:0}
+.fbgroup{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin:30px 0 10px;padding:18px 20px;border:1px solid var(--line);border-left:4px solid #1877f2;border-radius:14px;background:var(--panel)}
+.fbgroup b{font-size:18px}.fbgroup p{margin:4px 0 0;color:var(--muted);max-width:620px}.fbgroup .cta{white-space:nowrap;text-decoration:none}
 .prose{max-width:760px}.prose a{color:var(--accent)}
 .foot{border-top:1px solid var(--line);padding:22px 0;font-size:14px;margin-top:30px;background:var(--panel)}.foot a{color:var(--accent)}
 @media (max-width:720px){

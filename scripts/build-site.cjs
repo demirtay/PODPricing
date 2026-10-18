@@ -387,6 +387,7 @@ const LOCALES = {
       notFound: 'Page not found', notFoundP: 'The product may have been removed from the catalog. <a href="/">Go to the homepage</a> or search.',
       footer: `${BRAND} compares prices from print-on-demand manufacturers' public catalogs. We don't sell anything — clicking an offer takes you to the manufacturer's own page.`,
       footer2: d => `Prices are the starting or selected-variant prices shown at the source; printing, shipping, tax and minimum quantities vary by manufacturer. Last updated: ${d}.`,
+      fbGroup: { h: 'Join our free Facebook group', p: 'Weekly supplier price changes, bestseller lists vs the cheapest alternative, and answers to "who prints X cheapest?"', btn: 'Join the group' },
       foot: ['About & methodology', 'Manufacturers', 'Privacy & cookies', 'Contact'],
       ad: 'Ad', adPreview: s => `Ad slot · ${s}`, adSize: { ust: 'Leaderboard', liste: 'In-list', urun: 'Rectangle', alt: 'Leaderboard' },
       sponsored: 'Sponsored', sponsorPreview: 'Sponsored manufacturer slot', review: 'View ↗',
@@ -514,6 +515,7 @@ const LOCALES = {
       contactDesc: `${BRAND} ile iletişim: üretici eklemek, fiyat düzeltmek veya iş birliği için.`,
       footer: `${BRAND}, print-on-demand üreticilerinin herkese açık kataloglarındaki fiyatları karşılaştırır. Satış yapmaz; bir teklife tıklayınca üreticinin kendi sayfasına gidersiniz.`,
       footer2: d => `Fiyatlar üreticinin kaynakta gösterdiği başlangıç veya seçili varyant bedelidir; baskı, kargo, vergi ve minimum adet koşulları üreticiye göre değişir. Son güncelleme: ${d}.`,
+      fbGroup: { h: 'Ücretsiz Facebook grubumuza katılın', p: 'Haftalık üretici fiyat değişimleri, çok satanlar ve en ucuz alternatifleri, "X\'i en ucuza kim basıyor?" sorularının cevapları (İngilizce).', btn: 'Gruba katıl' },
       foot: ['Hakkında ve yöntem', 'Üreticiler', 'Gizlilik ve çerezler', 'İletişim'],
       ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş', liste: 'Liste arası', urun: 'Kare', alt: 'Yatay afiş' },
       sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı', review: 'İncele ↗',
@@ -634,7 +636,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>
 <form class="search" action="${href(H.P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchPh)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <nav class="topnav"><a href="${href(H.P.categories)}">${t.categories}</a><a href="${href(H.P.compare)}">${t.compare}</a><a href="${href(H.P.makers)}">${t.makers}</a><a href="${href(H.P.calc)}">${t.calc.nav}</a><a class="lang" href="${href(switchTo)}" hreflang="${other}" lang="${other}">${other.toUpperCase()}</a></nav></div></header>
-<main class="wrap">${bc}${body}${H.ad('alt')}</main>
+<main class="wrap">${bc}${body}${cfg.facebookGroup ? `<aside class="fbgroup"><div><b>${esc(t.fbGroup.h)}</b><p>${esc(t.fbGroup.p)}</p></div><a class="cta" href="${esc(cfg.facebookGroup)}" target="_blank" rel="noopener">${esc(t.fbGroup.btn)}</a></aside>` : ''}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
 <p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a> · <a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>

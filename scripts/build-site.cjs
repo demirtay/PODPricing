@@ -616,7 +616,10 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
   // Cloudflare Web Analytics (çerezsiz ziyaretçi istatistiği): site.config.json cloudflareAnalyticsToken
   // Otomatik reklamların sabit (anchor) reklamı üstte çıkınca bütün sayfayı aşağı itiyordu (CLS ~0.97);
   // alta sabitlenince içeriğin üstüne biner, sayfa kaymaz.
-  const ads = (cfg.adsenseClient ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(cfg.adsenseClient)}" crossorigin="anonymous"></script>`
+  // 18 Eki 2026: betik adresindeki ?client= otomatik reklamları kendisi açıyordu; ardından gelen push
+  // "Only one 'enable_page_level_ads' allowed" hatasıyla reddedilip overlays:{bottom} hiç uygulanmıyordu.
+  // Betik client'sız yüklenir, otomatik reklamları tek push açar; hesap doğrulaması meta etiketiyle.
+  const ads = (cfg.adsenseClient ? `<meta name="google-adsense-account" content="${esc(cfg.adsenseClient)}"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>`
     + `<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"${esc(cfg.adsenseClient)}",enable_page_level_ads:true,overlays:{bottom:true}});</script>` : '')
     + (cfg.cloudflareAnalyticsToken ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${esc(cfg.cloudflareAnalyticsToken)}"}'></script>` : '');
   const bc = crumbs ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${href(H.P.home)}">${t.home}</a>${crumbs.map(([c, h]) => h ? ` › <a href="${esc(h)}">${esc(c)}</a>` : ` › <span>${esc(c)}</span>`).join('')}</nav>` : '';

@@ -70,11 +70,19 @@
   }
 
   // Alt kategori sayfası: bütün ürünler; kart (pazar yeri) ya da tablo (fiyat borsası) görünümü
-  // it: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site]
+  // it: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site, [[üretici, fiyat]...]]
+  // birden çok sitede satılanlarda da en ucuz üreticinin adı görünür (Ali 18 Eki: "PrintKK kupası yok mu?" sanılıyordu)
   function icard(it, M) {
     var U = M.ui, multi = it[4] > 1;
     return '<a class="card" href="' + esc(it[0]) + '"><div class="ci">' + imgHtml(it[2]) + '</div><div class="cb"><div class="ct">' + esc(it[1]) + '</div><div class="cm">' +
-      (multi ? '<span class="sites">' + esc(U.sitesN.replace('{n}', it[4])) + '</span>' : esc(M.providers[it[5]] || it[5])) + '</div><div class="cp">' + (multi ? '<small>' + esc(U.cheapest) + '</small>' : '') + '<b>' + money(it[3]) + '</b></div></div></a>';
+      (multi ? '<span class="sites">' + esc(U.sitesN.replace('{n}', it[4])) + '</span> · ' + esc(M.providers[it[7]] || it[7]) : esc(M.providers[it[5]] || it[5])) + '</div><div class="cp">' + (multi && !it[9] ? '<small>' + esc(U.cheapest) + '</small>' : '') + '<b>' + money(it[3]) + '</b></div></div></a>';
+  }
+  // üretici seçilince: o üreticinin fiyatı ve adı (karşılaştırma sayfasına gider)
+  function atMaker(it, p) {
+    var o = (it[8] || []).find(function (x) { return x[0] === p; });
+    if (!o) return null;
+    var c = it.slice(); c[3] = o[1]; c[7] = p; c[9] = 1; if (c[4] <= 1) c[5] = p; // c[9]: seçili üreticinin fiyatı, "en ucuz" değil
+    return c;
   }
   function board(list, M) {
     var U = M.ui;
@@ -88,14 +96,19 @@
     try { mode = localStorage.getItem('view') || 'cards'; } catch (e) { }
     var ctl = document.createElement('div');
     ctl.className = 'controls';
+    var provs = {};
+    items.forEach(function (it) { (it[8] || []).forEach(function (o) { provs[o[0]] = (provs[o[0]] || 0) + 1; }); });
+    var provKeys = Object.keys(provs).sort(function (a, b) { return provs[b] - provs[a] || String(M.providers[a] || a).localeCompare(M.providers[b] || b); });
     ctl.innerHTML = '<div class="seg"><button data-v="cards">' + esc(U.viewCards) + '</button><button data-v="table">' + esc(U.viewTable) + '</button></div>' +
+      '<select aria-label="' + esc(U.allMakersLabel) + '"' + (provKeys.length > 1 ? '' : ' hidden') + '><option value="">' + esc(U.allMakersLabel) + ' (' + provKeys.length + ')</option>' +
+      provKeys.map(function (p) { return '<option value="' + esc(p) + '">' + esc(M.providers[p] || p) + ' (' + provs[p] + ')</option>'; }).join('') + '</select>' +
       '<select aria-label="sort"><option value="sites">' + esc(U.sortSites) + '</option><option value="asc">' + esc(U.sortAsc) + '</option><option value="desc">' + esc(U.sortDesc) + '</option></select>' +
       '<span class="muted sm"></span>';
     var body = document.createElement('div');
     el.replaceChildren(ctl, body);
-    var seg = ctl.children[0], sort = ctl.children[1], count = ctl.children[2];
+    var seg = ctl.children[0], prov = ctl.children[1], sort = ctl.children[2], count = ctl.children[3];
     function sorted() {
-      var s = sort.value, a = items.slice();
+      var s = sort.value, a = prov.value ? items.map(function (it) { return atMaker(it, prov.value); }).filter(Boolean) : items.slice();
       if (s === 'asc') a.sort(function (x, y) { return x[3] - y[3]; });
       else if (s === 'desc') a.sort(function (x, y) { return y[3] - x[3]; });
       return a;
@@ -113,7 +126,7 @@
       }
     }
     seg.addEventListener('click', function (e) { var b = e.target.closest('[data-v]'); if (!b) return; mode = b.dataset.v; try { localStorage.setItem('view', mode); } catch (x) { } render(); });
-    sort.addEventListener('input', function () { shown = PAGE; render(); });
+    [prov, sort].forEach(function (x) { x.addEventListener('input', function () { shown = PAGE; render(); }); });
     render();
   }
   document.querySelectorAll('.list[data-items]').forEach(function (el) {

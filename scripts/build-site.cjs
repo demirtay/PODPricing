@@ -9,6 +9,7 @@ const EN = require('./pod-taxonomy-en.cjs');
 const PB = require('./print-basis.cjs');
 const I18N = require('./i18n-data.cjs');
 const PG = require('./product-groups.cjs');
+const EM = require('./etsy-map.cjs');
 
 const root = path.resolve(__dirname, '..');
 const finalOut = path.join(root, 'site');
@@ -57,7 +58,7 @@ const products = catalog.products
   .filter(p => Number.isSafeInteger(p.baseMinor) && p.baseMinor > 0 && p.sourceUrl)
   .map(p => {
     const c = tx.classify(p), m = tx.detectModel(p);
-    const q = { ...p, title: decode(p.title), type: c.type, group: c.group, model: m && m.key ? m : null, pb: PB.printBasis(p) };
+    const q = { ...p, title: decode(p.title), type: c.type, group: c.group, etsy: EM.etsyOf(p, c) || 'other', model: m && m.key ? m : null, pb: PB.printBasis(p) };
     q.gkey = PG.groupKey(q);
     return q;
   })
@@ -93,6 +94,45 @@ const groups = [...groupBy(products.filter(p => p.gkey), p => p.gkey)]
 const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
 const groupsByType = groupBy(groups, g => g.type);
+
+// Etsy kategori ağacı (18 Eki 2026): kategori sayfaları Etsy düğümlerinden (scripts/etsy-map.cjs), yalnızca ürünü olan düğümler.
+// Önceki başlık-regex türleri (pod-taxonomy) karşılaştırma grupları ve rehberler için duruyor.
+const OTHER = { id: 'other', label: 'Other', labelTr: 'Diğer', parentId: null, depth: 0, path: ['Other'] };
+const enode = id => id === 'other' ? OTHER : EM.nodes.get(id);
+const eList = new Map(), eKids = new Map(); // düğüm -> alt ağacındaki ürünler (ucuzdan pahalıya) / ürünü olan alt düğümler
+for (const p of products) {
+  for (let id = p.etsy, prev = null; id; prev = id, id = enode(id).parentId) {
+    if (!eList.has(id)) { eList.set(id, []); eKids.set(id, new Set()); }
+    eList.get(id).push(p);
+    if (prev) eKids.get(id).add(prev);
+  }
+}
+const eCount = id => eList.get(id).length;
+const eTops = [...eList.keys()].filter(id => !enode(id).parentId).sort((a, b) => (a === 'other') - (b === 'other') || eCount(b) - eCount(a));
+const eChildren = id => [...eKids.get(id)].sort((a, b) => eCount(b) - eCount(a));
+const eAnc = id => { const a = []; for (let x = enode(id).parentId; x; x = enode(x).parentId) a.unshift(x); return a; };
+// adres: Etsy adı; aynı ad birden çok dalda varsa ayırt eden üst kategori önde (womens-clothing-t-shirts)
+const slugify = s => s.toLowerCase().replace(/&/g, ' and ').replace(/['’]/g, '').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const eSlug = new Map();
+for (const [s, ids] of groupBy([...eList.keys()], id => slugify(enode(id).label))) {
+  if (ids.length === 1) { eSlug.set(ids[0], s); continue; }
+  const cand = id => eAnc(id).filter(a => enode(a).depth >= 1).concat(eAnc(id).filter(a => enode(a).depth < 1)).map(a => slugify(enode(a).label) + '-' + s);
+  for (const id of ids) {
+    const others = new Set(ids.filter(o => o !== id).flatMap(cand));
+    eSlug.set(id, cand(id).find(c => !others.has(c)) || eAnc(id).map(a => slugify(enode(a).label)).concat(s).join('-'));
+  }
+}
+if (new Set(eSlug.values()).size !== eSlug.size) throw new Error('Etsy kategori adresleri çakışıyor');
+const ETR = (() => { try { return JSON.parse(fs.readFileSync(path.join(root, 'data/etsy-tr.json'), 'utf8')); } catch { return {}; } })();
+const eLabel = (id, lg) => { const n = enode(id); return lg === 'tr' ? (ETR[n.label] || (n.labelTr && n.labelTr !== n.label ? n.labelTr : n.label)) : n.label; };
+// eski tür sayfası / karşılaştırma grubu -> en çok ürününün düştüğü Etsy düğümü
+const typeNode = new Map([...byType].map(([k, l]) => [k, mostCommon(l.map(p => p.etsy))]));
+for (const g of groups) g.etsy = mostCommon(g.list.map(p => p.etsy));
+const eGroups = new Map(); // düğüm -> alt ağacında ürünü olan karşılaştırma grupları
+for (const g of groups) {
+  const seen = new Set();
+  for (const p of g.list) for (let id = p.etsy; id && !seen.has(id); id = enode(id).parentId) { seen.add(id); if (!eGroups.has(id)) eGroups.set(id, []); eGroups.get(id).push(g); }
+}
 
 // Üretici ikilisi karşılaştırmaları ("Printful vs Printify") ve rehberler: yalnızca baskısı kesin dahil (pb=dahil) teklifler
 const bestByGroup = new Map(groups.map(g => {
@@ -209,11 +249,11 @@ const QUICK = ['t-shirt', 'hoodie', 'mug', 'tumbler', 'poster', 'canvas', 'tote 
 const LOCALES = {
   en: {
     lang: 'en', intl: 'en-US',
-    path: { home: '', categories: 'categories/', cat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
+    path: { home: '', categories: 'categories/', cat: id => `category/${eSlug.get(id)}/`, oldCat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
       makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/',
       vsIndex: 'vs/', vs: s => `vs/${s}/`, calc: 'profit-calculator/',
       guides: 'cheapest/', guide: t => `cheapest/${(EN.TYPES[t] || ['', t])[1]}/`, alts: 'alternatives/', alt: id => `alternatives/${id}/`, widget: 'price-widget/', index: 'price-index/' },
-    type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0],
+    type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0], node: id => eLabel(id, 'en'),
     pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN, basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
     notAdded: 'Prices not added yet', quick: QUICK,
     t: {
@@ -344,11 +384,11 @@ const LOCALES = {
   },
   tr: {
     lang: 'tr', intl: 'tr-TR',
-    path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
+    path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${eSlug.get(id)}/`, oldCat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
       makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/',
       vsIndex: 'tr/vs/', vs: s => `tr/vs/${s}/`, calc: 'tr/kar-hesaplayici/',
       guides: 'tr/en-ucuz/', guide: t => `tr/en-ucuz/${t}/`, alts: 'tr/alternatifler/', alt: id => `tr/alternatifler/${id}/`, widget: 'tr/fiyat-kutusu/', index: 'tr/fiyat-endeksi/' },
-    type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer',
+    type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer', node: id => eLabel(id, 'tr'),
     pbLabel: PB.LABEL, pbNote: PB.NOTE, basis: s => s, sizes: s => s, production: s => s, method: m => m,
     notAdded: 'Fiyatlar henüz eklenmedi', quick: ['tişört', 'hoodie', 'kupa', 'termos', 'poster', 'kanvas', 'bez çanta', 'telefon kılıfı', 'şapka', 'battaniye'],
     t: {
@@ -509,10 +549,12 @@ function makeHelpers(L) {
   const card = p => `<a class="card" href="${href(P.product(p.id))}"><div class="ci">${img(p)}</div><div class="cb"><div class="ct">${esc(p.title)}</div><div class="cm">${esc(provName(p.providerId))}</div><div class="cp"><b>${esc(fmt(p.baseMinor))}</b>${pbBadge(p.pb)}</div></div></a>`;
   // karşılaştırmalı ürün kartı (grup)
   const gcard = g => `<a class="card" href="${href(P.group(g.slug))}"><div class="ci">${imgTag(g.image, gTitle(g))}</div><div class="cb"><div class="ct">${esc(gTitle(g))}</div><div class="cm">${esc(t.makersN(g.providers.size))}</div><div class="cp"><small>${L.lang === 'en' ? 'from' : 'en ucuz'}</small><b>${esc(fmt(g.lo.baseMinor))}</b></div></div></a>`;
+  // grup içinde üretici başına en ucuz teklif (baskılı olanlar; yoksa boş ürün fiyatı) — kategori listesinin üretici filtresi için
+  const offersOf = g => { const pool = g.list.filter(p => !isBlank(p)).length ? g.list.filter(p => !isBlank(p)) : g.list; return [...groupBy(pool, p => p.providerId)].map(([id, l]) => [id, l[0].baseMinor]); };
   // Kategori listesindeki "ürün": birden çok sitede satılıyorsa karşılaştırma sayfası, tek sitedeyse kendi sayfası
   const itemsOf = (groupList, singles) => [
-    ...groupList.map(g => ({ href: href(P.group(g.slug)), name: gTitle(g), image: g.image, price: g.lo.baseMinor, n: g.providers.size, maker: '', pb: '', best: g.lo.providerId, hi: g.hi.baseMinor })),
-    ...singles.map(p => ({ href: href(P.product(p.id)), name: p.title, image: p.imageUrl, price: p.baseMinor, n: 1, maker: p.providerId, pb: p.pb, best: p.providerId, hi: p.baseMinor })),
+    ...groupList.map(g => ({ href: href(P.group(g.slug)), name: gTitle(g), image: g.image, price: g.lo.baseMinor, n: g.providers.size, maker: '', pb: '', best: g.lo.providerId, hi: g.hi.baseMinor, offers: offersOf(g) })),
+    ...singles.map(p => ({ href: href(P.product(p.id)), name: p.title, image: p.imageUrl, price: p.baseMinor, n: 1, maker: p.providerId, pb: p.pb, best: p.providerId, hi: p.baseMinor, offers: [[p.providerId, p.baseMinor]] })),
   ].sort((a, b) => b.n - a.n || a.price - b.price);
   const icard = it => `<a class="card" href="${it.href}"><div class="ci">${imgTag(it.image, it.name)}</div><div class="cb"><div class="ct">${esc(it.name)}</div><div class="cm">${it.n > 1 ? `<span class="sites">${esc(t.sitesN(it.n))}</span>` : esc(provName(it.maker))}</div><div class="cp">${it.n > 1 ? `<small>${esc(t.cheapest)}</small>` : ''}<b>${esc(fmt(it.price))}</b></div></div></a>`;
   const icards = list => `<div class="cards">${list.map(icard).join('')}</div>`;
@@ -591,11 +633,11 @@ for (const lg of LANGS) {
   const L = LOCALES[lg], H = makeHelpers(L), t = H.t, P = H.P;
   const fmt = H.fmt, n = x => H.numFmt.format(x);
   const altAll = f => Object.fromEntries(LANGS.map(k => [k, f(LOCALES[k].path)]));
-  const typeTile = k => H.tile(href(P.cat(k)), repImage(byType.get(k)), L.type(k), t.products(n(byType.get(k).length)));
-  // ana sayfa kategori menüsü: ana kategori kutusu + alt kategori bağlantıları
-  const catBox = g => {
-    const subs = typesOf(g), top = subs.slice(0, 8), gh = g === 'diger' ? href(P.cat('diger')) : href(P.cat(g));
-    return `<div class="catbox"><a class="cbh" href="${gh}">${H.imgTag(repImage(byGroup.get(g)), L.group(g))}<b>${esc(L.group(g))}</b></a><ul>${top.map(k => `<li><a href="${href(P.cat(k))}">${esc(L.type(k))}</a><span>${n(byType.get(k).length)}</span></li>`).join('')}</ul>${subs.length > 8 ? `<a class="cball" href="${gh}">${esc(t.subAll(subs.length))}</a>` : ''}</div>`;
+  const nodeTile = id => H.tile(href(P.cat(id)), repImage(eList.get(id)), L.node(id), t.products(n(eCount(id))));
+  // ana sayfa kategori menüsü: Etsy ana kategorisi + en kalabalık alt kategorileri
+  const catBox = id => {
+    const subs = eChildren(id), top = subs.slice(0, 8), gh = href(P.cat(id));
+    return `<div class="catbox"><a class="cbh" href="${gh}">${H.imgTag(repImage(eList.get(id)), L.node(id))}<b>${esc(L.node(id))}</b></a><ul>${top.map(k => `<li><a href="${href(P.cat(k))}">${esc(L.node(k))}</a><span>${n(eCount(k))}</span></li>`).join('')}</ul>${subs.length > 8 ? `<a class="cball" href="${gh}">${esc(t.subAll(subs.length))}</a>` : ''}</div>`;
   };
 
   write(`data/meta-${lg}.json`, JSON.stringify({
@@ -606,10 +648,8 @@ for (const lg of LANGS) {
       ? { sortAsc: 'Price: low to high', sortDesc: 'Price: high to low', allTypes: 'All price types', more: 'Show more', left: 'left', none: 'No results.', products: 'products', results: 'Results for', searchTitle: 'Search', typeQuery: 'Type a product, blank or manufacturer.', noHits: 'No results. Try a broader word or browse the categories.', failed: 'Search could not load.', allMakersLabel: 'All manufacturers', groupsH: 'Compare prices', productsH: 'Products', makers: 'manufacturers', sortSites: 'Sold at most stores', viewCards: 'Cards', viewTable: 'Price board', sitesN: 'Sold at {n} stores', cheapest: 'cheapest', th: ['Product', 'Stores', 'Lowest', 'Highest', 'Cheapest at'] }
       : { sortAsc: 'Fiyat: ucuzdan pahalıya', sortDesc: 'Fiyat: pahalıdan ucuza', allTypes: 'Tüm fiyat türleri', more: 'Daha fazla göster', left: 'kaldı', none: 'Sonuç bulunamadı.', products: 'ürün', results: 'Sonuçlar:', searchTitle: 'Arama', typeQuery: 'Ürün, model veya üretici adı yazın.', noHits: 'Sonuç bulunamadı. Daha genel bir kelime deneyin ya da kategorilere göz atın.', failed: 'Arama yüklenemedi.', allMakersLabel: 'Tüm üreticiler', groupsH: 'Fiyat karşılaştır', productsH: 'Ürünler', makers: 'üretici', sortSites: 'En çok sitede satılan', viewCards: 'Kartlar', viewTable: 'Fiyat borsası', sitesN: '{n} sitede satılıyor', cheapest: 'en ucuz', th: ['Ürün', 'Site', 'En düşük', 'En yüksek', 'En ucuz site'] },
   }));
-  // kategori listeleri: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site]
-  const itemRow = it => [it.href, it.name, it.image || '', it.price, it.n, it.maker, it.hi, it.best];
-  const typeItems = new Map([...byType].map(([k, list]) => [k, H.itemsOf(groupsByType.get(k) || [], singlesOf(list))]));
-  for (const [k, items] of typeItems) write(`data/k/${lg}/${k}.json`, JSON.stringify(items.map(itemRow)));
+  // kategori listeleri: [adres, ad, görsel, en düşük, site sayısı, tek sitedeyse üretici, en yüksek, en ucuz site, [[üretici, fiyat]...]]
+  const itemRow = it => [it.href, it.name, it.image || '', it.price, it.n, it.maker, it.hi, it.best, it.offers];
   // arama için ürün grupları: [slug, ad, görsel, en düşük fiyat, üretici sayısı, tip]
   write(`data/groups-${lg}.json`, JSON.stringify(groups.map(g => [g.slug, H.gTitle(g), g.image || '', g.lo.baseMinor, g.providers.size, g.type])));
 
@@ -623,7 +663,7 @@ for (const lg of LANGS) {
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
 <a class="verdict" style="display:block" href="${href(P.index)}"><b>${esc(t.pidx.homeCta(Math.round(pidx.gap * 100)))}</b></a>
 ${H.ad('ust')}
-<h2>${t.catMenu}</h2><div class="catmenu">${groupsOrdered.map(catBox).join('')}</div>
+<h2>${t.catMenu}</h2><div class="catmenu">${eTops.map(catBox).join('')}</div>
 <div class="sec-head"><h2>${esc(t.guide.indexTitle)}</h2><a href="${href(P.guides)}">${t.seeAll} →</a></div><div class="chips">${[...guides.keys()].slice(0, 12).map(k => `<a class="chip" href="${href(P.guide(k))}"><b>${esc(L.type(k))}</b><span>${esc(t.from(fmt(guides.get(k).lo.baseMinor)))}</span></a>`).join('')}${altProviders.slice(0, 4).map(id => `<a class="chip" href="${href(P.alt(id))}"><b>${esc(t.alt.h1(provName(id)))}</b></a>`).join('')}</div>
 <div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.icards(H.itemsOf(groups.slice(0, 12), []))}
 <h2>${esc(t.homeAboutH)}</h2><div class="prose">${t.homeAbout(homeD).map(x => `<p>${esc(x)}</p>`).join('')}</div>
@@ -636,33 +676,24 @@ ${H.ad('ust')}
     ] },
   }));
 
-  // kategoriler dizini: ana gruplara göre fotoğraflı kutular
+  // kategoriler dizini: Etsy ana kategorileri ve ilk alt kategorileri
   add(P.categories + 'index.html', page(L, H, {
     rel: P.categories + 'index.html', alt: altAll(p => p.categories), title: `${t.catsTitle} · ${BRAND}`, description: t.catsDesc, crumbs: [[t.categories]],
-    body: `<h1>${t.categories}</h1>${groupsOrdered.map(g => `<div class="sec-head"><h2>${esc(L.group(g))}</h2>${g === 'diger' ? '' : `<a href="${href(P.cat(g))}">${t.seeAll} →</a>`}</div><div class="tiles">${typesOf(g).map(typeTile).join('')}</div>`).join('')}`,
+    body: `<h1>${t.categories}</h1>${eTops.map(id => `<div class="sec-head"><h2>${esc(L.node(id))}</h2><a href="${href(P.cat(id))}">${t.seeAll} →</a></div><div class="tiles">${(eChildren(id).length ? eChildren(id) : [id]).map(nodeTile).join('')}</div>`).join('')}`,
   }));
 
-  // ana grup sayfaları
-  for (const g of groupsOrdered) {
-    if (g === 'diger') continue;
-    const list = byGroup.get(g), label = L.group(g);
-    const gGroups = groups.filter(x => typeGroup(x.type) === g);
-    add(P.cat(g) + 'index.html', page(L, H, {
-      rel: P.cat(g) + 'index.html', alt: altAll(p => p.cat(g)), title: `${t.groupPageTitle(label)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
-      crumbs: [[t.categories, href(P.categories)], [label]],
-      body: `<h1>${esc(label)}</h1><div class="tiles">${typesOf(g).map(typeTile).join('')}</div>
-${gGroups.length ? `<h2>${t.topGroups}</h2>${H.icards(H.itemsOf(gGroups.slice(0, 24), []))}` : ''}`,
-    }));
-  }
-
-  // ürün tipi sayfaları: önce karşılaştırmalı ürünler, sonra bütün ürünler
-  for (const [k, list] of byType) {
-    const label = L.type(k), g = typeGroup(k), provN = new Set(list.map(p => p.providerId)).size, items = typeItems.get(k);
-    add(P.cat(k) + 'index.html', page(L, H, {
-      rel: P.cat(k) + 'index.html', alt: altAll(p => p.cat(k)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
-      crumbs: [[t.categories, href(P.categories)], [L.group(g), g === 'diger' ? null : href(P.cat(g))], [label]],
-      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(items.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
-${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.json">${H.icards(items.slice(0, 48))}</div>`,
+  // Etsy kategori sayfaları: alt kategori kutuları + alt ağaçtaki bütün ürünler (ana kategoride en çok karşılaştırılanlar)
+  for (const [id, list] of eList) {
+    const label = L.node(id), kids = eChildren(id), provN = new Set(list.map(p => p.providerId)).size, root = !enode(id).parentId;
+    const items = H.itemsOf(eGroups.get(id) || [], list.filter(p => !groupOf.has(p.id)));
+    if (!root) write(`data/k/${lg}/${eSlug.get(id)}.json`, JSON.stringify(items.map(itemRow)));
+    add(P.cat(id) + 'index.html', page(L, H, {
+      rel: P.cat(id) + 'index.html', alt: altAll(p => p.cat(id)), title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
+      crumbs: [[t.categories, href(P.categories)], ...eAnc(id).map(a => [L.node(a), href(P.cat(a))]), [label]],
+      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
+${kids.length ? `<div class="tiles">${kids.map(nodeTile).join('')}</div>` : ''}${H.sponsor(mostCommon(list.map(p => p.type)))}${H.ad('liste')}
+${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.itemsOf(eGroups.get(id).slice(0, 24), []))}` : ''
+    : `${kids.length ? `<h2>${esc(t.itemsH)}</h2>` : ''}<div class="list" data-items="/data/k/${lg}/${eSlug.get(id)}.json">${H.icards(items.slice(0, 48))}</div>`}`,
       jsonld: { '@context': 'https://schema.org', '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + href(LOCALES.en.path.product(p.id)), name: p.title })) },
     }));
   }
@@ -687,7 +718,7 @@ ${H.sponsor(k)}${H.ad('liste')}<div class="list" data-items="/data/k/${lg}/${k}.
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)),
       title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
-      crumbs: [[L.type(gp.type), href(P.cat(gp.type))], [title]],
+      crumbs: [...eAnc(gp.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(gp.etsy), href(P.cat(gp.etsy))], [title]],
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
 <p class="gfrom"><b>${esc(fmt(lo.baseMinor))}</b> <span>– ${esc(fmt(hi.baseMinor))}</span></p>
 <p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
@@ -743,7 +774,7 @@ ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${e
       crumbs: [[t.makers, href(P.makers)], [p.name]],
       body: `<h1>${esc(p.name)}</h1><p>${homeLink(p, `${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗`)}</p>
 ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(list[0].baseMinor))}</p>
-<div class="chips">${types.map(([k, l]) => `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.type(k))}</b><span>${t.products(l.length)} · ${t.from(fmt(l[0].baseMinor))}</span></a>`).join('')}</div>
+<div class="chips">${[...groupBy(list, x => x.etsy)].sort((a, b) => b[1].length - a[1].length).map(([k, l]) => `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.node(k))}</b><span>${t.products(l.length)} · ${t.from(fmt(l[0].baseMinor))}</span></a>`).join('')}</div>
 ${altProviders.includes(p.id) ? `<p><a class="go" href="${href(P.alt(p.id))}">${esc(t.alt.h1(p.name))} →</a></p>` : ''}${vsOf.has(p.id) ? `<h2>${esc(t.vs.makerH(p.name))}</h2><div class="chips">${vsOf.get(p.id).slice(0, 20).map(v => `<a class="chip" href="${href(P.vs(v.slug))}"><b>${esc(provName(v.a))} vs ${esc(provName(v.b))}</b><span>${esc(t.vs.shared(v.rows.length))}</span></a>`).join('')}</div>` : ''}
 <h2>${t.makerTop}</h2>${H.cards(list.slice(0, 40))}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}`,
     }));
@@ -805,7 +836,7 @@ ${s.suppliers.slice(0, 15).map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.ma
 <div class="tbl"><table><thead><tr><th>${GU.tth[0]}</th><th class="num">${GU.tth[1]}</th><th>${GU.tth[2]}</th><th class="num">${GU.tth[3]}</th></tr></thead><tbody>
 ${s.rows.slice(0, 20).map(r => `<tr><td><a href="${href(P.group(r.g.slug))}">${esc(H.gTitle(r.g))}</a></td><td class="num">${r.offers.length}</td><td><b class="lo">${esc(fmt(r.offers[0].baseMinor))}</b> <span class="muted sm">${esc(provName(r.offers[0].providerId))}</span></td><td class="num">${esc(fmt(r.med))}</td></tr>`).join('')}
 </tbody></table></div>
-<p><a class="go" href="${href(P.cat(k))}">${esc(GU.allProducts(label))}</a> · <a class="go" href="${href(P.calc)}">${esc(GU.calcCta)}</a></p>
+<p><a class="go" href="${href(P.cat(typeNode.get(k)))}">${esc(GU.allProducts(label))}</a> · <a class="go" href="${href(P.calc)}">${esc(GU.calcCta)}</a></p>
 <h2>${esc(GU.faqH)}</h2><div class="prose">${faq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}</div>
 <h2>${esc(GU.more)}</h2><div class="chips">${[...guides.keys()].filter(x => x !== k).slice(0, 16).map(guideChip).join('')}</div>`,
       jsonld: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
@@ -913,7 +944,7 @@ ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>$
   if (lg === 'en') {
     const features = p => {
       const f = [], F = t.f, push = (k, v) => { if (v != null && v !== '' && v !== false) f.push([k, v]); };
-      push(F.type, `<a href="${href(P.cat(p.type))}">${esc(L.type(p.type))}</a>`);
+      push(F.type, `<a href="${href(P.cat(p.etsy))}">${esc(L.node(p.etsy))}</a>`);
       push(F.maker, `<a href="${href(P.maker(p.providerId))}">${esc(provName(p.providerId))}</a>`);
       if (p.model) push(F.blank, esc(p.model.brandName + ' ' + p.model.model));
       push(F.pbt, `${H.pbBadge(p.pb)} <span class="muted sm">${esc(L.pbNote[p.pb])}</span>`);
@@ -944,7 +975,7 @@ ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>$
         // tekil ürün sayfaları noindex (2026-10-13): 35 bin ince sayfa Google'ın site güvenini düşürüyordu;
         // arama trafiği karşılaştırma/kategori/rehber sayfalarında toplanır, linkler takip edilmeye devam eder
         rel, noindex: true, title: `${t.productTitle(p.title, prov, fmt(p.baseMinor))} · ${BRAND}`, description: t.productDesc(prov, p.title, fmt(p.baseMinor), label),
-        crumbs: [[L.group(g), g === 'diger' ? null : href(P.cat(g))], [label, href(P.cat(p.type))], [p.title]],
+        crumbs: [...eAnc(p.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(p.etsy), href(P.cat(p.etsy))], [p.title]],
         body: `<article class="product"><div class="pimg">${H.img(p)}</div><div class="pinfo">
 <p class="muted"><a href="${href(P.maker(p.providerId))}">${esc(prov)}</a></p><h1>${esc(p.title)}</h1>
 <p class="bigprice">${H.priceHtml(p)}</p>
@@ -967,6 +998,13 @@ write('_redirects', `/models/  /compare/  301\n/tr/borsa/  /tr/karsilastir/  301
 const stub = (from, to) => { if (!fs.existsSync(path.join(out, from, 'index.html'))) write(from + 'index.html', `<!doctype html><meta charset="utf-8"><title>Moved</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"><a href="${to}">${to}</a>`); };
 stub('models/', '/compare/'); stub('tr/borsa/', '/tr/karsilastir/'); stub('borsa/', '/tr/karsilastir/'); stub('ureticiler/', '/tr/ureticiler/');
 for (const g of groups.filter(g => g.key.startsWith('m:'))) { stub(`model/${g.slug}/`, `/compare/${g.slug}/`); stub(`tr/model/${g.slug}/`, `/tr/karsilastir/${g.slug}/`); }
+// 18 Eki 2026 öncesi tür/grup kategori adresleri -> Etsy kategori sayfası
+const groupNode = new Map([...byGroup].map(([g, l]) => [g, mostCommon(l.map(p => { const a = eAnc(p.etsy); return a[0] || p.etsy; }))]));
+for (const lg of LANGS) {
+  const P = LOCALES[lg].path;
+  for (const [k, id] of typeNode) stub(P.oldCat(k), '/' + P.cat(id));
+  for (const [g, id] of groupNode) if (g !== 'diger') stub(P.oldCat(g), '/' + P.cat(id));
+}
 if (SITE) write('CNAME', new URL(SITE).hostname + '\n');
 // IndexNow (Bing, Yandex vb.): anahtar dosyası site kökünde olmalı; bildirim scripts/indexnow.cjs ile
 if (cfg.indexNowKey) write(cfg.indexNowKey + '.txt', cfg.indexNowKey);

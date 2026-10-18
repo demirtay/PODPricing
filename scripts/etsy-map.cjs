@@ -27,10 +27,15 @@ const EXT = [
 
 const nodes = new Map(RAW.map(n => [n.id, { ...n }]));
 const byPath = new Map(RAW.map(n => [n.path.join(' > '), n.id]));
+// Etsy'de karşılığı olmayan, satıcıya satılan hizmet ve baskı malzemeleri (logo, tanıtım görseli, DTF transfer kâğıdı)
+EXT.push(['pod-seller', '', 'Seller Services & Supplies', 'Satıcı Hizmet ve Malzemeleri'],
+  ['pod-seller-services', 'Seller Services & Supplies', 'Branding & Design Services', 'Marka ve Tasarım Hizmetleri'],
+  ['pod-seller-transfers', 'Seller Services & Supplies', 'DTF & Sublimation Supplies', 'DTF ve Süblimasyon Malzemeleri'],
+  ['pod-seller-packaging', 'Seller Services & Supplies', 'Packaging & Fulfillment', 'Paketleme ve Gönderim']);
 for (const [id, parent, label, labelTr] of EXT) {
-  const pid = byPath.get(parent);
-  if (!pid) throw new Error('etsy-map: üst düğüm yok ' + parent);
-  const p = nodes.get(pid), pathArr = [...p.path, label];
+  const pid = parent ? byPath.get(parent) : null;
+  if (parent && !pid) throw new Error('etsy-map: üst düğüm yok ' + parent);
+  const p = pid ? nodes.get(pid) : { path: [], depth: -1 }, pathArr = [...p.path, label];
   nodes.set(id, { id, label, labelTr, parentId: pid, depth: p.depth + 1, path: pathArr, ext: true });
   byPath.set(pathArr.join(' > '), id);
 }
@@ -494,7 +499,115 @@ function etsyOf(p, cls) {
     if (g && (!top || nodes.get(g).path[0] === top)) return g;
   }
   if (spec) return spec.startsWith('pod-') ? spec : resolve(spec);
+  for (const [re, target] of LAST) {
+    if (!re.test(text)) continue;
+    if (typeof target === 'object') return resolve(clothingPath(target, w));
+    if (OVERRIDE_CLOTH[target]) return resolve(clothingPath(OVERRIDE_CLOTH[target], w));
+    return target.startsWith('pod-') ? target : resolve(target);
+  }
   return null;
 }
+
+// Son kontrol (18 Eki 2026): hiçbir kurala uymayan 425 ürün tek tek okunup yazıldı
+const LAST = [
+  // satıcı hizmetleri ve baskı malzemeleri
+  [/\b(logo (design|trace)|website hero image|branded (lifestyle image|catalog|product swatches)|color match quiz|color quiz|embroidery names|brand logo for|wecreatepopular)\b/, 'pod-seller-services'],
+  [/\b(dtf|uv dtf)\b.*\b(gang )?sheets?\b|\bgang sheet|\bheat press transfer|\bsublisplash|\bprinter driver\b|\bsublimation\b.*\bblank\b/, 'pod-seller-transfers'],
+  [/\b(drop shipping|premium packaging|mystery item)\b|^jana product|special for jana/, 'pod-seller-packaging'],
+  // kozmetik ve kişisel bakım (Blanka, BeautyBoss)
+  [/\b(beard (oil|butter|wash|growth)|grooming set|post-shave|shave oil)\b/, 'Bath & Beauty > Personal Care > Shaving & Grooming'],
+  [/\b(hair clay|mousse|bounce boost)\b/, 'Bath & Beauty > Hair Care > Hair Styling'],
+  [/\b(tallow|body balm|salve)\b/, 'Bath & Beauty > Skin Care > Salves & Balms'],
+  [/\b(body butter|shea|hand cream|night (renewal )?creme|night cream|eye cream|emulsion|moisture blend|rose gold oil|cleansing oil|elixir|facial polish)\b/, 'Bath & Beauty > Skin Care > Moisturizers'],
+  [/\b(bb cream|concealing cream|glitter dust|cheek palette)\b/, 'Bath & Beauty > Makeup & Cosmetics > Face'],
+  [/\b(eyebrow gel)\b/, 'Bath & Beauty > Makeup & Cosmetics > Eyes'],
+  [/\b(lip butter|lip plumper)\b/, 'Bath & Beauty > Makeup & Cosmetics > Lips'],
+  [/\b(brush|tweezers|konjac sponge|blurrer)\b/, 'Bath & Beauty > Makeup & Cosmetics > Makeup Tools & Brushes > Makeup Applicators'],
+  // takı
+  [/\b(rope|cuban|snake bone|link) (link )?chain\b|\bchain with names\b/, 'Jewelry > Necklaces > Chains'],
+  [/\bneck(lace|alce)\b|\bprojection\b/, 'Jewelry > Necklaces > Pendant Necklaces'],
+  [/\bbrac?(e)?let\b|\bbraclet\b/, 'Jewelry > Bracelets > Chain & Link Bracelets'],
+  [/\bmedical identification wristband\b/, 'Jewelry > Bracelets > ID & Medical Bracelets'],
+  [/\b(acrylic|dual-layer|clear acrylic) charms\b/, `${AC} > Keychains & Lanyards > Zipper Charms`],
+  // giyim: model adıyla satılan boşlar
+  [/\byp classics 6506\b|\b(5|7)-panel\b|\bpeached cotton twill\b|\b(headwear|contractor winter) bundle\b/, `${AC} > Hats & Head Coverings > Hats & Caps`],
+  [/\blat 4424\b/, "Clothing > Gender-Neutral Kids' Clothing > Gender-Neutral Baby Clothing > Bodysuits"],
+  [/\b(round neck|women) (3 4 )?full sleeves\b|\bwomen'?s premium 240 bio\b|\bcontinental (ep|sa)\d+|\bparagon 100\b|\bcompetitor united crew\b|\bcasual performance lite\b|^(classic|premium|ladies|ladies premium|vintage unisex|qtees)$/, 'TEE'],
+  [/\b(club fleece|smooth fleece|tie-dye fleece|ledger dry|zoodie)\b/, 'SWEAT'],
+  [/\b(silky touch|b&c pu\d+)\b/, C('Tops & Tees > Polos', { m: 'Shirts & Tees > Polos' })],
+  [/\b(tech-shell|rain shell)\b/, C('Jackets & Coats')],
+  [/\bsweatshort\b/, C('Shorts', { w: 'Shorts & Skorts > Shorts' })],
+  [/\bperformance linen look\b/, C('Tops & Tees')],
+  [/\bcheerleader set\b/, C('Sports & Fitness')],
+  [/\bnightwear\b/, C('Pajamas & Robes > Pajamas > Sets', { m: 'Pajamas & Robes > Sets' })],
+  [/\b(two-?piece|three piece|mediterranean style|hawaiian) set\b|\bset combination\b/, C('Clothing Sets', { u: "Clothing > Women's Clothing", m: "Clothing > Men's Clothing", w: "Clothing > Women's Clothing" })],
+  [/\bformal tie\b/, `${AC} > Suit & Tie Accessories > Neckties`],
+  [/\bcycling headscarf\b/, `${AC} > Scarves & Wraps > Bandanas`],
+  [/\bsilky-like wrap\b/, `${AC} > Scarves & Wraps > Shawls & Wraps`],
+  [/\b(face ?mask|face covering)\b/, `${AC} > Face Masks & Accessories > Face Masks & Coverings`],
+  [/\b(calf (cover|sleeves?))\b/, `${AC} > Gloves & Sleeves > Sleeves`],
+  [/\bslip ons\b/, 'Shoes > Gender-Neutral Adult Shoes > Sneakers & Athletic Shoes > Slip Ons'],
+  [/\bbommelm[uü]tze\b/, `${AC} > Hats & Head Coverings > Hats & Caps`],
+  // mutfak, banyo, ev
+  [/tasse\b/, `${DW} > Mugs`], [/\bfitness shaker\b/, `${DW} > Water Bottles`], [/\bmilk jug\b/, `${DW} > Pitchers & Drinking Sets > Pitchers`],
+  [/\bwine chiller\b/, `${KD} > Drink & Barware > Barware > Ice Buckets`], [/\b(corkscrew|leather opener)\b/, `${KD} > Drink & Barware > Barware > Bottle Openers`],
+  [/\bstubby holders?\b/, `${DW} > Cozies > Can Cozies`], [/\bpizza board\b/, `${KD} > Cookware > Cutting Boards`], [/\bcasserole carrier\b/, `${BP} > Food & Insulated Bags`],
+  [/\b(insulation (pad|mat|three piece set)|heat insulation|stake mat)\b/, `${KD} > Cookware > Trivets & Pot Holders > Trivets`],
+  [/\bkitchen (cloth|mat)|\bkitchen mat set\b|\bfaucet mat\b/, `${KD} > Linens > Kitchen & Tea Towels`],
+  [/\btoilet\b.*\bmat|\bbathtub mat\b/, `${HL} > Bathroom > Bath Mats & Rugs > Bath Mats`],
+  [/\bwash ?cloths?\b/, 'Bath & Beauty > Bath Accessories > Washcloths'],
+  [/\bweight scale\b/, `${HL} > Bathroom > Bathroom Scales`],
+  [/\b(floor mat|decorative mats|custom shape mat)\b/, `${HL} > Floor & Rugs > Rugs`],
+  [/\bmop\b/, `${HL} > Cleaning Supplies > Buckets, Mops & Brooms`], [/\bironing mat\b/, `${HL} > Cleaning Supplies > Laundry Supplies > Ironing Board Covers`],
+  [/\bbed linen\b/, `${HL} > Bedding > Sheets & Pillowcases > Sheet Sets`], [/\bthickiy|\bnap mat\b/, `${HL} > Bedding > Blankets & Throws > Throws`],
+  [/\b(bedside table|storage cabinet|tv trays)\b/, `${HL} > Furniture`], [/\binflatable ottoman\b/, 'Bath & Beauty > Bath Accessories > Poufs'],
+  [/\b(storage bins|medicine (box|kit)|display boxes|wood boxes|usb boxes|disk cases|pull out photo box|teeth box|letter box)\b/, `${HL} > Storage & Organization > Boxes & Bins`],
+  [/\b(closet dividers|tie hanger)\b/, `${HL} > Storage & Organization > Hangers & Clothing Storage`], [/\badhesive hook\b/, `${HL} > Storage & Organization > Hooks & Fixtures`],
+  [/\bmail ?box cover\b/, `${HL} > Outdoor & Gardening > Mailboxes`], [/\bprivacy screen\b/, `${HL} > Outdoor & Gardening`],
+  [/\b(succulent pot)\b/, `${HL} > Outdoor & Gardening > Planters & Pots`], [/\bsolar lights?\b/, `${HL} > Lighting > Light Fixtures`],
+  [/\b(pedal light|led hanging light|led base|led heart|with light|acrylic board with light)\b/, `${HL} > Lighting > Lamps, Shades & Bases > Lamps > Accent Lamps`],
+  [/\bsocket panel\b/, `${HL} > Lighting > Light Accessories > Light Switch & Outlet Covers`],
+  [/\b(money box|woodland animal money)\b/, `${HD} > Home Accents > Piggy Banks`],
+  [/\b(snowflake decorations|christmas bells|bone hanging|hanging .*souvenirs|snowman wood hanger|christmas couplets|easter egg|wooden garland)\b/, `${HD} > Seasonal Decor > Ornaments`],
+  [/\b(window decor)\b/, `${HD} > Wall Decor > Window Clings`],
+  [/\b(wall panel|hanging pictures|aluminum composite panels|bamboo panels)\b/, `${HD} > Wall Decor`],
+  [/\b(home wood framework|slip-in mats)\b/, `${HD} > Picture Frames & Displays > Picture Frames`],
+  [/\b(crystal display shelf|support stick|bookshelf decor|number tracker display)\b/, `${HD} > Picture Frames & Displays > Displays`],
+  [/\b(float wraps|gallery wraps)\b/, 'pod-canvas'], [/\b(standouts|photo proofs|mini snapshots|polaroid photo|photo board|acrylic prism|epson cold press|photo gloss)\b/, ART],
+  [/\b(photo greetings|image folios|compliment slips|letterhead|diy (double thick )?sheet|stamped menu)\b/, `${PPS} > Stationery`],
+  [/\b(hang ?tags?|gift tags?|embroidered tag|layers? tag|3-layer tag|gamer tag|stethoscope id tag)\b/, `${PPS} > Stickers, Labels & Tags > Tags`],
+  [/\b(arched background cover|background cover|linen scroll|face stick|hand clapper|lei cord)\b/, 'Paper & Party Supplies > Party Supplies > Party Decor > Backdrops & Props'],
+  [/\bmagic wrapper cloth\b/, `${PPS} > Gift Wrapping > Wrapping Paper & Furoshiki`],
+  [/\b(commemorative|memorial|metal|3d relief metal) coin\b|\bmetal coin\b|\bcommemorative ticket\b/, 'Art & Collectibles > Collectibles > Coins & Money'],
+  [/\bviewfinder\b/, `${TG} > Toys > Stereoscopes & Viewfinders`],
+  [/\b(maze game|maze|spinner|topple tower)\b/, `${TG} > Games & Puzzles`], [/\bladder ball\b/, `${TG} > Sports & Outdoor Recreation > Lawn Games`],
+  [/\b(acrylic|epoxy) chips\b/, `${TG} > Games & Puzzles > Card Games > Poker`],
+  [/\b(skis|snowboard)\b/, `${TG} > Sports & Outdoor Recreation > Ice & Snow Sports`], [/\bkickboard\b/, `${TG} > Sports & Outdoor Recreation > Boating & Water Sports > Swimming & Diving`],
+  [/\b(stadium seat|mouthpiece)\b/, `${TG} > Sports & Outdoor Recreation`], [/\b(rescue whistle|multi tool)\b/, `${TG} > Sports & Outdoor Recreation > Camping`],
+  [/\b(macbook|surface pro|computer case)\b/, `${EA} > Electronics Cases > Laptop Sleeves`], [/\bmagnetic clear impact cases\b/, `${EA} > Electronics Cases > Phone Cases`],
+  [/\bswitch base\b/, `${EA} > Video Games > Parts & Modifications`], [/\bcharging mat\b/, `${EA} > Batteries & Charging > Chargers`],
+  [/\bkeyboard hand rest\b/, `${EA} > Computers & Peripherals > Keyboards & Mice`], [/\bcord case\b/, `${EA} > Cables & Cords`], [/\busb drives?\b/, `${EA} > Computers & Peripherals`],
+  [/\b(phone holder|magnetic grip|airbag phone)\b/, 'pod-phone-grips'], [/\bsilicone strap\b/, 'Jewelry > Watches > Watch Bands & Straps'],
+  [/\bturntable mat\b/, 'Books, Movies & Music > Music'],
+  [/\b(gear (shift|lever) cover|armrest (box )?cover|anti-kick|car (vent clip|hanging trash)|vent clip|tailgate wrap)\b/, `${EA} > Car Parts & Accessories > Car Accessories`],
+  [/\bcar key cover\b/, `${EA} > Car Parts & Accessories > Car Accessories > Key Fob Covers`], [/\b(window visor|window sunshades)\b/, 'pod-sunshades'],
+  [/\bsofa armrest cover\b/, `${HL} > Furniture`], [/\bmixer cover\b|\bfoot warmer\b/, `${HL} > Home Appliances`],
+  [/\b(bible cover)\b/, 'Books, Movies & Music > Books > Book Accessories > Book Covers'], [/\bpassport protector\b/, `${BP} > Luggage & Travel > Passport Covers`],
+  [/\b(transparent satchel)\b/, `${BP} > Handbags`], [/\b(carry-all|sack)\b/, BP], [/\bcigar case\b/, `${BP} > Accessory Cases > Cigarette Cases`],
+  [/\bbaby changing mat\b/, 'Bath & Beauty > Baby & Child Care > Changing Pads'], [/\bherb grinder\b/, 'Art & Collectibles > Collectibles > Tobacciana'],
+  [/\b(self-inking stamps|sticky note holder|clip)\b/, `${HL} > Office > Office & School Supplies`],
+  [/\b(acrylic sheet|thick acrylic|fabric sheet|felt fabric sheet|yarn holder)\b/, 'Craft Supplies & Tools'],
+  [/\b(tool set|wood hammer)\b/, `${HL} > Home Improvement`],
+  [/\bomamori\b/, `${HL} > Spirituality & Religion`],
+  // Printonic mum hediye setleri ("Sip & Glow Box", "Hello Sunshine Gift Set")
+  [/\bgift set\b|^(grad mode|dynamic duo set|done and dusted|new beginnings|sip & glow box|tassle time|dream & wander set|the tea time set)$/, `${HD} > Candles & Home Fragrances`],
+  [/\btwo[- ]?piece set\b/, C('Clothing Sets', { u: "Clothing > Women's Clothing", m: "Clothing > Men's Clothing", w: "Clothing > Women's Clothing" })],
+  [/s[ıi]rt [çc]antas[ıi]/, `${BP} > Sports Bags > Team Sports & Gym Bags`], [/mutfak [öo]nl[üu][ğg][üu]/, `${AC} > Aprons`], [/yast[ıi]k k[ıi]l[ıi]f[ıi]/, `${HD} > Throw Pillows`],
+  [/\b(exoboard|clickit)\b/, ART], [/\binv-hp-/, `${DW} > Water Bottles`], [/\bshelf liners\b/, `${HL} > Storage & Organization`], [/\busb cases\b/, `${HL} > Storage & Organization > Boxes & Bins`],
+  [/\bcolor rich pro line\b/, 'Bath & Beauty > Makeup & Cosmetics > Lips > Lip Color'], [/\bpage holder\b/, 'Books, Movies & Music > Books > Book Accessories'],
+  [/\bkeych(a)?in\b/, `${AC} > Keychains & Lanyards > Keychains`], [/\brose boxes\b/, `${HD} > Flower Arrangements`],
+  // geri kalan kişiye özel hediyelik objeler (kristal küre, ahşap süs, blok, figür)
+  [/\b(crystal|sculpture|keepsake|wooden|acrylic|wood|blocks?|stone|heart|snowman|gingerbread|decor|hanger|portrait|line drawing|pocket hug|bundle|meter|lock|robot|grape|hologram flower|crown)\b/, `${HD} > Home Accents`],
+];
 
 module.exports = { nodes, byPath, resolve, etsyOf, who, EXT, fallbacks };

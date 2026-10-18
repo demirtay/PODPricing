@@ -47,7 +47,9 @@ function resolve(p) {
 const RE_BABY = /\b(baby|babies|infant|newborn|toddler|onesie|bodysuit|romper|bib)\b/;
 const RE_KIDS = /\b(kids?|youth|children'?s?|child|juniors?|boys?|girls?|teen)\b/;
 function who(text) {
-  if (RE_BABY.test(text) || /\b(bebek|z[ıi]b[ıi]n)\b/.test(text)) return 'baby';
+  // "Women's Strap Shorts Romper" bebek değil: bebek kelimeleri yetişkin işareti yoksa geçerli
+  const adult = /\b(women'?s?|womens|ladies|men'?s|mens|adults?|unisex)\b/.test(text);
+  if ((RE_BABY.test(text) && (!adult || /\b(baby|infant|newborn|toddler)\b/.test(text))) || /\b(bebek|z[ıi]b[ıi]n)\b/.test(text)) return 'baby';
   if (/\b([çc]ocuk)\b/.test(text)) return 'kid';
   if (/\b(kad[ıi]n|damen)\b/.test(text)) return 'w';
   if (/\b(erkek|herren)\b/.test(text)) return 'm';
@@ -82,7 +84,7 @@ const TYPE_MAP = {
   'bebek-battaniye': `${HL} > Bedding > Blankets & Throws > Baby Blankets`,
   'cocuk-giyim': 'KIDS',
   'ayakkabi-sneaker': [[/\bhigh[- ]?top|hi[- ]?top/, S('Sneakers & Athletic Shoes > Hi Tops')], [/\bslip[- ]?on|loafer/, S('Sneakers & Athletic Shoes > Slip Ons', { w: 'Sneakers & Athletic Shoes > Slip Ons', m: 'Loafers & Slip Ons' })], [/\bcleat|golf/, S('Sneakers & Athletic Shoes > Golf Shoes & Cleats')], S('Sneakers & Athletic Shoes > Tie Sneakers', { kid: 'Sneakers & Athletic Shoes', girl: 'Sneakers & Athletic Shoes', boy: 'Sneakers & Athletic Shoes' })],
-  'ayakkabi-terlik': [[/\bflip[- ]?flop/, S('Sandals > Flip Flops & Thongs')], [/\bslides?\b|slider/, S('Sandals > Slides', { w: 'Sandals > Slingbacks & Slides' })], [/\bslipper/, S('Slippers')], [/\bclog|croc/, S('Clogs', { w: 'Clogs & Mules > Clogs', m: 'Clogs & Mules' })], S('Sandals')],
+  'ayakkabi-terlik': [[/\bslippers?\b/, S('Slippers')], [/\bflip[- ]?flop/, S('Sandals > Flip Flops & Thongs')], [/\bslides?\b|slider/, S('Sandals > Slides', { w: 'Sandals > Slingbacks & Slides' })], [/\bslipper/, S('Slippers')], [/\bclog|croc/, S('Clogs', { w: 'Clogs & Mules > Clogs', m: 'Clogs & Mules' })], S('Sandals')],
   'ayakkabi-bot': S('Boots'),
   'giyim-mayo': [[/\b(trunks?|board ?shorts?|swim shorts|jammers?)\b/, C('Swimwear', { w: 'Swimwear > Bottoms' })], [/\bbikini|tankini/, C('Swimwear', { w: 'Swimwear > Bikinis & Sets' })], [/\bone[- ]piece/, C('Swimwear', { w: 'Swimwear > One-Piece' })], [/\brash guard/, C('Swimwear', { w: 'Swimwear > Rash Guards' })], [/\bcover[- ]?up/, C('Swimwear', { w: 'Swimwear > Cover-Ups' })], C('Swimwear')],
   'giyim-ic-giyim': [[/\bboxer briefs?/, C('Underwear', { m: 'Underwear > Boxers & Briefs > Boxer Briefs', w: 'Lingerie > Panties' })], [/\bboxers?\b/, C('Underwear', { m: 'Underwear > Boxers & Briefs > Boxers', w: 'Lingerie > Panties' })], [/\bbriefs?\b/, C('Underwear', { m: 'Underwear > Boxers & Briefs > Briefs', w: 'Lingerie > Panties' })], [/\bbralette/, C('Underwear', { w: 'Lingerie > Bralettes' })], [/\bbra\b|sports? bh/, C('Sports & Fitness', { w: 'Lingerie > Bras' })], [/\bpant(ies|y)|thong|g-?string/, C('Underwear', { w: 'Lingerie > Panties' })], C('Underwear', { w: 'Lingerie' })],
@@ -117,8 +119,8 @@ const TYPE_MAP = {
   'aksesuar-maske': [[/\bsleep|eye mask/, "Clothing > Women's Clothing > Pajamas & Robes > Sleep Masks & Blindfolds > Sleep Masks"], [/\bbalaclava/, `${AC} > Hats & Head Coverings > Balaclavas`], `${AC} > Face Masks & Accessories > Face Masks & Coverings`],
   'aksesuar-esarp': [[/\bbandana/, `${AC} > Scarves & Wraps > Bandanas`], [/\bhandkerchief/, `${AC} > Scarves & Wraps > Handkerchiefs`], [/\bshawl|wrap\b/, `${AC} > Scarves & Wraps > Shawls & Wraps`], `${AC} > Scarves & Wraps > Scarves`],
   'aksesuar-kravat': [[/\bbow tie/, `${AC} > Suit & Tie Accessories > Bow Ties`], `${AC} > Suit & Tie Accessories > Neckties`],
-  'aksesuar-taki': [[/\bname necklace|monogram|initial necklace/, 'Jewelry > Necklaces > Monogram & Name Necklaces'], [/\bcharm bracelet/, 'Jewelry > Bracelets > Charm Bracelets'], [/\blocket/, 'Jewelry > Necklaces > Lockets'], [/\bchoker/, 'Jewelry > Necklaces > Choker Necklaces'], [/\bcharm necklace|necklace.*\bcharm/, 'Jewelry > Necklaces > Charm Necklaces'], [/\bnecklace|pendant/, 'Jewelry > Necklaces > Pendant Necklaces'], [/\bstud earring/, 'Jewelry > Earrings > Stud Earrings'], [/\bhoop/, 'Jewelry > Earrings > Hoop Earrings'], [/\bearring/, 'Jewelry > Earrings > Dangle & Drop Earrings'], [/\bbangle/, 'Jewelry > Bracelets > Bangles'], [/\bbeaded bracelet/, 'Jewelry > Bracelets > Beaded Bracelets'], [/\bcuff\b/, 'Jewelry > Bracelets > Cuff Bracelets'], [/\bbracelet/, 'Jewelry > Bracelets > Chain & Link Bracelets'], [/\bsignet/, 'Jewelry > Rings > Signet Rings'], [/\bring\b|rings\b/, 'Jewelry > Rings > Statement Rings'], [/\bbrooch/, `${AC} > Pins & Clips > Brooches`], [/\bchain\b/, 'Jewelry > Necklaces > Chains'], [/\bcharm/, 'Jewelry > Necklaces > Charm Necklaces'], [/\bcuff ?links?/, `${AC} > Suit & Tie Accessories > Cuff Links & Tie Clips > Cuff Links`], 'Jewelry'],
-  'aksesuar-saat': [[/\bband|strap/, 'Jewelry > Watches > Watch Bands & Straps'], [/\bpocket watch/, 'Jewelry > Watches > Pocket Watches'], 'Jewelry > Watches > Wrist Watches > Unisex Wrist Watches'],
+  'aksesuar-taki': [[/\b(jewe?l(le)?ry (box|case|organi[sz]er|storage)|trinket (box|dish|tray)s?|ring (box|dish))\b/, 'Jewelry > Jewelry Storage'], [/\bname necklace|monogram|initial necklace/, 'Jewelry > Necklaces > Monogram & Name Necklaces'], [/\bcharm bracelet/, 'Jewelry > Bracelets > Charm Bracelets'], [/\blocket/, 'Jewelry > Necklaces > Lockets'], [/\bchoker/, 'Jewelry > Necklaces > Choker Necklaces'], [/\bcharm necklace|necklace.*\bcharm/, 'Jewelry > Necklaces > Charm Necklaces'], [/\bnecklace|pendant/, 'Jewelry > Necklaces > Pendant Necklaces'], [/\bstud earring/, 'Jewelry > Earrings > Stud Earrings'], [/\bhoop/, 'Jewelry > Earrings > Hoop Earrings'], [/\bearring/, 'Jewelry > Earrings > Dangle & Drop Earrings'], [/\bbangle/, 'Jewelry > Bracelets > Bangles'], [/\bbeaded bracelet/, 'Jewelry > Bracelets > Beaded Bracelets'], [/\bcuff\b/, 'Jewelry > Bracelets > Cuff Bracelets'], [/\bbracelet/, 'Jewelry > Bracelets > Chain & Link Bracelets'], [/\bsignet/, 'Jewelry > Rings > Signet Rings'], [/\bring\b|rings\b/, 'Jewelry > Rings > Statement Rings'], [/\bbrooch/, `${AC} > Pins & Clips > Brooches`], [/\bchain\b/, 'Jewelry > Necklaces > Chains'], [/\bcharm/, 'Jewelry > Necklaces > Charm Necklaces'], [/\bcuff ?links?/, `${AC} > Suit & Tie Accessories > Cuff Links & Tie Clips > Cuff Links`], 'Jewelry'],
+  'aksesuar-saat': [[/^(?!.*\b(strap|band) watch|.*\bwatch with\b).*\b(bands?|straps?)\b/, 'Jewelry > Watches > Watch Bands & Straps'], [/\bpocket watch/, 'Jewelry > Watches > Pocket Watches'], 'Jewelry > Watches > Wrist Watches > Unisex Wrist Watches'],
   'aksesuar-cuzdan': [[/\bcard (holder|case)|business card/, `${BP} > Wallets & Money Clips > Business Card Cases`], [/\bpassport/, `${BP} > Luggage & Travel > Passport Covers`], `${BP} > Wallets & Money Clips > Wallets`],
   'aksesuar-anahtarlik': [[/\blanyard/, `${AC} > Keychains & Lanyards > Lanyards`], [/\bbadge (holder|reel)/, `${AC} > Keychains & Lanyards > Badge Reels`], `${AC} > Keychains & Lanyards > Keychains`],
   'aksesuar-rozet': [[/\bpatch/, `${AC} > Patches & Appliques`], [/\bbadge/, `${AC} > Pins & Clips > Badges`], `${AC} > Pins & Clips > Pins & Pinback Buttons`],
@@ -137,7 +139,7 @@ const TYPE_MAP = {
   'canta-laptop': [[/\bsleeve/, `${EA} > Electronics Cases > Laptop Sleeves`], `${EA} > Electronics Cases > Laptop Bags`],
   'canta-seyahat': [[/\bduffel|duffle|weekender|gym bag/, `${BP} > Luggage & Travel > Duffel Bags`], [/\bluggage tag/, `${BP} > Luggage & Travel > Luggage Tags`], [/\bluggage cover|suitcase cover/, `${BP} > Luggage & Travel > Luggage Covers`], [/\bsuitcase|luggage|carry[- ]on/, `${BP} > Luggage & Travel > Suitcases`], `${BP} > Luggage & Travel > Overnight Bags`],
   'canta-el-omuz': [[/\bcrossbody|sling/, `${BP} > Handbags > Crossbody Bags`], [/\bclutch|evening/, `${BP} > Handbags > Clutches & Evening Bags`], [/\bwristlet/, `${BP} > Handbags > Wristlets`], [/\bhobo/, `${BP} > Handbags > Hobo Bags`], [/\bmessenger/, `${BP} > Messenger Bags`], [/\bshoulder/, `${BP} > Handbags > Shoulder Bags`], `${BP} > Handbags > Top Handle Bags`],
-  'canta-diger': [[/\b(pouch|coin purse|zipper pouch|pencil (case|pouch))\b/, `${BP} > Pouches & Coin Purses`], [/\bbeach bag/, `${BP} > Sports Bags > Beach Bags`], [/\b(gift|party|favor) bags?\b|\bpaper bags?\b/, `${PPS} > Gift Wrapping > Party & Gift Bags > Gift Bags`], [/\bshoe bag/, `${BP} > Clothing & Shoe Bags > Shoe Bags`], [/\blaundry/, `${HL} > Storage & Organization > Laundry Bags & Hampers > Laundry Bags`], [/\bdrawstring|gym|sport/, `${BP} > Sports Bags > Team Sports & Gym Bags`], [/\bdiaper/, `${BP} > Diaper Bags`], [/\bmarket|shopping|grocery/, `${BP} > Market Bags`], BP],
+  'canta-diger': [[/\b(pouch|coin purse|zipper pouch|pencil)\b/, `${BP} > Pouches & Coin Purses`], [/\bbeach bag/, `${BP} > Sports Bags > Beach Bags`], [/\b(gift|party|favor) bags?\b|\bpaper bags?\b/, `${PPS} > Gift Wrapping > Party & Gift Bags > Gift Bags`], [/\bshoe bag/, `${BP} > Clothing & Shoe Bags > Shoe Bags`], [/\blaundry/, `${HL} > Storage & Organization > Laundry Bags & Hampers > Laundry Bags`], [/\bdrawstring|gym|sport/, `${BP} > Sports Bags > Team Sports & Gym Bags`], [/\bdiaper/, `${BP} > Diaper Bags`], [/\bmarket|shopping|grocery/, `${BP} > Market Bags`], BP],
   'mutfak-kupa': [[/\btravel|tumbler|insulated|40oz|lid\b/, `${DW} > Travel Mugs`], [/\bbeer stein|stein\b/, `${KD} > Drink & Barware > Barware > Steins`], `${DW} > Mugs`],
   'mutfak-termos': `${DW} > Travel Mugs`,
   'mutfak-matara': `${DW} > Water Bottles`,
@@ -176,7 +178,7 @@ const TYPE_MAP = {
   'duvar-duvar-halisi': `${HD} > Wall Decor > Wall Hangings > Tapestries`,
   'duvar-sticker': [[/\bwindow/, `${HD} > Wall Decor > Window Clings`], [/\bwallpaper/, `${HD} > Wall Decor > Wallpaper`], `${HD} > Wall Decor > Wall Decals & Murals`],
   'kirtasiye-sticker': [[/\bbumper/, `${PPS} > Stickers, Labels & Tags > Bumper Stickers`], [/\blabel/, `${PPS} > Stickers, Labels & Tags > Labels`], [/\bcling/, `${PPS} > Stickers, Labels & Tags > Clings`], [/\blaptop (skin|decal)/, `${EA} > Decals & Skins > Laptop > Laptop Decals`], [/\btag\b|hang tag/, `${PPS} > Stickers, Labels & Tags > Tags`], `${PPS} > Stickers, Labels & Tags > Stickers`],
-  'kirtasiye-defter': [[/\bplanner/, `${PPS} > Calendars & Planners`], [/\bnotepad|sticky note|memo pad/, `${PPS} > Stationery > Notepads`], [/\bjournal|sketchbook|diary/, 'Books, Movies & Music > Books > Blank Books > Journals & Notebooks'], [/\bphoto ?book|photobook|book\b/, 'Books, Movies & Music > Books'], 'Books, Movies & Music > Books > Blank Books > Journals & Notebooks'],
+  'kirtasiye-defter': [[/\bplanner/, `${PPS} > Calendars & Planners`], [/\bnotepad|sticky note|memo pad/, `${PPS} > Stationery > Notepads`], [/\bjournal|sketchbook|diary/, 'Books, Movies & Music > Books > Blank Books > Journals & Notebooks'], [/\bphoto ?book|\bphotobook|\bbooks?\b/, 'Books, Movies & Music > Books'], 'Books, Movies & Music > Books > Blank Books > Journals & Notebooks'],
   'kirtasiye-kart': [[/\bpostcard/, `${PPS} > Stationery > Postcards`], [/\bbusiness card/, `${PPS} > Stationery > Business & Calling Cards`], [/\binvitation/, `${PPS} > Invitations & Announcements > Invitations`], [/\bthank you/, `${PPS} > Greeting Cards > Thank You Cards`], [/\bbirthday/, `${PPS} > Greeting Cards > Birthday Cards`], [/\bchristmas|holiday/, `${PPS} > Greeting Cards > Holiday & Seasonal Cards > Christmas Cards`], [/\bnote card|flat card/, `${PPS} > Stationery > Note Cards`], [/\bbookmark/, 'Books, Movies & Music > Books > Book Accessories > Bookmarks'], [/\brecipe/, `${PPS} > Stationery > Recipe Cards`], [/\bphoto ?card|trading card|photocard/, 'Art & Collectibles > Artist Trading Cards'], `${PPS} > Greeting Cards`],
   'kirtasiye-takvim': [[/\bdesk/, `${PPS} > Calendars & Planners > Desk Calendars`], [/\badvent/, `${PPS} > Calendars & Planners > Advent Calendars`], `${PPS} > Calendars & Planners > Wall Calendars`],
   'kirtasiye-ambalaj': [[/\bwrapping paper|gift wrap/, `${PPS} > Gift Wrapping > Wrapping Paper & Furoshiki > Gift Wrap`], [/\btissue/, `${PPS} > Gift Wrapping > Tissue Paper`], [/\bgift box/, `${PPS} > Gift Wrapping > Gift Boxes`], [/\bmailer|shipping box|mailing box/, `${PPS} > Mailers & Mailing > Mailing Boxes`], [/\benvelope/, `${PPS} > Mailers & Mailing > Envelopes`], [/\bwashi|tape/, `${PPS} > Gift Wrapping > Washi Tape`], [/\bbag/, `${PPS} > Gift Wrapping > Party & Gift Bags > Gift Bags`], `${PPS} > Gift Wrapping`],
@@ -191,16 +193,25 @@ const TYPE_MAP = {
   'oyun-masa': [[/\bchess/, `${TG} > Games & Puzzles > Board Games > Chess`], [/\bbingo/, `${TG} > Games & Puzzles > Board Games > Bingo`], [/\bdice/, `${TG} > Games & Puzzles > Dice & Tile Games > Dice`], [/\bdomino/, `${TG} > Games & Puzzles > Dice & Tile Games > Tile Games > Dominoes`], [/\bdart/, `${TG} > Games & Puzzles > Game Room > Darts`], [/\bcornhole/, `${TG} > Sports & Outdoor Recreation > Lawn Games > Cornhole`], [/\bgame mat|playmat|play mat/, `${TG} > Games & Puzzles > Game Pieces`], `${TG} > Games & Puzzles > Board Games`],
   'oyun-pelus': [[/\bbear/, `${TG} > Toys > Stuffed Animals & Plushies > Bears`], [/\bcat\b/, `${TG} > Toys > Stuffed Animals & Plushies > Cats`], [/\bdog\b/, `${TG} > Toys > Stuffed Animals & Plushies > Dogs`], [/\bunicorn/, `${TG} > Toys > Stuffed Animals & Plushies > Unicorns`], [/\bdoll\b/, `${TG} > Toys > Dolls & Action Figures`], `${TG} > Toys > Stuffed Animals & Plushies`],
   'oyun-sanat': [[/\bcoloring|paint by number|diamond painting/, `${TG} > Toys > Learning & School`], `${TG} > Toys`],
-  'arac-aksesuar': [[/\bseat cover/, `${EA} > Car Parts & Accessories > Car Accessories > Seat Covers`], [/\bsteering/, `${EA} > Car Parts & Accessories > Car Accessories > Steering Wheel Covers`], [/\b(floor )?mats?\b/, 'pod-car-mats'], [/\bsun ?shade|windshield/, 'pod-sunshades'], [/\bcoaster/, `${EA} > Car Parts & Accessories > Car Accessories > Car Coasters`], [/\blicense plate (frame|cover)/, `${EA} > Car Parts & Accessories > Car Accessories > License Plate Covers & Frames`], [/\blicense plate/, `${EA} > Car Parts & Accessories > Car Accessories > Decorative License Plates`], [/\bair freshener/, `${EA} > Car Parts & Accessories > Car Accessories > Car Air Fresheners`], [/\bkey ?fob/, `${EA} > Car Parts & Accessories > Car Accessories > Key Fob Covers`], [/\bcharm|hanging|mirror/, `${EA} > Car Parts & Accessories > Car Accessories > Car Charms`], [/\bmagnet|decal|sticker/, `${PPS} > Stickers, Labels & Tags > Bumper Stickers`], `${EA} > Car Parts & Accessories > Car Accessories`],
+  'arac-aksesuar': [[/\bseat cover/, `${EA} > Car Parts & Accessories > Car Accessories > Seat Covers`], [/\bsteering/, `${EA} > Car Parts & Accessories > Car Accessories > Steering Wheel Covers`], [/\b(floor )?mats?\b/, 'pod-car-mats'], [/\bsun ?shade|windshield/, 'pod-sunshades'], [/\bcoaster/, `${EA} > Car Parts & Accessories > Car Accessories > Car Coasters`], [/\blicense plate (frame|cover|holder)/, `${EA} > Car Parts & Accessories > Car Accessories > License Plate Covers & Frames`], [/\blicense plate/, `${EA} > Car Parts & Accessories > Car Accessories > Decorative License Plates`], [/\bair freshener/, `${EA} > Car Parts & Accessories > Car Accessories > Car Air Fresheners`], [/\bkey ?fob/, `${EA} > Car Parts & Accessories > Car Accessories > Key Fob Covers`], [/\bcharm|hanging|mirror/, `${EA} > Car Parts & Accessories > Car Accessories > Car Charms`], [/\bmagnet|decal|sticker/, `${PPS} > Stickers, Labels & Tags > Bumper Stickers`], `${EA} > Car Parts & Accessories > Car Accessories`],
   'spor-yoga': [[/\bbag/, `${BP} > Sports Bags > Yoga Bags`], `${TG} > Sports & Outdoor Recreation > Fitness & Exercise > Yoga & Pilates > Yoga`],
-  'spor-plaj': [[/\btowel/, `${HL} > Bathroom > Beach Towels`], [/\bbag/, `${BP} > Sports Bags > Beach Bags`], [/\bball/, `${TG} > Sports & Outdoor Recreation > Balls`], `${TG} > Sports & Outdoor Recreation > Boating & Water Sports > Sand & Water Toys`],
-  'spor-golf': [[/\bbag/, `${BP} > Sports Bags > Tennis & Golf Bags > Golf Bags`], [/\bshoe|cleat/, 'Shoes > Gender-Neutral Adult Shoes > Sneakers & Athletic Shoes > Golf Shoes & Cleats'], [/\bpolo|shirt/, "Clothing > Men's Clothing > Shirts & Tees > Polos"], [/\bhat|cap|visor/, `${AC} > Hats & Head Coverings > Hats & Caps`], `${TG} > Sports & Outdoor Recreation > Golf`],
-  'spor-kamp': [[/\bhammock/, `${HL} > Outdoor & Gardening > Hammocks & Swings`], [/\bchair/, `${HL} > Outdoor & Gardening > Patio Furniture`], `${TG} > Sports & Outdoor Recreation > Camping`],
+  // piknik örtüsü oyuncak değil; kum/su oyuncağı yalnızca "toy" yazanlar
+  'spor-plaj': [[/\btowel/, `${HL} > Bathroom > Beach Towels`], [/\bbag/, `${BP} > Sports Bags > Beach Bags`], [/\bball/, `${TG} > Sports & Outdoor Recreation > Balls`], [/\btoys?\b|\bsand\b/, `${TG} > Sports & Outdoor Recreation > Boating & Water Sports > Sand & Water Toys`], [/\bpicnic|blanket|mat\b/, `${HL} > Outdoor & Gardening`], `${HL} > Outdoor & Gardening`],
+  // "Golf ve Spor Ekipmanı" türü: her sporu kendi Etsy dalına
+  'spor-golf': [[/\bbag/, `${BP} > Sports Bags > Tennis & Golf Bags > Golf Bags`], [/\bshoe|cleat/, 'Shoes > Gender-Neutral Adult Shoes > Sneakers & Athletic Shoes > Golf Shoes & Cleats'], [/\bpolo|shirt/, "Clothing > Men's Clothing > Shirts & Tees > Polos"], [/\bhat|cap|visor/, `${AC} > Hats & Head Coverings > Hats & Caps`],
+    [/\bgolf|club head|head cover/, `${TG} > Sports & Outdoor Recreation > Golf`], [/\bbasketball/, `${TG} > Sports & Outdoor Recreation > Team Sports > Basketball`], [/\bbaseball/, `${TG} > Sports & Outdoor Recreation > Team Sports > Baseball`], [/\bsoftball/, `${TG} > Sports & Outdoor Recreation > Team Sports > Softball`],
+    [/\b(soccer|football)/, `${TG} > Sports & Outdoor Recreation > Team Sports > Soccer`], [/\brugby/, `${TG} > Sports & Outdoor Recreation > Team Sports`], [/\bvolleyball/, `${TG} > Sports & Outdoor Recreation > Team Sports > Volleyball`], [/\bhockey/, `${TG} > Sports & Outdoor Recreation > Team Sports > Hockey`],
+    [/\b(tennis|pickleball|ping pong|table tennis|paddle|racket|racquet)/, `${TG} > Sports & Outdoor Recreation > Racquet Sports`], [/\bskate ?board/, `${TG} > Sports & Outdoor Recreation > Skateboarding`], [/\bbike|bicycle|cycling/, `${TG} > Sports & Outdoor Recreation > Bikes & Cycling`],
+    [/\b(dog|pet)\b.*\bfrisbee|frisbee.*\b(dog|pet)\b/, `${PET} > Pet Toys > Dog Toys`], [/\bfrisbee|flying disc/, `${TG} > Sports & Outdoor Recreation > Flying Toys`], `${TG} > Sports & Outdoor Recreation`],
+  'spor-kamp': [[/\bhammock/, `${HL} > Outdoor & Gardening > Hammocks & Swings`], [/\bchair/, `${HL} > Outdoor & Gardening > Patio Furniture`], [/\bstubby|can cooler/, `${DW} > Cozies > Can Cozies`], [/\bcooler/, `${HL} > Outdoor & Gardening > Coolers`], `${TG} > Sports & Outdoor Recreation > Camping`],
 };
 
 // çocuk giyimi: ürün kelimesinden tür, kız/erkek/bebek ayrımıyla
+// çocuk giyiminde asıl ürün kelimesinin alt kategorisi ("Kid's Crewneck T-Shirt" sweatshirt değil)
+const KID_SUB = { 'giyim-tisort': 'Tops & Tees > T-shirts', 'giyim-kapusonlu': 'Hoodies & Sweatshirts > Hoodies', 'giyim-sweatshirt': 'Hoodies & Sweatshirts > Sweatshirts', 'giyim-ceket': 'Jackets & Coats', 'giyim-yelek': 'Vests', 'giyim-elbise': 'Dresses', 'giyim-etek': 'Skirts & Kilts', 'giyim-pantolon': 'Pants', 'giyim-sort': 'Shorts', 'giyim-tayt': 'Leggings', 'giyim-atlet': 'Tops & Tees > Tanks', 'giyim-polo': 'Tops & Tees > Polos', 'giyim-pijama': 'Pajamas & Robes > Pajamas', 'giyim-ust': 'Tops & Tees', 'giyim-mayo': 'Swimwear', 'giyim-corap': 'Socks & Leg Warmers > Socks', 'giyim-forma': 'Sports & Fitness' };
 const KIDS = [
-  [/\b(onesie|bodysuit|creeper)\b/, 'Bodysuits'], [/\b(romper|jumpsuit|footie)\b/, 'Footies & Rompers'], [/\bhoodie|hooded/, 'Hoodies & Sweatshirts > Hoodies'],
+  [/\bone[- ]piece\b/, 'Bodysuits'],
+  [/\b(onesie|bodysuit|creeper)\b/, 'Bodysuits'], [/\b(rompers?|jumpsuits?|footies?)\b/, 'Footies & Rompers'], [/\bhoodie|hooded/, 'Hoodies & Sweatshirts > Hoodies'],
   [/\bsweatshirt|crewneck|pullover/, 'Hoodies & Sweatshirts > Sweatshirts'], [/\bdress\b/, 'Dresses'], [/\bskirt/, 'Skirts & Kilts'], [/\bpajama|pyjama|sleepwear|pj\b/, 'Pajamas & Robes > Pajamas'],
   [/\brobe|bathrobe/, 'Pajamas & Robes > Robes'], [/\bleggings?/, 'Leggings'], [/\bshorts\b/, 'Shorts'], [/\b(pants|joggers?|sweatpants)\b/, 'Pants'], [/\bjacket|coat|cape/, 'Jackets & Coats'],
   [/\bswim/, 'Swimwear'], [/\bsocks?\b/, 'Socks & Leg Warmers > Socks'], [/\bsweater|cardigan/, 'Sweaters'], [/\bpolo\b/, 'Tops & Tees > Polos'], [/\btank\b/, 'Tops & Tees > Tanks'],
@@ -229,7 +240,7 @@ const STOP = new Set(['and', 'the', 'of', 'for', 'with', 'a', 'an', 'in', 'on', 
 const sing = w => w.replace(/(ies)$/, 'y').replace(/(ches|shes|xes|sses)$/, m => m.slice(0, -2)).replace(/([^s])s$/, '$1');
 const words = s => s.toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean).map(sing);
 const SKIP_TOP = new Set(['Weddings', 'Craft Supplies & Tools']);
-const GENERIC = new Set(['acrylic', 'color', 'slip', 'embroidery', 'linen', 'chain', 'display', 'oil', 'glass', 'shape', 'cover', 'block', 'vehicle', 'bone', 'table', 'card', 'game', 'light', 'paper', 'film', 'music', 'phone', 'face', 'eye', 'lip', 'nail', 'tool', 'paint', 'candy', 'coffee', 'moss', 'sculpture', 'collectible', 'animal', 'trunk', 'sleeve', 'bottom', 'top', 'set', 'pot', 'filter', 'lens', 'door', 'window', 'lock', 'hardware', 'ribbon', 'bell', 'triangle', 'whistle', 'combination', 'computer', 'keyboard', 'drum', 'guitar', 'piano', 'pedal', 'lighter', 'souvenir', 'toy', 'ball', 'sponge', 'bowl', 'tray', 'trays', 'sign', 'label', 'tag', 'box', 'bag', 'mat', 'pad', 'cloth', 'sheet']);
+const GENERIC = new Set(['acrylic', 'accordion', 'pick', 'liner', 'herb', 'ladder', 'color', 'slip', 'embroidery', 'linen', 'chain', 'display', 'oil', 'glass', 'shape', 'cover', 'block', 'vehicle', 'bone', 'table', 'card', 'game', 'light', 'paper', 'film', 'music', 'phone', 'face', 'eye', 'lip', 'nail', 'tool', 'paint', 'candy', 'coffee', 'moss', 'sculpture', 'collectible', 'animal', 'trunk', 'sleeve', 'bottom', 'top', 'set', 'pot', 'filter', 'lens', 'door', 'window', 'lock', 'hardware', 'ribbon', 'bell', 'triangle', 'whistle', 'combination', 'computer', 'keyboard', 'drum', 'guitar', 'piano', 'pedal', 'lighter', 'souvenir', 'toy', 'ball', 'sponge', 'bowl', 'tray', 'trays', 'sign', 'label', 'tag', 'box', 'bag', 'mat', 'pad', 'cloth', 'sheet']);
 const LEAF_ALTS = [];
 for (const n of nodes.values()) {
   if (SKIP_TOP.has(n.path[0])) continue;
@@ -313,12 +324,153 @@ const OVERRIDE = [
 const OVERRIDE_CLOTH = { TEE: C('Tops & Tees > T-shirts', { m: 'Shirts & Tees > T-shirts' }), SWEAT: C('Hoodies & Sweatshirts > Sweatshirts'), ZIP: C('Hoodies & Sweatshirts > Hoodies'),
   'TR-TEE': C('Tops & Tees > T-shirts', { m: 'Shirts & Tees > T-shirts' }), 'TR-SWEAT': C('Hoodies & Sweatshirts > Sweatshirts') };
 
+// --- asıl ürün kelimesi (18 Eki 2026 denetimi): başlığın ana kısmındaki SON ürün adı türü belirler.
+// pod-taxonomy başlıktaki herhangi bir kelimeye bakıyordu: "Stand Collar Jacket" tasma, "Window Curtain (2-Piece)" takım,
+// "Maxi Skirt" elbise, "Tumbler with Top Handle" bluz, "Floor Lamp Shade with Ring" yüzük oluyordu.
+const WEAR = ['cocuk-giyim', 'bebek-body', 'evcil-kiyafet'];
+const HEAD = [
+  [/\b(t-?shirts?|tees?|tshirts?)\b/, 'giyim-tisort', ['giyim-uzun-kollu', 'giyim-raglan', 'giyim-crop', 'giyim-pijama', 'giyim-takim', 'giyim-atlet']],
+  [/\bhood(ie|y|ies)\b/, 'giyim-kapusonlu', ['giyim-fermuarli-kapusonlu', 'giyim-pijama', 'giyim-takim', 'giyim-crop']],
+  [/\bsweatshirts?\b/, 'giyim-sweatshirt', ['giyim-kapusonlu', 'giyim-fermuarli-kapusonlu', 'giyim-crop']],
+  [/\b(jackets?|coats?|windbreakers?|parkas?|bombers?|blazers?)\b/, 'giyim-ceket', ['giyim-takim']],
+  [/\bvests?\b/, 'giyim-yelek', ['giyim-mayo']],
+  [/\bdress(es)?\b(?! (shirt|socks|shoes))/, 'giyim-elbise', ['giyim-pijama']],
+  [/\btree skirts?\b/, `${HD} > Seasonal Decor > Tree Skirts`, []],
+  [/\btable runners?\b/, `${KD} > Linens > Table Linens > Table Runners`, []],
+  [/\b(hip )?flasks?\b/, `${KD} > Drink & Barware > Barware > Flasks`, []],
+  [/\b(lapel|enamel|button|pinback) pins?\b/, 'aksesuar-rozet', []],
+  [/\bpropane tank covers?\b|\btank covers?\b/, `${HL} > Outdoor & Gardening > Grills & Accessories`, []],
+  [/\b(cell )?phone (ring|grip|holder|stand)s?\b|\bring holders?\b/, 'pod-phone-grips', []],
+  [/\bbadge reels?\b/, `${AC} > Keychains & Lanyards > Badge Reels`, []],
+  [/\bbridal veils?\b|\bveils?\b/, `${AC} > Hats & Head Coverings > Veils`, []],
+  [/\bbookends?\b/, `${HD} > Home Accents > Bookends`, []],
+  [/\bcornhole\b/, `${TG} > Sports & Outdoor Recreation > Lawn Games > Cornhole`, []],
+  [/\bmahjong (mats?|tiles?|sets?|racks?)\b/, `${TG} > Games & Puzzles > Dice & Tile Games > Tile Games > Mahjong`, []],
+  [/\bjewe?l(le)?ry (box(es)?|cases?|organi[sz]ers?)\b|\btrinket (box(es)?|dish(es)?|trays?)\b/, 'Jewelry > Jewelry Storage', []],
+  [/\b(snapsuits?|onesies?|creepers?)\b/, 'bebek-body', ['cocuk-giyim', 'giyim-pijama']],
+  [/\btoques?\b/, 'aksesuar-sapka', []],
+  [/\b(power ?banks?|chargers?|charging (pad|stand|station)s?)\b/, `${EA} > Batteries & Charging > Chargers`, []],
+  [/\b(christmas |santa |holiday |xmas )stockings?\b/, `${HD} > Seasonal Decor > Stockings`, []],
+  [/\b(?<!tree )skirts?\b/, 'giyim-etek', []],
+  [/\b(cutlery|flatware|utensils?)( sets?)?\b/, `${KD} > Cookware > Cutlery & Knives > Cutlery`, []],
+  [/\bscrunchies?\b/, `${AC} > Hair Accessories > Hair Ties & Elastics`, []],
+  [/\b(oven|microwave|insulated|heat[- ]resistant|bbq|grill) (gloves?|mitts?)\b|\boven mitts?\b|\bpot ?holders?\b/, `${KD} > Cookware > Trivets & Pot Holders > Pot Holders`, []],
+  [/\b(travel|weekender|duffel|duffle|gym) bags?\b/, 'canta-seyahat', ['canta-sirt', 'canta-diger']],
+  [/\bbags?\b/, 'canta-diger', ['canta-bez', 'canta-sirt', 'canta-buzgulu', 'canta-bel', 'canta-kozmetik', 'canta-beslenme', 'canta-laptop', 'canta-seyahat', 'canta-el-omuz', 'kirtasiye-ambalaj', 'spor-yoga', 'spor-golf', 'spor-plaj', 'ev-saklama', 'aksesuar-cuzdan', 'evcil-diger', 'mutfak-diger', 'teknoloji-telefon-kilifi']],
+  [/\b(pants|joggers?|sweatpants|trousers)\b/, 'giyim-pantolon', ['giyim-pijama', 'giyim-takim']],
+  [/\bshorts\b|\bshort$/, 'giyim-sort', ['giyim-pijama', 'giyim-mayo', 'giyim-ic-giyim', 'giyim-takim']],
+  [/\bleggings?\b/, 'giyim-tayt', ['giyim-takim']],
+  [/\btank( tops?)?s?\b/, 'giyim-atlet', ['giyim-crop', 'giyim-mayo']],
+  [/\b(?<!water )polos?\b(?! (suit|brief|cap|towel))/, 'giyim-polo', ['spor-golf', 'giyim-elbise']],
+  [/\b(pajamas?|pyjamas?|pj sets?|nightgowns?|robes?)\b/, 'giyim-pijama', ['giyim-takim', 'giyim-elbise']],
+  [/\bshirts?\b/, 'giyim-ust', ['giyim-tisort', 'giyim-uzun-kollu', 'giyim-gomlek', 'giyim-polo', 'giyim-raglan', 'giyim-forma', 'giyim-crop', 'giyim-atlet', 'giyim-pijama', 'giyim-takim', 'giyim-mayo', 'giyim-sweatshirt', 'giyim-kapusonlu', 'spor-golf']],
+  [/\bjerseys?\b/, 'giyim-forma', ['giyim-tisort', 'giyim-polo', 'giyim-atlet', 'giyim-sort', 'giyim-takim', 'giyim-uzun-kollu', 'giyim-crop']],
+  [/\b(swimsuits?|bikinis?|swim trunks|swimwear|tankinis?|monokinis?)\b/, 'giyim-mayo', ['giyim-ic-giyim']],
+  [/\b(face )?masks?\b/, 'aksesuar-maske', []],
+  [/\b(gloves?|mittens?|mitts?)\b/, 'aksesuar-eldiven', ['mutfak-diger']],
+  [/\baprons?\b/, 'giyim-onluk', []],
+  [/\b(pillows?|cushions?)\b(?! ?(case|cover))/, 'ev-yastik', ['evcil-yatak']],
+  [/\b(pillow ?cases?|pillow covers?|cushion covers?)\b/, 'ev-yastik', []],
+  [/\b(blankets?|throws?)\b/, 'ev-battaniye', ['bebek-battaniye', 'evcil-yatak']],
+  [/\btowels?\b/, 'ev-havlu', ['spor-plaj', 'mutfak-diger']],
+  [/\bcurtains?\b/, 'ev-perde', []],
+  [/\b(duvet( covers?)?|comforters?|bedding sets?|sheet sets?|bed sheets?)\b/, 'ev-nevresim', []],
+  [/\b(rugs?|door ?mats?)\b/, 'ev-hali', []],
+  [/\btote( bags?)?s?\b/, 'canta-bez', []],
+  [/\bbackpacks?\b/, 'canta-sirt', []],
+  [/\blunch ?(bags?|box(es)?)\b/, 'canta-beslenme', ['canta-buzgulu']],
+  [/\bmugs?\b/, 'mutfak-kupa', ['mutfak-termos']],
+  [/\btumblers?\b/, 'mutfak-termos', ['mutfak-kupa', 'mutfak-bardak', 'ev-mum']],
+  [/\b(water )?bottles?\b(?! opener)/, 'mutfak-matara', ['mutfak-sogutucu', 'ev-mum']],
+  [/\b(lamps?|lamp ?shades?|night ?lights?)\b/, 'ev-lamba', []],
+  [/\bcandle ?holders?\b|\bcandlesticks?\b|\btea ?light holders?\b/, `${HD} > Candles & Home Fragrances > Candleholders`, []],
+  [/\bstickers?\b/, 'kirtasiye-sticker', ['duvar-sticker', 'arac-aksesuar']],
+  [/\b(mouse ?pads?|mouse ?mats?|desk ?pads?|desk ?mats?)\b/, 'teknoloji-mousepad', []],
+  [/\b(keychains?|key ?rings?)\b/, 'aksesuar-anahtarlik', []],
+  [/\bluggage (hang )?tags?\b|\bbag tags?\b/, `${BP} > Luggage & Travel > Luggage Tags`, []],
+  [/\blicense plate (frames?|covers?)\b/, `${EA} > Car Parts & Accessories > Car Accessories > License Plate Covers & Frames`, []],
+  [/\bpencil (cases?|pouch(es)?|bags?)\b/, `${BP} > Pouches & Coin Purses`, []],
+  [/\bearrings?\b/, 'Jewelry > Earrings > Dangle & Drop Earrings', []],
+  [/\b(necklaces?|pendants?|bracelets?|bangles?|anklets?)\b(?! light)/, 'aksesuar-taki', []],
+  [/\b(signs?|plaques?)\b/, 'ev-tabela', ['ev-dekor', 'ev-bahce']],
+  [/\b(pet|dog|cat) beds?\b/, 'evcil-yatak', []],
+  [/\bplace ?mats?\b/, `${KD} > Linens > Table Linens > Placemats`, []],
+  [/\bbibs?\b/, 'bebek-onluk', []],
+  [/\b(makeup|cosmetic|toiletry) (bags?|pouch(es)?|cases?)\b/, 'canta-kozmetik', []],
+  [/\bmagnets?\b/, 'ev-buzdolabi-magneti', ['kirtasiye-sticker', 'arac-aksesuar']],
+  [/\bclocks?\b/, 'ev-saat', []],
+  [/\blicense plates?( holders?| frames?| covers?)?\b/, 'arac-aksesuar', []],
+  [/\b(cutting|chopping|charcuterie|cheese) boards?\b/, 'mutfak-kesme-tahtasi', []],
+  [/\bwallets?\b/, 'aksesuar-cuzdan', []],
+  [/\b(fanny packs?|belt bags?|waist bags?|bum bags?)\b/, 'canta-bel', []],
+  [/\bshoe ?laces?( tags?)?\b/, 'aksesuar-ayakkabi', []],
+  [/\b(playing|poker|tarot|oracle|trading|flash|game) cards?\b/, 'oyun-kart', []],
+  [/\b(greeting |folded |flat |note |gift )?cards?\b(?! (holder|case|wallet|stock))/, 'kirtasiye-kart', ['oyun-kart', 'aksesuar-cuzdan', 'kirtasiye-defter', 'oyun-masa', 'kirtasiye-takvim']],
+  [/\bslippers?\b/, 'ayakkabi-terlik', []],
+  [/\b(sneakers?|shoes)\b(?! (bag|lace|charm))/, 'ayakkabi-sneaker', ['ayakkabi-bot', 'ayakkabi-terlik', 'spor-golf']],
+  [/\bornaments?\b/, `${HD} > Seasonal Decor > Ornaments`, []],
+  [/\b(jigsaw )?puzzles?\b/, 'oyun-puzzle', []],
+  [/\bposters?\b/, 'duvar-poster', []],
+  [/\b(hats?|caps?|beanies?|snapbacks?)\b/, 'aksesuar-sapka', ['aksesuar-bere', 'evcil-kiyafet', 'spor-golf']],
+  [/\bsocks?\b/, 'giyim-corap', []],
+  [/\bcoasters?\b/, 'mutfak-bardak-alti', []],
+  [/\bcalendars?\b/, 'kirtasiye-takvim', []],
+  [/\b(notebooks?|journals?)\b/, 'kirtasiye-defter', []],
+  [/\bflags?\b/, 'ev-bayrak', ['ev-bahce']],
+  [/\btapestr(y|ies)\b/, 'duvar-duvar-halisi', []],
+  [/\bumbrellas?\b/, 'aksesuar-semsiye', []],
+];
+const HEAD_CLOTH = new Set(HEAD.filter(([, t]) => /^giyim-/.test(t)).map(([, t]) => t));
+// başlığın ana kısmı: "|", "(", " - " öncesi; "for/with ..." eki atılır
+function headType(title) {
+  // marka adıyla başlayanlar ("BELLA + CANVAS - Unisex Jersey Tank - 3480"): ürün kelimesi olan ilk parça
+  for (const part of String(title).split(/\s[|｜(]|\s[-–]\s|｜/)) {
+    const head = tx.norm(part).replace(/\b(for|with|w\/)\b.*$/, '');
+    // en sondaki ürün adı; aynı yerde bitenlerden en uzunu ("makeup bag" > "bag")
+    let best = null, end = -1, start = 0;
+    for (const h of HEAD) {
+      for (const m of head.matchAll(new RegExp(h[0].source, 'g'))) {
+        const e = m.index + m[0].length;
+        if (e > end || (e === end && m.index < start)) { end = e; start = m.index; best = h; }
+      }
+    }
+    if (best) return best;
+  }
+  return null;
+}
+
 function etsyOf(p, cls) {
+  // BurgerPrints "(US Label)" gönderim etiketi; ürün etiket değil ("Pet Feeding Mat (US Label)")
+  if (/\b(us|uk|eu|au|cn|ca) label\b/i.test(p.title)) { p = { ...p, title: p.title.replace(/\s*[(-]?\s*\b(US|UK|EU|AU|CN|CA) Label\b\)?/gi, '') }; cls = tx.classify(p); }
   const text = tx.norm([p.title, p.leafLabel].filter(Boolean).join(' '));
   const w = who(text);
-  const type = (cls || tx.classify(p)).type;
+  let type = (cls || tx.classify(p)).type;
+  // "collar" giysi yakası da olabilir ("High-collar Bodysuit", "Cuban Collar Shirt"): evcil hayvan işareti yoksa giyim
+  if (type === 'evcil-tasma' && !/\b(dog|cat|pet|puppy|kitten|leash|harness)\b/.test(text)) type = 'giyim-ust';
+  // "Kitchen 2-Piece Set", "Toilet Floor Mat Two-Piece Set" giyim takımı değil
+  if (type === 'giyim-takim' && !/\b(shirts?|tees?|tops?|pants|shorts|jerseys?|bras?|leggings?|hoodies?|sweatshirts?|joggers?|skirts?|dress(es)?|uniforms?|tracksuits?|sweatsuits?|outfits?|pajamas?|yoga|cheer\w*|swim\w*|bikinis?|scrubs?|clothing|wear)\b/.test(text)) type = 'diger';
+  // su topu mayosu polo tişört değil (MerchFarm takım mayoları)
+  if (/\bwater ?polo\b/.test(text) && !/\b(t-?shirts?|tees?|hoodies?|sweatshirts?|towels?|caps?|hats?|bags?|backpacks?|shorts|jackets?|parkas?)\b/.test(text)) type = 'giyim-mayo';
   const loose = /^diger$|-diger$/.test(type);
-  for (const [re, target] of OVERRIDE) {
+  // telefon/gözlük kılıfı her şeyden önce ("iPhone Wallet Case" cüzdan değil)
+  if (/\bair ?pods?\b|\bearbuds? case/.test(text)) return 'pod-airpods';
+  if (/\bcar\b.*\b(floor |foot |trunk )?mats?\b/.test(text) && !/\b(seat cover|coaster)/.test(text)) return 'pod-car-mats';
+  if (/\b(ipad|tablet|kindle|e-?reader)\b/.test(text) && /\b(cases?|covers?|folios?|sleeves?)\b/.test(text)) return resolve(`${EA} > Electronics Cases > Tablet & E-Reader Cases`);
+  // Rabbit Skins bebek giyim markası, cihaz kaplaması değil
+  if (/\brabbit skins\b/.test(text) && /^teknoloji-|^diger$/.test(type)) type = 'bebek-body';
+  // "Women's U-Neck Yoga Romper" bebek bodysi değil
+  if (type === 'bebek-body' && /\b(women'?s?|womens|ladies|men'?s|mens|adults?)\b/.test(text) && !/\b(baby|infant|newborn|toddler)\b/.test(text)) type = 'giyim-tulum';
+  for (const [re, target] of OVERRIDE.slice(0, 2)) if (re.test(text)) return resolve(target);
+  const h = headType(p.title);
+  if (h) {
+    const [, target, equiv] = h;
+    const same = type === target || equiv.includes(type) || (HEAD_CLOTH.has(target) && WEAR.includes(type));
+    if (!same) {
+      if (target.includes(' > ')) return resolve(target);
+      type = target;
+    }
+  }
+  for (const [re, target] of h ? [] : OVERRIDE) {
     if (!re.test(text)) continue;
     // giysi model adları yalnızca türü bulunamamış ürünlerde ("Ringer Yoga Shorts" şort kalır)
     if (OVERRIDE_CLOTH[target]) { if (!loose) continue; return resolve(clothingPath(OVERRIDE_CLOTH[target], w)); }
@@ -326,14 +478,21 @@ function etsyOf(p, cls) {
   }
   let spec = TYPE_MAP[type];
   if (spec === 'KIDS') {
-    const sub = KIDS.find(([re]) => re.test(text))[1];
+    const sub = /\bswim/.test(text) ? 'Swimwear'
+      : /\b(onesie|bodysuit|creeper|romper|one[- ]piece|pajamas?|pyjamas?|sleepwear)\b/.test(text) || !h || h[1] === 'giyim-ust' ? KIDS.find(([re]) => re.test(text))[1]
+      : KID_SUB[h[1]] || KIDS.find(([re]) => re.test(text))[1];
     const ww = ['girl', 'boy', 'baby'].includes(w) ? w : 'kid';
     return resolve(clothingPath({ clothing: true, u: sub }, ww));
   }
-  if (Array.isArray(spec)) spec = (spec.find(x => Array.isArray(x) && x[0].test(text)) || [null, spec[spec.length - 1]])[1];
+  let refined = false;
+  if (Array.isArray(spec)) { const hit = spec.find(x => Array.isArray(x) && x[0].test(text)); refined = !!hit; spec = hit ? hit[1] : spec[spec.length - 1]; }
   if (spec && typeof spec === 'object') return resolve(spec.clothing ? clothingPath(spec, w) : shoesPath(spec, w));
-  // genel "Diğer" kutuları: önce başlıktan tahmin, olmazsa türün kendi düğümü
-  if (!spec || /-diger$|^diger$/.test(type)) { const g = guess(text); if (g) return g; }
+  // genel "Diğer" kutuları: önce başlıktan tahmin, olmazsa türün kendi düğümü.
+  // "Diğer Çanta" tahmini çanta dalında kalmalı ("Comforter Storage Bag" yorgan değil)
+  if (!spec || (/-diger$|^diger$/.test(type) && !refined)) {
+    const g = guess(text), top = spec && !spec.startsWith('pod-') ? spec.split(' > ')[0] : null;
+    if (g && (!top || nodes.get(g).path[0] === top)) return g;
+  }
   if (spec) return spec.startsWith('pod-') ? spec : resolve(spec);
   return null;
 }

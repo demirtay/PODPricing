@@ -71,6 +71,10 @@ jobs:
           # çalışma sırasında başka bir değişiklik gönderildiyse önce onu al (en çok 3 deneme)
           ok=0; for i in 1 2 3; do git pull --rebase --autostash -X theirs origin main && git push && ok=1 && break; sleep 5; done
           [ "$ok" = 1 ] || echo "::warning::Güncel katalog GitHub'a gönderilemedi (git push başarısız)"
+      # Üreticilerin çok satan listeleri (ana sayfa vitrinleri); okunamazsa önceki liste kalır, yayını bozmaz
+      - name: Çok satanları yenile
+        continue-on-error: true
+        run: node scripts/bestsellers.cjs
       - name: Siteyi üret
         run: node scripts/build-site.cjs
       - name: Fiyat geçmişini kaydet

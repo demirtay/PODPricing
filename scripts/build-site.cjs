@@ -190,6 +190,25 @@ const altOf = id => vsOf.get(id).map(v => {
 
 // POD fiyat endeksi: en az 3 üreticinin baskı dahil sattığı bütün ürünlerde üretici endeksi, popüler boş ürünler, tip başına tipik fiyat.
 // Her derlemede günlük anlık görüntü data/price-history.json'a yazılır; "değişim" sütunları buradan hesaplanır.
+// Üreticilerin kendi çok satan listeleri (scripts/bestsellers.cjs -> data/bestsellers.json): ana sayfada üretici üretici vitrin.
+// Ürün katalogdaki ürüne bağlanır; aynı ürün başka sitelerde daha ucuzsa kartta yazar.
+const BS_ORDER = ['printful', 'printify', 'merchize', 'yoycol'];
+const bestsellers = (() => {
+  let raw = {};
+  try { raw = JSON.parse(fs.readFileSync(path.join(root, 'data/bestsellers.json'), 'utf8')); } catch { return []; }
+  const nt = x => String(x).toLowerCase().replace(/[®™]/g, '').replace(/[’']/g, "'").replace(/[^a-z0-9']+/g, ' ').trim();
+  return Object.keys(raw).sort((a, b) => (BS_ORDER.indexOf(a) + 1 || 99) - (BS_ORDER.indexOf(b) + 1 || 99)).map(id => {
+    const b = raw[id], list = byProvider.get(id) || [], seen = new Set(), items = [];
+    for (const k of b.keys) {
+      const p = b.match === 'title' ? list.find(x => nt(x.title) === nt(k)) : list.find(x => String(x.sourceProductId) === String(k));
+      if (!p || seen.has(p.id)) continue;
+      seen.add(p.id); items.push(p);
+      if (items.length >= 12) break;
+    }
+    return { id, checkedOn: b.checkedOn, items };
+  }).filter(x => x.items.length >= 4);
+})();
+
 const pidx = (() => {
   const ratio = new Map(), wins = new Map(), gaps = [], rows = [];
   for (const g of groups) {
@@ -261,7 +280,7 @@ const LOCALES = {
       searchPh: 'Search products or blanks (e.g. 11oz mug, gildan 5000, hoodie)', searchBig: 'What do you want to print?',
       heroH: 'Print on demand price comparison',
       heroP: (m, n) => `Compare ${n} products from ${m} POD manufacturers — cheapest first. For Etsy, Amazon, Shopify, TikTok Shop and eBay sellers.`,
-      topGroups: 'Most compared products', seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
+      topGroups: 'Most compared products', bs: { h: n => `${n} bestsellers`, at: n => `at ${n}`, sites: n => `Sold at ${n} stores`, cheaper: (v, m) => `from ${v} at ${m}`, src: (n, d) => `From ${n}'s own bestseller list · updated ${d}` }, seeAll: 'See all', catsH: 'Shop by category', allCats: 'All categories',
       vs: {
         nav: 'X vs Y', indexTitle: 'Print-on-demand manufacturer comparisons', indexDesc: n => `${n} head-to-head price comparisons between print-on-demand manufacturers, based on products both of them sell.`,
         indexIntro: 'Each comparison only uses products that both manufacturers sell (same blank model or same product type and size), with the cheapest print-included price of each.',
@@ -396,7 +415,7 @@ const LOCALES = {
       searchPh: 'Ürün ya da model ara (ör. 11oz kupa, gildan 5000, hoodie)', searchBig: 'Ne basmak istiyorsun?',
       heroH: 'Print on demand fiyat karşılaştırma',
       heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte. Etsy, Amazon, Shopify, TikTok Shop ve eBay satıcıları için.`,
-      topGroups: 'En çok üreticide satılan ürünler', seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
+      topGroups: 'En çok üreticide satılan ürünler', bs: { h: n => `${n} çok satanları`, at: n => `${n}'da`, sites: n => `${n} sitede satılıyor`, cheaper: (v, m) => `en ucuzu ${v}, ${m}`, src: (n, d) => `${n}'ın kendi çok satanlar listesinden · ${d}` }, seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
       vs: {
         nav: 'X vs Y', indexTitle: 'POD üreticisi karşılaştırmaları', indexDesc: n => `Print-on-demand üreticileri arasında ${n} ikili fiyat karşılaştırması; iki üreticinin de sattığı ürünlere göre.`,
         indexIntro: 'Her karşılaştırma yalnızca iki üreticinin de sattığı ürünleri (aynı boş ürün modeli ya da aynı ürün tipi ve ölçü) ve her birinin en ucuz baskı dahil fiyatını kullanır.',
@@ -574,7 +593,16 @@ function makeHelpers(L) {
     const rest = list.filter(p => !best.includes(p));
     return `<ol class="ladder">${best.map(row).join('')}</ol>` + (rest.length ? `<details class="more-offers"><summary>${esc(t.allOffersOf(list.length))}</summary><ol class="ladder">${list.map(row).join('')}</ol></details>` : '');
   };
-  return { t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers, itemsOf, icards };
+  // çok satan kartı: üreticinin kendi fiyatı; aynı ürün başka sitelerde daha ucuzsa en ucuzu
+  const bsCard = (p, maker) => {
+    const g = groupOf.get(p.id), lo = g && g.lo.providerId !== p.providerId && g.lo.baseMinor < p.baseMinor ? g.lo : null;
+    return `<a class="card" href="${g ? href(P.group(g.slug)) : href(P.product(p.id))}"><div class="ci">${img(p)}</div><div class="cb"><div class="ct">${esc(p.title)}</div>`
+      + `<div class="cm">${g ? `<span class="sites">${esc(t.bs.sites(g.providers.size))}</span>` : esc(maker)}</div><div class="cp"><small>${esc(t.bs.at(maker))}</small><b>${esc(fmt(p.baseMinor))}</b></div>`
+      + (lo ? `<div class="cm bs-lo">${esc(t.bs.cheaper(fmt(lo.baseMinor), provName(lo.providerId)))}</div>` : '') + '</div></a>';
+  };
+  const bsRow = b => { const name = provName(b.id); return `<div class="sec-head"><h2>${esc(t.bs.h(name))}</h2><a href="${href(P.maker(b.id))}">${t.seeAll} →</a></div><div class="cards hscroll">${b.items.map(p => bsCard(p, name)).join('')}</div><p class="muted sm">${esc(t.bs.src(name, H_date(b.checkedOn)))}</p>`; };
+  const H_date = d => dateFmt.format(new Date(d + 'T12:00:00Z'));
+  return { bsRow, t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers, itemsOf, icards };
 }
 
 // ---------- sayfa şablonu
@@ -667,6 +695,7 @@ for (const lg of LANGS) {
 <section id="foryou" hidden></section>
 <a class="verdict" style="display:block" href="${href(P.index)}"><b>${esc(t.pidx.homeCta(Math.round(pidx.gap * 100)))}</b></a>
 ${H.ad('ust')}
+${bestsellers.map(b => H.bsRow(b)).join('')}
 <h2>${t.catMenu}</h2><div class="catmenu">${eTops.map(catBox).join('')}</div>
 <div class="sec-head"><h2>${esc(t.guide.indexTitle)}</h2><a href="${href(P.guides)}">${t.seeAll} →</a></div><div class="chips">${[...guides.keys()].slice(0, 12).map(k => `<a class="chip" href="${href(P.guide(k))}"><b>${esc(L.type(k))}</b><span>${esc(t.from(fmt(guides.get(k).lo.baseMinor)))}</span></a>`).join('')}${altProviders.slice(0, 4).map(id => `<a class="chip" href="${href(P.alt(id))}"><b>${esc(t.alt.h1(provName(id)))}</b></a>`).join('')}</div>
 <div class="sec-head"><h2>${t.topGroups}</h2><a href="${href(P.compare)}">${t.seeAll} →</a></div>${H.icards(H.itemsOf(groups.slice(0, 12), []))}

@@ -133,3 +133,8 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}tr:last-child td{border
 
 .sellbox{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:10px 0 12px;padding:10px 14px;background:var(--chip);border-radius:12px}.sellbox label{font-weight:600}.sellbox .cur{display:inline-flex;align-items:center;gap:2px;margin-left:6px}.sellbox input{width:90px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;font:inherit;background:var(--panel);color:var(--ink)}
 .pf{font-size:13px;font-weight:600}.pf.pos{color:var(--price)}.pf.neg{color:#dc2626}.pf small{font-weight:400;color:var(--muted)}
+/* ana sayfa çok satan vitrinleri: yatay kaydırılan satır */
+.cards.hscroll{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin}
+.cards.hscroll>.card{flex:0 0 190px;scroll-snap-align:start}
+.bs-lo{color:var(--accent,#0f9d6b);font-weight:600}
+@media (max-width:640px){.cards.hscroll>.card{flex-basis:44%}}

@@ -1,0 +1,405 @@
+{
+  "date": "2026-10-19",
+  "baseDate": "2026-10-12",
+  "intro": "This first weekly report covers October 12 to October 19, 2026. Out of more than 35,000 products we track, 65 print-included prices moved by 3% or more. Drops outnumbered increases almost three to one (48 vs 17), which is what you would expect heading into Q4: suppliers compete for the holiday orders that are about to land.\n\nThe biggest mover was Interestprint, which cut 25 prices by 17% on average. Most of the cuts hit its US-shipped canvas prints: the 12\" x 12\" inner-frame canvas went from $10.29 to $6.69, and the 8\" x 10\" from $6.99 to $5.29. If you sell wall art for Christmas, canvas margins just got noticeably better. Interestprint also became the cheapest supplier for 24\" x 36\" posters, though only by two cents over Zela Print.\n\nPrintful went the other way on its organic Stanley/Stella line. The Crafter tee rose from $11.25 to $14.56 and the Drummer 2.0 hoodie from $28.50 to $36.40, increases of 22% to 29%. If those blanks are in your Etsy or Shopify listings, check your retail prices this week, because the same margin now needs a higher price. PopCustoms and CustomizingBox trimmed prices on personalized gifts, and Printify's moves were mixed: wood signs got 34% cheaper while the Tritan water bottle got 16% more expensive.",
+  "totals": {
+    "products": 35146,
+    "productsBefore": 34971,
+    "suppliers": 102,
+    "newSuppliers": [],
+    "changed": 65,
+    "up": 17,
+    "down": 48
+  },
+  "suppliers": [
+    {
+      "id": "interestprint",
+      "name": "Interestprint",
+      "up": 1,
+      "down": 25,
+      "avgPct": -0.1704
+    },
+    {
+      "id": "printful",
+      "name": "Printful",
+      "up": 8,
+      "down": 4,
+      "avgPct": 0.1119
+    },
+    {
+      "id": "popcustoms",
+      "name": "PopCustoms",
+      "up": 0,
+      "down": 7,
+      "avgPct": -0.1336
+    },
+    {
+      "id": "printify",
+      "name": "Printify",
+      "up": 3,
+      "down": 2,
+      "avgPct": -0.035
+    },
+    {
+      "id": "customizingbox",
+      "name": "Customizingbox",
+      "up": 0,
+      "down": 4,
+      "avgPct": -0.1584
+    },
+    {
+      "id": "merchone",
+      "name": "MerchOne",
+      "up": 1,
+      "down": 1,
+      "avgPct": 0.0532
+    },
+    {
+      "id": "podhut",
+      "name": "POD Hut",
+      "up": 0,
+      "down": 2,
+      "avgPct": -0.134
+    },
+    {
+      "id": "printkk",
+      "name": "PrintKK",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.1105
+    },
+    {
+      "id": "printdoors",
+      "name": "Printdoors",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.1875
+    },
+    {
+      "id": "dreamship",
+      "name": "Dreamship",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.0366
+    },
+    {
+      "id": "merchize",
+      "name": "Merchize",
+      "up": 0,
+      "down": 1,
+      "avgPct": -0.125
+    },
+    {
+      "id": "inkedjoy",
+      "name": "Inkedjoy",
+      "up": 0,
+      "down": 1,
+      "avgPct": -0.042
+    },
+    {
+      "id": "toaddit",
+      "name": "Toaddit",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.1196
+    },
+    {
+      "id": "wooacry",
+      "name": "Wooacry",
+      "up": 0,
+      "down": 1,
+      "avgPct": -0.24
+    }
+  ],
+  "drops": [
+    {
+      "id": "interestprint-6204",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 12\" x 12\" | Ships from USA",
+      "old": 1029,
+      "new": 669,
+      "pct": -0.3499,
+      "group": "canvas-prints-12x12"
+    },
+    {
+      "id": "printify-1530",
+      "providerId": "printify",
+      "title": "Wood Signs",
+      "old": 2593,
+      "new": 1711,
+      "pct": -0.3401,
+      "group": null
+    },
+    {
+      "id": "popcustoms-2082",
+      "providerId": "popcustoms",
+      "title": "Personalized Tie Dye Bunny Plush, Custom Belly Easter Gift",
+      "old": 1799,
+      "new": 1229,
+      "pct": -0.3168,
+      "group": null
+    },
+    {
+      "id": "customizingbox-Personalized-Customized-Embroidered-Makeup-Bag",
+      "providerId": "customizingbox",
+      "title": "Personalized Customized Embroidered Makeup Bag",
+      "old": 1023,
+      "new": 707,
+      "pct": -0.3089,
+      "group": null
+    },
+    {
+      "id": "interestprint-2445",
+      "providerId": "interestprint",
+      "title": "Mid-Length Side Slits Chiffon Cover Up (Model H50)",
+      "old": 2199,
+      "new": 1529,
+      "pct": -0.3047,
+      "group": null
+    },
+    {
+      "id": "interestprint-6203",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 12\" x 8\" | Ships from USA",
+      "old": 729,
+      "new": 549,
+      "pct": -0.2469,
+      "group": "canvas-prints-8x12"
+    },
+    {
+      "id": "interestprint-6202",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 8\" x 12\" | Ships from USA",
+      "old": 729,
+      "new": 549,
+      "pct": -0.2469,
+      "group": "canvas-prints-8x12"
+    },
+    {
+      "id": "popcustoms-19",
+      "providerId": "popcustoms",
+      "title": "Custom Simplified Version Unisex Chef Aprons",
+      "old": 1285,
+      "new": 969,
+      "pct": -0.2459,
+      "group": null
+    },
+    {
+      "id": "interestprint-6201",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 10\" x 8\" | Ships from USA",
+      "old": 699,
+      "new": 529,
+      "pct": -0.2432,
+      "group": "canvas-prints-8x10"
+    },
+    {
+      "id": "interestprint-6200",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 8\" x 10\" | Ships from USA",
+      "old": 699,
+      "new": 529,
+      "pct": -0.2432,
+      "group": "canvas-prints-8x10"
+    },
+    {
+      "id": "wooacry-custom-kraft-paper-posters",
+      "providerId": "wooacry",
+      "title": "Custom Kraft Paper Poster",
+      "old": 250,
+      "new": 190,
+      "pct": -0.24,
+      "group": null
+    },
+    {
+      "id": "interestprint-6228",
+      "providerId": "interestprint",
+      "title": "Black Frame Canvas Print 16\" x 24\" | Ships from USA",
+      "old": 1699,
+      "new": 1299,
+      "pct": -0.2354,
+      "group": "canvas-prints-16x24"
+    },
+    {
+      "id": "interestprint-6206",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 16\" x 12\" | Ships from USA",
+      "old": 1039,
+      "new": 819,
+      "pct": -0.2117,
+      "group": "canvas-prints-12x16"
+    },
+    {
+      "id": "interestprint-6205",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 12\" x 16\" | Ships from USA",
+      "old": 1039,
+      "new": 819,
+      "pct": -0.2117,
+      "group": "canvas-prints-12x16"
+    },
+    {
+      "id": "interestprint-6210",
+      "providerId": "interestprint",
+      "title": "Inner Frame Canvas Print 20\" x 16\" | Ships from USA",
+      "old": 1299,
+      "new": 1029,
+      "pct": -0.2079,
+      "group": "canvas-prints-16x20"
+    }
+  ],
+  "rises": [
+    {
+      "id": "printful-824",
+      "providerId": "printful",
+      "title": "Unisex Organic Mid-Light Crafter T-Shirt | Stanley/Stella SATU007",
+      "old": 1125,
+      "new": 1456,
+      "pct": 0.2942,
+      "group": null
+    },
+    {
+      "id": "printful-823",
+      "providerId": "printful",
+      "title": "Unisex Organic Oversized High Neck Blaster 2.0 T-Shirt | Stanley/Stella SATU020",
+      "old": 1675,
+      "new": 2152,
+      "pct": 0.2848,
+      "group": null
+    },
+    {
+      "id": "printful-821",
+      "providerId": "printful",
+      "title": "Unisex Organic Mid-Weight Drummer 2.0 Hoodie | Stanley/Stella SASU009",
+      "old": 2850,
+      "new": 3640,
+      "pct": 0.2772,
+      "group": null
+    },
+    {
+      "id": "printful-833",
+      "providerId": "printful",
+      "title": "Unisex Organic Side Pocket Sounder Hoodie | Stanley/Stella SASU012",
+      "old": 3095,
+      "new": 3952,
+      "pct": 0.2769,
+      "group": null
+    },
+    {
+      "id": "printful-831",
+      "providerId": "printful",
+      "title": "Unisex Organic Relaxed Slammer 2.0 Hoodie | Stanley/Stella SASU024",
+      "old": 3825,
+      "new": 4681,
+      "pct": 0.2238,
+      "group": null
+    },
+    {
+      "id": "merchone-home-decor-accessories-table-top-print",
+      "providerId": "merchone",
+      "title": "Table Top Print",
+      "old": 1026,
+      "new": 1240,
+      "pct": 0.2086,
+      "group": null
+    },
+    {
+      "id": "printdoors-2473",
+      "providerId": "printdoors",
+      "title": "Personalized Warm Cotton Slippers | Flannel",
+      "old": 896,
+      "new": 1064,
+      "pct": 0.1875,
+      "group": null
+    },
+    {
+      "id": "interestprint-5012",
+      "providerId": "interestprint",
+      "title": "Women's Crew Neck Sweater (Model H75)  | Ships from USA",
+      "old": 1289,
+      "new": 1529,
+      "pct": 0.1862,
+      "group": null
+    },
+    {
+      "id": "printify-953",
+      "providerId": "printify",
+      "title": "Tritan Water Bottle",
+      "old": 1623,
+      "new": 1885,
+      "pct": 0.1614,
+      "group": null
+    },
+    {
+      "id": "toaddit-2434",
+      "providerId": "toaddit",
+      "title": "Women's fleece jacket warm coat",
+      "old": 2099,
+      "new": 2350,
+      "pct": 0.1196,
+      "group": null
+    },
+    {
+      "id": "printful-638",
+      "providerId": "printful",
+      "title": "Adidas Dad Hat",
+      "old": 2875,
+      "new": 3195,
+      "pct": 0.1113,
+      "group": null
+    },
+    {
+      "id": "printkk-diy-diamond-painting-five-seven",
+      "providerId": "printkk",
+      "title": "DIY Diamond Painting no Frame (5:7)",
+      "old": 697,
+      "new": 774,
+      "pct": 0.1105,
+      "group": null
+    },
+    {
+      "id": "printify-2040",
+      "providerId": "printify",
+      "title": "Ares Water Bottle, 22oz (Engraving)",
+      "old": 1895,
+      "new": 2085,
+      "pct": 0.1003,
+      "group": "water-bottles-22oz"
+    },
+    {
+      "id": "printful-1577",
+      "providerId": "printful",
+      "title": "Unisex Relaxed Mid-Weight Chaser Hooded Sweatshirt | Stanley/Stella SASU038 / STSU077",
+      "old": 3575,
+      "new": 3871,
+      "pct": 0.0828,
+      "group": null
+    },
+    {
+      "id": "dreamship-585",
+      "providerId": "dreamship",
+      "title": "Unisex Standard Zip Hoodie (DTFx)",
+      "old": 3419,
+      "new": 3544,
+      "pct": 0.0366,
+      "group": "gildan-18600"
+    }
+  ],
+  "leaders": [
+    {
+      "group": "posters-24x36",
+      "name": "Art Print 36\"x24\" | Ships from USA",
+      "suppliers": 8,
+      "was": {
+        "id": "zelaprint",
+        "name": "Zela Print",
+        "price": 728
+      },
+      "now": {
+        "id": "interestprint",
+        "name": "Interestprint",
+        "price": 729
+      }
+    }
+  ]
+}

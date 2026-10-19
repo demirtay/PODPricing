@@ -236,6 +236,13 @@ const pidx = (() => {
   return { rows, suppliers, models, minN, gap: median(gaps), past, since: hist[0].date };
 })();
 
+// Haftalık fiyat raporları (scripts/weekly-report.cjs), en yenisi önde
+const reports = (() => {
+  const dir = path.join(root, 'data/reports');
+  try { return fs.readdirSync(dir).filter(f => /^\d{4}-\d\d-\d\d\.json$/.test(f)).sort().reverse().map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'))); } catch { return []; }
+})();
+const groupSlugs = new Set(groups.map(g => g.slug));
+
 // Bağlanamayan üreticilerin gerekçeleri (katalogda Türkçe tutulur)
 const REASON_EN = {
   'Site otomatik erişimi engelliyor (bot koruması); güncel fiyatlar üreticinin sitesinde': 'The site blocks automated access; see current prices on the manufacturer site',
@@ -639,7 +646,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}${cfg.facebookGroup ? `<aside class="fbgroup"><div><b>${esc(t.fbGroup.h)}</b><p>${esc(t.fbGroup.p)}</p></div><a class="cta" href="${esc(cfg.facebookGroup)}" target="_blank" rel="noopener">${esc(t.fbGroup.btn)}</a></aside>` : ''}${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a> · <a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
 <p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
@@ -939,6 +946,38 @@ ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>$
     const q = v => `"${String(v).replace(/"/g, '""')}"`, usd = m => (m / 100).toFixed(2);
     write(P.index + 'pod-price-index-suppliers.csv', ['rank,supplier,price_index,cheapest_on,products_compared', ...PX.suppliers.map((x, i) => [i + 1, q(provName(x.id)), Math.round(x.index * 100), x.wins, x.n].join(','))].join('\n') + '\n');
     write(P.index + 'pod-price-index-blanks.csv', ['blank,suppliers,lowest_usd,typical_usd,highest_usd,cheapest_supplier', ...PX.models.map(r => [q(H.gTitle(r.g)), r.offers.length, usd(r.offers[0].baseMinor), usd(r.med), usd(r.offers[r.offers.length - 1].baseMinor), q(provName(r.offers[0].providerId))].join(','))].join('\n') + '\n');
+
+    // Haftalık fiyat raporları (yalnızca İngilizce): veri scripts/weekly-report.cjs -> data/reports/<tarih>.json, giriş yazısı elle
+    if (reports.length) {
+      const day = d => H.dateFmt.format(new Date(d + 'T12:00:00Z'));
+      const pct = x => `${x > 0 ? '+' : '−'}${Math.abs(Math.round(x * 100))}%`;
+      const link = c => c.group && groupSlugs.has(c.group) ? href(P.group(c.group)) : products.some(p => p.id === c.id) ? href(P.product(c.id)) : '';
+      const chgRow = c => { const h = link(c); return `<tr><td>${esc(provName(c.providerId))}</td><td>${h ? `<a href="${h}">${esc(c.title)}</a>` : esc(c.title)}</td><td class="num">${esc(fmt(c.old))}</td><td class="num"><b${c.pct < 0 ? ' class="lo"' : ''}>${esc(fmt(c.new))}</b></td><td class="num">${pct(c.pct)}</td></tr>`; };
+      const chgTh = th(['Supplier', 'Product', 'Before', 'Now', 'Change'], [0, 1]);
+      const titleOf = r => `POD price report, week of ${day(r.date)}: ${r.totals.down} price drops, ${r.totals.up} increases`;
+      for (const r of reports) {
+        const rel = `reports/${r.date}/index.html`, T = r.totals;
+        add(rel, page(L, H, {
+          rel, title: `${titleOf(r)} · ${BRAND}`, description: `Which print-on-demand suppliers changed prices between ${day(r.baseDate)} and ${day(r.date)}: ${T.changed} price changes across ${n(T.products)} products from ${T.suppliers} suppliers.`,
+          crumbs: [['Weekly price reports', '/reports/'], [day(r.date)]],
+          body: `<h1>${esc(titleOf(r))}</h1><p class="muted sm">Compared: ${esc(day(r.baseDate))} → ${esc(day(r.date))} · base cost with print included, before shipping and tax</p>
+<div class="kpis"><div><b>${T.changed}</b><span>price changes</span></div><div><b>${T.down}</b><span>price drops</span></div><div><b>${T.up}</b><span>price increases</span></div><div><b>${n(T.products)}</b><span>products tracked</span></div></div>
+${r.intro ? `<div class="prose">${r.intro.split(/\n{2,}/).map(p => `<p>${esc(p)}</p>`).join('')}</div>` : ''}
+${r.suppliers.length ? `<h2>Who changed prices</h2><div class="tbl"><table>${th(['Supplier', 'Drops', 'Increases', 'Average change'], [0])}<tbody>${r.suppliers.map(s => `<tr><td><a href="${href(P.maker(s.id))}"><b>${esc(s.name)}</b></a></td><td class="num">${s.down}</td><td class="num">${s.up}</td><td class="num">${pct(s.avgPct)}</td></tr>`).join('')}</tbody></table></div>` : ''}
+${r.drops.length ? `<h2>Biggest price drops</h2><div class="tbl"><table>${chgTh}<tbody>${r.drops.map(chgRow).join('')}</tbody></table></div>` : ''}${H.ad('liste')}
+${r.rises.length ? `<h2>Biggest price increases</h2><div class="tbl"><table>${chgTh}<tbody>${r.rises.map(chgRow).join('')}</tbody></table></div>` : ''}
+${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products sold by at least 3 suppliers where the cheapest one changed this week.</p><div class="tbl"><table>${th(['Product', 'Suppliers', 'Was cheapest', 'Now cheapest'], [0, 2, 3])}<tbody>${r.leaders.map(x => `<tr><td>${groupSlugs.has(x.group) ? `<a href="${href(P.group(x.group))}">${esc(x.name)}</a>` : esc(x.name)}</td><td class="num">${x.suppliers}</td><td>${esc(x.was.name)} (${esc(fmt(x.was.price))})</td><td><b>${esc(x.now.name)}</b> (${esc(fmt(x.now.price))})</td></tr>`).join('')}</tbody></table></div>` : ''}
+<h2>How we measure</h2><div class="prose"><p>We read the public catalogs of ${T.suppliers} print-on-demand suppliers twice a day and compare the same product's base cost one week apart. Only offers where printing is included in the price are counted. Moves smaller than 3% or 10 cents are ignored, and jumps above 60% are left out because they are usually catalog corrections rather than real price changes. Shipping and tax are not included. See the <a href="${href(P.index)}">POD Price Index</a> for the overall supplier ranking.</p></div>`,
+          jsonld: { '@context': 'https://schema.org', '@type': 'Article', headline: titleOf(r), datePublished: r.date, dateModified: r.date, author: { '@type': 'Organization', name: BRAND, url: SITE }, publisher: { '@type': 'Organization', name: BRAND, url: SITE } },
+        }));
+      }
+      add('reports/index.html', page(L, H, {
+        rel: 'reports/index.html', title: `Weekly print-on-demand price reports · ${BRAND}`, description: 'Every week: which print-on-demand suppliers raised or cut prices, the biggest moves, and where the cheapest supplier changed.',
+        crumbs: [['Weekly price reports']],
+        body: `<h1>Weekly print-on-demand price reports</h1><p>Every week we compare the base cost of ${n(products.length)} products from ${connected.length} print-on-demand suppliers with the week before: who raised prices, who cut them, and where the cheapest supplier changed.</p>
+<ul class="reports">${reports.map(r => `<li><a href="/reports/${r.date}/"><b>${esc(titleOf(r))}</b></a></li>`).join('')}</ul>`,
+      }));
+    }
   }
 
   // kâr hesaplayıcı (istemci tarafı; veri: data/groups-<dil>.json + data/g/<slug>.json)

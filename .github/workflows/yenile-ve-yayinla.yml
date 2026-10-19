@@ -96,3 +96,7 @@ jobs:
       - name: IndexNow bildirimi
         continue-on-error: true
         run: sleep 60 && node scripts/indexnow.cjs
+      # Yorum veritabanı (Supabase ücretsiz plan) 7 gün istek almazsa duraklatılır; her çalışmada bir okuma isteği
+      - name: Yorum veritabanını uyanık tut
+        continue-on-error: true
+        run: node -e "const c=require('./site.config.json').reviews;c&&fetch(c.url+'/rest/v1/reviews?select=id&limit=1',{headers:{apikey:c.key}}).then(r=>console.log('reviews',r.status))"

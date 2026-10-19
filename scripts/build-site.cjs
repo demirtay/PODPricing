@@ -236,6 +236,11 @@ const pidx = (() => {
   return { rows, suppliers, models, minN, gap: median(gaps), past, since: hist[0].date };
 })();
 
+// Yorumlar (Supabase; içerik tarayıcıda site.js ile yüklenir): üretici sayfalarında yıldızlı, karşılaştırma sayfalarında yıldızsız
+const rvOk = thread => cfg.reviews && /^(maker|group):[a-z0-9-]{1,80}$/.test(thread);
+const rvBox = (thread, name, rate) => rvOk(thread) ? `<section class="rv" data-thread="${thread}" data-name="${esc(name)}" data-url="${esc(cfg.reviews.url)}" data-key="${esc(cfg.reviews.key)}"${rate ? ' data-rate="1"' : ''}></section>` : '';
+const rvSum = thread => rvOk(thread) ? `<p class="rv-sum" data-thread="${thread}"></p>` : '';
+
 // Haftalık fiyat raporları (scripts/weekly-report.cjs), en yenisi önde
 const reports = (() => {
   const dir = path.join(root, 'data/reports');
@@ -386,6 +391,7 @@ const LOCALES = {
       privacyTitle: 'Privacy and cookie policy', contactTitle: 'Contact', contactPending: '<em>(contact address will be added before launch)</em>',
       privacy: c => `<p>${BRAND} has no accounts, orders or payments, and does not collect names, addresses or payment details.</p>
 <h2>Weekly newsletter</h2><p>If you subscribe to our weekly price newsletter, your email address is stored by our email provider, MailerLite (MailerLite Limited, Ireland), and used only to send that newsletter. You confirm your subscription through a link we email you, and every newsletter has an unsubscribe link. We do not sell or share your address. To have it deleted, unsubscribe or write to us.</p>
+<h2>Reviews and comments</h2><p>When you post a review or comment, we store the name you enter, your text, your rating and the time, using our database provider Supabase. To limit spam we also store a one-way hash of your IP address, which cannot be turned back into the address and is never shown. Posts are checked before they appear. To have a post removed, write to us.</p>
 <h2>Cookies and advertising</h2><p>We use third-party advertising such as Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the Internet. You can opt out of personalized advertising in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>, and learn more about third-party cookies at <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. Visitors in the EEA, UK and Switzerland are asked for consent to advertising cookies.</p>
 <h2>Links and affiliate programs</h2><p>Some links to manufacturers may be affiliate links; ${BRAND} may earn a commission on sign-ups through them. This never affects prices or ranking — ranking is by price only. Sponsored placements are labeled "Sponsored".</p>
 <h2>Server logs</h2><p>Our hosting provider may keep standard access logs (IP address, browser) for a limited time for security and performance.</p>
@@ -517,6 +523,7 @@ const LOCALES = {
       privacyTitle: 'Gizlilik ve çerez politikası', contactTitle: 'İletişim', contactPending: '<em>(iletişim adresi yayından önce eklenecek)</em>',
       privacy: c => `<p>${BRAND} üyelik, sipariş veya ödeme almaz; ziyaretçilerden ad, adres ya da ödeme bilgisi toplamaz.</p>
 <h2>Haftalık bülten</h2><p>Haftalık fiyat bültenimize abone olursanız e-posta adresiniz e-posta hizmet sağlayıcımız MailerLite (MailerLite Limited, İrlanda) tarafından saklanır ve yalnızca bu bülteni göndermek için kullanılır. Aboneliğinizi size gönderdiğimiz bağlantıyla onaylarsınız; her bültende abonelikten çıkma bağlantısı bulunur. Adresinizi satmaz ve kimseyle paylaşmayız. Silinmesi için abonelikten çıkabilir ya da bize yazabilirsiniz.</p>
+<h2>Yorumlar</h2><p>Yorum ya da değerlendirme yazdığınızda girdiğiniz ad, metin, puan ve tarih veritabanı sağlayıcımız Supabase'te saklanır. Spam'i sınırlamak için IP adresinizin geri çevrilemeyen bir özeti (hash) de tutulur; bu özet adrese dönüştürülemez ve hiçbir yerde gösterilmez. Yorumlar yayından önce kontrol edilir. Bir yorumun kaldırılması için bize yazabilirsiniz.</p>
 <h2>Çerezler ve reklamlar</h2><p>Sitede Google AdSense gibi üçüncü taraf reklam hizmetleri kullanılır. Google dahil üçüncü taraf sağlayıcılar, bu siteye ve diğer sitelere yaptığınız önceki ziyaretlere dayalı reklam sunmak için çerez kullanabilir. Kişiselleştirilmiş reklamcılığı <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Reklam Ayarları</a> üzerinden kapatabilir, üçüncü taraf çerezleri hakkında <a href="https://www.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> adresinden bilgi alabilirsiniz. AEA, Birleşik Krallık ve İsviçre'deki ziyaretçilerden reklam çerezleri için onay istenir.</p>
 <h2>Bağlantılar ve ortaklık programları</h2><p>Üreticilere verilen bazı bağlantılar ortaklık (affiliate) bağlantısı olabilir; bu bağlantılar üzerinden yapılan kayıtlardan ${BRAND} komisyon alabilir. Bu, fiyatları ve sıralamayı etkilemez: sıralama yalnızca fiyata göredir. Sponsorlu alanlar "Sponsorlu" etiketiyle belirtilir.</p>
 <h2>Sunucu kayıtları</h2><p>Barındırma sağlayıcımız, güvenlik ve performans amacıyla IP adresi ve tarayıcı bilgisi gibi standart erişim kayıtlarını sınırlı süre tutabilir.</p>
@@ -773,7 +780,7 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
 <p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
 ${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${H.ad('liste')}
 <p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>
-${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}`,
+${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}${rvBox('group:' + gp.slug, title, false)}`,
       jsonld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
         offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } }]
         .concat(gFaq.length ? [{ '@type': 'FAQPage', mainEntity: gFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.trim() } })) }] : []) },
@@ -821,11 +828,11 @@ ${provRows.map(({ p, list }) => `<tr><td><a href="${href(P.maker(p.id))}"><b>${e
     add(P.maker(p.id) + 'index.html', page(L, H, {
       rel: P.maker(p.id) + 'index.html', alt: altAll(x => x.maker(p.id)), title: `${t.makerTitle(p.name, list.length, monthNow)} · ${BRAND}`, description: t.makerDesc(p.name, list.length, list.length ? fmt(list[0].baseMinor) : '', types.filter(([k]) => k !== 'diger').slice(0, 3).map(([k, l]) => [L.type(k), fmt(l[0].baseMinor)])),
       crumbs: [[t.makers, href(P.makers)], [p.name]],
-      body: `<h1>${esc(p.name)}</h1><p>${homeLink(p, `${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗`)}</p>
+      body: `<h1>${esc(p.name)}</h1>${rvSum('maker:' + p.id)}<p>${homeLink(p, `${esc(new URL(p.homepage).hostname.replace(/^www\./, ''))} ↗`)}</p>
 ${list.length ? `<p class="muted">${t.makerStats(list.length, types.length, fmt(list[0].baseMinor))}</p>
 <div class="chips">${[...groupBy(list, x => x.etsy)].sort((a, b) => b[1].length - a[1].length).map(([k, l]) => `<a class="chip" href="${href(P.cat(k))}"><b>${esc(L.node(k))}</b><span>${t.products(l.length)} · ${t.from(fmt(l[0].baseMinor))}</span></a>`).join('')}</div>
 ${altProviders.includes(p.id) ? `<p><a class="go" href="${href(P.alt(p.id))}">${esc(t.alt.h1(p.name))} →</a></p>` : ''}${vsOf.has(p.id) ? `<h2>${esc(t.vs.makerH(p.name))}</h2><div class="chips">${vsOf.get(p.id).slice(0, 20).map(v => `<a class="chip" href="${href(P.vs(v.slug))}"><b>${esc(provName(v.a))} vs ${esc(provName(v.b))}</b><span>${esc(t.vs.shared(v.rows.length))}</span></a>`).join('')}</div>` : ''}
-<h2>${t.makerTop}</h2>${H.cards(list.slice(0, 40))}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}`,
+<h2>${t.makerTop}</h2>${H.cards(list.slice(0, 40))}` : `<p class="muted">${esc(t.noPrices(reasonOf(p, L)))}</p>`}${rvBox('maker:' + p.id, p.name, true)}`,
     }));
   }
 

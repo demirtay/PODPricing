@@ -123,6 +123,16 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}tr:last-child td{border
 .nl-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;max-width:620px}.nl-row input[type=email]{flex:1 1 240px;min-width:0;height:46px;box-sizing:border-box;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
 .nl-msg{min-height:1em;font-weight:600;color:var(--ink)!important}.nl-done .nl-row{display:none}
 .fbgroup{margin-top:12px!important}
+.rv{margin:30px 0 0}.rv-sum{margin:2px 0 6px;min-height:1.2em}.rv-avg{font-size:18px}
+.stars{color:#f59e0b;letter-spacing:1px}.stars i{font-style:normal;color:var(--line)}
+.rv-list{list-style:none;padding:0;margin:12px 0}.rv-item{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin:0 0 10px}
+.rv-item p{margin:6px 0;white-space:pre-line}.rv-kid{margin:10px 0 0 18px;background:var(--bg)}
+.rv-reply,.rv-cancel{background:none;border:0;color:var(--accent);font:inherit;font-weight:600;cursor:pointer;padding:0}
+.rv-form{display:grid;gap:10px;max-width:620px;margin:10px 0}.rv-form input,.rv-form textarea{padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+.rv-form .hp{position:absolute;left:-9999px;width:1px;height:1px}.rv-sent input,.rv-sent textarea,.rv-sent .rv-rate,.rv-sent .rv-actions{display:none}.rv-msg{font-weight:600;margin:0}
+.rv-rate{display:flex;flex-direction:row-reverse;justify-content:flex-end;align-items:center;gap:2px}.rv-rate span{margin-right:8px;color:var(--muted)}
+.rv-rate input{position:absolute;opacity:0;width:1px}.rv-rate label{font-size:28px;color:var(--line);cursor:pointer}
+.rv-rate input:checked~label,.rv-rate label:hover,.rv-rate label:hover~label{color:#f59e0b}.rv-rate input:focus-visible+label{outline:2px solid var(--accent)}
 .fbgroup{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin:30px 0 10px;padding:18px 20px;border:1px solid var(--line);border-left:4px solid #1877f2;border-radius:14px;background:var(--panel)}
 .fbgroup b{font-size:18px}.fbgroup p{margin:4px 0 0;color:var(--muted);max-width:620px}.fbgroup .cta{white-space:nowrap;text-decoration:none}
 .prose{max-width:760px}.prose a{color:var(--accent)}

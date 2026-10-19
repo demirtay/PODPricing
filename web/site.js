@@ -315,6 +315,64 @@
     draw();
   })();
 
+  // Yorumlar ve yıldızlar (Supabase): onaylı yorumlar okunur, yeni yorum Edge Function'a gider ve onaydan sonra görünür
+  (function () {
+    var secs = document.querySelectorAll('section.rv');
+    if (!secs.length) return;
+    var T = LANG === 'tr'
+      ? { h: function (n) { return n + ' hakkında yorumlar'; }, none: 'Henüz yorum yok. İlk yorumu sen yaz.', reviews: function (n) { return n + ' değerlendirme'; }, reply: 'Cevap ver', write: 'Yorum yaz', name: 'Adın', rate: 'Puanın', body: 'Deneyimin (baskı kalitesi, kargo süresi, müşteri hizmetleri…)', replyBody: 'Cevabın', send: 'Gönder', cancel: 'Vazgeç', ok: 'Teşekkürler! Yorumun kısa bir kontrolden sonra yayınlanacak.', err: 'Gönderilemedi. Lütfen tekrar dene.', rateErr: 'Çok fazla yorum gönderdin, biraz sonra tekrar dene.', note: 'Yorumlar yayından önce kontrol edilir. E-posta istemiyoruz.' }
+      : { h: function (n) { return 'Reviews of ' + n; }, none: 'No reviews yet. Be the first to share your experience.', reviews: function (n) { return n + (n === 1 ? ' review' : ' reviews'); }, reply: 'Reply', write: 'Write a review', name: 'Your name', rate: 'Your rating', body: 'Your experience (print quality, shipping time, support…)', replyBody: 'Your reply', send: 'Send', cancel: 'Cancel', ok: 'Thanks! Your post will appear after a quick check.', err: 'Could not send. Please try again.', rateErr: 'Too many posts from you, please try again later.', note: 'Posts are checked before they appear. No email needed.' };
+    var df = new Intl.DateTimeFormat(LANG === 'tr' ? 'tr-TR' : 'en-US', { dateStyle: 'medium' });
+    var stars = function (r) { return '<span class="stars" aria-label="' + r + '/5">' + '★★★★★'.slice(0, r) + '<i>' + '★★★★★'.slice(r) + '</i></span>'; };
+    function form(sec, parent) {
+      var rate = sec.getAttribute('data-rate') && !parent;
+      var f = document.createElement('form');
+      f.className = 'rv-form';
+      f.innerHTML = '<input name="name" required minlength="2" maxlength="40" placeholder="' + esc(T.name) + '" aria-label="' + esc(T.name) + '">'
+        + (rate ? '<div class="rv-rate" role="radiogroup" aria-label="' + esc(T.rate) + '">' + [5, 4, 3, 2, 1].map(function (n) { return '<input type="radio" name="rating" value="' + n + '" id="r' + n + '" required><label for="r' + n + '" title="' + n + '/5">★</label>'; }).join('') + '<span>' + esc(T.rate) + '</span></div>' : '')
+        + '<textarea name="body" required minlength="10" maxlength="2000" rows="4" placeholder="' + esc(parent ? T.replyBody : T.body) + '" aria-label="' + esc(parent ? T.replyBody : T.body) + '"></textarea>'
+        + '<input name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">'
+        + '<div class="rv-actions"><button class="cta">' + esc(T.send) + '</button>' + (parent ? ' <button type="button" class="rv-cancel">' + esc(T.cancel) + '</button>' : '') + '</div><p class="rv-msg" role="status"></p>';
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var d = new FormData(f), btn = f.querySelector('.cta'), msg = f.querySelector('.rv-msg');
+        btn.disabled = true;
+        fetch(sec.getAttribute('data-url') + '/functions/v1/review', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ thread: sec.getAttribute('data-thread'), parent_id: parent || null, name: d.get('name'), rating: d.get('rating'), body: d.get('body'), website: d.get('website') }) })
+          .then(function (r) { if (!r.ok) throw r.status; f.reset(); f.classList.add('rv-sent'); msg.textContent = T.ok; })
+          .catch(function (s) { btn.disabled = false; msg.textContent = s === 429 ? T.rateErr : T.err; });
+      });
+      var c = f.querySelector('.rv-cancel');
+      if (c) c.addEventListener('click', function () { f.remove(); });
+      return f;
+    }
+    Array.prototype.forEach.call(secs, function (sec) {
+      var thread = sec.getAttribute('data-thread');
+      var url = sec.getAttribute('data-url') + '/rest/v1/reviews?select=id,parent_id,name,rating,body,created_at&order=created_at.asc&thread=eq.' + encodeURIComponent(thread);
+      fetch(url, { headers: { apikey: sec.getAttribute('data-key') } }).then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(function (list) {
+        var top = list.filter(function (x) { return !x.parent_id; }).reverse();
+        var kids = {};
+        list.forEach(function (x) { if (x.parent_id) (kids[x.parent_id] = kids[x.parent_id] || []).push(x); });
+        var rated = top.filter(function (x) { return x.rating; });
+        var avg = rated.length ? rated.reduce(function (a, x) { return a + x.rating; }, 0) / rated.length : 0;
+        var sum = rated.length ? stars(Math.round(avg)) + ' <b>' + avg.toFixed(1).replace('.', LANG === 'tr' ? ',' : '.') + '</b> <span class="muted">(' + esc(T.reviews(rated.length)) + ')</span>' : '';
+        Array.prototype.forEach.call(document.querySelectorAll('.rv-sum[data-thread="' + thread + '"]'), function (el) { el.innerHTML = sum; });
+        var item = function (x, isKid) {
+          return '<li class="rv-item' + (isKid ? ' rv-kid' : '') + '"><div class="rv-meta"><b>' + esc(x.name) + '</b>' + (x.rating ? ' ' + stars(x.rating) : '') + ' <span class="muted sm">' + esc(df.format(new Date(x.created_at))) + '</span></div><p>' + esc(x.body) + '</p>'
+            + (isKid ? '' : '<button type="button" class="rv-reply" data-id="' + x.id + '">' + esc(T.reply) + '</button>' + ((kids[x.id] || []).length ? '<ul class="rv-list">' + kids[x.id].map(function (k) { return item(k, true); }).join('') + '</ul>' : '')) + '</li>';
+        };
+        sec.innerHTML = '<h2>' + esc(T.h(sec.getAttribute('data-name'))) + '</h2>' + (sum ? '<p class="rv-avg">' + sum + '</p>' : '')
+          + (top.length ? '<ul class="rv-list">' + top.map(function (x) { return item(x); }).join('') + '</ul>' : '<p class="muted">' + esc(T.none) + '</p>')
+          + '<h3>' + esc(T.write) + '</h3><p class="muted sm">' + esc(T.note) + '</p>';
+        sec.appendChild(form(sec, null));
+        sec.addEventListener('click', function (e) {
+          var b = e.target.closest('.rv-reply');
+          if (!b || b.nextElementSibling && b.nextElementSibling.classList.contains('rv-form')) return;
+          b.insertAdjacentElement('afterend', form(sec, +b.getAttribute('data-id')));
+        });
+      });
+    });
+  })();
+
   // Haftalık bülten kaydı (MailerLite formu; onay maili MailerLite'tan gider)
   Array.prototype.forEach.call(document.querySelectorAll('form.nl'), function (f) {
     f.addEventListener('submit', function (e) {

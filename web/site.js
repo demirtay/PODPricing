@@ -314,4 +314,18 @@
     inp.addEventListener('input', function () { try { localStorage.setItem('sellPrice', inp.value); } catch (x) { } draw(); });
     draw();
   })();
+
+  // Haftalık bülten kaydı (MailerLite formu; onay maili MailerLite'tan gider)
+  Array.prototype.forEach.call(document.querySelectorAll('form.nl'), function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = f.querySelector('button'), msg = f.querySelector('.nl-msg');
+      btn.disabled = true;
+      var done = function () { f.classList.add('nl-done'); msg.textContent = f.getAttribute('data-ok'); };
+      // MailerLite CORS yanıtı vermezse istek yine ulaşır; no-cors ile tekrar gönderilir
+      fetch(f.action, { method: 'POST', body: new FormData(f) }).then(done, function () {
+        return fetch(f.action, { method: 'POST', body: new FormData(f), mode: 'no-cors' }).then(done);
+      }).catch(function () { btn.disabled = false; msg.textContent = f.getAttribute('data-err'); });
+    });
+  });
 })();

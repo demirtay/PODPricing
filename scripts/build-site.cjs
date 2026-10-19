@@ -637,7 +637,7 @@ function page(L, H, { rel, title, description, body, jsonld, crumbs, alt, noinde
   const [b1, ...bRest] = BRAND.split(' ');
   return `<!doctype html><html lang="${L.lang}"><head><meta charset="utf-8"><meta name="saashub-verification" content="d9vo67gpscln"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(description)}">${canonical}${alts}${noindex ? '<meta name="robots" content="noindex">' : ''}
-<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="${esc(BRAND)}">
+<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="${esc(BRAND)}">${SITE ? `<meta property="og:image" content="${esc(SITE)}/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">` : ''}<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/site.css?v=${VER}"><link rel="icon" href="/assets/icon.svg" type="image/svg+xml">${ads}
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}</head><body data-lang="${L.lang}"${cat && eList.has(cat) && enode(cat).parentId ? ` data-cat="${esc(eSlug.get(cat))}" data-cat-label="${esc(L.node(cat))}"` : ''}>
 <header class="top"><div class="wrap"><a class="brand" href="${href(H.P.home)}">${esc(b1)}<span>${esc(bRest.join(' '))}</span></a>

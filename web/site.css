@@ -1,5 +1,4 @@
 :root{--bg:#f4f6fb;--panel:#fff;--ink:#111827;--muted:#5b6474;--line:#e3e7f0;--accent:#c2410c;--accent-ink:#fff;--bar:#ff6a1a;--accent2:#6d5dfc;--price:#08804c;--chip:#fff1e8;--head:#fff;--head-ink:#111827;--hero:linear-gradient(135deg,#fff3ea 0%,#f1efff 100%);--shadow:0 1px 2px rgba(16,24,40,.06),0 4px 14px rgba(16,24,40,.07);--lift:0 10px 28px rgba(16,24,40,.14)}
-@media (prefers-color-scheme:dark){:root{--bg:#0a0f1d;--panel:#141b2e;--ink:#f1f4fa;--muted:#a3adc2;--line:#25304a;--accent:#ff7a2e;--accent-ink:#1a0b00;--bar:#ff7a2e;--accent2:#8b7dff;--price:#3ddc84;--chip:#2b1b12;--head:#0e1426;--head-ink:#f1f4fa;--hero:linear-gradient(135deg,#2a170c 0%,#18153a 100%);--shadow:0 1px 2px rgba(0,0,0,.4);--lift:0 12px 30px rgba(0,0,0,.55)}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}
@@ -59,7 +58,6 @@ h1{font-size:32px;line-height:1.2;margin:6px 0 8px;letter-spacing:-.5px}h2{font-
 .pb-bos{background:color-mix(in srgb,#d08a00 16%,transparent);color:#a86d00}
 .pb-toplu{background:color-mix(in srgb,#7a5cff 15%,transparent);color:#6a4fe0}
 .pb-belirsiz{border-color:var(--line);color:var(--muted)}
-@media (prefers-color-scheme:dark){.pb-bos{color:#f0b445}.pb-toplu{color:#a996ff}}
 /* filtre satırı */
 .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 14px}
 .controls select{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:14px}
@@ -163,3 +161,14 @@ body:has(.hero) .top .search{display:none}
 .joins .nl b,.joins .fbgroup b{font-size:17px}
 .catmenu.compact{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.catmenu.compact .catbox{padding:10px}.catmenu.compact ul,.catmenu.compact .cball{display:none}.catmenu.compact .cbh{margin:0}.catmenu.compact .cbh img,.catmenu.compact .cbh .noimg{width:48px;height:48px}.catmenu.compact .cbh b{font-size:16px}
 @media (max-width:420px){.catmenu.compact .cbh img,.catmenu.compact .cbh .noimg{width:36px;height:36px}.catmenu.compact .cbh b{font-size:14px}.catmenu.compact .cbh{gap:8px}}
+/* Cimri tarzı en ucuz kutusu (karşılaştırma sayfası) + kaydırınca üstte sabit şerit */
+.gbest{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 18px;margin:10px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
+.gb-t{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;min-width:0}.gb-badge{flex-basis:100%;font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--price)}
+.gb-m{font-weight:700;font-size:18px}.gbest .gb-p{font-size:34px;font-weight:800;color:var(--price);line-height:1.1}
+.gb-go{padding:13px 22px;font-size:17px;white-space:nowrap}.gb-go:hover{color:var(--accent-ink);filter:brightness(1.08)}
+.gstick{position:fixed;left:0;right:0;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px max(16px,calc((100% - 1168px)/2));background:var(--panel);border-bottom:1px solid var(--line);box-shadow:var(--lift);transform:translateY(-110%);transition:transform .2s}
+.gstick.on{transform:none}.gstick .gb-t{align-items:center;flex-wrap:nowrap;overflow:hidden}.gstick .gb-badge{flex-basis:auto;white-space:nowrap}.gstick .gb-p{font-size:22px;font-weight:800;color:var(--price)}.gstick .gb-m{font-size:16px;white-space:nowrap}
+.gstick .gb-n{color:var(--muted);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.gstick .gb-go{padding:9px 16px;font-size:15px}
+@media (max-width:640px){.gbest{padding:12px}.gbest .gb-p{font-size:28px}.gbest .gb-go{flex:1 1 100%;text-align:center;white-space:normal}.gbest{gap:8px}.gstick .gb-badge,.gstick .gb-n{display:none}.gstick .gb-go{padding:8px 12px;font-size:14px}.gstick .gb-go{max-width:55vw;overflow:hidden;text-overflow:ellipsis}}
+body.gs-on .top{position:relative} /* şerit açıkken üst menü yukarıda kalsın, şeridin altından görünmesin */
+@media (max-width:640px){.ghead{grid-template-columns:96px minmax(0,1fr);align-items:start}.ghead>div:last-child{display:contents}.ghead h1{grid-column:2;align-self:center;margin:0}.ghead .gbest,.ghead>div:last-child>p{grid-column:1/-1}.gbest .gb-go{white-space:nowrap}}

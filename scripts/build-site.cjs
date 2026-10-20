@@ -358,7 +358,7 @@ const LOCALES = {
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
-      offersH: n => `Prices from ${n} manufacturers`, cheapestFirst: 'Sorted from cheapest to most expensive.',
+      offersH: n => `Prices from ${n} manufacturers`, bestOf: n => `Cheapest of ${n} manufacturers`, range: (a, b) => `Price range ${a} – ${b}`, cheapestFirst: 'Sorted from cheapest to most expensive.',
       groupNoteModel: 'Same blank garment at every manufacturer. Print method, print area and shipping can differ — check details at the store.',
       groupNoteSpec: 'Same product type and size at every manufacturer. Exact materials and options can differ slightly — check details at the store.',
       allOffersOf: n => `Show all ${n} offers`, groupsInCat: 'Compare prices across manufacturers', allInCat: 'All products',
@@ -497,7 +497,7 @@ const LOCALES = {
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
-      offersH: n => `${n} üreticinin fiyatları`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
+      offersH: n => `${n} üreticinin fiyatları`, bestOf: n => `${n} üretici arasında en ucuz`, range: (a, b) => `Fiyat aralığı ${a} – ${b}`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
       groupNoteModel: 'Bütün üreticilerde aynı boş ürün modeli. Baskı yöntemi, baskı alanı ve kargo farklı olabilir; ayrıntılar üreticinin sayfasında.',
       groupNoteSpec: 'Bütün üreticilerde aynı ürün tipi ve ölçü. Malzeme ve seçenekler küçük farklar gösterebilir; ayrıntılar üreticinin sayfasında.',
       allOffersOf: n => `${n} teklifin hepsini göster`, groupsInCat: 'Üreticiler arasında fiyat karşılaştır', allInCat: 'Tüm ürünler',
@@ -770,14 +770,20 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
         : (pfo.baseMinor === pyo.baseMinor ? `They cost the same, ${fmt(pfo.baseMinor)}.` : `${pfo.baseMinor < pyo.baseMinor ? 'Printful' : 'Printify'} is cheaper: Printful ${fmt(pfo.baseMinor)}, Printify ${fmt(pyo.baseMinor)}.`)) : '';
       return { t: title, n: bestP.length, lo: fmt(f.baseMinor), loP: provName(f.providerId), hi: fmt(l.baseMinor), hiP: provName(l.providerId), med: fmt(median(bestP.map(x => x.baseMinor))), gap: Math.round((l.baseMinor / f.baseMinor - 1) * 100), p2: bestP.slice(1, 3).map(x => `${provName(x.providerId)} (${fmt(x.baseMinor)})`).join(lg === 'tr' ? ' ve ' : ' and '), pf };
     })() : null;
+    // Cimri tarzı: en üstte "N üretici arasında en ucuz" kutusu + kaydırınca üstte sabit kalan aynı şerit (site.js gösterir)
+    const gbest = (gp, title) => {
+      const pool = gp.list.filter(p => !isBlank(p)).length ? gp.list.filter(p => !isBlank(p)) : gp.list, b = pool.reduce((a, c) => c.baseMinor < a.baseMinor ? c : a), m = provName(b.providerId);
+      const box = cls => `<div class="${cls}"><div class="gb-t"><span class="gb-badge">${esc(t.bestOf(gp.providers.size))}</span><span class="gb-m">${esc(m)}</span><b class="gb-p">${esc(fmt(b.baseMinor))}</b>${cls === 'gstick' ? `<span class="gb-n">${esc(title)}</span>` : ''}</div><a class="cta gb-go" href="${esc(outbound(b))}" target="_blank" rel="nofollow sponsored noopener">${esc(t.goAt(m))}</a></div>`;
+      return box('gbest') + box('gstick');
+    };
     const gFaq = gd ? t.grpFaq(gd) : [];
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)), cat: gp.etsy,
       title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
       crumbs: [...eAnc(gp.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(gp.etsy), href(P.cat(gp.etsy))], [title]],
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
-<p class="gfrom"><b>${esc(fmt(lo.baseMinor))}</b> <span>– ${esc(fmt(hi.baseMinor))}</span></p>
-<p class="muted">${esc(t.makersN(gp.providers.size))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
+${gbest(gp, title)}
+<p class="muted sm">${esc(t.range(fmt(lo.baseMinor), fmt(hi.baseMinor)))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
 ${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${H.ad('liste')}
 <p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>
 ${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}${rvBox('group:' + gp.slug, title, false)}`,

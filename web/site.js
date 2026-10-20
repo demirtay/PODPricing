@@ -226,6 +226,9 @@
     } catch (e) { }
   }
   remember(document.body.getAttribute('data-cat'), document.body.getAttribute('data-cat-label'), 1);
+  // karşılaştırma sayfası: en ucuz kutusu ekrandan çıkınca üstte sabit şerit
+  var gb = document.querySelector('.gbest'), gs = document.querySelector('.gstick');
+  if (gb && gs && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { var on = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; gs.classList.toggle('on', on); document.body.classList.toggle('gs-on', on); }).observe(gb);
   var fy = document.getElementById('foryou');
   if (fy) {
     var s = interests(), top = Object.keys(s).sort(function (a, b) { return s[b].v - s[a].v; }).filter(function (k) { return s[k].v >= 1 && s[k]['l_' + LANG]; }).slice(0, 1);

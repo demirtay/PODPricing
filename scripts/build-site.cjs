@@ -357,6 +357,7 @@ const LOCALES = {
         citeH: 'Using this data', cite: 'You are welcome to quote these numbers in articles, videos and posts. Please credit and link "POD Pricing (podpricing.com)".', csv: ['Supplier ranking (CSV)', 'Blank prices (CSV)'],
         method: 'Method: prices are print-included base costs from each supplier\'s public catalog in USD, before shipping and tax. Products are matched by blank model (e.g. Gildan 5000) or by product type and size. For each product we take each supplier\'s cheapest offer; the typical price is the median across suppliers.',
       },
+      hc: { h: 'What will you earn on each sale?', p: 'Product cost, shipping to your buyer, import duty and marketplace fees, from every manufacturer that makes it. Real published rates, no estimates.', price: 'Your selling price ($)', btn: 'Calculate my profit', note: (a, n) => `Real shipping and duty data for ${a} of ${n} compared products; more manufacturers are added every week.` },
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
         intro: 'Pick a product and your selling price. For every manufacturer we add the product cost, US shipping, US import duty (based on where it ships from) and marketplace fees, then show your profit, your break-even price and a suggested price for your target margin.',
@@ -496,6 +497,7 @@ const LOCALES = {
         citeH: 'Bu veriyi kullanmak', cite: 'Bu rakamları yazı, video ve paylaşımlarınızda kullanabilirsiniz. Lütfen "POD Pricing (podpricing.com)" diye kaynak gösterip bağlantı verin.', csv: ['Üretici sıralaması (CSV)', 'Boş ürün fiyatları (CSV)'],
         method: 'Yöntem: fiyatlar her üreticinin herkese açık kataloğundaki baskı dahil taban fiyatlardır (USD, kargo ve vergi hariç). Ürünler boş ürün modeline (ör. Gildan 5000) ya da ürün tipi ve ölçüsüne göre eşleştirilir. Her ürün için her üreticinin en ucuz teklifi alınır; tipik fiyat üreticiler arasındaki ortancadır.',
       },
+      hc: { h: 'Bu ürünü satarsan ne kazanırsın?', p: 'Ürün maliyeti, alıcıya kargo, gümrük vergisi ve pazar yeri komisyonu; ürünü yapan her üretici için. Üreticilerin yayınladığı gerçek ücretler, tahmin yok.', price: 'Satış fiyatın ($)', btn: 'Kârımı hesapla', note: (a, n) => `Karşılaştırdığımız ${n} ürünün ${a} tanesinde gerçek kargo ve vergi verisi var; her hafta yeni üreticiler ekleniyor.` },
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
         intro: 'Bir ürün ve satış fiyatı seç. Her üretici için ürün maliyeti, ABD kargosu, ürünün çıktığı ülkeye göre ABD gümrük vergisi ve pazar yeri komisyonunu topluyoruz; kârını, zararsız en düşük fiyatı ve hedef kâr oranına göre önerilen satış fiyatını gösteriyoruz.',
@@ -730,11 +732,21 @@ for (const lg of LANGS) {
   // ana sayfa (açıklama + SSS rakamları gerçek veriden)
   const topS = pidx.suppliers[0];
   const homeD = { m: connected.length, n: n(products.length), g: pidx.rows.length, gap: Math.round(pidx.gap * 100), top: topS ? provName(topS.id) : '', w: topS ? Math.max(0, Math.round((1 - topS.index) * 100)) : 0 };
+  // ana sayfa kâr hesaplayıcı kutusu: yalnız en az bir üreticisinin gerçek teslim maliyeti bilinen ürünler (en çok üreticili önce)
+  const withData = groups.filter(g => g.list.some(p => deliveredUS(p) != null)), homeCalc = withData.slice(0, 40), homeCalcN = withData.length;
   add(P.home + 'index.html', page(L, H, {
     rel: P.home + 'index.html', alt: altAll(p => p.home), title: t.homeTitle, description: t.homeDesc(connected.length, n(products.length)),
     body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${esc(t.heroP(connected.length, n(products.length)))}</p>
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
+<section class="hcalc"><div class="hcalc-t"><h2>${esc(t.hc.h)}</h2><p>${esc(t.hc.p)}</p></div>
+<form class="hcalc-f" action="${href(P.calc)}" method="get">
+<label>${esc(t.calc.product)}<select name="p">${homeCalc.map(g => `<option value="${esc(g.slug)}">${esc(H.gTitle(g))} (${g.providers.size})</option>`).join('')}</select></label>
+<label>${esc(t.calc.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option></select></label>
+<label>${esc(t.calc.dest)}<select name="dest">${t.calc.dests.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('')}</select></label>
+<label>${esc(t.hc.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>
+<button>${esc(t.hc.btn)}</button></form>
+<p class="muted sm">${esc(t.hc.note(homeCalcN, groups.length))}</p></section>
 <section id="foryou" hidden></section>
 <div class="sec-head"><h2>${t.catMenu}</h2><a href="${href(P.categories)}">${t.seeAll} →</a></div><div class="catmenu compact">${eTops.map(catBox).join('')}</div>
 <a class="verdict" style="display:block" href="${href(P.index)}"><b>${esc(t.pidx.homeCta(Math.round(pidx.gap * 100)))}</b></a>

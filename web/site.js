@@ -225,7 +225,9 @@
       sel.innerHTML = '<option value="">—</option>' + Object.keys(byType).sort(function (a, b) { return byType[b].length - byType[a].length; }).map(function (t) {
         return '<optgroup label="' + esc(res[1].types[t] || t) + '">' + byType[t].map(function (g) { return '<option value="' + esc(g[0]) + '">' + esc(g[1]) + ' (' + g[4] + ')</option>'; }).join('') + '</optgroup>';
       }).join('');
-      var pre = new URLSearchParams(location.search).get('p');
+      var qs = new URLSearchParams(location.search), pre = qs.get('p');
+      // ana sayfa kutusundan gelen seçimler
+      ['price', 'dest', 'platform', 'margin'].forEach(function (k) { if (qs.get(k) != null && calc.elements[k]) calc.elements[k].value = qs.get(k); });
       if (pre) { sel.value = pre; load(); }
     });
     sel.addEventListener('change', load);

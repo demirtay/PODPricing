@@ -183,3 +183,4 @@ body.gs-on .top{position:relative} /* şerit açıkken üst menü yukarıda kals
 .lc td small{font-size:12px;line-height:1.3}.lc td .muted{font-style:italic}
 .gb-dlv{flex-basis:100%;margin:2px 0 0;font-size:14.5px;color:var(--ink)}.gb-dlv a{color:var(--accent);font-weight:600}
 .ladder .price small.dlv{display:block;color:var(--muted);font-size:12.5px;font-weight:500}
+.lc tr.nodata td{color:var(--muted)}.calc .adv{grid-column:1/-1}.calc .adv summary{cursor:pointer;font-size:13.5px;color:var(--muted);font-weight:600}.calc .adv label{margin-top:8px;max-width:260px}

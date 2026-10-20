@@ -1,6 +1,6 @@
 // Kârlılık motoru (derleme tarafı): her teklif için ABD'deki alıcıya teslim maliyeti tahmini.
 // - çıkış ülkesi: ürünün availableCountries'i (ABD varsa ABD) > ürün adındaki açık işaret > üretici varsayılanı (data/shipping/origins.json)
-// - ABD kargosu: ürünün kendi kargo bilgisi > üreticinin kategori tablosu (Printful, Printify tesisleri) > bilinmiyor
+// - kargo: ürünün kendi kargo bilgisi > üreticinin yayınladığı kategori tablosu (Printful, Printify tesisleri) > bilinmiyor (tahmin yok)
 // - ABD gümrük vergisi: çıkış ABD ise 0; değilse ürün tipinin HTS temel oranı + çıkış ülkesinin Section 301 ek vergisi
 //   (AB: temel + ek toplamı en fazla %10). Çin için eski 301 listeleri (%7,5-25) ürün bazında doğrulanmadığından ayrıca uyarılır.
 // Oranlar 20 Ekim 2026'da hts.usitc.gov ve USTR/Zonos'tan kontrol edildi.
@@ -71,30 +71,6 @@ const DESTS = Object.keys(DEST_RE);
 // varışa ait satır; yoksa (ABD dışı varışlarda) "Rest of the World / International" satırı
 const destRow = (rows, dest) => rows.find(r => DEST_RE[dest].test(r.to)) || (dest !== 'US' ? rows.find(r => /rest of (the )?world|international|worldwide/i.test(r.to)) : null);
 
-// Printify'daki tesislerin ülkesine göre, ürün tipi ve varış başına ortanca ilk ürün kargosu (kendi tablosu olmayan üreticiler için tahmin)
-const provCode = c => { const t = String(c || '').toLowerCase();
-  if (/united states|^usa?\b/.test(t)) return 'US'; if (/china/.test(t)) return 'CN'; if (/united kingdom/.test(t)) return 'GB';
-  if (/germany|france|latvia|czech|europe|netherlands/.test(t)) return 'EU'; if (/canada/.test(t)) return 'CA'; if (/australia/.test(t)) return 'AU'; if (/india/.test(t)) return 'IN';
-  return null; };
-const median = a => { const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : null; };
-const EST = (() => {
-  const acc = {};
-  for (const prov of PY?.providers || []) {
-    // birden çok ülkede tesisi olanlar (ör. "United States and United Kingdom") hangi tesisten gönderdiği belli olmadığı için tahmine girmez
-    if (/and|,/.test(prov.country || '')) continue;
-    const cc = provCode(prov.country); if (!cc) continue;
-    const std = prov.methods.find(m => /standard/i.test(m.method)) || prov.methods[0]; if (!std) continue;
-    for (const type of Object.keys(KW)) {
-      const g = findGroup(std.groups, type, x => x.category); if (!g) continue;
-      for (const dest of DESTS) { const r = destRow(g.rows, dest); if (r) (((acc[dest] = acc[dest] || {})[cc] = acc[dest][cc] || {})[type] = acc[dest][cc][type] || []).push(r.first); }
-    }
-  }
-  const out = {};
-  for (const [dest, o] of Object.entries(acc)) for (const [cc, t] of Object.entries(o)) for (const [type, v] of Object.entries(t))
-    ((out[dest] = out[dest] || {})[cc] = out[dest][cc] || {})[type] = { usd: median(v), n: v.length };
-  return out;
-})();
-
 // varışa ilk ürün kargosu (kuruş) ve kaynağı
 function shipTo(p, origin, dest) {
   const own = p.shipping && (dest === 'EU' ? p.shipping.EU ?? p.shipping.DE : p.shipping[dest]);
@@ -110,8 +86,7 @@ function shipTo(p, origin, dest) {
     const r = g && destRow(g.rows, dest);
     if (r) return { minor: Math.round(r.first * 100), src: 'table' };
   }
-  const e = origin && EST[dest]?.[origin]?.[p.type];
-  if (e && e.usd != null && e.n >= 2) return { minor: Math.round(e.usd * 100), src: 'estimate', n: e.n };
+  // tahmin yok: üreticinin yayınladığı ücret bulunamazsa kargo bilinmiyor
   return { minor: null, src: null };
 }
 const shipUS = (p, origin) => shipTo(p, origin, 'US');
@@ -160,4 +135,4 @@ function landed(p, dest) {
 }
 const landedUS = p => landed(p, 'US');
 
-module.exports = { landed, landedUS, originOf, shipTo, shipUS, dutyUS, dutyTo, HTS, EXTRA, EST, DESTS, EU_FLAT_MINOR };
+module.exports = { landed, landedUS, originOf, shipTo, shipUS, dutyUS, dutyTo, HTS, EXTRA, DESTS, EU_FLAT_MINOR };

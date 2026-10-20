@@ -1,15 +1,15 @@
 {
-  "note": "Üretici başına varsayılan çıkış (gönderim) ülkesi. Ürünün kendi availableCountries alanı varsa o önceliklidir; ürün adındaki açık ülke işareti (Made in USA, (US), (VN), (EU)...) varsayılanı ezer. confidence: high = üreticinin kendi sayfası/kataloğu, medium = birden çok bağımsız kaynak, low = tek kaynak/çıkarım. null = bilinmiyor (vergi hesaplanmaz, sayfada uyarı çıkar).",
+  "note": "Üretici başına çıkış (gönderim) ülkesi. Yalnız üreticinin kendi sayfası/kataloğu/ürün adındaki açık beyan kullanılır; alan adından ya da dolaylı çıkarımla ülke YAZILMAZ. Ürünün availableCountries alanı ve ürün adındaki açık işaret (Made in USA, (US), (VN), (EU)...) varsayılandan önce gelir. default null = bilinmiyor (sitede 'veri yok').",
   "checked": "2026-10-20",
   "providers": {
     "interestprint": {
-      "default": "CN",
+      "default": null,
       "also": [
         "US",
         "AU"
       ],
       "confidence": "medium",
-      "source": "Shopify App Store listesi ve Trustpilot: ABD, Avustralya ve Çin'de tesis"
+      "source": "Shopify App Store listesi ve Trustpilot: ABD, Avustralya ve Çin'de tesis — varsayılan yok: ABD, Avustralya ve Çin tesisi var; işaretsiz ürünün hangisinden gittiği yazmıyor"
     },
     "printdoors": {
       "default": "CN",
@@ -28,13 +28,13 @@
       "source": "Yoycol: fulfillment merkezi Çin; 'Printed in USA' ürünleri ABD"
     },
     "inkedjoy": {
-      "default": "CN",
+      "default": null,
       "also": [
         "US",
         "AU"
       ],
       "confidence": "medium",
-      "source": "Eprolo'nun POD bölümü; katalogda 'Made in USA' ve 'Made in Australia' ayrı"
+      "source": "Eprolo'nun POD bölümü; katalogda 'Made in USA' ve 'Made in Australia' ayrı — varsayılan yok: işaretsiz ürünlerin çıkışı yazmıyor"
     },
     "printkk": {
       "default": "CN",
@@ -55,7 +55,7 @@
       "source": "printify.com/shipping-rates/artsadd (ülke: China)"
     },
     "merchize": {
-      "default": "VN",
+      "default": null,
       "also": [
         "US",
         "CN",
@@ -64,7 +64,7 @@
         "AU"
       ],
       "confidence": "high",
-      "source": "merchize.com: Vietnam fabrikası (Hanoi) + ABD, AB, İngiltere, Avustralya, Çin tesisleri"
+      "source": "merchize.com: Vietnam fabrikası (Hanoi) + ABD, AB, İngiltere, Avustralya, Çin tesisleri — varsayılan yok: Vietnam, ABD, Çin, AB tesisleri; işaretsiz ürünün çıkışı yazmıyor"
     },
     "burgerprints": {
       "default": null,
@@ -101,11 +101,6 @@
       "default": null,
       "confidence": "low",
       "source": "doğrulanmadı"
-    },
-    "treatpod": {
-      "default": "GB",
-      "confidence": "low",
-      "source": "treatpod.co.uk (alan adı)"
     },
     "scalablepress": {
       "default": "US",
@@ -151,21 +146,6 @@
       "default": "US",
       "confidence": "high",
       "source": "printify.com/shipping-rates/m-i-a-merchandise (ülke: United States)"
-    },
-    "colouroo": {
-      "default": "AU",
-      "confidence": "medium",
-      "source": "colouroo.com.au (Avustralya alan adı)"
-    },
-    "twofifteen": {
-      "default": "GB",
-      "confidence": "medium",
-      "source": "twofifteen.co.uk (İngiltere)"
-    },
-    "inkthreadable": {
-      "default": "GB",
-      "confidence": "medium",
-      "source": "inkthreadable.co.uk (İngiltere)"
     },
     "snapwear": {
       "default": null,
@@ -215,21 +195,6 @@
       "default": "GB",
       "confidence": "medium",
       "source": "zelaprint.com: 'Printed in the United Kingdom' (ortak ağ da var)"
-    },
-    "printegy": {
-      "default": "EU",
-      "confidence": "medium",
-      "source": "printegy.de (Almanya alan adı)"
-    },
-    "ogo": {
-      "default": "AU",
-      "confidence": "medium",
-      "source": "ogo.com.au (Avustralya alan adı)"
-    },
-    "artovo": {
-      "default": "GB",
-      "confidence": "medium",
-      "source": "artovo.co.uk (İngiltere alan adı)"
     },
     "digitalondemand": {
       "default": null,

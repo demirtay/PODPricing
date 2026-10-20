@@ -95,6 +95,7 @@ const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
 // grupların günlük en ucuz fiyat geçmişi (scripts/group-history.cjs): bugünün kaydı her derlemede yazılır, sayfada grafik olur
 const GH = require('./group-history.cjs');
+const DDP = require('./ddp-page.cjs');
 const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
 GH.save(gHist);
 const groupsByType = groupBy(groups, g => g.type);
@@ -661,7 +662,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}<div class="joins">${cfg.newsletterAction ? `<form class="nl" action="${esc(cfg.newsletterAction)}" method="post" data-ok="${esc(t.nl.ok)}" data-err="${esc(t.nl.err)}"><div><b>${esc(t.nl.h)}</b><p>${esc(t.nl.p)}</p></div><div class="nl-row"><input type="email" name="fields[email]" required placeholder="${esc(t.nl.ph)}" aria-label="${esc(t.nl.ph)}" autocomplete="email"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><button class="cta">${esc(t.nl.btn)}</button></div><p class="nl-msg" role="status"></p></form>` : ''}${cfg.facebookGroup ? `<aside class="fbgroup"><div><b>${esc(t.fbGroup.h)}</b><p>${esc(t.fbGroup.p)}</p></div><a class="cta" href="${esc(cfg.facebookGroup)}" target="_blank" rel="noopener">${esc(t.fbGroup.btn)}</a></aside>` : ''}</div>${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''}${L.lang === 'tr' ? ` · <a href="${href(DDP.path)}">${esc(DDP.nav)}</a>` : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
 <p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
@@ -1029,7 +1030,12 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <label class="custom" hidden>${esc(C.pct)}<input name="pct" type="number" min="0" step="0.1" value="10"></label>
 <label class="custom" hidden>${esc(C.fixed)}<input name="fixed" type="number" min="0" step="0.01" value="0.30"></label>
 </form><div id="calc-out"><p class="muted">${esc(C.pick)}</p></div>
-<p class="muted sm">${esc(C.fees)}</p>`,
+<p class="muted sm">${esc(C.fees)}</p>${lg === 'tr' ? `<p><a class="go" href="${href(DDP.path)}">Türkiye'den ABD'ye gönderiyor musunuz? Kargo + gümrük vergisi hesaplayıcı →</a></p>` : ''}`,
+  }));
+
+  // Türkçe: ABD'ye kargo + gümrük vergisi (DDP) hesaplayıcı ve rehber (scripts/ddp-page.cjs)
+  if (lg === 'tr') add(DDP.path + 'index.html', page(L, H, {
+    rel: DDP.path + 'index.html', title: `${DDP.title} · ${BRAND}`, description: DDP.description, crumbs: [[DDP.nav]], body: DDP.body(), jsonld: DDP.jsonld(),
   }));
 
   // arama, hakkında, gizlilik, iletişim

@@ -229,6 +229,24 @@
   // karşılaştırma sayfası: en ucuz kutusu ekrandan çıkınca üstte sabit şerit
   var gb = document.querySelector('.gbest'), gs = document.querySelector('.gstick');
   if (gb && gs && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { var on = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; gs.classList.toggle('on', on); document.body.classList.toggle('gs-on', on); }).observe(gb);
+  // Türkçe ABD kargo + gümrük vergisi (DDP) hesaplayıcı
+  var ddp = document.getElementById('ddp');
+  if (ddp) {
+    var dOut = document.getElementById('ddp-out'), extra = +ddp.getAttribute('data-extra');
+    var usd = function (v) { return '$' + v.toFixed(2).replace('.', ','); };
+    var drawDdp = function () {
+      var f = ddp.elements, custom = f.cat.value === 'custom';
+      [].forEach.call(ddp.querySelectorAll('.ddp-custom'), function (l) { l.hidden = !custom; });
+      var base = custom ? (+f.base.value || 0) : +f.cat.value, rate = base + extra;
+      var value = +f.value.value || 0, ship = +f.ship.value || 0, fee = +f.fee.value || 0;
+      var duty = Math.round(value * rate) / 100, total = ship + duty + fee; // vergi kuruşa yuvarlanır, toplam onunla tutsun
+      dOut.innerHTML = '<div class="ddp-res"><div><span>Gümrük vergisi (%' + String(rate).replace('.', ',') + ')</span><b>' + usd(duty) + '</b></div>' +
+        '<div><span>Kargo + DDP ücreti</span><b>' + usd(ship + fee) + '</b></div>' +
+        '<div class="ddp-total"><span>Toplam gönderim maliyeti</span><b>' + usd(total) + '</b></div></div>' +
+        '<p class="muted sm">' + (value ? 'Gönderim maliyetinin satış fiyatına oranı: %' + Math.round(total / value * 100) : '') + '</p>';
+    };
+    ddp.addEventListener('input', drawDdp); ddp.addEventListener('change', drawDdp); drawDdp();
+  }
   // karşılaştırma sayfası süzgeçleri (Cimri tarzı): Tümü / Baskı dahil / Kargo fiyatı belli
   var lad = document.querySelector('.ladder');
   if (lad) {

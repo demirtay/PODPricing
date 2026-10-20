@@ -155,3 +155,11 @@ td{padding:10px 12px;border-bottom:1px solid var(--line)}tr:last-child td{border
 .cards.hscroll>.card{flex:0 0 230px;scroll-snap-align:start}
 .bs-lo{color:var(--accent,#0f9d6b);font-weight:600}
 @media (max-width:640px){.cards.hscroll>.card{flex-basis:44%}}
+
+/* ana sayfa sade: üst arama gizli (hero'da büyüğü var), bülten + FB grubu yan yana */
+body:has(.hero) .top .search{display:none}
+.joins{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px;margin:30px 0 10px}
+.joins .nl,.joins .fbgroup{margin:0!important;align-content:start}
+.joins .nl b,.joins .fbgroup b{font-size:17px}
+.catmenu.compact{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.catmenu.compact .catbox{padding:10px}.catmenu.compact ul,.catmenu.compact .cball{display:none}.catmenu.compact .cbh{margin:0}.catmenu.compact .cbh img,.catmenu.compact .cbh .noimg{width:48px;height:48px}.catmenu.compact .cbh b{font-size:16px}
+@media (max-width:420px){.catmenu.compact .cbh img,.catmenu.compact .cbh .noimg{width:36px;height:36px}.catmenu.compact .cbh b{font-size:14px}.catmenu.compact .cbh{gap:8px}}

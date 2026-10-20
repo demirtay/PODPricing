@@ -211,7 +211,7 @@
   }
 
   // Kişiselleştirme: ziyaretçinin baktığı kategoriler yalnızca kendi tarayıcısında (localStorage) tutulur, sunucuya gitmez.
-  // Kategori/karşılaştırma/ürün sayfası +1, arama +2; ana sayfada en ilgili 2 kategori "Senin için" bölümünde.
+  // Kategori/karşılaştırma/ürün sayfası +1, arama +2; ana sayfada en ilgili kategori "Senin için" bölümünde.
   var INT_KEY = 'pp-interest';
   function interests() { try { return JSON.parse(localStorage.getItem(INT_KEY)) || {}; } catch (e) { return {}; } }
   function remember(slug, label, w) {
@@ -219,7 +219,7 @@
     try {
       var s = interests(), now = Date.now();
       Object.keys(s).forEach(function (k) { s[k].v *= 0.97; }); // eski ilgiler yavaşça söner
-      s[slug] = { v: ((s[slug] && s[slug].v) || 0) + w, l: label || (s[slug] && s[slug].l) || slug, t: now };
+      var o = s[slug] || {}; o.v = (o.v || 0) + w; o.t = now; if (label) o['l_' + LANG] = label; s[slug] = o; // ad dile göre: TR'de bakılan kategori EN sayfada Türkçe çıkmasın
       var keep = Object.keys(s).sort(function (a, b) { return s[b].v - s[a].v; }).slice(0, 20), out = {};
       keep.forEach(function (k) { out[k] = s[k]; });
       localStorage.setItem(INT_KEY, JSON.stringify(out));
@@ -228,14 +228,14 @@
   remember(document.body.getAttribute('data-cat'), document.body.getAttribute('data-cat-label'), 1);
   var fy = document.getElementById('foryou');
   if (fy) {
-    var s = interests(), top = Object.keys(s).sort(function (a, b) { return s[b].v - s[a].v; }).filter(function (k) { return s[k].v >= 1; }).slice(0, 2);
+    var s = interests(), top = Object.keys(s).sort(function (a, b) { return s[b].v - s[a].v; }).filter(function (k) { return s[k].v >= 1 && s[k]['l_' + LANG]; }).slice(0, 1);
     if (top.length) meta().then(function (M) {
       return Promise.all(top.map(function (k) { return fetch('/data/k/' + LANG + '/' + k + '.json').then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }); })).then(function (lists) {
         var html = '';
         lists.forEach(function (items, i) {
           if (!items.length) return;
           var k = top[i], best = items.slice().sort(function (a, b) { return b[4] - a[4] || a[3] - b[3]; }).slice(0, 8);
-          html += '<div class="sec-head"><h2>' + esc(M.ui.forYou) + ': ' + esc(s[k].l) + '</h2><a href="' + M.paths.cat + esc(k) + '/">' + esc(M.ui.seeAll) + ' →</a></div>' +
+          html += '<div class="sec-head"><h2>' + esc(M.ui.forYou) + ': ' + esc(s[k]['l_' + LANG]) + '</h2><a href="' + M.paths.cat + esc(k) + '/">' + esc(M.ui.seeAll) + ' →</a></div>' +
             '<div class="cards">' + best.map(function (it) { return icard(it, M); }).join('') + '</div>';
         });
         if (html) { fy.innerHTML = html + '<p class="muted sm">' + esc(M.ui.forYouNote) + '</p>'; fy.hidden = false; }

@@ -193,7 +193,6 @@ Materials differ (flannel, fleece, minky), so it's not 100% apples to apples, bu
 Full list with material and links: podpricing.com/compare/blankets-50x60
 
 Has anyone ordered samples from the cheaper ones? Curious how the 250gsm vs 320gsm flannel compares.
-
 (Disclosure: I run the site, and some supplier links are affiliate links.)
 
 Görsel: link önizlemesi. Aynı metni çok gruba atma; her gruba ilk cümleyi değiştir.
@@ -218,3 +217,117 @@ Anyone selling calendars this year? Which size sells best for you, A4 or 11x17?
 (Disclosure: I run the site, and some supplier links are affiliate links.)
 
 Görsel: link önizlemesi. Paylaşmadan önce /category/calendars/ sayfasından rakamları kontrol et; her gruba ilk cümleyi değiştir.
+
+## Metin 13 — Printful çok satanları (genel POD / Etsy grupları) — rakamlar 2026-10-18
+Printful has a public bestseller list, so I looked up the exact same blanks at other print-on-demand suppliers (base cost, print included, before shipping):
+
+• White 11oz mug: Printful $6.07 → cheapest $1.46 (PeaPrint)
+• Gildan 5000 tee: $9.44 → $4.35 (Yoycol)
+• Gildan 18000 crewneck: $19.17 → $9.09 (Yoycol)
+• Gildan 18500 hoodie: $22.63 → $11.32 (Yoycol)
+• Comfort Colors 1717: $15.60 → $8.00 (BurgerPrints)
+• Bella+Canvas 3001: $11.92 → $7.50 (BurgerPrints)
+
+Shipping, print quality and production time still matter, so always order a sample. But on Q4 volume, $5-10 per item adds up fast.
+
+Every supplier for each product, cheapest first (free, updated twice a day): podpricing.com
+
+Which of these do you sell most, and who prints it for you?
+
+(Disclosure: I run the site, and some supplier links are affiliate links.)
+
+---
+
+## Metin 14 — Printify kullanıcıları için (Printify / Etsy grupları) — rakamlar 2026-10-18
+If you're on Printify: the cheapest provider shown in the Printify catalog isn't always the cheapest option out there. Same blank, print included, before shipping:
+
+• Gildan 5000: Printify $8.55 · cheapest elsewhere $4.35
+• Gildan 18500 hoodie: Printify $19.86 · $11.32
+• Gildan 18000 crewneck: Printify $15.53 · $9.09
+• Comfort Colors 1717: Printify $12.65 · $8.00
+• Bella+Canvas 3001: Printify $11.29 · $7.50
+
+Not saying leave Printify (integrations and provider choice are worth something), but for your top 2-3 sellers it's worth comparing.
+
+Full Printful vs Printify comparison on 140+ shared products: podpricing.com/vs/printful-vs-printify
+
+(Disclosure: my site, free, some links are affiliate links.)
+
+---
+
+## Metin 15 — Kupa / Q4 hediye (kupa, süblimasyon, Etsy hediye grupları) — rakamlar 2026-10-18
+Mug season is here (Christmas, teacher gifts, Secret Santa), so I compared the same white 11oz mug across 15 print-on-demand suppliers, print included, before shipping:
+
+• Cheapest: $1.46 (PeaPrint), $2.07 (Inkedjoy), $2.08 (Printdoors)
+• Printify: $5.34 · Printful: $6.07
+• Most expensive: $15.95
+
+That's a $4+ gap per mug between the cheapest and the big names. Mugs are heavy, so check shipping too: sometimes the cheap one loses on postage.
+
+All 15 suppliers sorted by price: podpricing.com/compare/mugs-11oz-white
+
+Who do you use for mugs, and how's the print durability?
+
+(Disclosure: I run the site, some links are affiliate links.)
+
+---
+
+## Metin 16 — Bella+Canvas 3001 (Etsy tişört grupları) — rakamlar 2026-10-18
+The Bella+Canvas 3001 is probably the most common Etsy tee, so here's what 15 POD suppliers charge for it right now (print included, before shipping):
+
+• $7.50 BurgerPrints
+• $8.95 Printway
+• $8.99 SimplePrint
+• $9.50 Gearment
+• Printify $11.29 · Printful $11.92
+• Highest: $15.00
+
+On a $24.99 listing, $4 difference in base cost is about 20% of the price you charge.
+
+Full list: podpricing.com/compare/bella-canvas-3001
+
+What do you pay for your 3001s?
+
+(Disclosure: my site, free, some links are affiliate links.)
+
+---
+
+## Metin 17 — Türkçe, Printful çok satanları (Türk Etsy / POD grupları) — rakamlar 2026-10-18
+Printful'ın kendi "en çok satanlar" listesindeki ürünlere baktım, aynı ürünü diğer POD üreticileri ne kadara basıyor (baskı dahil, kargo hariç):
+
+• Beyaz 11oz kupa: Printful 6,07 $ → en ucuz 1,46 $ (PeaPrint)
+• Gildan 5000 tişört: 9,44 $ → 4,35 $ (Yoycol)
+• Gildan 18000 sweatshirt: 19,17 $ → 9,09 $ (Yoycol)
+• Gildan 18500 hoodie: 22,63 $ → 11,32 $ (Yoycol)
+• Comfort Colors 1717: 15,60 $ → 8,00 $ (BurgerPrints)
+
+Kargo ve baskı kalitesi de önemli, numune almadan geçmeyin. Ama Q4'te ürün başına 5-10 $ fark ciddi kâr demek.
+
+Her ürün için bütün üreticiler, ucuzdan pahalıya (ücretsiz, günde iki kez güncelleniyor): podpricing.com/tr/
+
+Siz en çok hangi üreticiyle çalışıyorsunuz?
+
+(Not: Site benim, bazı üretici linkleri ortaklık linkidir.)
+
+---
+
+## Metin 18 — LİNKSİZ, yorumla link (hoodie / Gildan 18500, genel POD / Etsy grupları) — rakamlar 2026-10-18
+(Facebook sayfaya ayda 2 linkli gönderi sınırı koydu → link gönderide değil, isteyene yorum cevabında.)
+
+Hoodie season is here, so I checked what 11 print-on-demand suppliers charge for the exact same Gildan 18500 hoodie (print included, before shipping). The gap surprised me:
+
+• $11.32 – cheapest
+• $12.00
+• $13.75
+• $13.95
+• $19.86 – Printify
+• $22.63 – Printful
+• $26.24 – most expensive
+
+Same blank, same print, more than 2x the price depending on who prints it. On a $39.99 hoodie, that's the difference between $28 and $17 profit per sale, before shipping and fees. Over 50 Q4 orders it's $500+.
+
+I'm not naming the cheap ones here so this doesn't turn into an ad 🙂 Comment "hoodie" and I'll reply with the full list (all 11 suppliers, sorted cheapest first).
+
+Which supplier do you use for hoodies, and are you happy with the print quality?
+
+**Yorum gelince cevap:** Here you go: podpricing.com/compare/gildan-18500 (free, updated twice a day. Disclosure: it's my site.)

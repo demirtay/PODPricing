@@ -89,3 +89,4 @@ Google günde ~10 istek kabul ediyor. Search Console → üstteki "URL denetle" 
 - (printonic zaten dizinde, atlandı)
 
 Sonrası: geri kalan ~32 bin sayfayı Google site haritasından (sitemap.xml) kendisi bulur; elle istek gerekmez.
+- 2026-10-19: ✅ cheapest/ polo-shirts, rugs-doormats, blankets, pillows, tapestries, glasses-cups, water-bottles, pants-joggers, hats-caps (tumblers zaten dizinde)

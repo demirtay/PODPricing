@@ -13,3 +13,4 @@ GPT her paylaşımdan sonra bir satır ekler; Claude bu tabloya bakarak sonraki 
 | 2026-10-11 | Facebook grupları (hazır, paylaşılmadı) | – | – | HAZIR: Metin 11 (battaniye 50x60, /compare/blankets-50x60) — ev dekor / hediye grupları. Paylaşımı Ali yapar. |
 | 2026-10-11 | Pinterest | – | – | 1. seri (7–21 Eki) planlı yayında; 2. seri (pinterest-toplu-yukleme-2.csv, 22 Eki–5 Kas) yüklenmeyi bekliyor — Ali. |
 | 2026-10-11 | Facebook grupları (hazır, paylaşılmadı) | – | – | HAZIR: Metin 12 (2027 duvar takvimi, /category/calendars/) — Etsy / hediye grupları. Search Console'da "prodigi calendar" 5,5. sırada gösterim alıyor. Paylaşımı Ali yapar. |
+| 2026-10-18 | Facebook grupları (hazır) | – | – | HAZIR: Metin 13 (Printful çok satanları), 14 (Printify), 15 (kupa Q4), 16 (Bella 3001), 17 (Türkçe) — facebook-metinleri.md. Ali paylaşır; her gruba farklı metin, günde 2-3 grup. |

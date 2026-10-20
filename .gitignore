@@ -17,3 +17,4 @@ video/yukleme_log.txt
 video/__pycache__/
 video/deneme/
 .playwright-mcp/
+_pins/

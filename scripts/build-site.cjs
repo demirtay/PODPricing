@@ -97,6 +97,8 @@ for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
 const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');
 const LC = require('./landed-cost.cjs');
+// ABD'deki alıcıya teslim maliyeti (kuruş): ürün + ABD kargosu + gümrük vergisi; ikisinden biri bilinmiyorsa null
+const deliveredUS = p => { const lc = LC.landedUS(p); return lc.shipMinor != null && lc.dutyRate != null ? Math.round(p.baseMinor * (1 + lc.dutyRate / 100) + lc.shipMinor) : null; };
 const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
 GH.save(gHist);
 const groupsByType = groupBy(groups, g => g.type);
@@ -364,7 +366,7 @@ const LOCALES = {
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
-      offersH: n => `Prices from ${n} manufacturers`, bestOf: n => `Cheapest of ${n} manufacturers`, histH: 'Cheapest price history', histFlat: (d, v) => `The cheapest price has stayed at ${v} for the last ${d} days.`, histMove: (lo, ld, hi, now) => `Lowest ${lo} (${ld}), highest ${hi}. Today ${now}.`, histNote: 'Lowest price across all manufacturers each day, print included where listed.', range: (a, b) => `Price range ${a} – ${b}`, cheapestFirst: 'Sorted from cheapest to most expensive.',
+      offersH: n => `Prices from ${n} manufacturers`, bestOf: n => `Cheapest of ${n} manufacturers`, dlv: { best: (m, v) => `Cheapest delivered to a US buyer: ${m} ≈ ${v} with shipping and import duty`, row: v => `≈ ${v} delivered to the US`, more: 'See profit and suggested price →' }, histH: 'Cheapest price history', histFlat: (d, v) => `The cheapest price has stayed at ${v} for the last ${d} days.`, histMove: (lo, ld, hi, now) => `Lowest ${lo} (${ld}), highest ${hi}. Today ${now}.`, histNote: 'Lowest price across all manufacturers each day, print included where listed.', range: (a, b) => `Price range ${a} – ${b}`, cheapestFirst: 'Sorted from cheapest to most expensive.',
       groupNoteModel: 'Same blank garment at every manufacturer. Print method, print area and shipping can differ — check details at the store.',
       groupNoteSpec: 'Same product type and size at every manufacturer. Exact materials and options can differ slightly — check details at the store.',
       allOffersOf: n => `Show all ${n} offers`, groupsInCat: 'Compare prices across manufacturers', allInCat: 'All products',
@@ -503,7 +505,7 @@ const LOCALES = {
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
-      offersH: n => `${n} üreticinin fiyatları`, bestOf: n => `${n} üretici arasında en ucuz`, histH: 'En ucuz fiyat geçmişi', histFlat: (d, v) => `En ucuz fiyat son ${d} gündür ${v}, değişmedi.`, histMove: (lo, ld, hi, now) => `En düşük ${lo} (${ld}), en yüksek ${hi}. Bugün ${now}.`, histNote: 'Her gün tüm üreticiler arasındaki en düşük fiyat; varsa baskı dahil fiyat.', range: (a, b) => `Fiyat aralığı ${a} – ${b}`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
+      offersH: n => `${n} üreticinin fiyatları`, bestOf: n => `${n} üretici arasında en ucuz`, dlv: { best: (m, v) => `ABD'deki alıcıya teslim en ucuz: ${m} ≈ ${v} (kargo ve gümrük vergisi dahil)`, row: v => `ABD'ye teslim ≈ ${v}`, more: 'Kârı ve önerilen satış fiyatını gör →' }, histH: 'En ucuz fiyat geçmişi', histFlat: (d, v) => `En ucuz fiyat son ${d} gündür ${v}, değişmedi.`, histMove: (lo, ld, hi, now) => `En düşük ${lo} (${ld}), en yüksek ${hi}. Bugün ${now}.`, histNote: 'Her gün tüm üreticiler arasındaki en düşük fiyat; varsa baskı dahil fiyat.', range: (a, b) => `Fiyat aralığı ${a} – ${b}`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
       groupNoteModel: 'Bütün üreticilerde aynı boş ürün modeli. Baskı yöntemi, baskı alanı ve kargo farklı olabilir; ayrıntılar üreticinin sayfasında.',
       groupNoteSpec: 'Bütün üreticilerde aynı ürün tipi ve ölçü. Malzeme ve seçenekler küçük farklar gösterebilir; ayrıntılar üreticinin sayfasında.',
       allOffersOf: n => `${n} teklifin hepsini göster`, groupsInCat: 'Üreticiler arasında fiyat karşılaştır', allInCat: 'Tüm ürünler',
@@ -613,9 +615,10 @@ function makeHelpers(L) {
     if (!printed.length || !blanks.length) return ladderOf(list);
     return ladderOf(printed) + `<h3 class="blank-h">${esc(t.blankH)}</h3><p class="muted sm">${esc(t.blankP)}</p>` + ladderOf(blanks);
   };
+  const delivered = deliveredUS;
   const ladderOf = list => {
     const best = [...groupBy(list, p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
-    const row = (p, i) => { const sh = p.shipping ? Object.values(p.shipping)[0] : null; return `<li data-c="${p.baseMinor}"${sh != null ? ` data-s="${sh}"` : ''}><span class="rank">${i + 1}</span>${img(p)}<div><a href="${href(P.maker(p.providerId))}"><b>${esc(provName(p.providerId))}</b></a><div class="muted sm"><a href="${href(P.product(p.id))}">${esc(p.title)}</a></div><div class="pf"></div></div><span class="price">${priceHtml(p)}${p.shipping && Object.values(p.shipping)[0] != null ? `<small>${esc(t.shipShort(fmt(Object.values(p.shipping)[0])))}</small>` : ''}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${esc((t.goAt || (() => t.go))(provName(p.providerId)))}</a></li>`; };
+    const row = (p, i) => { const sh = p.shipping ? Object.values(p.shipping)[0] : null; const dv = deliveredUS(p); return `<li data-c="${p.baseMinor}"${sh != null ? ` data-s="${sh}"` : ''}${dv != null ? ` data-d="${dv}"` : ''}><span class="rank">${i + 1}</span>${img(p)}<div><a href="${href(P.maker(p.providerId))}"><b>${esc(provName(p.providerId))}</b></a><div class="muted sm"><a href="${href(P.product(p.id))}">${esc(p.title)}</a></div><div class="pf"></div></div><span class="price">${priceHtml(p)}${p.shipping && Object.values(p.shipping)[0] != null ? `<small>${esc(t.shipShort(fmt(Object.values(p.shipping)[0])))}</small>` : ''}${(() => { const d = delivered(p); return d != null ? `<small class="dlv">${esc(t.dlv.row(fmt(d)))}</small>` : ''; })()}</span><a class="go" href="${esc(outbound(p))}" target="_blank" rel="nofollow sponsored noopener">${esc((t.goAt || (() => t.go))(provName(p.providerId)))}</a></li>`; };
     const rest = list.filter(p => !best.includes(p));
     return `<ol class="ladder">${best.map(row).join('')}</ol>` + (rest.length ? `<details class="more-offers"><summary>${esc(t.allOffersOf(list.length))}</summary><ol class="ladder">${list.map(row).join('')}</ol></details>` : '');
   };
@@ -628,7 +631,7 @@ function makeHelpers(L) {
   };
   const bsRow = b => { const name = provName(b.id); return `<div class="sec-head"><h2>${esc(t.bs.h(name))}</h2><a href="${href(P.maker(b.id))}">${t.seeAll} →</a></div><div class="cards hscroll">${b.items.map(p => bsCard(p, name)).join('')}</div><p class="muted sm">${esc(t.bs.src(name, H_date(b.checkedOn)))}</p>`; };
   const H_date = d => dateFmt.format(new Date(d + 'T12:00:00Z'));
-  return { bsRow, t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers, itemsOf, icards };
+  return { bsRow, delivered, t, P, fmt, numFmt, dateFmt, lastText, gTitle, pbBadge, priceHtml, ad, sponsor, img, imgTag, card, gcard, cards, gcards, tile, offers, itemsOf, icards };
 }
 
 // ---------- sayfa şablonu
@@ -678,7 +681,11 @@ const add = (rel, html) => { write(rel, html); sitemap.push(rel); };
 const singlesOf = list => list.filter(p => !groupOf.has(p.id));
 // kâr hesaplayıcı: ürün başına üretici teklifleri [üreticiId, ad, fiyat, fiyatTürü, ilkKargo|null, satışLinki] (baskılı olanlar önce)
 for (const g of groups) {
-  const best = [...groupBy(g.list, p => p.providerId)].map(([, l]) => l.find(p => !isBlank(p)) || l[0]);
+  // üretici başına teklif: ABD'ye teslimde en ucuz baskılı ürün (tahmin edilemiyorsa en ucuz baskılı); karşılaştırma kutusuyla aynı seçim
+  const best = [...groupBy(g.list, p => p.providerId)].map(([, l]) => {
+    const printed = l.filter(p => !isBlank(p)), withD = printed.map(p => [p, deliveredUS(p)]).filter(z => z[1] != null).sort((u, v) => u[1] - v[1]);
+    return withD.length ? withD[0][0] : printed[0] || l[0];
+  });
   // [üretici, ad, fiyat, fiyat türü, kaynaktaki kargo, bağlantı, çıkış ülkesi, ABD kargosu (kuruş), kargo kaynağı, ABD vergi %, vergi notu] — 6+ alanlar scripts/landed-cost.cjs
   write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote]; })));
 }
@@ -781,7 +788,10 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
     const gbest = (gp, title) => {
       const pool = gp.list.filter(p => !isBlank(p)).length ? gp.list.filter(p => !isBlank(p)) : gp.list, b = pool.reduce((a, c) => c.baseMinor < a.baseMinor ? c : a), m = provName(b.providerId);
       const box = cls => `<div class="${cls}"><div class="gb-t"><span class="gb-badge">${esc(t.bestOf(gp.providers.size))}</span><span class="gb-m">${esc(m)}</span><b class="gb-p">${esc(fmt(b.baseMinor))}</b>${cls === 'gstick' ? `<span class="gb-n">${esc(title)}</span>` : ''}</div><a class="cta gb-go" href="${esc(outbound(b))}" target="_blank" rel="nofollow sponsored noopener">${esc(t.goAt(m))}</a></div>`;
-      return box('gbest') + box('gstick');
+      // kargo + vergi sonrası en ucuz (yalnız tahmin edilebilen teklifler arasında)
+      const dl = [...groupBy(pool, x => x.providerId)].map(([, l]) => l.map(x => [x, H.delivered(x)]).filter(z => z[1] != null).sort((u, v) => u[1] - v[1])[0]).filter(Boolean).sort((u, v) => u[1] - v[1])[0];
+      const dline = dl ? `<p class="gb-dlv">${esc(t.dlv.best(provName(dl[0].providerId), fmt(dl[1])))} · <a href="${href(P.calc)}?p=${encodeURIComponent(gp.slug)}">${esc(t.dlv.more)}</a></p>` : '';
+      return box('gbest').replace(/<\/div>$/, dline + '</div>') + box('gstick');
     };
     // en ucuz fiyat geçmişi: sunucuda çizilen basamaklı SVG (en az 5 gün veri varsa)
     const ghist = slug => {

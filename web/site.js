@@ -302,6 +302,19 @@
         };
         bar.appendChild(b);
       });
+      // ABD'ye teslim maliyetine göre sıralama (kargo + vergi; data-d), tahmini olmayanlar sona
+      if (top.some(function (li) { return li.hasAttribute('data-d'); })) {
+        var sb = document.createElement('button'), orig = top.slice();
+        sb.type = 'button'; sb.className = 'chip'; sb.setAttribute('aria-pressed', 'false');
+        sb.innerHTML = '<b>' + (tr ? "ABD'ye teslime göre sırala" : 'Sort by US delivered cost') + '</b>';
+        sb.onclick = function () {
+          var on = sb.getAttribute('aria-pressed') !== 'true';
+          sb.setAttribute('aria-pressed', on ? 'true' : 'false'); sb.classList.toggle('on', on);
+          var d = function (li) { var v = li.getAttribute('data-d'); return v == null ? Infinity : +v; };
+          (on ? top.slice().sort(function (a, b) { return d(a) - d(b); }) : orig).forEach(function (li) { lad.appendChild(li); });
+        };
+        bar.appendChild(sb);
+      }
       var anchor = document.querySelector('.sellbox') || lad;
       anchor.parentNode.insertBefore(bar, anchor);
     }

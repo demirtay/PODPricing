@@ -181,3 +181,5 @@ body.gs-on .top{position:relative} /* şerit açıkken üst menü yukarıda kals
 .ddp-res{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}.ddp-res>div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}.ddp-res span{color:var(--muted);font-size:14px}.ddp-res b{font-size:26px;font-weight:800}.ddp-res .ddp-total{border-color:var(--accent);background:var(--chip)}.ddp-res .ddp-total b{color:var(--accent)}
 .tablewrap{overflow-x:auto}.ddp-table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:15px}.ddp-table th,.ddp-table td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}.ddp-table th{font-size:13px;color:var(--muted)}
 .lc td small{font-size:12px;line-height:1.3}.lc td .muted{font-style:italic}
+.gb-dlv{flex-basis:100%;margin:2px 0 0;font-size:14.5px;color:var(--ink)}.gb-dlv a{color:var(--accent);font-weight:600}
+.ladder .price small.dlv{display:block;color:var(--muted);font-size:12.5px;font-weight:500}

@@ -1,0 +1,217 @@
+{
+  "note": "Üretici başına varsayılan çıkış (gönderim) ülkesi. Ürünün kendi availableCountries alanı varsa o önceliklidir; ürün adındaki açık ülke işareti (Made in USA, (US), (VN), (EU)...) varsayılanı ezer. confidence: high = üreticinin kendi sayfası/kataloğu, medium = birden çok bağımsız kaynak, low = tek kaynak/çıkarım. null = bilinmiyor (vergi hesaplanmaz, sayfada uyarı çıkar).",
+  "checked": "2026-10-20",
+  "providers": {
+    "interestprint": {
+      "default": "CN",
+      "also": [
+        "US",
+        "AU"
+      ],
+      "confidence": "medium",
+      "source": "Shopify App Store listesi ve Trustpilot: ABD, Avustralya ve Çin'de tesis"
+    },
+    "printdoors": {
+      "default": "CN",
+      "also": [
+        "US"
+      ],
+      "confidence": "high",
+      "source": "printify.com/shipping-rates/printdoors (ülke: China) + Printdoors e-postası (Çin ve ABD fabrikası)"
+    },
+    "yoycol": {
+      "default": "CN",
+      "also": [
+        "US"
+      ],
+      "confidence": "medium",
+      "source": "Yoycol: fulfillment merkezi Çin; 'Printed in USA' ürünleri ABD"
+    },
+    "inkedjoy": {
+      "default": "CN",
+      "also": [
+        "US",
+        "AU"
+      ],
+      "confidence": "medium",
+      "source": "Eprolo'nun POD bölümü; katalogda 'Made in USA' ve 'Made in Australia' ayrı"
+    },
+    "printkk": {
+      "default": "CN",
+      "also": [
+        "US"
+      ],
+      "confidence": "medium",
+      "source": "Katalogda 'Made in USA' ürünler ayrı; diğerleri Çin üretimi (Yanwen ile ABD'ye kargo, 19 Eki siparişi)"
+    },
+    "peaprint": {
+      "default": "CN",
+      "confidence": "medium",
+      "source": "PeaPrint blogu: Çin merkezli tedarikçi"
+    },
+    "artsadd": {
+      "default": "CN",
+      "confidence": "high",
+      "source": "printify.com/shipping-rates/artsadd (ülke: China)"
+    },
+    "merchize": {
+      "default": "VN",
+      "also": [
+        "US",
+        "CN",
+        "EU",
+        "GB",
+        "AU"
+      ],
+      "confidence": "high",
+      "source": "merchize.com: Vietnam fabrikası (Hanoi) + ABD, AB, İngiltere, Avustralya, Çin tesisleri"
+    },
+    "burgerprints": {
+      "default": null,
+      "also": [
+        "US",
+        "VN",
+        "CN",
+        "EU"
+      ],
+      "confidence": "medium",
+      "source": "burgerprints.com: Vietnam, Çin, AB ve ABD'de üretim; ürün adında (US)/(VN)/(EU) etiketi"
+    },
+    "tapstitch": {
+      "default": null,
+      "confidence": "low",
+      "source": "doğrulanmadı"
+    },
+    "customizingbox": {
+      "default": null,
+      "confidence": "low",
+      "source": "doğrulanmadı"
+    },
+    "merchfarm": {
+      "default": null,
+      "confidence": "low",
+      "source": "doğrulanmadı"
+    },
+    "toaddit": {
+      "default": null,
+      "confidence": "low",
+      "source": "doğrulanmadı; 'USA-Made' ürünleri ABD"
+    },
+    "popcustoms": {
+      "default": null,
+      "confidence": "low",
+      "source": "doğrulanmadı"
+    },
+    "treatpod": {
+      "default": "GB",
+      "confidence": "low",
+      "source": "treatpod.co.uk (alan adı)"
+    },
+    "scalablepress": {
+      "default": "US",
+      "confidence": "high",
+      "source": "katalog availableCountries"
+    },
+    "lumaprints": {
+      "default": "US",
+      "confidence": "high",
+      "source": "katalog availableCountries"
+    },
+    "neatopod": {
+      "default": "US",
+      "confidence": "high",
+      "source": "katalog availableCountries"
+    },
+    "shirtee": {
+      "default": "EU",
+      "confidence": "high",
+      "source": "katalog availableCountries (Almanya)"
+    },
+    "simpleprint": {
+      "default": "US",
+      "confidence": "high",
+      "source": "simpleprint.com: 'All of our products are printed in California, USA'"
+    },
+    "gearment": {
+      "default": "US",
+      "confidence": "high",
+      "source": "gearment.com: '3 expansive fulfillment centers in the US'"
+    },
+    "backstoryprints": {
+      "default": "US",
+      "confidence": "high",
+      "source": "backstoryprints.com: 'printed, packed and shipped ... in Downtown Los Angeles'"
+    },
+    "podhut": {
+      "default": "US",
+      "confidence": "medium",
+      "source": "podhut.com: 'YOUR USA PRINT PARTNER'"
+    },
+    "miamerchandise": {
+      "default": "US",
+      "confidence": "high",
+      "source": "printify.com/shipping-rates/m-i-a-merchandise (ülke: United States)"
+    },
+    "colouroo": {
+      "default": "AU",
+      "confidence": "medium",
+      "source": "colouroo.com.au (Avustralya alan adı)"
+    },
+    "twofifteen": {
+      "default": "GB",
+      "confidence": "medium",
+      "source": "twofifteen.co.uk (İngiltere)"
+    },
+    "inkthreadable": {
+      "default": "GB",
+      "confidence": "medium",
+      "source": "inkthreadable.co.uk (İngiltere)"
+    },
+    "snapwear": {
+      "default": null,
+      "also": [
+        "US",
+        "EU"
+      ],
+      "confidence": "medium",
+      "source": "snapwear.pro: 'USA & EU Fulfillment'"
+    },
+    "sellfy": {
+      "default": null,
+      "confidence": "medium",
+      "source": "sellfy.com: dünya genelinde 11 tesis"
+    },
+    "pengine": {
+      "default": null,
+      "confidence": "low",
+      "source": "pengine.io sayfasında konum yok"
+    },
+    "printmood": {
+      "default": null,
+      "confidence": "low",
+      "source": "printmood.com: 'our own facility' (ülke yok)"
+    }
+  },
+  "titleRules": [
+    {
+      "to": "US",
+      "pattern": "(made|printed|produced|manufactured)\\s+in\\s+(the\\s+)?(usa|us|u\\.s\\.a?\\.?|united states)|\\((us|usa)(\\s+label)?\\)|\\busa[- ]made\\b|ships?\\s+from\\s+(the\\s+)?(us|usa)\\b"
+    },
+    {
+      "to": "VN",
+      "pattern": "\\((vn|vietnam)\\)|made in vietnam"
+    },
+    {
+      "to": "CN",
+      "pattern": "\\((cn|china)\\)|made in china"
+    },
+    {
+      "to": "EU",
+      "pattern": "\\((eu)\\)|made in (the\\s+)?(eu|europe)"
+    },
+    {
+      "to": "AU",
+      "pattern": "\\((au)\\)|made in australia"
+    }
+  ]
+}

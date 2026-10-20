@@ -40,6 +40,8 @@ function normalize(b, checkedAt) {
   r.decorationMethods = methods;
   r.availableCountries = [...new Set((b.targetMarkets || []).map(m => MARKET[String(m).toLowerCase()] || m).filter(Boolean))];
   r.fulfillmentProvider = b.printProviderCount ? `${b.printProviderCount} baskı tesisi` : null;
+  // tek tesisli ürünlerde tesis adı: kargo tablosu (data/shipping/printify.json) bu adla eşleşir
+  r.printProvider = b.printProviderName || null;
   r.sourceKind = 'api';
   r.priceVerified = true;
   r.priceVerification = 'public-catalog-service';

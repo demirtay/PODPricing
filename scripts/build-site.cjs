@@ -96,6 +96,7 @@ for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
 // grupların günlük en ucuz fiyat geçmişi (scripts/group-history.cjs): bugünün kaydı her derlemede yazılır, sayfada grafik olur
 const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');
+const LC = require('./landed-cost.cjs');
 const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
 GH.save(gHist);
 const groupsByType = groupBy(groups, g => g.type);
@@ -354,11 +355,11 @@ const LOCALES = {
       },
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
-        intro: 'Pick a product and your selling price. We subtract the marketplace fees and each manufacturer\'s price, and rank manufacturers by your profit.',
-        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', shipOut: 'Shipping you pay the manufacturer ($)', platform: 'Where you sell',
+        intro: 'Pick a product and your selling price. For every manufacturer we add the product cost, US shipping, US import duty (based on where it ships from) and marketplace fees, then show your profit, your break-even price and a suggested price for your target margin.',
+        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', shipOut: 'Shipping if unknown ($)', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', destUS: 'United States',
         custom: 'Custom fee', pct: 'Fee %', fixed: 'Fixed fee ($)',
         th: ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin'], pick: 'Choose a product to see results.', loading: 'Loading…',
-        fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Taxes and currency conversion are not included.',
+        fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Shipping: the manufacturer’s own US rate where published, otherwise the median US rate of print providers in the same ship-from country (marked est.). US import duty: 0 when the item ships from the US; otherwise the HTS rate for the product type plus the 2026 Section 301 surcharge for the ship-from country (rates checked 20 Oct 2026). Duty is estimated on the product cost; it is not legal advice.',
       },
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
@@ -493,11 +494,11 @@ const LOCALES = {
       },
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
-        intro: 'Bir ürün ve satış fiyatı seç. Pazaryeri komisyonlarını ve her üreticinin fiyatını düşüp üreticileri kârına göre sıralıyoruz.',
-        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', shipOut: 'Üreticiye ödediğin kargo ($)', platform: 'Nerede satıyorsun',
+        intro: 'Bir ürün ve satış fiyatı seç. Her üretici için ürün maliyeti, ABD kargosu, ürünün çıktığı ülkeye göre ABD gümrük vergisi ve pazar yeri komisyonunu topluyoruz; kârını, zararsız en düşük fiyatı ve hedef kâr oranına göre önerilen satış fiyatını gösteriyoruz.',
+        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', shipOut: 'Kargo bilinmiyorsa ($)', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', destUS: 'ABD',
         custom: 'Özel komisyon', pct: 'Komisyon %', fixed: 'Sabit ücret ($)',
         th: ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı'], pick: 'Sonuçları görmek için bir ürün seç.', loading: 'Yükleniyor…',
-        fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Vergi ve kur farkı dahil değildir.',
+        fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Kargo: üreticinin yayınladığı ABD ücreti; yoksa aynı ülkeden gönderen baskı tesislerinin ortanca ABD ücreti (tahmini). ABD gümrük vergisi: ürün ABD’den çıkıyorsa 0; değilse ürün tipinin HTS oranı + çıkış ülkesinin 2026 Section 301 ek vergisi (oranlar 20 Ekim 2026). Vergi ürün maliyeti üzerinden tahmindir, hukuki tavsiye değildir.',
       },
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
@@ -678,7 +679,8 @@ const singlesOf = list => list.filter(p => !groupOf.has(p.id));
 // kâr hesaplayıcı: ürün başına üretici teklifleri [üreticiId, ad, fiyat, fiyatTürü, ilkKargo|null, satışLinki] (baskılı olanlar önce)
 for (const g of groups) {
   const best = [...groupBy(g.list, p => p.providerId)].map(([, l]) => l.find(p => !isBlank(p)) || l[0]);
-  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p)])));
+  // [üretici, ad, fiyat, fiyat türü, kaynaktaki kargo, bağlantı, çıkış ülkesi, ABD kargosu (kuruş), kargo kaynağı, ABD vergi %, vergi notu] — 6+ alanlar scripts/landed-cost.cjs
+  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote]; })));
 }
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 
@@ -1026,6 +1028,8 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <label>${esc(C.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>
 <label>${esc(C.shipIn)}<input name="shipIn" type="number" min="0" step="0.01" value="0"></label>
 <label>${esc(C.shipOut)}<input name="shipOut" type="number" min="0" step="0.01" value="0"></label>
+<label>${esc(C.dest)}<select name="dest"><option value="US">${esc(C.destUS)}</option></select></label>
+<label>${esc(C.margin)}<input name="margin" type="number" min="0" max="90" step="1" value="30"></label>
 <label>${esc(C.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option><option value="custom">${esc(C.custom)}</option></select></label>
 <label class="custom" hidden>${esc(C.pct)}<input name="pct" type="number" min="0" step="0.1" value="10"></label>
 <label class="custom" hidden>${esc(C.fixed)}<input name="fixed" type="number" min="0" step="0.01" value="0.30"></label>

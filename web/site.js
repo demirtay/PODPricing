@@ -143,18 +143,47 @@
       amazon: function (rev) { return Math.max(1, rev * 0.15); },
       custom: function (rev) { return rev * (+calc.elements.pct.value || 0) / 100 + (+calc.elements.fixed.value || 0); }
     };
-    var TH = LANG === 'tr' ? ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı', 'Mağazaya git ↗'] : ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin', 'Go to store ↗'];
+    var TR = LANG === 'tr';
+    var TH = TR ? ['Üretici', 'Ürün', 'Kargo', 'Vergi', 'Komisyon', 'Kâr', 'Zararsız en düşük fiyat', 'Önerilen fiyat', 'Mağazaya git ↗'] : ['Manufacturer', 'Product', 'Shipping', 'Duty', 'Fees', 'Profit', 'Break-even price', 'Suggested price', 'Go to store ↗'];
+    var CC = TR ? { US: 'ABD', CN: 'Çin', VN: 'Vietnam', EU: 'AB', GB: 'İngiltere', AU: 'Avustralya', CA: 'Kanada', MX: 'Meksika', TR: 'Türkiye', IN: 'Hindistan' } : { US: 'USA', CN: 'China', VN: 'Vietnam', EU: 'EU', GB: 'UK', AU: 'Australia', CA: 'Canada', MX: 'Mexico', TR: 'Türkiye', IN: 'India' };
+    var T = TR ? { from: 'Çıkış', unk: 'çıkış ülkesi bilinmiyor', est: 'tahmini', cn: '+ Çin ek: %7,5-25 olabilir', noDuty: 'vergi hesaplanamadı', noShip: 'kargo bilinmiyor' }
+      : { from: 'Ships from', unk: 'ship-from unknown', est: 'est.', cn: '+ China 301: 7.5-25% may apply', noDuty: 'duty not estimated', noShip: 'shipping unknown' };
     var usd = function (v) { return nf.format(v); };
+    // fiyat: satıştan komisyon ve maliyet düşülünce hedef kâr oranı (m) kalan en düşük satış fiyatı (komisyon fiyatla değiştiği için ikiye bölerek)
+    function priceFor(cost, shipIn, feeFn, m) {
+      var f = function (P) { var rev = P + shipIn; return rev - feeFn(rev) - cost - m * rev; }, lo = 0, hi = 5000;
+      if (f(hi) < 0) return null;
+      for (var i = 0; i < 60; i++) { var mid = (lo + hi) / 2; if (f(mid) >= 0) hi = mid; else lo = mid; }
+      return hi;
+    }
     function draw() {
       if (!offers) return;
       var price = +calc.elements.price.value || 0, shipIn = +calc.elements.shipIn.value || 0, shipOut = +calc.elements.shipOut.value || 0;
-      var rev = price + shipIn, fee = FEES[calc.elements.platform.value](rev);
-      var rows = offers.map(function (o) { var cost = o[2] / 100 + shipOut; var profit = rev - fee - cost; return { o: o, cost: cost, profit: profit, margin: rev ? profit / rev * 100 : 0 }; })
+      var m = Math.min(90, Math.max(0, +calc.elements.margin.value || 0)) / 100, feeFn = FEES[calc.elements.platform.value];
+      var rev = price + shipIn, fee = feeFn(rev);
+      // kargosu bilinmeyen teklife, aynı üründe kargosu bilinen tekliflerin ortancası (kullanıcı değer girdiyse o)
+      var known = offers.filter(function (o) { return o[7] != null; }).map(function (o) { return o[7] / 100; }).sort(function (a, b) { return a - b; });
+      var medShip = known.length ? known[known.length >> 1] : 0, fallback = shipOut || medShip;
+      var rows = offers.map(function (o) {
+        var base = o[2] / 100, shipKnown = o[7] != null, ship = shipKnown ? o[7] / 100 : fallback;
+        var dutyKnown = o[9] != null, duty = dutyKnown ? Math.round(base * o[9]) / 100 : 0;
+        var cost = base + ship + duty, profit = rev - fee - cost;
+        return { o: o, base: base, ship: ship, shipKnown: shipKnown, duty: duty, dutyKnown: dutyKnown, profit: profit, be: priceFor(cost, shipIn, feeFn, 0), rec: priceFor(cost, shipIn, feeFn, m) };
+      })
         // boş ürün / toplu alım fiyatları baskılı tekliflerle yarışmasın: en sona
-        .sort(function (a, b) { var ba = /^(bos|toplu)$/.test(a.o[3]), bb = /^(bos|toplu)$/.test(b.o[3]); return ba - bb || b.profit - a.profit; });
-      out.innerHTML = '<div class="tbl"><table><thead><tr><th>' + TH[0] + '</th><th class="num">' + TH[1] + '</th><th class="num">' + TH[2] + '</th><th class="num">' + TH[3] + '</th><th class="num">' + TH[4] + '</th><th></th></tr></thead><tbody>' +
+        // vergisi hesaplanamayanlar (çıkış ülkesi/ürün tipi bilinmiyor) sona: eksik maliyetle öne çıkmasınlar
+        .sort(function (a, b) { var ba = /^(bos|toplu)$/.test(a.o[3]), bb = /^(bos|toplu)$/.test(b.o[3]); return ba - bb || (!a.dutyKnown) - (!b.dutyKnown) || b.profit - a.profit; });
+      var cell = function (v, ok, note) { return '<td class="num">' + (ok ? usd(v) : '<span class="muted">' + usd(v) + '</span>') + (note ? '<br><small class="muted">' + note + '</small>' : '') + '</td>'; };
+      out.innerHTML = '<div class="tbl"><table class="lc"><thead><tr>' + TH.slice(0, 8).map(function (h, i) { return '<th' + (i ? ' class="num"' : '') + '>' + h + '</th>'; }).join('') + '<th></th></tr></thead><tbody>' +
         rows.map(function (r, i) {
-          return '<tr><td>' + (i + 1) + '. <b>' + esc(r.o[1]) + '</b> ' + badgeTxt(r.o[3]) + '</td><td class="num">' + usd(r.cost) + '</td><td class="num">' + usd(fee) + '</td><td class="num ' + (r.profit >= 0 ? 'win' : 'loss') + '"><b>' + usd(r.profit) + '</b></td><td class="num">' + r.margin.toFixed(0) + '%</td><td><a class="go" href="' + esc(r.o[5]) + '" target="_blank" rel="nofollow sponsored noopener">' + TH[5] + '</a></td></tr>';
+          var o = r.o, origin = o[6] ? T.from + ': ' + (CC[o[6]] || o[6]) : T.unk;
+          var shipNote = !r.shipKnown || o[8] === 'estimate' ? T.est : '';
+          var dutyNote = !r.dutyKnown ? T.noDuty : o[9] ? '%' + String(o[9]).replace('.', TR ? ',' : '.') + (o[10] === 'cn-extra' ? '<br>' + T.cn : '') : '';
+          return '<tr><td>' + (i + 1) + '. <b>' + esc(o[1]) + '</b> ' + badgeTxt(o[3]) + '<br><small class="muted">' + esc(origin) + '</small></td>' +
+            cell(r.base, true) + cell(r.ship, r.shipKnown, shipNote) + cell(r.duty, r.dutyKnown, dutyNote) + cell(fee, true) +
+            '<td class="num ' + (r.profit >= 0 ? 'win' : 'loss') + '"><b>' + usd(r.profit) + '</b></td>' +
+            '<td class="num">' + (r.be != null ? usd(r.be) : '—') + '</td><td class="num"><b>' + (r.rec != null ? usd(r.rec) : '—') + '</b></td>' +
+            '<td><a class="go" href="' + esc(o[5]) + '" target="_blank" rel="nofollow sponsored noopener">' + TH[8] + '</a></td></tr>';
         }).join('') + '</tbody></table></div>';
     }
     var metaCache = null;

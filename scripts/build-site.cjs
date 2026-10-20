@@ -360,7 +360,7 @@ const LOCALES = {
       hc: { h: 'What will you earn on each sale?', p: 'Product cost, shipping to your buyer, import duty and marketplace fees, from every manufacturer that makes it. Real published rates, no estimates.', price: 'Your selling price ($)', btn: 'Calculate my profit', note: (a, n) => `Real shipping and duty data for ${a} of ${n} compared products; more manufacturers are added every week.` },
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
-        intro: 'Pick a product and your selling price. For every manufacturer we add the product cost, US shipping, US import duty (based on where it ships from) and marketplace fees, then show your profit, your break-even price and a suggested price for your target margin.',
+        intro: 'Pick a product and your price. See what you keep with each manufacturer after shipping, import duty and marketplace fees.',
         product: 'Product', price: 'Your price, optional ($)', shipIn: 'Shipping you charge the customer ($)', adv: 'Advanced', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', dests: [['US', 'United States'], ['GB', 'United Kingdom'], ['EU', 'European Union'], ['CA', 'Canada'], ['AU', 'Australia']],
         custom: 'Custom fee', pct: 'Fee %', fixed: 'Fixed fee ($)',
         th: ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin'], pick: 'Choose a product to see results.', loading: 'Loading…',
@@ -500,7 +500,7 @@ const LOCALES = {
       hc: { h: 'Bu ürünü satarsan ne kazanırsın?', p: 'Ürün maliyeti, alıcıya kargo, gümrük vergisi ve pazar yeri komisyonu; ürünü yapan her üretici için. Üreticilerin yayınladığı gerçek ücretler, tahmin yok.', price: 'Satış fiyatın ($)', btn: 'Kârımı hesapla', note: (a, n) => `Karşılaştırdığımız ${n} ürünün ${a} tanesinde gerçek kargo ve vergi verisi var; her hafta yeni üreticiler ekleniyor.` },
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
-        intro: 'Bir ürün ve satış fiyatı seç. Her üretici için ürün maliyeti, ABD kargosu, ürünün çıktığı ülkeye göre ABD gümrük vergisi ve pazar yeri komisyonunu topluyoruz; kârını, zararsız en düşük fiyatı ve hedef kâr oranına göre önerilen satış fiyatını gösteriyoruz.',
+        intro: 'Ürünü ve satış fiyatını seç; her üreticide kargo, gümrük ve komisyondan sonra cebine ne kaldığını gör.',
         product: 'Ürün', price: 'Satış fiyatın, isteğe bağlı ($)', shipIn: 'Müşteriden aldığın kargo ($)', adv: 'Gelişmiş', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', dests: [['US', 'ABD'], ['GB', 'İngiltere'], ['EU', 'Avrupa Birliği'], ['CA', 'Kanada'], ['AU', 'Avustralya']],
         custom: 'Özel komisyon', pct: 'Komisyon %', fixed: 'Sabit ücret ($)',
         th: ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı'], pick: 'Sonuçları görmek için bir ürün seç.', loading: 'Yükleniyor…',
@@ -1062,7 +1062,7 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <label class="custom" hidden>${esc(C.fixed)}<input name="fixed" type="number" min="0" step="0.01" value="0.30"></label>
 <details class="wide adv"><summary>${esc(C.adv)}</summary><label>${esc(C.shipIn)}<input name="shipIn" type="number" min="0" step="0.01" value="0"></label></details>
 </form><div id="calc-out"><p class="muted">${esc(C.pick)}</p></div>
-<p class="muted sm">${esc(C.fees)}</p>${lg === 'tr' ? `<p><a class="go" href="${href(DDP.path)}">Türkiye'den ABD'ye gönderiyor musunuz? Kargo + gümrük vergisi hesaplayıcı →</a></p>` : ''}`,
+<details class="others"><summary>${lg === 'tr' ? 'Hesap nasıl yapılıyor?' : 'How is this calculated?'}</summary><p class="muted sm">${esc(C.fees)}</p></details>${lg === 'tr' ? `<p><a class="go" href="${href(DDP.path)}">Türkiye'den ABD'ye gönderiyor musunuz? Kargo + gümrük vergisi hesaplayıcı →</a></p>` : ''}`,
   }));
 
   // Türkçe: ABD'ye kargo + gümrük vergisi (DDP) hesaplayıcı ve rehber (scripts/ddp-page.cjs)

@@ -146,11 +146,25 @@
     var TR = LANG === 'tr';
     var TH = TR ? ['Üretici', 'Ürün', 'Kargo', 'Vergi', 'Komisyon', 'Kâr', 'Zararsız en düşük fiyat', 'Önerilen fiyat', 'Mağazaya git ↗'] : ['Manufacturer', 'Product', 'Shipping', 'Duty', 'Fees', 'Profit', 'Break-even price', 'Suggested price', 'Go to store ↗'];
     var CC = TR ? { US: 'ABD', CN: 'Çin', VN: 'Vietnam', EU: 'AB', GB: 'İngiltere', AU: 'Avustralya', CA: 'Kanada', MX: 'Meksika', TR: 'Türkiye', IN: 'Hindistan' } : { US: 'USA', CN: 'China', VN: 'Vietnam', EU: 'EU', GB: 'UK', AU: 'Australia', CA: 'Canada', MX: 'Mexico', TR: 'Türkiye', IN: 'India' };
-    var T = TR ? { from: 'Çıkış', unk: 'çıkış ülkesi bilinmiyor', est: 'tahmini', cn: '+ Çin ek: %7,5-25 olabilir', noDuty: 'vergi hesaplanamadı', noShip: 'kargo bilinmiyor', noData: 'veri yok', facility: 'tesis/yöntem', mk: { title: function (k) { return PFN[k.market] + ' pazarında bu ürün: ' + k.n + ' gerçek ilan'; }, p25: 'ucuz çeyrek', med: 'ortanca', p75: 'pahalı çeyrek', avg: 'ortalama',
-        yours: function (x) { return 'Senin en düşük önerilen fiyatın ' + x + ':'; }, low: 'pazarın ucuz tarafında, rekabetçi.', mid: 'pazarın orta aralığında.', high: 'pazardaki ilanların çoğundan pahalı; kâr hedefini ya da üreticiyi gözden geçir.',
+    var T = TR ? { from: 'Çıkış', unk: 'çıkış ülkesi bilinmiyor', est: 'tahmini', cn: '+ Çin ek: %7,5-25 olabilir', noDuty: 'vergi hesaplanamadı', noShip: 'kargo bilinmiyor', noData: 'veri yok', facility: 'tesis/yöntem', s: { go: 'Mağazaya git ↗', from: function (c) { return c + "'den gönderiliyor"; }, none: 'Bu ürünü yapan üreticilerin hiçbiri kargo ücretini yayınlamıyor; kâr hesaplanamıyor (tahmin kullanmıyoruz).',
+        main: function (n, p, k) { return 'En kârlı seçim <b>' + n + '</b>: ' + p + "'a satarsan satış başı " + k + ' kalır.'; },
+        mainNoPrice: function (n, be) { return 'En düşük maliyet <b>' + n + '</b>: ' + be + "'ın altında satarsan zarar edersin."; },
+        sub: function (be, pct, rec) { return be + "'ın altında satarsan zarar edersin · %" + pct + ' kâr için önerilen satış fiyatı: ' + rec; },
+        feeNote: function (pf, fee, p) { return 'Kâr = satış fiyatı − toplam maliyet − ' + pf + ' komisyonu (' + p + ' satışta ' + fee + ').'; }, custom: 'pazar yeri',
+        th: ['Üretici', 'Toplam maliyet', 'Kârın', function (p) { return '%' + p + ' kâr için fiyat'; }],
+        parts: function (b, s, d) { return 'ürün ' + b + ' + kargo ' + s + ' + vergi ' + d; }, be: function (x) { return 'zararsız: ' + x; },
+        others: function (n) { return 'Kargo ücretini yayınlamayan ' + n + ' üretici (yalnız ürün fiyatı)'; }, only: function (x) { return 'ürün ' + x; } }, mk: { title: function (k) { return PFN[k.market] + ' pazarında bu ürün: ' + k.n + ' gerçek ilan'; }, p25: 'ucuz çeyrek', med: 'ortanca', p75: 'pahalı çeyrek', avg: 'ortalama', srcH: 'Kaynak',
+        yours: function (x) { return 'Önerilen fiyatın (' + x + ')'; }, low: 'pazarın ucuz tarafında, rekabetçi.', mid: 'pazarın orta aralığında.', high: 'pazardaki ilanların çoğundan pahalı; kâr hedefini ya da üreticiyi gözden geçir.',
         src: function (k) { return 'Kaynak: ' + PFN[k.market] + ' ' + k.category + ' kategorisi' + (k.filter ? ', adında “' + k.filter + '” geçen ilanlar' : '') + ' · ClickScrape ile ' + k.collected + ' tarihinde toplandı' + (k.fx ? ' · ' + k.fx.from + ' fiyatlar ' + k.fx.source + ' kuru (' + k.fx.date + ', 1 USD = ' + k.fx.perUSD + ' ' + k.fx.from + ') ile çevrildi' : '') + ' · ilan fiyatı, kargo hariç; indirimli fiyat olabilir.'; } },  coverage: function (a, n) { return n + ' üreticinin ' + a + ' tanesinde kargo ve vergi verisi tam; diğerlerinde kâr hesaplanmıyor, tahmin kullanmıyoruz.'; }, dn: { 'eu-flat': 'AB sabit €3', gb: 'KDV pazar yerinde', au: 'GST pazar yerinde', 'eu-inside': 'AB içinden', 'ca-cusma': 'C$150 altı muaf' } }
-      : { from: 'Ships from', unk: 'ship-from unknown', est: 'est.', cn: '+ China 301: 7.5-25% may apply', noDuty: 'duty not estimated', noShip: 'shipping unknown', noData: 'no data', facility: 'facility/method', mk: { title: function (k) { return 'This product on ' + PFN[k.market] + ': ' + k.n + ' real listings'; }, p25: 'lower quartile', med: 'median', p75: 'upper quartile', avg: 'average',
-        yours: function (x) { return 'Your lowest suggested price ' + x + ' is'; }, low: 'on the cheap side of the market, competitive.', mid: 'in the middle of the market.', high: 'above most listings; review your margin or manufacturer.',
+      : { from: 'Ships from', unk: 'ship-from unknown', est: 'est.', cn: '+ China 301: 7.5-25% may apply', noDuty: 'duty not estimated', noShip: 'shipping unknown', noData: 'no data', facility: 'facility/method', s: { go: 'Go to store ↗', from: function (c) { return 'Ships from ' + c; }, none: 'None of the manufacturers that make this product publish shipping rates, so profit cannot be calculated (we do not estimate).',
+        main: function (n, p, k) { return 'Most profitable: <b>' + n + '</b>. Sell at ' + p + ' and you keep ' + k + ' per sale.'; },
+        mainNoPrice: function (n, be) { return 'Lowest cost: <b>' + n + '</b>. Below ' + be + ' you lose money.'; },
+        sub: function (be, pct, rec) { return 'Below ' + be + ' you lose money · suggested price for a ' + pct + '% margin: ' + rec; },
+        feeNote: function (pf, fee, p) { return 'Profit = selling price − total cost − ' + pf + ' fees (' + fee + ' on a ' + p + ' sale).'; }, custom: 'marketplace',
+        th: ['Manufacturer', 'Total cost', 'Your profit', function (p) { return 'Price for ' + p + '% margin'; }],
+        parts: function (b, s, d) { return 'product ' + b + ' + shipping ' + s + ' + duty ' + d; }, be: function (x) { return 'break-even: ' + x; },
+        others: function (n) { return n + ' manufacturers that do not publish shipping (product price only)'; }, only: function (x) { return 'product ' + x; } }, mk: { title: function (k) { return 'This product on ' + PFN[k.market] + ': ' + k.n + ' real listings'; }, p25: 'lower quartile', med: 'median', p75: 'upper quartile', avg: 'average', srcH: 'Source',
+        yours: function (x) { return 'Your suggested price (' + x + ') is'; }, low: 'on the cheap side of the market, competitive.', mid: 'in the middle of the market.', high: 'above most listings; review your margin or manufacturer.',
         src: function (k) { return 'Source: ' + PFN[k.market] + ' ' + k.category + ' category' + (k.filter ? ', listings with “' + k.filter + '” in the title' : '') + ' · collected with ClickScrape on ' + k.collected + (k.fx ? ' · ' + k.fx.from + ' prices converted at the ' + k.fx.source + ' rate (' + k.fx.date + ', 1 USD = ' + k.fx.perUSD + ' ' + k.fx.from + ')' : '') + ' · listing price excluding shipping; may be a sale price.'; } },  coverage: function (a, n) { return 'Full shipping and duty data for ' + a + ' of ' + n + ' manufacturers; profit is not calculated for the rest (we do not estimate).'; }, dn: { 'eu-flat': 'EU flat €3', gb: 'VAT at checkout', au: 'GST at checkout', 'eu-inside': 'ships within EU', 'ca-cusma': 'duty-free under C$150' } };
     var usd = function (v) { return nf.format(v); };
     var PFN = { etsy: 'Etsy', shopify: 'Shopify', amazon: 'Amazon Handmade' };
@@ -178,19 +192,27 @@
       })
         // tam verili teklifler kâra göre önde; boş/toplu fiyatlar ve verisi eksikler sonda
         .sort(function (a, b) { var ba = /^(bos|toplu)$/.test(a.o[3]), bb = /^(bos|toplu)$/.test(b.o[3]); return ba - bb || (!a.ok) - (!b.ok) || (a.ok ? b.profit - a.profit : a.base - b.base); });
-      var na = '<span class="muted">' + T.noData + '</span>';
-      var money = function (x) { return x == null ? na : usd(x); };
-      var nOk = rows.filter(function (r) { return r.ok; }).length;
-      out.innerHTML = marketHtml(rows) + '<p class="muted sm">' + T.coverage(nOk, rows.length) + '</p><div class="tbl"><table class="lc"><thead><tr>' + TH.slice(0, 8).map(function (h, i) { return '<th' + (i ? ' class="num"' : '') + '>' + h + '</th>'; }).join('') + '<th></th></tr></thead><tbody>' +
-        rows.map(function (r, i) {
-          var o = r.o, v = r.v, origin = T.from + ': ' + (v[0] ? (CC[v[0]] || v[0]) : T.noData) + (v[7] ? ' · ' + T.facility + ': ' + v[7] : '');
-          var dutyNote = r.duty == null ? '' : v[3] ? '%' + String(v[3]).replace('.', TR ? ',' : '.') + (v[5] === 'cn-extra' ? '<br>' + T.cn : '') : (T.dn[v[5]] || '');
-          return '<tr' + (r.ok ? '' : ' class="nodata"') + '><td>' + (i + 1) + '. <b>' + esc(o[1]) + '</b> ' + badgeTxt(o[3]) + '<br><small class="muted">' + esc(origin) + '</small></td>' +
-            '<td class="num">' + usd(r.base) + '</td><td class="num">' + money(r.ship) + '</td><td class="num">' + money(r.duty) + (dutyNote ? '<br><small class="muted">' + dutyNote + '</small>' : '') + '</td><td class="num">' + usd(fee) + '</td>' +
-            '<td class="num ' + (r.profit == null ? '' : r.profit >= 0 ? 'win' : 'loss') + '"><b>' + money(r.profit) + '</b></td>' +
-            '<td class="num">' + money(r.be) + '</td><td class="num"><b>' + money(r.rec) + '</b></td>' +
-            '<td><a class="go" href="' + esc(o[5]) + '" target="_blank" rel="nofollow sponsored noopener">' + TH[8] + '</a></td></tr>';
+      // sade görünüm: üstte tek cümlelik cevap; tabloda yalnız kargosu bilinen üreticiler (toplam maliyet, kâr, önerilen fiyat);
+      // kargo ücretini yayınlamayanlar ve baskısız fiyatlar katlanmış listede
+      var full = rows.filter(function (r) { return r.ok && !/^(bos|toplu)$/.test(r.o[3]); }), rest = rows.filter(function (r) { return full.indexOf(r) < 0; });
+      var best = full[0], pct = Math.round(m * 100), go = function (o) { return '<a class="go" href="' + esc(o[5]) + '" target="_blank" rel="nofollow sponsored noopener">' + T.s.go + '</a>'; };
+      // tesis adı yalnız birden çok tesisi olan üreticilerde anlamlı (Printify, BurgerPrints, Merchize, Prodigi)
+      var where = function (r) { return (r.v[0] ? T.s.from(CC[r.v[0]] || r.v[0]) : '') + (r.v[7] && /^(printify|burgerprints|merchize|prodigi)$/.test(r.o[0]) ? ' · ' + esc(r.v[7]) : ''); };
+      var dutyTxt = function (r) { return r.v[3] ? usd(r.duty) : (r.v[4] ? usd(r.duty) : usd(0)); };
+      var sum = !full.length ? '<div class="csum"><p>' + T.s.none + '</p></div>'
+        : '<div class="csum"><p class="cs-main">' + (price > 0 ? T.s.main(esc(best.o[1]), usd(price), '<b class="' + (best.profit >= 0 ? 'win' : 'loss') + '">' + usd(best.profit) + '</b>') : T.s.mainNoPrice(esc(best.o[1]), usd(best.be))) + '</p>' +
+          '<p class="cs-sub">' + T.s.sub(usd(best.be), pct, '<b>' + usd(best.rec) + '</b>') + '</p></div>';
+      var table = !full.length ? '' : '<p class="muted sm">' + T.s.feeNote(PFN[calc.elements.platform.value] || T.s.custom, usd(fee), usd(price)) + '</p><div class="tbl"><table class="lc lc2"><thead><tr><th>' + T.s.th[0] + '</th><th class="num">' + T.s.th[1] + '</th><th class="num">' + T.s.th[2] + '</th><th class="num">' + T.s.th[3](pct) + '</th><th></th></tr></thead><tbody>' +
+        full.map(function (r, i) {
+          return '<tr><td>' + (i + 1) + '. <b>' + esc(r.o[1]) + '</b><br><small class="muted">' + where(r) + '</small></td>' +
+            '<td class="num"><b>' + usd(r.base + r.ship + r.duty) + '</b><br><small class="muted">' + T.s.parts(usd(r.base), usd(r.ship), dutyTxt(r)) + '</small></td>' +
+            '<td class="num ' + (r.profit >= 0 ? 'win' : 'loss') + '"><b>' + (price > 0 ? usd(r.profit) : '–') + '</b></td>' +
+            '<td class="num"><b>' + (r.rec != null ? usd(r.rec) : '–') + '</b><br><small class="muted">' + T.s.be(usd(r.be)) + '</small></td>' +
+            '<td>' + go(r.o) + '</td></tr>';
         }).join('') + '</tbody></table></div>';
+      var others = !rest.length ? '' : '<details class="others"><summary>' + T.s.others(rest.length) + '</summary><ul>' +
+        rest.map(function (r) { return '<li><b>' + esc(r.o[1]) + '</b> ' + badgeTxt(r.o[3]) + ' · ' + T.s.only(usd(r.base)) + ' ' + go(r.o) + '</li>'; }).join('') + '</ul></details>';
+      out.innerHTML = sum + marketHtml(rows) + table + others;
     }
     // pazar yerindeki gerçek ilan fiyatları (ClickScrape); önerilen fiyatların bu aralığa göre yeri
     var market = null;
@@ -200,9 +222,9 @@
       var recs = rows.filter(function (r) { return r.rec != null; }).map(function (r) { return r.rec; }), lo = recs.length ? Math.min.apply(null, recs) : null;
       var pos = lo == null ? '' : lo <= k.p25 ? T.mk.low : lo <= k.p75 ? T.mk.mid : T.mk.high;
       return '<div class="mkt"><b>' + T.mk.title(k) + '</b><div class="mkt-n">' +
-        '<span><small>' + T.mk.p25 + '</small>' + usd(k.p25) + '</span><span><small>' + T.mk.med + '</small><b>' + usd(k.median) + '</b></span><span><small>' + T.mk.p75 + '</small>' + usd(k.p75) + '</span><span><small>' + T.mk.avg + '</small>' + usd(k.mean) + '</span></div>' +
+        '<span><small>' + T.mk.p25 + '</small>' + usd(k.p25) + '</span><span><small>' + T.mk.med + '</small><b>' + usd(k.median) + '</b></span><span><small>' + T.mk.p75 + '</small>' + usd(k.p75) + '</span></div>' +
         (lo != null ? '<p class="sm">' + T.mk.yours(usd(lo)) + ' ' + pos + '</p>' : '') +
-        '<p class="muted sm">' + T.mk.src(k) + '</p></div>';
+        '<details class="sm muted"><summary>' + T.mk.srcH + '</summary>' + T.mk.src(k) + '</details></div>';
     }
     function loadMarket(slug) {
       market = null;

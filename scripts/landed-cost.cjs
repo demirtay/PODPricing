@@ -64,6 +64,21 @@ const findGroup = (groups, type, nameOf) => {
   for (const kw of KW[type] || []) { const g = groups.find(x => nameOf(x).toLowerCase().includes(kw)); if (g) return g; }
   return null;
 };
+// SimplePrint panelindeki kategori tablosu (data/shipping/simpleprint.json); ürün tipi -> kategori
+const SP = readJson('data/shipping/simpleprint.json');
+function spCategory(p) {
+  const t = p.title || '', kid = /(youth|kid|toddler)/i.test(t);
+  if (/(infant|baby|onesie|bodysuit|creeper)/i.test(t) || p.type === 'bebek-body') return 'Infant / Baby';
+  if (kid || p.type === 'cocuk-giyim') return /hood/i.test(t) ? "Kid's Hoodies" : /sweatshirt|crew ?neck fleece/i.test(t) ? "Kid's Sweatshirts" : /long sleeve/i.test(t) ? "Kid's Long Sleeve Shirts" : /performance/i.test(t) ? "Kid's Performance Shirts" : "Kid's T-shirts";
+  // forma/crop diye sınıflanan ürünler: adındaki açık işaretle (3/4 kollu raglan belirsiz, eşlenmez)
+  if (/three-quarter|3\/4|raglan/i.test(t)) return null;
+  if (/tank/i.test(t)) return 'Tank Tops';
+  if (/long sleeve/i.test(t)) return 'Long Sleeve Shirts';
+  if (/(tee|t-shirt)/i.test(t) && /^giyim-(forma|crop)$/.test(p.type)) return 'T-Shirts';
+  return ({ 'giyim-tisort': /performance/i.test(t) ? 'Performance Shirts' : 'T-Shirts', 'giyim-kapusonlu': 'Hoodies', 'giyim-fermuarli-kapusonlu': 'Hoodies', 'giyim-sweatshirt': 'Sweatshirts',
+    'giyim-uzun-kollu': 'Long Sleeve Shirts', 'giyim-polo': 'Polo Shirts', 'giyim-atlet': 'Tank Tops', 'aksesuar-sapka': 'Hats', 'aksesuar-bere': 'Hats',
+    'canta-bez': 'Tote Bags', 'mutfak-kupa': 'Mugs', 'ev-yastik': 'Pillows' })[p.type] || null;
+}
 const PY_BY_NAME = new Map((PY?.providers || []).map(p => [p.name.toLowerCase(), p]));
 // varış bölgesi -> Printify satırındaki "to" yazımları; Printful tablosunda anahtarlar zaten US/EU/GB/CA/AU
 const DEST_RE = { US: /^(usa|united states|us)$/i, GB: /^(uk|united kingdom|great britain)\b/i, EU: /^(europe|european|eu\b|european union)/i, CA: /^canada/i, AU: /^australia/i };
@@ -85,6 +100,10 @@ function shipTo(p, origin, dest) {
     const g = std && findGroup(std.groups, p.type, x => x.category);
     const r = g && destRow(g.rows, dest);
     if (r) return { minor: Math.round(r.first * 100), src: 'table' };
+  }
+  if (p.providerId === 'simpleprint' && SP) {
+    const c = SP.categories[spCategory(p)];
+    if (c && Number.isFinite(c[dest])) return { minor: c[dest], src: 'table' };
   }
   // tahmin yok: üreticinin yayınladığı ücret bulunamazsa kargo bilinmiyor
   return { minor: null, src: null };

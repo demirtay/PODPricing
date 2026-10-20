@@ -1,0 +1,21 @@
+{
+ "market": "etsy",
+ "category": "Mugs",
+ "filter": "15 oz",
+ "source": "ClickScrape",
+ "collected": "2026-10-18",
+ "n": 93,
+ "currency": "USD",
+ "min": 1.11,
+ "p25": 13.82,
+ "median": 16.77,
+ "p75": 20.95,
+ "max": 33.34,
+ "mean": 16.74,
+ "fx": {
+  "from": "TRY",
+  "perUSD": 49.3573,
+  "date": "2026-10-16",
+  "source": "TCMB"
+ }
+}

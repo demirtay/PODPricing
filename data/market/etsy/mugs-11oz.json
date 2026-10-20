@@ -1,0 +1,21 @@
+{
+ "market": "etsy",
+ "category": "Mugs",
+ "filter": "11 oz",
+ "source": "ClickScrape",
+ "collected": "2026-10-18",
+ "n": 142,
+ "currency": "USD",
+ "min": 1.11,
+ "p25": 15.07,
+ "median": 18.66,
+ "p75": 20.78,
+ "max": 82.86,
+ "mean": 17.63,
+ "fx": {
+  "from": "TRY",
+  "perUSD": 49.3573,
+  "date": "2026-10-16",
+  "source": "TCMB"
+ }
+}

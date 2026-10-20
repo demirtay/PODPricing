@@ -129,9 +129,33 @@ function originFor(p, dest) {
   return originOf(p);
 }
 
+// Printify: ürün başına baskı tesisleri (fiyat, ülke, varışa kargo) — scripts/shipping-printify-pp.cjs
+const PP = readJson('data/shipping/printify-pp.json')?.blueprints || {};
+const EU_CC = new Set('AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE'.split(' '));
+const ccOrigin = cc => !cc ? null : EU_CC.has(cc) ? 'EU' : cc;
+// varışa teslimde en ucuz tesis (fiyat + kargo + vergi); tesisin yayınlamadığı varış atlanır
+function printifyFacility(p, dest) {
+  const list = PP[String(p.id).replace(/^printify-/, '')];
+  if (!list) return null;
+  let best = null;
+  for (const [, name, cc, price, ship] of list) {
+    const origin = ccOrigin(cc), sh = ship[dest];
+    if (!origin || !Number.isFinite(sh)) continue;
+    const d = dutyTo(p, origin, dest);
+    if (d.rate == null) continue;
+    const total = Math.round(price * (1 + d.rate / 100)) + d.flatMinor + sh;
+    if (!best || total < best.total) best = { total, name, origin, price, sh, d };
+  }
+  return best;
+}
+
 function landed(p, dest) {
+  if (p.providerId === 'printify') {
+    const f = printifyFacility(p, dest);
+    if (f) return { origin: f.origin, originHow: 'facility', facility: f.name, baseMinor: f.price, shipMinor: f.sh, shipSrc: 'facility', dutyRate: f.d.rate, dutyFlatMinor: f.d.flatMinor, dutyNote: f.d.note };
+  }
   const o = dest === 'US' ? originOf(p) : originFor(p, dest), s = shipTo(p, o.origin, dest), d = dutyTo(p, o.origin, dest);
-  return { origin: o.origin, originHow: o.how, shipMinor: s.minor, shipSrc: s.src, dutyRate: d.rate, dutyFlatMinor: d.flatMinor, dutyNote: d.note };
+  return { origin: o.origin, originHow: o.how, baseMinor: p.baseMinor, shipMinor: s.minor, shipSrc: s.src, dutyRate: d.rate, dutyFlatMinor: d.flatMinor, dutyNote: d.note };
 }
 const landedUS = p => landed(p, 'US');
 

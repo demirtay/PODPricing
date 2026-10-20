@@ -98,7 +98,7 @@ const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');
 const LC = require('./landed-cost.cjs');
 // ABD'deki alıcıya teslim maliyeti (kuruş): ürün + ABD kargosu + gümrük vergisi; ikisinden biri bilinmiyorsa null
-const deliveredUS = p => { const lc = LC.landedUS(p); return lc.shipMinor != null && lc.dutyRate != null ? Math.round(p.baseMinor * (1 + lc.dutyRate / 100) + lc.shipMinor) : null; };
+const deliveredUS = p => { const lc = LC.landedUS(p); return lc.shipMinor != null && lc.dutyRate != null ? Math.round(lc.baseMinor * (1 + lc.dutyRate / 100) + lc.shipMinor) : null; };
 const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
 GH.save(gHist);
 const groupsByType = groupBy(groups, g => g.type);
@@ -675,6 +675,8 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 fs.cpSync(path.join(root, 'web'), path.join(out, 'assets'), { recursive: true });
+// pazar fiyat özetleri (ClickScrape ilan fiyatları; scripts/market-import.py) -> /data/market/<pazar>/<grup>.json
+if (fs.existsSync(path.join(root, 'data/market'))) fs.cpSync(path.join(root, 'data/market'), path.join(out, 'data/market'), { recursive: true });
 const add = (rel, html) => { write(rel, html); sitemap.push(rel); };
 
 // istemci tarafı ortak veri: [id, başlık, üreticiId, fiyat, kaynakFiyat, görsel, (boş), tip, satışLinki, fiyatTürü]
@@ -687,9 +689,9 @@ for (const g of groups) {
     return withD.length ? withD[0][0] : printed[0] || l[0];
   });
   // [üretici, ad, fiyat, fiyat türü, kaynaktaki kargo, bağlantı, çıkış ülkesi, ABD kargosu (kuruş), kargo kaynağı, ABD vergi %, vergi notu] — 6+ alanlar scripts/landed-cost.cjs
-  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); // 11: diğer varışlar {GB|EU|CA|AU: [çıkış, kargo, kaynak, vergi %, sabit vergi (kuruş), not]}
-    const other = Object.fromEntries(LC.DESTS.filter(d => d !== 'US').map(d => { const x = LC.landed(p, d); return [d, [x.origin, x.shipMinor, x.shipSrc, x.dutyRate, x.dutyFlatMinor, x.dutyNote]]; }));
-    return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote, other]; })));
+  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); // 11: diğer varışlar {GB|EU|CA|AU: [çıkış, kargo, kaynak, vergi %, sabit vergi (kuruş), not, tesis fiyatı, tesis]}; 12-13: ABD için tesis fiyatı ve tesis (Printify)
+    const other = Object.fromEntries(LC.DESTS.filter(d => d !== 'US').map(d => { const x = LC.landed(p, d); return [d, [x.origin, x.shipMinor, x.shipSrc, x.dutyRate, x.dutyFlatMinor, x.dutyNote, x.baseMinor, x.facility || null]]; }));
+    return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote, other, lc.baseMinor, lc.facility || null]; })));
 }
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 

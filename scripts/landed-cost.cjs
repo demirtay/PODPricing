@@ -156,6 +156,8 @@ const ccOrigin = cc => !cc ? null : EU_CC.has(cc) ? 'EU' : code(cc) || cc;
 // diğer üreticilerin tesis listeleri aynı biçimde (ör. scripts/shipping-burgerprints.cjs): { ürünId: [[tesis, ülke, fiyat, kargo]] }
 const FAC = readJson('data/shipping/facilities.json')?.products || {};
 function facilityFor(p, dest) {
+  // BurgerPrints "(US Label)" sürümleri: kargo etiketini pazar yeri verir, tablodaki $0,50-1 yalnız etiket işleme ücreti -> karşılaştırılamaz
+  if (p.providerId === 'burgerprints' && /\b(US|UK|EU) Label\b/i.test(p.title || '')) return null;
   const list = p.providerId === 'printify' ? PP[String(p.id).replace(/^printify-/, '')] : FAC[p.id] && FAC[p.id].map(r => [null, ...r]);
   if (!list) return null;
   let best = null;

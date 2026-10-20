@@ -80,7 +80,7 @@ jobs:
       - name: Fiyat geçmişini kaydet
         if: github.event_name != 'push'
         run: |
-          git add data/price-history.json
+          git add data/price-history.json data/group-history.json
           git diff --cached --quiet && exit 0
           git commit -m "data: fiyat endeksi anlık görüntüsü"
           ok=0; for i in 1 2 3; do git pull --rebase --autostash -X theirs origin main && git push && ok=1 && break; sleep 5; done

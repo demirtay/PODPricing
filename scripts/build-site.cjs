@@ -93,6 +93,10 @@ const groups = [...groupBy(products.filter(p => p.gkey), p => p.gkey)]
   .sort((a, b) => b.providers.size - a.providers.size || b.list.length - a.list.length);
 const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
+// grupların günlük en ucuz fiyat geçmişi (scripts/group-history.cjs): bugünün kaydı her derlemede yazılır, sayfada grafik olur
+const GH = require('./group-history.cjs');
+const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
+GH.save(gHist);
 const groupsByType = groupBy(groups, g => g.type);
 
 // Etsy kategori ağacı (18 Eki 2026): kategori sayfaları Etsy düğümlerinden (scripts/etsy-map.cjs), yalnızca ürünü olan düğümler.
@@ -358,7 +362,7 @@ const LOCALES = {
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
       makersFrom: (n, v) => `${n} manufacturers · from ${v}`, from: v => `from ${v}`, products: n => `${n} products`, makersN: n => `${n} manufacturers`,
-      offersH: n => `Prices from ${n} manufacturers`, bestOf: n => `Cheapest of ${n} manufacturers`, range: (a, b) => `Price range ${a} – ${b}`, cheapestFirst: 'Sorted from cheapest to most expensive.',
+      offersH: n => `Prices from ${n} manufacturers`, bestOf: n => `Cheapest of ${n} manufacturers`, histH: 'Cheapest price history', histFlat: (d, v) => `The cheapest price has stayed at ${v} for the last ${d} days.`, histMove: (lo, ld, hi, now) => `Lowest ${lo} (${ld}), highest ${hi}. Today ${now}.`, histNote: 'Lowest price across all manufacturers each day, print included where listed.', range: (a, b) => `Price range ${a} – ${b}`, cheapestFirst: 'Sorted from cheapest to most expensive.',
       groupNoteModel: 'Same blank garment at every manufacturer. Print method, print area and shipping can differ — check details at the store.',
       groupNoteSpec: 'Same product type and size at every manufacturer. Exact materials and options can differ slightly — check details at the store.',
       allOffersOf: n => `Show all ${n} offers`, groupsInCat: 'Compare prices across manufacturers', allInCat: 'All products',
@@ -497,7 +501,7 @@ const LOCALES = {
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
       makersFrom: (n, v) => `${n} üretici · ${v}'dan`, from: v => `${v}'dan`, products: n => `${n} ürün`, makersN: n => `${n} üretici`,
-      offersH: n => `${n} üreticinin fiyatları`, bestOf: n => `${n} üretici arasında en ucuz`, range: (a, b) => `Fiyat aralığı ${a} – ${b}`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
+      offersH: n => `${n} üreticinin fiyatları`, bestOf: n => `${n} üretici arasında en ucuz`, histH: 'En ucuz fiyat geçmişi', histFlat: (d, v) => `En ucuz fiyat son ${d} gündür ${v}, değişmedi.`, histMove: (lo, ld, hi, now) => `En düşük ${lo} (${ld}), en yüksek ${hi}. Bugün ${now}.`, histNote: 'Her gün tüm üreticiler arasındaki en düşük fiyat; varsa baskı dahil fiyat.', range: (a, b) => `Fiyat aralığı ${a} – ${b}`, cheapestFirst: 'En ucuzdan en pahalıya sıralı.',
       groupNoteModel: 'Bütün üreticilerde aynı boş ürün modeli. Baskı yöntemi, baskı alanı ve kargo farklı olabilir; ayrıntılar üreticinin sayfasında.',
       groupNoteSpec: 'Bütün üreticilerde aynı ürün tipi ve ölçü. Malzeme ve seçenekler küçük farklar gösterebilir; ayrıntılar üreticinin sayfasında.',
       allOffersOf: n => `${n} teklifin hepsini göster`, groupsInCat: 'Üreticiler arasında fiyat karşılaştır', allInCat: 'Tüm ürünler',
@@ -776,6 +780,20 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
       const box = cls => `<div class="${cls}"><div class="gb-t"><span class="gb-badge">${esc(t.bestOf(gp.providers.size))}</span><span class="gb-m">${esc(m)}</span><b class="gb-p">${esc(fmt(b.baseMinor))}</b>${cls === 'gstick' ? `<span class="gb-n">${esc(title)}</span>` : ''}</div><a class="cta gb-go" href="${esc(outbound(b))}" target="_blank" rel="nofollow sponsored noopener">${esc(t.goAt(m))}</a></div>`;
       return box('gbest') + box('gstick');
     };
+    // en ucuz fiyat geçmişi: sunucuda çizilen basamaklı SVG (en az 5 gün veri varsa)
+    const ghist = slug => {
+      const row = gHist.lo[slug]; if (!row) return '';
+      const pts = gHist.dates.map((d, i) => [d, row[i]]).filter(x => x[1] != null);
+      if (pts.length < 5) return '';
+      const vals = pts.map(x => x[1]), lo = Math.min(...vals), hi = Math.max(...vals), W = 600, H = 120, pad = 8;
+      const t0 = Date.parse(pts[0][0]), t1 = Date.parse(pts.at(-1)[0]), x = d => pad + (W - 2 * pad) * (t1 > t0 ? (Date.parse(d) - t0) / (t1 - t0) : 1);
+      // ölçek en az fiyatın %20'si: kur kaynaklı birkaç sentlik oynama uçurum gibi görünmesin
+      const span = Math.max(hi - lo, hi * 0.2), top = (hi + lo) / 2 + span / 2, y = v => pad + (H - 2 * pad) * (top - v) / span;
+      const path = pts.map(([d, v], i) => (i ? `H${x(d).toFixed(1)}V${y(v).toFixed(1)}` : `M${x(d).toFixed(1)} ${y(v).toFixed(1)}`)).join('');
+      const days = Math.round((t1 - t0) / 864e5) + 1, ld = pts.find(p => p[1] === lo)[0], day = dt => new Intl.DateTimeFormat(L.intl, { day: 'numeric', month: 'short' }).format(new Date(dt + 'T12:00:00Z'));
+      const txt = hi === lo ? t.histFlat(days, fmt(lo)) : t.histMove(fmt(lo), day(ld), fmt(hi), fmt(vals.at(-1)));
+      return `<section class="ghist"><h2>${esc(t.histH)}</h2><p>${esc(txt)}</p><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(txt)}" preserveAspectRatio="none"><path d="${path}H${W - pad}" fill="none" stroke="var(--price)" stroke-width="3" vector-effect="non-scaling-stroke"/></svg><div class="gh-ax"><span>${esc(day(pts[0][0]))}</span><span>${esc(day(pts.at(-1)[0]))}</span></div><p class="muted sm">${esc(t.histNote)}</p></section>`;
+    };
     const gFaq = gd ? t.grpFaq(gd) : [];
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)), cat: gp.etsy,
@@ -784,7 +802,7 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
 ${gbest(gp, title)}
 <p class="muted sm">${esc(t.range(fmt(lo.baseMinor), fmt(hi.baseMinor)))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
-${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${H.ad('liste')}
+${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${ghist(gp.slug)}${H.ad('liste')}
 <p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>
 ${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}${rvBox('group:' + gp.slug, title, false)}`,
       jsonld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,

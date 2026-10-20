@@ -229,6 +229,36 @@
   // karşılaştırma sayfası: en ucuz kutusu ekrandan çıkınca üstte sabit şerit
   var gb = document.querySelector('.gbest'), gs = document.querySelector('.gstick');
   if (gb && gs && 'IntersectionObserver' in window) new IntersectionObserver(function (e) { var on = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; gs.classList.toggle('on', on); document.body.classList.toggle('gs-on', on); }).observe(gb);
+  // karşılaştırma sayfası süzgeçleri (Cimri tarzı): Tümü / Baskı dahil / Kargo fiyatı belli
+  var lad = document.querySelector('.ladder');
+  if (lad) {
+    var rows = [].slice.call(document.querySelectorAll('.ladder li[data-c]')), tr = LANG === 'tr';
+    var F = [
+      ['all', tr ? 'Tümü' : 'All', function () { return true; }],
+      ['pb', tr ? 'Baskı dahil' : 'Print included', function (li) { return !!li.querySelector('.pb-dahil'); }],
+      ['ship', tr ? 'Kargo fiyatı belli' : 'Shipping shown', function (li) { return li.hasAttribute('data-s'); }]
+    ];
+    var top = [].slice.call(lad.querySelectorAll(':scope > li[data-c]'));
+    var useful = F.filter(function (f, i) { var n = top.filter(f[2]).length; f.n = n; return i === 0 || (n > 0 && n < top.length); });
+    if (useful.length > 1) {
+      var bar = document.createElement('div');
+      bar.className = 'chips lfilter';
+      bar.setAttribute('role', 'group');
+      useful.forEach(function (f, i) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'chip' + (i ? '' : ' on'); b.setAttribute('aria-pressed', i ? 'false' : 'true');
+        b.innerHTML = '<b>' + esc(f[1]) + '</b>' + (i ? '<span>' + f.n + '</span>' : '');
+        b.onclick = function () {
+          [].forEach.call(bar.children, function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+          b.classList.add('on'); b.setAttribute('aria-pressed', 'true');
+          rows.forEach(function (li) { li.hidden = !f[2](li); });
+        };
+        bar.appendChild(b);
+      });
+      var anchor = document.querySelector('.sellbox') || lad;
+      anchor.parentNode.insertBefore(bar, anchor);
+    }
+  }
   var fy = document.getElementById('foryou');
   if (fy) {
     var s = interests(), top = Object.keys(s).sort(function (a, b) { return s[b].v - s[a].v; }).filter(function (k) { return s[k].v >= 1 && s[k]['l_' + LANG]; }).slice(0, 1);

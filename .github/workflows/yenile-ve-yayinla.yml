@@ -14,6 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write
   contents: write
   pages: write
   id-token: write
@@ -92,6 +93,15 @@ jobs:
       - name: GitHub Pages'e yayınla
         id: deploy
         uses: actions/deploy-pages@v4
+      # Yayın paketi (~83 MB) yayından sonra gereksiz; günde birkaç yayında Actions depolama sınırı (500 MB) dolmasın diye hemen silinir
+      - name: Eski yayın paketlerini sil
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for id in $(gh api "repos/${{ github.repository }}/actions/artifacts?name=github-pages&per_page=100" --jq '.artifacts[].id'); do
+            gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/$id" && echo "silindi $id"
+          done
       # Bing/Yandex'e güncellenen sayfaları bildir (hata olursa yayını bozmaz)
       - name: IndexNow bildirimi
         continue-on-error: true

@@ -190,6 +190,60 @@
       "default": null,
       "confidence": "low",
       "source": "printmood.com: 'our own facility' (ülke yok)"
+    },
+    "printpartners": {
+      "default": "US",
+      "confidence": "high",
+      "source": "printpartners.com: Santa Ana (CA) ve Hebron (KY) tesisleri"
+    },
+    "printonic": {
+      "default": "US",
+      "confidence": "high",
+      "source": "printonic.com: 'We print, pack, and ship it from the US'"
+    },
+    "rakiline": {
+      "default": "US",
+      "confidence": "high",
+      "source": "rakiline.com: 'fulfillment from Jacksonville, Florida'"
+    },
+    "blackfishclothing": {
+      "default": "CA",
+      "confidence": "medium",
+      "source": "blackfishclothing.com: 'printing and embroidery done in Whistler, BC'"
+    },
+    "zelaprint": {
+      "default": "GB",
+      "confidence": "medium",
+      "source": "zelaprint.com: 'Printed in the United Kingdom' (ortak ağ da var)"
+    },
+    "printegy": {
+      "default": "EU",
+      "confidence": "medium",
+      "source": "printegy.de (Almanya alan adı)"
+    },
+    "ogo": {
+      "default": "AU",
+      "confidence": "medium",
+      "source": "ogo.com.au (Avustralya alan adı)"
+    },
+    "artovo": {
+      "default": "GB",
+      "confidence": "medium",
+      "source": "artovo.co.uk (İngiltere alan adı)"
+    },
+    "digitalondemand": {
+      "default": null,
+      "also": [
+        "US",
+        "EU"
+      ],
+      "confidence": "medium",
+      "source": "digitalondemand.com: ABD ve AB'de birer tesis"
+    },
+    "tshirtgang": {
+      "default": null,
+      "confidence": "low",
+      "source": "tshirtgang.com: 'Printed with care in North America' (ülke belirsiz)"
     }
   },
   "titleRules": [

@@ -218,19 +218,19 @@
     },
     {
       "to": "VN",
-      "pattern": "\\((vn|vietnam)\\)|made in vietnam"
+      "pattern": "\\((vn|vietnam)\\)|made in vietnam|ships?\\s+from\\s+vietnam"
     },
     {
       "to": "CN",
-      "pattern": "\\((cn|china)\\)|made in china"
+      "pattern": "\\((cn|china)\\)|made in china|ships?\\s+from\\s+china"
     },
     {
       "to": "EU",
-      "pattern": "\\((eu)\\)|made in (the\\s+)?(eu|europe)"
+      "pattern": "\\((eu)\\)|made in (the\\s+)?(eu|europe)|ships?\\s+from\\s+(the\\s+)?(eu|europe)"
     },
     {
       "to": "AU",
-      "pattern": "\\((au)\\)|made in australia"
+      "pattern": "\\((au)\\)|made in australia|ships?\\s+from\\s+australia"
     }
   ]
 }

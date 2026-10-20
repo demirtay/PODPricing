@@ -3,7 +3,7 @@
 // Kayıt: { "<blueprintId>": [[tesisId, tesisAdı, ülkeKodu, enDüşükFiyat (kuruş), {US,GB,EU,CA,AU: ilk ürün standart kargo (kuruş)}], ...] }
 // Kargo tesisin tam tablosundan (…/print-providers/<tesis>/shipping): EU = Almanya; tesis bir ülkeyi ayrı yazmamışsa
 // kendi "Rest of the World" ücreti (tablonun kuralı). Varyantlar arasında en düşük ilk ürün ücreti. Yayınlanmamış varış yazılmaz.
-// Kullanım: node scripts/shipping-printify-pp.cjs [blueprintId ...]   (boşsa katalogdaki bütün Printify ürünleri; kaldığı yerden devam eder)
+// Kullanım: node scripts/shipping-printify-pp.cjs [--compare] [blueprintId ...]   (boşsa katalogdaki bütün Printify ürünleri, --compare ile yalnız karşılaştırmadakiler; kaldığı yerden devam eder)
 'use strict';
 const fs = require('node:fs'), path = require('node:path');
 
@@ -38,10 +38,13 @@ async function facility(id, p) {
 
 (async () => {
   const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : { blueprints: {} };
-  let ids = process.argv.slice(2);
+  const compareOnly = process.argv.includes('--compare');
+  let ids = process.argv.slice(2).filter(a => !a.startsWith('--'));
   if (!ids.length) {
     const c = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));
-    ids = c.products.filter(p => p.providerId === 'printify').map(p => p.id.replace(/^printify-/, ''));
+    // karşılaştırmadaki ürünler önce (data/compare-ids.json)
+    let cmp = new Set(); try { cmp = new Set(JSON.parse(fs.readFileSync(path.join(root, 'data/compare-ids.json'), 'utf8'))); } catch {}
+    ids = c.products.filter(p => p.providerId === 'printify' && (!compareOnly || cmp.has(p.id))).sort((a, b) => cmp.has(b.id) - cmp.has(a.id)).map(p => p.id.replace(/^printify-/, ''));
   }
   const today = new Date().toISOString().slice(0, 10);
   const out = { source: 'https://printify.com/product-catalog-service/api/v2/blueprints/<id>/print-providers', checked: today, currency: 'USD',

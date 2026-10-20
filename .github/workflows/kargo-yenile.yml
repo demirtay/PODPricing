@@ -1,0 +1,44 @@
+# Üreticilerin kendi açık servislerinden kargo ücretlerini haftada bir yeniler (Pazartesi 03:05 UTC) ve data/shipping/ altına kaydeder.
+# Ana iş (yenile-ve-yayinla) bir sonraki çalışmada bu verilerle siteyi üretir. LumaPrints bot koruması nedeniyle burada yok (tarayıcıyla elle).
+name: Kargo yenile
+on:
+  schedule:
+    - cron: '5 3 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: kargo-yenile
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # karşılaştırmadaki ürün listesi (data/compare-ids.json) derlemede yazılır
+      - name: Karşılaştırma listesini üret
+        run: node scripts/build-site.cjs > /dev/null
+      - name: Kargo ücretlerini çek
+        run: |
+          node scripts/shipping-printify-pp.cjs --compare > pp.log 2>&1 &
+          node scripts/shipping-estimate.cjs > est.log 2>&1 &
+          node scripts/shipping-printdoors.cjs > pd.log 2>&1 &
+          node scripts/shipping-burgerprints.cjs > bp.log 2>&1 &
+          node scripts/shipping-printify.cjs > py.log 2>&1 &
+          wait
+          tail -n 2 pp.log est.log pd.log bp.log py.log
+      - name: Kaydet
+        run: |
+          git config user.name "pod-atlas-bot"
+          git config user.email "pod-atlas-bot@users.noreply.github.com"
+          git add data/shipping data/compare-ids.json
+          git diff --cached --quiet || git commit -m "data: haftalık kargo ücretleri"
+          ok=0; for i in 1 2 3; do git pull --rebase --autostash -X theirs origin main && git push && ok=1 && break; sleep 5; done
+          [ "$ok" = 1 ] || echo "::warning::Kargo verisi GitHub'a gönderilemedi"

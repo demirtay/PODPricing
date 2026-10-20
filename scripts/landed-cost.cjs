@@ -132,10 +132,12 @@ function originFor(p, dest) {
 // Printify: ürün başına baskı tesisleri (fiyat, ülke, varışa kargo) — scripts/shipping-printify-pp.cjs
 const PP = readJson('data/shipping/printify-pp.json')?.blueprints || {};
 const EU_CC = new Set('AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE'.split(' '));
-const ccOrigin = cc => !cc ? null : EU_CC.has(cc) ? 'EU' : cc;
+const ccOrigin = cc => !cc ? null : EU_CC.has(cc) ? 'EU' : code(cc) || cc;
 // varışa teslimde en ucuz tesis (fiyat + kargo + vergi); tesisin yayınlamadığı varış atlanır
-function printifyFacility(p, dest) {
-  const list = PP[String(p.id).replace(/^printify-/, '')];
+// diğer üreticilerin tesis listeleri aynı biçimde (ör. scripts/shipping-burgerprints.cjs): { ürünId: [[tesis, ülke, fiyat, kargo]] }
+const FAC = readJson('data/shipping/facilities.json')?.products || {};
+function facilityFor(p, dest) {
+  const list = p.providerId === 'printify' ? PP[String(p.id).replace(/^printify-/, '')] : FAC[p.id] && FAC[p.id].map(r => [null, ...r]);
   if (!list) return null;
   let best = null;
   for (const [, name, cc, price, ship] of list) {
@@ -149,9 +151,29 @@ function printifyFacility(p, dest) {
   return best;
 }
 
+// Interestprint / ArtsAdd / Printdoors: ürün başına kargo yöntemleri (scripts/shipping-estimate.cjs, shipping-printdoors.cjs); varışa teslimde en ucuz yöntem
+// data/shipping/estimate*.json (her üreticinin çekicisi kendi dosyasına yazar)
+const EST = Object.assign({}, ...fs.readdirSync(path.join(root, 'data/shipping')).filter(f => /^estimate.*\.json$/.test(f)).map(f => readJson('data/shipping/' + f)?.products || {}));
+function estimateMethod(p, dest) {
+  const rows = EST[p.id]?.[dest];
+  if (!rows) return null;
+  let best = null;
+  // üründe açık çıkış işareti (katalog ülkesi, adında "(AU)", "Made in USA"...) varsa o; yoksa yöntemin tesisi
+  const own = originOf(p), fixed = own.how === 'catalog' || own.how === 'title' ? own.origin : null;
+  for (const [method, sh, mOrigin] of rows) {
+    const origin = fixed || mOrigin, d = dutyTo(p, origin, dest);
+    if (d.rate == null) continue;
+    const total = Math.round(p.baseMinor * (1 + d.rate / 100)) + d.flatMinor + sh;
+    if (!best || total < best.total) best = { total, method, origin, sh, d };
+  }
+  return best;
+}
+
 function landed(p, dest) {
-  if (p.providerId === 'printify') {
-    const f = printifyFacility(p, dest);
+  const e = estimateMethod(p, dest);
+  if (e) return { origin: e.origin, originHow: 'method', facility: e.method || null, baseMinor: p.baseMinor, shipMinor: e.sh, shipSrc: 'product', dutyRate: e.d.rate, dutyFlatMinor: e.d.flatMinor, dutyNote: e.d.note };
+  {
+    const f = facilityFor(p, dest);
     if (f) return { origin: f.origin, originHow: 'facility', facility: f.name, baseMinor: f.price, shipMinor: f.sh, shipSrc: 'facility', dutyRate: f.d.rate, dutyFlatMinor: f.d.flatMinor, dutyNote: f.d.note };
   }
   const o = dest === 'US' ? originOf(p) : originFor(p, dest), s = shipTo(p, o.origin, dest), d = dutyTo(p, o.origin, dest);

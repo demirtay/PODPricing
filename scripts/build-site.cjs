@@ -93,6 +93,8 @@ const groups = [...groupBy(products.filter(p => p.gkey), p => p.gkey)]
   .sort((a, b) => b.providers.size - a.providers.size || b.list.length - a.list.length);
 const groupOf = new Map();
 for (const g of groups) for (const p of g.list) groupOf.set(p.id, g);
+// karşılaştırmadaki ürünler: kargo çekicileri (scripts/shipping-*.cjs) önce bunları tarar
+fs.writeFileSync(path.join(root, 'data/compare-ids.json'), JSON.stringify([...groupOf.keys()].sort()));
 // grupların günlük en ucuz fiyat geçmişi (scripts/group-history.cjs): bugünün kaydı her derlemede yazılır, sayfada grafik olur
 const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');

@@ -358,10 +358,10 @@ const LOCALES = {
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
         intro: 'Pick a product and your selling price. For every manufacturer we add the product cost, US shipping, US import duty (based on where it ships from) and marketplace fees, then show your profit, your break-even price and a suggested price for your target margin.',
-        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', shipOut: 'Shipping if unknown ($)', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', destUS: 'United States',
+        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', shipOut: 'Shipping if unknown ($)', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', dests: [['US', 'United States'], ['GB', 'United Kingdom'], ['EU', 'European Union'], ['CA', 'Canada'], ['AU', 'Australia']],
         custom: 'Custom fee', pct: 'Fee %', fixed: 'Fixed fee ($)',
         th: ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin'], pick: 'Choose a product to see results.', loading: 'Loading…',
-        fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Shipping: the manufacturer’s own US rate where published, otherwise the median US rate of print providers in the same ship-from country (marked est.). US import duty: 0 when the item ships from the US; otherwise the HTS rate for the product type plus the 2026 Section 301 surcharge for the ship-from country (rates checked 20 Oct 2026). Duty is estimated on the product cost; it is not legal advice.',
+        fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Shipping: the manufacturer’s own US rate where published, otherwise the median US rate of print providers in the same ship-from country (marked est.). US import duty: 0 when the item ships from the US; otherwise the HTS rate for the product type plus the 2026 Section 301 surcharge for the ship-from country (rates checked 20 Oct 2026). UK, Australia: no duty on low-value parcels and VAT/GST is collected from the buyer at checkout. EU: flat €3 per item since 1 July 2026 (none if shipped from inside the EU). Canada: duty-free up to C$150 by courier from the US or Mexico. Duty is estimated on the product cost; it is not legal advice.',
       },
       blankH: 'Blank products (printing charged separately)', blankP: 'These prices are for the unprinted product or bulk orders, so they are listed apart from the print-included offers above.',
       sitesN: n => `Sold at ${n} stores`, cheapest: 'cheapest', catMenu: 'Categories', subAll: n => `All ${n} subcategories →`, itemsH: 'Products',
@@ -497,10 +497,10 @@ const LOCALES = {
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
         intro: 'Bir ürün ve satış fiyatı seç. Her üretici için ürün maliyeti, ABD kargosu, ürünün çıktığı ülkeye göre ABD gümrük vergisi ve pazar yeri komisyonunu topluyoruz; kârını, zararsız en düşük fiyatı ve hedef kâr oranına göre önerilen satış fiyatını gösteriyoruz.',
-        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', shipOut: 'Kargo bilinmiyorsa ($)', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', destUS: 'ABD',
+        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', shipOut: 'Kargo bilinmiyorsa ($)', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', dests: [['US', 'ABD'], ['GB', 'İngiltere'], ['EU', 'Avrupa Birliği'], ['CA', 'Kanada'], ['AU', 'Avustralya']],
         custom: 'Özel komisyon', pct: 'Komisyon %', fixed: 'Sabit ücret ($)',
         th: ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı'], pick: 'Sonuçları görmek için bir ürün seç.', loading: 'Yükleniyor…',
-        fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Kargo: üreticinin yayınladığı ABD ücreti; yoksa aynı ülkeden gönderen baskı tesislerinin ortanca ABD ücreti (tahmini). ABD gümrük vergisi: ürün ABD’den çıkıyorsa 0; değilse ürün tipinin HTS oranı + çıkış ülkesinin 2026 Section 301 ek vergisi (oranlar 20 Ekim 2026). Vergi ürün maliyeti üzerinden tahmindir, hukuki tavsiye değildir.',
+        fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Kargo: üreticinin yayınladığı ABD ücreti; yoksa aynı ülkeden gönderen baskı tesislerinin ortanca ABD ücreti (tahmini). ABD gümrük vergisi: ürün ABD’den çıkıyorsa 0; değilse ürün tipinin HTS oranı + çıkış ülkesinin 2026 Section 301 ek vergisi (oranlar 20 Ekim 2026). İngiltere, Avustralya: düşük değerli pakette gümrük yok, KDV/GST alıcıdan ödemede alınır. AB: 1 Temmuz 2026’dan beri ürün başına sabit €3 (AB içinden gönderimde yok). Kanada: ABD veya Meksika’dan kuryeyle C$150’a kadar vergisiz. Vergi ürün maliyeti üzerinden tahmindir, hukuki tavsiye değildir.',
       },
       blankH: 'Boş ürünler (baskı ücreti ayrıca)', blankP: 'Bu fiyatlar baskısız ürün veya toplu alım fiyatı olduğu için yukarıdaki baskı dahil tekliflerden ayrı listelenir.',
       sitesN: n => `${n} sitede satılıyor`, cheapest: 'en ucuz', catMenu: 'Kategoriler', subAll: n => `${n} alt kategorinin hepsi →`, itemsH: 'Ürünler',
@@ -687,7 +687,9 @@ for (const g of groups) {
     return withD.length ? withD[0][0] : printed[0] || l[0];
   });
   // [üretici, ad, fiyat, fiyat türü, kaynaktaki kargo, bağlantı, çıkış ülkesi, ABD kargosu (kuruş), kargo kaynağı, ABD vergi %, vergi notu] — 6+ alanlar scripts/landed-cost.cjs
-  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote]; })));
+  write(`data/g/${g.slug}.json`, JSON.stringify(best.map(p => { const lc = LC.landedUS(p); // 11: diğer varışlar {GB|EU|CA|AU: [çıkış, kargo, kaynak, vergi %, sabit vergi (kuruş), not]}
+    const other = Object.fromEntries(LC.DESTS.filter(d => d !== 'US').map(d => { const x = LC.landed(p, d); return [d, [x.origin, x.shipMinor, x.shipSrc, x.dutyRate, x.dutyFlatMinor, x.dutyNote]]; }));
+    return [p.providerId, provName(p.providerId), p.baseMinor, p.pb, p.shipping ? Object.values(p.shipping)[0] ?? null : null, outbound(p), lc.origin, lc.shipMinor, lc.shipSrc, lc.dutyRate, lc.dutyNote, other]; })));
 }
 write('data/search.json', JSON.stringify(products.map(p => [p.id, p.title, p.providerId, p.baseMinor, p.imageUrl || '', p.type, p.model ? p.model.brandName + ' ' + p.model.model : '', p.pb])));
 
@@ -1038,7 +1040,7 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <label>${esc(C.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>
 <label>${esc(C.shipIn)}<input name="shipIn" type="number" min="0" step="0.01" value="0"></label>
 <label>${esc(C.shipOut)}<input name="shipOut" type="number" min="0" step="0.01" value="0"></label>
-<label>${esc(C.dest)}<select name="dest"><option value="US">${esc(C.destUS)}</option></select></label>
+<label>${esc(C.dest)}<select name="dest">${C.dests.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('')}</select></label>
 <label>${esc(C.margin)}<input name="margin" type="number" min="0" max="90" step="1" value="30"></label>
 <label>${esc(C.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option><option value="custom">${esc(C.custom)}</option></select></label>
 <label class="custom" hidden>${esc(C.pct)}<input name="pct" type="number" min="0" step="0.1" value="10"></label>

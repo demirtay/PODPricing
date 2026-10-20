@@ -65,47 +65,56 @@ const findGroup = (groups, type, nameOf) => {
   return null;
 };
 const PY_BY_NAME = new Map((PY?.providers || []).map(p => [p.name.toLowerCase(), p]));
-const usRow = rows => rows.find(r => /^(usa|united states|us)$/i.test(r.to));
+// varış bölgesi -> Printify satırındaki "to" yazımları; Printful tablosunda anahtarlar zaten US/EU/GB/CA/AU
+const DEST_RE = { US: /^(usa|united states|us)$/i, GB: /^(uk|united kingdom|great britain)\b/i, EU: /^(europe|european|eu\b|european union)/i, CA: /^canada/i, AU: /^australia/i };
+const DESTS = Object.keys(DEST_RE);
+// varışa ait satır; yoksa (ABD dışı varışlarda) "Rest of the World / International" satırı
+const destRow = (rows, dest) => rows.find(r => DEST_RE[dest].test(r.to)) || (dest !== 'US' ? rows.find(r => /rest of (the )?world|international|worldwide/i.test(r.to)) : null);
 
-// Printify'daki tesislerin ülkesine göre, ürün tipi başına ABD'ye ortanca ilk ürün kargosu (kendi tablosu olmayan üreticiler için tahmin)
+// Printify'daki tesislerin ülkesine göre, ürün tipi ve varış başına ortanca ilk ürün kargosu (kendi tablosu olmayan üreticiler için tahmin)
 const provCode = c => { const t = String(c || '').toLowerCase();
-  if (/united states|^usa?/.test(t)) return 'US'; if (/china/.test(t)) return 'CN'; if (/united kingdom/.test(t)) return 'GB';
+  if (/united states|^usa?\b/.test(t)) return 'US'; if (/china/.test(t)) return 'CN'; if (/united kingdom/.test(t)) return 'GB';
   if (/germany|france|latvia|czech|europe|netherlands/.test(t)) return 'EU'; if (/canada/.test(t)) return 'CA'; if (/australia/.test(t)) return 'AU'; if (/india/.test(t)) return 'IN';
   return null; };
 const median = a => { const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : null; };
 const EST = (() => {
   const acc = {};
   for (const prov of PY?.providers || []) {
+    // birden çok ülkede tesisi olanlar (ör. "United States and United Kingdom") hangi tesisten gönderdiği belli olmadığı için tahmine girmez
+    if (/and|,/.test(prov.country || '')) continue;
     const cc = provCode(prov.country); if (!cc) continue;
     const std = prov.methods.find(m => /standard/i.test(m.method)) || prov.methods[0]; if (!std) continue;
     for (const type of Object.keys(KW)) {
-      const g = findGroup(std.groups, type, x => x.category), r = g && usRow(g.rows);
-      if (r) ((acc[cc] = acc[cc] || {})[type] = acc[cc][type] || []).push(r.first);
+      const g = findGroup(std.groups, type, x => x.category); if (!g) continue;
+      for (const dest of DESTS) { const r = destRow(g.rows, dest); if (r) (((acc[dest] = acc[dest] || {})[cc] = acc[dest][cc] || {})[type] = acc[dest][cc][type] || []).push(r.first); }
     }
   }
   const out = {};
-  for (const [cc, t] of Object.entries(acc)) for (const [type, v] of Object.entries(t)) (out[cc] = out[cc] || {})[type] = { usd: median(v), n: v.length };
+  for (const [dest, o] of Object.entries(acc)) for (const [cc, t] of Object.entries(o)) for (const [type, v] of Object.entries(t))
+    ((out[dest] = out[dest] || {})[cc] = out[dest][cc] || {})[type] = { usd: median(v), n: v.length };
   return out;
 })();
 
-// ABD'ye ilk ürün kargosu (kuruş) ve kaynağı
-function shipUS(p, origin) {
-  if (p.shipping && Number.isFinite(p.shipping.US)) return { minor: p.shipping.US, src: 'product' };
+// varışa ilk ürün kargosu (kuruş) ve kaynağı
+function shipTo(p, origin, dest) {
+  const own = p.shipping && (dest === 'EU' ? p.shipping.EU ?? p.shipping.DE : p.shipping[dest]);
+  if (Number.isFinite(own)) return { minor: own, src: 'product' };
   if (p.providerId === 'printful' && PF) {
     const g = findGroup(PF.categories, p.type, x => x.category);
-    if (g && g.rates.US) return { minor: Math.round(g.rates.US[0] * 100), src: 'table' };
+    if (g && g.rates[dest]) return { minor: Math.round(g.rates[dest][0] * 100), src: 'table' };
   }
   if (p.providerId === 'printify' && p.printProvider) {
     const prov = PY_BY_NAME.get(String(p.printProvider).toLowerCase());
     const std = prov && prov.methods.find(m => /standard/i.test(m.method)) || prov?.methods[0];
     const g = std && findGroup(std.groups, p.type, x => x.category);
-    const r = g && usRow(g.rows);
+    const r = g && destRow(g.rows, dest);
     if (r) return { minor: Math.round(r.first * 100), src: 'table' };
   }
-  const e = origin && EST[origin === 'GB' ? 'GB' : origin]?.[p.type];
-  if (e && e.usd != null) return { minor: Math.round(e.usd * 100), src: 'estimate', n: e.n };
+  const e = origin && EST[dest]?.[origin]?.[p.type];
+  if (e && e.usd != null && e.n >= 2) return { minor: Math.round(e.usd * 100), src: 'estimate', n: e.n };
   return { minor: null, src: null };
 }
+const shipUS = (p, origin) => shipTo(p, origin, 'US');
 
 // ABD gümrük vergisi oranı (%) ve notu
 function dutyUS(p, origin) {
@@ -119,9 +128,36 @@ function dutyUS(p, origin) {
   return { rate: +(h[1] + x).toFixed(2), note: origin === 'CN' ? 'cn-extra' : 'ok', hts: h[0] };
 }
 
-function landedUS(p) {
-  const o = originOf(p), s = shipUS(p, o.origin), d = dutyUS(p, o.origin);
-  return { origin: o.origin, originHow: o.how, shipMinor: s.minor, shipSrc: s.src, dutyRate: d.rate, dutyNote: d.note };
+// AB'nin 1 Temmuz 2026'dan beri €150 altı paketlerde ürün başına sabit €3 gümrük vergisi (Konsey Tüzüğü 2026/382, 1 Temmuz 2028'e kadar)
+const EUR_USD = (() => { try {
+  const c = readJson('data/catalog.json'); let best = null;
+  for (const p of c?.products || []) if (p.sourceCurrency === 'EUR' && p.exchangeRate > 0 && (!best || p.exchangeDate > best.exchangeDate)) best = p;
+  return best ? best.exchangeRate : 1.12;
+} catch { return 1.12; } })();
+const EU_FLAT_MINOR = Math.round(3 * EUR_USD * 100);
+const EU_ORIGINS = new Set(['EU', 'DE', 'FR', 'NL', 'LV', 'CZ']);
+
+// varışa göre gümrük vergisi: oran (%) ya da sabit tutar (kuruş); KDV/GST'yi bu pazarlarda pazar yeri alıcıdan tahsil eder (satıcı maliyeti değil)
+function dutyTo(p, origin, dest) {
+  if (dest === 'US') { const d = dutyUS(p, origin); return { rate: d.rate, flatMinor: 0, note: d.note }; }
+  if (dest === 'GB') return { rate: 0, flatMinor: 0, note: 'gb' };            // £135 altı gümrük muafiyeti sürüyor; %20 KDV pazar yerinde
+  if (dest === 'AU') return { rate: 0, flatMinor: 0, note: 'au' };            // A$1.000 altı gümrük yok; %10 GST pazar yerinde
+  if (dest === 'EU') return origin && EU_ORIGINS.has(origin) ? { rate: 0, flatMinor: 0, note: 'eu-inside' } : { rate: 0, flatMinor: EU_FLAT_MINOR, note: 'eu-flat' };
+  if (dest === 'CA') return origin === 'US' || origin === 'MX' ? { rate: 0, flatMinor: 0, note: 'ca-cusma' } : { rate: null, flatMinor: 0, note: 'ca-unknown' };
+  return { rate: null, flatMinor: 0, note: 'dest-unknown' };
 }
 
-module.exports = { landedUS, originOf, shipUS, dutyUS, HTS, EXTRA, EST };
+// varış bölgesine göre çıkış: ürün o bölgeden de gönderiliyorsa (ör. Printful AB tesisi) oradan
+function originFor(p, dest) {
+  const ac = (p.availableCountries || []).map(code).filter(Boolean);
+  if (dest !== 'US' && ac.includes(dest)) return { origin: dest, how: 'catalog' };
+  return originOf(p);
+}
+
+function landed(p, dest) {
+  const o = dest === 'US' ? originOf(p) : originFor(p, dest), s = shipTo(p, o.origin, dest), d = dutyTo(p, o.origin, dest);
+  return { origin: o.origin, originHow: o.how, shipMinor: s.minor, shipSrc: s.src, dutyRate: d.rate, dutyFlatMinor: d.flatMinor, dutyNote: d.note };
+}
+const landedUS = p => landed(p, 'US');
+
+module.exports = { landed, landedUS, originOf, shipTo, shipUS, dutyUS, dutyTo, HTS, EXTRA, EST, DESTS, EU_FLAT_MINOR };

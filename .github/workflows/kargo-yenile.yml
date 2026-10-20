@@ -32,8 +32,9 @@ jobs:
           node scripts/shipping-printdoors.cjs > pd.log 2>&1 &
           node scripts/shipping-burgerprints.cjs > bp.log 2>&1 &
           node scripts/shipping-printify.cjs > py.log 2>&1 &
+          node scripts/shipping-prodigi.cjs > pr.log 2>&1 &
           wait
-          tail -n 2 pp.log est.log pd.log bp.log py.log
+          tail -n 2 pp.log est.log pd.log bp.log py.log pr.log
       - name: Kaydet
         run: |
           git config user.name "pod-atlas-bot"

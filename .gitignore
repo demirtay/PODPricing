@@ -18,3 +18,7 @@ video/__pycache__/
 video/deneme/
 .playwright-mcp/
 _pins/
+
+# gizli anahtarlar (Prodigi API vb.)
+.env
+data/shipping/prodigi/

@@ -1,6 +1,8 @@
 # Product Hunt lansmanı — POD Pricing
 Hazırlayan: Claude, 2026-10-21. Rakamlar 21 Eki 2026 canlı siteden (103 fiyatı karşılaştırılan üretici, 35.287 ürün, 726 karşılaştırma).
 
+**DURUM (21 Eki 23:55): PLANLANDI — Salı 27 Ekim 2026, 10:01 TR (00:01 PT).** Tagline, açıklama, 2 etiket (E-Commerce, Productivity), OG + 4 galeri görseli, ilk yorum girildi. Ücretsiz. Tarih değiştirilebilir (producthunt.com > profil > ürün > Edit).
+
 ## Ne zaman
 - Salı, çarşamba veya perşembe, **00:01 Pasifik saati = Türkiye 10:01**. Gün 24 saat sürer; ilk 4 saat en önemlisi.
 - O gün Ali bilgisayar başında olmalı: gelen her yoruma aynı gün cevap (Claude taslak yazar).

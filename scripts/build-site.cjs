@@ -781,6 +781,7 @@ for (const lg of LANGS) {
   const withData = groups.filter(g => g.list.some(p => deliveredUS(p) != null)), homeCalc = withData.slice(0, 40), homeCalcN = withData.length;
   add(P.home + 'index.html', page(L, H, {
     rel: P.home + 'index.html', alt: altAll(p => p.home), title: t.homeTitle, description: t.homeDesc(connected.length, n(products.length)),
+    jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: BRAND, alternateName: 'PODPricing', url: SITE + href(P.home + 'index.html') },
     body: `<section class="hero"><h1>${esc(t.heroH)}</h1><p>${esc(t.heroP(connected.length, n(products.length)))}</p>
 <form class="search big" action="${href(P.search)}" role="search"><input name="q" type="search" placeholder="${esc(t.searchBig)}" aria-label="${esc(t.searchBtn)}" autocomplete="off"><button>${t.searchBtn}</button></form>
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>

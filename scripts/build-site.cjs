@@ -361,7 +361,7 @@ const LOCALES = {
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
         intro: 'Pick a product and your price. See what you keep with each manufacturer after shipping, import duty and marketplace fees.',
-        product: 'Product', price: 'Your price, optional ($)', shipIn: 'Shipping you charge the customer ($)', adv: 'Advanced', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', dests: [['US', 'United States'], ['GB', 'United Kingdom'], ['EU', 'European Union'], ['CA', 'Canada'], ['AU', 'Australia']],
+        product: 'Product', price: 'Your selling price ($)', shipIn: 'Shipping you charge the customer ($)', adv: 'Advanced', platform: 'Where you sell', dest: 'Buyer in', margin: 'Target margin (%)', dests: [['US', 'United States'], ['GB', 'United Kingdom'], ['EU', 'European Union'], ['CA', 'Canada'], ['AU', 'Australia']],
         custom: 'Custom fee', pct: 'Fee %', fixed: 'Fixed fee ($)',
         th: ['Manufacturer', 'Product cost', 'Fees', 'Profit', 'Margin'], pick: 'Choose a product to see results.', loading: 'Loading…',
         fees: 'Fees used: Etsy 6.5% transaction + 3% + $0.25 payment processing + $0.20 listing; Shopify 2.9% + $0.30 (Basic plan, Shopify Payments); Amazon Handmade 15% (min $1). Shipping: only the manufacturer’s own published rate; where none is published we show ‘no data’ and do not calculate profit. US import duty: 0 when the item ships from the US; otherwise the HTS rate for the product type plus the 2026 Section 301 surcharge for the ship-from country (rates checked 20 Oct 2026). UK, Australia: no duty on low-value parcels and VAT/GST is collected from the buyer at checkout. EU: flat €3 per item since 1 July 2026 (none if shipped from inside the EU). Canada: duty-free up to C$150 by courier from the US or Mexico. Duty is estimated on the product cost; it is not legal advice.',
@@ -501,7 +501,7 @@ const LOCALES = {
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
         intro: 'Ürünü ve satış fiyatını seç; her üreticide kargo, gümrük ve komisyondan sonra cebine ne kaldığını gör.',
-        product: 'Ürün', price: 'Satış fiyatın, isteğe bağlı ($)', shipIn: 'Müşteriden aldığın kargo ($)', adv: 'Gelişmiş', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', dests: [['US', 'ABD'], ['GB', 'İngiltere'], ['EU', 'Avrupa Birliği'], ['CA', 'Kanada'], ['AU', 'Avustralya']],
+        product: 'Ürün', price: 'Satış fiyatın ($)', shipIn: 'Müşteriden aldığın kargo ($)', adv: 'Gelişmiş', platform: 'Nerede satıyorsun', dest: 'Alıcı ülkesi', margin: 'Hedef kâr oranı (%)', dests: [['US', 'ABD'], ['GB', 'İngiltere'], ['EU', 'Avrupa Birliği'], ['CA', 'Kanada'], ['AU', 'Avustralya']],
         custom: 'Özel komisyon', pct: 'Komisyon %', fixed: 'Sabit ücret ($)',
         th: ['Üretici', 'Ürün maliyeti', 'Komisyon', 'Kâr', 'Kâr oranı'], pick: 'Sonuçları görmek için bir ürün seç.', loading: 'Yükleniyor…',
         fees: 'Kullanılan komisyonlar: Etsy %6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme; Shopify %2,9 + $0,30 (Basic plan, Shopify Payments); Amazon Handmade %15 (en az $1). Kargo: yalnız üreticinin yayınladığı ücret; yayınlanmamışsa ‘veri yok’ yazar ve kâr hesaplanmaz. ABD gümrük vergisi: ürün ABD’den çıkıyorsa 0; değilse ürün tipinin HTS oranı + çıkış ülkesinin 2026 Section 301 ek vergisi (oranlar 20 Ekim 2026). İngiltere, Avustralya: düşük değerli pakette gümrük yok, KDV/GST alıcıdan ödemede alınır. AB: 1 Temmuz 2026’dan beri ürün başına sabit €3 (AB içinden gönderimde yok). Kanada: ABD veya Meksika’dan kuryeyle C$150’a kadar vergisiz. Vergi ürün maliyeti üzerinden tahmindir, hukuki tavsiye değildir.',
@@ -1056,7 +1056,7 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <label class="wide">${esc(C.product)}<select name="g"><option value="">—</option></select></label>
 <label>${esc(C.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option><option value="custom">${esc(C.custom)}</option></select></label>
 <label>${esc(C.dest)}<select name="dest">${C.dests.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('')}</select></label>
-<label>${esc(C.margin)}<input name="margin" type="number" min="0" max="90" step="1" value="30"></label>
+<input type="hidden" name="margin" value="30">
 <label>${esc(C.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>
 <label class="custom" hidden>${esc(C.pct)}<input name="pct" type="number" min="0" step="0.1" value="10"></label>
 <label class="custom" hidden>${esc(C.fixed)}<input name="fixed" type="number" min="0" step="0.01" value="0.30"></label>

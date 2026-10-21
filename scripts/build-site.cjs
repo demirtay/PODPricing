@@ -1162,7 +1162,7 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
   }));
 
   // arama, hakkında, gizlilik, iletişim
-  add(P.search + 'index.html', page(L, H, {
+  write(P.search + 'index.html', page(L, H, {
     rel: P.search + 'index.html', alt: altAll(p => p.search), title: `${t.searchTitle} · ${BRAND}`, description: t.searchDesc, crumbs: [[t.search]], noindex: true,
     body: `<h1 id="sq">${t.search}</h1><div id="search-groups"></div><div id="search-app" class="list"><p class="muted">${t.searching}</p></div>`,
   }));

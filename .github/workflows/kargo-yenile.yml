@@ -36,10 +36,11 @@ jobs:
           node scripts/shipping-printkk.cjs > pk.log 2>&1 &
           node scripts/shipping-tables.cjs > tb.log 2>&1 &
           node scripts/shipping-peaprint.cjs > pea.log 2>&1 &
+          node scripts/shipping-popcustoms.cjs > pop.log 2>&1 &
           # facilities.json'a yazanlar sırayla (aynı dosya)
           (node scripts/shipping-burgerprints.cjs > bp.log 2>&1; node scripts/shipping-prodigi.cjs > pr.log 2>&1; node scripts/shipping-merchize.cjs > mz.log 2>&1) &
           wait
-          tail -n 2 pp.log est.log pd.log bp.log py.log pr.log mz.log tb.log pea.log
+          tail -n 2 pp.log est.log pd.log bp.log py.log pr.log mz.log tb.log pea.log pop.log
       - name: Kaydet
         run: |
           git config user.name "pod-atlas-bot"

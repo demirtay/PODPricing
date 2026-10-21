@@ -99,6 +99,11 @@ fs.writeFileSync(path.join(root, 'data/compare-ids.json'), JSON.stringify([...gr
 const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');
 const LC = require('./landed-cost.cjs');
+// kâr sayfalarındaki örnek Etsy satış fiyatı (ABD $); kullanıcı hesaplayıcıda kendi fiyatını yazar
+const SAMPLE_PRICE = { 'giyim-tisort': 24.99, 'giyim-uzun-kollu': 29.99, 'giyim-atlet': 24.99, 'giyim-raglan': 29.99, 'giyim-crop': 24.99, 'giyim-forma': 24.99, 'giyim-polo': 32.99,
+  'giyim-kapusonlu': 44.99, 'giyim-fermuarli-kapusonlu': 49.99, 'giyim-sweatshirt': 39.99, 'cocuk-giyim': 21.99, 'bebek-body': 21.99,
+  'mutfak-kupa': 18.99, 'mutfak-termos': 29.99, 'mutfak-bardak': 22.99, 'mutfak-matara': 27.99, 'duvar-poster': 19.99, 'duvar-kanvas': 39.99, 'duvar-cerceveli': 44.99,
+  'ev-battaniye': 54.99, 'ev-yastik': 29.99, 'canta-bez': 29.99, 'aksesuar-sapka': 27.99, 'aksesuar-bere': 24.99, 'teknoloji-telefon-kilifi': 24.99, 'kirtasiye-sticker': 6.99 };
 // ABD'deki alıcıya teslim maliyeti (kuruş): ürün + ABD kargosu + gümrük vergisi; ikisinden biri bilinmiyorsa null
 const deliveredUS = p => { const lc = LC.landedUS(p); return lc.shipMinor != null && lc.dutyRate != null ? Math.round(lc.baseMinor * (1 + lc.dutyRate / 100) + lc.shipMinor) : null; };
 const gHist = GH.upsert(GH.load(), new Date().toISOString().slice(0, 10), Object.fromEntries(groups.map(g => [g.slug, g.lo.baseMinor])));
@@ -292,7 +297,7 @@ const LOCALES = {
     lang: 'en', intl: 'en-US',
     path: { home: '', categories: 'categories/', cat: id => `category/${eSlug.get(id)}/`, oldCat: id => `category/${id === 'diger' ? EN.TYPES.diger[1] : (EN.TYPES[id] || EN.GROUPS[id])[1]}/`, compare: 'compare/', group: s => `compare/${s}/`,
       makers: 'manufacturers/', maker: id => `manufacturer/${id}/`, product: id => `product/${id}/`, search: 'search/', about: 'about/', privacy: 'privacy/', contact: 'contact/',
-      vsIndex: 'vs/', vs: s => `vs/${s}/`, calc: 'profit-calculator/',
+      vsIndex: 'vs/', vs: s => `vs/${s}/`, calc: 'profit-calculator/', profitIndex: 'profit/', profit: s => `profit/${s}/`,
       guides: 'cheapest/', guide: t => `cheapest/${(EN.TYPES[t] || ['', t])[1]}/`, alts: 'alternatives/', alt: id => `alternatives/${id}/`, widget: 'price-widget/', index: 'price-index/' },
     type: id => (EN.TYPES[id] || ['Other Products'])[0], group: g => (EN.GROUPS[g] || ['Other'])[0], node: id => eLabel(id, 'en'),
     pbLabel: PB.LABEL_EN, pbNote: PB.NOTE_EN, basis: I18N.basisEn, sizes: I18N.sizesEn, production: I18N.productionEn, method: I18N.methodEn,
@@ -357,6 +362,13 @@ const LOCALES = {
         citeH: 'Using this data', cite: 'You are welcome to quote these numbers in articles, videos and posts. Please credit and link "POD Pricing (podpricing.com)".', csv: ['Supplier ranking (CSV)', 'Blank prices (CSV)'],
         method: 'Method: prices are print-included base costs from each supplier\'s public catalog in USD, before shipping and tax. Products are matched by blank model (e.g. Gildan 5000) or by product type and size. For each product we take each supplier\'s cheapest offer; the typical price is the median across suppliers.',
       },
+      profitPages: { nav: 'Profit by product', title: (n, p) => `${n} on Etsy at ${p}: profit by POD supplier (shipping included)`, h1: (n, p) => `How much do you make selling ${n} on Etsy at ${p}?`,
+        desc: (n, p, lo, hi, b, k) => `Sell ${n} at ${p} on Etsy to a US buyer and keep ${lo} to ${hi} per sale depending on the supplier; ${b} leaves the most. Real published shipping and import duty for ${k} suppliers.`,
+        answer: (p, hi, hn, lo, ln) => `At ${p}, you keep ${hi} per sale with ${hn} and ${lo} with ${ln}.`, basis: (p, f) => `Example Etsy price ${p}, buyer in the US. Etsy fees ${f} (6.5% transaction + 3% + $0.25 payment + $0.20 listing). Cost = product + the supplier's published US shipping + import duty.`,
+        th: ['Supplier', 'Your cost', 'Your profit'], from: c => `Ships from ${c}`, parts: (b, s) => `product ${b} + shipping ${s}`, pct: n => `${n}% margin`, go: 'Go to store ↗',
+        cta: 'Try your own price in the profit calculator →', note: (n, k) => `${n} suppliers make this product; ${k} publish US shipping rates and are shown above.`, allLink: n => `Compare all ${n} suppliers →`,
+        q: (n, p) => `How much profit is there in selling ${n} on Etsy at ${p}?`, a: (p, hi, hn, lo, ln) => `At ${p} to a US buyer, after Etsy fees, product cost, shipping and import duty you keep about ${hi} with ${hn} and ${lo} with ${ln}.`,
+        indexTitle: 'Etsy profit by product and POD supplier', indexDesc: k => `What you keep per sale on Etsy for ${k} popular print-on-demand products, supplier by supplier, with real shipping included.` },
       hc: { h: 'What will you earn on each sale?', p: 'Product cost, shipping to your buyer, import duty and marketplace fees, from every manufacturer that makes it. Real published rates, no estimates.', price: 'Your selling price ($)', btn: 'Calculate my profit', note: (a, n) => `Real shipping and duty data for ${a} of ${n} compared products; more manufacturers are added every week.` },
       calc: {
         nav: 'Profit calculator', title: 'Print-on-demand profit calculator', desc: 'Calculate your profit per sale on Etsy, Shopify or Amazon for every print-on-demand manufacturer that sells the product.',
@@ -432,7 +444,7 @@ const LOCALES = {
     lang: 'tr', intl: 'tr-TR',
     path: { home: 'tr/', categories: 'tr/kategoriler/', cat: id => `tr/kategori/${eSlug.get(id)}/`, oldCat: id => `tr/kategori/${id}/`, compare: 'tr/karsilastir/', group: s => `tr/karsilastir/${s}/`,
       makers: 'tr/ureticiler/', maker: id => `tr/uretici/${id}/`, product: id => `product/${id}/`, search: 'tr/ara/', about: 'tr/hakkinda/', privacy: 'tr/gizlilik/', contact: 'tr/iletisim/',
-      vsIndex: 'tr/vs/', vs: s => `tr/vs/${s}/`, calc: 'tr/kar-hesaplayici/',
+      vsIndex: 'tr/vs/', vs: s => `tr/vs/${s}/`, calc: 'tr/kar-hesaplayici/', profitIndex: 'tr/kar/', profit: s => `tr/kar/${s}/`,
       guides: 'tr/en-ucuz/', guide: t => `tr/en-ucuz/${t}/`, alts: 'tr/alternatifler/', alt: id => `tr/alternatifler/${id}/`, widget: 'tr/fiyat-kutusu/', index: 'tr/fiyat-endeksi/' },
     type: id => id === 'diger' ? 'Diğer Ürünler' : tx.TYPE_BY_ID.get(id)?.label || id, group: g => tx.GROUP_LABEL.get(g) || 'Diğer', node: id => eLabel(id, 'tr'),
     pbLabel: PB.LABEL, pbNote: PB.NOTE, basis: s => s, sizes: s => s, production: s => s, method: m => m,
@@ -497,6 +509,13 @@ const LOCALES = {
         citeH: 'Bu veriyi kullanmak', cite: 'Bu rakamları yazı, video ve paylaşımlarınızda kullanabilirsiniz. Lütfen "POD Pricing (podpricing.com)" diye kaynak gösterip bağlantı verin.', csv: ['Üretici sıralaması (CSV)', 'Boş ürün fiyatları (CSV)'],
         method: 'Yöntem: fiyatlar her üreticinin herkese açık kataloğundaki baskı dahil taban fiyatlardır (USD, kargo ve vergi hariç). Ürünler boş ürün modeline (ör. Gildan 5000) ya da ürün tipi ve ölçüsüne göre eşleştirilir. Her ürün için her üreticinin en ucuz teklifi alınır; tipik fiyat üreticiler arasındaki ortancadır.',
       },
+      profitPages: { nav: 'Ürün ürün kâr', title: (n, p) => `${n} Etsy'de ${p}: üretici üretici kâr (kargo dahil)`, h1: (n, p) => `${n} Etsy'de ${p}'a satılırsa ne kazanırsın?`,
+        desc: (n, p, lo, hi, b, k) => `${n} Etsy'de ${p}'a ABD'ye satılırsa üreticiye göre satış başına ${lo} ile ${hi} arası kalır; en çok ${b}'de. ${k} üreticinin gerçek kargo ve gümrük verisiyle.`,
+        answer: (p, hi, hn, lo, ln) => `${p}'a satarsan satış başına ${hn} ile ${hi}, ${ln} ile ${lo} kalır.`, basis: (p, f) => `Örnek Etsy fiyatı ${p}, alıcı ABD'de. Etsy komisyonu ${f} (%6,5 işlem + %3 + $0,25 ödeme + $0,20 listeleme). Maliyet = ürün + üreticinin yayınladığı ABD kargosu + gümrük.`,
+        th: ['Üretici', 'Maliyetin', 'Kârın'], from: c => `${c}'den gönderiliyor`, parts: (b, s) => `ürün ${b} + kargo ${s}`, pct: n => `%${n} kâr`, go: 'Mağazaya git ↗',
+        cta: 'Kendi fiyatınla kâr hesaplayıcıda dene →', note: (n, k) => `Bu ürünü ${n} üretici yapıyor; ${k} tanesi ABD kargo ücretini yayınlıyor ve yukarıda.`, allLink: n => `${n} üreticinin hepsini karşılaştır →`,
+        q: (n, p) => `${n} Etsy'de ${p}'a satılırsa ne kadar kâr kalır?`, a: (p, hi, hn, lo, ln) => `${p}'a ABD'ye satışta Etsy komisyonu, ürün, kargo ve gümrük düşünce ${hn} ile yaklaşık ${hi}, ${ln} ile ${lo} kalır.`,
+        indexTitle: 'Etsy kârı: ürün ürün, üretici üretici', indexDesc: k => `${k} popüler print-on-demand ürününde Etsy'de satış başına cebine ne kaldığı, gerçek kargo dahil, üretici üretici.` },
       hc: { h: 'Bu ürünü satarsan ne kazanırsın?', p: 'Ürün maliyeti, alıcıya kargo, gümrük vergisi ve pazar yeri komisyonu; ürünü yapan her üretici için. Üreticilerin yayınladığı gerçek ücretler, tahmin yok.', price: 'Satış fiyatın ($)', btn: 'Kârımı hesapla', note: (a, n) => `Karşılaştırdığımız ${n} ürünün ${a} tanesinde gerçek kargo ve vergi verisi var; her hafta yeni üreticiler ekleniyor.` },
       calc: {
         nav: 'Kâr hesaplayıcı', title: 'POD kâr hesaplayıcı', desc: 'Etsy, Shopify veya Amazon\'da satış başına kârını, ürünü satan her print-on-demand üreticisi için hesapla.',
@@ -670,7 +689,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}<div class="joins">${cfg.newsletterAction ? `<form class="nl" action="${esc(cfg.newsletterAction)}" method="post" data-ok="${esc(t.nl.ok)}" data-err="${esc(t.nl.err)}"><div><b>${esc(t.nl.h)}</b><p>${esc(t.nl.p)}</p></div><div class="nl-row"><input type="email" name="fields[email]" required placeholder="${esc(t.nl.ph)}" aria-label="${esc(t.nl.ph)}" autocomplete="email"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><button class="cta">${esc(t.nl.btn)}</button></div><p class="nl-msg" role="status"></p></form>` : ''}${cfg.facebookGroup ? `<aside class="fbgroup"><div><b>${esc(t.fbGroup.h)}</b><p>${esc(t.fbGroup.p)}</p></div><a class="cta" href="${esc(cfg.facebookGroup)}" target="_blank" rel="noopener">${esc(t.fbGroup.btn)}</a></aside>` : ''}</div>${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''}${L.lang === 'tr' ? ` · <a href="${href(DDP.path)}">${esc(DDP.nav)}</a>` : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.profitIndex)}">${esc(t.profitPages.nav)}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''}${L.lang === 'tr' ? ` · <a href="${href(DDP.path)}">${esc(DDP.nav)}</a>` : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
 <p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
@@ -1063,6 +1082,36 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
 <details class="wide adv"><summary>${esc(C.adv)}</summary><label>${esc(C.shipIn)}<input name="shipIn" type="number" min="0" step="0.01" value="0"></label></details>
 </form><div id="calc-out"><p class="muted">${esc(C.pick)}</p></div>
 <details class="others"><summary>${lg === 'tr' ? 'Hesap nasıl yapılıyor?' : 'How is this calculated?'}</summary><p class="muted sm">${esc(C.fees)}</p></details>${lg === 'tr' ? `<p><a class="go" href="${href(DDP.path)}">Türkiye'den ABD'ye gönderiyor musunuz? Kargo + gümrük vergisi hesaplayıcı →</a></p>` : ''}`,
+  }));
+
+  // ürün başına kâr sayfaları (arama trafiği): "X'i Etsy'de $Y'ye satarsan hangi üreticide ne kazanırsın" — yalnız en az 3 üreticinin
+  // gerçek ABD teslim maliyeti bilinen ürünler; satış fiyatı ürün tipinin örnek Etsy fiyatı (sayfada açıkça "örnek" yazar)
+  const PF = t.profitPages, etsyFee = r => 0.20 + r * 0.065 + r * 0.03 + 0.25;
+  const profitGroups = groups.map(g => {
+    const per = [...groupBy(g.list.filter(p => !isBlank(p)), p => p.providerId)].map(([, l]) => l.map(p => [p, deliveredUS(p)]).filter(z => z[1] != null).sort((a, b) => a[1] - b[1])[0]).filter(Boolean);
+    return { g, per, price: SAMPLE_PRICE[g.type] || 24.99 };
+  }).filter(x => x.per.length >= 3);
+  for (const { g, per, price } of profitGroups) {
+    const name = H.gTitle(g), fee = etsyFee(price);
+    const rows = per.map(([p, d]) => { const lc = LC.landedUS(p); return { p, cost: d / 100, base: lc.baseMinor / 100, ship: lc.shipMinor / 100, profit: price - fee - d / 100, from: lc.origin }; }).sort((a, b) => b.profit - a.profit);
+    const best = rows[0], worst = rows[rows.length - 1], pct = r => Math.round(r.profit / price * 100);
+    const calcUrl = `${href(P.calc)}?p=${encodeURIComponent(g.slug)}&price=${price}`;
+    add(P.profit(g.slug) + 'index.html', page(L, H, {
+      rel: P.profit(g.slug) + 'index.html', alt: altAll(p => p.profit(g.slug)), title: `${PF.title(name, fmt(price * 100))} · ${BRAND}`,
+      description: PF.desc(name, fmt(price * 100), fmt(Math.round(worst.profit * 100)), fmt(Math.round(best.profit * 100)), provName(best.p.providerId), rows.length),
+      crumbs: [[PF.nav, href(P.profitIndex)], [name]],
+      body: `<h1>${esc(PF.h1(name, fmt(price * 100)))}</h1>
+<div class="pcard">${g.image ? `<img src="${esc(g.image)}" alt="" loading="lazy">` : ''}<div><p class="cs-main">${PF.answer(fmt(price * 100), `<b class="win">${esc(fmt(Math.round(best.profit * 100)))}</b>`, esc(provName(best.p.providerId)), `<b>${esc(fmt(Math.round(worst.profit * 100)))}</b>`, esc(provName(worst.p.providerId)))}</p><p class="muted sm">${esc(PF.basis(fmt(price * 100), fmt(Math.round(fee * 100))))}</p></div></div>
+<div class="tbl"><table class="lc lc2"><thead><tr><th>${esc(PF.th[0])}</th><th class="num">${esc(PF.th[1])}</th><th class="num">${esc(PF.th[2])}</th><th></th></tr></thead><tbody>${rows.map((r, i) => `<tr><td>${i + 1}. <b>${esc(provName(r.p.providerId))}</b><br><small class="muted">${esc(PF.from(L.lang === 'tr' ? ({ US: 'ABD', CN: 'Çin', EU: 'AB', GB: 'İngiltere', AU: 'Avustralya', CA: 'Kanada', VN: 'Vietnam' })[r.from] || r.from : ({ US: 'the US', CN: 'China', EU: 'the EU', GB: 'the UK', AU: 'Australia', CA: 'Canada', VN: 'Vietnam' })[r.from] || r.from))}</small></td><td class="num"><b>${esc(fmt(Math.round(r.cost * 100)))}</b><br><small class="muted">${esc(PF.parts(fmt(Math.round(r.base * 100)), fmt(Math.round(r.ship * 100))))}</small></td><td class="num ${r.profit >= 0 ? 'win' : 'loss'}"><b class="big">${esc(fmt(Math.round(r.profit * 100)))}</b><br><small>${esc(PF.pct(pct(r)))}</small></td><td><a class="go" href="${esc(outbound(r.p))}" target="_blank" rel="nofollow sponsored noopener">${esc(PF.go)}</a></td></tr>`).join('')}</tbody></table></div>
+<p><a class="cta" href="${calcUrl}">${esc(PF.cta)}</a></p>
+<p class="muted sm">${esc(PF.note(g.providers.size, rows.length))} <a href="${href(P.group(g.slug))}">${esc(PF.allLink(g.providers.size))}</a></p>`,
+      jsonld: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: PF.q(name, fmt(price * 100)), acceptedAnswer: { '@type': 'Answer', text: PF.a(fmt(price * 100), fmt(Math.round(best.profit * 100)), provName(best.p.providerId), fmt(Math.round(worst.profit * 100)), provName(worst.p.providerId)) } }] },
+    }));
+  }
+  // kâr sayfaları dizini
+  add(P.profitIndex + 'index.html', page(L, H, {
+    rel: P.profitIndex + 'index.html', alt: altAll(p => p.profitIndex), title: `${PF.indexTitle} · ${BRAND}`, description: PF.indexDesc(profitGroups.length), crumbs: [[PF.nav]],
+    body: `<h1>${esc(PF.indexTitle)}</h1><p class="muted">${esc(PF.indexDesc(profitGroups.length))}</p><ul class="reports">${profitGroups.sort((a, b) => b.g.providers.size - a.g.providers.size).map(({ g, price }) => `<li><a href="${href(P.profit(g.slug))}"><b>${esc(PF.h1(H.gTitle(g), fmt(price * 100)))}</b></a></li>`).join('')}</ul>`,
   }));
 
   // Türkçe: ABD'ye kargo + gümrük vergisi (DDP) hesaplayıcı ve rehber (scripts/ddp-page.cjs)

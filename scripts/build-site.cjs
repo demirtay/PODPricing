@@ -139,7 +139,9 @@ for (const [s, ids] of groupBy([...eList.keys()], id => slugify(enode(id).label)
 }
 if (new Set(eSlug.values()).size !== eSlug.size) throw new Error('Etsy kategori adresleri çakışıyor');
 const ETR = (() => { try { return JSON.parse(fs.readFileSync(path.join(root, 'data/etsy-tr.json'), 'utf8')); } catch { return {}; } })();
-const eLabel = (id, lg) => { const n = enode(id); return lg === 'tr' ? (ETR[n.label] || (n.labelTr && n.labelTr !== n.label ? n.labelTr : n.label)) : n.label; };
+// İngilizce etiketin aranan yazımı (Etsy 'Mousepads' der, aramalar 'mouse pad'); URL slug'ı ham etiketten gelir, değişmez
+const ENL = { Mousepads: 'Mouse Pads' };
+const eLabel = (id, lg) => { const n = enode(id); return lg === 'tr' ? (ETR[n.label] || (n.labelTr && n.labelTr !== n.label ? n.labelTr : n.label)) : (ENL[n.label] || n.label); };
 // eski tür sayfası / karşılaştırma grubu -> en çok ürününün düştüğü Etsy düğümü
 const typeNode = new Map([...byType].map(([k, l]) => [k, mostCommon(l.map(p => p.etsy))]));
 for (const g of groups) g.etsy = mostCommon(g.list.map(p => p.etsy));
@@ -182,7 +184,7 @@ for (const v of vsPairs) for (const id of [v.a, v.b]) { if (!vsOf.has(id)) vsOf.
 // "En ucuz ... " rehberleri: ürün tipi başına hangi üretici kaç üründe en ucuz, ortalamaya göre ne kadar ucuz
 const median = a => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor((s.length - 1) / 2)] : 0; };
 const mean = a => a.reduce((s, x) => s + x, 0) / (a.length || 1);
-const guideTypes = [...groupsByType].filter(([t, l]) => t !== 'diger' && l.length >= 5).sort((a, b) => b[1].length - a[1].length).slice(0, 24).map(([t]) => t);
+const guideTypes = [...groupsByType].filter(([t, l]) => t !== 'diger' && l.length >= 5).sort((a, b) => b[1].length - a[1].length).slice(0, 40).map(([t]) => t);
 const guides = new Map(guideTypes.map(t => {
   const rows = [], wins = new Map(), ratio = new Map();
   for (const g of groupsByType.get(t)) {
@@ -447,7 +449,7 @@ const LOCALES = {
       homeTitle: `POD Pricing | Print-on-Demand Price Comparison`, 
       grpAboutH: t => `${t}: print-on-demand price comparison`,
       grpAbout: d => [`We compared ${d.n} print-on-demand suppliers that sell the ${d.t} with printing included. Prices range from ${d.lo} at ${d.loP} to ${d.hi} at ${d.hiP}; the typical (median) price is ${d.med}. ${d.gap > 0 ? `The most expensive supplier charges ${d.gap}% more than the cheapest one for the same product.` : ''}`, `Prices are base costs from each supplier's public catalog in USD, before shipping and tax, and refresh twice a day. Enter your selling price above to see your profit per sale with every supplier.`],
-      grpFaqH: 'Questions about this product',
+      grpFaqH: 'Questions about this product', sibH: l => `Other ${l.toLowerCase()} compared`, sibGuide: l => `Cheapest ${l.toLowerCase()} supplier overall →`,
       grpFaq: d => [[`What is the cheapest ${d.t} for print on demand?`, `${d.loP} at ${d.lo} (print included), the lowest of the ${d.n} suppliers we compared. ${d.p2 ? `The next cheapest are ${d.p2}.` : ''}`], [`How much does the ${d.t} cost for print on demand?`, `Between ${d.lo} and ${d.hi} depending on the supplier; the typical price is ${d.med}. Shipping is added at checkout.`]].concat(d.pf ? [[`Is Printful or Printify cheaper for the ${d.t}?`, d.pf]] : []),
       homeAboutH: 'Compare print-on-demand prices before you pick a supplier',
       homeAbout: d => [`POD Pricing is an independent print-on-demand price comparison site. We track ${d.n} products from ${d.m} print-on-demand suppliers — Printful, Printify, BurgerPrints, Merchize, Yoycol, Gearment and many more — and line up the same product side by side, cheapest first.`, `For the same product, the most expensive supplier typically charges ${d.gap}% more than the cheapest one. That gap is your margin: on a t-shirt you sell for $24.99, a few dollars of base cost decides whether the listing is worth it.`, `Search a product or a blank (for example "Gildan 5000", "11oz mug" or "canvas 16x24"), compare every supplier that makes it, enter your selling price to see your profit per sale, then go straight to the supplier.`],
@@ -597,7 +599,7 @@ const LOCALES = {
       homeTitle: `POD (Print on Demand) Fiyat Karşılaştırması | ${BRAND}`,
       grpAboutH: t => `${t}: print-on-demand fiyat karşılaştırma`,
       grpAbout: d => [`${d.t} ürününü baskı dahil satan ${d.n} print-on-demand üreticisini karşılaştırdık. Fiyatlar ${d.loP}'da ${d.lo} ile ${d.hiP}'da ${d.hi} arasında; tipik (medyan) fiyat ${d.med}. ${d.gap > 0 ? `Aynı ürün için en pahalı üretici en ucuzdan %${d.gap} daha fazla istiyor.` : ''}`, `Fiyatlar üreticilerin herkese açık kataloglarındaki USD taban fiyatlarıdır; kargo ve vergi hariçtir, günde iki kez yenilenir. Yukarıya satış fiyatını yazarak her üreticideki kârını görebilirsin.`],
-      grpFaqH: 'Bu ürünle ilgili sorular',
+      grpFaqH: 'Bu ürünle ilgili sorular', sibH: l => `Diğer ${l} karşılaştırmaları`, sibGuide: l => `${l}: genelde en ucuz üretici →`,
       grpFaq: d => [[`En ucuz ${d.t} hangi print-on-demand üreticisinde?`, `${d.loP}, ${d.lo} (baskı dahil) ile karşılaştırdığımız ${d.n} üretici arasında en düşük fiyat. ${d.p2 ? `Sonraki en ucuzlar: ${d.p2}.` : ''}`], [`${d.t} print-on-demand fiyatı ne kadar?`, `Üreticiye göre ${d.lo} ile ${d.hi} arasında; tipik fiyat ${d.med}. Kargo ödeme sırasında eklenir.`]].concat(d.pf ? [[`${d.t} için Printful mu Printify mı ucuz?`, d.pf]] : []),
       homeAboutH: 'Üretici seçmeden önce print-on-demand fiyatlarını karşılaştır',
       homeAbout: d => [`POD Pricing bağımsız bir print-on-demand fiyat karşılaştırma sitesidir. ${d.m} POD üreticisinin ${d.n} ürününü takip ediyoruz (Printful, Printify, BurgerPrints, Merchize, Yoycol, Gearment ve daha fazlası) ve aynı ürünü yan yana, en ucuzdan başlayarak sıralıyoruz.`, `Aynı ürün için en pahalı üretici, en ucuzdan genelde %${d.gap} daha fazla istiyor. Bu fark senin kâr marjın.`, `Bir ürün ya da boş ürün ara (ör. "Gildan 5000", "11oz kupa"), onu yapan bütün üreticileri karşılaştır, satış fiyatını yazıp satış başı kârını gör, sonra doğrudan üreticiye git.`],
@@ -878,6 +880,8 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
       return `<section class="ghist"><h2>${esc(t.histH)}</h2><p>${esc(txt)}</p><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(txt)}" preserveAspectRatio="none"><path d="${path}H${W - pad}" fill="none" stroke="var(--price)" stroke-width="3" vector-effect="non-scaling-stroke"/></svg><div class="gh-ax"><span>${esc(day(pts[0][0]))}</span><span>${esc(day(pts.at(-1)[0]))}</span></div><p class="muted sm">${esc(t.histNote)}</p></section>`;
     };
     const gFaq = gd ? t.grpFaq(gd) : [];
+    const sibs = gp.type && gp.type !== 'diger' ? (groupsByType.get(gp.type) || []).filter(x => x !== gp).sort((a, b) => b.providers.size - a.providers.size).slice(0, 12) : [];
+    const sibBox = sibs.length ? `<h2>${esc(t.sibH(L.type(gp.type)))}</h2><div class="chips">${sibs.map(x => `<a class="chip" href="${href(P.group(x.slug))}"><b>${esc(H.gTitle(x))}</b><span>${esc(t.from(fmt(x.lo.baseMinor)))} · ${esc(t.makersN(x.providers.size))}</span></a>`).join('')}</div>${guides.has(gp.type) ? `<p><a class="go" href="${href(P.guide(gp.type))}">${esc(t.sibGuide(L.type(gp.type)))}</a></p>` : ''}` : '';
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)), cat: gp.etsy,
       title: `${t.groupTitle(title, gp.providers.size, fmt(lo.baseMinor))} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
@@ -887,7 +891,7 @@ ${gbest(gp, title)}
 <p class="muted sm">${esc(t.range(fmt(lo.baseMinor), fmt(hi.baseMinor)))} · ${esc(gp.key.startsWith('m:') ? t.groupNoteModel : t.groupNoteSpec)}</p></div></section>
 ${H.sponsor(gp.type)}<h2>${esc(t.offersH(gp.providers.size))}</h2><p class="muted sm">${esc(t.cheapestFirst)}</p><div class="sellbox"><label>${esc(t.sellL)} <span class="cur">$<input id="sell" type="number" min="0" step="0.01" inputmode="decimal" placeholder="24.99"></span></label><span class="muted sm">${esc(t.sellNote)}</span></div>${H.offers(gp.list)}${ghist(gp.slug)}${H.ad('liste')}
 <p class="muted sm"><a class="go" href="${href(P.widget)}?p=${encodeURIComponent(gp.slug)}">${esc(t.widget.embedLink)}</a></p>
-${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}${rvBox('group:' + gp.slug, title, false)}`,
+${gd ? `<h2>${esc(t.grpAboutH(title))}</h2><div class="prose">${t.grpAbout(gd).map(x => `<p>${esc(x.trim())}</p>`).join('')}</div><h2>${esc(t.grpFaqH)}</h2><div class="prose">${gFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a.trim())}</p>`).join('')}</div>` : ''}${sibBox}${rvBox('group:' + gp.slug, title, false)}`,
       jsonld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'Product', name: title, image: gp.image || undefined, brand: gp.sample.model ? { '@type': 'Brand', name: gp.sample.model.brandName } : undefined,
         offers: { '@type': 'AggregateOffer', priceCurrency: 'USD', lowPrice: (lo.baseMinor / 100).toFixed(2), highPrice: (hi.baseMinor / 100).toFixed(2), offerCount: gp.list.length } }]
         .concat(gFaq.length ? [{ '@type': 'FAQPage', mainEntity: gFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.trim() } })) }] : []) },

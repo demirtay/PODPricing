@@ -3,6 +3,7 @@
 Yöntem: "printful vs printify", "printify alternatives", "how much does print on demand cost" aramalarında üstte çıkan **bağımsız** yazılar (üretici blogları hariç; 13 Eki'de yazılanlar hariç).
 Her mailde yazının kendi rakamı + bugünkü canlı rakam. Ücret teklifi yok, ücretli listeleme isteyene "hayır".
 Gönderen: alidemirtay67@gmail.com (Gmail). Rakamlar 21 Eki 2026 podpricing.com.
+**GÖNDERİLDİ: 21 Eki 2026 21:43–21:46, 5/5 (Gönderilenler’de doğrulandı). Yanıt kontrolü: 28 Eki.**
 
 ---
 

@@ -452,7 +452,7 @@ const LOCALES = {
     t: {
       home: 'Ana sayfa', categories: 'Kategoriler', compare: 'Karşılaştır', makers: 'Üreticiler', search: 'Arama', searchBtn: 'Ara',
       searchPh: 'Ürün ya da model ara (ör. 11oz kupa, gildan 5000, hoodie)', searchBig: 'Ne basmak istiyorsun?',
-      heroH: 'Print on demand fiyat karşılaştırma',
+      heroH: 'POD (Print on Demand) fiyat karşılaştırması',
       heroP: (m, n) => `${m} POD üreticisinin ${n} ürününü karşılaştır, en ucuzu en üstte. Etsy, Amazon, Shopify, TikTok Shop ve eBay satıcıları için.`,
       topGroups: 'En çok üreticide satılan ürünler', bs: { h: n => `${n} çok satanları`, at: n => `${n}'da`, sites: n => `${n} sitede satılıyor`, cheaper: (v, m) => `en ucuzu ${v}, ${m}`, src: (n, d) => `${n}'ın kendi çok satanlar listesinden · ${d}` }, seeAll: 'Tümünü gör', catsH: 'Kategoriler', allCats: 'Tüm kategoriler',
       vs: {
@@ -568,7 +568,7 @@ const LOCALES = {
       foot: ['Hakkında ve yöntem', 'Üreticiler', 'Gizlilik ve çerezler', 'İletişim'],
       ad: 'Reklam', adPreview: s => `Reklam alanı · ${s}`, adSize: { ust: 'Yatay afiş', liste: 'Liste arası', urun: 'Kare', alt: 'Yatay afiş' },
       sponsored: 'Sponsorlu', sponsorPreview: 'Sponsorlu üretici alanı', review: 'İncele ↗',
-      homeTitle: `Print on Demand Fiyat Karşılaştırma · ${BRAND} (podpricing.com)`,
+      homeTitle: `POD (Print on Demand) Fiyat Karşılaştırması | ${BRAND}`,
       grpAboutH: t => `${t}: print-on-demand fiyat karşılaştırma`,
       grpAbout: d => [`${d.t} ürününü baskı dahil satan ${d.n} print-on-demand üreticisini karşılaştırdık. Fiyatlar ${d.loP}'da ${d.lo} ile ${d.hiP}'da ${d.hi} arasında; tipik (medyan) fiyat ${d.med}. ${d.gap > 0 ? `Aynı ürün için en pahalı üretici en ucuzdan %${d.gap} daha fazla istiyor.` : ''}`, `Fiyatlar üreticilerin herkese açık kataloglarındaki USD taban fiyatlarıdır; kargo ve vergi hariçtir, günde iki kez yenilenir. Yukarıya satış fiyatını yazarak her üreticideki kârını görebilirsin.`],
       grpFaqH: 'Bu ürünle ilgili sorular',

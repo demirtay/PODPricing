@@ -191,3 +191,4 @@ body.gs-on .top{position:relative} /* şerit açıkken üst menü yukarıda kals
 .lc2 td{vertical-align:top}.lc2 td small{font-weight:400}
 .others{margin:14px 0}.others summary{cursor:pointer;color:var(--muted);font-weight:600;font-size:14px}.others ul{margin:8px 0 0;padding-left:18px;font-size:14px}.others li{margin:4px 0}.others .go{margin-left:6px}
 .mkt details summary{cursor:pointer}
+.pcard{display:flex;gap:14px;align-items:center;margin:0 0 12px;padding:10px 12px;border-radius:14px;background:var(--panel);border:1px solid var(--line)}.pcard img{width:84px;height:84px;object-fit:cover;border-radius:10px;background:var(--bg);flex:none}.pcard b{font-size:18px}

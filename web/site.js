@@ -146,7 +146,7 @@
     var TR = LANG === 'tr';
     var TH = TR ? ['Üretici', 'Ürün', 'Kargo', 'Vergi', 'Komisyon', 'Kâr', 'Zararsız en düşük fiyat', 'Önerilen fiyat', 'Mağazaya git ↗'] : ['Manufacturer', 'Product', 'Shipping', 'Duty', 'Fees', 'Profit', 'Break-even price', 'Suggested price', 'Go to store ↗'];
     var CC = TR ? { US: 'ABD', CN: 'Çin', VN: 'Vietnam', EU: 'AB', GB: 'İngiltere', AU: 'Avustralya', CA: 'Kanada', MX: 'Meksika', TR: 'Türkiye', IN: 'Hindistan' } : { US: 'USA', CN: 'China', VN: 'Vietnam', EU: 'EU', GB: 'UK', AU: 'Australia', CA: 'Canada', MX: 'Mexico', TR: 'Türkiye', IN: 'India' };
-    var T = TR ? { from: 'Çıkış', unk: 'çıkış ülkesi bilinmiyor', est: 'tahmini', cn: '+ Çin ek: %7,5-25 olabilir', noDuty: 'vergi hesaplanamadı', noShip: 'kargo bilinmiyor', noData: 'veri yok', facility: 'tesis/yöntem', s: { go: 'Mağazaya git ↗', from: function (c) { return c + "'den gönderiliyor"; }, none: 'Bu ürünü yapan üreticilerin hiçbiri kargo ücretini yayınlamıyor; kâr hesaplanamıyor (tahmin kullanmıyoruz).',
+    var T = TR ? { from: 'Çıkış', unk: 'çıkış ülkesi bilinmiyor', est: 'tahmini', cn: '+ Çin ek: %7,5-25 olabilir', noDuty: 'vergi hesaplanamadı', noShip: 'kargo bilinmiyor', noData: 'veri yok', facility: 'tesis/yöntem', s: { makers: function (n) { return n + ' üretici'; }, card: function (n, k) { return n + ' üretici bu ürünü yapıyor; ' + k + " tanesinin kargo ücreti belli, kâr hesabı onlar için."; }, go: 'Mağazaya git ↗', from: function (c) { return c + "'den gönderiliyor"; }, none: 'Bu ürünü yapan üreticilerin hiçbiri kargo ücretini yayınlamıyor; kâr hesaplanamıyor (tahmin kullanmıyoruz).',
         main: function (n, p, k) { return 'En kârlı seçim <b>' + n + '</b>: ' + p + "'a satarsan satış başı " + k + ' kalır.'; },
         mainNoPrice: function (n, be) { return 'En düşük maliyet <b>' + n + '</b>: ' + be + "'ın altında satarsan zarar edersin."; },
         sub: function (be, pct, rec) { return be + "'ın altında satarsan zarar edersin · %" + pct + ' kâr için önerilen satış fiyatı: ' + rec; },
@@ -156,7 +156,7 @@
         others: function (n) { return 'Kargo ücretini yayınlamayan ' + n + ' üretici (yalnız ürün fiyatı)'; }, only: function (x) { return 'ürün ' + x; } }, mk: { title: function (k) { return PFN[k.market] + ' pazarında bu ürün: ' + k.n + ' gerçek ilan'; }, p25: 'ucuz çeyrek', med: 'ortanca', p75: 'pahalı çeyrek', avg: 'ortalama', srcH: 'Kaynak',
         yours: function (x) { return 'Önerilen fiyatın (' + x + ')'; }, low: 'pazarın ucuz tarafında, rekabetçi.', mid: 'pazarın orta aralığında.', high: 'pazardaki ilanların çoğundan pahalı; kâr hedefini ya da üreticiyi gözden geçir.',
         src: function (k) { return 'Kaynak: ' + PFN[k.market] + ' ' + k.category + ' kategorisi' + (k.filter ? ', adında “' + k.filter + '” geçen ilanlar' : '') + ' · ClickScrape ile ' + k.collected + ' tarihinde toplandı' + (k.fx ? ' · ' + k.fx.from + ' fiyatlar ' + k.fx.source + ' kuru (' + k.fx.date + ', 1 USD = ' + k.fx.perUSD + ' ' + k.fx.from + ') ile çevrildi' : '') + ' · ilan fiyatı, kargo hariç; indirimli fiyat olabilir.'; } },  coverage: function (a, n) { return n + ' üreticinin ' + a + ' tanesinde kargo ve vergi verisi tam; diğerlerinde kâr hesaplanmıyor, tahmin kullanmıyoruz.'; }, dn: { 'eu-flat': 'AB sabit €3', gb: 'KDV pazar yerinde', au: 'GST pazar yerinde', 'eu-inside': 'AB içinden', 'ca-cusma': 'C$150 altı muaf' } }
-      : { from: 'Ships from', unk: 'ship-from unknown', est: 'est.', cn: '+ China 301: 7.5-25% may apply', noDuty: 'duty not estimated', noShip: 'shipping unknown', noData: 'no data', facility: 'facility/method', s: { go: 'Go to store ↗', from: function (c) { return 'Ships from ' + c; }, none: 'None of the manufacturers that make this product publish shipping rates, so profit cannot be calculated (we do not estimate).',
+      : { from: 'Ships from', unk: 'ship-from unknown', est: 'est.', cn: '+ China 301: 7.5-25% may apply', noDuty: 'duty not estimated', noShip: 'shipping unknown', noData: 'no data', facility: 'facility/method', s: { makers: function (n) { return n + ' manufacturers'; }, card: function (n, k) { return n + ' manufacturers make this product; ' + k + ' publish shipping rates, so profit is calculated for them.'; }, go: 'Go to store ↗', from: function (c) { return 'Ships from ' + c; }, none: 'None of the manufacturers that make this product publish shipping rates, so profit cannot be calculated (we do not estimate).',
         main: function (n, p, k) { return 'Most profitable: <b>' + n + '</b>. Sell at ' + p + ' and you keep ' + k + ' per sale.'; },
         mainNoPrice: function (n, be) { return 'Lowest cost: <b>' + n + '</b>. Below ' + be + ' you lose money.'; },
         sub: function (be, pct, rec) { return 'Below ' + be + ' you lose money · suggested price for a ' + pct + '% margin: ' + rec; },
@@ -212,7 +212,8 @@
         }).join('') + '</tbody></table></div>';
       var others = !rest.length ? '' : '<details class="others"><summary>' + T.s.others(rest.length) + '</summary><ul>' +
         rest.map(function (r) { return '<li><b>' + esc(r.o[1]) + '</b> ' + badgeTxt(r.o[3]) + ' · ' + T.s.only(usd(r.base)) + ' ' + go(r.o) + '</li>'; }).join('') + '</ul></details>';
-      out.innerHTML = sum + marketHtml(rows) + table + others;
+      var g = gInfo[sel.value], card = g ? '<div class="pcard">' + (g[2] ? '<img src="' + esc(g[2]) + '" alt="" loading="lazy">' : '') + '<div><b>' + esc(g[1]) + '</b><br><span class="muted">' + T.s.card(g[4], full.length) + '</span></div></div>' : '';
+      out.innerHTML = card + sum + marketHtml(rows) + table + others;
     }
     // pazar yerindeki gerçek ilan fiyatları (ClickScrape); önerilen fiyatların bu aralığa göre yeri
     var market = null;
@@ -232,7 +233,7 @@
       if (!slug || pf === 'custom') return Promise.resolve();
       return fetch('/data/market/' + pf + '/' + slug + '.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (d) { market = d; });
     }
-    var metaCache = null;
+    var metaCache = null, gInfo = {};
     function badgeTxt(pb) { return metaCache && pb ? badge(pb, metaCache) : ''; }
     function load() {
       var slug = sel.value; offers = null;
@@ -242,10 +243,11 @@
     }
     Promise.all([fetch('/data/groups-' + LANG + '.json').then(function (r) { return r.json(); }), meta()]).then(function (res) {
       metaCache = res[1];
+      res[0].forEach(function (g) { gInfo[g[0]] = g; });
       var byType = {};
       res[0].forEach(function (g) { (byType[g[5]] = byType[g[5]] || []).push(g); });
       sel.innerHTML = '<option value="">—</option>' + Object.keys(byType).sort(function (a, b) { return byType[b].length - byType[a].length; }).map(function (t) {
-        return '<optgroup label="' + esc(res[1].types[t] || t) + '">' + byType[t].map(function (g) { return '<option value="' + esc(g[0]) + '">' + esc(g[1]) + ' (' + g[4] + ')</option>'; }).join('') + '</optgroup>';
+        return '<optgroup label="' + esc(res[1].types[t] || t) + '">' + byType[t].map(function (g) { return '<option value="' + esc(g[0]) + '">' + esc(g[1]) + ' · ' + T.s.makers(g[4]) + '</option>'; }).join('') + '</optgroup>';
       }).join('');
       var qs = new URLSearchParams(location.search), pre = qs.get('p');
       // ana sayfa kutusundan gelen seçimler

@@ -741,7 +741,7 @@ for (const lg of LANGS) {
 <div class="quick">${L.quick.map(q => `<a href="${href(P.search)}?q=${encodeURIComponent(q)}">${esc(q)}</a>`).join('')}</div></section>
 <section class="hcalc"><div class="hcalc-t"><h2>${esc(t.hc.h)}</h2><p>${esc(t.hc.p)}</p></div>
 <form class="hcalc-f" action="${href(P.calc)}" method="get">
-<label>${esc(t.calc.product)}<select name="p">${homeCalc.map(g => `<option value="${esc(g.slug)}">${esc(H.gTitle(g))} (${g.providers.size})</option>`).join('')}</select></label>
+<label>${esc(t.calc.product)}<select name="p">${homeCalc.map(g => `<option value="${esc(g.slug)}">${esc(H.gTitle(g))} · ${g.providers.size} ${L.lang === 'tr' ? 'üretici' : 'manufacturers'}</option>`).join('')}</select></label>
 <label>${esc(t.calc.platform)}<select name="platform"><option value="etsy">Etsy</option><option value="shopify">Shopify</option><option value="amazon">Amazon Handmade</option></select></label>
 <label>${esc(t.calc.dest)}<select name="dest">${t.calc.dests.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('')}</select></label>
 <label>${esc(t.hc.price)}<input name="price" type="number" min="0" step="0.01" value="24.99"></label>

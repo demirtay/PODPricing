@@ -778,7 +778,8 @@ ${bestsellers.slice(0, 1).map(b => H.bsRow(b)).join('')}${bestsellers.length > 1
     // alternateName: Google "podpricing" (bitişik) aramasını markayla eşleştirsin; Organization + logo site adı/ikonu için
     jsonld: { '@context': 'https://schema.org', '@graph': [
       { '@type': 'WebSite', '@id': SITE + '/#website', name: BRAND, alternateName: ['PodPricing', 'podpricing.com'], url: SITE || undefined, inLanguage: lg, publisher: { '@id': SITE + '/#org' }, potentialAction: { '@type': 'SearchAction', target: SITE + href(P.search) + '?q={q}', 'query-input': 'required name=q' } },
-      { '@type': 'Organization', '@id': SITE + '/#org', name: BRAND, alternateName: ['PodPricing', 'podpricing.com'], url: SITE || undefined, logo: SITE + '/assets/logo.png' },
+      // sameAs: markanın doğrulanmış hesapları (Google bilgi grafiğinde siteyle aynı varlık olarak bağlasın)
+      { '@type': 'Organization', '@id': SITE + '/#org', name: BRAND, alternateName: ['PodPricing', 'podpricing.com'], url: SITE || undefined, logo: SITE + '/assets/logo.png', sameAs: ['https://www.youtube.com/@podpricing', 'https://www.instagram.com/podpricing/'] },
       { '@type': 'FAQPage', '@id': SITE + href(P.home) + '#faq', mainEntity: t.homeFaq(homeD).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ] },
   }));

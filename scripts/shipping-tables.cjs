@@ -80,8 +80,41 @@ async function treatpod() {
   save('treatpod', page + ' (ağırlık tablosu + sayfadaki örnek ürün ağırlıkları; EU = Almanya)', out);
 }
 
+// Snapwear: ülke + ağırlık bandı tablosu (shipping-rates sayfasına gömülü CSV, EUR) + ürün sayfasındaki "Weight: ... (370 g)" ve
+// "Product available in the U.S. and Europe" beyanı. Merkez belirtilmeyen varışlar (CA, AU) yazılmaz.
+async function snapwear() {
+  const page = 'https://snapwear.pro/shipping-rates';
+  const m = (await fetchText(page)).text.match(/CSV_URL\s*=\s*"data:text\/csv;charset=utf-8;base64,([^"]+)"/);
+  if (!m) throw Error('Snapwear: kargo tablosu bulunamadı');
+  const rows = Buffer.from(m[1], 'base64').toString('utf8').replace(/^﻿/, '').split(/\r?\n/).slice(1).map(l => l.split(';')).filter(r => r.length >= 3)
+    .map(([country, band, price]) => { const [lo, hi] = (band.match(/\d+/g) || []).map(Number); return { country, lo, hi, eur: Number(price.replace(',', '.')) }; });
+  const rate = (country, g) => rows.find(r => r.country === country && g >= r.lo && g <= r.hi)?.eur;
+  if (!rate('United States', 300) || !rate('Germany', 300)) throw Error('Snapwear: tablo biçimi değişti');
+  const out = {};
+  for (const p of catalog.filter(p => p.providerId === 'snapwear')) {
+    const fx = p.sourceCurrency === 'EUR' && p.exchangeRate > 0 ? p.exchangeRate : null;
+    if (!fx) continue;
+    let t;
+    try { t = text((await fetchText(p.sourceUrl)).text); } catch { continue; }
+    await new Promise(r => setTimeout(r, 400));
+    // ürün ağırlığı (gram birimi açıkça yazılı olan); bedene göre değişiyorsa en hafifi (taban fiyat da en düşük varyant). g/m² kumaş ağırlığı sayılmaz
+    const w = Number((t.match(/Weight[^:]{0,30}:\s*(?:approx\.?\s*)?(?:(?:size\s*)?[A-Z0-9]{1,4}\s*-\s*)?(\d+)\s?(?:g|gr)\b(?!\s?\/)/i)
+      || t.match(/Weight:.{0,40}?\((\d+)\s?g\)/i) || t.match(/Total Weight[^:]{0,30}:.{0,60}?-\s*(\d+)\s?(?:g|gr)\b(?!\s?\/)/i) || [])[1]);
+    const av = (t.match(/available in (?:the )?(.{0,40})/i) || t.match(/Produced in the (.{0,30})/i) || [])[1] || '';
+    if (!(w > 0) || !av) continue;
+    const usd = eur => Math.round(eur * 100 * fx), o = {};
+    if (/U\.?S\.?|United States|USA/i.test(av) && rate('United States', w)) o.US = [['Snapwear Local Post', usd(rate('United States', w)), 'US']];
+    if (/Europe|\bEU\b/i.test(av)) {
+      if (rate('Germany', w)) o.EU = [['Snapwear Courier (Germany)', usd(rate('Germany', w)), 'EU']];
+      if (rate('United Kingdom', w)) o.GB = [['Snapwear Local Post', usd(rate('United Kingdom', w)), 'EU']];
+    }
+    if (Object.keys(o).length) out[p.id] = o;
+  }
+  save('snapwear', page + ' (ülke × ağırlık bandı) + ürün sayfasındaki ağırlık ve bölge beyanı; EU = Almanya', out);
+}
+
 (async () => {
   let failed = 0;
-  for (const f of [printgenie, treatpod]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
+  for (const f of [printgenie, treatpod, snapwear]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
   if (failed) process.exitCode = 1;
 })();

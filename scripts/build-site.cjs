@@ -205,7 +205,8 @@ const guides = new Map(guideTypes.map(t => {
   // en az 3 ürün grubunda görünen üretici yoksa rehber sayfası anlamsız (ve başlık hesabı yapılamaz)
 }).filter(([, s]) => s.rows.length >= 3 && s.suppliers.length));
 // "X alternatifleri": büyük üreticiler için aynı ürünlerde daha ucuz olan rakipler
-const altProviders = [...vsOf].filter(([, l]) => l.length >= 5).sort((a, b) => b[1].length - a[1].length).slice(0, 15).map(([id]) => id);
+// en az 8 ikili karşılaştırması olan her üretici ("<üretici> alternatives" aramaları); 5-7 eşleşmede liste çok kısa kalıyor
+const altProviders = [...vsOf].filter(([, l]) => l.length >= 8).sort((a, b) => b[1].length - a[1].length).map(([id]) => id);
 const altOf = id => vsOf.get(id).map(v => {
   const mine = v.a === id ? v.sumA : v.sumB, theirs = v.a === id ? v.sumB : v.sumA, other = v.a === id ? v.b : v.a;
   return { other, v, n: v.rows.length, cheaperOn: v.a === id ? v.bWins : v.aWins, pct: Math.round((mine - theirs) / mine * 100) };
@@ -355,7 +356,7 @@ const LOCALES = {
       alt: {
         titleN: (s, c, m) => `${s} alternatives: ${c} cheaper print-on-demand suppliers (${m})`,
         typeH: s => `Cheapest ${s} alternative by product type`, tth: ['Product type', 'Cheapest alternative', 'vs', 'Products compared'], faqH: 'Questions',
-        q1: s => `What is the cheapest alternative to ${s}?`, a1: (s, o, p, n, next) => `${o}: about ${p}% cheaper than ${s} on the ${n} products both sell.${next ? ` Next come ${next}.` : ''}`,
+        q1: s => `What is the cheapest alternative to ${s}?`, a1: (s, o, p, n, next) => `${o}: about ${p}% cheaper than ${s} on the ${n} products both sell.${next ? ` Other cheaper options: ${next}.` : ''}`,
         q2: s => `How many print-on-demand suppliers are cheaper than ${s}?`, a2: (s, n, c, e, m) => `Of the ${n} suppliers we compared with ${s} on identical products, ${c} are cheaper overall, ${e} cost about the same and ${m} are more expensive.`,
         qT: (s, l) => `What is the cheapest ${s} alternative for ${l.toLowerCase()}?`, aT: (s, l, o, p, n) => `${o}, about ${p}% cheaper than ${s} on ${n} comparable ${l.toLowerCase()}.`,
         indexTitle: 'Print-on-demand supplier alternatives', indexDesc: 'Cheaper alternatives to Printful, Printify and other print-on-demand suppliers, based on products they both sell.',
@@ -513,7 +514,7 @@ const LOCALES = {
       alt: {
         titleN: (s, c, m) => `${s} alternatifleri: ${c} daha ucuz POD üreticisi (${m})`,
         typeH: s => `Ürün tipine göre en ucuz ${s} alternatifi`, tth: ['Ürün tipi', 'En ucuz alternatif', 'Fark:', 'Karşılaştırılan ürün'], faqH: 'Sorular',
-        q1: s => `En ucuz ${s} alternatifi hangisi?`, a1: (s, o, p, n, next) => `${o}: ikisinin de sattığı ${n} üründe ${s} fiyatlarından yaklaşık %${p} ucuz.${next ? ` Ardından ${next} geliyor.` : ''}`,
+        q1: s => `En ucuz ${s} alternatifi hangisi?`, a1: (s, o, p, n, next) => `${o}: ikisinin de sattığı ${n} üründe ${s} fiyatlarından yaklaşık %${p} ucuz.${next ? ` Diğer ucuz seçenekler: ${next}.` : ''}`,
         q2: s => `Kaç POD üreticisi ${s} fiyatlarından ucuz?`, a2: (s, n, c, e, m) => `Aynı ürünlerde ${s} ile karşılaştırdığımız ${n} üreticiden ${c} tanesi toplamda daha ucuz, ${e} tanesi aşağı yukarı aynı, ${m} tanesi daha pahalı.`,
         qT: (s, l) => `${l} için en ucuz ${s} alternatifi hangisi?`, aT: (s, l, o, p, n) => `${o}; karşılaştırılabilir ${n} üründe (${l}) ${s} fiyatlarından yaklaşık %${p} ucuz.`,
         indexTitle: 'POD üreticisi alternatifleri', indexDesc: 'Printful, Printify ve diğer print-on-demand üreticilerine, ikisinin de sattığı ürünlere göre daha ucuz alternatifler.',
@@ -1027,7 +1028,7 @@ ${s.rows.slice(0, 20).map(r => `<tr><td><a href="${href(P.group(r.g.slug))}">${e
     // tip başına: bu üreticiye göre o tipte en çok tasarruf ettiren alternatif (en az 3 ortak ürün)
     const aTypes = [...groupBy(list.flatMap(x => vsByType(x.v).map(tp => { const mine = x.v.a === id ? tp.sumA : tp.sumB, theirs = x.v.a === id ? tp.sumB : tp.sumA; return { type: tp.type, other: x.other, n: tp.n, pct: Math.round((mine - theirs) / mine * 100) }; })), r => r.type)]
       .map(([, l]) => l.sort((a, b) => b.pct - a.pct || b.n - a.n)[0]).filter(r => r.pct >= 3).sort((a, b) => b.n - a.n).slice(0, 12);
-    const nextAlt = list.filter(x => x.pct >= 3 && x !== best).slice(0, 2).map(x => lg === 'tr' ? `${provName(x.other)} (%${x.pct})` : `${provName(x.other)} (${x.pct}%)`).join(lg === 'tr' ? ' ve ' : ' and ');
+    const nextAlt = list.filter(x => x.pct >= 3 && x !== best).slice(0, 2).map(x => lg === 'tr' ? `${provName(x.other)} (${x.n} üründe %${x.pct})` : `${provName(x.other)} (${x.pct}% on ${x.n} products)`).join(lg === 'tr' ? ' ve ' : ' and ');
     const aFaq = (best ? [[AL.q1(S), AL.a1(S, provName(best.other), best.pct, best.n, nextAlt)]] : []).concat([[AL.q2(S), AL.a2(S, list.length, cheaperN, list.length - cheaperN - pricierN, pricierN)]])
       .concat(aTypes.slice(0, 3).map(r => [AL.qT(S, L.type(r.type)), AL.aT(S, L.type(r.type), provName(r.other), r.pct, r.n)]));
     const diff = x => x.pct >= 3 ? `<span class="win">${esc(AL.cheaper(x.pct))}</span>` : x.pct <= -3 ? esc(AL.pricier(-x.pct)) : esc(AL.same);

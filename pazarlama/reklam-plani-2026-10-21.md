@@ -6,7 +6,8 @@ Rakamlar podpricing.com kâr sayfalarından (21 Eki verisi): Etsy komisyonu %6,5
 Kanıtlanmış kanal: Facebook paylaşımı 16-18 Ekim'de günde 1.250-1.440 ziyaret getirdi; paylaşım durunca günde ~20'ye düştü.
 Google'dan gelen trafik henüz ~0. Kural: her gün en az 1 paylaşım; her biri tek ürün, tek çarpıcı rakam, tek bağlantı.
 
-## A) 14 günlük sosyal seri (FB grupları + FB sayfa + Instagram + X; Reddit haftada 1)
+## A) 14 günlük sosyal seri (FB grupları + FB sayfa + Instagram + X) — Reddit YOK (Ali, 21 Eki)
+Meta sınırı: sayfa ayda 2 bağlantılı gönderi → arada bağlantısız görsel (pazarlama/sosyal-gorseller/).
 Bağlantılardaki utm_source'u kanala göre değiştir (facebook / instagram / x / reddit).
 
 Gün 1 — Termos zararı (en çarpıcı)
@@ -33,9 +34,7 @@ Gün 5 — Sweatshirt
 Gildan 18000 crewneck at $39.99: Yoycol leaves you $19.53, Printful $7.78. That's $11.75 more per sale for the same blank.
 https://podpricing.com/profit/gildan-18000/?utm_source=facebook&utm_medium=group&utm_campaign=series1
 
-Gün 6 — Reddit (r/printondemand) — veri gönderisi, bağlantı yorumda
-Title: I compared what you actually keep on a $29.99 tumbler across 11 POD suppliers (shipping included). One of them loses money.
-(Gövde: Gün 1 tablosu tam hali; bağlantıyı sadece sorulursa yorumda ver.)
+Gün 6 — (Reddit iptal) gun4/5 görsellerinden biri Instagram'da
 
 Gün 7 — Tişört
 Gildan 5000 at $24.99: PrintKK $12.27 · BurgerPrints $11.63 · Printify $8.67 · Printful $7.78 · Prodigi $1.42
@@ -61,7 +60,7 @@ Gün 12 — Poster
 18×24 poster at $24.99: PrintOps $13.67 · Interestprint $10.19 · ArtsAdd $6.15
 https://podpricing.com/profit/posters-18x24/?utm_source=facebook&utm_medium=group&utm_campaign=series1
 
-Gün 13 — Reddit (r/EtsySellers) — "Which POD products still leave a real margin after shipping?" (battaniye, kanvas, hoodie listesi; bağlantı yorumda)
+Gün 13 — (Reddit iptal) Instagram: gun8-kanvas görseli
 
 Gün 14 — Özet
 We track what you actually keep per sale on Etsy for 176 POD products, supplier by supplier, with real shipping. Free:

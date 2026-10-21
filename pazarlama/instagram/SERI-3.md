@@ -4,19 +4,19 @@ Dosyalar: `video/ig3/` (21 Eki 2026 canlı veriyle üretildi). Durum: planlandı
 
 | Gün | Dosya | Durum |
 |---|---|---|
-| 28 Eki | mugs-15oz.mp4 | bekliyor |
-| 29 Eki | burgerprints-vs-printify.mp4 | bekliyor |
-| 30 Eki | gildan-18600.mp4 | bekliyor |
-| 31 Eki | posters-8x10.mp4 | bekliyor |
-| 1 Kas | neatopod-vs-printify.mp4 | bekliyor |
-| 2 Kas | tumblers-12oz.mp4 | bekliyor |
-| 3 Kas | bella-canvas-3480.mp4 | bekliyor |
-| 4 Kas | merchize-vs-printify.mp4 | bekliyor |
-| 5 Kas | blankets-50x60.mp4 | bekliyor |
-| 6 Kas | gildan-2400.mp4 | bekliyor |
-| 7 Kas | printify-vs-prodigi.mp4 | bekliyor |
-| 8 Kas | mugs-11oz-black.mp4 | bekliyor |
-| 9 Kas | comfort-colors-6014.mp4 | bekliyor |
+| 28 Eki | mugs-15oz.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 29 Eki | burgerprints-vs-printify.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 30 Eki | gildan-18600.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 31 Eki | posters-8x10.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 1 Kas | neatopod-vs-printify.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 2 Kas | tumblers-12oz.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 3 Kas | bella-canvas-3480.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 4 Kas | merchize-vs-printify.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 5 Kas | blankets-50x60.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 6 Kas | gildan-2400.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 7 Kas | printify-vs-prodigi.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 8 Kas | mugs-11oz-black.mp4 | planlandı ✅ (19:00, FB+IG) |
+| 9 Kas | comfort-colors-6014.mp4 | planlandı ✅ (19:00, FB+IG) |
 
 ## Açıklamalar
 
@@ -88,7 +88,7 @@ The exact same Gildan 2400 Long Sleeve t-shirt costs $10.25 at one print-on-dema
 For comparison, Printful charges $15.09, and Printify $12.83.
 Live comparison → link in bio (podpricing.com)
 
-#printondemand #etsyseller #shopify #pod #hoodie #apparelbusiness #printful #printify #sidehustle
+#printondemand #etsyseller #shopify #pod #longsleeve #apparelbusiness #printful #printify #sidehustle
 
 ### printify-vs-prodigi
 Printify or Prodigi, which one is actually cheaper? I compared all 58 products they both sell.

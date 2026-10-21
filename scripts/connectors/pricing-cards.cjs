@@ -49,6 +49,8 @@ const SITES = {
       .map(m => ({ href: 'https://www.colouroo.com.au/catalogue.html#' + m[1], image: new URL(m[2], 'https://www.colouroo.com.au/').href, title: `${m[4].trim()} (${m[3].trim()})`, price: m[5] })),
     basis: 'Colouroo fiyatı · tek baskı dahil, tek adet · ek baskı yeri ayrıca, kargo ayrıca',
     min: 80,
+    // yalnız Avustralya içine gönderiyor (Brisbane); fiyat sayfasındaki sipariş başı standart posta ücreti
+    shipping: { page: 'https://www.colouroo.com.au/pricing.html', origin: 'AU', rates: html => { const m = html.replace(/<[^>]*>/g, ' ').match(/Postage per order\s+\$([\d.,]+)\s+Standard/i); return m ? { AU: m[1] } : null; } },
   },
   zonkraft: {
     page: 'https://zonkraft.com/pricing',
@@ -89,6 +91,12 @@ async function collect(id, progress = () => {}) {
   const html = (await fetchText(cfg.page)).text;
   const cards = cfg.cards(html);
   const fx = await exchange(cfg.currency);
+  // kaynağın yayınladığı kargo ücreti (varış -> kuruş, USD); bulunamazsa kargo bilinmiyor kalır
+  let ship = null;
+  if (cfg.shipping) {
+    const rates = cfg.shipping.rates((await fetchText(cfg.shipping.page)).text);
+    if (rates) ship = Object.fromEntries(Object.entries(rates).map(([d, v]) => [d, Math.round(money(v) * fx.rate)]));
+  }
   const products = [];
   for (const c of cards) {
     const minor = money(c.price), title = decode(c.title).replace(/\s+/g, ' ').trim();
@@ -96,6 +104,7 @@ async function collect(id, progress = () => {}) {
     const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const r = record(id, slug, title, minor * fx.rate, c.image, c.href, 'Ölçü ve seçenekler üreticide seçilir');
     if (cfg.currency !== 'USD') { r.sourceMinor = minor; r.sourceCurrency = cfg.currency; r.exchangeRate = fx.rate; r.exchangeDate = fx.date; }
+    if (ship) { r.shipping = ship; r.availableCountries = [cfg.shipping.origin]; }
     r.priceBasis = cfg.basis; r.priceVerified = true; r.priceVerification = 'public-pricing-page';
     r.importedBy = id + '-pricing-cards-v1'; r.checkedAt = checkedAt; r.checkedOn = checkedAt.slice(0, 10);
     if (!products.some(p => p.id === r.id)) products.push(r);

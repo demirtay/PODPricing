@@ -7,6 +7,8 @@ const { cachedGet, crawl, decode } = require('./http.cjs');
 
 const API = 'https://apis.printway.io/v1/product-type/home';
 const SITE = 'https://printway.io/en/product/';
+// servis tarayıcı dışı isteklere "Access denied" veriyor (Ekim 2026); sitenin kendi isteğindeki başlıklar
+const HEADERS = { Accept: 'application/json', 'X-Requested-With': 'en', Origin: 'https://printway.io', Referer: 'https://printway.io/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'Sec-Fetch-Site': 'same-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty' };
 const cents = n => Math.round(Number(n) * 100);
 function category(slugs, name) {
   const s = (slugs.join(' ') + ' ' + name).toLowerCase();
@@ -25,10 +27,10 @@ function category(slugs, name) {
 
 async function collect(progress = () => {}) {
   const checkedAt = new Date().toISOString();
-  const list = JSON.parse((await cachedGet('printway', API + '/catalog', { headers: { Accept: 'application/json' } })).text).data;
+  const list = JSON.parse((await cachedGet('printway', API + '/catalog', { headers: HEADERS })).text).data;
   if (!Array.isArray(list) || list.length < 300) throw Error('Printway: katalog listesi beklenenden kısa');
   const details = await crawl(list, async item => {
-    const r = await cachedGet('printway', `${API}/detail-product?slug=${encodeURIComponent(item.slug)}`, { headers: { Accept: 'application/json' } });
+    const r = await cachedGet('printway', `${API}/detail-product?slug=${encodeURIComponent(item.slug)}`, { headers: HEADERS });
     try { return { item, d: JSON.parse(r.text).data }; } catch { return { item, d: null }; }
   }, { concurrency: 3, delayMs: 300, progress });
   const products = [], skipped = [];

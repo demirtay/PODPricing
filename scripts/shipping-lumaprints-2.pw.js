@@ -5,8 +5,10 @@
 // - çerçeveli fine art: "Slim 0.875in" -> 0.875w Black Frame, "Wide 1.25in" -> 1.25w Black Frame (en sade siyah çerçeve)
 // Liste: http://127.0.0.1:4180/luma-list.json; sonuç window.__luma.out'a eklenir.
 async (page) => {
-  const list = await (await page.context().request.get('http://127.0.0.1:4180/luma-list.json')).json();
+  const list = await (await page.context().request.get('http://127.0.0.1:4180/luma-list2.json')).json();
   return await page.evaluate((list) => {
+    // tarayıcı yeniden açıldıysa: listedeki her ürün bu turda çalışır (liste = henüz sonucu olmayanlar)
+    if (!window.__luma) window.__luma = { out: {}, miss: list.map(x => x[0]) };
     const DEST = {
       US: { country: 'US', statecode: 'NY', city: 'New York', postcode: '10001' },
       GB: { country: 'GB', statecode: '', city: 'London', postcode: 'SW1A 1AA' },

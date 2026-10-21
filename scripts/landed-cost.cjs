@@ -22,6 +22,8 @@ const HTS = {
   'duvar-poster': ['4911.91', 0], 'duvar-kanvas': ['4911.91', 0], 'duvar-cerceveli': ['4911.91', 0],
   'ev-battaniye': ['6301.40.00', 8.5], 'ev-yastik': ['9404.90.20', 6], 'ev-perde': ['6303.92.20', 11.3], 'ev-havlu': ['6302.60.00', 9.1],
   'ev-mum': ['3406.00.00', 0], 'ev-lamba': ['9405.21.60', 6],
+  // 21 Eki 2026 hts.usitc.gov: bayrak (diğer hazır eşya), duvar halısı (sentetik, örme olmayan duvar asması)
+  'ev-bayrak': ['6307.90.98', 7], 'duvar-duvar-halisi': ['6304.93.00', 9.3],
   'canta-bez': ['4202.92.15', 6.3], 'canta-sirt': ['4202.92.31', 17.6],
   'teknoloji-telefon-kilifi': ['3926.90.99', 5.3], 'ayakkabi-sneaker': ['6404.19.15', 10.5],
   'kirtasiye-kart': ['4909.00', 0], 'kirtasiye-defter': ['4820.10.20', 0], 'oyun-puzzle': ['9503.00.00', 0], 'oyun-kart': ['9504.40.00', 0],

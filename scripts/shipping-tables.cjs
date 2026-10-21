@@ -172,8 +172,31 @@ async function gearment() {
   save('gearment', sheet + ' (Gearment fiyat listesi; help.gearment.com bağlantısı)', out);
 }
 
+// Printmood: yardım merkezi makalesi "Shipping Rates by Product and Method" (Teksas'tan): Ground (ABD) ve Int. (AU, AT, BE, CA, FR, DE, PL, GB)
+async function printmood() {
+  const page = 'https://printmood.zendesk.com/api/v2/help_center/en-us/articles/40531348215956.json';
+  const a = JSON.parse((await fetchText(page)).text).article;
+  if (!/Texas, USA/i.test(a.body)) throw Error('Printmood: çıkış beyanı bulunamadı');
+  const cell = c => c.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim();
+  const rows = [...a.body.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)].map(m => [...m[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g)].map(c => cell(c[1])));
+  const rate = name => { const r = rows.find(r => r[0] === name && /^\$/.test(r[1] || '') && /^\$/.test(r[9] || '')); return r ? [minor(r[1].slice(1)), minor(r[9].slice(1))] : null; };
+  const group = {
+    'giyim-tisort': 'T-Shirt', 'giyim-sweatshirt': 'Sweatshirt', 'giyim-kapusonlu': 'Hoodie', 'giyim-uzun-kollu': 'Long Sleeve', 'giyim-onluk': 'Apron',
+    'canta-bez': 'Tote Bag', 'aksesuar-sapka': 'Hats', 'mutfak-kupa': 'Mug', 'mutfak-termos': 'Tumbler', 'mutfak-matara': 'Water Bottle',
+  };
+  if (!rate('T-Shirt')) throw Error('Printmood: tablo okunamadı');
+  const out = {};
+  for (const p of catalog.filter(p => p.providerId === 'printmood')) {
+    const type = tx.classify(p).type, r = rate(group[type] || (/\bornament\b/i.test(p.title) ? 'Ornament' : ''));
+    if (!r) continue;
+    out[p.id] = { US: [['Printmood Ground', r[0], 'US']] };
+    for (const d of ['GB', 'EU', 'CA', 'AU']) out[p.id][d] = [['Printmood International', r[1], 'US']];
+  }
+  save('printmood', 'printmood.zendesk.com/hc/en-us/articles/40531348215956 (Shipping Rates by Product and Method)', out);
+}
+
 (async () => {
   let failed = 0;
-  for (const f of [printgenie, treatpod, snapwear, podhut, gearment]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
+  for (const f of [printgenie, treatpod, snapwear, podhut, gearment, printmood]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
   if (failed) process.exitCode = 1;
 })();

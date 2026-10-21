@@ -18,16 +18,17 @@ Her yerde ücretsiz seçeneği seç. "Boost", "featured", "skip the queue" gibi 
 **Name:** POD Pricing
 **Website:** https://podpricing.com
 **Tagline (60 karakter):** Compare print-on-demand supplier prices, cheapest first
-**Kısa açıklama (≈160 karakter):** Compare 30,000 products from 65 print-on-demand suppliers. Identical products are matched and sorted cheapest first. Free, no signup.
+**Kısa açıklama (≈160 karakter):** Compare 35,000 products from 150+ print-on-demand suppliers. Identical products are matched and sorted cheapest first. Free, no signup.
 
 **Uzun açıklama:**
-POD Pricing is a free price comparison site for print-on-demand sellers. It tracks 30,000+ products from 65 suppliers, including Printful, Printify, Gearment, Merchize and BurgerPrints, and refreshes prices twice a day.
+POD Pricing is a free price comparison site for print-on-demand sellers. It tracks 35,000+ products from 150+ suppliers, including Printful, Printify, Gearment, Merchize and BurgerPrints, and refreshes prices twice a day.
 
 Identical products (the same blank, like a Gildan 5000 tee, or the same type and size, like an 11oz mug) are matched across suppliers and sorted cheapest first, so you can see in seconds who prints it for less. The same product can cost several times more at one supplier than at another.
 
 Also included:
-- 200+ head-to-head supplier comparisons (e.g. Printful vs Printify)
-- A profit calculator with Etsy, Shopify and Amazon fees
+- 230+ head-to-head supplier comparisons (e.g. Printful vs Printify)
+- A profit calculator with Etsy, Shopify and Amazon fees, real published shipping and US import duty
+- "Profit by product" pages: what you keep per sale on Etsy, supplier by supplier
 - A POD Price Index showing how much prices differ across suppliers
 
 No signup, no paywall. Available in English and Turkish.

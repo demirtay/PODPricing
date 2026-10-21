@@ -113,8 +113,67 @@ async function snapwear() {
   save('snapwear', page + ' (ülke × ağırlık bandı) + ürün sayfasındaki ağırlık ve bölge beyanı; EU = Almanya', out);
 }
 
+// PodHut: SSS sayfasındaki standart ücretler (USPS, ABD'den): yalnız "T-shirt" ve "Hoodie"; uluslararası gönderi başı sabit ücret
+async function podhut() {
+  const page = 'https://podhut.com/pages/faq';
+  const t = text((await fetchText(page)).text);
+  const tee = t.match(/T-shirt shipping \$([\d.]+)/i), hood = t.match(/Hoodie shipping \$([\d.]+)/i), intl = t.match(/International shipping is a flat \$([\d.]+)/i);
+  if (!tee || !hood || !/USPS/.test(t)) throw Error('PodHut: kargo ücretleri okunamadı');
+  const group = { 'giyim-tisort': minor(tee[1]), 'giyim-kapusonlu': minor(hood[1]) };
+  const out = {};
+  for (const p of catalog.filter(p => p.providerId === 'podhut')) {
+    const sh = group[tx.classify(p).type];
+    if (sh == null) continue;
+    out[p.id] = { US: [['USPS (PodHut standard)', sh, 'US']] };
+    if (intl) for (const d of ['GB', 'EU', 'CA', 'AU']) out[p.id][d] = [['PodHut international (flat)', minor(intl[1]), 'US']];
+  }
+  save('podhut', page + ' (T-shirt / Hoodie standart ücreti; uluslararası sabit)', out);
+}
+
+// Gearment: yardım merkezindeki "How Shipping Fee Is Calculated" makalesinin bağlantı verdiği fiyat listesi (Google E-Tablo, herkese açık).
+// Sütunlar: ürün, Standard taban fiyat, ..., US Standard, ..., International Standard. Eşleşme: giyimde model kodu (5000, 3001Y...),
+// diğerlerinde aynı taban fiyat + ad kelimeleri. ABD'deki tesislerden (origins.json).
+const csvRows = t => {
+  const rows = []; let cur = [], f = '', q = false;
+  for (let i = 0; i < t.length; i++) {
+    const ch = t[i];
+    if (q) { if (ch === '"') { if (t[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += ch; }
+    else if (ch === '"') q = true;
+    else if (ch === ',') { cur.push(f); f = ''; }
+    else if (ch === '\n') { cur.push(f); rows.push(cur); cur = []; f = ''; }
+    else if (ch !== '\r') f += ch;
+  }
+  if (f || cur.length) { cur.push(f); rows.push(cur); }
+  return rows;
+};
+async function gearment() {
+  const sheet = 'https://docs.google.com/spreadsheets/d/1BTqEk0BA8mYUQeKiJZm0IskBqiOO1kaB';
+  const rows = csvRows((await fetchText(sheet + '/export?format=csv&gid=426300731')).text);
+  const head = rows.findIndex(r => /Product and Sizes/i.test(r[0] || ''));
+  if (head < 0 || !/US Shipping/i.test(rows[head].join(',')) || !/International Shipping/i.test(rows[head].join(','))) throw Error('Gearment: fiyat listesi biçimi değişti');
+  const col = name => rows[head].findIndex(c => new RegExp(name, 'i').test(c));
+  const cUS = col('US Shipping'), cINT = col('International Shipping');
+  const words = s => new Set(s.toLowerCase().replace(/[™®”"'']/g, '').split(/[^a-z0-9]+/).filter(w => w.length > 1));
+  const list = rows.slice(head + 2).filter(r => r[0] && /^\$/.test(r[1] || '') && /^\$/.test(r[cUS] || ''))
+    .map(r => ({ name: r[0], base: minor(r[1].slice(1)), us: minor(r[cUS].slice(1)), intl: /^\$/.test(r[cINT] || '') ? minor(r[cINT].slice(1)) : null, code: (r[0].match(/[-–]\s*([0-9][0-9A-Z]{2,})\s*$/) || [])[1], w: words(r[0]) }));
+  const out = {};
+  for (const p of catalog.filter(p => p.providerId === 'gearment')) {
+    const code = (p.title.match(/[-–]?\s*([0-9][0-9A-Z]{2,})\s*$/) || [])[1];
+    let hit = code && list.filter(r => r.code && r.code.toUpperCase() === code.toUpperCase());
+    if (!hit || hit.length !== 1) {
+      const pw = words(p.title);
+      hit = list.filter(r => r.base === p.baseMinor && [...pw].filter(w => r.w.has(w)).length >= Math.min(3, pw.size));
+    }
+    if (hit.length !== 1) continue;
+    const r = hit[0];
+    out[p.id] = { US: [['Gearment Standard', r.us, 'US']] };
+    if (r.intl) for (const d of ['GB', 'EU', 'CA', 'AU']) out[p.id][d] = [['Gearment International Standard', r.intl, 'US']];
+  }
+  save('gearment', sheet + ' (Gearment fiyat listesi; help.gearment.com bağlantısı)', out);
+}
+
 (async () => {
   let failed = 0;
-  for (const f of [printgenie, treatpod, snapwear]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
+  for (const f of [printgenie, treatpod, snapwear, podhut, gearment]) { try { await f(); } catch (e) { failed++; console.error(f.name + ': ' + e.message); } }
   if (failed) process.exitCode = 1;
 })();

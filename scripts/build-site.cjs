@@ -387,8 +387,11 @@ const LOCALES = {
       allOffersOf: n => `Show all ${n} offers`, groupsInCat: 'Compare prices across manufacturers', allInCat: 'All products',
       compareTitle: 'Compare print-on-demand product prices', compareDesc: n => `${n} print-on-demand products sold by several manufacturers, with prices sorted cheapest first.`,
       compareIntro: 'Each product below is sold by at least two print-on-demand manufacturers. Open one to see every price side by side.',
-      groupTitle: (t, n) => `${t} — compare ${n} print-on-demand manufacturers`, groupDesc: (t, n, v, m) => `${t}: cheapest ${v} at ${m}. Prices from ${n} print-on-demand manufacturers, sorted cheapest first.`,
-      catTitle: (l, n) => `${l} prices: compare ${n} print-on-demand manufacturers`, catDesc: (l, n, v) => `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
+      groupTitle: (t, n, v) => `${t} price comparison: ${n} print-on-demand suppliers from ${v}`, groupDesc: (t, n, v, m) => `${t}: cheapest ${v} at ${m}. Prices from ${n} print-on-demand manufacturers, sorted cheapest first.`,
+      catTitle: (l, n, v) => `${l} price comparison: ${n} print-on-demand suppliers from ${v}`, catDesc: (l, n, v, d) => d ? `Compare ${n} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. Cheapest ${v} at ${d.loP}; typical starting price ${d.med}. Updated twice a day.` : `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
+      catH1: l => `${l}: print-on-demand prices`,
+      catAbout: (l, d) => `We track ${d.N} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. The cheapest starts at ${d.lo} at ${d.loP}; the typical supplier's cheapest option is ${d.med}. Prices are base costs from each supplier's public catalog in USD, before shipping and tax, and refresh twice a day.`,
+      catFaq: (l, d) => { const x = l.toLowerCase(); return [[`How much do print-on-demand ${x} cost?`, `From ${d.lo} at ${d.loP}. Across the ${d.n} suppliers that sell them printed, the typical cheapest option is ${d.med}; shipping is added at checkout.`], [`Which print-on-demand supplier is cheapest for ${x}?`, `${d.loP} (${d.lo}), followed by ${d.p2}.`], [`How many print-on-demand suppliers sell ${x}?`, `${d.n} of the suppliers we track sell them with printing, out of ${d.N} products in total (blanks included).`]]; }, catFaqH: 'Questions about prices',
       groupPageTitle: l => `${l} print-on-demand prices`, catsTitle: 'All print-on-demand product categories', catsDesc: 'Print-on-demand product categories with the lowest manufacturer price in each.',
       makersTitle: 'Print-on-demand manufacturers', makersDesc: n => `${n} print-on-demand manufacturers: product counts, categories and lowest prices.`,
       makersIntro: (c, r) => `Prices from ${c} manufacturers are compared. ${r} more are listed as links because their prices require login or are not public.`,
@@ -534,8 +537,11 @@ const LOCALES = {
       allOffersOf: n => `${n} teklifin hepsini göster`, groupsInCat: 'Üreticiler arasında fiyat karşılaştır', allInCat: 'Tüm ürünler',
       compareTitle: 'POD ürün fiyatlarını karşılaştır', compareDesc: n => `Birden fazla üreticide satılan ${n} print-on-demand ürünü, fiyatlar ucuzdan pahalıya.`,
       compareIntro: 'Aşağıdaki her ürün en az iki üreticide satılıyor. Birini açınca bütün fiyatları yan yana görürsün.',
-      groupTitle: (t, n) => `${t}: ${n} POD üreticisinin fiyatları`, groupDesc: (t, n, v, m) => `${t} en ucuz ${v} (${m}). ${n} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
-      catTitle: (l, n) => `${l} fiyatları: ${n} POD üreticisi karşılaştırması`, catDesc: (l, n, v) => `${l} için ${n} print-on-demand ürünü. En düşük fiyat ${v}.`,
+      groupTitle: (t, n, v) => `${t} fiyat karşılaştırması: ${n} POD üreticisi, en düşük ${v}`, groupDesc: (t, n, v, m) => `${t} en ucuz ${v} (${m}). ${n} print-on-demand üreticisinin fiyatları ucuzdan pahalıya.`,
+      catTitle: (l, n, v) => `${l} fiyat karşılaştırması: ${n} POD üreticisi, en düşük ${v}`, catDesc: (l, n, v, d) => d ? `${l}: ${d.n} üreticiden ${n} print-on-demand ürünü. En ucuz ${v} (${d.loP}); tipik başlangıç fiyatı ${d.med}. Günde iki kez güncellenir.` : `${l} için ${n} print-on-demand ürünü. En düşük fiyat ${v}.`,
+      catH1: l => `${l}: POD fiyatları`,
+      catAbout: (l, d) => `${l} kategorisinde ${d.n} üreticiden ${d.N} print-on-demand ürününü takip ediyoruz. En ucuzu ${d.loP}'da ${d.lo}; tipik bir üreticinin en ucuz seçeneği ${d.med}. Fiyatlar üreticilerin herkese açık kataloglarındaki USD taban fiyatlarıdır; kargo ve vergi hariçtir, günde iki kez yenilenir.`,
+      catFaq: (l, d) => { const x = l.toLocaleLowerCase('tr'); return [[`Print-on-demand ${x} ne kadar?`, `${d.loP}'da ${d.lo}'dan başlıyor. Baskılı satan ${d.n} üreticide tipik en ucuz seçenek ${d.med}; kargo ödeme sırasında eklenir.`], [`${l} için en ucuz POD üreticisi hangisi?`, `${d.loP} (${d.lo}); ardından ${d.p2}.`], [`Kaç POD üreticisi ${x} satıyor?`, `Takip ettiğimiz üreticilerden ${d.n} tanesi baskılı satıyor; baskısızlar dahil toplam ${d.N} ürün.`]]; }, catFaqH: 'Fiyatlarla ilgili sorular',
       groupPageTitle: l => `${l} POD fiyatları`, catsTitle: 'Tüm POD ürün kategorileri', catsDesc: 'Print-on-demand ürün kategorileri ve her kategorideki en düşük fiyat.',
       makersTitle: 'Print-on-demand üreticileri', makersDesc: n => `${n} print-on-demand üreticisi: ürün sayıları, kategoriler ve en düşük fiyatlar.`,
       makersIntro: (c, r) => `${c} üreticinin fiyatları karşılaştırmada. ${r} üretici, fiyatları üye girişi gerektirdiği ya da yayınlanmadığı için yalnızca bağlantı olarak listeleniyor.`,
@@ -794,15 +800,19 @@ ${bestsellers.slice(0, 1).map(b => H.bsRow(b)).join('')}${bestsellers.length > 1
   for (const [id, list] of eList) {
     const label = L.node(id), kids = eChildren(id), provN = new Set(list.map(p => p.providerId)).size, root = !enode(id).parentId;
     const items = H.itemsOf(eGroups.get(id) || [], list.filter(p => !groupOf.has(p.id)));
+    // açıklama + SSS: üretici başına en ucuz (boş/toplu ürün hariç) teklif, en az 3 üretici varsa
+    const cBest = [...groupBy(list.filter(p => !isBlank(p)), p => p.providerId)].map(([, l]) => l.reduce((a, b) => a.baseMinor <= b.baseMinor ? a : b)).sort((a, b) => a.baseMinor - b.baseMinor);
+    const cd = cBest.length >= 3 ? { N: n(list.length), n: cBest.length, lo: fmt(cBest[0].baseMinor), loP: provName(cBest[0].providerId), med: fmt(median(cBest.map(x => x.baseMinor))), p2: cBest.slice(1, 3).map(x => `${provName(x.providerId)} (${fmt(x.baseMinor)})`).join(lg === 'tr' ? ' ve ' : ' and ') } : null;
+    const cFaq = cd ? t.catFaq(label, cd) : [];
     if (!root) write(`data/k/${lg}/${eSlug.get(id)}.json`, JSON.stringify(items.map(itemRow)));
     add(P.cat(id) + 'index.html', page(L, H, {
-      rel: P.cat(id) + 'index.html', alt: altAll(p => p.cat(id)), cat: id, title: `${t.catTitle(label, provN)} · ${BRAND}`, description: t.catDesc(label, list.length, fmt(list[0].baseMinor)),
+      rel: P.cat(id) + 'index.html', alt: altAll(p => p.cat(id)), cat: id, title: `${t.catTitle(label, cd ? cd.n : provN, cd ? cd.lo : fmt(list[0].baseMinor))} · ${BRAND}`, description: t.catDesc(label, list.length, cd ? cd.lo : fmt(list[0].baseMinor), cd),
       crumbs: [[t.categories, href(P.categories)], ...eAnc(id).map(a => [L.node(a), href(P.cat(a))]), [label]],
-      body: `<h1>${esc(label)}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>
+      body: `<h1>${esc(t.catH1(label))}</h1><p class="muted">${t.products(n(list.length))} · ${t.makersN(provN)} · ${t.from(fmt(list[0].baseMinor))}</p>${cd ? `<p class="prose">${esc(t.catAbout(label, cd))}</p>` : ''}
 ${kids.length ? `<div class="tiles">${kids.map(nodeTile).join('')}</div>` : ''}${H.sponsor(mostCommon(list.map(p => p.type)))}${H.ad('liste')}
 ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.itemsOf(eGroups.get(id).slice(0, 24), []))}` : ''
-    : `${kids.length ? `<h2>${esc(t.itemsH)}</h2>` : ''}<div class="list" data-items="/data/k/${lg}/${eSlug.get(id)}.json">${H.icards(items.slice(0, 48))}</div>`}`,
-      jsonld: { '@context': 'https://schema.org', '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + href(LOCALES.en.path.product(p.id)), name: p.title })) },
+    : `${kids.length ? `<h2>${esc(t.itemsH)}</h2>` : ''}<div class="list" data-items="/data/k/${lg}/${eSlug.get(id)}.json">${H.icards(items.slice(0, 48))}</div>`}${cFaq.length ? `<h2>${esc(t.catFaqH)}</h2><div class="prose">${cFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}</div>` : ''}`,
+      jsonld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'ItemList', name: label, numberOfItems: list.length, itemListElement: list.slice(0, 10).map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + href(LOCALES.en.path.product(p.id)), name: p.title })) }].concat(cFaq.length ? [{ '@type': 'FAQPage', mainEntity: cFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] : []) },
     }));
   }
 
@@ -849,7 +859,7 @@ ${root ? (eGroups.get(id) || []).length ? `<h2>${t.topGroups}</h2>${H.icards(H.i
     const gFaq = gd ? t.grpFaq(gd) : [];
     add(P.group(gp.slug) + 'index.html', page(L, H, {
       rel: P.group(gp.slug) + 'index.html', alt: altAll(p => p.group(gp.slug)), cat: gp.etsy,
-      title: `${t.groupTitle(title, gp.providers.size)} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
+      title: `${t.groupTitle(title, gp.providers.size, fmt(lo.baseMinor))} · ${BRAND}`, description: t.groupDesc(title, gp.providers.size, fmt(lo.baseMinor), provName(lo.providerId)),
       crumbs: [...eAnc(gp.etsy).slice(-1).map(a => [L.node(a), href(P.cat(a))]), [L.node(gp.etsy), href(P.cat(gp.etsy))], [title]],
       body: `<section class="ghead"><div class="gimg">${H.imgTag(gp.image, title)}</div><div><h1>${esc(title)}</h1>
 ${gbest(gp, title)}

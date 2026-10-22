@@ -98,6 +98,7 @@ fs.writeFileSync(path.join(root, 'data/compare-ids.json'), JSON.stringify([...gr
 // grupların günlük en ucuz fiyat geçmişi (scripts/group-history.cjs): bugünün kaydı her derlemede yazılır, sayfada grafik olur
 const GH = require('./group-history.cjs');
 const DDP = require('./ddp-page.cjs');
+const SCRAPE = require('./scrape-guides.cjs');
 const LC = require('./landed-cost.cjs');
 // kâr sayfalarındaki örnek Etsy satış fiyatı (ABD $); kullanıcı hesaplayıcıda kendi fiyatını yazar
 const SAMPLE_PRICE = { 'giyim-tisort': 24.99, 'giyim-uzun-kollu': 29.99, 'giyim-atlet': 24.99, 'giyim-raglan': 29.99, 'giyim-crop': 24.99, 'giyim-forma': 24.99, 'giyim-polo': 32.99,
@@ -720,7 +721,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(
 <main class="wrap">${bc}${body}<div class="joins">${cfg.newsletterAction ? `<form class="nl" action="${esc(cfg.newsletterAction)}" method="post" data-ok="${esc(t.nl.ok)}" data-err="${esc(t.nl.err)}"><div><b>${esc(t.nl.h)}</b><p>${esc(t.nl.p)}</p></div><div class="nl-row"><input type="email" name="fields[email]" required placeholder="${esc(t.nl.ph)}" aria-label="${esc(t.nl.ph)}" autocomplete="email"><input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true"><button class="cta">${esc(t.nl.btn)}</button></div><p class="nl-msg" role="status"></p></form>` : ''}${cfg.facebookGroup ? `<aside class="fbgroup"><div><b>${esc(t.fbGroup.h)}</b><p>${esc(t.fbGroup.p)}</p></div><a class="cta" href="${esc(cfg.facebookGroup)}" target="_blank" rel="noopener">${esc(t.fbGroup.btn)}</a></aside>` : ''}</div>${H.ad('alt')}</main>
 <footer class="foot"><div class="wrap"><p>${esc(t.footer)}</p>
 <p class="muted">${esc(t.footer2(H.lastText))}</p>
-<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.profitIndex)}">${esc(t.profitPages.nav)}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''}${L.lang === 'tr' ? ` · <a href="${href(DDP.path)}">${esc(DDP.nav)}</a>` : ''} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
+<p class="muted"><a href="${href(H.P.about)}">${t.foot[0]}</a> · <a href="${href(H.P.makers)}">${t.foot[1]}</a> · <a href="${href(H.P.vsIndex)}">${esc(t.vs.indexTitle)}</a> · <a href="${href(H.P.guides)}">${esc(t.guide.indexTitle)}</a> · <a href="${href(H.P.alts)}">${esc(t.alt.indexTitle)}</a> · <a href="${href(H.P.calc)}">${t.calc.nav}</a> · <a href="${href(H.P.profitIndex)}">${esc(t.profitPages.nav)}</a> · <a href="${href(H.P.index)}">${esc(t.pidx.nav)}</a>${L.lang === 'en' && reports.length ? ' · <a href="/reports/">Weekly price report</a>' : ''}${L.lang === 'tr' ? ` · <a href="${href(DDP.path)}">${esc(DDP.nav)}</a> · <a href="/tr/trendyol-urunlerini-excele-aktarma/">Trendyol ürünlerini Excel'e aktarma</a>` : ' · <a href="/export-amazon-search-results-to-excel/">Export Amazon results to Excel</a>'} ·<a href="${href(H.P.widget)}">${esc(t.widget.title)}</a> · <a href="${href(H.P.privacy)}">${t.foot[2]}</a> · <a href="${href(H.P.contact)}">${t.foot[3]}</a></p>
 <p><a href="https://fazier.com/" target="_blank" rel="noopener noreferrer"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" width="105" alt="Launched on Fazier" loading="lazy" style="max-width:100%;height:auto"></a></p></div></footer>
 <script src="/assets/site.js?v=${VER}" defer></script></body></html>`;
 }
@@ -1167,6 +1168,11 @@ ${r.leaders.length ? `<h2>New cheapest supplier</h2><p class="muted sm">Products
   // Türkçe: ABD'ye kargo + gümrük vergisi (DDP) hesaplayıcı ve rehber (scripts/ddp-page.cjs)
   if (lg === 'tr') add(DDP.path + 'index.html', page(L, H, {
     rel: DDP.path + 'index.html', title: `${DDP.title} · ${BRAND}`, description: DDP.description, crumbs: [[DDP.nav]], body: DDP.body(), jsonld: DDP.jsonld(),
+  }));
+
+  // ürün listesini Excel'e aktarma rehberleri (ClickScrape; scripts/scrape-guides.cjs)
+  for (const g of SCRAPE.pages(lg)) add(g.path + 'index.html', page(L, H, {
+    rel: g.path + 'index.html', title: `${g.title} · ${BRAND}`, description: g.description, crumbs: [[g.nav]], body: SCRAPE.body(g), jsonld: SCRAPE.jsonld(g),
   }));
 
   // arama, hakkında, gizlilik, iletişim

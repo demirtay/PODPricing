@@ -60,16 +60,20 @@
                                          "value":  "X3qb"
                                      },
                       "podpartner":  {
-                                         "home":  "https://www.podpartner.com/affiliate/podpricing"
+                                         "home":  "https://www.podpartner.com/affiliate/podpricing",
+                                         "template":  "https://www.podpartner.com/affiliate/podpricing"
                                      },
                       "teelaunch":  {
-                                        "home":  "https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186"
+                                        "home":  "https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186",
+                                        "template":  "https://app.teelaunch.com/signup?ref=01M4TFQ4VQR2A779617F8Q5186"
                                     },
                       "merchize":  {
-                                       "home":  "https://seller.merchize.com/login/ref-ali-demirtay"
+                                       "home":  "https://seller.merchize.com/login/ref-ali-demirtay",
+                                       "template":  "https://seller.merchize.com/login/ref-ali-demirtay"
                                    },
                       "printdoors":  {
-                                         "home":  "https://www.printdoors.com/affiliate/3K3ZDF"
+                                         "home":  "https://www.printdoors.com/affiliate/3K3ZDF",
+                                         "template":  "https://www.printdoors.com/affiliate/3K3ZDF"
                                      }
                   },
     "cloudflareAnalyticsToken":  "8874dc4e26b5469db2882a45f0bd381b",

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Color Buddies</title>
+<meta name="theme-color" content="#ffcf4a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+  :root { --sun: #ffcf4a; --ink: #3b2f2a; --bg: #fff8e6; --card: #ffffff; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+    font-family: "Comic Sans MS", "Chalkboard SE", "Segoe UI Rounded", system-ui, sans-serif; overflow: hidden; touch-action: manipulation; }
+  button { font: inherit; border: 0; cursor: pointer; }
+  .screen { position: fixed; inset: 0; display: none; flex-direction: column; }
+  .screen.on { display: flex; }
+
+  /* home */
+  #home header { padding: max(16px, env(safe-area-inset-top)) 16px 8px; text-align: center; }
+  #home h1 { margin: 0; font-size: clamp(28px, 6vw, 48px); letter-spacing: 1px; }
+  #home h1 span:nth-child(5n+1) { color: #ff6b6b } #home h1 span:nth-child(5n+2) { color: #ffa94d }
+  #home h1 span:nth-child(5n+3) { color: #51cf66 } #home h1 span:nth-child(5n+4) { color: #339af0 } #home h1 span:nth-child(5n) { color: #cc5de8 }
+  #grid { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 8px 16px max(24px, env(safe-area-inset-bottom));
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; align-content: start; }
+  .tile { position: relative; background: var(--card); border-radius: 20px; padding: 8px; box-shadow: 0 4px 0 #f0d9a8; aspect-ratio: 3/4; }
+  .tile:active { transform: translateY(3px); box-shadow: 0 1px 0 #f0d9a8; }
+  .tile img { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; pointer-events: none; }
+  .tile .star { position: absolute; top: -6px; right: -6px; font-size: 30px; filter: drop-shadow(0 2px 0 #0002); }
+
+  /* paint */
+  #paint { background: #fff3cf; }
+  #bar { display: flex; gap: 10px; padding: max(10px, env(safe-area-inset-top)) 12px 10px; justify-content: space-between; }
+  .tool { width: 60px; height: 60px; border-radius: 18px; background: var(--card); font-size: 30px; box-shadow: 0 4px 0 #e8cf96;
+    display: grid; place-items: center; }
+  .tool:active { transform: translateY(3px); box-shadow: 0 1px 0 #e8cf96; }
+  .tool:disabled { opacity: .35; }
+  #stage { flex: 1; display: grid; place-items: center; padding: 0 10px; min-height: 0; overflow: hidden; touch-action: none; position: relative; z-index: 0; }
+  #cv { background: #fff; border-radius: 18px; box-shadow: 0 6px 0 #e8cf96; max-width: 100%; max-height: 100%; touch-action: none; transform-origin: 0 0; }
+  #bar, #palette { position: relative; z-index: 1; background: #fff3cf; }
+  #palette { display: flex; gap: 10px; overflow-x: auto; padding: 12px 12px max(14px, env(safe-area-inset-bottom)); scrollbar-width: none; }
+  #palette::-webkit-scrollbar { display: none; }
+  .sw { flex: 0 0 auto; width: 56px; height: 56px; border-radius: 50%; border: 5px solid #fff; box-shadow: 0 3px 0 #0002; transition: transform .12s; }
+  .sw.sel { transform: scale(1.2) translateY(-4px); border-color: var(--ink); }
+  @media (orientation: landscape) and (min-width: 700px) {
+    #paint { flex-direction: row; }
+    #bar { flex-direction: column; justify-content: flex-start; padding: 12px; }
+    #stage { padding: 12px 0; }
+    #palette { flex-direction: column; overflow-y: auto; overflow-x: hidden; padding: 16px 14px; }
+    .sw.sel { transform: scale(1.15) translateX(-3px); }
+  }
+  .burst { position: fixed; pointer-events: none; font-size: 28px; animation: up .7s ease-out forwards; }
+  @keyframes up { from { opacity: 1; transform: translate(-50%, -50%) scale(.6) } to { opacity: 0; transform: translate(-50%, -140%) scale(1.3) } }
+</style>
+</head>
+<body>
+<section id="home" class="screen on">
+  <header><h1 id="logo"></h1></header>
+  <div id="grid"></div>
+</section>
+
+<section id="paint" class="screen">
+  <div id="bar">
+    <button class="tool" id="back" aria-label="Back">🏠</button>
+    <button class="tool" id="undo" aria-label="Undo">↩️</button>
+    <button class="tool" id="clear" aria-label="Start over">🧽</button>
+  </div>
+  <div id="stage"><canvas id="cv"></canvas></div>
+  <div id="palette"></div>
+</section>
+
+<script>
+const COLORS = ["#ff6b6b", "#ff8fab", "#ffa94d", "#ffd43b", "#fff3a3", "#8ce99a", "#40c057", "#2b8a3e", "#74c0fc",
+  "#339af0", "#1c3d8f", "#b197fc", "#cc5de8", "#a0522d", "#e8b98a", "#ffe8d6", "#adb5bd", "#495057", "#ffffff"];
+const LINE = 150;   // gray below this is an outline (a wall for the fill)
+const UNDO_MAX = 8;
+
+const $ = s => document.querySelector(s);
+const $stage = $("#stage");
+const cv = $("#cv"), ctx = cv.getContext("2d");
+let pages = [], cur = null, color = COLORS[0];
+let W = 0, H = 0, wall = null, paintData = null, lineImg = null, undo = [];
+const paintCv = document.createElement("canvas"), pctx = paintCv.getContext("2d", { willReadFrequently: true });
+
+// ---- storage: finished pictures live in IndexedDB, keyed by page id
+const db = new Promise(res => {
+  const r = indexedDB.open("color-buddies", 1);
+  r.onupgradeneeded = () => r.result.createObjectStore("art");
+  r.onsuccess = () => res(r.result);
+  r.onerror = () => res(null);
+});
+async function store(mode, fn) {
+  const d = await db; if (!d) return null;
+  return new Promise(res => { const q = fn(d.transaction("art", mode).objectStore("art")); q.onsuccess = () => res(q.result); q.onerror = () => res(null); });
+}
+const saveArt = (id, blob) => store("readwrite", s => s.put(blob, id));
+const loadArt = id => store("readonly", s => s.get(id));
+const savedIds = () => store("readonly", s => s.getAllKeys());
+
+// ---- sound: a tiny "pop" made on the fly, no audio files
+let ac = null;
+function pop() {
+  try {
+    ac = ac || new (window.AudioContext || window.webkitAudioContext)();
+    const o = ac.createOscillator(), g = ac.createGain(), t = ac.currentTime;
+    o.frequency.setValueAtTime(520 + Math.random() * 300, t); o.frequency.exponentialRampToValueAtTime(1200, t + .12);
+    g.gain.setValueAtTime(.18, t); g.gain.exponentialRampToValueAtTime(.001, t + .18);
+    o.connect(g).connect(ac.destination); o.start(t); o.stop(t + .2);
+  } catch (e) {}
+}
+
+// ---- home
+$("#logo").innerHTML = [..."Color Buddies"].map(c => c === " " ? " " : `<span>${c}</span>`).join("");
+const thumbs = {};  // page id -> colored thumbnail (data URL)
+async function showHome() {
+  $("#paint").classList.remove("on"); $("#home").classList.add("on");
+  $("#grid").innerHTML = pages.map(id =>
+    `<button class="tile" data-id="${id}"><img loading="lazy" src="${thumbs[id] || `thumbs/${id}.jpg`}" alt="">${thumbs[id] ? '<span class="star">⭐</span>' : ""}</button>`).join("");
+}
+async function loadThumbs() {
+  for (const k of await savedIds() || []) if (k[0] === "t") thumbs[k.slice(1)] = await loadArt(k);
+}
+$("#grid").addEventListener("click", e => { const t = e.target.closest(".tile"); if (t) open(t.dataset.id); });
+
+// ---- paint
+function img(src) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); }
+
+async function open(id) {
+  cur = id; undo = []; $("#undo").disabled = true;
+  lineImg = await img(`pages/${id}.png`);
+  W = cv.width = paintCv.width = lineImg.width; H = cv.height = paintCv.height = lineImg.height;
+  // outline mask from the page itself
+  pctx.drawImage(lineImg, 0, 0);
+  const px = pctx.getImageData(0, 0, W, H).data;
+  wall = new Uint8Array(W * H);
+  for (let i = 0; i < wall.length; i++) wall[i] = px[i * 4] < LINE ? 1 : 0;
+  // previous colors, or a white page
+  pctx.fillStyle = "#fff"; pctx.fillRect(0, 0, W, H);
+  const prev = await loadArt(id);
+  if (prev) pctx.drawImage(await img(URL.createObjectURL(prev)), 0, 0);
+  paintData = pctx.getImageData(0, 0, W, H);
+  $("#home").classList.remove("on"); $("#paint").classList.add("on");
+  resetView(); fit(); draw();
+}
+
+function fit() {
+  if (!W) return;
+  const r = $("#stage").getBoundingClientRect(), s = Math.min((r.width - 20) / W, (r.height - 20) / H);
+  cv.style.width = W * s + "px"; cv.style.height = H * s + "px";
+}
+addEventListener("resize", fit);
+
+function draw() {
+  pctx.putImageData(paintData, 0, 0);
+  ctx.globalCompositeOperation = "source-over"; ctx.drawImage(paintCv, 0, 0);
+  ctx.globalCompositeOperation = "multiply"; ctx.drawImage(lineImg, 0, 0);
+}
+
+function hex(c) { const n = parseInt(c.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255]; }
+
+// scanline flood fill over everything that is not an outline, then grow 2px under the outline
+// so no white fringe is left between color and line (the line is multiplied on top anyway)
+function fill(x, y) {
+  const start = y * W + x;
+  if (wall[start]) return false;
+  const [r, g, b] = hex(color), d = paintData.data;
+  if (d[start * 4] === r && d[start * 4 + 1] === g && d[start * 4 + 2] === b) return false;
+  undo.push(new Uint8ClampedArray(d)); if (undo.length > UNDO_MAX) undo.shift(); $("#undo").disabled = false;
+  const seen = new Uint8Array(W * H), stack = [start], region = [];
+  seen[start] = 1;
+  while (stack.length) {
+    const p = stack.pop(); region.push(p);
+    const px = p % W;
+    if (px > 0 && !seen[p - 1] && !wall[p - 1]) { seen[p - 1] = 1; stack.push(p - 1); }
+    if (px < W - 1 && !seen[p + 1] && !wall[p + 1]) { seen[p + 1] = 1; stack.push(p + 1); }
+    if (p >= W && !seen[p - W] && !wall[p - W]) { seen[p - W] = 1; stack.push(p - W); }
+    if (p < W * (H - 1) && !seen[p + W] && !wall[p + W]) { seen[p + W] = 1; stack.push(p + W); }
+  }
+  let edge = region;
+  for (let k = 0; k < 2; k++) {
+    const next = [];
+    for (const p of edge) for (const q of [p - 1, p + 1, p - W, p + W])
+      if (q >= 0 && q < W * H && !seen[q] && wall[q]) { seen[q] = 1; next.push(q); }
+    region.push(...next); edge = next;
+  }
+  for (const p of region) { d[p * 4] = r; d[p * 4 + 1] = g; d[p * 4 + 2] = b; d[p * 4 + 3] = 255; }
+  return true;
+}
+
+let saveTimer = 0;
+function save() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => { const id = cur; paintCv.toBlob(b => b && saveArt(id, b), "image/png"); }, 400);
+}
+
+function tapFill(cx, cy) {
+  const r = cv.getBoundingClientRect();
+  const x = Math.floor((cx - r.left) * W / r.width), y = Math.floor((cy - r.top) * H / r.height);
+  if (x < 0 || y < 0 || x >= W || y >= H) return;
+  if (fill(x, y)) {
+    draw(); save(); pop();
+    const s = document.createElement("div"); s.className = "burst"; s.textContent = ["✨", "⭐", "💖", "🌈"][Math.random() * 4 | 0];
+    s.style.left = cx + "px"; s.style.top = cy + "px"; document.body.append(s); setTimeout(() => s.remove(), 700);
+  }
+}
+
+// one finger taps to fill; two fingers pinch to zoom and drag to move (for small areas on phones)
+const view = { s: 1, x: 0, y: 0 };
+// screen position of the canvas' top-left corner before zoom (transform-origin is 0 0)
+function base() { const r = $stage.getBoundingClientRect(); return { x: r.left + cv.offsetLeft, y: r.top + cv.offsetTop }; }
+function applyView() { cv.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.s})`; }
+function resetView() { view.s = 1; view.x = view.y = 0; applyView(); }
+const touches = new Map();
+let gesture = null, tapStart = null;
+$stage.addEventListener("pointerdown", e => {
+  touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (touches.size === 1) tapStart = { x: e.clientX, y: e.clientY, id: e.pointerId };
+  if (touches.size === 2) {
+    tapStart = null;
+    const [a, b] = [...touches.values()];
+    const o = base();
+    gesture = { d: Math.hypot(a.x - b.x, a.y - b.y), mx: (a.x + b.x) / 2 - o.x, my: (a.y + b.y) / 2 - o.y, ...view };
+  }
+});
+$stage.addEventListener("pointermove", e => {
+  if (!touches.has(e.pointerId)) return;
+  touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (tapStart && Math.hypot(e.clientX - tapStart.x, e.clientY - tapStart.y) > 12) tapStart = null;
+  if (gesture && touches.size === 2) {
+    const [a, b] = [...touches.values()];
+    const s = Math.min(5, Math.max(1, gesture.s * Math.hypot(a.x - b.x, a.y - b.y) / gesture.d));
+    const o = base(), mx = (a.x + b.x) / 2 - o.x, my = (a.y + b.y) / 2 - o.y;
+    // keep the point under the fingers in place while scaling
+    view.s = s;
+    view.x = mx - (gesture.mx - gesture.x) * s / gesture.s;
+    view.y = my - (gesture.my - gesture.y) * s / gesture.s;
+    if (s === 1) view.x = view.y = 0;
+    applyView();
+  }
+});
+function lift(e) {
+  if (tapStart && tapStart.id === e.pointerId && touches.size === 1 && e.type === "pointerup") tapFill(e.clientX, e.clientY);
+  touches.delete(e.pointerId);
+  if (touches.size < 2) gesture = null;
+  if (!touches.size) tapStart = null;
+}
+$stage.addEventListener("pointerup", lift);
+$stage.addEventListener("pointercancel", lift);
+$stage.addEventListener("wheel", e => {  // mouse wheel zoom for desktop testing
+  e.preventDefault();
+  const s = Math.min(5, Math.max(1, view.s * (e.deltaY < 0 ? 1.15 : 1 / 1.15))), o = base(), mx = e.clientX - o.x, my = e.clientY - o.y;
+  view.x = s === 1 ? 0 : mx - (mx - view.x) * s / view.s;
+  view.y = s === 1 ? 0 : my - (my - view.y) * s / view.s;
+  view.s = s; applyView();
+}, { passive: false });
+
+$("#undo").onclick = () => { if (!undo.length) return; paintData.data.set(undo.pop()); $("#undo").disabled = !undo.length; draw(); save(); };
+$("#clear").onclick = () => {
+  undo.push(new Uint8ClampedArray(paintData.data)); $("#undo").disabled = false;
+  paintData.data.fill(255); draw(); save();
+};
+// leaving a page: show home at once, store the colors and a small colored thumbnail in the background
+$("#back").onclick = () => {
+  clearTimeout(saveTimer);
+  const id = cur, t = document.createElement("canvas");
+  t.width = 240; t.height = Math.round(240 * H / W);
+  t.getContext("2d").drawImage(cv, 0, 0, t.width, t.height);
+  thumbs[id] = t.toDataURL("image/jpeg", .8);
+  showHome();
+  saveArt("t" + id, thumbs[id]);
+  paintCv.toBlob(b => b && saveArt(id, b), "image/png");
+};
+
+$("#palette").innerHTML = COLORS.map((c, i) => `<button class="sw${i ? "" : " sel"}" style="background:${c}" data-c="${c}" aria-label="color"></button>`).join("");
+$("#palette").addEventListener("click", e => {
+  const b = e.target.closest(".sw"); if (!b) return;
+  document.querySelectorAll(".sw").forEach(s => s.classList.remove("sel")); b.classList.add("sel"); color = b.dataset.c; pop();
+});
+
+fetch("pages.json").then(r => r.json()).then(async p => { pages = p; await loadThumbs(); showHome(); });
+// Android app: hardware back goes from a picture to the home screen, and closes the app from home
+const App = window.Capacitor?.Plugins?.App;
+if (App) App.addListener("backButton", () => $("#paint").classList.contains("on") ? $("#back").click() : App.exitApp());
+else if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+</script>
+</body>
+</html>

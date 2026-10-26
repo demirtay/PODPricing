@@ -33,8 +33,7 @@ function parse(text) {
 // indirilecek dosyalar: data/shipping/prodigi-files.txt (yerel ad; '-and-' panelde '-&-' olarak yazılır)
 async function download() {
   fs.mkdirSync(DIR, { recursive: true });
-  const names = fs.readFileSync(path.join(root, 'data/shipping/prodigi-files.txt'), 'utf8').split(/?
-/).filter(Boolean);
+  const names = fs.readFileSync(path.join(root, 'data/shipping/prodigi-files.txt'), 'utf8').split(/\r?\n/).filter(Boolean);
   for (const n of names) {
     const f = path.join(DIR, n + '.csv');
     if (fs.existsSync(f) && Date.now() - fs.statSync(f).mtimeMs < 6 * 864e5) continue;

@@ -19,9 +19,10 @@ async function collect(progress = () => {}) {
       const url = (card.match(/href='(https:\/\/shirtee\.cloud\/pod-product\/[^']+)'/) || [])[1];
       const name = decode((card.match(/class='product-name'>([\s\S]*?)<\/div>/) || [])[1]);
       const price = card.match(/class='price-box'>\s*([\d.,]+)\s*€/);
-      const img = (card.match(/<noscript><img src='([^']+)'/) || card.match(/<img src="(https:[^"]+)"/) || [])[1];
+      const img = (card.match(/<noscript><img src='([^']+)'/) || card.match(/<img\b[^>]*\ssrc=["'](https:[^"']+)["']/) || [])[1];
       const sizes = decode((card.match(/class='product-size'>([\s\S]*?)<\/span>/) || [])[1]);
       if (!url || !name || !price) { if (name) skipped.push({ name, reason: 'Fiyat/bağlantı yok' }); continue; }
+      if (!img) { skipped.push({ name, reason: 'Görsel yok' }); continue; } // tek eksik kart tüm yenilemeyi düşürmesin
       if (seen.has(url)) continue;
       const minor = Math.round(Number(price[1].replace(',', '.')) * 100);
       const p = record('shirtee', url.split('/pod-product/')[1].replace(/\//g, '-'), name, minor * fx.rate, img ? decode(img).replace(/&#038;/g, '&') : null, url, sizes || 'Ölçüler üreticide');

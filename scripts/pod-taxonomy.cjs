@@ -23,7 +23,7 @@ const GROUPS = [
 // Kupa/tumbler/şişe aksesuarları (kapak, isimlik, pipet süsü, kılıf) içecek kabı değildir: kupa/termos/matara/bardak
 // türlerinden çıkar, "Diğer Mutfak Ürünleri"ne gider (12 Eki 2026: PrintKK $1.63 "Tumbler Lid Nameplate" 30oz tumbler
 // grubunda en ucuz görünüyordu). Bardak sargı sticker'ı (cup wrap) yalnızca hariç tutulur, Sticker türüne düşer.
-const DRINK_ACC = /\b((tumbler|cup|mug|bottle) lids?|lid (nameplate|name plate|topper)s?|cup covers?|straw (toppers?|covers?|charms?|caps?)|(tumbler|cup) (charms?|toppers?|boots?|name ?plates?)|silicone boots?)\b/;
+const DRINK_ACC = /\b((tumbler|cup|mug|bottle) lids?|bottle (sleeves?|stoppers?)|lid (nameplate|name plate|topper)s?|cup covers?|straw (toppers?|covers?|charms?|caps?)|(tumbler|cup) (charms?|toppers?|boots?|name ?plates?)|silicone boots?)\b/;
 const DRINK_EXCLUDE = new RegExp(DRINK_ACC.source + '|\\bcup wraps?\\b');
 const DRINKWARE = new Set(['mutfak-kupa', 'mutfak-termos', 'mutfak-matara', 'mutfak-bardak']);
 
@@ -110,8 +110,8 @@ const T = [
   // --- mutfak
   ['mutfak-kupa', 'mutfak', 'Kupa (Mug)', /\b(mugs?|tasse|coffee cup|enamel cup|camping cup|latte cup|espresso cup)\b/, /\b(mug (rug|mat|coaster)|mugshot)\b/],
   ['mutfak-termos', 'mutfak', 'Termos ve Tumbler', /\b(tumblers?|travel mug|thermos|vacuum (flask|cup|insulated)|insulated (cup|tumbler)|stanley|skinny|yeti)\b/, /\b(stanley\s*\/?\s*stella)/],
-  ['mutfak-matara', 'mutfak', 'Matara ve Su Şişesi', /\b(water bottles?|bottles?|flask|hip flask|sports bottle|canteen|protein shaker|shaker (bottle|cup)|hydrapeak(?! food)|trinkflasche|flasche)\b/, /\b(bottle opener|bottle (holder|cooler|koozie|sleeve)|wine bottle bag)\b/],
-  ['mutfak-bardak', 'mutfak', 'Bardak ve Kadeh', /\b(glass(es)?|stemless|corkcicle|pint|shot glass|wine glass|beer (stein|can glass)|can glass|stein|tankard|goblet|whiskey|champagne flute|cups?|sippy)\b/, /\b(clock|glasses case|sunglasses|glass (frame|print|wall art|sign|ornament|cutting board))\b/],
+  ['mutfak-matara', 'mutfak', 'Matara ve Su Şişesi', /\b(water bottles?|bottles?|flask|hip flask|sports bottle|canteen|protein shaker|shaker (bottle|cup)|hydrapeak(?! food)|trinkflasche|flasche)\b/, /\b(bottle opener|bottle (holder|cooler|koozie|sleeves?|stoppers?)|wine bottle bag|board painting|acrylic standee)\b/],
+  ['mutfak-bardak', 'mutfak', 'Bardak ve Kadeh', /\b(glass(es)?|stemless|corkcicle|pint|shot glass|wine glass|beer (stein|can glass)|can glass|stein|tankard|goblet|whiskey|champagne flute|cups?|sippy)\b/, /\b(clock|glasses case|sunglasses|glass (frame|print|wall art|sign|ornament|cutting board)|ornaments?|i?phone|cases?|magnets?|suncatchers?|bookmarks?|stained glass|window hanging)\b/],
   ['mutfak-sogutucu', 'mutfak', 'Kutu Soğutucu (Koozie)', /\b(koozies?|can (cooler|holder|sleeve)|stubby holder|beer sleeve|bottle cooler|drink holder|beverage holder)\b/],
   ['mutfak-bardak-alti', 'mutfak', 'Bardak Altlığı', /\b(coasters?)\b/],
   ['mutfak-tabak', 'mutfak', 'Tabak ve Kase', /\b(plates?|bowls?|platter|dish|serving tray|tray)\b/, /\b(license plate|plate carrier|pet bowl|dog bowl|cat bowl|name plate|(tumbler|cup) name ?plates?|door plate)\b/],

@@ -386,7 +386,7 @@ const HEAD = [
   [/\blunch ?(bags?|box(es)?)\b/, 'canta-beslenme', ['canta-buzgulu']],
   [/\bmugs?\b/, 'mutfak-kupa', ['mutfak-termos']],
   [/\btumblers?\b/, 'mutfak-termos', ['mutfak-kupa', 'mutfak-bardak', 'ev-mum']],
-  [/\b(water )?bottles?\b(?! opener)/, 'mutfak-matara', ['mutfak-sogutucu', 'ev-mum']],
+  [/\b(water )?bottles?\b(?! (opener|sleeves?|stoppers?))/, 'mutfak-matara', ['mutfak-sogutucu', 'ev-mum', 'mutfak-diger', 'duvar-poster', 'ev-dekor']],
   [/\b(lamps?|lamp ?shades?|night ?lights?)\b/, 'ev-lamba', []],
   [/\bcandle ?holders?\b|\bcandlesticks?\b|\btea ?light holders?\b/, `${HD} > Candles & Home Fragrances > Candleholders`, []],
   [/\bstickers?\b/, 'kirtasiye-sticker', ['duvar-sticker', 'arac-aksesuar']],

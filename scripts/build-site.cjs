@@ -54,8 +54,15 @@ const homeLink = (p, text) => `<a class="go" href="${esc(reg(cfg.affiliate?.[p.i
 // ---------- veriyi hazırla
 const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/catalog.json'), 'utf8'));
 const providers = new Map(catalog.providers.map(p => [p.id, p]));
+// a supplier we could not refresh for more than STALE_DAYS (site down, blocked) drops off the site until it refreshes again:
+// showing week-old prices from a dead shop as "cheapest" costs trust (PillowProfits, 522 since 22 Oct 2026)
+const STALE_DAYS = 7;
+const staleIds = new Set(catalog.providers
+  .filter(p => p.connection?.lastSuccess && (Date.now() - Date.parse(p.connection.lastSuccess)) / 864e5 > STALE_DAYS)
+  .map(p => p.id));
+if (staleIds.size) console.log(`stale suppliers hidden (>${STALE_DAYS} days): ${[...staleIds].join(', ')}`);
 const products = catalog.products
-  .filter(p => Number.isSafeInteger(p.baseMinor) && p.baseMinor > 0 && p.sourceUrl)
+  .filter(p => Number.isSafeInteger(p.baseMinor) && p.baseMinor > 0 && p.sourceUrl && !staleIds.has(p.providerId))
   .map(p => {
     const c = tx.classify(p), m = tx.detectModel(p);
     const q = { ...p, title: decode(p.title), type: c.type, group: c.group, etsy: EM.etsyOf(p, c) || 'other', model: m && m.key ? m : null, pb: PB.printBasis(p) };
@@ -361,7 +368,16 @@ const LOCALES = {
         q2: s => `How many print-on-demand suppliers are cheaper than ${s}?`, a2: (s, n, c, e, m) => `Of the ${n} suppliers we compared with ${s} on identical products, ${c} are cheaper overall, ${e} cost about the same and ${m} are more expensive.`,
         qT: (s, l) => `What is the cheapest ${s} alternative for ${l.toLowerCase()}?`, aT: (s, l, o, p, n) => `${o}, about ${p}% cheaper than ${s} on ${n} comparable ${l.toLowerCase()}.`,
         indexTitle: 'Print-on-demand supplier alternatives', indexDesc: 'Cheaper alternatives to Printful, Printify and other print-on-demand suppliers, based on products they both sell.',
-        title: (s, m) => `${s} alternatives: cheaper print-on-demand suppliers (${m})`, desc: (s, n, top) => `${n} print-on-demand suppliers compared with ${s} on identical products. ${top}`,
+        title: (s, m) => `${s} alternatives: cheaper print-on-demand suppliers (${m})`, desc: (s, n, top) => `${top} ${n} POD suppliers compared with ${s}: real prices side by side, updated twice a day.`,
+        exH: (s, o) => `Price examples: ${s} vs ${o}`, exTh: (s, o) => ['Product', s, o, 'You save'],
+        switchH: s => `Before you switch from ${s}`,
+        switchList: s => [
+          'Order a sample first: print quality and colors differ between suppliers even on the same blank.',
+          `Compare the total, not just the base price: add shipping to your main market and any branding or packaging fees ${s} does not charge.`,
+          'Check the Etsy and Shopify integration: does it sync orders and tracking automatically?',
+          'Check production time and where they print: a closer print facility usually means cheaper, faster delivery.',
+          `Keep ${s} for products it wins on: you can run two suppliers in the same shop.`,
+        ],
         h1: s => `${s} alternatives`, lead: (s, n) => `Suppliers compared with ${s} on products both of them sell. Sorted by how much cheaper they are overall on those shared products.`,
         th: ['Supplier', 'Overall vs', 'Cheaper on', 'Shared products'], cheaper: p => `${p}% cheaper`, pricier: p => `${p}% more expensive`, same: 'about the same',
         top: (o, p) => `${o} is ${p}% cheaper on the same products.`, none: s => `No supplier is cheaper than ${s} overall on shared products.`, details: 'details',
@@ -406,8 +422,9 @@ const LOCALES = {
       compareTitle: 'Compare print-on-demand product prices', compareDesc: n => `${n} print-on-demand products sold by several manufacturers, with prices sorted cheapest first.`,
       compareIntro: 'Each product below is sold by at least two print-on-demand manufacturers. Open one to see every price side by side.',
       groupTitle: (t, n, v) => `${t} price comparison: ${n} print-on-demand suppliers from ${v}`, groupDesc: (t, n, v, m) => `${t}: cheapest ${v} at ${m}. Prices from ${n} print-on-demand manufacturers, sorted cheapest first.`,
-      catTitle: (l, n, v) => `${l} price comparison: ${n} print-on-demand suppliers from ${v}`, catDesc: (l, n, v, d) => d ? `Compare ${n} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. Cheapest ${v} at ${d.loP}; typical starting price ${d.med}. Updated twice a day.` : `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
-      catH1: l => `${l}: print-on-demand prices`,
+      // "pod phone cases", "print on demand phone cases": the search wording leads the title
+      catTitle: (l, n, v) => `Print on demand ${l.toLowerCase()}: ${n} POD suppliers compared, from ${v}`, catDesc: (l, n, v, d) => d ? `Compare ${n} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. Cheapest ${v} at ${d.loP}; typical starting price ${d.med}. Updated twice a day.` : `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
+      catH1: l => `Print-on-demand ${l.toLowerCase()}: compare prices`,
       catAbout: (l, d) => `We track ${d.N} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. The cheapest starts at ${d.lo} at ${d.loP}; the typical supplier's cheapest option is ${d.med}. Prices are base costs from each supplier's public catalog in USD, before shipping and tax, and refresh twice a day.`,
       catFaq: (l, d) => { const x = l.toLowerCase(); return [[`How much do print-on-demand ${x} cost?`, `From ${d.lo} at ${d.loP}. Across the ${d.n} suppliers that sell them printed, the typical cheapest option is ${d.med}; shipping is added at checkout.`], [`Which print-on-demand supplier is cheapest for ${x}?`, `${d.loP} (${d.lo}), followed by ${d.p2}.`], [`How many print-on-demand suppliers sell ${x}?`, `${d.n} of the suppliers we track sell them with printing, out of ${d.N} products in total (blanks included).`]]; }, catFaqH: 'Questions about prices',
       groupPageTitle: l => `${l} print-on-demand prices`, catsTitle: 'All print-on-demand product categories', catsDesc: 'Print-on-demand product categories with the lowest manufacturer price in each.',
@@ -519,7 +536,16 @@ const LOCALES = {
         q2: s => `Kaç POD üreticisi ${s} fiyatlarından ucuz?`, a2: (s, n, c, e, m) => `Aynı ürünlerde ${s} ile karşılaştırdığımız ${n} üreticiden ${c} tanesi toplamda daha ucuz, ${e} tanesi aşağı yukarı aynı, ${m} tanesi daha pahalı.`,
         qT: (s, l) => `${l} için en ucuz ${s} alternatifi hangisi?`, aT: (s, l, o, p, n) => `${o}; karşılaştırılabilir ${n} üründe (${l}) ${s} fiyatlarından yaklaşık %${p} ucuz.`,
         indexTitle: 'POD üreticisi alternatifleri', indexDesc: 'Printful, Printify ve diğer print-on-demand üreticilerine, ikisinin de sattığı ürünlere göre daha ucuz alternatifler.',
-        title: (s, m) => `${s} alternatifleri: daha ucuz POD üreticileri (${m})`, desc: (s, n, top) => `${n} print-on-demand üreticisi aynı ürünlerde ${s} ile karşılaştırıldı. ${top}`,
+        title: (s, m) => `${s} alternatifleri: daha ucuz POD üreticileri (${m})`, desc: (s, n, top) => `${top} ${n} print-on-demand üreticisi aynı ürünlerde ${s} ile karşılaştırıldı; gerçek fiyatlar yan yana, günde iki kez güncellenir.`,
+        exH: (s, o) => `Fiyat örnekleri: ${s} ve ${o}`, exTh: (s, o) => ['Ürün', s, o, 'Tasarruf'],
+        switchH: s => `${s}'dan geçmeden önce`,
+        switchList: s => [
+          'Önce numune sipariş edin: aynı boş üründe bile baskı kalitesi ve renkler üreticiden üreticiye değişir.',
+          `Yalnızca ürün fiyatını değil toplamı karşılaştırın: ana pazarınıza kargoyu ve ${s}'ın almadığı marka/paketleme ücretlerini ekleyin.`,
+          'Etsy ve Shopify entegrasyonuna bakın: siparişleri ve kargo takibini otomatik aktarıyor mu?',
+          'Üretim süresine ve baskının nerede yapıldığına bakın: müşteriye yakın tesis genelde daha ucuz ve hızlı teslim demektir.',
+          `${s}'ı kazandığı ürünlerde tutun: aynı mağazada iki üreticiyle çalışabilirsiniz.`,
+        ],
         h1: s => `${s} alternatifleri`, lead: (s, n) => `İkisinin de sattığı ürünlerde ${s} ile karşılaştırılan üreticiler; bu ortak ürünlerde toplamda ne kadar ucuz olduklarına göre sıralı.`,
         th: ['Üretici', 'Genel fark', 'Daha ucuz olduğu', 'Ortak ürün'], cheaper: p => `%${p} daha ucuz`, pricier: p => `%${p} daha pahalı`, same: 'aşağı yukarı aynı',
         top: (o, p) => `${o} aynı ürünlerde %${p} daha ucuz.`, none: s => `Ortak ürünlerde ${s}'dan genel olarak daha ucuz üretici yok.`, details: 'ayrıntı',
@@ -1033,6 +1059,10 @@ ${s.rows.slice(0, 20).map(r => `<tr><td><a href="${href(P.group(r.g.slug))}">${e
     const aFaq = (best ? [[AL.q1(S), AL.a1(S, provName(best.other), best.pct, best.n, nextAlt)]] : []).concat([[AL.q2(S), AL.a2(S, list.length, cheaperN, list.length - cheaperN - pricierN, pricierN)]])
       .concat(aTypes.slice(0, 3).map(r => [AL.qT(S, L.type(r.type)), AL.aT(S, L.type(r.type), provName(r.other), r.pct, r.n)]));
     const diff = x => x.pct >= 3 ? `<span class="win">${esc(AL.cheaper(x.pct))}</span>` : x.pct <= -3 ? esc(AL.pricier(-x.pct)) : esc(AL.same);
+    // real prices on the most widely sold shared products: what a seller would actually pay at each
+    const exRows = best ? best.v.rows.slice(0, 8).map(r => { const mine = best.v.a === id ? r.a : r.b, theirs = best.v.a === id ? r.b : r.a; return { g: r.g, mine, theirs }; }) : [];
+    const exHtml = exRows.length >= 3 ? `<h2>${esc(AL.exH(S, provName(best.other)))}</h2><div class="tbl"><table><thead><tr>${AL.exTh(S, provName(best.other)).map((h, i) => `<th${i ? ' class="num"' : ''}>${esc(h)}</th>`).join('')}</tr></thead><tbody>${exRows.map(r => { const d = r.mine.baseMinor - r.theirs.baseMinor; return `<tr><td><a href="${href(P.group(r.g.slug))}">${esc(H.gTitle(r.g))}</a></td><td class="num"><a href="${esc(outbound(r.mine))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.mine.baseMinor))}</a></td><td class="num${d > 0 ? ' win' : ''}"><a href="${esc(outbound(r.theirs))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.theirs.baseMinor))}</a></td><td class="num">${d > 0 ? esc(fmt(d)) : '–'}</td></tr>`; }).join('')}</tbody></table></div>` : '';
+    const switchHtml = `<h2>${esc(AL.switchH(S))}</h2><ul class="prose">${AL.switchList(S).map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
     add(P.alt(id) + 'index.html', page(L, H, {
       rel: P.alt(id) + 'index.html', alt: altAll(p => p.alt(id)), title: `${cheaperN >= 3 ? AL.titleN(S, cheaperN, month) : AL.title(S, month)} · ${BRAND}`, description: AL.desc(S, list.length, best ? AL.top(provName(best.other), best.pct) : AL.none(S)),
       crumbs: [[AL.indexTitle, href(P.alts)], [S]],
@@ -1040,7 +1070,7 @@ ${s.rows.slice(0, 20).map(r => `<tr><td><a href="${href(P.group(r.g.slug))}">${e
 ${best ? `<div class="verdict"><b>${esc(AL.top(provName(best.other), best.pct))}</b></div>` : `<div class="verdict">${esc(AL.none(S))}</div>`}
 <div class="tbl"><table><thead><tr><th>${AL.th[0]}</th><th class="num">${AL.th[1]} ${esc(S)}</th><th class="num">${AL.th[2]}</th><th class="num">${AL.th[3]}</th><th></th></tr></thead><tbody>
 ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>${esc(provName(x.other))}</b></a></td><td class="num">${diff(x)}</td><td class="num">${x.cheaperOn} / ${x.n}</td><td class="num">${x.n}</td><td><a class="go" href="${href(P.vs(x.v.slug))}">${esc(AL.details)} →</a></td></tr>`).join('')}
-</tbody></table></div><p class="muted sm">${esc(V.note)}</p>${aTypes.length >= 2 ? `<h2>${esc(AL.typeH(S))}</h2><div class="tbl"><table><thead><tr><th>${esc(AL.tth[0])}</th><th>${esc(AL.tth[1])}</th><th class="num">${esc(AL.tth[2])} ${esc(S)}</th><th class="num">${esc(AL.tth[3])}</th></tr></thead><tbody>${aTypes.map(r => `<tr><td>${esc(L.type(r.type))}</td><td><a href="${href(P.maker(r.other))}">${esc(provName(r.other))}</a></td><td class="num"><span class="win">${esc(AL.cheaper(r.pct))}</span></td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table></div>` : ''}<h2>${esc(AL.faqH)}</h2><div class="prose">${aFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}</div>`,
+</tbody></table></div><p class="muted sm">${esc(V.note)}</p>${exHtml}${aTypes.length >= 2 ? `<h2>${esc(AL.typeH(S))}</h2><div class="tbl"><table><thead><tr><th>${esc(AL.tth[0])}</th><th>${esc(AL.tth[1])}</th><th class="num">${esc(AL.tth[2])} ${esc(S)}</th><th class="num">${esc(AL.tth[3])}</th></tr></thead><tbody>${aTypes.map(r => `<tr><td>${esc(L.type(r.type))}</td><td><a href="${href(P.maker(r.other))}">${esc(provName(r.other))}</a></td><td class="num"><span class="win">${esc(AL.cheaper(r.pct))}</span></td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table></div>` : ''}${switchHtml}<h2>${esc(AL.faqH)}</h2><div class="prose">${aFaq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('')}</div>`,
       jsonld: { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: aFaq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     }));
   }

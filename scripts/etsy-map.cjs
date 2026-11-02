@@ -49,7 +49,7 @@ function resolve(p) {
 }
 
 // --- cinsiyet / yaş
-const RE_BABY = /\b(baby|babies|infant|newborn|toddler|onesie|bodysuit|romper|bib)\b/;
+const RE_BABY = /\b(baby|babies|infants?|newborns?|toddlers?|onesie|bodysuit|romper|bib)\b/;
 const RE_KIDS = /\b(kids?|youth|children'?s?|child|juniors?|boys?|girls?|teen)\b/;
 function who(text) {
   // "Women's Strap Shorts Romper" bebek değil: bebek kelimeleri yetişkin işareti yoksa geçerli
@@ -459,6 +459,10 @@ function etsyOf(p, cls) {
   const loose = /^diger$|-diger$/.test(type);
   // telefon/gözlük kılıfı her şeyden önce ("iPhone Wallet Case" cüzdan değil)
   if (/\bair ?pods?\b|\bearbuds? case/.test(text)) return 'pod-airpods';
+  // başlık denetimi (2 Kas): Interestprint "Brand Logo for Tops (4cm X 5cm)" giysi değil, ürüne eklenen marka etiketi hizmeti;
+  // vites topuzu kılıfı ("Car Shift Knob Hoodie") ve güneşlik klipsi araç aksesuarı, kapüşonlu/şapka değil
+  if (/^brand logo for\b/.test(text)) return 'pod-seller-services';
+  if (/\b(shift knob|gear knob|car visor|visor (photo )?clip)\b/.test(text)) return resolve(`${EA} > Car Parts & Accessories > Car Accessories`);
   if (/\bcar\b.*\b(floor |foot |trunk )?mats?\b/.test(text) && !/\b(seat cover|coaster)/.test(text)) return 'pod-car-mats';
   if (/\b(ipad|tablet|kindle|e-?reader)\b/.test(text) && /\b(cases?|covers?|folios?|sleeves?)\b/.test(text)) return resolve(`${EA} > Electronics Cases > Tablet & E-Reader Cases`);
   // Rabbit Skins bebek giyim markası, cihaz kaplaması değil

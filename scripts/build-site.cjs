@@ -212,6 +212,25 @@ const guides = new Map(guideTypes.map(t => {
   return [t, { rows, suppliers, med: median(rows.map(r => r.med)), lo: rows.reduce((a, r) => !a || r.offers[0].baseMinor < a.baseMinor ? r.offers[0] : a, null), pf: { n: pf.length, printful: pf.filter(d => d < 0).length, printify: pf.filter(d => d > 0).length } }];
   // en az 3 ürün grubunda görünen üretici yoksa rehber sayfası anlamsız (ve başlık hesabı yapılamaz)
 }).filter(([, s]) => s.rows.length >= 3 && s.suppliers.length));
+// Başlık denetimi (havuz #80): sayfa başlığına "from $X" / "en ucuz" olarak çıkan ürün, aynı sayfadaki ürünlerin ortancasının
+// %25'inden ucuzsa büyük ihtimalle yanlış sınıflanmıştır (12 Eki tumbler isimliği $1.63, 29 Eki matara sayfasında ahşap pano).
+// Kategoride yalnız yaprak düğümler: üst kategoriler (Paper, Home & Living) doğal olarak sticker'dan battaniyeye uzanır, başlık fiyatı zaten bir yapraktan gelir.
+// Siteyi değiştirmez; data/headline-audit.json'a yazar, pazartesi raporunda bakılır.
+{
+  const flags = [], pct = (a, b) => Math.round(a / b * 100);
+  const push = (kind, url, lo, med, n) => { if (lo && med && lo.baseMinor < med * 0.25) flags.push({ kind, url, n, headline: lo.baseMinor, median: med, pct: pct(lo.baseMinor, med), providerId: lo.providerId, title: lo.title, source: lo.sourceUrl }); };
+  for (const [id, list] of eList) {
+    if (id === 'other' || list.length < 5 || eKids.get(id).size) continue;
+    const printed = list.filter(p => !isBlank(p));
+    const cBest = [...groupBy(printed, p => p.providerId)].map(([, l]) => l[0]).sort((a, b) => a.baseMinor - b.baseMinor);
+    push('category', `/category/${eSlug.get(id)}/`, cBest.length >= 3 ? cBest[0] : list[0], median((printed.length ? printed : list).map(p => p.baseMinor)), list.length);
+  }
+  for (const [t, s] of guides) push('guide', `/cheapest/${(EN.TYPES[t] || ['', t])[1]}/`, s.lo, s.med, s.rows.length);
+  for (const g of groups) { const per = [...groupBy(g.list.filter(p => !isBlank(p)), p => p.providerId)].map(([, l]) => l[0].baseMinor); if (per.length >= 3) push('compare', `/compare/${g.slug}/`, g.lo, median(per), per.length); }
+  flags.sort((a, b) => a.pct - b.pct);
+  fs.writeFileSync(path.join(root, 'data/headline-audit.json'), JSON.stringify({ checkedAt: new Date().toISOString(), rule: 'headline cheapest < 25% of page median', count: flags.length, flags }, null, 1) + '\n');
+  console.log(`headline audit: ${flags.length} pages whose headline cheapest is < 25% of the median → data/headline-audit.json`);
+}
 // "X alternatifleri": büyük üreticiler için aynı ürünlerde daha ucuz olan rakipler
 // en az 8 ikili karşılaştırması olan her üretici ("<üretici> alternatives" aramaları); 5-7 eşleşmede liste çok kısa kalıyor
 const altProviders = [...vsOf].filter(([, l]) => l.length >= 8).sort((a, b) => b[1].length - a[1].length).map(([id]) => id);
@@ -351,7 +370,7 @@ const LOCALES = {
         indexTitle: 'Cheapest print-on-demand suppliers by product', indexDesc: 'Which print-on-demand supplier is cheapest for t-shirts, hoodies, mugs, posters and more — updated twice a day from supplier catalogs.',
         title: (l, m) => `Cheapest print-on-demand ${l.toLowerCase()} (${m})`, desc: (l, s, v, n) => `${s} is the cheapest print-on-demand supplier for ${l.toLowerCase()} on average. Lowest price ${v}; ${n} products compared across suppliers, updated twice a day.`,
         h1: (l, m) => `Cheapest print-on-demand ${l.toLowerCase()}`, upd: m => `Updated ${m} · prices refresh twice a day`,
-        lead: (l, n, s, w, v, med) => `We compared ${n} ${l.toLowerCase()} that several print-on-demand suppliers sell (same blank or same size). ${s} is the cheapest on average, about ${w}% below the typical price for the same product. The lowest print-included price we found is ${v}; a typical (median) price is ${med}.`,
+        lead: (l, n, s, w, v, med) => `We compared ${n} ${l.toLowerCase()} that several print-on-demand suppliers sell (${/phone case/i.test(l) ? 'same phone model' : 'same blank or same size'}). ${s} is the cheapest on average, about ${w}% below the typical price for the same product. The lowest print-included price we found is ${v}; a typical (median) price is ${med}.`,
         rankH: 'Cheapest suppliers on average', rankP: 'Price index: 100 = the typical price for the same product. Lower is cheaper. Only suppliers with at least 3 comparable products are listed.',
         rth: ['Supplier', 'Price index', 'Cheapest on', 'Products compared'], vsMed: p => p <= 0 ? `${-p}% below typical` : `${p}% above typical`,
         topH: l => `Most compared ${l.toLowerCase()}`, tth: ['Product', 'Suppliers', 'Cheapest', 'Typical price'],
@@ -519,7 +538,7 @@ const LOCALES = {
         indexTitle: 'Ürüne göre en ucuz POD üreticileri', indexDesc: 'Tişört, hoodie, kupa, poster ve daha fazlası için en ucuz print-on-demand üreticisi; günde iki kez güncellenir.',
         title: (l, m) => `En ucuz POD ${l} üreticileri (${m})`, desc: (l, s, v, n) => `${l} için ortalamada en ucuz üretici ${s}. En düşük fiyat ${v}; ${n} ürün üreticiler arasında karşılaştırıldı, günde iki kez güncellenir.`,
         h1: (l, m) => `En ucuz POD ${l} üreticileri`, upd: m => `Güncelleme: ${m} · fiyatlar günde iki kez yenilenir`,
-        lead: (l, n, s, w, v, med) => `Birden fazla üreticinin sattığı ${n} ${l} ürününü (aynı boş ürün ya da aynı ölçü) karşılaştırdık. Ortalamada en ucuz üretici ${s}: aynı ürünün tipik fiyatından yaklaşık %${w} daha ucuz. Bulduğumuz en düşük baskı dahil fiyat ${v}; tipik (ortanca) fiyat ${med}.`,
+        lead: (l, n, s, w, v, med) => `Birden fazla üreticinin sattığı ${n} ${l} ürününü (${/telefon/i.test(l) ? 'aynı telefon modeli' : 'aynı boş ürün ya da aynı ölçü'}) karşılaştırdık. Ortalamada en ucuz üretici ${s}: aynı ürünün tipik fiyatından yaklaşık %${w} daha ucuz. Bulduğumuz en düşük baskı dahil fiyat ${v}; tipik (ortanca) fiyat ${med}.`,
         rankH: 'Ortalamada en ucuz üreticiler', rankP: 'Fiyat endeksi: 100 = aynı ürünün tipik fiyatı. Düşük olan daha ucuz. Yalnızca en az 3 karşılaştırılabilir ürünü olan üreticiler listelenir.',
         rth: ['Üretici', 'Fiyat endeksi', 'En ucuz olduğu', 'Karşılaştırılan ürün'], vsMed: p => p <= 0 ? `tipik fiyattan %${-p} ucuz` : `tipik fiyattan %${p} pahalı`,
         topH: l => `En çok karşılaştırılan ${l} ürünleri`, tth: ['Ürün', 'Üretici', 'En ucuz', 'Tipik fiyat'],

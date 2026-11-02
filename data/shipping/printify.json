@@ -1,6 +1,6 @@
 {
  "source": "https://printify.com/shipping-rates/",
- "checked": "2026-10-20",
+ "checked": "2026-11-02",
  "currency": "USD",
  "note": "first = first item, additional = each additional item; country = print provider location (ship-from)",
  "providers": [

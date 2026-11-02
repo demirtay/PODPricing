@@ -31,6 +31,11 @@ const prep = cat => new Map(cat.products.filter(p => Number.isSafeInteger(p.base
   return [p.id, q];
 }));
 const oldP = prep(oldCat), newP = prep(newCat);
+// karşılaştırma noktasından 2 gün önceki katalog: o anki fiyat geçici bir sapmaysa (Printful API'si bazı çalışmalarda başka
+// bölgenin fiyatını döndürüyor: 25-27 Eki 2026'da 44 ürün "ucuzladı", sonra eski fiyatına döndü) bugünkü fiyat bununla aynıdır -> değişim sayılmaz
+const priorRef = git('log', '-1', `--before=${new Date(Date.parse(baseDate) - 2 * 864e5).toISOString()}`, '--format=%H', '--', 'data/catalog.json').trim();
+const priorP = priorRef ? prep(JSON.parse(git('show', `${priorRef}:data/catalog.json`))) : new Map();
+const blip = (id, now) => priorP.has(id) && priorP.get(id).baseMinor === now && priorP.get(id).currency === newP.get(id)?.currency;
 const provName = id => newCat.providers.find(p => p.id === id)?.name || oldCat.providers.find(p => p.id === id)?.name || id;
 const slugOf = k => PG.slugOf(k, t => (EN.TYPES[t] || ['', t])[1]);
 
@@ -40,7 +45,7 @@ for (const [id, n] of newP) {
   const o = oldP.get(id);
   if (!o || n.pb !== 'dahil' || o.pb !== 'dahil' || o.currency !== n.currency) continue;
   const d = n.baseMinor - o.baseMinor, pct = d / o.baseMinor;
-  if (Math.abs(d) < 10 || Math.abs(pct) < 0.03 || Math.abs(pct) > 0.6) continue;
+  if (Math.abs(d) < 10 || Math.abs(pct) < 0.03 || Math.abs(pct) > 0.6 || blip(id, n.baseMinor)) continue;
   changes.push({ id, providerId: n.providerId, title: n.title, old: o.baseMinor, new: n.baseMinor, pct: +pct.toFixed(4), group: n.gkey ? slugOf(n.gkey) : null });
 }
 
@@ -64,11 +69,11 @@ const cheapest = map => {
   }
   return new Map([...g].filter(([, m]) => m.size >= 3).map(([k, m]) => [k, [...m.values()].sort((a, b) => a.baseMinor - b.baseMinor)]));
 };
-const oldC = cheapest(oldP), newC = cheapest(newP);
+const oldC = cheapest(oldP), newC = cheapest(newP), priorC = cheapest(priorP);
 const leaders = [];
 for (const [k, offers] of newC) {
   const prev = oldC.get(k);
-  if (!prev || prev[0].providerId === offers[0].providerId) continue;
+  if (!prev || prev[0].providerId === offers[0].providerId || priorC.get(k)?.[0].providerId === offers[0].providerId) continue;
   const name = offers.find(p => p.model)?.model ? `${offers.find(p => p.model).model.brandName} ${offers.find(p => p.model).model.model}` : offers[0].title;
   leaders.push({ group: slugOf(k), name, suppliers: offers.length, was: { id: prev[0].providerId, name: provName(prev[0].providerId), price: prev[0].baseMinor },
     now: { id: offers[0].providerId, name: provName(offers[0].providerId), price: offers[0].baseMinor } });

@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-02",
+  "baseDate": "2026-10-26",
+  "intro": "The biggest move this week is on blankets. Interestprint cut its US-fulfilled (Queens) Ultra-Soft Micro Fleece Blankets by 22-28% across six sizes: the 30x40 went from $8.59 to $6.19, the 50x70 from $14.99 to $11.19 and the 60x70 from $15.49 to $11.99. Blanket listings for the holidays are going up now, so check the blanket comparisons before you lock in a supplier.\n\nDrinkware and ornaments got cheaper too. Artsadd more than halved its steel tumblers: the 40oz tumbler with handle dropped from $33.34 to $14.20 and the 30oz from $23.19 to $11.88. Dreamship’s wooden ornaments (round maple and custom shape) fell from about $7.40 to $4.69, and Customizingbox’s star photo ornament went from $6.51 to $2.80 — worth a look if you sell personalised ornaments this season.\n\nAcross 103 suppliers we counted 49 price changes of 3% or more: 41 cuts and 8 increases. The increases were small and scattered, the largest being PrintKK’s canvas document bag ($2.86 to $4.13) and PeaPrint’s double-layered all-over-print hoodie ($16.99 to $19.56). From this week we no longer count a price that changed for a day or two and then went back: Printful’s public catalog briefly quoted different prices around 25-27 October, and those were not real price changes.",
+  "totals": {
+    "products": 35643,
+    "productsBefore": 35450,
+    "suppliers": 103,
+    "newSuppliers": [],
+    "changed": 49,
+    "up": 8,
+    "down": 41
+  },
+  "suppliers": [
+    {
+      "id": "interestprint",
+      "name": "Interestprint",
+      "up": 2,
+      "down": 17,
+      "avgPct": -0.1615
+    },
+    {
+      "id": "printful",
+      "name": "Printful",
+      "up": 0,
+      "down": 11,
+      "avgPct": -0.0352
+    },
+    {
+      "id": "popcustoms",
+      "name": "PopCustoms",
+      "up": 1,
+      "down": 2,
+      "avgPct": -0.1234
+    },
+    {
+      "id": "contrado",
+      "name": "Contrado",
+      "up": 0,
+      "down": 3,
+      "avgPct": -0.2149
+    },
+    {
+      "id": "dreamship",
+      "name": "Dreamship",
+      "up": 0,
+      "down": 2,
+      "avgPct": -0.3696
+    },
+    {
+      "id": "customizingbox",
+      "name": "Customizingbox",
+      "up": 1,
+      "down": 1,
+      "avgPct": -0.2509
+    },
+    {
+      "id": "printify",
+      "name": "Printify",
+      "up": 1,
+      "down": 1,
+      "avgPct": -0.0396
+    },
+    {
+      "id": "artsadd",
+      "name": "Artsadd",
+      "up": 0,
+      "down": 2,
+      "avgPct": -0.5309
+    },
+    {
+      "id": "printway",
+      "name": "Printway",
+      "up": 0,
+      "down": 2,
+      "avgPct": -0.1667
+    },
+    {
+      "id": "printkk",
+      "name": "PrintKK",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.4441
+    },
+    {
+      "id": "peaprint",
+      "name": "PeaPrint",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.1513
+    },
+    {
+      "id": "neatopod",
+      "name": "NeatoPOD",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.0567
+    }
+  ],
+  "drops": [
+    {
+      "id": "artsadd-8700",
+      "providerId": "artsadd",
+      "title": "40OZ Tumbler with Handle",
+      "old": 3334,
+      "new": 1420,
+      "pct": -0.5741,
+      "group": "tumblers-40oz"
+    },
+    {
+      "id": "customizingbox-Personalized-Star-Photo-Ornament",
+      "providerId": "customizingbox",
+      "title": "Personalized Star Photo Ornament",
+      "old": 651,
+      "new": 280,
+      "pct": -0.5699,
+      "group": null
+    },
+    {
+      "id": "interestprint-1412",
+      "providerId": "interestprint",
+      "title": "Women's Pajama Trousers (Model Sets 02)",
+      "old": 2299,
+      "new": 1129,
+      "pct": -0.5089,
+      "group": null
+    },
+    {
+      "id": "artsadd-8672",
+      "providerId": "artsadd",
+      "title": "30OZ Stainless Steel Tumbler",
+      "old": 2319,
+      "new": 1188,
+      "pct": -0.4877,
+      "group": "tumblers-30oz"
+    },
+    {
+      "id": "popcustoms-1297",
+      "providerId": "popcustoms",
+      "title": "Long Vertical Flannel Breathable Blanket 4 Sizes",
+      "old": 1679,
+      "new": 1029,
+      "pct": -0.3871,
+      "group": null
+    },
+    {
+      "id": "dreamship-620",
+      "providerId": "dreamship",
+      "title": "Round Wooden Maple Ornament",
+      "old": 749,
+      "new": 469,
+      "pct": -0.3738,
+      "group": null
+    },
+    {
+      "id": "dreamship-1163",
+      "providerId": "dreamship",
+      "title": "Custom Shape Wooden Ornament",
+      "old": 739,
+      "new": 469,
+      "pct": -0.3654,
+      "group": null
+    },
+    {
+      "id": "contrado-custom-leather-mahjong-mat",
+      "providerId": "contrado",
+      "title": "Custom Leather Mahjong Mat",
+      "old": 22900,
+      "new": 15900,
+      "pct": -0.3057,
+      "group": null
+    },
+    {
+      "id": "printway-custom-shape-wavy-acrylic-suncatcher-cswacs",
+      "providerId": "printway",
+      "title": "Custom Shape Wavy Acrylic Suncatcher",
+      "old": 350,
+      "new": 250,
+      "pct": -0.2857,
+      "group": null
+    },
+    {
+      "id": "interestprint-1421",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 30\"x40\" (US Fulfillment - Queens)",
+      "old": 859,
+      "new": 619,
+      "pct": -0.2794,
+      "group": "blankets-30x40"
+    },
+    {
+      "id": "interestprint-2999",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 43*56 (US Fulfillment - Queens)",
+      "old": 1299,
+      "new": 969,
+      "pct": -0.254,
+      "group": "blankets-43x56"
+    },
+    {
+      "id": "interestprint-4884",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 50*70 (US Fulfillment - Queens)",
+      "old": 1499,
+      "new": 1119,
+      "pct": -0.2535,
+      "group": "blankets-50x70"
+    },
+    {
+      "id": "interestprint-1422",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 40\" x 50\"  (US Fulfillment - Queens)",
+      "old": 1199,
+      "new": 899,
+      "pct": -0.2502,
+      "group": "blankets-40x50"
+    },
+    {
+      "id": "interestprint-2998",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 54*70 (US Fulfillment - Queens)",
+      "old": 1519,
+      "new": 1139,
+      "pct": -0.2502,
+      "group": "blankets-54x70"
+    },
+    {
+      "id": "interestprint-4885",
+      "providerId": "interestprint",
+      "title": "Ultra-Soft Micro Fleece Blanket 60*70 (US Fulfillment - Queens)",
+      "old": 1549,
+      "new": 1199,
+      "pct": -0.226,
+      "group": "blankets-60x70"
+    }
+  ],
+  "rises": [
+    {
+      "id": "printkk-canvas-document-bag-with-handle",
+      "providerId": "printkk",
+      "title": "Canvas Document Bag with Handle",
+      "old": 286,
+      "new": 413,
+      "pct": 0.4441,
+      "group": null
+    },
+    {
+      "id": "interestprint-5383",
+      "providerId": "interestprint",
+      "title": "Custom Velcro Slippers",
+      "old": 989,
+      "new": 1159,
+      "pct": 0.1719,
+      "group": null
+    },
+    {
+      "id": "peaprint-16738",
+      "providerId": "peaprint",
+      "title": "Double-Layered Hoodie with Pockets(All-Over Printing)",
+      "old": 1699,
+      "new": 1956,
+      "pct": 0.1513,
+      "group": null
+    },
+    {
+      "id": "printify-4043",
+      "providerId": "printify",
+      "title": "Plaid Pattern Easy Care Shirt",
+      "old": 3914,
+      "new": 4301,
+      "pct": 0.0989,
+      "group": null
+    },
+    {
+      "id": "customizingbox-Personalized-Leather-Toiletry-Bag",
+      "providerId": "customizingbox",
+      "title": "Personalized Leather Toiletry Bag",
+      "old": 837,
+      "new": 894,
+      "pct": 0.0681,
+      "group": null
+    },
+    {
+      "id": "neatopod-carhartt-midweight-hoodie-s-4xl-carhartt-ctk121",
+      "providerId": "neatopod",
+      "title": "Carhartt Midweight Hoodie | S-4XL",
+      "old": 5295,
+      "new": 5595,
+      "pct": 0.0567,
+      "group": null
+    },
+    {
+      "id": "popcustoms-2084",
+      "providerId": "popcustoms",
+      "title": "Mini Flap Crossbody Bag Monogram Leather Clutch Handbag",
+      "old": 1829,
+      "new": 1929,
+      "pct": 0.0547,
+      "group": null
+    },
+    {
+      "id": "interestprint-2144",
+      "providerId": "interestprint",
+      "title": "Drawstring Side One-Piece Swimsuit(ModelS14)",
+      "old": 953,
+      "new": 999,
+      "pct": 0.0483,
+      "group": null
+    }
+  ],
+  "leaders": [
+    {
+      "group": "as-colour-1120",
+      "name": "AS Colour 1120",
+      "suppliers": 3,
+      "was": {
+        "id": "colouroo",
+        "name": "Colouroo",
+        "price": 1650
+      },
+      "now": {
+        "id": "printful",
+        "name": "Printful",
+        "price": 1651
+      }
+    }
+  ]
+}

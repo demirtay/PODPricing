@@ -12,6 +12,8 @@ const SPEC = {
   'ev-battaniye': ['dim', 'Blanket', 'Battaniye'], 'teknoloji-mousepad': ['dim', 'Mouse Pad', 'Mouse Pad'], 'ev-bayrak': ['dim', 'Flag', 'Bayrak'],
   'ev-hali': ['dim', 'Rug', 'Halı'], 'oyun-puzzle': ['dim', 'Jigsaw Puzzle', 'Yapboz'], 'ev-havlu': ['dim', 'Towel', 'Havlu'],
   'teknoloji-telefon-kilifi': ['phone', 'Case', 'Kılıfı'],
+  // yoga matı: ölçü/kalınlık üreticiye göre değişiyor (24x68 in, 2mm/4mm) ve çoğunda tek ölçü var -> bütün gerçek matlar tek karşılaştırmada
+  'spor-yoga': ['any', 'Yoga Mat', 'Yoga Matı'],
 };
 const COLOR = { magic: ['Color-Changing', 'Isıyla Renk Değiştiren'], black: ['Black', 'Siyah'], accent: ['Two-Tone', 'İçi Renkli'], enamel: ['Enamel', 'Emaye'], white: ['White', 'Beyaz'] };
 
@@ -54,6 +56,7 @@ function groupKey(p) {
   if (p.model?.key) return 'm:' + p.model.key;
   const s = SPEC[p.type];
   if (!s) return null;
+  if (s[0] === 'any') return /\b(yoga|exercise|fitness) mats?\b/i.test(p.title) && !/\b(bags?|cloth|towel|carrier|strap|storage|tiles?|blocks?|cases?|covers?)\b/i.test(p.title) ? `s:${p.type}:` : null;
   if (s[0] === 'phone') { const ph = phoneSpec(p); return ph ? `s:${p.type}:${ph}` : null; }
   if (s[0] === 'oz') { const o = oz(p.title + ' ' + (p.sizes || '')); return o ? `s:${p.type}:${o}:${p.type === 'mutfak-kupa' ? color(p.title) : ''}` : null; }
   const d = dim(p.title);
@@ -65,6 +68,7 @@ function groupName(key, sample, lang, typeLabel) {
   if (key.startsWith('m:')) return `${sample.model.brandName} ${sample.model.model} ${typeLabel(sample.type)}`;
   const [, type, spec, col] = key.split(':');
   const base = SPEC[type][lang === 'tr' ? 2 : 1];
+  if (SPEC[type][0] === 'any') return base;
   if (SPEC[type][0] === 'phone') return lang === 'tr' ? `${phoneLabel(spec)} ${col === 'wallet' ? 'Cüzdan ' : ''}Kılıfı` : `${phoneLabel(spec)} ${col === 'wallet' ? 'Wallet ' : ''}Case`;
   const c = col && COLOR[col] ? COLOR[col][lang === 'tr' ? 1 : 0] + ' ' : '';
   return SPEC[type][0] === 'oz' ? `${spec} ${c}${base}` : `${base} ${spec.replace('x', '×')} in`;

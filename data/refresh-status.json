@@ -109,317 +109,317 @@
     "yoycol": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:43:34.258Z",
+      "lastSuccess": "2026-11-05T14:58:23.587Z",
       "lastError": null,
-      "productCount": 1547,
-      "nextCheck": 1793840979253,
-      "startedAt": "2026-11-05T00:39:39.253Z"
+      "productCount": 1548,
+      "nextCheck": 1793892471360,
+      "startedAt": "2026-11-05T14:57:51.360Z"
     },
     "printify": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:46:27.272Z",
+      "lastSuccess": "2026-11-05T14:59:43.712Z",
       "lastError": null,
-      "productCount": 3021,
-      "nextCheck": 1793841336501,
-      "startedAt": "2026-11-05T00:45:36.501Z"
+      "productCount": 3020,
+      "nextCheck": 1793892532192,
+      "startedAt": "2026-11-05T14:58:52.192Z"
     },
     "dreamship": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:45.638Z",
+      "lastSuccess": "2026-11-05T14:53:06.453Z",
       "lastError": null,
       "productCount": 309,
-      "nextCheck": 1793839242071,
-      "startedAt": "2026-11-05T00:10:42.071Z"
+      "nextCheck": 1793892184427,
+      "startedAt": "2026-11-05T14:53:04.427Z"
     },
     "prodigi": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:50:16.900Z",
+      "lastSuccess": "2026-11-05T14:59:45.640Z",
       "lastError": null,
       "productCount": 272,
-      "nextCheck": 1793841387273,
-      "startedAt": "2026-11-05T00:46:27.273Z"
+      "nextCheck": 1793892583712,
+      "startedAt": "2026-11-05T14:59:43.712Z"
     },
     "gearlaunch": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:51:41.669Z",
+      "lastSuccess": "2026-11-05T14:59:51.027Z",
       "lastError": null,
       "productCount": 68,
-      "nextCheck": 1793841670238,
-      "startedAt": "2026-11-05T00:51:10.238Z"
+      "nextCheck": 1793892589131,
+      "startedAt": "2026-11-05T14:59:49.131Z"
     },
     "merchone": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:08:17.164Z",
+      "lastSuccess": "2026-11-05T14:45:37.414Z",
       "lastError": null,
-      "productCount": 74,
-      "nextCheck": 1793839093125,
-      "startedAt": "2026-11-05T00:08:13.125Z"
+      "productCount": 76,
+      "nextCheck": 1793891654901,
+      "startedAt": "2026-11-05T14:44:14.901Z"
     },
     "contrado": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:58:29.589Z",
+      "lastSuccess": "2026-11-05T15:06:05.499Z",
       "lastError": null,
-      "productCount": 86,
-      "nextCheck": 1793842062586,
-      "startedAt": "2026-11-05T00:57:42.586Z"
+      "productCount": 87,
+      "nextCheck": 1793892960139,
+      "startedAt": "2026-11-05T15:06:00.139Z"
     },
     "neatopod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:58:31.524Z",
+      "lastSuccess": "2026-11-05T15:06:07.600Z",
       "lastError": null,
-      "productCount": 288,
-      "nextCheck": 1793842109590,
-      "startedAt": "2026-11-05T00:58:29.590Z"
+      "productCount": 290,
+      "nextCheck": 1793892965500,
+      "startedAt": "2026-11-05T15:06:05.500Z"
     },
     "pillowprofits": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-04T23:43:20.566Z",
+      "lastSuccess": "2026-11-05T14:44:10.118Z",
       "lastError": null,
       "productCount": 115,
-      "nextCheck": 1793837586136,
-      "startedAt": "2026-11-04T23:43:06.136Z"
+      "nextCheck": 1793891642063,
+      "startedAt": "2026-11-05T14:44:02.063Z"
     },
     "shirtee": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:57.721Z",
+      "lastSuccess": "2026-11-05T14:53:23.666Z",
       "lastError": null,
       "productCount": 305,
-      "nextCheck": 1793839245639,
-      "startedAt": "2026-11-05T00:10:45.639Z"
+      "nextCheck": 1793892186454,
+      "startedAt": "2026-11-05T14:53:06.454Z"
     },
     "getfuelpod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:58:53.786Z",
+      "lastSuccess": "2026-11-05T15:06:30.512Z",
       "lastError": null,
       "productCount": 120,
-      "nextCheck": 1793842111524,
-      "startedAt": "2026-11-05T00:58:31.524Z"
+      "nextCheck": 1793892967601,
+      "startedAt": "2026-11-05T15:06:07.601Z"
     },
     "printops": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:58:55.516Z",
+      "lastSuccess": "2026-11-05T15:06:32.442Z",
       "lastError": null,
       "productCount": 64,
-      "nextCheck": 1793842133787,
-      "startedAt": "2026-11-05T00:58:53.787Z"
+      "nextCheck": 1793892990513,
+      "startedAt": "2026-11-05T15:06:30.513Z"
     },
     "finerworks": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:59:02.962Z",
+      "lastSuccess": "2026-11-05T15:06:40.952Z",
       "lastError": null,
       "productCount": 76,
-      "nextCheck": 1793842140502,
-      "startedAt": "2026-11-05T00:59:00.502Z"
+      "nextCheck": 1793892997601,
+      "startedAt": "2026-11-05T15:06:37.601Z"
     },
     "sellfy": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:59:00.501Z",
+      "lastSuccess": "2026-11-05T15:06:37.600Z",
       "lastError": null,
       "productCount": 110,
-      "nextCheck": 1793842137654,
-      "startedAt": "2026-11-05T00:58:57.654Z"
+      "nextCheck": 1793892994529,
+      "startedAt": "2026-11-05T15:06:34.529Z"
     },
     "ownprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:59:04.737Z",
+      "lastSuccess": "2026-11-05T15:06:42.970Z",
       "lastError": null,
       "productCount": 31,
-      "nextCheck": 1793842142963,
-      "startedAt": "2026-11-05T00:59:02.963Z"
+      "nextCheck": 1793893000953,
+      "startedAt": "2026-11-05T15:06:40.953Z"
     },
     "oneprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:59:07.112Z",
+      "lastSuccess": "2026-11-05T15:06:45.385Z",
       "lastError": null,
       "productCount": 4,
-      "nextCheck": 1793842144738,
-      "startedAt": "2026-11-05T00:59:04.738Z"
+      "nextCheck": 1793893002971,
+      "startedAt": "2026-11-05T15:06:42.971Z"
     },
     "novatomato": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:59:54.271Z",
+      "lastSuccess": "2026-11-05T15:06:47.096Z",
       "lastError": null,
       "productCount": 51,
-      "nextCheck": 1793842147113,
-      "startedAt": "2026-11-05T00:59:07.113Z"
+      "nextCheck": 1793893005386,
+      "startedAt": "2026-11-05T15:06:45.386Z"
     },
     "printway": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:03:56.269Z",
+      "lastSuccess": "2026-11-05T15:06:48.855Z",
       "lastError": null,
       "productCount": 1095,
-      "nextCheck": 1793842194272,
-      "startedAt": "2026-11-05T00:59:54.272Z"
+      "nextCheck": 1793893007097,
+      "startedAt": "2026-11-05T15:06:47.097Z"
     },
     "subliminator": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:03:59.717Z",
+      "lastSuccess": "2026-11-05T15:06:52.612Z",
       "lastError": null,
       "productCount": 190,
-      "nextCheck": 1793842436270,
-      "startedAt": "2026-11-05T01:03:56.270Z"
+      "nextCheck": 1793893008856,
+      "startedAt": "2026-11-05T15:06:48.856Z"
     },
     "toaddit": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:04:19.135Z",
+      "lastSuccess": "2026-11-05T15:07:10.587Z",
       "lastError": null,
-      "productCount": 967,
-      "nextCheck": 1793842439718,
-      "startedAt": "2026-11-05T01:03:59.718Z"
+      "productCount": 965,
+      "nextCheck": 1793893012613,
+      "startedAt": "2026-11-05T15:06:52.613Z"
     },
     "scalablepress": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:04:21.495Z",
+      "lastSuccess": "2026-11-05T15:07:12.912Z",
       "lastError": null,
       "productCount": 2134,
-      "nextCheck": 1793842459135,
-      "startedAt": "2026-11-05T01:04:19.135Z"
+      "nextCheck": 1793893030588,
+      "startedAt": "2026-11-05T15:07:10.588Z"
     },
     "marketprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:04:24.142Z",
+      "lastSuccess": "2026-11-05T15:07:15.945Z",
       "lastError": null,
       "productCount": 53,
-      "nextCheck": 1793842461496,
-      "startedAt": "2026-11-05T01:04:21.496Z"
+      "nextCheck": 1793893032912,
+      "startedAt": "2026-11-05T15:07:12.912Z"
     },
     "makeplayingcards": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:06:27.226Z",
+      "lastSuccess": "2026-11-05T15:07:17.697Z",
       "lastError": null,
       "productCount": 248,
-      "nextCheck": 1793842464142,
-      "startedAt": "2026-11-05T01:04:24.142Z"
+      "nextCheck": 1793893035946,
+      "startedAt": "2026-11-05T15:07:15.946Z"
     },
     "artelo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:43:37.650Z",
+      "lastSuccess": "2026-11-05T14:58:26.214Z",
       "lastError": null,
       "productCount": 128,
-      "nextCheck": 1793841214258,
-      "startedAt": "2026-11-05T00:43:34.258Z"
+      "nextCheck": 1793892503588,
+      "startedAt": "2026-11-05T14:58:23.588Z"
     },
     "promio": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:06:49.102Z",
+      "lastSuccess": "2026-11-05T15:07:21.369Z",
       "lastError": null,
       "productCount": 103,
-      "nextCheck": 1793842587226,
-      "startedAt": "2026-11-05T01:06:27.226Z"
+      "nextCheck": 1793893037698,
+      "startedAt": "2026-11-05T15:07:17.698Z"
     },
     "ecomerch": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:06:56.751Z",
+      "lastSuccess": "2026-11-05T15:07:24.540Z",
       "lastError": null,
       "productCount": 39,
-      "nextCheck": 1793842609102,
-      "startedAt": "2026-11-05T01:06:49.102Z"
+      "nextCheck": 1793893041370,
+      "startedAt": "2026-11-05T15:07:21.370Z"
     },
     "printgenie": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:07:34.381Z",
+      "lastSuccess": "2026-11-05T15:07:54.967Z",
       "lastError": null,
       "productCount": 72,
-      "nextCheck": 1793842616751,
-      "startedAt": "2026-11-05T01:06:56.751Z"
+      "nextCheck": 1793893044541,
+      "startedAt": "2026-11-05T15:07:24.541Z"
     },
     "lumaprints": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:58:57.654Z",
+      "lastSuccess": "2026-11-05T15:06:34.529Z",
       "lastError": null,
       "productCount": 674,
-      "nextCheck": 1793842135516,
-      "startedAt": "2026-11-05T00:58:55.516Z"
+      "nextCheck": 1793892992443,
+      "startedAt": "2026-11-05T15:06:32.443Z"
     },
     "shirtigo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:30.452Z",
+      "lastSuccess": "2026-11-05T14:45:53.770Z",
       "lastError": null,
       "productCount": 142,
-      "nextCheck": 1793839223266,
-      "startedAt": "2026-11-05T00:10:23.266Z"
+      "nextCheck": 1793891746206,
+      "startedAt": "2026-11-05T14:45:46.206Z"
     },
     "printmood": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:45:20.955Z",
+      "lastSuccess": "2026-11-05T14:58:37.368Z",
       "lastError": null,
       "productCount": 87,
-      "nextCheck": 1793841224193,
-      "startedAt": "2026-11-05T00:43:44.193Z"
+      "nextCheck": 1793892513080,
+      "startedAt": "2026-11-05T14:58:33.080Z"
     },
     "inkpod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:19.038Z",
+      "lastSuccess": "2026-11-05T14:45:41.788Z",
       "lastError": null,
       "productCount": 287,
-      "nextCheck": 1793839097705,
-      "startedAt": "2026-11-05T00:08:17.705Z"
+      "nextCheck": 1793891737415,
+      "startedAt": "2026-11-05T14:45:37.415Z"
     },
     "pengine": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:12:22.882Z",
+      "lastSuccess": "2026-11-05T14:54:10.675Z",
       "lastError": null,
       "productCount": 99,
-      "nextCheck": 1793839297470,
-      "startedAt": "2026-11-05T00:11:37.470Z"
+      "nextCheck": 1793892247121,
+      "startedAt": "2026-11-05T14:54:07.121Z"
     },
     "printdropper": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:42.070Z",
+      "lastSuccess": "2026-11-05T14:53:04.426Z",
       "lastError": null,
       "productCount": 110,
-      "nextCheck": 1793839234326,
-      "startedAt": "2026-11-05T00:10:34.326Z"
+      "nextCheck": 1793891757690,
+      "startedAt": "2026-11-05T14:45:57.690Z"
     },
     "artofwhere": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:45:26.463Z",
+      "lastSuccess": "2026-11-05T14:58:43.208Z",
       "lastError": null,
       "productCount": 145,
-      "nextCheck": 1793841323643,
-      "startedAt": "2026-11-05T00:45:23.643Z"
+      "nextCheck": 1793892520249,
+      "startedAt": "2026-11-05T14:58:40.249Z"
     },
     "peecho": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:34.325Z",
+      "lastSuccess": "2026-11-05T14:45:57.689Z",
       "lastError": null,
       "productCount": 11,
-      "nextCheck": 1793839232456,
-      "startedAt": "2026-11-05T00:10:32.456Z"
+      "nextCheck": 1793891755796,
+      "startedAt": "2026-11-05T14:45:55.796Z"
     },
     "printpartners": {
       "state": "error",
@@ -427,395 +427,395 @@
       "lastSuccess": null,
       "lastError": "printpartners: beklenenden az kart (0)",
       "productCount": 0,
-      "nextCheck": 1793837586073,
-      "startedAt": "2026-11-04T23:43:06.073Z"
+      "nextCheck": 1793891564831,
+      "startedAt": "2026-11-05T14:42:44.831Z"
     },
     "beautyboss": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:23:08.571Z",
+      "lastSuccess": "2026-11-05T14:57:26.179Z",
       "lastError": null,
       "productCount": 11,
-      "nextCheck": 1793839986832,
-      "startedAt": "2026-11-05T00:23:06.832Z"
+      "nextCheck": 1793892444392,
+      "startedAt": "2026-11-05T14:57:24.392Z"
     },
     "slaitepod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:23:11.999Z",
+      "lastSuccess": "2026-11-05T14:57:28.798Z",
       "lastError": null,
       "productCount": 65,
-      "nextCheck": 1793839988571,
-      "startedAt": "2026-11-05T00:23:08.571Z"
+      "nextCheck": 1793892446182,
+      "startedAt": "2026-11-05T14:57:26.182Z"
     },
     "colouroo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:23:14.097Z",
+      "lastSuccess": "2026-11-05T14:57:31.213Z",
       "lastError": null,
       "productCount": 158,
-      "nextCheck": 1793839992000,
-      "startedAt": "2026-11-05T00:23:12.000Z"
+      "nextCheck": 1793892448798,
+      "startedAt": "2026-11-05T14:57:28.798Z"
     },
     "zonkraft": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:23:16.233Z",
+      "lastSuccess": "2026-11-05T14:57:33.515Z",
       "lastError": null,
       "productCount": 1,
-      "nextCheck": 1793839994098,
-      "startedAt": "2026-11-05T00:23:14.098Z"
+      "nextCheck": 1793892451214,
+      "startedAt": "2026-11-05T14:57:31.214Z"
     },
     "zelaprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:39:39.252Z",
+      "lastSuccess": "2026-11-05T14:57:51.359Z",
       "lastError": null,
-      "productCount": 17,
-      "nextCheck": 1793840977346,
-      "startedAt": "2026-11-05T00:39:37.346Z"
+      "productCount": 19,
+      "nextCheck": 1793892469275,
+      "startedAt": "2026-11-05T14:57:49.275Z"
     },
     "blurb": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:32.455Z",
+      "lastSuccess": "2026-11-05T14:45:55.795Z",
       "lastError": null,
       "productCount": 5,
-      "nextCheck": 1793839230453,
-      "startedAt": "2026-11-05T00:10:30.453Z"
+      "nextCheck": 1793891753770,
+      "startedAt": "2026-11-05T14:45:53.770Z"
     },
     "simpleprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:51:10.237Z",
+      "lastSuccess": "2026-11-05T14:59:49.130Z",
       "lastError": null,
       "productCount": 117,
-      "nextCheck": 1793841616901,
-      "startedAt": "2026-11-05T00:50:16.901Z"
+      "nextCheck": 1793892585641,
+      "startedAt": "2026-11-05T14:59:45.641Z"
     },
     "wooacry": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:11:10.680Z",
+      "lastSuccess": "2026-11-05T15:08:05.856Z",
       "lastError": null,
-      "productCount": 327,
-      "nextCheck": 1793842654381,
-      "startedAt": "2026-11-05T01:07:34.381Z"
+      "productCount": 328,
+      "nextCheck": 1793893074968,
+      "startedAt": "2026-11-05T15:07:54.968Z"
     },
     "whcc": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:11:48.296Z",
+      "lastSuccess": "2026-11-05T15:08:07.774Z",
       "lastError": null,
       "productCount": 66,
-      "nextCheck": 1793842870680,
-      "startedAt": "2026-11-05T01:11:10.680Z"
+      "nextCheck": 1793893085857,
+      "startedAt": "2026-11-05T15:08:05.857Z"
     },
     "fourthwall": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:15:21.075Z",
+      "lastSuccess": "2026-11-05T15:08:22.306Z",
       "lastError": null,
-      "productCount": 450,
-      "nextCheck": 1793842914722,
-      "startedAt": "2026-11-05T01:11:54.722Z"
+      "productCount": 454,
+      "nextCheck": 1793893094626,
+      "startedAt": "2026-11-05T15:08:14.626Z"
     },
     "customizingbox": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:39:13.231Z",
+      "lastSuccess": "2026-11-05T14:57:36.742Z",
       "lastError": null,
       "productCount": 1275,
-      "nextCheck": 1793839996234,
-      "startedAt": "2026-11-05T00:23:16.234Z"
+      "nextCheck": 1793892453516,
+      "startedAt": "2026-11-05T14:57:33.516Z"
     },
     "muzefab": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:13:50.452Z",
+      "lastSuccess": "2026-11-05T14:54:13.420Z",
       "lastError": null,
       "productCount": 143,
-      "nextCheck": 1793839342883,
-      "startedAt": "2026-11-05T00:12:22.883Z"
+      "nextCheck": 1793892250676,
+      "startedAt": "2026-11-05T14:54:10.676Z"
     },
     "snapwear": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:19:19.201Z",
+      "lastSuccess": "2026-11-05T14:57:11.481Z",
       "lastError": null,
       "productCount": 167,
-      "nextCheck": 1793839650353,
-      "startedAt": "2026-11-05T00:17:30.353Z"
+      "nextCheck": 1793892428905,
+      "startedAt": "2026-11-05T14:57:08.905Z"
     },
     "viviaprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:20:42.133Z",
+      "lastSuccess": "2026-11-05T14:57:13.957Z",
       "lastError": null,
       "productCount": 49,
-      "nextCheck": 1793839759202,
-      "startedAt": "2026-11-05T00:19:19.202Z"
+      "nextCheck": 1793892431482,
+      "startedAt": "2026-11-05T14:57:11.482Z"
     },
     "printonic": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:22:51.858Z",
+      "lastSuccess": "2026-11-05T14:57:22.231Z",
       "lastError": null,
-      "productCount": 99,
-      "nextCheck": 1793839842134,
-      "startedAt": "2026-11-05T00:20:42.134Z"
+      "productCount": 103,
+      "nextCheck": 1793892433958,
+      "startedAt": "2026-11-05T14:57:13.958Z"
     },
     "merchfactory": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:23:06.831Z",
+      "lastSuccess": "2026-11-05T14:57:24.391Z",
       "lastError": null,
       "productCount": 21,
-      "nextCheck": 1793839971858,
-      "startedAt": "2026-11-05T00:22:51.858Z"
+      "nextCheck": 1793892442232,
+      "startedAt": "2026-11-05T14:57:22.232Z"
     },
     "printiturk": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:39:37.346Z",
+      "lastSuccess": "2026-11-05T14:57:49.274Z",
       "lastError": null,
       "productCount": 21,
-      "nextCheck": 1793840963253,
-      "startedAt": "2026-11-05T00:39:23.253Z"
+      "nextCheck": 1793892466018,
+      "startedAt": "2026-11-05T14:57:46.018Z"
     },
     "printdoors": {
-      "state": "error",
+      "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": null,
-      "lastError": "fetch failed",
-      "productCount": 0,
-      "nextCheck": 1793839097165,
-      "startedAt": "2026-11-05T00:08:17.165Z"
+      "lastSuccess": "2026-11-05T14:43:51.283Z",
+      "lastError": null,
+      "productCount": 1721,
+      "nextCheck": 1793891564992,
+      "startedAt": "2026-11-05T14:42:44.992Z"
     },
     "kincustom": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:12.655Z",
+      "lastSuccess": "2026-11-05T15:00:31.326Z",
       "lastError": null,
       "productCount": 155,
-      "nextCheck": 1793841728012,
-      "startedAt": "2026-11-05T00:52:08.012Z"
+      "nextCheck": 1793892624293,
+      "startedAt": "2026-11-05T15:00:24.293Z"
     },
     "popcustoms": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:49.407Z",
+      "lastSuccess": "2026-11-05T15:01:01.919Z",
       "lastError": null,
-      "productCount": 816,
-      "nextCheck": 1793841732656,
-      "startedAt": "2026-11-05T00:52:12.656Z"
+      "productCount": 817,
+      "nextCheck": 1793892631327,
+      "startedAt": "2026-11-05T15:00:31.327Z"
     },
     "peaprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:52.978Z",
+      "lastSuccess": "2026-11-05T15:01:06.001Z",
       "lastError": null,
       "productCount": 1228,
-      "nextCheck": 1793841769408,
-      "startedAt": "2026-11-05T00:52:49.408Z"
+      "nextCheck": 1793892661920,
+      "startedAt": "2026-11-05T15:01:01.920Z"
     },
     "tshirtgang": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:56.522Z",
+      "lastSuccess": "2026-11-05T15:01:10.266Z",
       "lastError": null,
       "productCount": 38,
-      "nextCheck": 1793841772979,
-      "startedAt": "2026-11-05T00:52:52.979Z"
+      "nextCheck": 1793892666003,
+      "startedAt": "2026-11-05T15:01:06.003Z"
     },
     "ogo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:53:09.131Z",
+      "lastSuccess": "2026-11-05T15:01:25.215Z",
       "lastError": null,
       "productCount": 42,
-      "nextCheck": 1793841776523,
-      "startedAt": "2026-11-05T00:52:56.523Z"
+      "nextCheck": 1793892670267,
+      "startedAt": "2026-11-05T15:01:10.267Z"
     },
     "printegy": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:14:01.424Z",
+      "lastSuccess": "2026-11-05T14:54:26.132Z",
       "lastError": null,
       "productCount": 94,
-      "nextCheck": 1793839430453,
-      "startedAt": "2026-11-05T00:13:50.453Z"
+      "nextCheck": 1793892253421,
+      "startedAt": "2026-11-05T14:54:13.421Z"
     },
     "podbase": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:53:11.236Z",
+      "lastSuccess": "2026-11-05T15:01:29.171Z",
       "lastError": null,
       "productCount": 24,
-      "nextCheck": 1793841789132,
-      "startedAt": "2026-11-05T00:53:09.132Z"
+      "nextCheck": 1793892685216,
+      "startedAt": "2026-11-05T15:01:25.216Z"
     },
     "qikink": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:01.821Z",
+      "lastSuccess": "2026-11-05T15:00:21.442Z",
       "lastError": null,
-      "productCount": 98,
-      "nextCheck": 1793841701670,
-      "startedAt": "2026-11-05T00:51:41.670Z"
+      "productCount": 93,
+      "nextCheck": 1793892591028,
+      "startedAt": "2026-11-05T14:59:51.028Z"
     },
     "merchize": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:17.743Z",
+      "lastSuccess": "2026-11-05T15:02:42.795Z",
       "lastError": null,
-      "productCount": 858,
-      "nextCheck": 1793841791236,
-      "startedAt": "2026-11-05T00:53:11.236Z"
+      "productCount": 865,
+      "nextCheck": 1793892689172,
+      "startedAt": "2026-11-05T15:01:29.172Z"
     },
     "printrove": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:20.785Z",
+      "lastSuccess": "2026-11-05T15:02:46.505Z",
       "lastError": null,
       "productCount": 30,
-      "nextCheck": 1793841857744,
-      "startedAt": "2026-11-05T00:54:17.744Z"
+      "nextCheck": 1793892762796,
+      "startedAt": "2026-11-05T15:02:42.796Z"
     },
     "inkthreadable": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:17:19.322Z",
+      "lastSuccess": "2026-11-05T14:56:57.640Z",
       "lastError": null,
       "productCount": 183,
-      "nextCheck": 1793839547073,
-      "startedAt": "2026-11-05T00:15:47.073Z"
+      "nextCheck": 1793892284694,
+      "startedAt": "2026-11-05T14:54:44.694Z"
     },
     "papello": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:52:08.008Z",
+      "lastSuccess": "2026-11-05T15:00:24.292Z",
       "lastError": null,
       "productCount": 28,
-      "nextCheck": 1793841721822,
-      "startedAt": "2026-11-05T00:52:01.822Z"
+      "nextCheck": 1793892621443,
+      "startedAt": "2026-11-05T15:00:21.443Z"
     },
     "twofifteen": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:11:26.680Z",
+      "lastSuccess": "2026-11-05T14:53:55.324Z",
       "lastError": null,
       "productCount": 124,
-      "nextCheck": 1793839257722,
-      "startedAt": "2026-11-05T00:10:57.722Z"
+      "nextCheck": 1793892203667,
+      "startedAt": "2026-11-05T14:53:23.667Z"
     },
     "goquadra": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:39:18.468Z",
+      "lastSuccess": "2026-11-05T14:57:42.556Z",
       "lastError": null,
       "productCount": 2,
-      "nextCheck": 1793840953232,
-      "startedAt": "2026-11-05T00:39:13.232Z"
+      "nextCheck": 1793892456743,
+      "startedAt": "2026-11-05T14:57:36.743Z"
     },
     "gearment": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:32.569Z",
+      "lastSuccess": "2026-11-05T15:02:58.611Z",
       "lastError": null,
       "productCount": 73,
-      "nextCheck": 1793841860785,
-      "startedAt": "2026-11-05T00:54:20.785Z"
+      "nextCheck": 1793892766506,
+      "startedAt": "2026-11-05T15:02:46.506Z"
     },
     "burgerprints": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:34.828Z",
+      "lastSuccess": "2026-11-05T15:03:00.962Z",
       "lastError": null,
       "productCount": 726,
-      "nextCheck": 1793841872570,
-      "startedAt": "2026-11-05T00:54:32.570Z"
+      "nextCheck": 1793892778612,
+      "startedAt": "2026-11-05T15:02:58.612Z"
     },
     "teelaunch": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-04T23:43:06.073Z",
+      "lastSuccess": "2026-11-05T14:44:02.062Z",
       "lastError": null,
       "productCount": 143,
-      "nextCheck": 1793837577675,
-      "startedAt": "2026-11-04T23:42:57.675Z"
+      "nextCheck": 1793891631284,
+      "startedAt": "2026-11-05T14:43:51.284Z"
     },
     "jetprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:39.370Z",
+      "lastSuccess": "2026-11-05T15:03:05.371Z",
       "lastError": null,
       "productCount": 151,
-      "nextCheck": 1793841874829,
-      "startedAt": "2026-11-05T00:54:34.829Z"
+      "nextCheck": 1793892780963,
+      "startedAt": "2026-11-05T15:03:00.963Z"
     },
     "aop": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:11:34.793Z",
+      "lastSuccess": "2026-11-05T14:54:04.268Z",
       "lastError": null,
       "productCount": 131,
-      "nextCheck": 1793839289080,
-      "startedAt": "2026-11-05T00:11:29.080Z"
+      "nextCheck": 1793892237847,
+      "startedAt": "2026-11-05T14:53:57.847Z"
     },
     "treatpod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:42.472Z",
+      "lastSuccess": "2026-11-05T15:03:09.179Z",
       "lastError": null,
       "productCount": 688,
-      "nextCheck": 1793841879371,
-      "startedAt": "2026-11-05T00:54:39.371Z"
+      "nextCheck": 1793892785372,
+      "startedAt": "2026-11-05T15:03:05.372Z"
     },
     "printshrimp": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:11:29.079Z",
+      "lastSuccess": "2026-11-05T14:53:57.846Z",
       "lastError": null,
       "productCount": 1,
-      "nextCheck": 1793839286681,
-      "startedAt": "2026-11-05T00:11:26.681Z"
+      "nextCheck": 1793892235325,
+      "startedAt": "2026-11-05T14:53:55.325Z"
     },
     "digitalondemand": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:44.699Z",
+      "lastSuccess": "2026-11-05T15:03:11.771Z",
       "lastError": null,
       "productCount": 145,
-      "nextCheck": 1793841882473,
-      "startedAt": "2026-11-05T00:54:42.473Z"
+      "nextCheck": 1793892789180,
+      "startedAt": "2026-11-05T15:03:09.180Z"
     },
     "jumbodtg": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:47.271Z",
+      "lastSuccess": "2026-11-05T15:03:14.796Z",
       "lastError": null,
       "productCount": 72,
-      "nextCheck": 1793841884700,
-      "startedAt": "2026-11-05T00:54:44.700Z"
+      "nextCheck": 1793892791772,
+      "startedAt": "2026-11-05T15:03:11.772Z"
     },
     "merchfarm": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:52.457Z",
+      "lastSuccess": "2026-11-05T15:03:20.704Z",
       "lastError": null,
       "productCount": 1048,
-      "nextCheck": 1793841887272,
-      "startedAt": "2026-11-05T00:54:47.272Z"
+      "nextCheck": 1793892794797,
+      "startedAt": "2026-11-05T15:03:14.797Z"
     },
     "miamerchandise": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:55.641Z",
+      "lastSuccess": "2026-11-05T15:03:23.835Z",
       "lastError": null,
       "productCount": 148,
-      "nextCheck": 1793841892457,
-      "startedAt": "2026-11-05T00:54:52.457Z"
+      "nextCheck": 1793892800704,
+      "startedAt": "2026-11-05T15:03:20.704Z"
     },
     "picthegift": {
       "state": "error",
@@ -823,71 +823,71 @@
       "lastSuccess": null,
       "lastError": "Satın alınabilir fiyatlı ürün bulunamadı",
       "productCount": 0,
-      "nextCheck": 1793837565752,
-      "startedAt": "2026-11-04T23:42:45.752Z"
+      "nextCheck": 1793891553090,
+      "startedAt": "2026-11-05T14:42:33.090Z"
     },
     "rakiline": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:54:58.286Z",
+      "lastSuccess": "2026-11-05T15:03:26.874Z",
       "lastError": null,
       "productCount": 5,
-      "nextCheck": 1793841895642,
-      "startedAt": "2026-11-05T00:54:55.642Z"
+      "nextCheck": 1793892803836,
+      "startedAt": "2026-11-05T15:03:23.836Z"
     },
     "superfastpod": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:55:00.534Z",
+      "lastSuccess": "2026-11-05T15:03:29.495Z",
       "lastError": null,
       "productCount": 26,
-      "nextCheck": 1793841898287,
-      "startedAt": "2026-11-05T00:54:58.287Z"
+      "nextCheck": 1793892806875,
+      "startedAt": "2026-11-05T15:03:26.875Z"
     },
     "blackfishclothing": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:55:07.515Z",
+      "lastSuccess": "2026-11-05T15:03:35.804Z",
       "lastError": null,
       "productCount": 230,
-      "nextCheck": 1793841900535,
-      "startedAt": "2026-11-05T00:55:00.535Z"
+      "nextCheck": 1793892809496,
+      "startedAt": "2026-11-05T15:03:29.496Z"
     },
     "merchr": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:11:52.315Z",
+      "lastSuccess": "2026-11-05T15:08:11.832Z",
       "lastError": null,
       "productCount": 88,
-      "nextCheck": 1793842908297,
-      "startedAt": "2026-11-05T01:11:48.297Z"
+      "nextCheck": 1793893087775,
+      "startedAt": "2026-11-05T15:08:07.775Z"
     },
     "blinkstore": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:43:44.192Z",
+      "lastSuccess": "2026-11-05T14:58:33.079Z",
       "lastError": null,
       "productCount": 29,
-      "nextCheck": 1793841217650,
-      "startedAt": "2026-11-05T00:43:37.650Z"
+      "nextCheck": 1793892506215,
+      "startedAt": "2026-11-05T14:58:26.215Z"
     },
     "blanka": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T01:11:54.672Z",
+      "lastSuccess": "2026-11-05T15:08:14.604Z",
       "lastError": null,
       "productCount": 122,
-      "nextCheck": 1793842912316,
-      "startedAt": "2026-11-05T01:11:52.316Z"
+      "nextCheck": 1793893091855,
+      "startedAt": "2026-11-05T15:08:11.855Z"
     },
     "stationeryhq": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:10:23.265Z",
+      "lastSuccess": "2026-11-05T14:45:46.205Z",
       "lastError": null,
       "productCount": 251,
-      "nextCheck": 1793839219039,
-      "startedAt": "2026-11-05T00:10:19.039Z"
+      "nextCheck": 1793891741789,
+      "startedAt": "2026-11-05T14:45:41.789Z"
     },
     "oowia": {
       "state": "error",
@@ -895,53 +895,53 @@
       "lastSuccess": null,
       "lastError": "HTTP 403",
       "productCount": 0,
-      "nextCheck": 1793837577587,
-      "startedAt": "2026-11-04T23:42:57.587Z"
+      "nextCheck": 1793891564665,
+      "startedAt": "2026-11-05T14:42:44.665Z"
     },
     "backstoryprints": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:11:37.469Z",
+      "lastSuccess": "2026-11-05T14:54:07.120Z",
       "lastError": null,
       "productCount": 36,
-      "nextCheck": 1793839294794,
-      "startedAt": "2026-11-05T00:11:34.794Z"
+      "nextCheck": 1793892244269,
+      "startedAt": "2026-11-05T14:54:04.269Z"
     },
     "artovo": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:17:21.996Z",
+      "lastSuccess": "2026-11-05T14:57:00.221Z",
       "lastError": null,
       "productCount": 26,
-      "nextCheck": 1793839639323,
-      "startedAt": "2026-11-05T00:17:19.323Z"
+      "nextCheck": 1793892417641,
+      "startedAt": "2026-11-05T14:56:57.641Z"
     },
     "prinstant": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:17:24.770Z",
+      "lastSuccess": "2026-11-05T14:57:03.148Z",
       "lastError": null,
       "productCount": 17,
-      "nextCheck": 1793839641996,
-      "startedAt": "2026-11-05T00:17:21.996Z"
+      "nextCheck": 1793892420222,
+      "startedAt": "2026-11-05T14:57:00.222Z"
     },
     "alerioprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:17:27.360Z",
+      "lastSuccess": "2026-11-05T14:57:05.649Z",
       "lastError": null,
       "productCount": 8,
-      "nextCheck": 1793839644770,
-      "startedAt": "2026-11-05T00:17:24.770Z"
+      "nextCheck": 1793892423149,
+      "startedAt": "2026-11-05T14:57:03.149Z"
     },
     "podhut": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:17:30.353Z",
+      "lastSuccess": "2026-11-05T14:57:08.904Z",
       "lastError": null,
       "productCount": 78,
-      "nextCheck": 1793839647361,
-      "startedAt": "2026-11-05T00:17:27.361Z"
+      "nextCheck": 1793892425650,
+      "startedAt": "2026-11-05T14:57:05.650Z"
     },
     "dogediy": {
       "state": "error",
@@ -949,98 +949,98 @@
       "lastSuccess": null,
       "lastError": "fetch failed",
       "productCount": 0,
-      "nextCheck": 1793837567175,
-      "startedAt": "2026-11-04T23:42:47.175Z"
+      "nextCheck": 1793891554174,
+      "startedAt": "2026-11-05T14:42:34.174Z"
     },
     "teelabs": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:39:23.252Z",
+      "lastSuccess": "2026-11-05T14:57:46.018Z",
       "lastError": null,
       "productCount": 45,
-      "nextCheck": 1793840958468,
-      "startedAt": "2026-11-05T00:39:18.468Z"
+      "nextCheck": 1793892462557,
+      "startedAt": "2026-11-05T14:57:42.557Z"
     },
     "candlebuilders": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:45:23.642Z",
+      "lastSuccess": "2026-11-05T14:58:40.248Z",
       "lastError": null,
       "productCount": 11,
-      "nextCheck": 1793841320956,
-      "startedAt": "2026-11-05T00:45:20.956Z"
+      "nextCheck": 1793892517369,
+      "startedAt": "2026-11-05T14:58:37.369Z"
     },
     "printy6": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:55:11.070Z",
+      "lastSuccess": "2026-11-05T15:03:39.418Z",
       "lastError": null,
       "productCount": 140,
-      "nextCheck": 1793841907516,
-      "startedAt": "2026-11-05T00:55:07.516Z"
+      "nextCheck": 1793892815805,
+      "startedAt": "2026-11-05T15:03:35.805Z"
     },
     "interestprint": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:56:36.946Z",
+      "lastSuccess": "2026-11-05T15:04:56.689Z",
       "lastError": null,
-      "productCount": 3463,
-      "nextCheck": 1793841911071,
-      "startedAt": "2026-11-05T00:55:11.071Z"
+      "productCount": 3455,
+      "nextCheck": 1793892819419,
+      "startedAt": "2026-11-05T15:03:39.419Z"
     },
     "artsadd": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:57:22.612Z",
+      "lastSuccess": "2026-11-05T15:05:40.531Z",
       "lastError": null,
-      "productCount": 1004,
-      "nextCheck": 1793841996947,
-      "startedAt": "2026-11-05T00:56:36.947Z"
+      "productCount": 1008,
+      "nextCheck": 1793892896690,
+      "startedAt": "2026-11-05T15:04:56.690Z"
     },
     "tapstitch": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:45:36.500Z",
+      "lastSuccess": "2026-11-05T14:58:52.191Z",
       "lastError": null,
       "productCount": 1361,
-      "nextCheck": 1793841326464,
-      "startedAt": "2026-11-05T00:45:26.464Z"
+      "nextCheck": 1793892523209,
+      "startedAt": "2026-11-05T14:58:43.209Z"
     },
     "printful": {
       "state": "ready",
       "intervalMinutes": 60,
-      "lastSuccess": "2026-11-05T00:08:13.124Z",
+      "lastSuccess": "2026-11-05T14:44:14.900Z",
       "lastError": null,
       "productCount": 573,
-      "nextCheck": 1793839400567,
-      "startedAt": "2026-11-04T23:43:20.567Z"
+      "nextCheck": 1793893450119,
+      "startedAt": "2026-11-05T14:44:10.119Z"
     },
     "printkk": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:15:47.072Z",
+      "lastSuccess": "2026-11-05T14:54:44.693Z",
       "lastError": null,
-      "productCount": 1502,
-      "nextCheck": 1793839441425,
-      "startedAt": "2026-11-05T00:14:01.425Z"
+      "productCount": 1507,
+      "nextCheck": 1793892266133,
+      "startedAt": "2026-11-05T14:54:26.133Z"
     },
     "podpartner": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:57:27.612Z",
+      "lastSuccess": "2026-11-05T15:05:44.985Z",
       "lastError": null,
       "productCount": 217,
-      "nextCheck": 1793842042613,
-      "startedAt": "2026-11-05T00:57:22.613Z"
+      "nextCheck": 1793892940532,
+      "startedAt": "2026-11-05T15:05:40.532Z"
     },
     "inkedjoy": {
       "state": "ready",
       "intervalMinutes": 30,
-      "lastSuccess": "2026-11-05T00:57:42.585Z",
+      "lastSuccess": "2026-11-05T15:06:00.139Z",
       "lastError": null,
       "productCount": 1475,
-      "nextCheck": 1793842047613,
-      "startedAt": "2026-11-05T00:57:27.613Z"
+      "nextCheck": 1793892944985,
+      "startedAt": "2026-11-05T15:05:44.985Z"
     }
   }
 }

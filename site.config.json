@@ -77,5 +77,13 @@
                                      }
                   },
     "cloudflareAnalyticsToken":  "8874dc4e26b5469db2882a45f0bd381b",
-    "indexNowKey":  "20dc2bb474f5e3bdd507022190b38b96"
+    "indexNowKey":  "20dc2bb474f5e3bdd507022190b38b96",
+    "showcase":  {
+                     "shower-curtains":  {
+                                             "name":  "ByDEMIRTAY",
+                                             "url":  "https://bydemirtay.com/shower-curtains/",
+                                             "en":  "Seller example: ByDEMIRTAY sells 120+ original artistic shower curtains made with print-on-demand. See how the designs look in real bathrooms.",
+                                             "tr":  "Satıcı örneği: ByDEMIRTAY, print-on-demand ile üretilen 120'den fazla özgün sanatsal duş perdesi satıyor. Tasarımların banyoda nasıl durduğuna bakın."
+                                         }
+                 }
 }

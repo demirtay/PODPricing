@@ -233,6 +233,7 @@ const guides = new Map(guideTypes.map(t => {
 }
 // "X alternatifleri": büyük üreticiler için aynı ürünlerde daha ucuz olan rakipler
 // en az 8 ikili karşılaştırması olan her üretici ("<üretici> alternatives" aramaları); 5-7 eşleşmede liste çok kısa kalıyor
+const ALT_FOCUS = new Set(['inkedjoy', 'printkk']);
 const altProviders = [...vsOf].filter(([, l]) => l.length >= 8).sort((a, b) => b[1].length - a[1].length).map(([id]) => id);
 const altOf = id => vsOf.get(id).map(v => {
   const mine = v.a === id ? v.sumA : v.sumB, theirs = v.a === id ? v.sumB : v.sumA, other = v.a === id ? v.b : v.a;
@@ -397,6 +398,13 @@ const LOCALES = {
           'Check production time and where they print: a closer print facility usually means cheaper, faster delivery.',
           `Keep ${s} for products it wins on: you can run two suppliers in the same shop.`,
         ],
+        // searched suppliers ("inkedjoy alternatives", "printkk alternatives"): names in the title, a data-only intro
+        fTitle: (s, names, more, m) => `${s} alternatives (${m}): ${names}${more ? ` + ${more} more` : ''} compared`,
+        fH1: s => `${s} alternatives: who is cheaper on the same products?`,
+        fDesc: (s, n, c, m, top) => `Looking for a cheaper ${s} alternative? We compared ${s} with ${n} print-on-demand suppliers on identical products: ${c} are cheaper overall${top ? ` (${top})` : ''}, ${m} cost more. Real base prices, updated twice a day.`,
+        fIntro: (s, nCat, n, c, m, big) => `We track ${nCat} ${s} products from its public catalog and compare them with ${n} other suppliers wherever both sell the same product. ${s} is already one of the cheaper options: ${m} of those ${n} suppliers cost more on the shared products${big ? `, including ${big}` : ''}, and ${c} ${c === 1 ? 'is' : 'are'} cheaper.`,
+        fBeat: list => `Where an alternative saves the most: ${list}.`, fBeatItem: (l, o, p) => `${l.toLowerCase()} at ${o} (${p}% cheaper)`,
+        fKeep: (s, list) => `Where ${s} stays cheapest: ${list}. No compared supplier beats it there.`,
         h1: s => `${s} alternatives`, lead: (s, n) => `Suppliers compared with ${s} on products both of them sell. Sorted by how much cheaper they are overall on those shared products.`,
         th: ['Supplier', 'Overall vs', 'Cheaper on', 'Shared products'], cheaper: p => `${p}% cheaper`, pricier: p => `${p}% more expensive`, same: 'about the same',
         top: (o, p) => `${o} is ${p}% cheaper on the same products.`, none: s => `No supplier is cheaper than ${s} overall on shared products.`, details: 'details',
@@ -442,8 +450,8 @@ const LOCALES = {
       compareTitle: 'Compare print-on-demand product prices', compareDesc: n => `${n} print-on-demand products sold by several manufacturers, with prices sorted cheapest first.`,
       compareIntro: 'Each product below is sold by at least two print-on-demand manufacturers. Open one to see every price side by side.',
       groupTitle: (t, n, v) => `${t} price comparison: ${n} print-on-demand suppliers from ${v}`, groupDesc: (t, n, v, m) => `${t}: cheapest ${v} at ${m}. Prices from ${n} print-on-demand manufacturers, sorted cheapest first.`,
-      // "pod phone cases", "print on demand phone cases": the search wording leads the title
-      catTitle: (l, n, v) => `Print on demand ${l.toLowerCase()}: ${n} POD supplier${n === 1 ? '' : 's'} compared, from ${v}`, catDesc: (l, n, v, d) => d ? `Compare ${n} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. Cheapest ${v} at ${d.loP}; typical starting price ${d.med}. Updated twice a day.` : `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
+      // "<x> price comparison" (SC: dog leash / bird feeder / baby blanket price comparison at 3-9) leads the title, same pattern as compare pages
+      catTitle: (l, n, v) => `${l} price comparison: ${n} print-on-demand supplier${n === 1 ? '' : 's'}, from ${v}`, catDesc: (l, n, v, d) => d ? `Compare ${n} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. Cheapest ${v} at ${d.loP}; typical starting price ${d.med}. Updated twice a day.` : `${n} print-on-demand ${l.toLowerCase()} compared. Lowest price ${v}.`,
       catH1: l => `Print-on-demand ${l.toLowerCase()}: compare prices`,
       catAbout: (l, d) => `We track ${d.N} print-on-demand ${l.toLowerCase()} from ${d.n} suppliers. The cheapest starts at ${d.lo} at ${d.loP}; the typical supplier's cheapest option is ${d.med}. Prices are base costs from each supplier's public catalog in USD, before shipping and tax, and refresh twice a day.`,
       catFaq: (l, d) => { const x = l.toLowerCase(); return [[`How much do print-on-demand ${x} cost?`, `From ${d.lo} at ${d.loP}. Across the ${d.n} suppliers that sell them printed, the typical cheapest option is ${d.med}; shipping is added at checkout.`], [`Which print-on-demand supplier is cheapest for ${x}?`, `${d.loP} (${d.lo}), followed by ${d.p2}.`], [`How many print-on-demand suppliers sell ${x}?`, `${d.n} of the suppliers we track sell them with printing, out of ${d.N} products in total (blanks included).`]]; }, catFaqH: 'Questions about prices',
@@ -566,6 +574,12 @@ const LOCALES = {
           'Üretim süresine ve baskının nerede yapıldığına bakın: müşteriye yakın tesis genelde daha ucuz ve hızlı teslim demektir.',
           `${s}'ı kazandığı ürünlerde tutun: aynı mağazada iki üreticiyle çalışabilirsiniz.`,
         ],
+        fTitle: (s, names, more, m) => `${s} alternatifleri (${m}): ${names}${more ? ` + ${more} üretici daha` : ''} karşılaştırıldı`,
+        fH1: s => `${s} alternatifleri: aynı üründe kim daha ucuz?`,
+        fDesc: (s, n, c, m, top) => `${s} için daha ucuz alternatif mi arıyorsunuz? ${s} aynı ürünlerde ${n} POD üreticisiyle karşılaştırıldı: ${c} üretici toplamda daha ucuz${top ? ` (${top})` : ''}, ${m} üretici daha pahalı. Gerçek taban fiyatlar, günde iki kez güncellenir.`,
+        fIntro: (s, nCat, n, c, m, big) => `${s} herkese açık kataloğundan ${nCat} ürünü izliyoruz ve aynı ürünü satan ${n} üreticiyle karşılaştırıyoruz. ${s} zaten ucuz seçeneklerden: bu ${n} üreticinin ${m} tanesi ortak ürünlerde daha pahalı${big ? ` (${big} dahil)` : ''}, ${c} tanesi daha ucuz.`,
+        fBeat: list => `Alternatifin en çok kazandırdığı yerler: ${list}.`, fBeatItem: (l, o, p) => `${l.toLocaleLowerCase('tr')}: ${o} (%${p} daha ucuz)`,
+        fKeep: (s, list) => `${s} şu türlerde en ucuz kalıyor: ${list}. Karşılaştırılan hiçbir üretici orada daha ucuz değil.`,
         h1: s => `${s} alternatifleri`, lead: (s, n) => `İkisinin de sattığı ürünlerde ${s} ile karşılaştırılan üreticiler; bu ortak ürünlerde toplamda ne kadar ucuz olduklarına göre sıralı.`,
         th: ['Üretici', 'Genel fark', 'Daha ucuz olduğu', 'Ortak ürün'], cheaper: p => `%${p} daha ucuz`, pricier: p => `%${p} daha pahalı`, same: 'aşağı yukarı aynı',
         top: (o, p) => `${o} aynı ürünlerde %${p} daha ucuz.`, none: s => `Ortak ürünlerde ${s}'dan genel olarak daha ucuz üretici yok.`, details: 'ayrıntı',
@@ -1083,11 +1097,19 @@ ${s.rows.slice(0, 20).map(r => `<tr><td><a href="${href(P.group(r.g.slug))}">${e
     // real prices on the most widely sold shared products: what a seller would actually pay at each
     const exRows = best ? best.v.rows.slice(0, 8).map(r => { const mine = best.v.a === id ? r.a : r.b, theirs = best.v.a === id ? r.b : r.a; return { g: r.g, mine, theirs }; }) : [];
     const exHtml = exRows.length >= 3 ? `<h2>${esc(AL.exH(S, provName(best.other)))}</h2><div class="tbl"><table><thead><tr>${AL.exTh(S, provName(best.other)).map((h, i) => `<th${i ? ' class="num"' : ''}>${esc(h)}</th>`).join('')}</tr></thead><tbody>${exRows.map(r => { const d = r.mine.baseMinor - r.theirs.baseMinor; return `<tr><td><a href="${href(P.group(r.g.slug))}">${esc(H.gTitle(r.g))}</a></td><td class="num"><a href="${esc(outbound(r.mine))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.mine.baseMinor))}</a></td><td class="num${d > 0 ? ' win' : ''}"><a href="${esc(outbound(r.theirs))}" target="_blank" rel="nofollow sponsored noopener">${esc(fmt(r.theirs.baseMinor))}</a></td><td class="num">${d > 0 ? esc(fmt(d)) : '–'}</td></tr>`; }).join('')}</tbody></table></div>` : '';
+    // odaklı sayfalar (ALT_FOCUS): başlık/H1/açıklama + yalnız katalog verisinden giriş
+    const focus = ALT_FOCUS.has(id);
+    const cheaperL = list.filter(x => x.pct >= 3), bigPricier = list.filter(x => x.pct <= -3 && ['printful', 'printify'].includes(x.other)).map(x => provName(x.other));
+    const allTypes = [...groupBy(list.flatMap(x => vsByType(x.v).map(tp => { const mine = x.v.a === id ? tp.sumA : tp.sumB, theirs = x.v.a === id ? tp.sumB : tp.sumA; return { type: tp.type, other: x.other, n: tp.n, pct: Math.round((mine - theirs) / mine * 100) }; })), r => r.type)]
+      .map(([type, l]) => ({ type, n: l.reduce((a, r) => a + r.n, 0), best: [...l].sort((a, b) => b.pct - a.pct || b.n - a.n)[0] }));
+    const keepTypes = allTypes.filter(r => r.best.pct < 3 && r.n >= 5).sort((a, b) => b.n - a.n).slice(0, 4).map(r => L.type(r.type).toLocaleLowerCase(lg === 'tr' ? 'tr' : 'en'));
+    const beatTypes = [...aTypes].sort((a, b) => b.pct - a.pct).slice(0, 3).map(r => AL.fBeatItem(L.type(r.type), provName(r.other), r.pct));
+    const focusHtml = focus ? `<div class="prose"><p>${esc(AL.fIntro(S, (byProvider.get(id) || []).length, list.length, cheaperN, pricierN, bigPricier.join(lg === 'tr' ? ' ve ' : ' and ')))}</p>${beatTypes.length ? `<p>${esc(AL.fBeat(beatTypes.join('; ')))}</p>` : ''}${keepTypes.length ? `<p>${esc(AL.fKeep(S, keepTypes.join(', ')))}</p>` : ''}</div>` : '';
     const switchHtml = `<h2>${esc(AL.switchH(S))}</h2><ul class="prose">${AL.switchList(S).map(x => `<li>${esc(x)}</li>`).join('')}</ul>`;
     add(P.alt(id) + 'index.html', page(L, H, {
-      rel: P.alt(id) + 'index.html', alt: altAll(p => p.alt(id)), title: `${cheaperN >= 3 ? AL.titleN(S, cheaperN, month) : AL.title(S, month)} · ${BRAND}`, description: AL.desc(S, list.length, best ? AL.top(provName(best.other), best.pct) : AL.none(S)),
+      rel: P.alt(id) + 'index.html', alt: altAll(p => p.alt(id)), title: `${focus && cheaperL.length ? AL.fTitle(S, cheaperL.slice(0, 3).map(x => provName(x.other)).join(', '), list.length - Math.min(3, cheaperL.length), month) : cheaperN >= 3 ? AL.titleN(S, cheaperN, month) : AL.title(S, month)} · ${BRAND}`, description: focus ? AL.fDesc(S, list.length, cheaperN, pricierN, best ? (lg === 'tr' ? `${provName(best.other)} %${best.pct}` : `${provName(best.other)} by ${best.pct}%`) : '') : AL.desc(S, list.length, best ? AL.top(provName(best.other), best.pct) : AL.none(S)),
       crumbs: [[AL.indexTitle, href(P.alts)], [S]],
-      body: `<h1>${esc(AL.h1(S))}</h1><p class="muted">${esc(AL.lead(S, list.length))}</p>
+      body: `<h1>${esc(focus ? AL.fH1(S) : AL.h1(S))}</h1>${focusHtml}<p class="muted">${esc(AL.lead(S, list.length))}</p>
 ${best ? `<div class="verdict"><b>${esc(AL.top(provName(best.other), best.pct))}</b></div>` : `<div class="verdict">${esc(AL.none(S))}</div>`}
 <div class="tbl"><table><thead><tr><th>${AL.th[0]}</th><th class="num">${AL.th[1]} ${esc(S)}</th><th class="num">${AL.th[2]}</th><th class="num">${AL.th[3]}</th><th></th></tr></thead><tbody>
 ${list.map((x, i) => `<tr><td>${i + 1}. <a href="${href(P.maker(x.other))}"><b>${esc(provName(x.other))}</b></a></td><td class="num">${diff(x)}</td><td class="num">${x.cheaperOn} / ${x.n}</td><td class="num">${x.n}</td><td><a class="go" href="${href(P.vs(x.v.slug))}">${esc(AL.details)} →</a></td></tr>`).join('')}

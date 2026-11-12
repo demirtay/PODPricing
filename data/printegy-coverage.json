@@ -1,7 +1,200 @@
 {
-  "checkedAt": "2026-10-04T14:36:08.857Z",
+  "checkedAt": "2026-11-12T11:58:31.349Z",
   "pages": 5,
   "discovered": 94,
-  "added": 94,
-  "pending": []
+  "added": 46,
+  "pending": [
+    {
+      "url": "https://printegy.de/products/vintage-cap",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/bucket-hat",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/beanie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/socken",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/kopfkissen-zweifarbig",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/kopfkissen-flauschig",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/bommelmuetze",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/kopfkissen",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/tasse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/tasse-zweifarbig",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/tasse-mit-herzhenkel",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/zaubertasse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/glitzertasse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/edelstahltasse-mit-karabinergriff",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/panorama-tasse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/panorama-tasse-zweifarbig",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/emaille-tasse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/edelstahl-trinkflasche",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/edelstahl-trinkflasche-mit-bambusdeckel",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-premium-bio-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/edelstahl-thermobecher",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/edelstahl-thermoflasche",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/fitness-shaker",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/guerteltasche",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/geldboerse",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/rucksack",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/mousepad",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/rucksack-mit-seitentasche",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/oversize-fluffy-sweatpants",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/spardose-mit-einwurfschlitz",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-zipper-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/lunchbox",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/fussmatte-mit-gummirand",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-oversize-zipper-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/badelatschen",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/badehose",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/grillschuerze",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-promo-t-shirt",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-promo-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/damen-promo-t-shirt",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/damen-promo-hoodie",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-sweatshirt",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-premium-bio-sweatshirt",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-premium-tank-top",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/st/st-creator-long-sleeve",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/herren-basic-tank-top",
+      "reason": "HTTP 429"
+    },
+    {
+      "url": "https://printegy.de/products/socken-mit-streifen",
+      "reason": "HTTP 429"
+    }
+  ]
 }

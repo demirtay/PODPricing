@@ -1,0 +1,414 @@
+{
+  "date": "2026-11-12",
+  "baseDate": "2026-11-02",
+  "intro": "This report covers ten days (2 to 12 November) because we skipped last Monday's edition. The clearest cut is at Printify: five of its six price changes went down, including the Mesh-Back Cap ($21.22 to $15.16), Glass Ornaments ($19.38 to $15.86) and the Unisex Cotton T-Shirt ($12.83 to $10.95). With ornament season starting, Customizingbox's jingle bell ornament also fell from $6.75 to $4.84, and Printway's custom-shape wooden puzzle dropped from $14.00 to $6.00.\n\nThe biggest increase is NeatoPOD's ITC Heavyweight Hoodie: $31.95 to $46.95 for S-3XL and $42.95 to $58.95 for 4XL-5XL. That moved the cheapest offer for that hoodie to POD Hut at $43.74, so if you sell it through NeatoPOD, re-check your margin now. Zela Print reshuffled its poster prices: the small sizes went up (A5 from $4.08 to $4.70, 8x10 from $4.22 to $4.70), while 12x18 and 16x20 got cheaper ($5.83 to $5.10 and $6.03 to $5.37).\n\nAcross 103 suppliers we counted 53 price changes of 3% or more: 26 cuts and 27 increases. A note on our data: Merchize changed how its product pages publish prices on 11 November, and for one refresh most of its catalog dropped out of our comparisons. That is fixed and all 869 Merchize products are back at unchanged prices. Two suppliers are hidden for now because we could not refresh them for more than a week: OOWIA and Print Partners.",
+  "totals": {
+    "products": 35745,
+    "productsBefore": 35702,
+    "suppliers": 103,
+    "newSuppliers": [],
+    "changed": 53,
+    "up": 27,
+    "down": 26
+  },
+  "suppliers": [
+    {
+      "id": "zelaprint",
+      "name": "Zela Print",
+      "up": 10,
+      "down": 7,
+      "avgPct": 0.0185
+    },
+    {
+      "id": "printdoors",
+      "name": "Printdoors",
+      "up": 2,
+      "down": 5,
+      "avgPct": -0.0181
+    },
+    {
+      "id": "popcustoms",
+      "name": "PopCustoms",
+      "up": 4,
+      "down": 3,
+      "avgPct": -0.0164
+    },
+    {
+      "id": "printify",
+      "name": "Printify",
+      "up": 1,
+      "down": 5,
+      "avgPct": -0.1111
+    },
+    {
+      "id": "contrado",
+      "name": "Contrado",
+      "up": 3,
+      "down": 1,
+      "avgPct": 0.0707
+    },
+    {
+      "id": "customizingbox",
+      "name": "Customizingbox",
+      "up": 2,
+      "down": 2,
+      "avgPct": 0.1044
+    },
+    {
+      "id": "neatopod",
+      "name": "NeatoPOD",
+      "up": 3,
+      "down": 0,
+      "avgPct": 0.3039
+    },
+    {
+      "id": "podhut",
+      "name": "POD Hut",
+      "up": 1,
+      "down": 1,
+      "avgPct": -0.0002
+    },
+    {
+      "id": "printful",
+      "name": "Printful",
+      "up": 0,
+      "down": 1,
+      "avgPct": -0.0756
+    },
+    {
+      "id": "inkedjoy",
+      "name": "Inkedjoy",
+      "up": 1,
+      "down": 0,
+      "avgPct": 0.3463
+    },
+    {
+      "id": "printway",
+      "name": "Printway",
+      "up": 0,
+      "down": 1,
+      "avgPct": -0.5714
+    }
+  ],
+  "drops": [
+    {
+      "id": "printway-custom-shape-wooden-puzzle-cswp",
+      "providerId": "printway",
+      "title": "Custom Shape Wooden Puzzle",
+      "old": 1400,
+      "new": 600,
+      "pct": -0.5714,
+      "group": null
+    },
+    {
+      "id": "printify-5832",
+      "providerId": "printify",
+      "title": "Mesh-Back Cap",
+      "old": 2122,
+      "new": 1516,
+      "pct": -0.2856,
+      "group": "yupoong-110m"
+    },
+    {
+      "id": "customizingbox-Custom-Christmas-Jingle-Bell-Personalized-Christmas-Tree-Ornamen",
+      "providerId": "customizingbox",
+      "title": "Custom Christmas Jingle Bell,Personalized Christmas Tree Ornamen",
+      "old": 675,
+      "new": 484,
+      "pct": -0.283,
+      "group": null
+    },
+    {
+      "id": "contrado-custom-leather-mahjong-mat",
+      "providerId": "contrado",
+      "title": "Custom Leather Mahjong Mat",
+      "old": 15900,
+      "new": 12900,
+      "pct": -0.1887,
+      "group": null
+    },
+    {
+      "id": "printify-1362",
+      "providerId": "printify",
+      "title": "Glass Ornaments",
+      "old": 1938,
+      "new": 1586,
+      "pct": -0.1816,
+      "group": null
+    },
+    {
+      "id": "printdoors-3968",
+      "providerId": "printdoors",
+      "title": "Beach Towel (20*40 inch) | Microfiber (Made in USA)",
+      "old": 613,
+      "new": 520,
+      "pct": -0.1517,
+      "group": "towels-20x40"
+    },
+    {
+      "id": "popcustoms-859",
+      "providerId": "popcustoms",
+      "title": "Unisex Custom Winter Christmas Pullover Sweatshirt",
+      "old": 1994,
+      "new": 1699,
+      "pct": -0.1479,
+      "group": null
+    },
+    {
+      "id": "printify-2979",
+      "providerId": "printify",
+      "title": "Unisex Cotton T-Shirt",
+      "old": 1283,
+      "new": 1095,
+      "pct": -0.1465,
+      "group": "jerzees-363m"
+    },
+    {
+      "id": "customizingbox-Two-tone-teardrop-pendant-birthday-necklace",
+      "providerId": "customizingbox",
+      "title": "Two-tone teardrop pendant birthday necklace",
+      "old": 708,
+      "new": 615,
+      "pct": -0.1314,
+      "group": null
+    },
+    {
+      "id": "printdoors-3347",
+      "providerId": "printdoors",
+      "title": "200g Men's Heat Transfer Print T-Shirt - Back Print |  Cotton (Made in USA)",
+      "old": 440,
+      "new": 384,
+      "pct": -0.1273,
+      "group": null
+    },
+    {
+      "id": "zelaprint-poster-12-18-inches-30-5-45-7-cm",
+      "providerId": "zelaprint",
+      "title": "Poster 12 × 18 inches (30.5 × 45.7 cm)",
+      "old": 583,
+      "new": 510,
+      "pct": -0.1252,
+      "group": "posters-12x18"
+    },
+    {
+      "id": "podhut-10124656935222",
+      "providerId": "podhut",
+      "title": "Independent Trading Mainstreet Hooded Sweatshirt - IND420XD (Jumbo) (16x18)",
+      "old": 4999,
+      "new": 4374,
+      "pct": -0.125,
+      "group": "independent-trading-ind420xd"
+    },
+    {
+      "id": "zelaprint-poster-16-20-inches-40-6-50-8-cm",
+      "providerId": "zelaprint",
+      "title": "Poster 16 × 20 inches (40.6 × 50.8 cm)",
+      "old": 603,
+      "new": 537,
+      "pct": -0.1095,
+      "group": "posters-16x20"
+    },
+    {
+      "id": "printdoors-3702",
+      "providerId": "printdoors",
+      "title": "Men's Hoodie (Customized Back)  280GSM | Polyester  (Made in USA)",
+      "old": 952,
+      "new": 856,
+      "pct": -0.1008,
+      "group": null
+    },
+    {
+      "id": "printdoors-3701",
+      "providerId": "printdoors",
+      "title": "Men's Hoodie (Customized Front)  280GSM | Polyester  (Made in USA)",
+      "old": 952,
+      "new": 856,
+      "pct": -0.1008,
+      "group": null
+    }
+  ],
+  "rises": [
+    {
+      "id": "neatopod-itc-heavyweight-hoodie-s-3xl-independent-trading-co-ind4000",
+      "providerId": "neatopod",
+      "title": "ITC Heavyweight Hoodie | S-3XL",
+      "old": 3195,
+      "new": 4695,
+      "pct": 0.4695,
+      "group": "independent-trading-ind4000"
+    },
+    {
+      "id": "customizingbox-Personalized-Handmade-Felt-Book-2",
+      "providerId": "customizingbox",
+      "title": "Personalized Handmade Felt Book",
+      "old": 1118,
+      "new": 1602,
+      "pct": 0.4329,
+      "group": null
+    },
+    {
+      "id": "customizingbox-Customizable-Children's-Cutlery-Set-with-Name",
+      "providerId": "customizingbox",
+      "title": "Customizable Children's Cutlery Set with Name",
+      "old": 466,
+      "new": 652,
+      "pct": 0.3991,
+      "group": null
+    },
+    {
+      "id": "neatopod-itc-heavyweight-hoodie-big-tall-4xl-5xl-independent-trading-co-ind4000",
+      "providerId": "neatopod",
+      "title": "ITC Heavyweight Hoodie - Big & Tall | 4XL-5XL",
+      "old": 4295,
+      "new": 5895,
+      "pct": 0.3725,
+      "group": "independent-trading-ind4000"
+    },
+    {
+      "id": "inkedjoy-28166879",
+      "providerId": "inkedjoy",
+      "title": "I Miss You Memorial Dog Cat - Personalized Heart Shaped Glass Ornament",
+      "old": 283,
+      "new": 381,
+      "pct": 0.3463,
+      "group": null
+    },
+    {
+      "id": "contrado-custom-carryall-tote-bag",
+      "providerId": "contrado",
+      "title": "Custom Carryall Tote Bags",
+      "old": 5995,
+      "new": 7400,
+      "pct": 0.2344,
+      "group": null
+    },
+    {
+      "id": "printdoors-4211",
+      "providerId": "printdoors",
+      "title": "Keychain (laser engraving) | Stainless Steel",
+      "old": 144,
+      "new": 176,
+      "pct": 0.2222,
+      "group": null
+    },
+    {
+      "id": "printdoors-2600",
+      "providerId": "printdoors",
+      "title": "Personalized Keychain (Double-Sided Design within Single Design Frame) | Stainless Steel",
+      "old": 144,
+      "new": 176,
+      "pct": 0.2222,
+      "group": null
+    },
+    {
+      "id": "zelaprint-poster-a5-14-8-21-0-cm",
+      "providerId": "zelaprint",
+      "title": "Poster A5 (14.8 × 21.0 cm)",
+      "old": 408,
+      "new": 470,
+      "pct": 0.152,
+      "group": "posters-6x8"
+    },
+    {
+      "id": "contrado-womens-custom-denim-bomber-jacket",
+      "providerId": "contrado",
+      "title": "Women's Custom Denim Bomber Jacket",
+      "old": 19900,
+      "new": 22900,
+      "pct": 0.1508,
+      "group": null
+    },
+    {
+      "id": "zelaprint-poster-a4-21-0-29-7-cm",
+      "providerId": "zelaprint",
+      "title": "Poster A4 (21.0 × 29.7 cm)",
+      "old": 415,
+      "new": 470,
+      "pct": 0.1325,
+      "group": "posters-8x12"
+    },
+    {
+      "id": "zelaprint-poster-20-30-cm-20-0-30-0-cm",
+      "providerId": "zelaprint",
+      "title": "Poster 20 × 30 cm (20.0 × 30.0 cm)",
+      "old": 415,
+      "new": 470,
+      "pct": 0.1325,
+      "group": "posters-8x12"
+    },
+    {
+      "id": "podhut-9687254827318",
+      "providerId": "podhut",
+      "title": "Comfort Colors Unisex Garment-Dyed Heavyweight T-Shirt - 1717 - Print Size  16\" x 19\" (JUMBO)",
+      "old": 1750,
+      "new": 1968,
+      "pct": 0.1246,
+      "group": null
+    },
+    {
+      "id": "zelaprint-poster-5-7-inches-12-7-17-8-cm",
+      "providerId": "zelaprint",
+      "title": "Poster 5 × 7 inches (12.7 × 17.8 cm)",
+      "old": 408,
+      "new": 457,
+      "pct": 0.1201,
+      "group": "posters-5x7"
+    },
+    {
+      "id": "zelaprint-poster-8-10-inches-20-3-25-4-cm",
+      "providerId": "zelaprint",
+      "title": "Poster 8 × 10 inches (20.3 × 25.4 cm)",
+      "old": 422,
+      "new": 470,
+      "pct": 0.1137,
+      "group": "posters-8x10"
+    }
+  ],
+  "leaders": [
+    {
+      "group": "gildan-64200l",
+      "name": "Gildan 64200L",
+      "suppliers": 8,
+      "was": {
+        "id": "merchize",
+        "name": "Merchize",
+        "price": 900
+      },
+      "now": {
+        "id": "burgerprints",
+        "name": "BurgerPrints",
+        "price": 900
+      }
+    },
+    {
+      "group": "gildan-64200",
+      "name": "Gildan 64200",
+      "suppliers": 4,
+      "was": {
+        "id": "merchize",
+        "name": "Merchize",
+        "price": 900
+      },
+      "now": {
+        "id": "burgerprints",
+        "name": "BurgerPrints",
+        "price": 900
+      }
+    },
+    {
+      "group": "independent-trading-ind420xd",
+      "name": "Independent Trading Co. IND420XD",
+      "suppliers": 3,
+      "was": {
+        "id": "neatopod",
+        "name": "NeatoPOD",
+        "price": 4295
+      },
+      "now": {
+        "id": "podhut",
+        "name": "POD Hut",
+        "price": 4374
+      }
+    }
+  ]
+}
